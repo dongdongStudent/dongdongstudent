@@ -1,0 +1,68 @@
+﻿1
+00:02:20,704 --> 00:02:24,128
+Alice, is this your family photo?
+
+2
+00:02:24,560 --> 00:02:27,888
+Yes, it is, Bob. Are these your parents?
+
+3
+00:02:28,080 --> 00:02:33,040
+Yes, they are. Who is he? He is my uncle, John.
+
+4
+00:02:36,704 --> 00:02:39,984
+Good morning, David.Good morning, Mary.
+
+5
+00:02:40,144 --> 00:02:42,032
+What are those in the yard?
+
+6
+00:02:42,448 --> 00:02:45,360
+They're ducks. They're white ducks.
+
+7
+00:02:45,760 --> 00:02:50,848
+Are they your ducks? No, they aren't. They're Jack's ducks.
+
+8
+00:02:51,104 --> 00:02:54,864
+He is my uncle. He has some geese, too.
+
+9
+00:02:54,864 --> 00:02:59,936
+Where are the geese? Oh, they are on the lake.
+
+10
+00:03:04,016 --> 00:03:10,816
+My name is Lin Hai. I am a 12-year-old middle school student.
+
+11
+00:03:11,056 --> 00:03:17,424
+Grace is my new friend. She is 13. She is an American girl.
+
+12
+00:03:17,920 --> 00:03:25,008
+Here is a photo of her family. This is her father Mr. Green. He is a PE teacher.
+
+13
+00:03:25,440 --> 00:03:28,800
+He likes playing tennis with Grace after school.
+
+14
+00:03:29,104 --> 00:03:33,600
+The woman in purple is Mrs. Green. She is an English teacher.
+
+15
+00:03:33,728 --> 00:03:38,656
+She has three classes in the morning and one class in the afternoon every day.
+
+16
+00:03:39,056 --> 00:03:43,776
+So she is busy. The little boy is Grace's brother Bob.
+
+17
+00:03:44,160 --> 00:03:51,552
+He likes math very much. He plays basketball every day. He thinks it's interesting.
+

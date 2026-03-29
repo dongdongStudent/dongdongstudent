@@ -1,0 +1,16 @@
+﻿1
+00:00:17,020 --> 00:00:19,840
+We’re here at Mount Huangshan!
+
+2
+00:00:20,304 --> 00:00:22,416
+The clouds look amazing.
+
+3
+00:00:23,312 --> 00:00:26,208
+It feels like a magical place.
+
+4
+00:00:26,720 --> 00:00:30,416
+The trees and rocks look like a part of a painting
+

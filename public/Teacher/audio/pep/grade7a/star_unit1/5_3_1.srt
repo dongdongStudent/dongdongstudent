@@ -1,0 +1,28 @@
+﻿1
+00:00:02,736 --> 00:00:03,952
+Cooking Club
+
+2
+00:00:04,832 --> 00:00:09,200
+Do you love Chinese food? Can you cook?
+
+3
+00:00:10,416 --> 00:00:12,336
+Join our cooking club!
+
+4
+00:00:13,216 --> 00:00:16,896
+Let’s learn to cook your favourite Chinese food.
+
+5
+00:00:17,952 --> 00:00:24,592
+Mapo tofu, beef noodles, jiaozi, baozi ... You name it!
+
+6
+00:00:25,200 --> 00:00:27,808
+You can soon cook for your family.
+
+7
+00:00:28,224 --> 00:00:34,240
+Join us in Room 303 at 4:30 p.m. on Wednesdays.
+

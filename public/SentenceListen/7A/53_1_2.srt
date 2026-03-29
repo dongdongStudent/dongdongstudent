@@ -1,0 +1,32 @@
+﻿1
+00:01:19,264 --> 00:01:22,400
+Hello, Jim. What class are you in?
+
+2
+00:01:22,960 --> 00:01:26,768
+I am in Class Two, Grade Seven.
+
+3
+00:01:33,248 --> 00:01:37,152
+Hello, Jack. Is your class teacher Mr White?
+
+4
+00:01:38,032 --> 00:01:42,032
+No, my class teacher is Mr Black.
+
+5
+00:01:45,776 --> 00:01:48,624
+Hello, Lingling. What class are you in?
+
+6
+00:01:49,152 --> 00:01:53,360
+I'm in Class 6. Mike is in my class too.
+
+7
+00:01:53,552 --> 00:01:55,584
+What class are you in, Daming?
+
+8
+00:01:56,048 --> 00:01:59,344
+I'm in Class 5, Miss Yao's class.
+

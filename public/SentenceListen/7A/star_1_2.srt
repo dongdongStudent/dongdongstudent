@@ -1,0 +1,48 @@
+﻿1
+00:00:20,160 --> 00:00:23,200
+Good morning. May I have your name?
+
+2
+00:00:23,344 --> 00:00:27,248
+Good morning. My name is Emma Miller.
+
+3
+00:00:27,728 --> 00:00:29,424
+How do you spell your name?
+
+4
+00:00:29,632 --> 00:00:40,112
+E-M-M-A, Emma. M-I-L-L-E-R, Miller.
+
+5
+00:00:40,448 --> 00:00:42,368
+You can call me Emma.
+
+6
+00:00:42,944 --> 00:00:46,560
+Nice to meet you, Emma. My name is Teng Fei.
+
+7
+00:00:46,784 --> 00:00:49,664
+Nice to meet you too, Teng Fei.
+
+8
+00:00:54,656 --> 00:00:58,288
+Hello, Wang Yaming! How are you?
+
+9
+00:00:58,528 --> 00:01:03,856
+Hi, Helen. I’m fine, thank you. And you?
+
+10
+00:01:04,688 --> 00:01:07,072
+I’m great, thanks.
+
+11
+00:01:09,248 --> 00:01:13,344
+Oh, that’s the bell. Let’s go to class.
+
+12
+00:01:13,584 --> 00:01:15,664
+Goodbye! Bye!
+

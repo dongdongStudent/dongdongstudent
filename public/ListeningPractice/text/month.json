@@ -1,0 +1,242 @@
+{
+  "months": [
+    {
+      "english": "January",
+      "chinese": "一月",
+      "pinyin": "Yī yuè",
+      "audioFile": "january.mp3"
+    },
+    {
+      "english": "February",
+      "chinese": "二月",
+      "pinyin": "Èr yuè",
+      "audioFile": "february.mp3"
+    },
+    {
+      "english": "March",
+      "chinese": "三月",
+      "pinyin": "Sān yuè",
+      "audioFile": "march.mp3"
+    },
+    {
+      "english": "April",
+      "chinese": "四月",
+      "pinyin": "Sì yuè",
+      "audioFile": "april.mp3"
+    },
+    {
+      "english": "May",
+      "chinese": "五月",
+      "pinyin": "Wǔ yuè",
+      "audioFile": "may.mp3"
+    },
+    {
+      "english": "June",
+      "chinese": "六月",
+      "pinyin": "Liù yuè",
+      "audioFile": "june.mp3"
+    },
+    {
+      "english": "July",
+      "chinese": "七月",
+      "pinyin": "Qī yuè",
+      "audioFile": "july.mp3"
+    },
+    {
+      "english": "August",
+      "chinese": "八月",
+      "pinyin": "Bā yuè",
+      "audioFile": "august.mp3"
+    },
+    {
+      "english": "September",
+      "chinese": "九月",
+      "pinyin": "Jiǔ yuè",
+      "audioFile": "september.mp3"
+    },
+    {
+      "english": "October",
+      "chinese": "十月",
+      "pinyin": "Shí yuè",
+      "audioFile": "october.mp3"
+    },
+    {
+      "english": "November",
+      "chinese": "十一月",
+      "pinyin": "Shíyī yuè",
+      "audioFile": "november.mp3"
+    },
+    {
+      "english": "December",
+      "chinese": "十二月",
+      "pinyin": "Shí'èr yuè",
+      "audioFile": "december.mp3"
+    }
+  ],
+  "weekdays": [
+    {
+      "english": "Monday",
+      "chinese": "星期一",
+      "pinyin": "Xīngqī yī",
+      "audioFile": "monday.mp3"
+    },
+    {
+      "english": "Tuesday",
+      "chinese": "星期二",
+      "pinyin": "Xīngqī èr",
+      "audioFile": "tuesday.mp3"
+    },
+    {
+      "english": "Wednesday",
+      "chinese": "星期三",
+      "pinyin": "Xīngqī sān",
+      "audioFile": "wednesday.mp3"
+    },
+    {
+      "english": "Thursday",
+      "chinese": "星期四",
+      "pinyin": "Xīngqī sì",
+      "audioFile": "thursday.mp3"
+    },
+    {
+      "english": "Friday",
+      "chinese": "星期五",
+      "pinyin": "Xīngqī wǔ",
+      "audioFile": "friday.mp3"
+    },
+    {
+      "english": "Saturday",
+      "chinese": "星期六",
+      "pinyin": "Xīngqī liù",
+      "audioFile": "saturday.mp3"
+    },
+    {
+      "english": "Sunday",
+      "chinese": "星期日",
+      "pinyin": "Xīngqī rì",
+      "audioFile": "sunday.mp3"
+    }
+  ],
+  "numbers": [
+    {
+      "english": "One",
+      "chinese": "一",
+      "pinyin": "Yī",
+      "audioFile": "one.mp3"
+    },
+    {
+      "english": "Two",
+      "chinese": "二",
+      "pinyin": "Èr",
+      "audioFile": "two.mp3"
+    },
+    {
+      "english": "Three",
+      "chinese": "三",
+      "pinyin": "Sān",
+      "audioFile": "three.mp3"
+    },
+    {
+      "english": "Four",
+      "chinese": "四",
+      "pinyin": "Sì",
+      "audioFile": "four.mp3"
+    },
+    {
+      "english": "Five",
+      "chinese": "五",
+      "pinyin": "Wǔ",
+      "audioFile": "five.mp3"
+    },
+    {
+      "english": "Six",
+      "chinese": "六",
+      "pinyin": "Liù",
+      "audioFile": "six.mp3"
+    },
+    {
+      "english": "Seven",
+      "chinese": "七",
+      "pinyin": "Qī",
+      "audioFile": "seven.mp3"
+    },
+    {
+      "english": "Eight",
+      "chinese": "八",
+      "pinyin": "Bā",
+      "audioFile": "eight.mp3"
+    },
+    {
+      "english": "Nine",
+      "chinese": "九",
+      "pinyin": "Jiǔ",
+      "audioFile": "nine.mp3"
+    },
+    {
+      "english": "Ten",
+      "chinese": "十",
+      "pinyin": "Shí",
+      "audioFile": "ten.mp3"
+    },
+    {
+      "english": "Eleven",
+      "chinese": "十一",
+      "pinyin": "Shíyī",
+      "audioFile": "eleven.mp3"
+    },
+    {
+      "english": "Twelve",
+      "chinese": "十二",
+      "pinyin": "Shí'èr",
+      "audioFile": "twelve.mp3"
+    },
+    {
+      "english": "Thirteen",
+      "chinese": "十三",
+      "pinyin": "Shísān",
+      "audioFile": "thirteen.mp3"
+    },
+    {
+      "english": "Fourteen",
+      "chinese": "十四",
+      "pinyin": "Shísì",
+      "audioFile": "fourteen.mp3"
+    },
+    {
+      "english": "Fifteen",
+      "chinese": "十五",
+      "pinyin": "Shíwǔ",
+      "audioFile": "fifteen.mp3"
+    },
+    {
+      "english": "Sixteen",
+      "chinese": "十六",
+      "pinyin": "Shíliù",
+      "audioFile": "sixteen.mp3"
+    },
+    {
+      "english": "Seventeen",
+      "chinese": "十七",
+      "pinyin": "Shíqī",
+      "audioFile": "seventeen.mp3"
+    },
+    {
+      "english": "Eighteen",
+      "chinese": "十八",
+      "pinyin": "Shíbā",
+      "audioFile": "eighteen.mp3"
+    },
+    {
+      "english": "Nineteen",
+      "chinese": "十九",
+      "pinyin": "Shíjiǔ",
+      "audioFile": "nineteen.mp3"
+    },
+    {
+      "english": "Twenty",
+      "chinese": "二十",
+      "pinyin": "Èrshí",
+      "audioFile": "twenty.mp3"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+﻿1
+00:00:11,328 --> 00:00:14,640
+Hey, I thought you didn’t like maths!
+
+2
+00:00:15,488 --> 00:00:19,936
+I do  now. I wasn’t interested in it last year.
+
+3
+00:00:23,824 --> 00:00:26,592
+Hello. Are you Ella’s friend?
+
+4
+00:00:27,568 --> 00:00:29,216
+I don’t know Ella!
+
+5
+00:00:32,800 --> 00:00:35,632
+I can’t go on the school trip tomorrow.
+
+6
+00:00:37,248 --> 00:00:40,032
+Oh, you should tell our teacher about that now.
+

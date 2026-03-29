@@ -1,0 +1,52 @@
+﻿1
+00:00:08,080 --> 00:00:12,080
+there is a ping-pong bat here. Is it yours?
+
+2
+00:00:12,368 --> 00:00:15,712
+No, it isn’t mine. Is it Ella’s?
+
+3
+00:00:16,096 --> 00:00:18,416
+No, hers is at home.
+
+4
+00:00:18,832 --> 00:00:20,336
+Maybe it’s Yaming’s.
+
+5
+00:00:21,120 --> 00:00:24,016
+Hi, Yaming! Is this your bat?
+
+6
+00:00:24,528 --> 00:00:28,224
+Oh yes, it’s mine. Thanks!
+
+7
+00:00:28,672 --> 00:00:33,984
+Not at all. Your bat looks well-used. Do you play often?
+
+8
+00:00:34,496 --> 00:00:39,312
+Yes, twice a week, and sometimes more! And you?
+
+9
+00:00:39,808 --> 00:00:42,720
+Hardly ever. I’m not very good at it!
+
+10
+00:00:43,040 --> 00:00:48,064
+Well, practice makes perfect. How often do you play, Jim?
+
+11
+00:00:48,512 --> 00:00:52,016
+I seldom do, but I often play badminton.
+
+12
+00:00:52,384 --> 00:00:54,128
+Oh, me too.
+
+13
+00:00:54,688 --> 00:01:00,080
+I sometimes play badminton with Ella. We should all play doubles sometime!
+

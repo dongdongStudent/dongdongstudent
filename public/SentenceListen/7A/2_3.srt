@@ -1,0 +1,68 @@
+﻿1
+00:00:00,864 --> 00:00:03,376
+Hi, I’m Lily from Ireland.
+
+2
+00:00:03,776 --> 00:00:06,560
+I love my big family.
+
+3
+00:00:06,880 --> 00:00:08,896
+Here’s a photo of us.
+
+4
+00:00:09,184 --> 00:00:11,920
+I’m the one with the pink hat.
+
+5
+00:00:12,368 --> 00:00:15,664
+This is my dad, Fred, on the left.
+
+6
+00:00:16,176 --> 00:00:21,056
+He’s very handsome. He often plays tennis with me.
+
+7
+00:00:21,696 --> 00:00:25,088
+My little brother, Sam, is on his knee.
+
+8
+00:00:25,680 --> 00:00:29,808
+Sam is seven, and he really likes chess.
+
+9
+00:00:30,304 --> 00:00:33,808
+My mum, Jane, is on the right.
+
+10
+00:00:34,192 --> 00:00:36,832
+She’s beautiful and kind.
+
+11
+00:00:37,200 --> 00:00:40,672
+She always reads me a story at night.
+
+12
+00:00:41,408 --> 00:00:46,160
+My grandparents, Jack and Sarah, are in the middle.
+
+13
+00:00:46,576 --> 00:00:48,624
+They’re my dad’s parents.
+
+14
+00:00:49,072 --> 00:00:52,864
+They have a dog. His name is Oscar.
+
+15
+00:00:53,760 --> 00:01:01,552
+My grandparents have three grandchildren: Sam, my cousin Lucy, and me.
+
+16
+00:01:02,096 --> 00:01:06,000
+They often say I’m their favourite grandchild,
+
+17
+00:01:06,304 --> 00:01:09,664
+but I think they say the same thing to all of us!
+

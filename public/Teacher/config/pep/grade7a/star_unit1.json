@@ -1,0 +1,27 @@
+{
+  "unit": {
+    "id": "star_unit1",
+    "name": "过渡第一单元Hello",
+    "description": "过度第一单元Hello"
+  },
+  "files": [
+    {
+      "id": "7A_S_U1_1",
+      "unit": "S1",
+      "lesson": 1,
+      "title": "七年级上过渡第一单元1",
+      "filename": "star_1_1.mp3",
+      "srtFile": "star_1_1.srt",
+      "duration": "2:00"
+    },
+    {
+      "id": "7A_S_U1_2",
+      "unit": "S1",
+      "lesson": 2,
+      "title": "七年级上过渡第一单元2",
+      "filename": "star_1_2.mp3",
+      "srtFile": "star_1_2.srt",
+      "duration": "2:00"
+    }
+  ]
+}

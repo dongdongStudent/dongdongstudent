@@ -1,0 +1,56 @@
+﻿1
+00:00:09,184 --> 00:00:12,912
+Hi, I’m Anne. What’s your name?
+
+2
+00:00:13,296 --> 00:00:16,944
+Hello! I’m Tom. It’s my first day here.
+
+3
+00:00:17,248 --> 00:00:21,408
+It’s nice to meet you, Tom! Is everything OK?
+
+4
+00:00:21,696 --> 00:00:26,464
+Well, I can’t find my pencil box. I think it’s in my locker.
+
+5
+00:00:26,768 --> 00:00:29,200
+Here, I can lend you my pen.
+
+6
+00:00:29,584 --> 00:00:32,320
+Thanks! Would you like a sweet?
+
+7
+00:00:32,448 --> 00:00:36,048
+No, thank you. We can’t eat snacks in class.
+
+8
+00:00:36,496 --> 00:00:37,728
+Can we drink water?
+
+9
+00:00:38,112 --> 00:00:40,112
+Yes, of course.
+
+10
+00:00:40,384 --> 00:00:45,856
+OK, thanks ... Oh! I’m sorry, I have to answer my phone.
+
+11
+00:00:46,144 --> 00:00:50,384
+Oh, but we mustn’t bring our mobile phones to class. 
+
+12
+00:00:50,960 --> 00:00:54,352
+We have to turn them off and keep them in our lockers. 
+
+13
+00:00:54,880 --> 00:00:58,752
+That’s another rule. OK! Thanks for telling me, Anne.
+
+14
+00:00:59,152 --> 00:01:00,896
+You’re welcome, Tom
+

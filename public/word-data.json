@@ -1,0 +1,17 @@
+[
+  { "id": 1, "english": "fox", "chinese": "狐狸", "phonetic": "/fɒks/" },
+  { "id": 2, "english": "giraffe", "chinese": "长颈鹿", "phonetic": "/dʒɑːrəf/" },
+  { "id": 3, "english": "eagle", "chinese": "鹰", "phonetic": "/ˈiːɡl/" },
+  { "id": 4, "english": "wolf", "chinese": "狼", "phonetic": "/wʊlf/", "plural": "wolves" },
+  { "id": 5, "english": "penguin", "chinese": "企鹅", "phonetic": "/ˈpɛŋɡwɪn/" },
+  { "id": 6, "english": "care", "chinese": "照顾;护理", "phonetic": "/keə(r)/" },
+  { "id": 7, "english": "sandwich", "chinese": "三明治", "phonetic": "/ˈsænwɪtʃ/" },
+  { "id": 8, "english": "snake", "chinese": "蛇", "phonetic": "/sneɪk/" },
+  { "id": 9, "english": "scary", "chinese": "吓人的;恐怖的", "phonetic": "/ˈskærɪ/" },
+  { "id": 10, "english": "neck", "chinese": "脖子", "phonetic": "/nek/" },
+  { "id": 11, "english": "guess", "chinese": "猜测;估计", "phonetic": "/ɡes/" },
+  { "id": 12, "english": "shark", "chinese": "鲨鱼", "phonetic": "/ʃɑːk/" },
+  { "id": 13, "english": "whale", "chinese": "鲸", "phonetic": "/weɪl/" },
+  { "id": 14, "english": "huge", "chinese": "巨大的;极多的", "phonetic": "/hjuːdʒ/" },
+  { "id": 15, "english": "dangerous", "chinese": "危险的;有危害的", "phonetic": "/ˈdeɪndʒərəs/" }
+]

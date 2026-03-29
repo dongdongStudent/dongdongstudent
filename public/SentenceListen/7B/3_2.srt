@@ -1,0 +1,24 @@
+﻿1
+00:00:53,280 --> 00:00:55,200
+Whose baseball glove is this?
+
+2
+00:00:55,968 --> 00:00:58,864
+Oh, that’s mine. Thanks!
+
+3
+00:00:59,328 --> 00:01:02,992
+You’re welcome, Peter. Do you play baseball often?
+
+4
+00:01:03,184 --> 00:01:09,536
+Yes. I usually play once or twice at weekends. How often do you play?
+
+5
+00:01:09,744 --> 00:01:13,184
+Twice a week. Can I join your game this weekend?
+
+6
+00:01:13,376 --> 00:01:14,592
+Of course!
+

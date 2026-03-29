@@ -1,0 +1,64 @@
+﻿1
+00:00:00,000 --> 00:00:00,000
+Sure. Now, would you like rice or noodles?
+
+2
+00:00:00,000 --> 00:00:00,000
+Rice, please.
+
+3
+00:00:00,000 --> 00:00:00,000
+Mum: OK. Let’s get that
+
+4
+00:00:08,992 --> 00:00:12,336
+Hello! What would you like to order
+
+5
+00:00:12,944 --> 00:00:17,200
+What about Gongbao chicken? We often have it in America
+
+6
+00:00:17,376 --> 00:00:20,560
+but it may taste different here. I’d like to try it.
+
+7
+00:00:21,072 --> 00:00:22,256
+Good idea!
+
+8
+00:00:22,544 --> 00:00:25,552
+Do you have anything with tofu?
+
+9
+00:00:25,888 --> 00:00:30,400
+Yes. Would you like a hot tofu dish or a cold one?
+
+10
+00:00:30,816 --> 00:00:33,024
+A hot tofu dish, please.
+
+11
+00:00:33,392 --> 00:00:36,400
+We have Mapo tofu. Would you like that?
+
+12
+00:00:36,752 --> 00:00:40,864
+Yes, please. We should also order some a salad.
+
+13
+00:00:41,328 --> 00:00:44,080
+How about a chicken and cabbage salad?
+
+14
+00:00:44,800 --> 00:00:48,080
+That sounds good. Can we order soup too?
+
+15
+00:00:48,448 --> 00:00:54,016
+OK. Let’s see ... Which soup would you like, chicken or fish?
+
+16
+00:00:54,512 --> 00:00:55,776
+Fish, please!
+

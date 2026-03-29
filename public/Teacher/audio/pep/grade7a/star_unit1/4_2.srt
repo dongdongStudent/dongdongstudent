@@ -1,0 +1,60 @@
+﻿1
+00:00:00,496 --> 00:00:01,936
+What’s your next class?
+
+2
+00:00:02,448 --> 00:00:05,664
+History. It’s my favourite subject.
+
+3
+00:00:06,464 --> 00:00:08,048
+Why do you like it?
+
+4
+00:00:08,832 --> 00:00:11,952
+It’s interesting to learn about the past.
+
+5
+00:00:12,848 --> 00:00:15,360
+What’s your favourite subject, Meimei?
+
+6
+00:00:16,016 --> 00:00:18,608
+My favourite subject is English.
+
+7
+00:00:18,944 --> 00:00:22,768
+It’s useful, and my English teacher is really nice.
+
+8
+00:00:23,504 --> 00:00:25,104
+How about you, Binbin?
+
+9
+00:00:25,680 --> 00:00:30,112
+I like all the subjects, but my favourite is maths.
+
+10
+00:00:31,168 --> 00:00:31,840
+Why?
+
+11
+00:00:32,640 --> 00:00:34,672
+Because I’m good with numbers.
+
+12
+00:00:35,520 --> 00:00:37,968
+Oh, it’s difficult for me.
+
+13
+00:00:38,832 --> 00:00:40,960
+Can you help me with this subject?
+
+14
+00:00:41,712 --> 00:00:42,336
+Sure!
+
+15
+00:00:43,136 --> 00:00:46,704
+Hey, look at the time. Let’s go to class!
+

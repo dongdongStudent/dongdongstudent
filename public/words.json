@@ -1,0 +1,12 @@
+[
+  { "word": "make friends", "translation": "交朋友", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "get to know", "translation": "认识；了解", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "full name", "translation": "全名", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "last name", "translation": "姓氏", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "first name", "translation": "名字", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "grade", "translation": "年级；等级", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "classmate", "translation": "同班同学", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "mean", "translation": "意思是", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "husband", "translation": "丈夫", "status": { "listening": false, "reading": false, "translation": false } },
+  { "word": "ping-pong bat", "translation": "乒乓球拍", "status": { "listening": false, "reading": false, "translation": false } }
+]

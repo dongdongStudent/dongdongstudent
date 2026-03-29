@@ -1,0 +1,290 @@
+{
+  "versions": [
+    {
+      "id": "pep",
+      "name": "人教版",
+      "description": "人民教育出版社 初中英语",
+      "icon": "🇨🇳",
+      "grades": [
+        {
+          "id": "grade7a",
+          "name": "七年级上册",
+          "description": "初一上学期",
+          "units": [
+            { "id": "star_unit1", "name": "过渡第一单元Hello", "description": "过度第一单元Hello" },
+            { "id": "star_unit2", "name": "过渡第二单元Keep Tidy", "description": "过度第二单元Keep Tidy" },
+            { "id": "star_unit3", "name": "过渡第三单元Welcome", "description": "过度第三单元Welcome" },
+            { "id": "unit1", "name": "Unit 1 you and me", "description": "1 you and me" },
+            { "id": "unit2", "name": "Unit 2 we're family", "description": "2 we're family" },
+            { "id": "unit3", "name": "Unit 3 my school", "description": "3 my school" },
+            { "id": "unit4", "name": "Unit 4 my favourite subject", "description": "4 my favourite subject" },
+            { "id": "unit5", "name": "Unit 5 fun clubs", "description": "5 fun clubs" },
+            { "id": "unit6", "name": "Unit 6 a day in the life", "description": "a day in the life" },
+            { "id": "unit7", "name": "Unit 7 happy birthday", "description": "happy birthday" }
+          ]
+        },
+        {
+          "id": "grade7b",
+          "name": "七年级下册",
+          "description": "初一下学期",
+          "units": [
+            { "id": "unit1", "name": "Unit 1 Animal Friends", "description": "动物朋友" },
+            { "id": "unit2", "name": "Unit 2 No Rules, No Order", "description": "无规矩不成方圆" },
+            { "id": "unit3", "name": "Unit 3 Keep Fit", "description": "保持健康" },
+            { "id": "unit4", "name": "Unit 4 Eat Well", "description": "健康饮食" },
+            { "id": "unit5", "name": "Unit 5 Here and Now", "description": "此时此地" },
+            { "id": "unit6", "name": "Unit 6 Rain or Shine", "description": "风雨无阻" },
+            { "id": "unit7", "name": "Unit 7 A Day to Remember", "description": "难忘的一天" },
+            { "id": "unit8", "name": "Unit 8 Once upon a Time", "description": "很久以前" }
+          ]
+        },
+        {
+          "id": "grade8a",
+          "name": "八年级上册",
+          "description": "初二上学期",
+          "units": [
+            { "id": "unit1", "name": "Unit 1 Where did you go on vacation?", "description": "假期去哪儿" },
+            { "id": "unit2", "name": "Unit 2 How often do you exercise?", "description": "锻炼频率" },
+            { "id": "unit3", "name": "Unit 3 I'm more outgoing than my sister.", "description": "比较个性" },
+            { "id": "unit4", "name": "Unit 4 What's the best movie theater?", "description": "最佳选择" },
+            { "id": "unit5", "name": "Unit 5 Do you want to watch a game show?", "description": "娱乐节目" },
+            { "id": "unit6", "name": "Unit 6 I'm going to study computer science.", "description": "未来规划" },
+            { "id": "unit7", "name": "Unit 7 Will people have robots?", "description": "未来生活" },
+            { "id": "unit8", "name": "Unit 8 How do you make a banana milk shake?", "description": "烹饪食谱" },
+            { "id": "unit9", "name": "Unit 9 Can you come to my party?", "description": "邀请聚会" },
+            { "id": "unit10", "name": "Unit 10 If you go to the party, you'll have a great time!", "description": "条件结果" }
+          ]
+        },
+        {
+          "id": "grade8b",
+          "name": "八年级下册",
+          "description": "初二下学期",
+          "units": [
+            { "id": "unit1", "name": "Unit 1 What's the matter?", "description": "健康问题" },
+            { "id": "unit2", "name": "Unit 2 I'll help to clean up the city parks.", "description": "志愿服务" },
+            { "id": "unit3", "name": "Unit 3 Could you please clean your room?", "description": "家务劳动" },
+            { "id": "unit4", "name": "Unit 4 Why don't you talk to your parents?", "description": "沟通建议" },
+            { "id": "unit5", "name": "Unit 5 What were you doing when the rainstorm came?", "description": "过去进行" },
+            { "id": "unit6", "name": "Unit 6 An old man tried to move the mountains.", "description": "神话故事" },
+            { "id": "unit7", "name": "Unit 7 What's the highest mountain in the world?", "description": "世界之最" },
+            { "id": "unit8", "name": "Unit 8 Have you read Treasure Island yet?", "description": "读书分享" },
+            { "id": "unit9", "name": "Unit 9 Have you ever been to a museum?", "description": "经历体验" },
+            { "id": "unit10", "name": "Unit 10 I've had this bike for three years.", "description": "物品归属" }
+          ]
+        },
+        {
+          "id": "grade9a",
+          "name": "九年级上册",
+          "description": "初三上学期",
+          "units": [
+            { "id": "unit1", "name": "Unit 1 How can we become good learners?", "description": "学习方法" },
+            { "id": "unit2", "name": "Unit 2 I think that mooncakes are delicious!", "description": "节日文化" },
+            { "id": "unit3", "name": "Unit 3 Could you please tell me where the restrooms are?", "description": "问路指引" },
+            { "id": "unit4", "name": "Unit 4 I used to be afraid of the dark.", "description": "过去现在" },
+            { "id": "unit5", "name": "Unit 5 What are the shirts made of?", "description": "产品制造" },
+            { "id": "unit6", "name": "Unit 6 When was it invented?", "description": "发明历史" },
+            { "id": "unit7", "name": "Unit 7 Teenagers should be allowed to choose their own clothes.", "description": "规章制度" },
+            { "id": "unit8", "name": "Unit 8 It must belong to Carla.", "description": "推测判断" },
+            { "id": "unit9", "name": "Unit 9 I like music that I can dance to.", "description": "喜好偏好" },
+            { "id": "unit10", "name": "Unit 10 You're supposed to shake hands.", "description": "风俗习惯" }
+          ]
+        },
+        {
+          "id": "grade9b",
+          "name": "九年级下册",
+          "description": "初三下学期",
+          "units": [
+            { "id": "unit11", "name": "Unit 11 Sad movies make me cry.", "description": "情感影响" },
+            { "id": "unit12", "name": "Unit 12 Life is full of the unexpected.", "description": "意外事件" },
+            { "id": "unit13", "name": "Unit 13 We're trying to save the earth!", "description": "环境保护" },
+            { "id": "unit14", "name": "Unit 14 I remember meeting all of you in Grade 7.", "description": "毕业回忆" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "waiyanshe",
+      "name": "外研版",
+      "description": "外语教学与研究出版社 初中英语",
+      "icon": "🇬🇧",
+      "grades": [
+        {
+          "id": "grade7a",
+          "name": "七年级上册",
+          "description": "初一上学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 My classmates", "description": "我的同学" },
+            { "id": "module2", "name": "Module 2 My family", "description": "我的家庭" },
+            { "id": "module3", "name": "Module 3 My school", "description": "我的学校" },
+            { "id": "module4", "name": "Module 4 Healthy food", "description": "健康食品" },
+            { "id": "module5", "name": "Module 5 My school day", "description": "学校生活" },
+            { "id": "module6", "name": "Module 6 A trip to the zoo", "description": "动物园之旅" },
+            { "id": "module7", "name": "Module 7 Computers", "description": "电脑" },
+            { "id": "module8", "name": "Module 8 Choosing presents", "description": "选择礼物" },
+            { "id": "module9", "name": "Module 9 People and places", "description": "人与地点" },
+            { "id": "module10", "name": "Module 10 Spring Festival", "description": "春节" }
+          ]
+        },
+        {
+          "id": "grade7b",
+          "name": "七年级下册",
+          "description": "初一下学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 Lost and found", "description": "失物招领" },
+            { "id": "module2", "name": "Module 2 What can you do?", "description": "能力特长" },
+            { "id": "module3", "name": "Module 3 Making plans", "description": "制定计划" },
+            { "id": "module4", "name": "Module 4 Life in the future", "description": "未来生活" },
+            { "id": "module5", "name": "Module 5 Shopping", "description": "购物" },
+            { "id": "module6", "name": "Module 6 Around town", "description": "城镇周边" },
+            { "id": "module7", "name": "Module 7 My past life", "description": "过去生活" },
+            { "id": "module8", "name": "Module 8 Story time", "description": "故事时间" },
+            { "id": "module9", "name": "Module 9 Life history", "description": "生活经历" },
+            { "id": "module10", "name": "Module 10 A holiday journey", "description": "假日旅行" },
+            { "id": "module11", "name": "Module 11 Body language", "description": "身体语言" },
+            { "id": "module12", "name": "Module 12 Western music", "description": "西方音乐" }
+          ]
+        },
+        {
+          "id": "grade8a",
+          "name": "八年级上册",
+          "description": "初二上学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 How to learn English", "description": "如何学英语" },
+            { "id": "module2", "name": "Module 2 My home town and my country", "description": "家乡与国家" },
+            { "id": "module3", "name": "Module 3 Sports", "description": "体育运动" },
+            { "id": "module4", "name": "Module 4 Planes, ships and trains", "description": "交通工具" },
+            { "id": "module5", "name": "Module 5 Lao She Teahouse", "description": "老舍茶馆" },
+            { "id": "module6", "name": "Module 6 Animals in danger", "description": "濒危动物" },
+            { "id": "module7", "name": "Module 7 A famous story", "description": "著名故事" },
+            { "id": "module8", "name": "Module 8 Accidents", "description": "事故" },
+            { "id": "module9", "name": "Module 9 Population", "description": "人口" },
+            { "id": "module10", "name": "Module 10 The weather", "description": "天气" },
+            { "id": "module11", "name": "Module 11 Way of life", "description": "生活方式" },
+            { "id": "module12", "name": "Module 12 Help", "description": "求助" }
+          ]
+        },
+        {
+          "id": "grade8b",
+          "name": "八年级下册",
+          "description": "初二下学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 Feelings and impressions", "description": "感觉印象" },
+            { "id": "module2", "name": "Module 2 Experiences", "description": "经历" },
+            { "id": "module3", "name": "Module 3 Journey to space", "description": "太空之旅" },
+            { "id": "module4", "name": "Module 4 Seeing the doctor", "description": "看医生" },
+            { "id": "module5", "name": "Module 5 Cartoons", "description": "卡通" },
+            { "id": "module6", "name": "Module 6 Hobbies", "description": "爱好" },
+            { "id": "module7", "name": "Module 7 Summer in Los Angeles", "description": "洛杉矶暑假" },
+            { "id": "module8", "name": "Module 8 Time off", "description": "休息时间" },
+            { "id": "module9", "name": "Module 9 Friendship", "description": "友谊" },
+            { "id": "module10", "name": "Module 10 On the radio", "description": "广播" }
+          ]
+        },
+        {
+          "id": "grade9a",
+          "name": "九年级上册",
+          "description": "初三上学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 Wonders of the world", "description": "世界奇迹" },
+            { "id": "module2", "name": "Module 2 Public holidays", "description": "公共假日" },
+            { "id": "module3", "name": "Module 3 Heroes", "description": "英雄" },
+            { "id": "module4", "name": "Module 4 Home alone", "description": "独自在家" },
+            { "id": "module5", "name": "Module 5 Museums", "description": "博物馆" },
+            { "id": "module6", "name": "Module 6 Problems", "description": "问题" },
+            { "id": "module7", "name": "Module 7 Great books", "description": "名著" },
+            { "id": "module8", "name": "Module 8 Sports life", "description": "运动生活" },
+            { "id": "module9", "name": "Module 9 Great inventions", "description": "伟大发明" },
+            { "id": "module10", "name": "Module 10 Australia", "description": "澳大利亚" },
+            { "id": "module11", "name": "Module 11 Photos", "description": "照片" },
+            { "id": "module12", "name": "Module 12 Save our world", "description": "拯救地球" }
+          ]
+        },
+        {
+          "id": "grade9b",
+          "name": "九年级下册",
+          "description": "初三下学期",
+          "units": [
+            { "id": "module1", "name": "Module 1 Travel", "description": "旅行" },
+            { "id": "module2", "name": "Module 2 Education", "description": "教育" },
+            { "id": "module3", "name": "Module 3 Life now and then", "description": "今昔生活" },
+            { "id": "module4", "name": "Module 4 Rules and suggestions", "description": "规则建议" },
+            { "id": "module5", "name": "Module 5 Look after yourself", "description": "照顾自己" },
+            { "id": "module6", "name": "Module 6 Eating together", "description": "一起用餐" },
+            { "id": "module7", "name": "Module 7 English for you and me", "description": "英语学习" },
+            { "id": "module8", "name": "Module 8 My future life", "description": "未来生活" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extracurricular",
+      "name": "课外拓展",
+      "description": "课外听力补充材料",
+      "icon": "🌟",
+      "grades": [
+        {
+          "id": "level1",
+          "name": "基础级",
+          "description": "初级难度",
+          "units": [
+            { "id": "daily_life", "name": "日常生活", "description": "日常对话练习" },
+            { "id": "school_life", "name": "校园生活", "description": "校园场景对话" },
+            { "id": "family", "name": "家庭生活", "description": "家庭相关话题" },
+            { "id": "shopping", "name": "购物", "description": "购物场景对话" }
+          ]
+        },
+        {
+          "id": "level2",
+          "name": "进阶级",
+          "description": "中级难度",
+          "units": [
+            { "id": "travel", "name": "旅行", "description": "旅行相关对话" },
+            { "id": "food", "name": "饮食文化", "description": "饮食话题" },
+            { "id": "hobbies", "name": "兴趣爱好", "description": "爱好相关" },
+            { "id": "sports", "name": "体育运动", "description": "运动话题" }
+          ]
+        },
+        {
+          "id": "level3",
+          "name": "提高级",
+          "description": "高级难度",
+          "units": [
+            { "id": "news", "name": "新闻听力", "description": "英语新闻" },
+            { "id": "movies", "name": "电影片段", "description": "经典电影对白" },
+            { "id": "songs", "name": "英文歌曲", "description": "学唱英文歌" },
+            { "id": "stories", "name": "短篇故事", "description": "英语小故事" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exam",
+      "name": "考试专项",
+      "description": "中考听力专项训练",
+      "icon": "🎯",
+      "grades": [
+        {
+          "id": "listening_comprehension",
+          "name": "听力理解",
+          "description": "中考听力题型",
+          "units": [
+            { "id": "short_dialogue", "name": "短对话", "description": "短对话理解" },
+            { "id": "long_dialogue", "name": "长对话", "description": "长对话理解" },
+            { "id": "passage", "name": "短文理解", "description": "短文听力" },
+            { "id": "note_taking", "name": "笔记填空", "description": "听写填空" }
+          ]
+        },
+        {
+          "id": "pronunciation",
+          "name": "语音训练",
+          "description": "发音专项",
+          "units": [
+            { "id": "phonetic", "name": "音标练习", "description": "国际音标" },
+            { "id": "intonation", "name": "语调练习", "description": "语音语调" },
+            { "id": "linking", "name": "连读练习", "description": "连读弱读" }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+﻿
+2
+00:00:00,000 --> 00:00:04,546
+Hello, I'm Song Meimei. May I have your name?
+
+3
+00:00:04,666 --> 00:00:09,213
+Hi, I'm Peter Brown. Nice to meet you.
+
+4
+00:00:09,506 --> 00:00:13,293
+Nice to meet you too. How do you spell your name?
+
+5
+00:00:13,693 --> 00:00:26,066
+P-E-T-E-R, Peter. B-R-O-W-N, Brown.
+
+6
+00:00:26,400 --> 00:00:27,773
+Where are you from?
+
+7
+00:00:28,280 --> 00:00:31,120
+I'm from London, in the UK.
+
+8
+00:00:31,546 --> 00:00:35,666
+Wow, that's far. What class are you in?
+
+9
+00:00:35,920 --> 00:00:39,293
+I'm in Class 1, Grade 7.
+

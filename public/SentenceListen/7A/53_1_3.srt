@@ -1,0 +1,60 @@
+﻿1
+00:02:04,032 --> 00:02:06,848
+Hello, are you a new student here?
+
+2
+00:02:06,848 --> 00:02:09,344
+Yes, I am. My name is Betty.
+
+3
+00:02:09,568 --> 00:02:11,568
+Hello, Betty. I'm Tony.
+
+4
+00:02:12,016 --> 00:02:13,568
+How old are you, Tony?
+
+5
+00:02:13,792 --> 00:02:16,848
+I'm twelve. I'm in Class 5.
+
+6
+00:02:17,168 --> 00:02:20,736
+I'm in Class 3. It's time to go now. Goodbye, Tony.
+
+7
+00:02:20,944 --> 00:02:21,920
+Bye.
+
+8
+00:02:28,368 --> 00:02:31,248
+Hello, my name is Jim Brown.
+
+9
+00:02:31,840 --> 00:02:34,656
+I'm from London, the UK.
+
+10
+00:02:34,784 --> 00:02:39,184
+Jim is my first name and Brown is my last name.
+
+11
+00:02:39,312 --> 00:02:41,328
+I'm thirteen years old.
+
+12
+00:02:41,840 --> 00:02:45,344
+This is Wu Mei. She is from Shanghai.
+
+13
+00:02:45,600 --> 00:02:48,496
+Shanghai is a big city in China.
+
+14
+00:02:48,832 --> 00:02:54,064
+She is twelve years old and she is in Class 1, Grade 7.
+
+15
+00:02:54,624 --> 00:03:03,104
+Her English name is Ann. Wu Mei and I are good friends. We are in the same class.
+

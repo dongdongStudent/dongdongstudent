@@ -1,0 +1,36 @@
+﻿1
+00:01:19,312 --> 00:01:22,544
+Ella, is this tennis racket yours?
+
+2
+00:01:22,864 --> 00:01:28,240
+No, it’s not mine. Ask Han Lin. I think it’s his.
+
+3
+00:01:28,624 --> 00:01:33,232
+Oh, you’re right. It has “HL” on it.
+
+4
+00:01:34,080 --> 00:01:36,160
+Do you play tennis, Binbin?
+
+5
+00:01:36,400 --> 00:01:40,960
+I never do. I don’t like it. What about you?
+
+6
+00:01:41,248 --> 00:01:42,624
+I like tennis.
+
+7
+00:01:42,928 --> 00:01:44,752
+How often do you play it?
+
+8
+00:01:45,104 --> 00:01:48,752
+I play it three times a week, and sometimes more!
+
+9
+00:01:49,168 --> 00:01:50,688
+That’s a lot
+

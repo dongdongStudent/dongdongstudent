@@ -1,0 +1,52 @@
+﻿1
+00:00:16,976 --> 00:00:20,624
+Hello, Peter and Helen! This is my grandpa.
+
+2
+00:00:21,072 --> 00:00:24,688
+Hello, Mr Fu. Nice to meet you!
+
+3
+00:00:24,768 --> 00:00:31,504
+Nice to meet you too. Welcome to my house. Let me show you around.
+
+4
+00:00:31,664 --> 00:00:37,760
+Thank you. Oh, what’s that, Mr Fu? Is that a goose?
+
+5
+00:00:37,936 --> 00:00:41,344
+No, it isn’t. It’s a duck.
+
+6
+00:00:51,264 --> 00:00:56,768
+Mr Fu, what are those plants? Are they potato plants?
+
+7
+00:00:57,024 --> 00:01:01,216
+No, Peter, they aren’t. They’re carrot plants.
+
+8
+00:01:01,408 --> 00:01:05,792
+What about these plants? Are they tomato plants?
+
+9
+00:01:06,352 --> 00:01:08,016
+Yes, they are!
+
+10
+00:01:17,600 --> 00:01:21,152
+What kind of tree is this? It’s an apple tree.
+
+11
+00:01:21,360 --> 00:01:25,552
+How many apple trees do you have? Only two.
+
+12
+00:01:25,808 --> 00:01:31,184
+Look at those rabbits. They’re cute! How many rabbits do you have?
+
+13
+00:01:31,424 --> 00:01:36,672
+I have 12 rabbits. Eight are white, and four are black.
+

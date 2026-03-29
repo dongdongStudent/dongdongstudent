@@ -1,0 +1,1039 @@
+{
+  "metadata": {
+    "series": "Peppa Pig Season 1",
+    "episode_count": 2,
+    "language": "English",
+    "total_words": 243,
+    "unique_words": 142
+  },
+  "episodes": [
+    {
+      "episode_id": 1,
+      "title": "1-01. Muddy Puddles",
+      "youtube_id": "YOUTUBE_ID_2",
+      "duration": "5:00",
+      "sentence_count": 54,
+      "word_count": 315,
+      "sentences": [
+        {
+          "sentence_id": 1,
+          "text": "I'm Peppa Pig.",
+          "chinese": "我是佩奇。",
+          "start_time": "00:00:02,560",
+          "end_time": "00:00:04,450"
+        },
+        {
+          "sentence_id": 2,
+          "text": "This is my little brother, George.",
+          "chinese": "这是我的弟弟乔治。",
+          "start_time": "00:00:04,720",
+          "end_time": "00:00:06,720"
+        },
+        {
+          "sentence_id": 3,
+          "text": "This is Mummy Pig.",
+          "chinese": "这是猪妈妈。",
+          "start_time": "00:00:07,440",
+          "end_time": "00:00:09,530"
+        },
+        {
+          "sentence_id": 4,
+          "text": "And this is Daddy Pig.",
+          "chinese": "这是猪爸爸。",
+          "start_time": "00:00:09,810",
+          "end_time": "00:00:12,420"
+        },
+        {
+          "sentence_id": 5,
+          "text": "Peppa pig.",
+          "chinese": "佩奇。",
+          "start_time": "00:00:13,550",
+          "end_time": "00:00:14,640"
+        },
+        {
+          "sentence_id": 6,
+          "text": "Muddy Puddles.",
+          "chinese": "泥坑。",
+          "start_time": "00:00:20,860",
+          "end_time": "00:00:22,880"
+        },
+        {
+          "sentence_id": 7,
+          "text": "It is raining today.",
+          "chinese": "今天下雨了。",
+          "start_time": "00:00:27,160",
+          "end_time": "00:00:28,810"
+        },
+        {
+          "sentence_id": 8,
+          "text": "So, Peppa and George Cannot play outside.",
+          "chinese": "所以佩奇和乔治不能在外面玩。",
+          "start_time": "00:00:28,810",
+          "end_time": "00:00:31,880"
+        },
+        {
+          "sentence_id": 9,
+          "text": "Daddy, it's stopped raining.",
+          "chinese": "爸爸，雨停了。",
+          "start_time": "00:00:34,150",
+          "end_time": "00:00:36,270"
+        },
+        {
+          "sentence_id": 10,
+          "text": "Can we go out to play?",
+          "chinese": "我们可以出去玩吗？",
+          "start_time": "00:00:36,270",
+          "end_time": "00:00:38,120"
+        },
+        {
+          "sentence_id": 11,
+          "text": "Alright, run along you two.",
+          "chinese": "好了，你们两个去玩吧。",
+          "start_time": "00:00:39,060",
+          "end_time": "00:00:41,610"
+        },
+        {
+          "sentence_id": 12,
+          "text": "Peppa loves jumping in muddy puddles.",
+          "chinese": "佩奇喜欢在泥坑里跳。",
+          "start_time": "00:00:51,470",
+          "end_time": "00:00:54,590"
+        },
+        {
+          "sentence_id": 13,
+          "text": "I love muddy puddles.",
+          "chinese": "我喜欢泥坑。",
+          "start_time": "00:00:54,590",
+          "end_time": "00:00:56,550"
+        },
+        {
+          "sentence_id": 14,
+          "text": "Peppa. If you jump in muddy puddles,",
+          "chinese": "佩奇，如果你要在泥坑里跳，",
+          "start_time": "00:01:00,790",
+          "end_time": "00:01:03,870"
+        },
+        {
+          "sentence_id": 15,
+          "text": "you must wear your boots.",
+          "chinese": "你必须穿上你的靴子。",
+          "start_time": "00:01:03,870",
+          "end_time": "00:01:05,430"
+        },
+        {
+          "sentence_id": 16,
+          "text": "Sorry, Mummy.",
+          "chinese": "对不起，妈妈。",
+          "start_time": "00:01:06,300",
+          "end_time": "00:01:07,250"
+        },
+        {
+          "sentence_id": 17,
+          "text": "George likes to jump in muddy puddles, too.",
+          "chinese": "乔治也喜欢在泥坑里跳。",
+          "start_time": "00:01:17,450",
+          "end_time": "00:01:20,300"
+        },
+        {
+          "sentence_id": 18,
+          "text": "George. If you jump in muddy puddles,",
+          "chinese": "乔治，如果你要在泥坑里跳，",
+          "start_time": "00:01:22,170",
+          "end_time": "00:01:25,460"
+        },
+        {
+          "sentence_id": 19,
+          "text": "you must wear your boots.",
+          "chinese": "你必须穿上你的靴子。",
+          "start_time": "00:01:25,460",
+          "end_time": "00:01:27,080"
+        },
+        {
+          "sentence_id": 20,
+          "text": "Peppa likes to look after her little brother, George.",
+          "chinese": "佩奇喜欢照顾她的弟弟乔治。",
+          "start_time": "00:01:30,630",
+          "end_time": "00:01:33,090"
+        },
+        {
+          "sentence_id": 21,
+          "text": "George, let's find some more puddles.",
+          "chinese": "乔治，我们再找些泥坑吧。",
+          "start_time": "00:01:41,590",
+          "end_time": "00:01:44,580"
+        },
+        {
+          "sentence_id": 22,
+          "text": "Peppa and George are having a lot of fun.",
+          "chinese": "佩奇和乔治玩得很开心。",
+          "start_time": "00:01:51,530",
+          "end_time": "00:01:54,320"
+        },
+        {
+          "sentence_id": 23,
+          "text": "Peppa has found a little puddle.",
+          "chinese": "佩奇找到了一个小泥坑。",
+          "start_time": "00:01:54,800",
+          "end_time": "00:01:56,900"
+        },
+        {
+          "sentence_id": 24,
+          "text": "George has found a big puddle.",
+          "chinese": "乔治找到了一个大泥坑。",
+          "start_time": "00:01:57,880",
+          "end_time": "00:01:59,700"
+        },
+        {
+          "sentence_id": 25,
+          "text": "Look, George. There's a really big puddle.",
+          "chinese": "看，乔治。那里有一个非常大的泥坑。",
+          "start_time": "00:02:10,510",
+          "end_time": "00:02:14,460"
+        },
+        {
+          "sentence_id": 26,
+          "text": "George wants to jump into the big puddle first.",
+          "chinese": "乔治想先跳进大泥坑。",
+          "start_time": "00:02:17,930",
+          "end_time": "00:02:20,410"
+        },
+        {
+          "sentence_id": 27,
+          "text": "Stop, George.",
+          "chinese": "停下，乔治。",
+          "start_time": "00:02:21,330",
+          "end_time": "00:02:22,840"
+        },
+        {
+          "sentence_id": 28,
+          "text": "I must check if it's safe for you.",
+          "chinese": "我必须检查一下对你是否安全。",
+          "start_time": "00:02:23,390",
+          "end_time": "00:02:25,270"
+        },
+        {
+          "sentence_id": 29,
+          "text": "Good. It is safe for you.",
+          "chinese": "好的。对你来说是安全的。",
+          "start_time": "00:02:28,560",
+          "end_time": "00:02:30,610"
+        },
+        {
+          "sentence_id": 30,
+          "text": "Sorry, George. It's only mud.",
+          "chinese": "对不起，乔治。只是泥而已。",
+          "start_time": "00:02:35,540",
+          "end_time": "00:02:38,220"
+        },
+        {
+          "sentence_id": 31,
+          "text": "Peppa and George love jumping in muddy puddles.",
+          "chinese": "佩奇和乔治喜欢在泥坑里跳。",
+          "start_time": "00:02:48,740",
+          "end_time": "00:02:51,690"
+        },
+        {
+          "sentence_id": 32,
+          "text": "Come on, George. Let's go and show Daddy.",
+          "chinese": "来吧，乔治。我们去给爸爸看看。",
+          "start_time": "00:02:58,120",
+          "end_time": "00:03:01,490"
+        },
+        {
+          "sentence_id": 33,
+          "text": "Goodness me.",
+          "chinese": "天哪。",
+          "start_time": "00:03:07,970",
+          "end_time": "00:03:09,320"
+        },
+        {
+          "sentence_id": 34,
+          "text": "Daddy. Daddy. Guess what we've been doing.",
+          "chinese": "爸爸。爸爸。猜猜我们刚才在做什么。",
+          "start_time": "00:03:09,510",
+          "end_time": "00:03:12,530"
+        },
+        {
+          "sentence_id": 35,
+          "text": "Let me think..",
+          "chinese": "让我想想...",
+          "start_time": "00:03:13,390",
+          "end_time": "00:03:14,590"
+        },
+        {
+          "sentence_id": 36,
+          "text": "Have you been watching television?",
+          "chinese": "你们一直在看电视吗？",
+          "start_time": "00:03:15,380",
+          "end_time": "00:03:16,650"
+        },
+        {
+          "sentence_id": 37,
+          "text": "No. No. Daddy.",
+          "chinese": "不。不。爸爸。",
+          "start_time": "00:03:17,510",
+          "end_time": "00:03:18,850"
+        },
+        {
+          "sentence_id": 38,
+          "text": "Have you just had a bath?",
+          "chinese": "你们刚洗了澡？",
+          "start_time": "00:03:19,950",
+          "end_time": "00:03:21,280"
+        },
+        {
+          "sentence_id": 39,
+          "text": "No. No.",
+          "chinese": "不。不。",
+          "start_time": "00:03:21,820",
+          "end_time": "00:03:25,870"
+        },
+        {
+          "sentence_id": 40,
+          "text": "I know. You've been jumping in muddy puddles.",
+          "chinese": "我知道了。你们一直在泥坑里跳。",
+          "start_time": "00:03:26,180",
+          "end_time": "00:03:30,090"
+        },
+        {
+          "sentence_id": 41,
+          "text": "Yes. Yes. Daddy. We've been jumping in muddy puddles.",
+          "chinese": "是的。是的。爸爸。我们一直在泥坑里跳。",
+          "start_time": "00:03:30,800",
+          "end_time": "00:03:34,670"
+        },
+        {
+          "sentence_id": 42,
+          "text": "Ho. Ho. And look at the mess you're in.",
+          "chinese": "呵呵。看看你们弄得这么脏。",
+          "start_time": "00:03:35,270",
+          "end_time": "00:03:37,880"
+        },
+        {
+          "sentence_id": 43,
+          "text": "Oooh..",
+          "chinese": "哦...",
+          "start_time": "00:03:38,800",
+          "end_time": "00:03:39,690"
+        },
+        {
+          "sentence_id": 44,
+          "text": "Oh, well, it's only mud.",
+          "chinese": "哦，好吧，只是泥而已。",
+          "start_time": "00:03:40,460",
+          "end_time": "00:03:42,580"
+        },
+        {
+          "sentence_id": 45,
+          "text": "Let's clean up quickly before Mummy sees the mess.",
+          "chinese": "我们快在妈妈看到之前清理干净。",
+          "start_time": "00:03:43,620",
+          "end_time": "00:03:46,190"
+        },
+        {
+          "sentence_id": 46,
+          "text": "Daddy, when we've cleaned up,",
+          "chinese": "爸爸，等我们清理干净，",
+          "start_time": "00:03:48,720",
+          "end_time": "00:03:50,980"
+        },
+        {
+          "sentence_id": 47,
+          "text": "will you and Mummy Come and play, too?",
+          "chinese": "你和妈妈也来玩吗？",
+          "start_time": "00:03:51,510",
+          "end_time": "00:03:53,810"
+        },
+        {
+          "sentence_id": 48,
+          "text": "Yes, we can all play in the garden.",
+          "chinese": "是的，我们都可以在花园里玩。",
+          "start_time": "00:03:54,140",
+          "end_time": "00:03:56,670"
+        },
+        {
+          "sentence_id": 49,
+          "text": "Peppa and George are wearing their boots.",
+          "chinese": "佩奇和乔治穿着他们的靴子。",
+          "start_time": "00:04:03,680",
+          "end_time": "00:04:05,740"
+        },
+        {
+          "sentence_id": 50,
+          "text": "Mummy and Daddy are wearing their boots.",
+          "chinese": "妈妈和爸爸穿着他们的靴子。",
+          "start_time": "00:04:06,170",
+          "end_time": "00:04:08,310"
+        },
+        {
+          "sentence_id": 51,
+          "text": "Peppa loves jumping up and down in muddy puddles.",
+          "chinese": "佩奇喜欢在泥坑里跳上跳下。",
+          "start_time": "00:04:09,280",
+          "end_time": "00:04:12,270"
+        },
+        {
+          "sentence_id": 52,
+          "text": "Everyone loves jumping up and down in muddy puddles.",
+          "chinese": "每个人都喜欢在泥坑里跳上跳下。",
+          "start_time": "00:04:14,130",
+          "end_time": "00:04:16,930"
+        },
+        {
+          "sentence_id": 53,
+          "text": "Oh, Daddy pig, look at the mess you're in.",
+          "chinese": "哦，猪爸爸，看看你弄得这么脏。",
+          "start_time": "00:04:25,900",
+          "end_time": "00:04:29,050"
+        },
+        {
+          "sentence_id": 54,
+          "text": "It's only mud.",
+          "chinese": "只是泥而已。",
+          "start_time": "00:04:29,630",
+          "end_time": "00:04:31,310"
+        }
+      ]
+    },
+    {
+      "episode_id": 2,
+      "title": "1-02. Mr. Dinosaur Is Lost",
+      "youtube_id": "YOUTUBE_ID_1",
+      "duration": "5:00",
+      "sentence_count": 90,
+      "word_count": 413,
+      "sentences": [
+        {
+          "sentence_id": 0,
+          "text": "I'm Peppa Pig. This is my little brother, George.",
+          "chinese": "我是佩奇。这是我的弟弟乔治。",
+          "start_time": "00:00:02,535",
+          "end_time": "00:00:06,232"
+        },
+        {
+          "sentence_id": 1,
+          "text": "This is Mummy Pig.",
+          "chinese": "这是猪妈妈。",
+          "start_time": "00:00:07,307",
+          "end_time": "00:00:08,296"
+        },
+        {
+          "sentence_id": 2,
+          "text": "And this is Daddy Pig.",
+          "chinese": "这是猪爸爸。",
+          "start_time": "00:00:09,609",
+          "end_time": "00:00:10,735"
+        },
+        {
+          "sentence_id": 3,
+          "text": "Peppa pig.",
+          "chinese": "佩奇。",
+          "start_time": "00:00:13,246",
+          "end_time": "00:00:14,304"
+        },
+        {
+          "sentence_id": 58,
+          "text": "Mr. Dinosaur is Lost.",
+          "chinese": "恐龙先生不见了。",
+          "start_time": "00:00:20,520",
+          "end_time": "00:00:23,353"
+        },
+        {
+          "sentence_id": 59,
+          "text": "George's favourite toy is Mr. Dinosaur.",
+          "chinese": "乔治最喜欢的玩具是恐龙先生。",
+          "start_time": "00:00:27,527",
+          "end_time": "00:00:30,291"
+        },
+        {
+          "sentence_id": 60,
+          "text": "Dinosaur.",
+          "chinese": "恐龙。",
+          "start_time": "00:00:30,530",
+          "end_time": "00:00:31,724"
+        },
+        {
+          "sentence_id": 61,
+          "text": "George loves Mr. Dinosaur.",
+          "chinese": "乔治喜欢恐龙先生。",
+          "start_time": "00:00:33,366",
+          "end_time": "00:00:35,095"
+        },
+        {
+          "sentence_id": 62,
+          "text": "Grrrrrrrrrrrrrrrr.",
+          "chinese": "嗷呜...",
+          "start_time": "00:00:35,502",
+          "end_time": "00:00:36,298"
+        },
+        {
+          "sentence_id": 63,
+          "text": "Sometimes, George likes",
+          "chinese": "有时候，乔治喜欢",
+          "start_time": "00:00:38,037",
+          "end_time": "00:00:39,368"
+        },
+        {
+          "sentence_id": 64,
+          "text": "to scare Peppa with Mr. Dinosaur.",
+          "chinese": "用恐龙先生吓唬佩奇。",
+          "start_time": "00:00:39,506",
+          "end_time": "00:00:41,030"
+        },
+        {
+          "sentence_id": 65,
+          "text": "Grrrrrrrrrrrrrrrrrrrr.",
+          "chinese": "嗷呜...",
+          "start_time": "00:00:41,241",
+          "end_time": "00:00:42,003"
+        },
+        {
+          "sentence_id": 66,
+          "text": "Eeek. Too scary.",
+          "chinese": "呀。太可怕了。",
+          "start_time": "00:00:42,108",
+          "end_time": "00:00:43,735"
+        },
+        {
+          "sentence_id": 67,
+          "text": "At suppertime,",
+          "chinese": "吃晚饭的时候，",
+          "start_time": "00:00:50,450",
+          "end_time": "00:00:51,246"
+        },
+        {
+          "sentence_id": 68,
+          "text": "Mr. Dinosaur sits next to George.",
+          "chinese": "恐龙先生坐在乔治旁边。",
+          "start_time": "00:00:51,551",
+          "end_time": "00:00:53,542"
+        },
+        {
+          "sentence_id": 69,
+          "text": "I beg your pardon.",
+          "chinese": "你说什么？",
+          "start_time": "00:00:55,255",
+          "end_time": "00:00:56,244"
+        },
+        {
+          "sentence_id": 70,
+          "text": "Was that you George, or was it Mr. Dinosaur?",
+          "chinese": "是你乔治，还是恐龙先生？",
+          "start_time": "00:00:56,756",
+          "end_time": "00:00:59,623"
+        },
+        {
+          "sentence_id": 71,
+          "text": "Dinosaur.",
+          "chinese": "恐龙。",
+          "start_time": "00:01:00,193",
+          "end_time": "00:01:01,125"
+        },
+        {
+          "sentence_id": 72,
+          "text": "At bath time,",
+          "chinese": "洗澡的时候，",
+          "start_time": "00:01:05,965",
+          "end_time": "00:01:06,693"
+        },
+        {
+          "sentence_id": 73,
+          "text": "George shares his bath with Mr. Dinosaur.",
+          "chinese": "乔治和恐龙先生一起洗澡。",
+          "start_time": "00:01:07,033",
+          "end_time": "00:01:09,024"
+        },
+        {
+          "sentence_id": 74,
+          "text": "Grrrrrrrrrrrrr.",
+          "chinese": "嗷呜...",
+          "start_time": "00:01:10,770",
+          "end_time": "00:01:11,532"
+        },
+        {
+          "sentence_id": 75,
+          "text": "Goodnight, Peppa.",
+          "chinese": "晚安，佩奇。",
+          "start_time": "00:01:13,640",
+          "end_time": "00:01:15,130"
+        },
+        {
+          "sentence_id": 76,
+          "text": "Goodnight, Mummy.",
+          "chinese": "晚安，妈妈。",
+          "start_time": "00:01:15,408",
+          "end_time": "00:01:16,397"
+        },
+        {
+          "sentence_id": 77,
+          "text": "Goodnight, George.",
+          "chinese": "晚安，乔治。",
+          "start_time": "00:01:17,277",
+          "end_time": "00:01:18,403"
+        },
+        {
+          "sentence_id": 78,
+          "text": "And goodnight, Mr. Dinosaur.",
+          "chinese": "晚安，恐龙先生。",
+          "start_time": "00:01:19,045",
+          "end_time": "00:01:20,478"
+        },
+        {
+          "sentence_id": 79,
+          "text": "Grrrrrrrrr.",
+          "chinese": "嗷呜...",
+          "start_time": "00:01:21,414",
+          "end_time": "00:01:22,642"
+        },
+        {
+          "sentence_id": 80,
+          "text": "When George goes to bed,",
+          "chinese": "乔治上床睡觉的时候，",
+          "start_time": "00:01:22,916",
+          "end_time": "00:01:23,780"
+        },
+        {
+          "sentence_id": 81,
+          "text": "Mr. Dinosaur is tucked up with him.",
+          "chinese": "恐龙先生和他一起躺着。",
+          "start_time": "00:01:24,050",
+          "end_time": "00:01:26,484"
+        },
+        {
+          "sentence_id": 82,
+          "text": "George's favourite game is",
+          "chinese": "乔治最喜欢的游戏是",
+          "start_time": "00:01:32,058",
+          "end_time": "00:01:34,049"
+        },
+        {
+          "sentence_id": 83,
+          "text": "throwing Mr. Dinosaur up in the air..",
+          "chinese": "把恐龙先生抛到空中...",
+          "start_time": "00:01:34,160",
+          "end_time": "00:01:35,422"
+        },
+        {
+          "sentence_id": 84,
+          "text": "Wheeeeeee.",
+          "chinese": "咻...",
+          "start_time": "00:01:35,595",
+          "end_time": "00:01:36,584"
+        },
+        {
+          "sentence_id": 85,
+          "text": ".. and catching him when he falls back down.",
+          "chinese": "...然后在它落下来的时候接住它。",
+          "start_time": "00:01:36,863",
+          "end_time": "00:01:38,854"
+        },
+        {
+          "sentence_id": 86,
+          "text": "Wheeeeeeeee.",
+          "chinese": "咻...",
+          "start_time": "00:01:40,800",
+          "end_time": "00:01:41,789"
+        },
+        {
+          "sentence_id": 87,
+          "text": "Peppa and Daddy Pig are playing draughts.",
+          "chinese": "佩奇和猪爸爸在下棋。",
+          "start_time": "00:01:47,440",
+          "end_time": "00:01:49,169"
+        },
+        {
+          "sentence_id": 88,
+          "text": "I win, Daddy.",
+          "chinese": "我赢了，爸爸。",
+          "start_time": "00:01:51,811",
+          "end_time": "00:01:53,301"
+        },
+        {
+          "sentence_id": 89,
+          "text": "Oh, well done, Peppa.",
+          "chinese": "哦，做得好，佩奇。",
+          "start_time": "00:01:53,813",
+          "end_time": "00:01:56,111"
+        },
+        {
+          "sentence_id": 90,
+          "text": "Whaaaaaaaaaaa.",
+          "chinese": "哇...",
+          "start_time": "00:01:57,317",
+          "end_time": "00:01:58,079"
+        },
+        {
+          "sentence_id": 91,
+          "text": "George?",
+          "chinese": "乔治？",
+          "start_time": "00:01:58,184",
+          "end_time": "00:01:59,674"
+        },
+        {
+          "sentence_id": 92,
+          "text": "Whaaaaaaaaa.",
+          "chinese": "哇...",
+          "start_time": "00:02:00,019",
+          "end_time": "00:02:01,680"
+        },
+        {
+          "sentence_id": 93,
+          "text": "George, what's the matter?",
+          "chinese": "乔治，怎么了？",
+          "start_time": "00:02:01,821",
+          "end_time": "00:02:03,516"
+        },
+        {
+          "sentence_id": 94,
+          "text": "Dinosaur..",
+          "chinese": "恐龙...",
+          "start_time": "00:02:03,690",
+          "end_time": "00:02:05,817"
+        },
+        {
+          "sentence_id": 95,
+          "text": "George, have you lost Mr. Dinosaur?",
+          "chinese": "乔治，你把恐龙先生弄丢了吗？",
+          "start_time": "00:02:06,192",
+          "end_time": "00:02:09,389"
+        },
+        {
+          "sentence_id": 96,
+          "text": "George has lost Mr. Dinosaur.",
+          "chinese": "乔治把恐龙先生弄丢了。",
+          "start_time": "00:02:11,197",
+          "end_time": "00:02:13,597"
+        },
+        {
+          "sentence_id": 97,
+          "text": "Don't worry George.",
+          "chinese": "别担心，乔治。",
+          "start_time": "00:02:13,700",
+          "end_time": "00:02:14,758"
+        },
+        {
+          "sentence_id": 98,
+          "text": "We'll find Mr. Dinosaur.",
+          "chinese": "我们会找到恐龙先生的。",
+          "start_time": "00:02:14,968",
+          "end_time": "00:02:16,458"
+        },
+        {
+          "sentence_id": 99,
+          "text": "It's a job for a detective.",
+          "chinese": "这是侦探的工作。",
+          "start_time": "00:02:17,203",
+          "end_time": "00:02:18,898"
+        },
+        {
+          "sentence_id": 100,
+          "text": "Daddy, what is a detective?",
+          "chinese": "爸爸，什么是侦探？",
+          "start_time": "00:02:19,639",
+          "end_time": "00:02:22,608"
+        },
+        {
+          "sentence_id": 101,
+          "text": "A detective is a very important person",
+          "chinese": "侦探是一个非常厉害的人",
+          "start_time": "00:02:23,276",
+          "end_time": "00:02:26,473"
+        },
+        {
+          "sentence_id": 102,
+          "text": "who is good at finding things.",
+          "chinese": "他擅长找东西。",
+          "start_time": "00:02:26,646",
+          "end_time": "00:02:28,045"
+        },
+        {
+          "sentence_id": 103,
+          "text": "Me. Me. I'm good at finding things.",
+          "chinese": "我。我。我擅长找东西。",
+          "start_time": "00:02:28,648",
+          "end_time": "00:02:31,617"
+        },
+        {
+          "sentence_id": 104,
+          "text": "Alright. Peppa is the detective.",
+          "chinese": "好吧。佩奇是侦探。",
+          "start_time": "00:02:32,151",
+          "end_time": "00:02:34,483"
+        },
+        {
+          "sentence_id": 105,
+          "text": "George. I am the detective.",
+          "chinese": "乔治。我是侦探。",
+          "start_time": "00:02:35,488",
+          "end_time": "00:02:38,355"
+        },
+        {
+          "sentence_id": 106,
+          "text": "I will help you find Mr. Dinosaur.",
+          "chinese": "我会帮你找到恐龙先生。",
+          "start_time": "00:02:38,992",
+          "end_time": "00:02:41,654"
+        },
+        {
+          "sentence_id": 107,
+          "text": "Maybe the detective should ask",
+          "chinese": "也许侦探应该问",
+          "start_time": "00:02:43,863",
+          "end_time": "00:02:44,989"
+        },
+        {
+          "sentence_id": 108,
+          "text": "George some simple questions.",
+          "chinese": "乔治一些简单的问题。",
+          "start_time": "00:02:45,131",
+          "end_time": "00:02:47,224"
+        },
+        {
+          "sentence_id": 109,
+          "text": "George? Where's Mr. Dinosaur?",
+          "chinese": "乔治？恐龙先生在哪里？",
+          "start_time": "00:02:47,867",
+          "end_time": "00:02:51,234"
+        },
+        {
+          "sentence_id": 110,
+          "text": "Whaaaaaaaaaa.",
+          "chinese": "哇...",
+          "start_time": "00:02:52,739",
+          "end_time": "00:02:54,001"
+        },
+        {
+          "sentence_id": 111,
+          "text": "George does not know where Mr. Dinosaur is.",
+          "chinese": "乔治不知道恐龙先生在哪里。",
+          "start_time": "00:02:54,240",
+          "end_time": "00:02:56,640"
+        },
+        {
+          "sentence_id": 112,
+          "text": "The detective could try and guess",
+          "chinese": "侦探可以试着猜",
+          "start_time": "00:02:56,743",
+          "end_time": "00:02:58,005"
+        },
+        {
+          "sentence_id": 113,
+          "text": "where Mr. Dinosaur might be.",
+          "chinese": "恐龙先生可能在哪里。",
+          "start_time": "00:02:58,144",
+          "end_time": "00:03:00,510"
+        },
+        {
+          "sentence_id": 114,
+          "text": "I know. I know where he is.",
+          "chinese": "我知道。我知道他在哪里。",
+          "start_time": "00:03:00,880",
+          "end_time": "00:03:03,440"
+        },
+        {
+          "sentence_id": 115,
+          "text": "George always has Mr. Dinosaur with him in the bath.",
+          "chinese": "乔治洗澡的时候总是带着恐龙先生。",
+          "start_time": "00:03:07,520",
+          "end_time": "00:03:10,887"
+        },
+        {
+          "sentence_id": 116,
+          "text": "So Mr. Dinosaur is in the bath.",
+          "chinese": "所以恐龙先生在浴缸里。",
+          "start_time": "00:03:11,524",
+          "end_time": "00:03:14,015"
+        },
+        {
+          "sentence_id": 117,
+          "text": "Mr. Dinosaur is not in the bath.",
+          "chinese": "恐龙先生不在浴缸里。",
+          "start_time": "00:03:14,961",
+          "end_time": "00:03:16,656"
+        },
+        {
+          "sentence_id": 118,
+          "text": "Oh. I know.",
+          "chinese": "哦。我知道。",
+          "start_time": "00:03:16,763",
+          "end_time": "00:03:18,754"
+        },
+        {
+          "sentence_id": 119,
+          "text": "I know where Mr. Dinosaur is.",
+          "chinese": "我知道恐龙先生在哪里了。",
+          "start_time": "00:03:18,965",
+          "end_time": "00:03:20,956"
+        },
+        {
+          "sentence_id": 120,
+          "text": "George always has Mr. Dinosaur in his bed at night.",
+          "chinese": "乔治晚上总是把恐龙先生放在床上。",
+          "start_time": "00:03:22,669",
+          "end_time": "00:03:26,469"
+        },
+        {
+          "sentence_id": 121,
+          "text": "So that's where he is.",
+          "chinese": "所以他就在那里。",
+          "start_time": "00:03:27,473",
+          "end_time": "00:03:29,338"
+        },
+        {
+          "sentence_id": 122,
+          "text": "Mr. Dinosaur is not in George's bed.",
+          "chinese": "恐龙先生不在乔治的床上。",
+          "start_time": "00:03:30,276",
+          "end_time": "00:03:32,210"
+        },
+        {
+          "sentence_id": 123,
+          "text": "Oh.",
+          "chinese": "哦。",
+          "start_time": "00:03:32,412",
+          "end_time": "00:03:33,037"
+        },
+        {
+          "sentence_id": 124,
+          "text": "Maybe we should try the garden.",
+          "chinese": "也许我们应该去花园看看。",
+          "start_time": "00:03:33,780",
+          "end_time": "00:03:35,907"
+        },
+        {
+          "sentence_id": 125,
+          "text": "Yes, the garden.",
+          "chinese": "是的，花园。",
+          "start_time": "00:03:36,349",
+          "end_time": "00:03:37,907"
+        },
+        {
+          "sentence_id": 126,
+          "text": "I was going to say that.",
+          "chinese": "我刚想这么说。",
+          "start_time": "00:03:38,551",
+          "end_time": "00:03:40,280"
+        },
+        {
+          "sentence_id": 127,
+          "text": "Where is Mr. Dinosaur?",
+          "chinese": "恐龙先生在哪里？",
+          "start_time": "00:03:45,058",
+          "end_time": "00:03:47,288"
+        },
+        {
+          "sentence_id": 128,
+          "text": "Mr. Dinosaur is very hard to find.",
+          "chinese": "恐龙先生很难找。",
+          "start_time": "00:03:48,294",
+          "end_time": "00:03:50,057"
+        },
+        {
+          "sentence_id": 129,
+          "text": "Oh. Mr. Dinosaur isn't anywhere.",
+          "chinese": "哦。恐龙先生哪儿都没有。",
+          "start_time": "00:03:50,563",
+          "end_time": "00:03:54,556"
+        },
+        {
+          "sentence_id": 130,
+          "text": "George? You do love to throw Mr. Dinosaur in the air..",
+          "chinese": "乔治？你很喜欢把恐龙先生抛到空中...",
+          "start_time": "00:03:55,702",
+          "end_time": "00:03:59,695"
+        },
+        {
+          "sentence_id": 131,
+          "text": "I wonder if this time",
+          "chinese": "我想这次是不是",
+          "start_time": "00:04:01,441",
+          "end_time": "00:04:02,430"
+        },
+        {
+          "sentence_id": 132,
+          "text": "you threw Mr. Dinosaur just a bit too high.",
+          "chinese": "你把恐龙先生抛得太高了。",
+          "start_time": "00:04:02,575",
+          "end_time": "00:04:04,805"
+        },
+        {
+          "sentence_id": 133,
+          "text": "There he is. There he is.",
+          "chinese": "他在那里。他在那里。",
+          "start_time": "00:04:06,813",
+          "end_time": "00:04:08,440"
+        },
+        {
+          "sentence_id": 134,
+          "text": "I saw him first.",
+          "chinese": "我先看到的。",
+          "start_time": "00:04:08,581",
+          "end_time": "00:04:10,014"
+        },
+        {
+          "sentence_id": 135,
+          "text": "Well done, Peppa.",
+          "chinese": "做得好，佩奇。",
+          "start_time": "00:04:11,317",
+          "end_time": "00:04:13,251"
+        },
+        {
+          "sentence_id": 136,
+          "text": "You really are a very good detective.",
+          "chinese": "你真的是个很好的侦探。",
+          "start_time": "00:04:13,820",
+          "end_time": "00:04:15,720"
+        },
+        {
+          "sentence_id": 137,
+          "text": "Dinosaur.",
+          "chinese": "恐龙。",
+          "start_time": "00:04:18,157",
+          "end_time": "00:04:22,821"
+        },
+        {
+          "sentence_id": 138,
+          "text": "Grrrrrrrrrr.",
+          "chinese": "嗷呜...",
+          "start_time": "00:04:23,329",
+          "end_time": "00:04:24,455"
+        },
+        {
+          "sentence_id": 139,
+          "text": "George is so happy to have Mr. Dinosaur back again.",
+          "chinese": "乔治很高兴又找回了恐龙先生。",
+          "start_time": "00:04:25,598",
+          "end_time": "00:04:28,465"
+        },
+        {
+          "sentence_id": 140,
+          "text": "Wheeeeeeeeee.",
+          "chinese": "咻...",
+          "start_time": "00:04:28,534",
+          "end_time": "00:04:29,728"
+        },
+        {
+          "sentence_id": 141,
+          "text": "Maybe it isn't a good idea",
+          "chinese": "也许在树附近",
+          "start_time": "00:04:32,472",
+          "end_time": "00:04:33,962"
+        },
+        {
+          "sentence_id": 142,
+          "text": "to play with dinosaurs near trees.",
+          "chinese": "玩恐龙不是个好主意。",
+          "start_time": "00:04:34,040",
+          "end_time": "00:04:36,474"
+        },
+        {
+          "sentence_id": 143,
+          "text": "Dinosaur.",
+          "chinese": "恐龙。",
+          "start_time": "00:04:42,181",
+          "end_time": "00:04:43,478"
+        }
+      ]
+    }
+  ]
+}

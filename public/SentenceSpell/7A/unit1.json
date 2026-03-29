@@ -1,0 +1,34 @@
+[
+  {
+    "chinese": "你好，我是宋美美。请问你叫什么名字？",
+    "english": "Hello I'm Song Meimei May I have your name"
+  },
+  {
+    "chinese": "你好，我是彼得·布朗。很高兴见到你。",
+    "english": "Hi I'm Peter Brown Nice to meet you"
+  },
+  {
+    "chinese": "我也很高兴见到你。你的名字怎么拼？",
+    "english": "Nice to meet you too How do you spell your name"
+  },
+  {
+    "chinese": "P-E-T-E-R，彼得。B-R-O-W-N，布朗。",
+    "english": "P-E-T-E-R Peter B-R-O-W-N Brown"
+  },
+  {
+    "chinese": "你来自哪里？",
+    "english": "Where are you from"
+  },
+  {
+    "chinese": "我来自英国伦敦。",
+    "english": "I'm from London in the UK"
+  },
+  {
+    "chinese": "哇，那很远。你在哪个班？",
+    "english": "Wow that's far What class are you in"
+  },
+  {
+    "chinese": "我在七年级一班。",
+    "english": "I'm in Class 1 Grade 7"
+  }
+]

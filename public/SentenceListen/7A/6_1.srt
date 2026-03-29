@@ -1,0 +1,44 @@
+﻿1
+00:00:00,000 --> 00:00:03,550
+Mum: Peter! Get up, You're late
+
+2
+00:00:04,350 --> 00:00:06,100
+Peter: What time is it?
+
+3
+00:00:06,700 --> 00:00:08,470
+Mum: A quarter past six.
+
+4
+00:00:08,800 --> 00:00:12,300
+Peter: It's too early, School is at eight.
+
+5
+00:00:12,725 --> 00:00:14,675
+Mum: But you're on duty today!
+
+6
+00:00:14,900 --> 00:00:17,200
+Peter: Oh, no I'm late!
+
+7
+00:00:17,550 --> 00:00:23,200
+Mum: Quickly There's no time for a shower. Get dressed and go.
+
+8
+00:00:23,600 --> 00:00:25,650
+Peter: I can still brush my teeth.
+
+9
+00:00:26,125 --> 00:00:30,200
+Mum: And here's your breakfast. Take it to school.
+
+10
+00:00:30,725 --> 00:00:32,975
+Peter: Thank you, Mum! Bye
+
+11
+00:00:33,200 --> 00:00:34,125
+Mum: Be safe.
+

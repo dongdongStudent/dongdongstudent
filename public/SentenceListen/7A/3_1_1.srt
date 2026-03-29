@@ -1,0 +1,24 @@
+﻿1
+00:00:00,880 --> 00:00:02,192
+Can I help you?
+
+2
+00:00:02,608 --> 00:00:06,832
+Oh, yes. I’m looking for my classroom.
+
+3
+00:00:07,376 --> 00:00:10,096
+OK. What class are you in?
+
+4
+00:00:10,704 --> 00:00:13,536
+I’m in Class 2, Grade 7.
+
+5
+00:00:13,808 --> 00:00:17,664
+Oh, it’s in that building, behind the sports field.
+
+6
+00:00:18,640 --> 00:00:23,664
+Behind the sports field. Oh, I see! Thanks
+

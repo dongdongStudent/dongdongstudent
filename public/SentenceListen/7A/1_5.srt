@@ -1,0 +1,28 @@
+﻿1
+00:01:05,520 --> 00:01:09,008
+Hey there! My name is Peter Brown.
+
+2
+00:01:09,424 --> 00:01:15,216
+I’m 13 years old. I’m from London, in the UK.
+
+3
+00:01:16,512 --> 00:01:20,192
+Now, I live in Beijing with my family.
+
+4
+00:01:21,088 --> 00:01:25,072
+My favourite food is Beijing roast duck,
+
+5
+00:01:25,152 --> 00:01:29,088
+and my favourite place is the Great Wall.
+
+6
+00:01:29,392 --> 00:01:34,240
+I like music, and I play the guitar in the school band.
+
+7
+00:01:34,944 --> 00:01:37,744
+Would you like to be my friend?
+

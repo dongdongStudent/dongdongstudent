@@ -1,0 +1,32 @@
+﻿1
+00:00:07,584 --> 00:00:10,416
+hey there, Big Cat.
+
+2
+00:00:12,384 --> 00:00:14,464
+Let’s go to the lake.
+
+3
+00:00:16,400 --> 00:00:18,896
+Come with me and Dog,
+
+4
+00:00:20,432 --> 00:00:22,480
+And Fox and Frog!
+
+5
+00:00:24,112 --> 00:00:26,144
+We will listen to music,
+
+6
+00:00:27,952 --> 00:00:30,928
+And find flowers red and pink.
+
+7
+00:00:32,640 --> 00:00:34,816
+We will sit in the sun,
+
+8
+00:00:36,448 --> 00:00:38,512
+Tell jokes and have fun
+

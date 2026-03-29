@@ -1,0 +1,36 @@
+﻿1
+00:00:00,144 --> 00:00:01,072
+Book Club
+
+2
+00:00:02,656 --> 00:00:04,192
+Do you like reading?
+
+3
+00:00:04,432 --> 00:00:06,192
+Join our book club!
+
+4
+00:00:06,464 --> 00:00:08,320
+It’s more than reading.
+
+5
+00:00:08,816 --> 00:00:12,544
+We act out stories, talk about books,
+
+6
+00:00:12,768 --> 00:00:14,608
+and make new friends.
+
+7
+00:00:15,184 --> 00:00:18,864
+Books can open your mind and make you think.
+
+8
+00:00:19,360 --> 00:00:22,128
+Come to the library on Tuesdays
+
+9
+00:00:22,176 --> 00:00:25,392
+after school and fall in love with books!
+

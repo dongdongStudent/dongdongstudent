@@ -1,0 +1,48 @@
+﻿1
+00:00:24,784 --> 00:00:27,264
+Hi, Peter. How was your weekend?
+
+2
+00:00:27,456 --> 00:00:31,824
+It was great! I visited the science museum.
+
+3
+00:00:32,304 --> 00:00:34,160
+Did you see anything interesting?
+
+4
+00:00:34,592 --> 00:00:37,552
+Yes, there was a space exhibition.
+
+5
+00:00:38,272 --> 00:00:40,080
+There were some special rooms,
+
+6
+00:00:40,320 --> 00:00:43,264
+and they looked like parts of a space station.
+
+7
+00:00:43,728 --> 00:00:48,688
+You could go inside them and see how astronauts live and work!
+
+8
+00:00:49,440 --> 00:00:50,960
+It was amazing.
+
+9
+00:00:51,328 --> 00:00:54,528
+Cool! Were there any astronauts there?
+
+10
+00:00:54,848 --> 00:00:58,000
+Well, no. But there were robots!
+
+11
+00:00:58,576 --> 00:01:02,256
+I asked one of them questions and it answered me!
+
+12
+00:01:02,608 --> 00:01:05,552
+Wow! I’d love to go and see them
+

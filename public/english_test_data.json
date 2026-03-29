@@ -1,0 +1,1009 @@
+{
+  "grades": [
+    {
+      "id": "gradeB",
+      "name": "七年级下册",
+      "units": [
+        {
+          "id": "unit1 Animal Friends",
+          "name": "1 Animal Friends",
+          "knowledgePoints": [
+            {
+              "id": "words_section_a",
+              "type": "words",
+              "name": "单词测试 (Section A)",
+              "data": [
+                {
+                  "id": 1,
+                  "english": "fox",
+                  "chinese": "狐狸",
+                  "phonetic": "/fɒks/",
+                  "plural": "foxes"
+                },
+                {
+                  "id": 2,
+                  "english": "giraffe",
+                  "chinese": "长颈鹿",
+                  "phonetic": "/dʒɪˈrɑːf/"
+                },
+                {
+                  "id": 3,
+                  "english": "eagle",
+                  "chinese": "鹰",
+                  "phonetic": "/ˈiːɡl/"
+                },
+                {
+                  "id": 4,
+                  "english": "wolf",
+                  "chinese": "狼",
+                  "phonetic": "/wʊlf/",
+                  "plural": "wolves"
+                },
+                {
+                  "id": 5,
+                  "english": "penguin",
+                  "chinese": "企鹅",
+                  "phonetic": "/ˈpɛŋɡwɪn/"
+                },
+                {
+                  "id": 6,
+                  "english": "care",
+                  "chinese": "照顾；护理；关心；在乎",
+                  "phonetic": "/keə(r)/"
+                },
+                {
+                  "id": 7,
+                  "english": "sandwich",
+                  "chinese": "三明治",
+                  "phonetic": "/ˈsænwɪtʃ/; /ˈsænwɪdʒ/"
+                },
+                {
+                  "id": 8,
+                  "english": "snake",
+                  "chinese": "蛇",
+                  "phonetic": "/sneɪk/"
+                },
+                {
+                  "id": 9,
+                  "english": "scary",
+                  "chinese": "吓人的；恐怖的",
+                  "phonetic": "/ˈskæri/"
+                },
+                {
+                  "id": 10,
+                  "english": "neck",
+                  "chinese": "脖子",
+                  "phonetic": "/nek/"
+                },
+                {
+                  "id": 11,
+                  "english": "guess",
+                  "chinese": "猜测；估计",
+                  "phonetic": "/ɡes/"
+                },
+                {
+                  "id": 12,
+                  "english": "shark",
+                  "chinese": "鲨鱼",
+                  "phonetic": "/ʃɑːrk/"
+                },
+                {
+                  "id": 13,
+                  "english": "whale",
+                  "chinese": "鲸",
+                  "phonetic": "/weɪl/"
+                },
+                {
+                  "id": 14,
+                  "english": "huge",
+                  "chinese": "巨大的；极多的",
+                  "phonetic": "/hjuːdʒ/"
+                },
+                {
+                  "id": 15,
+                  "english": "dangerous",
+                  "chinese": "危险的；有害的",
+                  "phonetic": "/ˈdeɪndʒərəs/"
+                }
+              ]
+            },
+            {
+              "id": "word_formation_section_a",
+              "type": "vocabulary_transformation",
+              "name": "词形变换 (Section A)",
+              "data": [
+                { "id": 101, "english": "foxes", "chinese": "fox(复数)" },
+                { "id": 102, "english": "wolves", "chinese": "wolf(复数)" },
+                { "id": 103, "english": "careful", "chinese": "care(adj.)" },
+                { "id": 104, "english": "carefully", "chinese": "care(adv.)" },
+                {
+                  "id": 105,
+                  "english": "looks",
+                  "chinese": "look(n. 相貌；容貌)"
+                },
+                {
+                  "id": 106,
+                  "english": "scared",
+                  "chinese": "scary(adj. 害怕的)"
+                },
+                { "id": 107, "english": "mice", "chinese": "mouse(复数)" },
+                { "id": 108, "english": "danger", "chinese": "dangerous(n.)" }
+              ]
+            },
+            {
+              "id": "phrases_section_a",
+              "type": "phrases",
+              "name": "重点短语 (Section A)",
+              "data": [
+                {
+                  "id": 101,
+                  "english": "take care of",
+                  "chinese": "照顾；处理"
+                },
+                { "id": 102, "english": "be from", "chinese": "来自" },
+                { "id": 103, "english": "keep warm", "chinese": "保持温暖" },
+                {
+                  "id": 104,
+                  "english": "be good for",
+                  "chinese": "对……有好处"
+                },
+                { "id": 105, "english": "look like", "chinese": "看起来像" },
+                { "id": 106, "english": "in the sea", "chinese": "在海里" },
+                {
+                  "id": 107,
+                  "english": "black and white",
+                  "chinese": "黑白相间的"
+                }
+              ]
+            },
+            {
+              "id": "sentences_section_a",
+              "type": "sentences",
+              "name": "重点句型 (Section A)",
+              "data": [
+                {
+                  "id": 1,
+                  "chinese": "你为什么这么喜欢企鹅？因为它们很可爱！",
+                  "english": "Why do you like penguins so much? Because they’re very cute!"
+                },
+                {
+                  "id": 2,
+                  "chinese": "它们不能像其他鸟一样飞，但它们能游得很快。",
+                  "english": "They can’t fly like other birds, but they can swim fast."
+                },
+                {
+                  "id": 3,
+                  "chinese": "我喜欢它们走路的样子。",
+                  "english": "I like how they walk."
+                },
+                {
+                  "id": 4,
+                  "chinese": "它们来自哪里？这上面说它们来自南极洲。",
+                  "english": "Where are they from? It says they’re from Antarctica."
+                },
+                {
+                  "id": 5,
+                  "chinese": "这有助于它们保持温暖。",
+                  "english": "It helps them keep warm."
+                },
+                {
+                  "id": 6,
+                  "chinese": "这对它们不好。",
+                  "english": "It’s not good for them."
+                },
+                {
+                  "id": 7,
+                  "chinese": "它看起来是什么样子的？",
+                  "english": "What does it look like?"
+                },
+                {
+                  "id": 8,
+                  "chinese": "为什么你不喜欢蛇？因为它们真的很吓人。",
+                  "english": "Why don’t you like snakes? Because they’re really scary."
+                },
+                {
+                  "id": 9,
+                  "chinese": "这种动物的尾巴长吗？",
+                  "english": "Is the animal’s tail long?"
+                }
+              ]
+            },
+            {
+              "id": "words_section_b",
+              "type": "words",
+              "name": "单词测试 (Section B)",
+              "data": [
+                {
+                  "id": 16,
+                  "english": "save",
+                  "chinese": "救；储蓄；保存",
+                  "phonetic": "/seɪv/"
+                },
+                {
+                  "id": 17,
+                  "english": "luck",
+                  "chinese": "幸运；运气",
+                  "phonetic": "/lʌk/"
+                },
+                {
+                  "id": 18,
+                  "english": "Thai",
+                  "chinese": "泰国的；泰国人的；泰国人；泰语",
+                  "phonetic": "/taɪ/"
+                },
+                {
+                  "id": 19,
+                  "english": "trunk",
+                  "chinese": "象鼻",
+                  "phonetic": "/trʌŋk/"
+                },
+                {
+                  "id": 20,
+                  "english": "pick",
+                  "chinese": "捡；摘",
+                  "phonetic": "/pɪk/"
+                },
+                {
+                  "id": 21,
+                  "english": "carry",
+                  "chinese": "拿；提",
+                  "phonetic": "/ˈkæri/"
+                },
+                {
+                  "id": 22,
+                  "english": "playful",
+                  "chinese": "爱嬉戏的；爱玩的",
+                  "phonetic": "/ˈpleɪfl/"
+                },
+                {
+                  "id": 23,
+                  "english": "swimmer",
+                  "chinese": "游泳者",
+                  "phonetic": "/ˈswɪmə(r)/"
+                },
+                {
+                  "id": 24,
+                  "english": "culture",
+                  "chinese": "文化；文明",
+                  "phonetic": "/ˈkʌltʃə(r)/"
+                },
+                {
+                  "id": 25,
+                  "english": "however",
+                  "chinese": "然而；不过",
+                  "phonetic": "/haʊˈevə(r)/"
+                },
+                {
+                  "id": 26,
+                  "english": "danger",
+                  "chinese": "危险",
+                  "phonetic": "/ˈdeɪndʒə(r)/"
+                },
+                {
+                  "id": 27,
+                  "english": "forest",
+                  "chinese": "森林",
+                  "phonetic": "/ˈfɔːrɪst/"
+                },
+                {
+                  "id": 28,
+                  "english": "kill",
+                  "chinese": "杀死；弄死",
+                  "phonetic": "/kɪl/"
+                },
+                {
+                  "id": 29,
+                  "english": "ivory",
+                  "chinese": "象牙",
+                  "phonetic": "/ˈaɪvəri/"
+                },
+                {
+                  "id": 30,
+                  "english": "friendly",
+                  "chinese": "友好的",
+                  "phonetic": "/ˈfrendli/"
+                },
+                {
+                  "id": 31,
+                  "english": "quite",
+                  "chinese": "相当；完全",
+                  "phonetic": "/kwaɪt/"
+                },
+                {
+                  "id": 32,
+                  "english": "fur",
+                  "chinese": "(动物浓厚的)软毛",
+                  "phonetic": "/fɜː(r)/"
+                },
+                {
+                  "id": 33,
+                  "english": "blind",
+                  "chinese": "瞎的；失明的",
+                  "phonetic": "/blaɪnd/"
+                },
+                {
+                  "id": 34,
+                  "english": "hearing",
+                  "chinese": "听力；听觉",
+                  "phonetic": "/ˈhɪərɪŋ/"
+                }
+              ]
+            },
+            {
+              "id": "word_formation_section_b",
+              "type": "vocabulary_transformation",
+              "name": "词形变换 (Section B)",
+              "data": [
+                { "id": 109, "english": "lucky", "chinese": "luck(adj.)" },
+                { "id": 110, "english": "play", "chinese": "playful(v.)" },
+                {
+                  "id": 111,
+                  "english": "swimming",
+                  "chinese": "swimmer(v.) swim(现在分词)"
+                },
+                {
+                  "id": 112,
+                  "english": "dangerous",
+                  "chinese": "danger(adj.)"
+                },
+                { "id": 113, "english": "friend", "chinese": "friendly(n.)" },
+                { "id": 114, "english": "hear", "chinese": "hearing(v.)" }
+              ]
+            },
+            {
+              "id": "phrases_section_b",
+              "type": "phrases",
+              "name": "重点短语 (Section B)",
+              "data": [
+                { "id": 108, "english": "pick up", "chinese": "拿起；举起" },
+                { "id": 109, "english": "one another", "chinese": "互相" },
+                { "id": 110, "english": "look after", "chinese": "照顾" },
+                {
+                  "id": 111,
+                  "english": "in danger",
+                  "chinese": "处于危险之中"
+                },
+                { "id": 112, "english": "cut down", "chinese": "砍伐；减少" },
+                { "id": 113, "english": "too many", "chinese": "太多" },
+                { "id": 114, "english": "made of", "chinese": "由……制成的" },
+                { "id": 115, "english": "quite a", "chinese": "相当；非常" },
+                {
+                  "id": 116,
+                  "english": "not…at all",
+                  "chinese": "一点也不；完全不"
+                }
+              ]
+            },
+            {
+              "id": "sentences_section_b",
+              "type": "sentences",
+              "name": "重点句型 (Section B)",
+              "data": [
+                {
+                  "id": 10,
+                  "chinese": "我喜欢大象，因为它们强壮又聪明。",
+                  "english": "I love elephants because they are strong and clever."
+                },
+                {
+                  "id": 11,
+                  "chinese": "在这里它们也是好运的象征。",
+                  "english": "They are also a symbol of good luck here."
+                },
+                {
+                  "id": 12,
+                  "chinese": "大象看起来和其他动物很不一样。",
+                  "english": "Elephants look very different from other animals."
+                },
+                {
+                  "id": 13,
+                  "chinese": "大象在某些方面与我们相似。",
+                  "english": "Elephants are like us in some ways."
+                },
+                {
+                  "id": 14,
+                  "chinese": "大象是泰国生活和文化的重要组成部分。",
+                  "english": "Elephants are an important part of Thai life and culture."
+                },
+                {
+                  "id": 15,
+                  "chinese": "然而，它们处于危险之中。",
+                  "english": "However, they are in danger."
+                },
+                {
+                  "id": 16,
+                  "chinese": "让我们拯救森林，不要买象牙制品。",
+                  "english": "Let's save the forests and not buy things made of ivory."
+                },
+                {
+                  "id": 17,
+                  "chinese": "我的狗，小花，是这个家庭的一员。",
+                  "english": "My dog, Xiaohua, is part of the family."
+                },
+                {
+                  "id": 18,
+                  "chinese": "她帮助我步行去学校并保证安全。",
+                  "english": "She helps me walk to school and stay safe."
+                }
+              ]
+            }
+          ]
+        },
+        {
+  "id": "unit2 No Rules, No Order",
+  "name": "2 No Rules, No Order",
+  "knowledgePoints": [
+    {
+      "id": "words_section_a",
+      "type": "words",
+      "name": "单词测试 (Section A)",
+      "data": [
+        {
+          "id": 1,
+          "english": "rule",
+          "chinese": "规则;规章",
+          "phonetic": "/ruːl/"
+        },
+        {
+          "id": 2,
+          "english": "order",
+          "chinese": "秩序;点菜",
+          "phonetic": "/ˈɔːdə(r)/"
+        },
+        {
+          "id": 3,
+          "english": "follow",
+          "chinese": "遵循;跟随",
+          "phonetic": "/ˈfɒləʊ/"
+        },
+        {
+          "id": 4,
+          "english": "arrive",
+          "chinese": "到达",
+          "phonetic": "/əˈraɪv/"
+        },
+        {
+          "id": 5,
+          "english": "hallway",
+          "chinese": "走廊",
+          "phonetic": "/ˈhɔːlweɪ/"
+        },
+        {
+          "id": 6,
+          "english": "uniform",
+          "chinese": "校服;制服",
+          "phonetic": "/ˈjuːnɪfəm/"
+        },
+        {
+          "id": 7,
+          "english": "litter",
+          "chinese": "乱扔;垃圾",
+          "phonetic": "/ˈlɪtə(r)/"
+        },
+        {
+          "id": 8,
+          "english": "polite",
+          "chinese": "有礼貌的",
+          "phonetic": "/pəˈlaɪt/"
+        },
+        {
+          "id": 9,
+          "english": "treat",
+          "chinese": "对待;招待;治疗;款待",
+          "phonetic": "/triːt/"
+        },
+        {
+          "id": 10,
+          "english": "respect",
+          "chinese": "尊敬",
+          "phonetic": "/rɪˈspekt/"
+        },
+        {
+          "id": 11,
+          "english": "if",
+          "chinese": "如果",
+          "phonetic": "/ɪf/"
+        },
+        {
+          "id": 12,
+          "english": "jacket",
+          "chinese": "夹克衫;短上衣",
+          "phonetic": "/ˈdʒækɪt/"
+        },
+        {
+          "id": 13,
+          "english": "everything",
+          "chinese": "每件事;一切",
+          "phonetic": "/ˈevriθɪŋ/"
+        },
+        {
+          "id": 14,
+          "english": "lend",
+          "chinese": "借给;借出",
+          "phonetic": "/lend/"
+        },
+        {
+          "id": 15,
+          "english": "sweet",
+          "chinese": "糖果;甜的",
+          "phonetic": "/swiːt/"
+        },
+        {
+          "id": 16,
+          "english": "snack",
+          "chinese": "点心;小吃",
+          "phonetic": "/snæk/"
+        },
+        {
+          "id": 17,
+          "english": "mobile",
+          "chinese": "可移动的",
+          "phonetic": "/ˈməʊbəl/"
+        },
+        {
+          "id": 18,
+          "english": "queue",
+          "chinese": "队",
+          "phonetic": "/kjuː/"
+        },
+        {
+          "id": 19,
+          "english": "just",
+          "chinese": "只是;正好",
+          "phonetic": "/dʒʌst/"
+        },
+        {
+          "id": 20,
+          "english": "leave",
+          "chinese": "离开;留下",
+          "phonetic": "/liːv/"
+        },
+        {
+          "id": 21,
+          "english": "absent",
+          "chinese": "缺席的;不在的",
+          "phonetic": "/ˈæbsənt/"
+        },
+        {
+          "id": 22,
+          "english": "shh",
+          "chinese": "嘘(用以让别人安静下来)",
+          "phonetic": "/ʃ/"
+        },
+        {
+          "id": 23,
+          "english": "quietly",
+          "chinese": "轻声地;安静地",
+          "phonetic": "/ˈkwaɪətli/"
+        },
+        {
+          "id": 24,
+          "english": "belt",
+          "chinese": "安全带;腰带;皮带",
+          "phonetic": "/belt/"
+        },
+        {
+          "id": 25,
+          "english": "feed",
+          "chinese": "喂养;饲养",
+          "phonetic": "/fiːd/"
+        },
+        {
+          "id": 26,
+          "english": "noise",
+          "chinese": "声音;噪声",
+          "phonetic": "/nɔɪz/"
+        }
+      ]
+    },
+    {
+      "id": "word_formation_section_a",
+      "type": "vocabulary_transformation",
+      "name": "词形变换 (Section A)",
+      "data": [
+        {
+          "id": 101,
+          "english": "ruler",
+          "chinese": "rule(n. 统治者)"
+        },
+        {
+          "id": 102,
+          "english": "politely",
+          "chinese": "polite(adv.)"
+        },
+        {
+          "id": 103,
+          "english": "impolite",
+          "chinese": "polite(adj. 反义词)"
+        },
+        {
+          "id": 104,
+          "english": "absence",
+          "chinese": "absent(n.)"
+        },
+        {
+          "id": 105,
+          "english": "quiet",
+          "chinese": "quietly(adj.)"
+        },
+        {
+          "id": 106,
+          "english": "noisy",
+          "chinese": "noise(adj.)"
+        }
+      ]
+    },
+    {
+      "id": "phrases_section_a",
+      "type": "phrases",
+      "name": "重点短语 (Section A)",
+      "data": [
+        {
+          "id": 101,
+          "english": "be late (for)",
+          "chinese": "迟到"
+        },
+        {
+          "id": 102,
+          "english": "on time",
+          "chinese": "准时"
+        },
+        {
+          "id": 103,
+          "english": "have to",
+          "chinese": "不得不"
+        },
+        {
+          "id": 104,
+          "english": "of course",
+          "chinese": "当然"
+        },
+        {
+          "id": 105,
+          "english": "mobile phone",
+          "chinese": "手机"
+        },
+        {
+          "id": 106,
+          "english": "turn off",
+          "chinese": "关掉(水、电或煤气)"
+        },
+        {
+          "id": 107,
+          "english": "jump the queue",
+          "chinese": "插队"
+        },
+        {
+          "id": 108,
+          "english": "wait for",
+          "chinese": "等待"
+        },
+        {
+          "id": 109,
+          "english": "be absent from",
+          "chinese": "缺席;不在"
+        },
+        {
+          "id": 110,
+          "english": "put on one's seat belt",
+          "chinese": "系上某人的安全带"
+        }
+      ]
+    },
+    {
+      "id": "sentences_section_a",
+      "type": "sentences",
+      "name": "重点句型 (Section A)",
+      "data": [
+        {
+          "id": 1,
+          "chinese": "不要在走廊里跑。",
+          "english": "Don't run in the hallways."
+        },
+        {
+          "id": 2,
+          "chinese": "保持你的学校干净整洁。",
+          "english": "Keep your school clean and tidy."
+        },
+        {
+          "id": 3,
+          "chinese": "礼貌待人，尊重他人。",
+          "english": "Be polite and treat everyone with respect."
+        },
+        {
+          "id": 4,
+          "chinese": "如果你想问老师问题，请举手。",
+          "english": "Put up your hand if you want to ask your teacher a question."
+        },
+        {
+          "id": 5,
+          "chinese": "玛丽能在走廊里跑吗？不，她不能。她必须在走廊里走。",
+          "english": "Can Mary run in the hallway? No, she can't. She has to walk in the hallway."
+        },
+        {
+          "id": 6,
+          "chinese": "我可以把钢笔借给你。",
+          "english": "I can lend you my pen."
+        },
+        {
+          "id": 7,
+          "chinese": "你想要一颗糖果吗？不，谢谢你。我们不能在课堂上吃零食。",
+          "english": "Would you like a sweet? No, thank you. We can't eat snacks in class."
+        },
+        {
+          "id": 8,
+          "chinese": "我得接电话了。",
+          "english": "I have to answer my phone."
+        }
+      ]
+    },
+    {
+      "id": "words_section_b",
+      "type": "words",
+      "name": "单词测试 (Section B)",
+      "data": [
+        {
+          "id": 27,
+          "english": "unhappy",
+          "chinese": "不快乐的",
+          "phonetic": "/ʌnˈhæpi/"
+        },
+        {
+          "id": 28,
+          "english": "Dr",
+          "chinese": "博士;医生",
+          "phonetic": "/ˈdɒktə(r)/"
+        },
+        {
+          "id": 29,
+          "english": "either",
+          "chinese": "也(用于否定词组后)",
+          "phonetic": "/ˈaɪðə(r)/"
+        },
+        {
+          "id": 30,
+          "english": "practise",
+          "chinese": "训练;练习",
+          "phonetic": "/ˈpræktɪs/"
+        },
+        {
+          "id": 31,
+          "english": "hang",
+          "chinese": "悬挂",
+          "phonetic": "/hæŋ/"
+        },
+        {
+          "id": 32,
+          "english": "weekday",
+          "chinese": "工作日",
+          "phonetic": "/ˈwiːkdeɪ/"
+        },
+        {
+          "id": 33,
+          "english": "awful",
+          "chinese": "糟糕的;讨厌的",
+          "phonetic": "/ˈɔːfl/"
+        },
+        {
+          "id": 34,
+          "english": "become",
+          "chinese": "变成;成为",
+          "phonetic": "/bɪˈkʌm/"
+        },
+        {
+          "id": 35,
+          "english": "better",
+          "chinese": "较好的;较好地",
+          "phonetic": "/ˈbetə(r)/"
+        },
+        {
+          "id": 36,
+          "english": "person",
+          "chinese": "人",
+          "phonetic": "/ˈpɜːsn/"
+        },
+        {
+          "id": 37,
+          "english": "focus",
+          "chinese": "集中(注意力,精力等);聚焦",
+          "phonetic": "/ˈfəʊkəs/"
+        },
+        {
+          "id": 38,
+          "english": "build",
+          "chinese": "创建;建造",
+          "phonetic": "/bɪld/"
+        },
+        {
+          "id": 39,
+          "english": "spirit",
+          "chinese": "精神;情绪",
+          "phonetic": "/ˈspɪrɪt/"
+        },
+        {
+          "id": 40,
+          "english": "relax",
+          "chinese": "放松;休息",
+          "phonetic": "/rɪˈlæks/"
+        },
+        {
+          "id": 41,
+          "english": "advice",
+          "chinese": "建议;意见",
+          "phonetic": "/ədˈvaɪs/"
+        },
+        {
+          "id": 42,
+          "english": "understand",
+          "chinese": "理解;领会",
+          "phonetic": "/ˌʌndəˈstænd/"
+        },
+        {
+          "id": 43,
+          "english": "untidy",
+          "chinese": "不整洁的",
+          "phonetic": "/ʌnˈtaɪdi/"
+        }
+      ]
+    },
+    {
+      "id": "word_formation_section_b",
+      "type": "vocabulary_transformation",
+      "name": "词形变换 (Section B)",
+      "data": [
+        {
+          "id": 107,
+          "english": "unhappiness",
+          "chinese": "unhappy(n.)"
+        },
+        {
+          "id": 108,
+          "english": "happy",
+          "chinese": "unhappy(adj. 反义词)"
+        },
+        {
+          "id": 109,
+          "english": "practice",
+          "chinese": "practise(n.)"
+        },
+        {
+          "id": 110,
+          "english": "building",
+          "chinese": "build(n. 建筑物)"
+        },
+        {
+          "id": 111,
+          "english": "relaxing",
+          "chinese": "relax(adj. 令人放松的)"
+        },
+        {
+          "id": 112,
+          "english": "relaxed",
+          "chinese": "relax(adj. 放松的)"
+        },
+        {
+          "id": 113,
+          "english": "advise",
+          "chinese": "advice(v.)"
+        },
+        {
+          "id": 114,
+          "english": "tidy",
+          "chinese": "untidy(反义词)"
+        }
+      ]
+    },
+    {
+      "id": "phrases_section_b",
+      "type": "phrases",
+      "name": "重点短语 (Section B)",
+      "data": [
+        {
+          "id": 111,
+          "english": "too many rules",
+          "chinese": "太多的规则"
+        },
+        {
+          "id": 112,
+          "english": "make one's bed",
+          "chinese": "整理床铺;铺床"
+        },
+        {
+          "id": 113,
+          "english": "on weekdays",
+          "chinese": "在工作日"
+        },
+        {
+          "id": 114,
+          "english": "hang out",
+          "chinese": "闲逛;常去某处"
+        },
+        {
+          "id": 115,
+          "english": "focus on",
+          "chinese": "集中(注意力,精力等)于"
+        },
+        {
+          "id": 116,
+          "english": "think about",
+          "chinese": "思考;考虑"
+        },
+        {
+          "id": 117,
+          "english": "follow rules",
+          "chinese": "遵守规则"
+        },
+        {
+          "id": 118,
+          "english": "walk the dog",
+          "chinese": "遛狗"
+        },
+        {
+          "id": 119,
+          "english": "at weekends",
+          "chinese": "在周末"
+        },
+        {
+          "id": 120,
+          "english": "practise the violin",
+          "chinese": "练习小提琴"
+        },
+        {
+          "id": 121,
+          "english": "get along with",
+          "chinese": "与……和睦相处"
+        }
+      ]
+    },
+    {
+      "id": "sentences_section_b",
+      "type": "sentences",
+      "name": "重点句型 (Section B)",
+      "data": [
+        {
+          "id": 9,
+          "chinese": "我必须在早餐前整理床铺。",
+          "english": "I have to make my bed before breakfast."
+        },
+        {
+          "id": 10,
+          "chinese": "我必须先完成作业。",
+          "english": "I have to finish my homework first."
+        },
+        {
+          "id": 11,
+          "chinese": "我只有练完钢琴才能打篮球。",
+          "english": "I can only play basketball after I practise the piano."
+        },
+        {
+          "id": 12,
+          "chinese": "上学日我不能和朋友出去玩。",
+          "english": "I can't hang out with my friends on weekdays."
+        },
+        {
+          "id": 13,
+          "chinese": "那是对你的班级和老师的尊重。",
+          "english": "That shows respect for your class and teacher."
+        },
+        {
+          "id": 14,
+          "chinese": "你必须穿校服，因为它能建立校风。",
+          "english": "You have to wear a uniform because it builds school spirit."
+        },
+        {
+          "id": 15,
+          "chinese": "规则可以帮助让世界变得更好。",
+          "english": "Rules can help to make the world better."
+        },
+        {
+          "id": 16,
+          "chinese": "无规矩不成方圆!",
+          "english": "No rules, no order!"
+        }
+      ]
+    }
+  ]
+}
+      ]
+    }
+  ]
+}

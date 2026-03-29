@@ -1,0 +1,24 @@
+﻿1
+00:00:09,264 --> 00:00:11,136
+What are you doing?
+
+2
+00:00:11,584 --> 00:00:13,312
+I’m walking my dog.
+
+3
+00:00:13,568 --> 00:00:16,896
+Would you like to play football with me at the sports park?
+
+4
+00:00:17,152 --> 00:00:21,152
+Yes, I’d love to. When shall we meet?
+
+5
+00:00:21,616 --> 00:00:23,696
+Let’s meet at three o’clock.
+
+6
+00:00:23,808 --> 00:00:24,896
+Sure
+

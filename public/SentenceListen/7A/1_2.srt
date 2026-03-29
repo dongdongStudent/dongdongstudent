@@ -1,0 +1,33 @@
+﻿
+2
+00:00:00,333 --> 00:00:01,893
+Good morning, Ms Li.
+
+3
+00:00:02,173 --> 00:00:04,853
+Good morning! Are you Emma?
+
+4
+00:00:05,026 --> 00:00:07,533
+No, Ms Li. I’m Ella.
+
+5
+00:00:07,853 --> 00:00:11,053
+Sorry, Ella. What’s your last name?
+
+6
+00:00:11,600 --> 00:00:12,666
+It’s Miller.
+
+7
+00:00:12,893 --> 00:00:14,466
+How old are you, Ella?
+
+8
+00:00:14,560 --> 00:00:16,120
+I’m 12 years old.
+
+9
+00:00:16,413 --> 00:00:18,840
+Well, it’s nice to meet you.
+

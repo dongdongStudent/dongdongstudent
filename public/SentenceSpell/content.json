@@ -1,0 +1,350 @@
+{
+  "grade7A": {
+    "name": "七年级上册",
+    "units": {
+      "star_unit1": {
+        "name": "star unit 1",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "第一部分",
+            "path": "7A/star_1_1.json"
+          },
+          "part2": {
+            "name": "第二部分",
+            "path": "7A/star_1_2.json"
+          }
+        }
+      },
+      "star_unit2": {
+        "name": "star unit 2",
+        "hasSubUnits": true,
+        "subUnits": {
+          "basic": {
+            "name": "一",
+            "path": "7A/star_2_1.json"
+          },
+          "advanced": {
+            "name": "二",
+            "path": "7A/star_2_2.json"
+          },
+          "review": {
+            "name": "三",
+            "path": "7A/star_2_3.json"
+          }
+        }
+      },
+      "star_unit3": {
+        "name": "star unit 3",
+        "hasSubUnits": true,
+        "subUnits": {
+          "dialog1": {
+            "name": "一",
+            "path": "7A/star_3_1.json"
+          },
+          "dialog2": {
+            "name": "二",
+            "path": "7A/star_3_2.json"
+          },
+          "dialog3": {
+            "name": "三",
+            "path": "7A/star_3_3.json"
+          }
+        }
+      }
+    }
+  },
+  "grade7B": {
+    "name": "七年级下册",
+    "units": {
+      "unit1": {
+        "name": "unit 1",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/1_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/1_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/1_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/1_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/1_5.json"
+          }
+        }
+      },
+      "unit2": {
+        "name": "unit 2",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/2_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/2_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/2_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/2_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/2_5.json"
+          }
+        }
+      },
+      "unit3": {
+        "name": "unit 3",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/3_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/3_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/3_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/3_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/3_5.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/3_6.json"
+          },
+          "part7": {
+            "name": "七",
+            "path": "7B/3_7.json"
+          }
+        }
+      },
+      "unit4": {
+        "name": "unit 4",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/4_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/4_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/4_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/4_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/4_5_1.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/4_5_2.json"
+          }
+        }
+      },
+      "unit5": {
+        "name": "unit 5",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/5_1_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/5_1_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/5_1_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/5_2.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/5_3.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/5_4_1.json"
+          },
+          "part7": {
+            "name": "七",
+            "path": "7B/5_4_2.json"
+          },
+          "part8": {
+            "name": "八",
+            "path": "7B/5_4_3.json"
+          }
+        }
+      },
+      "unit6": {
+        "name": "unit 6",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/6_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/6_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/6_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/6_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/6_5_1.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/6_5_2.json"
+          },
+          "part7": {
+            "name": "七",
+            "path": "7B/6_5_3.json"
+          },
+          "part8": {
+            "name": "八",
+            "path": "7B/6_5_4.json"
+          }
+        }
+      },
+      "unit7": {
+        "name": "unit 7",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/7_1_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/7_1_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/7_2.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/7_3.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/7_4_1.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/7_4_2.json"
+          }
+        }
+      },
+      "unit8": {
+        "name": "unit 8",
+        "hasSubUnits": true,
+        "subUnits": {
+          "part1": {
+            "name": "一",
+            "path": "7B/8_1_1.json"
+          },
+          "part2": {
+            "name": "二",
+            "path": "7B/8_2.json"
+          },
+          "part3": {
+            "name": "三",
+            "path": "7B/8_3.json"
+          },
+          "part4": {
+            "name": "四",
+            "path": "7B/8_4.json"
+          },
+          "part5": {
+            "name": "五",
+            "path": "7B/8_5_1.json"
+          },
+          "part6": {
+            "name": "六",
+            "path": "7B/8_5_2.json"
+          }
+        }
+      }
+     
+    }
+  },
+  "special": {
+    "name": "特别练习",
+    "units": {
+      "lesson53": {
+        "name": "第53课练习",
+        "hasSubUnits": true,
+        "subUnits": {
+          "lesson53_1_1": {
+            "name": "第1单元第1部分",
+            "path": "7A/53_1_1.json"
+          },
+          "lesson53_1_2": {
+            "name": "第1单元第2部分",
+            "path": "7A/53_1_2.json"
+          },
+          "lesson53_1_3": {
+            "name": "第1单元第3部分",
+            "path": "7A/53_1_3.json"
+          },
+          "lesson53_2_1": {
+            "name": "第2单元第1部分",
+            "path": "7A/53_2_1.json"
+          },
+          "lesson53_2_2": {
+            "name": "第2单元第2部分",
+            "path": "7A/53_2_2.json"
+          },
+          "lesson53_2_3": {
+            "name": "第2单元第3部分",
+            "path": "7A/53_2_3.json"
+          }
+        }
+      }
+    }
+  }
+}

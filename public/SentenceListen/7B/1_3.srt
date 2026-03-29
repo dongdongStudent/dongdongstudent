@@ -1,0 +1,20 @@
+﻿1
+00:00:10,304 --> 00:00:15,392
+Let’s go and see the monkeys. They’re my favourite animals.
+
+2
+00:00:16,224 --> 00:00:17,680
+Why do you like them?
+
+3
+00:00:18,048 --> 00:00:21,232
+Because they’re clever and funny.
+
+4
+00:00:24,704 --> 00:00:30,448
+Oh, look! A baby wolf and its mother! Do you like wolves?
+
+5
+00:00:30,944 --> 00:00:34,544
+No, I don’t. They’re very dangerous.
+

@@ -1,0 +1,81 @@
+{
+  "unit": {
+    "id": "star unit 1",
+    "name": "Starter Unit 1",
+    "description": "Good morning!"
+  },
+  "files": [
+    {
+      "id": "pep_grade7a_S1_1a",
+      "unit": 1,
+      "lesson": 1,
+      "title": "Section A 1a - Listen and repeat",
+      "filename": "sectionA_1a.mp3",
+      "srtFile": "sectionA_1a.srt",
+      "duration": "1:32"
+    },
+    {
+      "id": "pep_grade7a_S1_1b",
+      "unit": 1,
+      "lesson": 2,
+      "title": "Section A 1b - Listen and number",
+      "filename": "sectionA_1b.mp3",
+      "srtFile": "sectionA_1b.srt",
+      "duration": "1:45"
+    },
+    {
+      "id": "pep_grade7a_S1_2a",
+      "unit": 1,
+      "lesson": 3,
+      "title": "Section A 2a - Listen and repeat",
+      "filename": "sectionA_2a.mp3",
+      "srtFile": "sectionA_2a.srt",
+      "duration": "1:20"
+    },
+    {
+      "id": "pep_grade7a_S1_2b",
+      "unit": 1,
+      "lesson": 4,
+      "title": "Section A 2b - Listen and circle",
+      "filename": "sectionA_2b.mp3",
+      "srtFile": "sectionA_2b.srt",
+      "duration": "1:35"
+    },
+    {
+      "id": "pep_grade7a_S1_2d",
+      "unit": 1,
+      "lesson": 5,
+      "title": "Section A 2d - Role-play the conversation",
+      "filename": "sectionA_2d.mp3",
+      "srtFile": "sectionA_2d.srt",
+      "duration": "2:10"
+    },
+    {
+      "id": "pep_grade7a_S1_1c",
+      "unit": 1,
+      "lesson": 6,
+      "title": "Section B 1c - Listen and number",
+      "filename": "sectionB_1c.mp3",
+      "srtFile": "sectionB_1c.srt",
+      "duration": "1:50"
+    },
+    {
+      "id": "pep_grade7a_S1_1d",
+      "unit": 1,
+      "lesson": 7,
+      "title": "Section B 1d - Listen again",
+      "filename": "sectionB_1d.mp3",
+      "srtFile": "sectionB_1d.srt",
+      "duration": "1:40"
+    },
+    {
+      "id": "pep_grade7a_S1_selfcheck",
+      "unit": 1,
+      "lesson": 8,
+      "title": "Self Check - Listen and write",
+      "filename": "selfcheck.mp3",
+      "srtFile": "selfcheck.srt",
+      "duration": "2:00"
+    }
+  ]
+}

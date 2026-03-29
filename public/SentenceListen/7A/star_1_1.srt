@@ -1,0 +1,36 @@
+﻿1
+00:00:15,936 --> 00:00:23,376
+Good morning, class.Good morning, Ms Gao.Sit down, please.
+
+2
+00:00:27,952 --> 00:00:32,416
+Hello, Peter. Can you say hi to the class?
+
+3
+00:00:32,864 --> 00:00:35,744
+Hi, everyone! I’m Peter Brown.
+
+4
+00:00:36,240 --> 00:00:43,200
+Thank you, Peter. Now class, please say hi to each other.
+
+5
+00:00:47,952 --> 00:00:51,744
+Good morning. My name is Emma.
+
+6
+00:00:52,128 --> 00:00:53,424
+Good morning, Emma.
+
+7
+00:00:53,888 --> 00:00:55,840
+So what’s your name?
+
+8
+00:00:56,192 --> 00:00:59,552
+Oh, I’m Fu Xing. Nice to meet you, Emma.
+
+9
+00:00:59,856 --> 00:01:03,008
+Nice to meet you too, Fu Xing!
+

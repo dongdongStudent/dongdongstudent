@@ -1,0 +1,50 @@
+[
+  {
+    "chinese": "早上好。请问你叫什么名字？",
+    "english": "Good morning May I have your name"
+  },
+  {
+    "chinese": "早上好。我的名字是艾玛·米勒。",
+    "english": "Good morning My name is Emma Miller"
+  },
+  {
+    "chinese": "你的名字怎么拼写？",
+    "english": "How do you spell your name"
+  },
+  {
+    "chinese": "E-M-M-A，艾玛。M-I-L-L-E-R，米勒。",
+    "english": "E-M-M-A Emma M-I-L-L-E-R Miller"
+  },
+  {
+    "chinese": "你可以叫我艾玛。",
+    "english": "You can call me Emma"
+  },
+  {
+    "chinese": "很高兴见到你，艾玛。我的名字是腾飞。",
+    "english": "Nice to meet you Emma My name is Teng Fei"
+  },
+  {
+    "chinese": "我也很高兴见到你，腾飞。",
+    "english": "Nice to meet you too Teng Fei"
+  },
+  {
+    "chinese": "你好，王亚明！你好吗？",
+    "english": "Hello Wang Yaming How are you"
+  },
+  {
+    "chinese": "嗨，海伦。我很好，谢谢。你呢？",
+    "english": "Hi Helen I'm fine thank you And you"
+  },
+  {
+    "chinese": "我很好，谢谢。",
+    "english": "I'm great thanks"
+  },
+  {
+    "chinese": "哦，铃声响了。我们去上课吧。",
+    "english": "Oh that's the bell Let's go to class"
+  },
+  {
+    "chinese": "再见！再见！",
+    "english": "Goodbye Bye"
+  }
+]

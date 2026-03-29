@@ -1,0 +1,60 @@
+﻿1
+00:00:09,776 --> 00:00:14,432
+Hi, Fu Xing. How was your school trip to the wastewater plant?
+
+2
+00:00:14,800 --> 00:00:15,920
+Was it boring?
+
+3
+00:00:16,160 --> 00:00:18,240
+No, it wasn’t at all.
+
+4
+00:00:18,736 --> 00:00:20,720
+It was really interesting!
+
+5
+00:00:21,248 --> 00:00:23,648
+Wow! What did you see?
+
+6
+00:00:24,432 --> 00:00:27,792
+We saw the plant make dirty water clean again.
+
+7
+00:00:28,272 --> 00:00:30,432
+Really? How?
+
+8
+00:00:31,088 --> 00:00:35,808
+Well, first, dirty water from our homes goes into the plant.
+
+9
+00:00:36,480 --> 00:00:41,472
+Then, special screens remove large pieces of waste from the water.
+
+10
+00:00:42,256 --> 00:00:44,064
+What happens next?
+
+11
+00:00:44,416 --> 00:00:49,264
+Well, large machines remove germs and other things from the water.
+
+12
+00:00:49,616 --> 00:00:52,304
+These things are usually too small to see.
+
+13
+00:00:52,750 --> 00:00:57,264
+It takes a few more steps after that before the water becomes clean again.
+
+14
+00:00:57,936 --> 00:01:02,224
+Wow! I used to think it was easy to get clean water.
+
+15
+00:01:02,544 --> 00:01:06,960
+Me too! I didn’t realize it was so hard.
+

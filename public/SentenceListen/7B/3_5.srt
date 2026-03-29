@@ -1,0 +1,24 @@
+﻿1
+00:00:24,576 --> 00:00:27,232
+I like skateboarding very much.
+
+2
+00:00:27,472 --> 00:00:31,504
+My friends and I practise at a special park twice a week.
+
+3
+00:00:31,952 --> 00:00:35,616
+My skateboard is really cool, and so are theirs.
+
+4
+00:00:36,224 --> 00:00:38,736
+We encourage one another to do tricks.
+
+5
+00:00:39,008 --> 00:00:43,872
+Some tricks are difficult, but once you succeed, you feel great!
+
+6
+00:00:44,128 --> 00:00:47,360
+I like skateboarding because it keeps me fit.
+

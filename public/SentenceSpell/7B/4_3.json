@@ -1,0 +1,67 @@
+[
+  {
+    "timestamp": "00:00:08,992 --> 00:00:12,336",
+    "chinese": "您好！您想点什么菜？",
+    "english": "Hello! What would you like to order?"
+  },
+  {
+    "timestamp": "00:00:12,944 --> 00:00:17,200",
+    "chinese": "宫保鸡丁怎么样？我们在美国也常吃，",
+    "english": "What about Gongbao chicken? We often have it in America"
+  },
+  {
+    "timestamp": "00:00:17,376 --> 00:00:20,560",
+    "chinese": "但这里的味道可能不一样。我想尝尝。",
+    "english": "but it may taste different here. I’d like to try it."
+  },
+  {
+    "timestamp": "00:00:21,072 --> 00:00:22,256",
+    "chinese": "好主意！",
+    "english": "Good idea!"
+  },
+  {
+    "timestamp": "00:00:22,544 --> 00:00:25,552",
+    "chinese": "你们有豆腐做的菜吗？",
+    "english": "Do you have anything with tofu?"
+  },
+  {
+    "timestamp": "00:00:25,888 --> 00:00:30,400",
+    "chinese": "有的。您想要热豆腐还是凉豆腐？",
+    "english": "Yes. Would you like a hot tofu dish or a cold one?"
+  },
+  {
+    "timestamp": "00:00:30,816 --> 00:00:33,024",
+    "chinese": "请来一份热豆腐。",
+    "english": "A hot tofu dish, please."
+  },
+  {
+    "timestamp": "00:00:33,392 --> 00:00:36,400",
+    "chinese": "我们有麻婆豆腐。您想要吗？",
+    "english": "We have Mapo tofu. Would you like that?"
+  },
+  {
+    "timestamp": "00:00:36,752 --> 00:00:40,864",
+    "chinese": "好的，请给我们来一份。我们还应该点一份沙拉。",
+    "english": "Yes, please. We should also order some salad."
+  },
+  {
+    "timestamp": "00:00:41,328 --> 00:00:44,080",
+    "chinese": "鸡肉卷心菜沙拉怎么样？",
+    "english": "How about a chicken and cabbage salad?"
+  },
+  {
+    "timestamp": "00:00:44,800 --> 00:00:48,080",
+    "chinese": "听起来不错。我们能再点个汤吗？",
+    "english": "That sounds good. Can we order soup too?"
+  },
+  {
+    "timestamp": "00:00:48,448 --> 00:00:54,016",
+    "chinese": "好的，我们看看...您想要哪种汤，鸡肉汤还是鱼汤？",
+    "english": "OK. Let’s see ... Which soup would you like, chicken or fish?"
+  },
+  {
+    "timestamp": "00:00:54,512 --> 00:00:55,776",
+    "chinese": "请来鱼汤！",
+    "english": "Fish, please!"
+  }
+]

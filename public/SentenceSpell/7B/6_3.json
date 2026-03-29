@@ -1,0 +1,22 @@
+[
+  {
+    "timestamp": "00:00:11,312 --> 00:00:14,176",
+    "chinese": "今天天气怎么样？",
+    "english": "What’s the weather like today?"
+  },
+  {
+    "timestamp": "00:00:14,256 --> 00:00:18,256",
+    "chinese": "天气温暖有风。又是春天了。",
+    "english": "It’s windy and warm. It’s spring again."
+  },
+  {
+    "timestamp": "00:00:18,480 --> 00:00:22,336",
+    "chinese": "我们去放风筝吧。是不是很棒？",
+    "english": "Let’s fly a kite. Isn’t it great?"
+  },
+  {
+    "timestamp": "00:00:22,400 --> 00:00:26,560",
+    "chinese": "好耶！好耶！我们去玩吧！",
+    "english": "Hooray! Hooray! Let’s play!"
+  }
+]

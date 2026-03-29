@@ -1,0 +1,28 @@
+﻿1
+00:00:00,400 --> 00:00:02,848
+Hello! My name is Sam.
+
+2
+00:00:03,552 --> 00:00:06,000
+I want to join the chess club.
+
+3
+00:00:06,576 --> 00:00:09,136
+Can you play Chinese chess?
+
+4
+00:00:09,584 --> 00:00:11,152
+No, I can’t.
+
+5
+00:00:11,904 --> 00:00:14,768
+It’s OK. You can learn it here.
+
+6
+00:00:15,472 --> 00:00:18,096
+Can I learn to play weiqi too?
+
+7
+00:00:18,928 --> 00:00:20,304
+Sure, you can!
+

@@ -1,0 +1,46 @@
+﻿
+
+2
+00:00:00,320 --> 00:00:02,053
+Hello, Mr Smith!
+
+3
+00:00:02,306 --> 00:00:06,053
+Hello, Chen Jie. How are you?
+
+4
+00:00:06,560 --> 00:00:12.00
+I’m good, thank you. Mr Smith, this is my new friend, Peter. 
+
+1
+00:00:12.82 --> 00:00:18,680
+Peter, this is our English teacher, Mr Smith. He’s from the US.
+
+5
+00:00:19,026 --> 00:00:22,440
+Hi, Peter. Nice to meet you.
+
+6
+00:00:23,373 --> 00:00:26,240
+Nice to meet you too, Mr Smith.
+
+7
+00:00:26,626 --> 00:00:28,773
+Which class are you in, Peter?
+
+8
+00:00:29,280 --> 00:00:30,986
+I’m in Class 1.
+
+9
+00:00:31,600 --> 00:00:33,280
+Who’s your class teacher?
+
+10
+00:00:33,706 --> 00:00:34,880
+Ms Hui.
+
+11
+00:00:35,093 --> 00:00:42,120
+Oh, Peter, it’s Ms Gao, not Ms Hui. Hui is her first name.
+

@@ -1,0 +1,48 @@
+﻿1
+00:00:02,112 --> 00:00:04,272
+Is this your uncle?
+
+2
+00:00:07,152 --> 00:00:10,272
+Who's the girl with the pink hat?
+
+3
+00:00:12,912 --> 00:00:15,728
+Are these your grandparents?
+
+4
+00:00:18,560 --> 00:00:21,504
+Whose fishing rods are those?
+
+5
+00:00:24,592 --> 00:00:27,632
+Does your mother play games with you?
+
+6
+00:00:30,384 --> 00:00:36,832
+Who are they in the photo? They're my grandparents and my sister.
+
+7
+00:00:37,504 --> 00:00:42,784
+Question：How many people are there in the photo?
+
+8
+00:00:45,488 --> 00:00:50,016
+Tom, who's the boy? He's my brother Bob.
+
+9
+00:00:50,752 --> 00:00:54,672
+Question：What's Tom's brother's name?
+
+10
+00:00:56,128 --> 00:01:00,784
+Eric, Who's the girl in the blue hat?
+
+11
+00:01:01,584 --> 00:01:05,632
+She is my sister and she likes reading a lot.
+
+12
+00:01:06,176 --> 00:01:10,256
+Question：What does Eric's sister like?
+

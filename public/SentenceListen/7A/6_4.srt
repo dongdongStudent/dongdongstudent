@@ -1,0 +1,88 @@
+﻿1
+00:00:00,625 --> 00:00:03,125
+My name is Timo Halla.
+
+2
+00:00:03,800 --> 00:00:05,425
+I'm 13 years old.
+
+3
+00:00:06,350 --> 00:00:10,050
+I live with my parents in Helsinki, Finland.
+
+4
+00:00:11,500 --> 00:00:13,425
+Now it's December.
+
+5
+00:00:14,575 --> 00:00:20,325
+Every Tuesday, I usually get up at 7:40.
+
+6
+00:00:20,925 --> 00:00:24,200
+I often listen to the news or music.
+
+7
+00:00:25,100 --> 00:00:28,125
+After breakfast, I walk to school.
+
+8
+00:00:28,875 --> 00:00:30,900
+It's only a 10-minute walk.
+
+9
+00:00:31,800 --> 00:00:34,175
+My school begins at 9:00.
+
+10
+00:00:34,900 --> 00:00:37,550
+There are 18 students in my class.
+
+11
+00:00:38,425 --> 00:00:43,725
+Each lesson is 45 minutes long, and there's a break between lessons.
+
+12
+00:00:44,625 --> 00:00:50,100
+I have one Finnish lesson and two home economics lessons in the morning.
+
+13
+00:00:50,825 --> 00:00:54,200
+After that, I have lunch at 12:00.
+
+14
+00:00:55,475 --> 00:01:01,525
+The afternoon lessons begin at 12:30 and finish at 2:15.
+
+15
+00:01:02,375 --> 00:01:04,950
+Then I go to my ice hockey club.
+
+16
+00:01:06,150 --> 00:01:09,475
+I usually get home around 4:00.
+
+17
+00:01:10,225 --> 00:01:12,450
+It's already dark outside.
+
+18
+00:01:13,075 --> 00:01:15,875
+I often have dinner at 6:00.
+
+19
+00:01:16,225 --> 00:01:20,450
+After that, I read with my parents for an hour.
+
+20
+00:01:20,700 --> 00:01:23,850
+That's an important part of my everyday life.
+
+21
+00:01:25,025 --> 00:01:28,575
+Then I prepare my schoolbag for the next day.
+
+22
+00:01:29,075 --> 00:01:32,475
+At 9:30, it's time for me to go to bed.
+
