@@ -518,15 +518,7 @@ const Main = () => {
       submodules: [
         {
           id: 'listening_spelling_test',
-          title: '重点单词,词语,句子',
-          color: THEME.speaking,
-          path: '/wordSpellMain',
-          icon: '👂',
-          description: '听句子，然后拼写',
-        },
-        {
-          id: 'listening_spelling_test',
-          title: '人教版单词',
+          title: '课本单词',
           color: THEME.speaking,
           path: '/listen_3',
           icon: '👂',
@@ -536,7 +528,7 @@ const Main = () => {
           id: 'listen_spelling',
           title: '听句子拼写',
           color: THEME.sentence,
-          path: '/sentence',
+          path: '/sentence_listen',
           icon: '👂',
           description: '听句子，然后拼写',
         },

@@ -11,7 +11,6 @@ import R_listen_3 from "./listen/Listen_3.js";
 import R_listen_speeed from "./listen/listen_speed_5.js";
 import Sentence_listen from "./listen/sentence_listen_spell.js";
 import Sentence_spell from "./listen/sentence_reading_spell.js";
-import WordSpellMain from "./word/wordSpallMain.js";
 import Book_senntence_test from "./teacher/book_senntence_test.js";
 import English_test_select from "./english_1_select_test/select_center.js";
 import English_test_cloze from "./english_2_Cloze_test/cloze_center.js"
@@ -39,12 +38,11 @@ const App = () => {
                 <Route path="/listen_2" element={< R_listen_2 />} />
                 <Route path="/listen_3" element={< R_listen_3 />} />
                 <Route path="/listen_speed" element={< R_listen_speeed />} />
-                <Route path="/sentence" element={< Sentence_listen/>} />
+                <Route path="/sentence_listen" element={< Sentence_listen/>} />
                 <Route path="/spell" element={< Sentence_spell/>} />
                 <Route path="/test" element={< Test/>} />
                 <Route path="/test_1" element={< Test_1/>} />
                 <Route path="/test_2" element={< Test_2/>} />
-                <Route path="/wordSpellMain" element={< WordSpellMain/>} />
                 <Route path="/book_senntence_test" element={< Book_senntence_test/>} />
                 <Route path="/english_test_select" element={< English_test_select/>} />
                 <Route path="/english_test_cloze" element={< English_test_cloze/>} />
