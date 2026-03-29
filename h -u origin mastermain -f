@@ -1,0 +1,754 @@
+[33mcommit e6b794b7e921f1353d130c8c0c90a382d7935a31[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: weisimin <1046618858@qq.com>
+Date:   Mon Mar 30 01:31:23 2026 +0800
+
+    第一次提交项目
+
+ package-lock.json                                  | 7008 [32m+++++++++++[m[31m---[m
+ package.json                                       |   34 [32m+[m
+ public/ListeningPractice/audio/1_1.mp3             |  Bin [31m0[m -> [32m703407[m bytes
+ public/ListeningPractice/audio/1_1.srt             |   37 [32m+[m
+ public/ListeningPractice/audio/1_2.mp3             |  Bin [31m0[m -> [32m345133[m bytes
+ public/ListeningPractice/audio/1_2.srt             |   36 [32m+[m
+ public/ListeningPractice/audio/1_3.mp3             |  Bin [31m0[m -> [32m746448[m bytes
+ public/ListeningPractice/audio/1_3.srt             |   44 [32m+[m
+ public/ListeningPractice/audio/1_4.mp3             |  Bin [31m0[m -> [32m491085[m bytes
+ public/ListeningPractice/audio/1_5.mp3             |  Bin [31m0[m -> [32m537167[m bytes
+ public/ListeningPractice/audio/2.png               |  Bin [31m0[m -> [32m172582[m bytes
+ public/ListeningPractice/audio/2_1_1.mp3           |  Bin [31m0[m -> [32m499149[m bytes
+ public/ListeningPractice/audio/2_1_2.mp3           |  Bin [31m0[m -> [32m683090[m bytes
+ public/ListeningPractice/audio/2_2.mp3             |  Bin [31m0[m -> [32m679633[m bytes
+ public/ListeningPractice/audio/2_3.mp3             |  Bin [31m0[m -> [32m1130449[m bytes
+ public/ListeningPractice/audio/3_1_1.mp3           |  Bin [31m0[m -> [32m396237[m bytes
+ public/ListeningPractice/audio/3_1_2.mp3           |  Bin [31m0[m -> [32m261071[m bytes
+ public/ListeningPractice/audio/3_1_3.mp3           |  Bin [31m0[m -> [32m316751[m bytes
+ public/ListeningPractice/audio/3_2.mp3             |  Bin [31m0[m -> [32m797521[m bytes
+ public/ListeningPractice/audio/3_3.mp3             |  Bin [31m0[m -> [32m1226833[m bytes
+ public/ListeningPractice/audio/4_1_1.mp3           |  Bin [31m0[m -> [32m651601[m bytes
+ public/ListeningPractice/audio/4_1_2.mp3           |  Bin [31m0[m -> [32m670802[m bytes
+ public/ListeningPractice/audio/4_2.mp3             |  Bin [31m0[m -> [32m765090[m bytes
+ public/ListeningPractice/audio/4_3_1.mp3           |  Bin [31m0[m -> [32m669858[m bytes
+ public/ListeningPractice/audio/4_3_2.mp3           |  Bin [31m0[m -> [32m747087[m bytes
+ public/ListeningPractice/audio/5_1_1.mp3           |  Bin [31m0[m -> [32m388557[m bytes
+ public/ListeningPractice/audio/5_1_2.mp3           |  Bin [31m0[m -> [32m357839[m bytes
+ public/ListeningPractice/audio/5_1_3.mp3           |  Bin [31m0[m -> [32m371279[m bytes
+ public/ListeningPractice/audio/5_2.mp3             |  Bin [31m0[m -> [32m756048[m bytes
+ public/ListeningPractice/audio/5_3_1.mp3           |  Bin [31m0[m -> [32m565166[m bytes
+ public/ListeningPractice/audio/5_3_2.mp3           |  Bin [31m0[m -> [32m540959[m bytes
+ public/ListeningPractice/audio/5_3_3.mp3           |  Bin [31m0[m -> [32m540206[m bytes
+ public/ListeningPractice/audio/6_1.mp3             |  Bin [31m0[m -> [32m605501[m bytes
+ public/ListeningPractice/audio/6_1.srt             |   44 [32m+[m
+ public/ListeningPractice/audio/6_2.mp3             |  Bin [31m0[m -> [32m577451[m bytes
+ public/ListeningPractice/audio/6_2.srt             |   32 [32m+[m
+ public/ListeningPractice/audio/6_3.mp3             |  Bin [31m0[m -> [32m1005613[m bytes
+ public/ListeningPractice/audio/6_3.srt             |   56 [32m+[m
+ public/ListeningPractice/audio/6_4.mp3             |  Bin [31m0[m -> [32m1513645[m bytes
+ public/ListeningPractice/audio/6_4.srt             |   88 [32m+[m
+ public/ListeningPractice/audio/7_1.mp3             |  Bin [31m0[m -> [32m491085[m bytes
+ public/ListeningPractice/audio/7_1.srt             |   44 [32m+[m
+ public/ListeningPractice/audio/7_2.mp3             |  Bin [31m0[m -> [32m360911[m bytes
+ public/ListeningPractice/audio/7_2.srt             |   20 [32m+[m
+ public/ListeningPractice/audio/7_3.mp3             |  Bin [31m0[m -> [32m410831[m bytes
+ public/ListeningPractice/audio/7_3.srt             |   24 [32m+[m
+ public/ListeningPractice/audio/7_4.mp3             |  Bin [31m0[m -> [32m1044433[m bytes
+ public/ListeningPractice/audio/7_4.srt             |   60 [32m+[m
+ public/ListeningPractice/audio/7_5.mp3             |  Bin [31m0[m -> [32m619726[m bytes
+ public/ListeningPractice/audio/7_5.srt             |   36 [32m+[m
+ public/ListeningPractice/audio/7_6.mp3             |  Bin [31m0[m -> [32m689234[m bytes
+ public/ListeningPractice/audio/7_6.srt             |   46 [32m+[m
+ public/ListeningPractice/text/file-list.json       |   61 [32m+[m
+ public/ListeningPractice/text/month.json           |  242 [32m+[m
+ public/SentenceListen/7A/1_1.mp3                   |  Bin [31m0[m -> [32m703407[m bytes
+ public/SentenceListen/7A/1_1.srt                   |   33 [32m+[m
+ public/SentenceListen/7A/1_2.mp3                   |  Bin [31m0[m -> [32m345133[m bytes
+ public/SentenceListen/7A/1_2.srt                   |   33 [32m+[m
+ public/SentenceListen/7A/1_3.mp3                   |  Bin [31m0[m -> [32m746448[m bytes
+ public/SentenceListen/7A/1_3.srt                   |   46 [32m+[m
+ public/SentenceListen/7A/1_4.mp3                   |  Bin [31m0[m -> [32m2401218[m bytes
+ public/SentenceListen/7A/1_4.srt                   |   24 [32m+[m
+ public/SentenceListen/7A/1_5.mp3                   |  Bin [31m0[m -> [32m537167[m bytes
+ public/SentenceListen/7A/1_5.srt                   |   28 [32m+[m
+ public/SentenceListen/7A/2.png                     |  Bin [31m0[m -> [32m172582[m bytes
+ public/SentenceListen/7A/2_1_1.mp3                 |  Bin [31m0[m -> [32m499149[m bytes
+ public/SentenceListen/7A/2_1_1.srt                 |   36 [32m+[m
+ public/SentenceListen/7A/2_1_2.mp3                 |  Bin [31m0[m -> [32m683090[m bytes
+ public/SentenceListen/7A/2_1_2.srt                 |   64 [32m+[m
+ public/SentenceListen/7A/2_2.mp3                   |  Bin [31m0[m -> [32m679633[m bytes
+ public/SentenceListen/7A/2_2.srt                   |   56 [32m+[m
+ public/SentenceListen/7A/2_3.mp3                   |  Bin [31m0[m -> [32m1130449[m bytes
+ public/SentenceListen/7A/2_3.srt                   |   68 [32m+[m
+ public/SentenceListen/7A/3_1_1.mp3                 |  Bin [31m0[m -> [32m396237[m bytes
+ public/SentenceListen/7A/3_1_1.srt                 |   24 [32m+[m
+ public/SentenceListen/7A/3_1_2.mp3                 |  Bin [31m0[m -> [32m261071[m bytes
+ public/SentenceListen/7A/3_1_2.srt                 |   20 [32m+[m
+ public/SentenceListen/7A/3_1_3.mp3                 |  Bin [31m0[m -> [32m316751[m bytes
+ public/SentenceListen/7A/3_1_3.srt                 |   20 [32m+[m
+ public/SentenceListen/7A/3_2.mp3                   |  Bin [31m0[m -> [32m797521[m bytes
+ public/SentenceListen/7A/3_2.srt                   |   52 [32m+[m
+ public/SentenceListen/7A/3_3.mp3                   |  Bin [31m0[m -> [32m1226833[m bytes
+ public/SentenceListen/7A/3_3.srt                   |   80 [32m+[m
+ public/SentenceListen/7A/4_1_1.mp3                 |  Bin [31m0[m -> [32m651601[m bytes
+ public/SentenceListen/7A/4_1_1.srt                 |   48 [32m+[m
+ public/SentenceListen/7A/4_1_2.mp3                 |  Bin [31m0[m -> [32m670802[m bytes
+ public/SentenceListen/7A/4_1_2.srt                 |   56 [32m+[m
+ public/SentenceListen/7A/4_2.mp3                   |  Bin [31m0[m -> [32m765090[m bytes
+ public/SentenceListen/7A/4_2.srt                   |   60 [32m+[m
+ public/SentenceListen/7A/4_3_1.mp3                 |  Bin [31m0[m -> [32m669858[m bytes
+ public/SentenceListen/7A/4_3_1.srt                 |   44 [32m+[m
+ public/SentenceListen/7A/4_3_2.mp3                 |  Bin [31m0[m -> [32m747087[m bytes
+ public/SentenceListen/7A/4_3_2.srt                 |   36 [32m+[m
+ public/SentenceListen/7A/53_1.mp3                  |  Bin [31m0[m -> [32m2964861[m bytes
+ public/SentenceListen/7A/53_1_1.srt                |   44 [32m+[m
+ public/SentenceListen/7A/53_1_2.srt                |   32 [32m+[m
+ public/SentenceListen/7A/53_1_3.srt                |   60 [32m+[m
+ public/SentenceListen/7A/53_1to2.mp3               |  Bin [31m0[m -> [32m3743674[m bytes
+ public/SentenceListen/7A/53_1to2_1.srt             |   60 [32m+[m
+ public/SentenceListen/7A/53_1to2_2.srt             |   68 [32m+[m
+ public/SentenceListen/7A/53_2.mp3                  |  Bin [31m0[m -> [32m3106995[m bytes
+ public/SentenceListen/7A/53_2_1.srt                |   48 [32m+[m
+ public/SentenceListen/7A/53_2_2.srt                |   52 [32m+[m
+ public/SentenceListen/7A/53_2_3.srt                |   60 [32m+[m
+ public/SentenceListen/7A/5_1_1.mp3                 |  Bin [31m0[m -> [32m388557[m bytes
+ public/SentenceListen/7A/5_1_1.srt                 |   28 [32m+[m
+ public/SentenceListen/7A/5_1_2.mp3                 |  Bin [31m0[m -> [32m357839[m bytes
+ public/SentenceListen/7A/5_1_2.srt                 |   28 [32m+[m
+ public/SentenceListen/7A/5_1_3.mp3                 |  Bin [31m0[m -> [32m371279[m bytes
+ public/SentenceListen/7A/5_1_3.srt                 |   20 [32m+[m
+ public/SentenceListen/7A/5_2.mp3                   |  Bin [31m0[m -> [32m756048[m bytes
+ public/SentenceListen/7A/5_2.srt                   |   60 [32m+[m
+ public/SentenceListen/7A/5_3_1.mp3                 |  Bin [31m0[m -> [32m565166[m bytes
+ public/SentenceListen/7A/5_3_1.srt                 |   28 [32m+[m
+ public/SentenceListen/7A/5_3_2.mp3                 |  Bin [31m0[m -> [32m540959[m bytes
+ public/SentenceListen/7A/5_3_2.srt                 |   36 [32m+[m
+ public/SentenceListen/7A/5_3_3.mp3                 |  Bin [31m0[m -> [32m540206[m bytes
+ public/SentenceListen/7A/5_3_3.srt                 |   28 [32m+[m
+ public/SentenceListen/7A/6_1.mp3                   |  Bin [31m0[m -> [32m605501[m bytes
+ public/SentenceListen/7A/6_1.srt                   |   44 [32m+[m
+ public/SentenceListen/7A/6_2.mp3                   |  Bin [31m0[m -> [32m577451[m bytes
+ public/SentenceListen/7A/6_2.srt                   |   32 [32m+[m
+ public/SentenceListen/7A/6_3.mp3                   |  Bin [31m0[m -> [32m1005613[m bytes
+ public/SentenceListen/7A/6_3.srt                   |   56 [32m+[m
+ public/SentenceListen/7A/6_4.mp3                   |  Bin [31m0[m -> [32m1513645[m bytes
+ public/SentenceListen/7A/6_4.srt                   |   88 [32m+[m
+ public/SentenceListen/7A/7_1.mp3                   |  Bin [31m0[m -> [32m491085[m bytes
+ public/SentenceListen/7A/7_1.srt                   |   44 [32m+[m
+ public/SentenceListen/7A/7_2.mp3                   |  Bin [31m0[m -> [32m360911[m bytes
+ public/SentenceListen/7A/7_2.srt                   |   20 [32m+[m
+ public/SentenceListen/7A/7_3.mp3                   |  Bin [31m0[m -> [32m410831[m bytes
+ public/SentenceListen/7A/7_3.srt                   |   24 [32m+[m
+ public/SentenceListen/7A/7_4.mp3                   |  Bin [31m0[m -> [32m1044433[m bytes
+ public/SentenceListen/7A/7_4.srt                   |   60 [32m+[m
+ public/SentenceListen/7A/7_5.mp3                   |  Bin [31m0[m -> [32m619726[m bytes
+ public/SentenceListen/7A/7_5.srt                   |   36 [32m+[m
+ public/SentenceListen/7A/7_6.mp3                   |  Bin [31m0[m -> [32m689234[m bytes
+ public/SentenceListen/7A/7_6.srt                   |   46 [32m+[m
+ public/SentenceListen/7A/star_1_1.mp3              |  Bin [31m0[m -> [32m1553597[m bytes
+ public/SentenceListen/7A/star_1_1.srt              |   36 [32m+[m
+ public/SentenceListen/7A/star_1_2.mp3              |  Bin [31m0[m -> [32m1867066[m bytes
+ public/SentenceListen/7A/star_1_2.srt              |   48 [32m+[m
+ public/SentenceListen/7A/star_2_1.mp3              |  Bin [31m0[m -> [32m1606887[m bytes
+ public/SentenceListen/7A/star_2_1.srt              |   48 [32m+[m
+ public/SentenceListen/7A/star_2_2.mp3              |  Bin [31m0[m -> [32m817571[m bytes
+ public/SentenceListen/7A/star_2_2.srt              |   32 [32m+[m
+ public/SentenceListen/7A/star_2_3.mp3              |  Bin [31m0[m -> [32m1756725[m bytes
+ public/SentenceListen/7A/star_2_3.srt              |   52 [32m+[m
+ public/SentenceListen/7A/star_3_1.mp3              |  Bin [31m0[m -> [32m2386799[m bytes
+ public/SentenceListen/7A/star_3_1.srt              |   52 [32m+[m
+ public/SentenceListen/7A/star_3_2.mp3              |  Bin [31m0[m -> [32m999383[m bytes
+ public/SentenceListen/7A/star_3_2.srt              |   32 [32m+[m
+ public/SentenceListen/7A/star_3_3.mp3              |  Bin [31m0[m -> [32m1751710[m bytes
+ public/SentenceListen/7A/star_3_3.srt              |   40 [32m+[m
+ public/SentenceListen/7B/1_1.mp3                   |  Bin [31m0[m -> [32m1258514[m bytes
+ public/SentenceListen/7B/1_1.srt                   |   28 [32m+[m
+ public/SentenceListen/7B/1_2.mp3                   |  Bin [31m0[m -> [32m1341898[m bytes
+ public/SentenceListen/7B/1_2.srt                   |   44 [32m+[m
+ public/SentenceListen/7B/1_3.mp3                   |  Bin [31m0[m -> [32m883622[m bytes
+ public/SentenceListen/7B/1_3.srt                   |   20 [32m+[m
+ public/SentenceListen/7B/1_4.mp3                   |  Bin [31m0[m -> [32m1753173[m bytes
+ public/SentenceListen/7B/1_4.srt                   |   48 [32m+[m
+ public/SentenceListen/7B/1_5.mp3                   |  Bin [31m0[m -> [32m2758770[m bytes
+ public/SentenceListen/7B/1_5.srt                   |   96 [32m+[m
+ public/SentenceListen/7B/2_1.mp3                   |  Bin [31m0[m -> [32m1579523[m bytes
+ public/SentenceListen/7B/2_1.srt                   |   36 [32m+[m
+ public/SentenceListen/7B/2_2.mp3                   |  Bin [31m0[m -> [32m1384542[m bytes
+ public/SentenceListen/7B/2_2.srt                   |   36 [32m+[m
+ public/SentenceListen/7B/2_3.mp3                   |  Bin [31m0[m -> [32m1108082[m bytes
+ public/SentenceListen/7B/2_3.srt                   |   32 [32m+[m
+ public/SentenceListen/7B/2_4.mp3                   |  Bin [31m0[m -> [32m1503653[m bytes
+ public/SentenceListen/7B/2_4.srt                   |   56 [32m+[m
+ public/SentenceListen/7B/2_5.mp3                   |  Bin [31m0[m -> [32m2978230[m bytes
+ public/SentenceListen/7B/2_5.srt                   |   52 [32m+[m
+ public/SentenceListen/7B/3_1.mp3                   |  Bin [31m0[m -> [32m2713021[m bytes
+ public/SentenceListen/7B/3_1.srt                   |   28 [32m+[m
+ public/SentenceListen/7B/3_2.srt                   |   24 [32m+[m
+ public/SentenceListen/7B/3_3.srt                   |   36 [32m+[m
+ public/SentenceListen/7B/3_4.mp3                   |  Bin [31m0[m -> [32m1489844[m bytes
+ public/SentenceListen/7B/3_4.srt                   |   52 [32m+[m
+ public/SentenceListen/7B/3_5.mp3                   |  Bin [31m0[m -> [32m2854095[m bytes
+ public/SentenceListen/7B/3_5.srt                   |   24 [32m+[m
+ public/SentenceListen/7B/3_6.srt                   |   28 [32m+[m
+ public/SentenceListen/7B/3_7.srt                   |   48 [32m+[m
+ public/SentenceListen/7B/4_1.mp3                   |  Bin [31m0[m -> [32m1647866[m bytes
+ public/SentenceListen/7B/4_1.srt                   |   44 [32m+[m
+ public/SentenceListen/7B/4_2.mp3                   |  Bin [31m0[m -> [32m1365733[m bytes
+ public/SentenceListen/7B/4_2.srt                   |   44 [32m+[m
+ public/SentenceListen/7B/4_3.mp3                   |  Bin [31m0[m -> [32m1008359[m bytes
+ public/SentenceListen/7B/4_3.srt                   |   64 [32m+[m
+ public/SentenceListen/7B/4_4.mp3                   |  Bin [31m0[m -> [32m1592051[m bytes
+ public/SentenceListen/7B/4_4.srt                   |   64 [32m+[m
+ public/SentenceListen/7B/4_5.mp3                   |  Bin [31m0[m -> [32m2812713[m bytes
+ public/SentenceListen/7B/4_5_1.srt                 |   44 [32m+[m
+ public/SentenceListen/7B/4_5_2.srt                 |   56 [32m+[m
+ public/SentenceListen/7B/5_1.mp3                   |  Bin [31m0[m -> [32m2796389[m bytes
+ public/SentenceListen/7B/5_1_1.srt                 |   24 [32m+[m
+ public/SentenceListen/7B/5_1_2.srt                 |   32 [32m+[m
+ public/SentenceListen/7B/5_1_3.srt                 |   36 [32m+[m
+ public/SentenceListen/7B/5_2.mp3                   |  Bin [31m0[m -> [32m646025[m bytes
+ public/SentenceListen/7B/5_2.srt                   |   24 [32m+[m
+ public/SentenceListen/7B/5_3.mp3                   |  Bin [31m0[m -> [32m1845346[m bytes
+ public/SentenceListen/7B/5_3.srt                   |   84 [32m+[m
+ public/SentenceListen/7B/5_4.mp3                   |  Bin [31m0[m -> [32m2623361[m bytes
+ public/SentenceListen/7B/5_4_1.srt                 |   32 [32m+[m
+ public/SentenceListen/7B/5_4_2.srt                 |   32 [32m+[m
+ public/SentenceListen/7B/5_4_3.srt                 |   32 [32m+[m
+ public/SentenceListen/7B/6_1.mp3                   |  Bin [31m0[m -> [32m1759456[m bytes
+ public/SentenceListen/7B/6_1.srt                   |   44 [32m+[m
+ public/SentenceListen/7B/6_2.mp3                   |  Bin [31m0[m -> [32m1294245[m bytes
+ public/SentenceListen/7B/6_2.srt                   |   48 [32m+[m
+ public/SentenceListen/7B/6_3.mp3                   |  Bin [31m0[m -> [32m681129[m bytes
+ public/SentenceListen/7B/6_3.srt                   |   16 [32m+[m
+ public/SentenceListen/7B/6_4.mp3                   |  Bin [31m0[m -> [32m1956287[m bytes
+ public/SentenceListen/7B/6_4.srt                   |   68 [32m+[m
+ public/SentenceListen/7B/6_5.mp3                   |  Bin [31m0[m -> [32m3751865[m bytes
+ public/SentenceListen/7B/6_5_1.srt                 |   16 [32m+[m
+ public/SentenceListen/7B/6_5_2.srt                 |   32 [32m+[m
+ public/SentenceListen/7B/6_5_3.srt                 |   36 [32m+[m
+ public/SentenceListen/7B/6_5_4.srt                 |   40 [32m+[m
+ public/SentenceListen/7B/7_1.mp3                   |  Bin [31m0[m -> [32m2795135[m bytes
+ public/SentenceListen/7B/7_1_1.srt                 |   48 [32m+[m
+ public/SentenceListen/7B/7_1_2.srt                 |   60 [32m+[m
+ public/SentenceListen/7B/7_2.mp3                   |  Bin [31m0[m -> [32m1010901[m bytes
+ public/SentenceListen/7B/7_2.srt                   |   24 [32m+[m
+ public/SentenceListen/7B/7_3.mp3                   |  Bin [31m0[m -> [32m1657888[m bytes
+ public/SentenceListen/7B/7_3.srt                   |   60 [32m+[m
+ public/SentenceListen/7B/7_4.mp3                   |  Bin [31m0[m -> [32m2547516[m bytes
+ public/SentenceListen/7B/7_4_1.srt                 |   56 [32m+[m
+ public/SentenceListen/7B/7_4_2.srt                 |   60 [32m+[m
+ public/SentenceListen/7B/8_1.mp3                   |  Bin [31m0[m -> [32m1467285[m bytes
+ public/SentenceListen/7B/8_1_1.srt                 |   36 [32m+[m
+ public/SentenceListen/7B/8_2.mp3                   |  Bin [31m0[m -> [32m1566979[m bytes
+ public/SentenceListen/7B/8_2.srt                   |   64 [32m+[m
+ public/SentenceListen/7B/8_3.mp3                   |  Bin [31m0[m -> [32m704331[m bytes
+ public/SentenceListen/7B/8_3.srt                   |   12 [32m+[m
+ public/SentenceListen/7B/8_4.mp3                   |  Bin [31m0[m -> [32m2325591[m bytes
+ public/SentenceListen/7B/8_4.srt                   |   84 [32m+[m
+ public/SentenceListen/7B/8_5.mp3                   |  Bin [31m0[m -> [32m3035272[m bytes
+ public/SentenceListen/7B/8_5_1.srt                 |   56 [32m+[m
+ public/SentenceListen/7B/8_5_2.srt                 |   64 [32m+[m
+ public/SentenceListen/content.json                 |  757 [32m++[m
+ public/SentenceSpell/7A/53_1_1.json                |   46 [32m+[m
+ public/SentenceSpell/7A/53_1_2.json                |   34 [32m+[m
+ public/SentenceSpell/7A/53_1_3.json                |   62 [32m+[m
+ public/SentenceSpell/7A/53_2_1.json                |   50 [32m+[m
+ public/SentenceSpell/7A/53_2_2.json                |   54 [32m+[m
+ public/SentenceSpell/7A/53_2_3.json                |   62 [32m+[m
+ public/SentenceSpell/7A/menu.json                  |   10 [32m+[m
+ public/SentenceSpell/7A/star_1_1.json              |   38 [32m+[m
+ public/SentenceSpell/7A/star_1_2.json              |   50 [32m+[m
+ public/SentenceSpell/7A/star_2_1.json              |   50 [32m+[m
+ public/SentenceSpell/7A/star_2_2.json              |   34 [32m+[m
+ public/SentenceSpell/7A/star_2_3.json              |   54 [32m+[m
+ public/SentenceSpell/7A/star_3_1.json              |   54 [32m+[m
+ public/SentenceSpell/7A/star_3_2.json              |   34 [32m+[m
+ public/SentenceSpell/7A/star_3_3.json              |   42 [32m+[m
+ public/SentenceSpell/7A/unit1.json                 |   34 [32m+[m
+ public/SentenceSpell/7A/unit2.json                 |   34 [32m+[m
+ public/SentenceSpell/7B/1_1.json                   |   37 [32m+[m
+ public/SentenceSpell/7B/1_2.json                   |   57 [32m+[m
+ public/SentenceSpell/7B/1_3.json                   |   27 [32m+[m
+ public/SentenceSpell/7B/1_4.json                   |   62 [32m+[m
+ public/SentenceSpell/7B/1_5.json                   |  122 [32m+[m
+ public/SentenceSpell/7B/2_1.json                   |   47 [32m+[m
+ public/SentenceSpell/7B/2_2.json                   |   47 [32m+[m
+ public/SentenceSpell/7B/2_3.json                   |   42 [32m+[m
+ public/SentenceSpell/7B/2_4.json                   |   72 [32m+[m
+ public/SentenceSpell/7B/2_5.json                   |   67 [32m+[m
+ public/SentenceSpell/7B/3_1.json                   |   37 [32m+[m
+ public/SentenceSpell/7B/3_2.json                   |   32 [32m+[m
+ public/SentenceSpell/7B/3_3.json                   |   47 [32m+[m
+ public/SentenceSpell/7B/3_4.json                   |   67 [32m+[m
+ public/SentenceSpell/7B/3_5.json                   |   32 [32m+[m
+ public/SentenceSpell/7B/3_6.json                   |   62 [32m+[m
+ public/SentenceSpell/7B/3_7.json                   |   62 [32m+[m
+ public/SentenceSpell/7B/4_1.json                   |   57 [32m+[m
+ public/SentenceSpell/7B/4_2.json                   |   57 [32m+[m
+ public/SentenceSpell/7B/4_3.json                   |   67 [32m+[m
+ public/SentenceSpell/7B/4_4.json                   |   82 [32m+[m
+ public/SentenceSpell/7B/4_5_1.json                 |   57 [32m+[m
+ public/SentenceSpell/7B/4_5_2.json                 |   72 [32m+[m
+ public/SentenceSpell/7B/5_1_1.json                 |   32 [32m+[m
+ public/SentenceSpell/7B/5_1_2.json                 |   42 [32m+[m
+ public/SentenceSpell/7B/5_1_3.json                 |   47 [32m+[m
+ public/SentenceSpell/7B/5_2.json                   |   32 [32m+[m
+ public/SentenceSpell/7B/5_3.json                   |  107 [32m+[m
+ public/SentenceSpell/7B/5_4_1.json                 |   42 [32m+[m
+ public/SentenceSpell/7B/5_4_2.json                 |   42 [32m+[m
+ public/SentenceSpell/7B/5_4_3.json                 |   42 [32m+[m
+ public/SentenceSpell/7B/6_1.json                   |   57 [32m+[m
+ public/SentenceSpell/7B/6_2.json                   |   62 [32m+[m
+ public/SentenceSpell/7B/6_3.json                   |   22 [32m+[m
+ public/SentenceSpell/7B/6_4.json                   |   87 [32m+[m
+ public/SentenceSpell/7B/6_5_1.json                 |   22 [32m+[m
+ public/SentenceSpell/7B/6_5_2.json                 |   42 [32m+[m
+ public/SentenceSpell/7B/6_5_3.json                 |   47 [32m+[m
+ public/SentenceSpell/7B/6_5_4.json                 |   52 [32m+[m
+ public/SentenceSpell/7B/7_1_1.json                 |   62 [32m+[m
+ public/SentenceSpell/7B/7_1_2.json                 |   77 [32m+[m
+ public/SentenceSpell/7B/7_2.json                   |   32 [32m+[m
+ public/SentenceSpell/7B/7_3.json                   |   77 [32m+[m
+ public/SentenceSpell/7B/7_4_1.json                 |   72 [32m+[m
+ public/SentenceSpell/7B/7_4_2.json                 |   77 [32m+[m
+ public/SentenceSpell/7B/8_1_1.json                 |   47 [32m+[m
+ public/SentenceSpell/7B/8_2.json                   |   82 [32m+[m
+ public/SentenceSpell/7B/8_3.json                   |   17 [32m+[m
+ public/SentenceSpell/7B/8_4.json                   |  107 [32m+[m
+ public/SentenceSpell/7B/8_5_1.json                 |   72 [32m+[m
+ public/SentenceSpell/7B/8_5_2.json                 |   82 [32m+[m
+ public/SentenceSpell/content.json                  |  350 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/1_1.mp3   |  Bin [31m0[m -> [32m703407[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/1_1.srt   |   33 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/1_2.mp3   |  Bin [31m0[m -> [32m345133[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/1_2.srt   |   33 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/1_3.mp3   |  Bin [31m0[m -> [32m746448[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/1_3.srt   |   46 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/1_4.mp3   |  Bin [31m0[m -> [32m2401218[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/1_4.srt   |   24 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/1_5.mp3   |  Bin [31m0[m -> [32m537167[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/1_5.srt   |   28 [32m+[m
+ public/Teacher/audio/pep/grade7a/star_unit1/2.png  |  Bin [31m0[m -> [32m172582[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/2_1_1.mp3 |  Bin [31m0[m -> [32m499149[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/2_1_1.srt |   36 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/2_1_2.mp3 |  Bin [31m0[m -> [32m683090[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/2_1_2.srt |   64 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/2_2.mp3   |  Bin [31m0[m -> [32m679633[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/2_2.srt   |   56 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/2_3.mp3   |  Bin [31m0[m -> [32m1130449[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/2_3.srt   |   68 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_1.mp3 |  Bin [31m0[m -> [32m396237[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_1.srt |   24 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_2.mp3 |  Bin [31m0[m -> [32m261071[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_2.srt |   20 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_3.mp3 |  Bin [31m0[m -> [32m316751[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/3_1_3.srt |   20 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/3_2.mp3   |  Bin [31m0[m -> [32m797521[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/3_2.srt   |   52 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/3_3.mp3   |  Bin [31m0[m -> [32m1226833[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/3_3.srt   |   80 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/4_1_1.mp3 |  Bin [31m0[m -> [32m651601[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/4_1_1.srt |   48 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/4_1_2.mp3 |  Bin [31m0[m -> [32m670802[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/4_1_2.srt |   56 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/4_2.mp3   |  Bin [31m0[m -> [32m765090[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/4_2.srt   |   60 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/4_3_1.mp3 |  Bin [31m0[m -> [32m669858[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/4_3_1.srt |   44 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/4_3_2.mp3 |  Bin [31m0[m -> [32m747087[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/4_3_2.srt |   36 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/53_1.mp3  |  Bin [31m0[m -> [32m2964861[m bytes
+ .../audio/pep/grade7a/star_unit1/53_1_1.srt        |   44 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_1_2.srt        |   32 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_1_3.srt        |   60 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_1to2.mp3       |  Bin [31m0[m -> [32m3743674[m bytes
+ .../audio/pep/grade7a/star_unit1/53_1to2_1.srt     |   60 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_1to2_2.srt     |   68 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/53_2.mp3  |  Bin [31m0[m -> [32m3106995[m bytes
+ .../audio/pep/grade7a/star_unit1/53_2_1.srt        |   48 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_2_2.srt        |   52 [32m+[m
+ .../audio/pep/grade7a/star_unit1/53_2_3.srt        |   60 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_1.mp3 |  Bin [31m0[m -> [32m388557[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_1.srt |   28 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_2.mp3 |  Bin [31m0[m -> [32m357839[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_2.srt |   28 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_3.mp3 |  Bin [31m0[m -> [32m371279[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_1_3.srt |   20 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_2.mp3   |  Bin [31m0[m -> [32m756048[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_2.srt   |   60 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_1.mp3 |  Bin [31m0[m -> [32m565166[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_1.srt |   28 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_2.mp3 |  Bin [31m0[m -> [32m540959[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_2.srt |   36 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_3.mp3 |  Bin [31m0[m -> [32m540206[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/5_3_3.srt |   28 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/6_1.mp3   |  Bin [31m0[m -> [32m605501[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/6_1.srt   |   44 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/6_2.mp3   |  Bin [31m0[m -> [32m577451[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/6_2.srt   |   32 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/6_3.mp3   |  Bin [31m0[m -> [32m1005613[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/6_3.srt   |   56 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/6_4.mp3   |  Bin [31m0[m -> [32m1513645[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/6_4.srt   |   88 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_1.mp3   |  Bin [31m0[m -> [32m491085[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_1.srt   |   44 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_2.mp3   |  Bin [31m0[m -> [32m360911[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_2.srt   |   20 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_3.mp3   |  Bin [31m0[m -> [32m410831[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_3.srt   |   24 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_4.mp3   |  Bin [31m0[m -> [32m1044433[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_4.srt   |   60 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_5.mp3   |  Bin [31m0[m -> [32m619726[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_5.srt   |   36 [32m+[m
+ .../Teacher/audio/pep/grade7a/star_unit1/7_6.mp3   |  Bin [31m0[m -> [32m689234[m bytes
+ .../Teacher/audio/pep/grade7a/star_unit1/7_6.srt   |   46 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_1_1.mp3      |  Bin [31m0[m -> [32m1553597[m bytes
+ .../audio/pep/grade7a/star_unit1/star_1_1.srt      |   36 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_1_2.mp3      |  Bin [31m0[m -> [32m1867066[m bytes
+ .../audio/pep/grade7a/star_unit1/star_1_2.srt      |   48 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_2_1.mp3      |  Bin [31m0[m -> [32m1606887[m bytes
+ .../audio/pep/grade7a/star_unit1/star_2_1.srt      |   48 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_2_2.mp3      |  Bin [31m0[m -> [32m817571[m bytes
+ .../audio/pep/grade7a/star_unit1/star_2_2.srt      |   32 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_2_3.mp3      |  Bin [31m0[m -> [32m1756725[m bytes
+ .../audio/pep/grade7a/star_unit1/star_2_3.srt      |   52 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_3_1.mp3      |  Bin [31m0[m -> [32m2386799[m bytes
+ .../audio/pep/grade7a/star_unit1/star_3_1.srt      |   52 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_3_2.mp3      |  Bin [31m0[m -> [32m999383[m bytes
+ .../audio/pep/grade7a/star_unit1/star_3_2.srt      |   32 [32m+[m
+ .../audio/pep/grade7a/star_unit1/star_3_3.mp3      |  Bin [31m0[m -> [32m1751710[m bytes
+ .../audio/pep/grade7a/star_unit1/star_3_3.srt      |   40 [32m+[m
+ public/Teacher/config/pep/grade3/unit1.json        |    0
+ public/Teacher/config/pep/grade3/unit2.json        |    0
+ public/Teacher/config/pep/grade7a/star_unit1.json  |   27 [32m+[m
+ public/Teacher/config/pep/grade7a/unit1.json       |   81 [32m+[m
+ public/Teacher/versions.json                       |  290 [32m+[m
+ public/english_test_data.json                      | 1009 [32m+++[m
+ public/index.html                                  |    6 [32m+[m[31m-[m
+ public/logo192.png                                 |  Bin [31m5347[m -> [32m0[m bytes
+ public/logo512.png                                 |  Bin [31m9664[m -> [32m0[m bytes
+ public/manifest.json                               |   25 [31m-[m
+ public/peppa-pig-data copy.json                    | 8959 [32m++++++++++++++++++[m
+ public/peppa-pig-data.json                         | 1039 [32m+++[m
+ public/study-records.json                          |    6 [32m+[m
+ public/word-data.json                              |   17 [32m+[m
+ public/wordMiddle.json                             | 2736 [32m++++++[m
+ public/words.json                                  |   12 [32m+[m
+ src/App.css                                        |  133 [32m+[m[31m-[m
+ src/App.js                                         |   84 [32m+[m[31m-[m
+ src/App.test.js                                    |    8 [31m-[m
+ src/Function/weisimin.js                           | 1456 [32m+++[m
+ src/Main.js                                        | 1178 [32m+++[m
+ src/book/Reading.js                                | 2092 [32m+++++[m
+ src/book/data/7A.json                              |  123 [32m+[m
+ src/book/data/7B.json                              |   54 [32m+[m
+ src/book/data/8A.json                              |   18 [32m+[m
+ src/book/data/8B.json                              |   18 [32m+[m
+ src/book/data/9A.json                              |   18 [32m+[m
+ src/book/data/9B.json                              |   18 [32m+[m
+ src/book/data/lessons.json                         |  696 [32m++[m
+ src/config.js                                      |  103 [32m+[m
+ src/english_1_select_test/api.js                   |  208 [32m+[m
+ src/english_1_select_test/select_center.js         | 1411 [32m+++[m
+ src/english_1_select_test/select_master_view.js    |  750 [32m++[m
+ src/english_1_select_test/select_test.js           |  840 [32m++[m
+ src/english_1_select_test/select_test_result.js    |  496 [32m+[m
+ src/english_2_Cloze_test/api.js                    |  173 [32m+[m
+ src/english_2_Cloze_test/cloze_center.js           | 1014 [32m+++[m
+ src/english_2_Cloze_test/cloze_reasult.js          |  565 [32m++[m
+ src/english_2_Cloze_test/cloze_test.css            |   34 [32m+[m
+ src/english_2_Cloze_test/cloze_test.js             |  874 [32m++[m
+ src/english_2_Cloze_test/cloze_view.js             |  655 [32m++[m
+ .../WordbankMasterView.js                          | 1259 [32m+++[m
+ .../WordbankParent.js                              | 1393 [32m+++[m
+ src/english_3_Cloze_Test_WordBank/WordbankTest.js  | 1316 [32m+++[m
+ src/english_3_Cloze_Test_WordBank/wordbankApi.js   |  253 [32m+[m
+ .../CToEMasterView.js                              |  448 [32m+[m
+ .../CToETestView.js                                |  553 [32m++[m
+ src/english_4_C_to_E_Sentence_Completion/api.js    |  170 [32m+[m
+ .../english_test_CtoE_center.js                    |  797 [32m++[m
+ src/english_5_cloze_sentence/ClozeCenter.js        |  621 [32m++[m
+ src/english_5_cloze_sentence/ClozeMasterView.js    |  511 [32m++[m
+ src/english_5_cloze_sentence/ClozeTestView.js      |  707 [32m++[m
+ src/english_5_cloze_sentence/clozeApi.js           |  151 [32m+[m
+ .../ClozeMasterView.js                             |  522 [32m++[m
+ .../ClozeTestView.js                               |  307 [32m+[m
+ src/english_6_cloze_wordbank_select/api.js         |  177 [32m+[m
+ src/english_6_cloze_wordbank_select/center.js      |  631 [32m++[m
+ src/english_7_passage_cloze/api.js                 |  177 [32m+[m
+ src/english_7_passage_cloze/center.js              |  607 [32m++[m
+ src/english_7_passage_cloze/test.js                |  826 [32m++[m
+ src/english_7_passage_cloze/view.js                |  549 [32m++[m
+ src/english_8_reading_comprehension/api.js         |  177 [32m+[m
+ src/english_8_reading_comprehension/center.js      |  662 [32m++[m
+ src/english_8_reading_comprehension/test.js        | 1149 [32m+++[m
+ src/english_8_reading_comprehension/view.js        |  517 [32m++[m
+ src/english_a_z/api.js                             |  176 [32m+[m
+ src/english_a_z/center.js                          |  389 [32m+[m
+ src/english_a_z/test.js                            |  899 [32m++[m
+ src/english_a_z/view.js                            |  770 [32m++[m
+ src/english_book_1_work/api.js                     |  259 [32m+[m
+ src/english_book_1_work/center.js                  |  485 [32m+[m
+ src/english_book_1_work/test.js                    | 1253 [32m+++[m
+ src/english_book_1_work/view.js                    |  436 [32m+[m
+ src/image-1.png                                    |  Bin [31m0[m -> [32m145320[m bytes
+ src/image-2.png                                    |  Bin [31m0[m -> [32m114256[m bytes
+ src/image.png                                      |  Bin [31m0[m -> [32m90512[m bytes
+ src/index.css                                      |   10 [32m+[m[31m-[m
+ src/index.js                                       |   12 [32m+[m[31m-[m
+ src/listen/Listen_2.js                             | 1170 [32m+++[m
+ src/listen/Listen_3.js                             |  856 [32m++[m
+ src/listen/listen_1.js                             | 1420 [32m+++[m
+ src/listen/listen_speed_5.js                       |  264 [32m+[m
+ src/listen/sentence_listen_spell.js                | 1545 [32m++++[m
+ src/listen/sentence_reading_spell.js               | 1457 [32m+++[m
+ src/logo.svg                                       |    1 [31m-[m
+ src/main/auth.js                                   |  815 [32m++[m
+ src/main/authApi.js                                |  141 [32m+[m
+ src/movie/VideoPlayer.js                           |  245 [32m+[m
+ src/movie/data/vidioPlaylist.js                    |  418 [32m+[m
+ src/movie/movie_pepa.js                            | 1372 [32m+++[m
+ src/movie/pepa_sentence_listen.js                  | 1048 [32m+++[m
+ src/movie/scss/movie_pepa.scss                     |   50 [32m+[m
+ src/notebook/notebook.js                           |  974 [32m++[m
+ src/reportWebVitals.js                             |   13 [31m-[m
+ src/sentence/AddSentenceModal.js                   | 1205 [32m+++[m
+ src/sentence/api.js                                |  243 [32m+[m
+ src/sentence/review_center.js                      | 1618 [32m++++[m
+ src/sentence/review_test.js                        |  387 [32m+[m
+ src/sentence/review_view.js                        | 1116 [32m+++[m
+ src/sentence/sentence.js                           |  668 [32m++[m
+ src/sentence/utils.js                              |  269 [32m+[m
+ src/setupTests.js                                  |    5 [31m-[m
+ src/teacher/book_senntence_test.js                 | 1032 [32m+++[m
+ src/test/SentenceReview.js                         | 1100 [32m+++[m
+ src/test/api.js                                    |  485 [32m+[m
+ src/test/data/questions.json                       |  185 [32m+[m
+ src/test/data/singleChoiceQuestions.json           |  594 [32m++[m
+ src/test/data/wordsData.json                       |  182 [32m+[m
+ src/test/image-1.png                               |  Bin [31m0[m -> [32m122257[m bytes
+ src/test/image-2.png                               |  Bin [31m0[m -> [32m38496[m bytes
+ src/test/image-3.png                               |  Bin [31m0[m -> [32m39683[m bytes
+ src/test/image-4.png                               |  Bin [31m0[m -> [32m75175[m bytes
+ src/test/image-5.png                               |  Bin [31m0[m -> [32m166410[m bytes
+ src/test/image-6.png                               |  Bin [31m0[m -> [32m301955[m bytes
+ src/test/image-7.png                               |  Bin [31m0[m -> [32m1278431[m bytes
+ src/test/image.png                                 |  Bin [31m0[m -> [32m25629[m bytes
+ src/test/test.js                                   | 1002 [32m++[m
+ src/test/test.json                                 | 9563 [32m++++++++++++++++++++[m
+ src/test/test.md                                   |    5 [32m+[m
+ src/test/test1.json                                |    3 [32m+[m
+ src/test/test_1.js                                 |    0
+ src/test/test_1.md                                 |    7 [32m+[m
+ src/test/test_2.js                                 |    0
+ src/translator/translator.js                       | 1140 [32m+++[m
+ src/word/WordReviewTest.js                         |  925 [32m++[m
+ src/word/wordReviewBook.js                         |  539 [32m++[m
+ src/word/wordReviewUtils.js                        | 1867 [32m++++[m
+ src/word/wordSpallMain.js                          |  970 [32m++[m
+ src/word/workSpell.js                              |  558 [32m++[m
+ src/word/workStudy.js                              | 1269 [32m+++[m
+ "src/\350\257\264\346\230\216.md"                  |   11 [32m+[m
+ "\345\244\207\344\273\275/src/App.css"             |  107 [32m+[m
+ "\345\244\207\344\273\275/src/App.js"              |   69 [32m+[m
+ .../src/Function/weisimin.js"                      | 1227 [32m+++[m
+ "\345\244\207\344\273\275/src/Main.js"             | 1112 [32m+++[m
+ "\345\244\207\344\273\275/src/book/Reading.js"     | 2092 [32m+++++[m
+ "\345\244\207\344\273\275/src/book/data/7A.json"   |  123 [32m+[m
+ "\345\244\207\344\273\275/src/book/data/7B.json"   |   54 [32m+[m
+ "\345\244\207\344\273\275/src/book/data/8A.json"   |   18 [32m+[m
+ "\345\244\207\344\273\275/src/book/data/8B.json"   |   18 [32m+[m
+ "\345\244\207\344\273\275/src/book/data/9A.json"   |   18 [32m+[m
+ "\345\244\207\344\273\275/src/book/data/9B.json"   |   18 [32m+[m
+ .../src/book/data/lessons.json"                    |  696 [32m++[m
+ "\345\244\207\344\273\275/src/config.js"           |  103 [32m+[m
+ .../src/english_2_Cloze_test/api.js"               |  173 [32m+[m
+ .../src/english_2_Cloze_test/cloze_center.js"      | 1014 [32m+++[m
+ .../src/english_2_Cloze_test/cloze_reasult.js"     |  565 [32m++[m
+ .../src/english_2_Cloze_test/cloze_test.css"       |   34 [32m+[m
+ .../src/english_2_Cloze_test/cloze_test.js"        |  874 [32m++[m
+ .../src/english_2_Cloze_test/cloze_view.js"        |  655 [32m++[m
+ .../WordbankMasterView.js"                         | 1259 [32m+++[m
+ .../WordbankParent.js"                             | 1393 [32m+++[m
+ .../english_3_Cloze_Test_WordBank/WordbankTest.js" | 1316 [32m+++[m
+ .../english_3_Cloze_Test_WordBank/wordbankApi.js"  |  253 [32m+[m
+ .../CToEMasterView.js"                             |  448 [32m+[m
+ .../CToETestView.js"                               |  553 [32m++[m
+ .../english_4_C_to_E_Sentence_Completion/api.js"   |  170 [32m+[m
+ .../english_test_CtoE_center.js"                   |  797 [32m++[m
+ .../src/english_5_cloze_sentence/ClozeCenter.js"   |  621 [32m++[m
+ .../english_5_cloze_sentence/ClozeMasterView.js"   |  511 [32m++[m
+ .../src/english_5_cloze_sentence/ClozeTestView.js" |  707 [32m++[m
+ .../src/english_5_cloze_sentence/clozeApi.js"      |  151 [32m+[m
+ .../ClozeMasterView.js"                            |  522 [32m++[m
+ .../ClozeTestView.js"                              |  307 [32m+[m
+ .../src/english_6_cloze_wordbank_select/api.js"    |  177 [32m+[m
+ .../src/english_6_cloze_wordbank_select/center.js" |  631 [32m++[m
+ .../src/english_7_passage_cloze/api.js"            |  177 [32m+[m
+ .../src/english_7_passage_cloze/center.js"         |  607 [32m++[m
+ .../src/english_7_passage_cloze/test.js"           |  826 [32m++[m
+ .../src/english_7_passage_cloze/view.js"           |  549 [32m++[m
+ .../src/english_8_reading_comprehension/api.js"    |  177 [32m+[m
+ .../src/english_8_reading_comprehension/center.js" |  662 [32m++[m
+ .../src/english_8_reading_comprehension/test.js"   | 1149 [32m+++[m
+ .../src/english_8_reading_comprehension/view.js"   |  517 [32m++[m
+ "\345\244\207\344\273\275/src/english_a_z/api.js"  |  176 [32m+[m
+ .../src/english_a_z/center.js"                     |  656 [32m++[m
+ "\345\244\207\344\273\275/src/english_a_z/test.js" |  790 [32m++[m
+ "\345\244\207\344\273\275/src/english_a_z/view.js" |    0
+ .../src/english_book_1_sentence/api.js"            |  465 [32m+[m
+ .../src/english_book_1_sentence/center.js"         |  991 [32m++[m
+ .../src/english_book_1_sentence/test.js"           | 1075 [32m+++[m
+ .../src/english_book_1_sentence/view.js"           |  590 [32m++[m
+ .../src/english_book_1_work/api.js"                |  259 [32m+[m
+ .../src/english_book_1_work/center.js"             |  425 [32m+[m
+ .../src/english_book_1_work/test.js"               |  942 [32m++[m
+ .../src/english_book_1_work/view.js"               |  436 [32m+[m
+ "\345\244\207\344\273\275/src/english_test/api.js" |  208 [32m+[m
+ .../src/english_test/select_center.js"             | 1781 [32m++++[m
+ .../src/english_test/select_master_view.js"        | 1083 [32m+++[m
+ .../src/english_test/select_test.js"               | 1377 [32m+++[m
+ .../src/english_test/select_test_result.js"        |  437 [32m+[m
+ "\345\244\207\344\273\275/src/image.png"           |  Bin [31m0[m -> [32m90512[m bytes
+ "\345\244\207\344\273\275/src/index.css"           |   19 [32m+[m
+ "\345\244\207\344\273\275/src/index.js"            |   11 [32m+[m
+ "\345\244\207\344\273\275/src/listen/Listen_2.js"  | 1170 [32m+++[m
+ "\345\244\207\344\273\275/src/listen/Listen_3.js"  |  762 [32m++[m
+ "\345\244\207\344\273\275/src/listen/listen_1.js"  | 1420 [32m+++[m
+ .../src/listen/listen_speed_5.js"                  |  264 [32m+[m
+ .../src/listen/sentence_listen_spell.js"           | 1545 [32m++++[m
+ .../src/listen/sentence_reading_spell.js"          | 1457 [32m+++[m
+ "\345\244\207\344\273\275/src/main/auth.js"        |  815 [32m++[m
+ "\345\244\207\344\273\275/src/main/authApi.js"     |  141 [32m+[m
+ .../src/movie/VideoPlayer.js"                      |  245 [32m+[m
+ .../src/movie/data/vidioPlaylist.js"               |  418 [32m+[m
+ "\345\244\207\344\273\275/src/movie/movie_pepa.js" | 1372 [32m+++[m
+ .../src/movie/pepa_sentence_listen.js"             | 1048 [32m+++[m
+ .../src/movie/pepa_sentence_test copy.js"          |  648 [32m++[m
+ .../src/movie/scss/movie_pepa.scss"                |   50 [32m+[m
+ .../src/notebook/notebook.js"                      |  974 [32m++[m
+ .../src/sentence/AddSentenceModal.js"              | 1205 [32m+++[m
+ "\345\244\207\344\273\275/src/sentence/api.js"     |  243 [32m+[m
+ .../src/sentence/review_center.js"                 | 1404 [32m+++[m
+ .../src/sentence/review_test.js"                   |  457 [32m+[m
+ .../src/sentence/review_view.js"                   | 1116 [32m+++[m
+ .../src/sentence/sentence.js"                      |  668 [32m++[m
+ "\345\244\207\344\273\275/src/sentence/utils.js"   |  270 [32m+[m
+ .../src/teacher/book_senntence_test.js"            | 1032 [32m+++[m
+ .../src/test/SentenceReview.js"                    | 1100 [32m+++[m
+ "\345\244\207\344\273\275/src/test/api.js"         |  485 [32m+[m
+ .../src/test/data/questions.json"                  |  185 [32m+[m
+ .../src/test/data/singleChoiceQuestions.json"      |  594 [32m++[m
+ .../src/test/data/wordsData.json"                  |  182 [32m+[m
+ "\345\244\207\344\273\275/src/test/image-1.png"    |  Bin [31m0[m -> [32m122257[m bytes
+ "\345\244\207\344\273\275/src/test/image-2.png"    |  Bin [31m0[m -> [32m38496[m bytes
+ "\345\244\207\344\273\275/src/test/image-3.png"    |  Bin [31m0[m -> [32m39683[m bytes
+ "\345\244\207\344\273\275/src/test/image-4.png"    |  Bin [31m0[m -> [32m75175[m bytes
+ "\345\244\207\344\273\275/src/test/image-5.png"    |  Bin [31m0[m -> [32m166410[m bytes
+ "\345\244\207\344\273\275/src/test/image-6.png"    |  Bin [31m0[m -> [32m301955[m bytes
+ "\345\244\207\344\273\275/src/test/image.png"      |  Bin [31m0[m -> [32m25629[m bytes
+ "\345\244\207\344\273\275/src/test/test.js"        | 1002 [32m++[m
+ "\345\244\207\344\273\275/src/test/test.json"      |   72 [32m+[m
+ "\345\244\207\344\273\275/src/test/test.md"        |    6 [32m+[m
+ "\345\244\207\344\273\275/src/test/test_1.js"      |    0
+ "\345\244\207\344\273\275/src/test/test_1.md"      |    7 [32m+[m
+ "\345\244\207\344\273\275/src/test/test_2.js"      |    0
+ .../src/translator/translator.js"                  | 1167 [32m+++[m
+ .../src/word/WordReviewTest.js"                    | 1642 [32m++++[m
+ .../src/word/wordReviewBook.js"                    |  434 [32m+[m
+ .../src/word/wordReviewUtils.js"                   | 1867 [32m++++[m
+ .../src/word/wordSpallMain.js"                     |  970 [32m++[m
+ "\345\244\207\344\273\275/src/word/workSpell.js"   |  558 [32m++[m
+ "\345\244\207\344\273\275/src/word/workStudy.js"   | 1135 [32m+++[m
+ .../src/\350\257\264\346\230\216.md"               |    3 [32m+[m
+ .../eng.traineddata"                               |  Bin [31m0[m -> [32m5199098[m bytes
+ "\346\234\215\345\212\241\345\231\250/main.js"     |   39 [32m+[m
+ .../package-lock.json"                             | 1544 [32m++++[m
+ .../package.json"                                  |   30 [32m+[m
+ "\346\234\215\345\212\241\345\231\250/rerad.md"    |    1 [32m+[m
+ .../person_name/WeiZhiYong/me_word_index.json"     |    9 [32m+[m
+ .../src/router/1_book.js"                          |  102 [32m+[m
+ .../src/router/2_user.js"                          |   30 [32m+[m
+ .../src/router/4_img.js"                           |   34 [32m+[m
+ .../src/router/admin.js"                           |  345 [32m+[m
+ .../src/router/json_personal.js"                   |  669 [32m++[m
+ .../src/router/json_user_controller.js"            |  792 [32m++[m
+ .../src/router/json_user_m.js"                     |  966 [32m++[m
+ .../src/router/json_user_routes.js"                |  431 [32m+[m
+ .../src/router/personal.js"                        | 1378 [32m+++[m
+ .../src/router/personal_word_review.js"            |  765 [32m++[m
+ .../src/router/personal_word_study.js"             |  492 [32m+[m
+ .../src/router/resource.js"                        |  873 [32m++[m
+ .../src/router_handler/2-article.js"               |  126 [32m+[m
+ .../src/router_handler/2_user_1.js"                |  482 [32m+[m
+ .../src/test/test.js"                              | 1440 [32m+++[m
+ .../src/test/test1.js"                             |    0
+ .../src/tool/ORCTesseract.js"                      |  116 [32m+[m
+ .../src/tool/baidu_chinese.js"                     |   41 [32m+[m
+ .../src/tool/baidu_translate.js"                   |   91 [32m+[m
+ .../src/tool/config.js"                            |    5 [32m+[m
+ .../src/tool/t-db.js"                              |   39 [32m+[m
+ .../src/tool/translater.js"                        |   70 [32m+[m
+ .../src/tool/weisimin.js"                          |  107 [32m+[m
+ .../src/tool/youdao_traslate.js"                   |   87 [32m+[m
+ .../src/user_profiles.json"                        |  285 [32m+[m
+ .../src/users/1001/1001.json"                      |   68 [32m+[m
+ .../src/users/1001/word_pepa_review.json"          |    1 [32m+[m
+ .../src/users/1001/word_pepa_study.json"           |    1 [32m+[m
+ .../src/users/1001/word_reading_review.json"       |    1 [32m+[m
+ .../src/users/1001/word_reading_study.json"        |    1 [32m+[m
+ .../src/users/1001/word_textbook_review.json"      |    1 [32m+[m
+ .../src/users/1001/word_textbook_study.json"       |    1 [32m+[m
+ .../src/users/1002/1002.json"                      |   68 [32m+[m
+ .../src/users/1002/word_pepa_review.json"          |    1 [32m+[m
+ .../src/users/1002/word_pepa_study.json"           |    1 [32m+[m
+ .../src/users/1002/word_reading_review.json"       |    1 [32m+[m
+ .../src/users/1002/word_reading_study.json"        |    1 [32m+[m
+ .../src/users/1002/word_textbook_review.json"      |    1 [32m+[m
+ .../src/users/1002/word_textbook_study.json"       |    1 [32m+[m
+ .../src/users/1003/1003.json"                      |   68 [32m+[m
+ .../src/users/1003/word_pepa_review.json"          |    1 [32m+[m
+ .../src/users/1003/word_pepa_study.json"           |    1 [32m+[m
+ .../src/users/1003/word_reading_review.json"       |    1 [32m+[m
+ .../src/users/1003/word_reading_study.json"        |    1 [32m+[m
+ .../src/users/1003/word_textbook_review.json"      |    1 [32m+[m
+ .../src/users/1003/word_textbook_study.json"       |    1 [32m+[m
+ .../src/users/1004/1004.json"                      |   68 [32m+[m
+ .../src/users/1004/word_pepa_review.json"          |    1 [32m+[m
+ .../src/users/1004/word_pepa_study.json"           |    1 [32m+[m
+ .../src/users/1004/word_reading_review.json"       |    1 [32m+[m
+ .../src/users/1004/word_reading_study.json"        |    1 [32m+[m
+ .../src/users/1004/word_textbook_review.json"      |    1 [32m+[m
+ .../src/users/1004/word_textbook_study.json"       |    1 [32m+[m
+ .../src/users/1005/1005.json"                      |   68 [32m+[m
+ .../src/users/1005/word_pepa_review.json"          |    1 [32m+[m
+ .../src/users/1005/word_pepa_study.json"           |    1 [32m+[m
+ .../src/users/1005/word_reading_review.json"       |    1 [32m+[m
+ .../src/users/1005/word_reading_study.json"        |    1 [32m+[m
+ .../src/users/1005/word_textbook_review.json"      |    1 [32m+[m
+ .../src/users/1005/word_textbook_study.json"       |    1 [32m+[m
+ "\346\234\215\345\212\241\345\231\250/test.js"     | 2513 [32m+++++[m
+ 721 files changed, 182536 insertions(+), 1589 deletions(-)
+
+[33mcommit f0af4585499832ad5ebf962dd718a59e4b6b1da9[m
+Author: weisimin <1046618858@qq.com>
+Date:   Fri Jun 23 01:26:04 2023 +0800
+
+    Initialize project using Create React App
+
+ .gitignore             |    23 [32m+[m
+ README.md              |    70 [32m+[m
+ package-lock.json      | 17501 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m
+ package.json           |    38 [32m+[m
+ public/favicon.ico     |   Bin [31m0[m -> [32m3870[m bytes
+ public/index.html      |    43 [32m+[m
+ public/logo192.png     |   Bin [31m0[m -> [32m5347[m bytes
+ public/logo512.png     |   Bin [31m0[m -> [32m9664[m bytes
+ public/manifest.json   |    25 [32m+[m
+ public/robots.txt      |     3 [32m+[m
+ src/App.css            |    38 [32m+[m
+ src/App.js             |    25 [32m+[m
+ src/App.test.js        |     8 [32m+[m
+ src/index.css          |    13 [32m+[m
+ src/index.js           |    17 [32m+[m
+ src/logo.svg           |     1 [32m+[m
+ src/reportWebVitals.js |    13 [32m+[m
+ src/setupTests.js      |     5 [32m+[m
+ 18 files changed, 17823 insertions(+)
