@@ -1,6 +1,17 @@
+// 环境检测
+const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
 export const G_config = { // 全局配置
-    G_server_address: 'https://www.ddstudent.xyz/server', // 服务器地址
-    G_template: 'template_english_test.js'
+    // 根据环境自动选择服务器地址
+    G_server_address: isDevelopment 
+        ? 'http://localhost:3001/server'  // 开发环境
+        : 'https://www.ddstudent.xyz/server', // 生产环境
+    
+    G_template: 'template_english_test.js',
+    
+    // 环境信息
+    isDevelopment: isDevelopment,
+    currentHost: window.location.hostname
 }
 
 // 1. 读取字幕文件

@@ -10,9 +10,10 @@ import {
   PlayArrow, Pause, ArrowBack,
   Headset, ChevronRight, Backspace,
   School, MenuBook, Grade, LibraryBooks,
-  Repeat, RepeatOne
+  Repeat, RepeatOne, Translate
 } from '@mui/icons-material';
 import { useNavigate } from "react-router-dom";
+import { F_translator } from '../Function/weisimin.js';
 
 // ==================== 句子拆解工具函数 ====================
 class SentenceSplitter {
@@ -21,17 +22,35 @@ class SentenceSplitter {
     if (!text || typeof text !== 'string') return [];
 
     let processedText = text;
-    const abbreviationMap = { "i'm":"im","I'm":"Im","i'll":"ill","I'll":"Ill","i've":"ive","I've":"Ive","i'd":"id","I'd":"Id","can't":"cant","don't":"dont","won't":"wont","isn't":"isnt","aren't":"arent","wasn't":"wasnt","weren't":"werent","hasn't":"hasnt","haven't":"havent","hadn't":"hadnt","doesn't":"doesnt","didn't":"didnt","couldn't":"couldnt","wouldn't":"wouldnt","shouldn't":"shouldnt","mustn't":"mustnt","needn't":"neednt","mightn't":"mightnt","ain't":"aint","let's":"lets","that's":"thats","what's":"whats","who's":"whos","where's":"wheres","when's":"whens","why's":"whys","how's":"hows","here's":"heres","there's":"theres","it's":"its","he's":"hes","she's":"shes","we're":"were","you're":"youre","they're":"theyre" };
-    Object.keys(abbreviationMap).forEach(abbr => {
-      const regex = new RegExp(`\\b${abbr}\\b`, 'gi');
-      processedText = processedText.replace(regex, abbreviationMap[abbr]);
+    
+    // 首先，处理标点符号，确保缩写不被错误拆分
+    // 将缩写中的撇号替换为特殊标记，避免被标点符号处理移除
+    const abbreviationPatterns = [
+      { pattern: /(\w+)'(\w+)/gi, replacement: '$1__APOSTROPHE__$2' }, // 处理缩写如 what's, don't
+      { pattern: /(\w+)-(\w+)/gi, replacement: '$1__HYPHEN__$2' }, // 处理连字符单词如 P-E-T-E-R
+    ];
+    
+    abbreviationPatterns.forEach(({ pattern, replacement }) => {
+      processedText = processedText.replace(pattern, replacement);
     });
 
+    // 移除其他标点符号，但保留我们的特殊标记
     processedText = processedText.replace(/[.,!?;'"()\[\]{}]/g, ' ').replace(/\s+/g, ' ').trim();
+    
+    // 恢复特殊标记为原始形式
+    processedText = processedText.replace(/__APOSTROPHE__/g, "'");
+    processedText = processedText.replace(/__HYPHEN__/g, "-");
+    
     const rawWords = processedText.split(splitPattern);
     const processedWords = rawWords.map(word => {
       let cleanedWord = word.trim();
       if (cleanedWord === '') return '';
+      
+      // 对于缩写，保持原样（包括大小写）
+      if (cleanedWord.includes("'") || cleanedWord.includes("-")) {
+        return cleanedWord;
+      }
+      
       if (!preserveCase && cleanedWord.length > 0) {
         if (/^[A-Z]/.test(cleanedWord) && cleanedWord.length > 1) {
           return cleanedWord.charAt(0) + cleanedWord.slice(1).toLowerCase();
@@ -47,12 +66,28 @@ class SentenceSplitter {
   static splitSentenceIntelligently(text) {
     if (!text || typeof text !== 'string') return [];
     let normalizedText = text;
+    
+    // 智能处理缩写和特殊字符
     const patterns = [
+      // 处理缩写：确保缩写不被拆分
+      { regex: /(\w+)'(\w+)/gi, replacement: '$1__APOSTROPHE__$2' },
+      { regex: /(\w+)-(\w+)/gi, replacement: '$1__HYPHEN__$2' },
+      // 处理标点符号后的单词
       { regex: /(\w+)([.,!?;])(\w+)/g, replacement: '$1 $3' },
       { regex: /(\w+),(\w+)/g, replacement: '$1 $2' },
     ];
-    patterns.forEach(pattern => { normalizedText = normalizedText.replace(pattern.regex, pattern.replacement); });
-    return this.splitSentence(normalizedText, { preserveCase: true, minWordLength: 1 });
+    
+    patterns.forEach(pattern => { 
+      normalizedText = normalizedText.replace(pattern.regex, pattern.replacement); 
+    });
+    
+    // 拆分句子
+    const words = this.splitSentence(normalizedText, { preserveCase: true, minWordLength: 1 });
+    
+    // 恢复特殊标记
+    return words.map(word => {
+      return word.replace(/__APOSTROPHE__/g, "'").replace(/__HYPHEN__/g, "-");
+    });
   }
 
   static fromSRT(srtText, options = {}) {
@@ -166,6 +201,8 @@ const AutoFlowAddictiveListening = () => {
   const [availableWords, setAvailableWords] = useState([]);
   const [score, setScore] = useState(100);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [showTranslation, setShowTranslation] = useState(false);
+  const [currentTranslation, setCurrentTranslation] = useState('');
   const [currentTime, setCurrentTime] = useState(new Date());
   const [playMode, setPlayMode] = useState('repeat');
 
@@ -285,6 +322,31 @@ const AutoFlowAddictiveListening = () => {
     setAvailableWords([...words].sort(() => 0.5 - Math.random()));
     setUserWords([]);
     setShowAnswer(false);
+    
+    // 默认显示翻译
+    const currentSentence = sents[idx];
+    if (currentSentence.translation && currentSentence.translation.trim() !== '') {
+      // 如果JSON中已经有翻译，直接显示
+      setCurrentTranslation(currentSentence.translation);
+      setShowTranslation(true);
+    } else {
+      // 否则尝试获取翻译
+      setShowTranslation(true);
+      setCurrentTranslation('加载翻译中...');
+      // 异步获取翻译
+      F_translator(currentSentence.originalText)
+        .then(translation => {
+          if (translation) {
+            setCurrentTranslation(translation);
+          } else {
+            setCurrentTranslation('翻译不可用');
+          }
+        })
+        .catch(error => {
+          console.error('获取翻译失败:', error);
+          setCurrentTranslation('翻译失败');
+        });
+    }
   }, []);
 
   // ==================== 加载资源 ====================
@@ -342,6 +404,35 @@ const AutoFlowAddictiveListening = () => {
       });
   }, [initSentence]);
 
+  // ==================== 获取翻译 ====================
+  const fetchTranslation = useCallback(async () => {
+    const currentSentence = subtitles[currentIndex];
+    if (!currentSentence) return;
+    
+    // 如果JSON中已经有翻译，直接使用
+    if (currentSentence.translation && currentSentence.translation.trim() !== '') {
+      setCurrentTranslation(currentSentence.translation);
+      setShowTranslation(true);
+      return;
+    }
+    
+    // 否则使用F_translator获取翻译
+    try {
+      const translation = await F_translator(currentSentence.originalText);
+      if (translation) {
+        setCurrentTranslation(translation);
+        setShowTranslation(true);
+      } else {
+        setCurrentTranslation('翻译不可用');
+        setShowTranslation(true);
+      }
+    } catch (error) {
+      console.error('获取翻译失败:', error);
+      setCurrentTranslation('翻译失败');
+      setShowTranslation(true);
+    }
+  }, [currentIndex, subtitles]);
+
   // ==================== 交互 ====================
   const handleBackToVersions = () => { stopPlayback(); setView('versions'); };
   const handleBackToGrades = () => { stopPlayback(); setView('grades'); };
@@ -366,17 +457,21 @@ const AutoFlowAddictiveListening = () => {
       const errorCount = s.words.length - correctCount;
       setScore(prev => Math.max(0, prev - errorCount * perWordScore));
 
-      // 自动下一句
+      // 立即显示反馈：标记哪些单词正确/错误
+      // 创建一个状态来跟踪每个单词的正确性
+      const wordFeedback = s.words.map((correctWord, index) => ({
+        word: newUserWords[index],
+        isCorrect: newUserWords[index] === correctWord,
+        correctWord: correctWord
+      }));
+      
+      // 存储反馈信息，用于显示
+      setShowAnswer(true); // 使用showAnswer状态来显示反馈
+      
+      // 停止播放音频
       stopPlayback();
-      setTimeout(() => {
-        if (currentIndex < subtitles.length - 1) {
-          setCurrentIndex(currentIndex + 1);
-          initSentence(currentIndex + 1, subtitles);
-        } else {
-          completionTimeRef.current = new Date();
-          setView('result');
-        }
-      }, 600);
+      
+      // 不再自动进入下一题，等待用户手动点击"下一题"按钮
     }
   };
 
@@ -403,6 +498,11 @@ const AutoFlowAddictiveListening = () => {
 
     setUserWords(s.words);
     setShowAnswer(true);
+  };
+
+  // 显示/隐藏翻译
+  const handleToggleTranslation = () => {
+    setShowTranslation(!showTranslation);
   };
 
   const handlePlayModeChange = (_, m) => {
@@ -617,12 +717,86 @@ const AutoFlowAddictiveListening = () => {
       <Paper elevation={4} sx={{p:4,borderRadius:5,minHeight:460}}>
         <Box sx={{mb:4,minHeight:60,textAlign:'center'}}>
           <Typography variant="h5" sx={{fontWeight:'bold'}}>
-            {subtitles[currentIndex]?.words.map((w,i) => (
-              <span key={i} style={{margin:'0 6px',borderBottom:i>=userWords.length&&!showAnswer?'2px solid #cfd8dc':'none'}}>
-                {showAnswer ? w : (userWords[i] ?? '')}
-              </span>
-            ))}
+            {subtitles[currentIndex]?.words.map((w,i) => {
+              const userWord = userWords[i];
+              const isFilled = userWord !== undefined;
+              const isCorrect = isFilled && userWord === w;
+              
+              // 当句子填满且showAnswer为true时显示反馈
+              const showFeedback = showAnswer && userWords.length === subtitles[currentIndex]?.words.length;
+              
+              let wordStyle = {
+                margin: '0 6px',
+                borderBottom: !isFilled && !showAnswer ? '2px solid #cfd8dc' : 'none',
+                padding: '2px 4px',
+                borderRadius: '4px',
+                transition: 'all 0.3s ease'
+              };
+              
+              if (showFeedback) {
+                if (isCorrect) {
+                  wordStyle.backgroundColor = '#e8f5e9';
+                  wordStyle.color = '#2e7d32';
+                  wordStyle.border = '2px solid #4caf50';
+                } else {
+                  wordStyle.backgroundColor = '#ffebee';
+                  wordStyle.color = '#c62828';
+                  wordStyle.border = '2px solid #f44336';
+                  wordStyle.textDecoration = 'line-through';
+                  wordStyle.position = 'relative';
+                }
+              } else if (isFilled) {
+                wordStyle.backgroundColor = '#f5f5f5';
+                wordStyle.border = '2px solid #e0e0e0';
+              }
+              
+              return (
+                <span key={i} style={wordStyle}>
+                  {showAnswer ? w : (userWord ?? '')}
+                  {showFeedback && !isCorrect && (
+                    <span style={{
+                      position: 'absolute',
+                      top: '-20px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      fontSize: '12px',
+                      color: '#f44336',
+                      whiteSpace: 'nowrap'
+                    }}>
+                      ✗
+                    </span>
+                  )}
+                  {showFeedback && isCorrect && (
+                    <span style={{
+                      position: 'absolute',
+                      top: '-20px',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      fontSize: '12px',
+                      color: '#4caf50',
+                      whiteSpace: 'nowrap'
+                    }}>
+                      ✓
+                    </span>
+                  )}
+                </span>
+              );
+            })}
           </Typography>
+          {showAnswer && userWords.length === subtitles[currentIndex]?.words.length && (
+            <Typography variant="body2" sx={{mt:2, color: '#666'}}>
+              反馈：{userWords.filter((w,i) => w === subtitles[currentIndex]?.words[i]).length} 正确 / {userWords.length} 总数
+            </Typography>
+          )}
+          {/* 翻译显示区域 */}
+          {showTranslation && (
+            <Paper elevation={2} sx={{mt:3, p:2, bgcolor: '#f5f5f5', borderRadius: 2}}>
+              <Typography variant="body1" sx={{fontWeight: 'bold', color: '#1a237e', mb: 1}}>
+                <Translate sx={{verticalAlign: 'middle', mr: 1}} /> 翻译：
+              </Typography>
+              <Typography variant="body1">{currentTranslation}</Typography>
+            </Paper>
+          )}
         </Box>
 
         <Stack direction="row" justifyContent="center" spacing={2} sx={{mb:4}}>
@@ -632,7 +806,49 @@ const AutoFlowAddictiveListening = () => {
           </ToggleButtonGroup>
 
           <Button variant="outlined" startIcon={<Backspace/>} onClick={handleUndo} disabled={userWords.length===0 || showAnswer}>撤销</Button>
-          <Button variant="outlined" color="error" disabled={showAnswer} onClick={handleShowAnswer}>查看答案</Button>
+          <Button variant="outlined" color="error" disabled={showAnswer} onClick={handleShowAnswer}>
+            {showAnswer && userWords.length === subtitles[currentIndex]?.words.length ? '已显示反馈' : '查看答案'}
+          </Button>
+          
+          {/* 翻译按钮 */}
+          <Button 
+            variant="outlined" 
+            startIcon={<Translate/>}
+            onClick={handleToggleTranslation}
+            color={showTranslation ? "primary" : "default"}
+          >
+            {showTranslation ? '隐藏翻译' : '显示翻译'}
+          </Button>
+
+          {/* 下一题按钮 - 只在显示反馈且不是最后一题时显示 */}
+          {showAnswer && userWords.length === subtitles[currentIndex]?.words.length && currentIndex < subtitles.length - 1 && (
+            <Button 
+              variant="contained" 
+              color="primary"
+              onClick={() => {
+                setCurrentIndex(currentIndex + 1);
+                initSentence(currentIndex + 1, subtitles);
+              }}
+              sx={{ bgcolor: '#4caf50', '&:hover': { bgcolor: '#388e3c' } }}
+            >
+              下一题
+            </Button>
+          )}
+          
+          {/* 完成按钮 - 只在显示反馈且是最后一题时显示 */}
+          {showAnswer && userWords.length === subtitles[currentIndex]?.words.length && currentIndex === subtitles.length - 1 && (
+            <Button 
+              variant="contained" 
+              color="success"
+              onClick={() => {
+                completionTimeRef.current = new Date();
+                setView('result');
+              }}
+              sx={{ bgcolor: '#2196f3', '&:hover': { bgcolor: '#1976d2' } }}
+            >
+              完成测试
+            </Button>
+          )}
 
           <IconButton 
             onClick={() => {

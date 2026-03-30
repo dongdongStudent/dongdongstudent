@@ -451,7 +451,8 @@ const Main = () => {
   const currentYear = today.getFullYear();
 
   // ==================== 数据定义 ====================
-  const learningModules = [
+  // 英语学习模块
+  const englishModules = [
     {
       id: 'reading1',
       title: '小猪佩奇',
@@ -531,18 +532,10 @@ const Main = () => {
           path: '/sentence_listen',
           icon: '👂',
           description: '听句子，然后拼写',
-        },
-        {
-          id: 'see_spelling',
-          title: '看句子拼写',
-          color: THEME.speaking,
-          path: '/spell',
-          icon: '👁️',
-          description: '看句子，然后拼写',
-        },
+        }
       ]
     },
-    // 新增：英语选择题库测试
+    // 英语选择题库测试
     {
       id: 'english_test_select',
       title: '英语选择题库',
@@ -652,6 +645,19 @@ const Main = () => {
       description: '检测学生专用',
       completed: false,
     },
+  ];
+
+  // 数学学习模块
+  const mathModules = [
+    {
+      id: 'math_test_select',
+      title: '数学选择题库',
+      color: '#4CAF50', // 绿色主题色
+      path: '/math_test_select',
+      icon: '🧮',
+      description: '数学选择题练习，智能抽取',
+      completed: false,
+    }
   ];
 
 
@@ -1039,9 +1045,12 @@ const Main = () => {
         ...styles.mainContent,
         height: isFullscreen ? 'calc(100vh - 60px)' : 'auto',
         overflow: isFullscreen ? 'auto' : 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '12px',
       }}>
 
-        {/* 第二列：学习模块 */}
+        {/* 英语模块面板 */}
         <div style={styles.panel}>
           <div style={styles.panelHeader}>
             <h3 style={{
@@ -1050,7 +1059,7 @@ const Main = () => {
               fontWeight: '600',
               color: THEME.textPrimary,
             }}>
-              📚 学习模块
+              📚 英语模块
             </h3>
             <div style={{
               fontSize: '11px',
@@ -1058,14 +1067,14 @@ const Main = () => {
               marginTop: '3px',
               fontWeight: '500',
             }}>
-              {learningModules.length}个模块
+              {englishModules.length}个模块
             </div>
           </div>
           <div style={{
             ...styles.panelContent,
             padding: '14px 18px',
           }}>
-            {learningModules.map((module) => (
+            {englishModules.map((module) => (
               <ModuleCard
                 key={module.id}
                 title={module.title}
@@ -1078,7 +1087,50 @@ const Main = () => {
                 submodules={module.submodules}
                 isExpanded={expandedModuleId === module.id}
                 onToggleExpand={() => toggleModuleExpand(module.id)}
-                onSubmoduleClick={handleSubmoduleClick} // 新增：传递子菜单点击处理
+                onSubmoduleClick={handleSubmoduleClick}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* 数学模块面板 */}
+        <div style={styles.panel}>
+          <div style={styles.panelHeader}>
+            <h3 style={{
+              margin: 0,
+              fontSize: '15px',
+              fontWeight: '600',
+              color: THEME.textPrimary,
+            }}>
+              🧮 数学模块
+            </h3>
+            <div style={{
+              fontSize: '11px',
+              color: THEME.textSecondary,
+              marginTop: '3px',
+              fontWeight: '500',
+            }}>
+              {mathModules.length}个模块
+            </div>
+          </div>
+          <div style={{
+            ...styles.panelContent,
+            padding: '14px 18px',
+          }}>
+            {mathModules.map((module) => (
+              <ModuleCard
+                key={module.id}
+                title={module.title}
+                color={module.color}
+                icon={module.icon}
+                description={module.description}
+                completed={module.completed}
+                onClick={() => handleModuleClick(module)}
+                hasSubmenu={module.hasSubmenu}
+                submodules={module.submodules}
+                isExpanded={expandedModuleId === module.id}
+                onToggleExpand={() => toggleModuleExpand(module.id)}
+                onSubmoduleClick={handleSubmoduleClick}
               />
             ))}
           </div>
