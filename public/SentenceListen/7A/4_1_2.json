@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "id": "4_1_2",
+    "title": "4_1_2",
+    "totalSentences": 14,
+    "totalWords": 65,
+    "duration": 40.16,
+    "difficulty": "beginner",
+    "convertedFrom": "4_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.224,
+      "endTime": 1.824,
+      "text": "Good morning, Peter.",
+      "words": ["Good", "morning", "Peter"],
+      "translation": "早上好，Peter。",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 2.576,
+      "endTime": 4.464,
+      "text": "Good morning, Ms Gao.",
+      "words": ["Good", "morning", "Ms", "Gao"],
+      "translation": "早上好，高老师。",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 5.536,
+      "endTime": 7.792,
+      "text": "What classes do you have today?",
+      "words": ["What", "classes", "do", "you", "have", "today"],
+      "translation": "你今天有什么课？",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 9.136,
+      "endTime": 11.936,
+      "text": "I have Chinese and maths first.",
+      "words": ["I", "have", "Chinese", "and", "maths", "first"],
+      "translation": "我先是语文和数学。",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 12.992,
+      "endTime": 14.704,
+      "text": "Do you like those subjects?",
+      "words": ["Do", "you", "like", "those", "subjects"],
+      "translation": "你喜欢那些科目吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 15.488,
+      "endTime": 18.016,
+      "text": "I like Chinese because it’s fun,",
+      "words": ["I", "like", "Chinese", "because", "it’s", "fun"],
+      "translation": "我喜欢语文，因为它很有趣，",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 18.256,
+      "endTime": 20.496,
+      "text": "but I don’t like maths.",
+      "words": ["but", "I", "don’t", "like", "maths"],
+      "translation": "但我不喜欢数学。",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 21.296,
+      "endTime": 22.112,
+      "text": "Why?",
+      "words": ["Why"],
+      "translation": "为什么？",
+      "wordCount": 1
+    },
+    {
+      "id": 9,
+      "startTime": 22.784,
+      "endTime": 25.392,
+      "text": "Because maths is boring to me.",
+      "words": ["Because", "maths", "is", "boring", "to", "me"],
+      "translation": "因为我觉得数学很无聊。",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 26.032,
+      "endTime": 29.072,
+      "text": "But every subject is important.",
+      "words": ["But", "every", "subject", "is", "important"],
+      "translation": "但每个科目都很重要。",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 29.888,
+      "endTime": 32.144,
+      "text": "What other classes do you have today?",
+      "words": ["What", "other", "classes", "do", "you", "have", "today"],
+      "translation": "你今天还有什么其他课？",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 32.672,
+      "endTime": 34.64,
+      "text": "IT and PE.",
+      "words": ["IT", "and", "PE"],
+      "translation": "信息技术和体育。",
+      "wordCount": 3
+    },
+    {
+      "id": 13,
+      "startTime": 35.024,
+      "endTime": 36.848,
+      "text": "What’s your favourite class?",
+      "words": ["What’s", "your", "favourite", "class"],
+      "translation": "你最喜欢的课是什么？",
+      "wordCount": 4
+    },
+    {
+      "id": 14,
+      "startTime": 37.472,
+      "endTime": 40.16,
+      "text": "PE, because it’s exciting.",
+      "words": ["PE", "because", "it’s", "exciting"],
+      "translation": "体育，因为它很令人兴奋。",
+      "wordCount": 4
+    }
+  ]
+}

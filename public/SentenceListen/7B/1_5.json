@@ -1,0 +1,439 @@
+{
+  "metadata": {
+    "id": "1_5",
+    "title": "1_5",
+    "totalSentences": 24,
+    "totalWords": 186,
+    "duration": 112.912,
+    "difficulty": "beginner",
+    "convertedFrom": "1_5.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 14.56,
+      "endTime": 19.088,
+      "text": "Hi, I’m Malee and I live in Thailand!",
+      "words": [
+        "Hi",
+        "I’m",
+        "Malee",
+        "and",
+        "I",
+        "live",
+        "in",
+        "Thailand"
+      ],
+      "translation": "[需要翻译: Hi, I’m Malee and I live in Thailand!]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 19.584,
+      "endTime": 22.848,
+      "text": "The elephant is my favourite animal.",
+      "words": [
+        "The",
+        "elephant",
+        "is",
+        "my",
+        "favourite",
+        "animal"
+      ],
+      "translation": "[需要翻译: The elephant is my favourite animal.]",
+      "wordCount": 6
+    },
+    {
+      "id": 3,
+      "startTime": 23.168,
+      "endTime": 27.904,
+      "text": "I love elephants because they are strong and clever.",
+      "words": [
+        "I",
+        "love",
+        "elephants",
+        "because",
+        "they",
+        "are",
+        "strong",
+        "and",
+        "clever"
+      ],
+      "translation": "[需要翻译: I love elephants because they are strong and clever.]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 28.192,
+      "endTime": 31.6,
+      "text": "They are also a symbol of good luck here.",
+      "words": [
+        "They",
+        "are",
+        "also",
+        "a",
+        "symbol",
+        "of",
+        "good",
+        "luck",
+        "here"
+      ],
+      "translation": "[需要翻译: They are also a symbol of good luck here.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 32.144,
+      "endTime": 35.328,
+      "text": "The elephant is our national animal.",
+      "words": [
+        "The",
+        "elephant",
+        "is",
+        "our",
+        "national",
+        "animal"
+      ],
+      "translation": "[需要翻译: The elephant is our national animal.]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 35.952,
+      "endTime": 41.232,
+      "text": "On 13 March, we celebrate Thai Elephant Day.",
+      "words": [
+        "On",
+        "13",
+        "March",
+        "we",
+        "celebrate",
+        "Thai",
+        "Elephant",
+        "Day"
+      ],
+      "translation": "[需要翻译: On 13 March, we celebrate Thai Elephant Day.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 42.432,
+      "endTime": 46.16,
+      "text": "Elephants look very different from other animals.",
+      "words": [
+        "Elephants",
+        "look",
+        "very",
+        "different",
+        "from",
+        "other",
+        "animals"
+      ],
+      "translation": "[需要翻译: Elephants look very different from other animals.]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 46.8,
+      "endTime": 48.512,
+      "text": "They are huge.",
+      "words": [
+        "They",
+        "are",
+        "huge"
+      ],
+      "translation": "[需要翻译: They are huge.]",
+      "wordCount": 3
+    },
+    {
+      "id": 9,
+      "startTime": 48.784,
+      "endTime": 52.528,
+      "text": "They have large ears and long trunks.",
+      "words": [
+        "They",
+        "have",
+        "large",
+        "ears",
+        "and",
+        "long",
+        "trunks"
+      ],
+      "translation": "[需要翻译: They have large ears and long trunks.]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 52.704,
+      "endTime": 56.848,
+      "text": "They can pick up and carry heavy things with their trunks.",
+      "words": [
+        "They",
+        "can",
+        "pick",
+        "up",
+        "and",
+        "carry",
+        "heavy",
+        "things",
+        "with",
+        "their",
+        "trunks"
+      ],
+      "translation": "[需要翻译: They can pick up and carry heavy things with their trunks.]",
+      "wordCount": 11
+    },
+    {
+      "id": 11,
+      "startTime": 57.68,
+      "endTime": 60.672,
+      "text": "Elephants are like us in some ways.",
+      "words": [
+        "Elephants",
+        "are",
+        "like",
+        "us",
+        "in",
+        "some",
+        "ways"
+      ],
+      "translation": "[需要翻译: Elephants are like us in some ways.]",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 60.976,
+      "endTime": 64.992,
+      "text": "They are very playful and love to play in the water.",
+      "words": [
+        "They",
+        "are",
+        "very",
+        "playful",
+        "and",
+        "love",
+        "to",
+        "play",
+        "in",
+        "the",
+        "water"
+      ],
+      "translation": "[需要翻译: They are very playful and love to play in the water.]",
+      "wordCount": 11
+    },
+    {
+      "id": 13,
+      "startTime": 65.456,
+      "endTime": 67.536,
+      "text": "They are great swimmers.",
+      "words": [
+        "They",
+        "are",
+        "great",
+        "swimmers"
+      ],
+      "translation": "[需要翻译: They are great swimmers.]",
+      "wordCount": 4
+    },
+    {
+      "id": 14,
+      "startTime": 67.872,
+      "endTime": 69.664,
+      "text": "They are also clever.",
+      "words": [
+        "They",
+        "are",
+        "also",
+        "clever"
+      ],
+      "translation": "[需要翻译: They are also clever.]",
+      "wordCount": 4
+    },
+    {
+      "id": 15,
+      "startTime": 70.032,
+      "endTime": 77.92,
+      "text": "For example, they can remember one another and places with food and water after many years.",
+      "words": [
+        "For",
+        "example",
+        "they",
+        "can",
+        "remember",
+        "one",
+        "another",
+        "and",
+        "places",
+        "with",
+        "food",
+        "and",
+        "water",
+        "after",
+        "many",
+        "years"
+      ],
+      "translation": "[需要翻译: For example, they can remember one another and places with food and water after many years.]",
+      "wordCount": 16
+    },
+    {
+      "id": 16,
+      "startTime": 78.176,
+      "endTime": 80.912,
+      "text": "Elephants are very kind too.",
+      "words": [
+        "Elephants",
+        "are",
+        "very",
+        "kind",
+        "too"
+      ],
+      "translation": "[需要翻译: Elephants are very kind too.]",
+      "wordCount": 5
+    },
+    {
+      "id": 17,
+      "startTime": 81.248,
+      "endTime": 85.184,
+      "text": "They look after other elephants when they don’t feel well.",
+      "words": [
+        "They",
+        "look",
+        "after",
+        "other",
+        "elephants",
+        "when",
+        "they",
+        "don’t",
+        "feel",
+        "well"
+      ],
+      "translation": "[需要翻译: They look after other elephants when they don’t feel well.]",
+      "wordCount": 10
+    },
+    {
+      "id": 18,
+      "startTime": 85.568,
+      "endTime": 89.28,
+      "text": "The big elephants also help the baby ones.",
+      "words": [
+        "The",
+        "big",
+        "elephants",
+        "also",
+        "help",
+        "the",
+        "baby",
+        "ones"
+      ],
+      "translation": "[需要翻译: The big elephants also help the baby ones.]",
+      "wordCount": 8
+    },
+    {
+      "id": 19,
+      "startTime": 89.712,
+      "endTime": 93.84,
+      "text": "Elephants are an important part of Thai life and culture.",
+      "words": [
+        "Elephants",
+        "are",
+        "an",
+        "important",
+        "part",
+        "of",
+        "Thai",
+        "life",
+        "and",
+        "culture"
+      ],
+      "translation": "[需要翻译: Elephants are an important part of Thai life and culture.]",
+      "wordCount": 10
+    },
+    {
+      "id": 20,
+      "startTime": 94.272,
+      "endTime": 96.848,
+      "text": "However, they are in danger.",
+      "words": [
+        "However",
+        "they",
+        "are",
+        "in",
+        "danger"
+      ],
+      "translation": "[需要翻译: However, they are in danger.]",
+      "wordCount": 5
+    },
+    {
+      "id": 21,
+      "startTime": 97.264,
+      "endTime": 101.936,
+      "text": "They live in forests, but people cut down too many trees.",
+      "words": [
+        "They",
+        "live",
+        "in",
+        "forests",
+        "but",
+        "people",
+        "cut",
+        "down",
+        "too",
+        "many",
+        "trees"
+      ],
+      "translation": "[需要翻译: They live in forests, but people cut down too many trees.]",
+      "wordCount": 11
+    },
+    {
+      "id": 22,
+      "startTime": 102.24,
+      "endTime": 105.824,
+      "text": "People also kill elephants for their ivory.",
+      "words": [
+        "People",
+        "also",
+        "kill",
+        "elephants",
+        "for",
+        "their",
+        "ivory"
+      ],
+      "translation": "[需要翻译: People also kill elephants for their ivory.]",
+      "wordCount": 7
+    },
+    {
+      "id": 23,
+      "startTime": 106.192,
+      "endTime": 110.352,
+      "text": "Let’s save the forests and not buy things made of ivory.",
+      "words": [
+        "Let’s",
+        "save",
+        "the",
+        "forests",
+        "and",
+        "not",
+        "buy",
+        "things",
+        "made",
+        "of",
+        "ivory"
+      ],
+      "translation": "[需要翻译: Let’s save the forests and not buy things made of ivory.]",
+      "wordCount": 11
+    },
+    {
+      "id": 24,
+      "startTime": 110.752,
+      "endTime": 112.912,
+      "text": "Every elephant counts.",
+      "words": [
+        "Every",
+        "elephant",
+        "counts"
+      ],
+      "translation": "[需要翻译: Every elephant counts.]",
+      "wordCount": 3
+    }
+  ]
+}

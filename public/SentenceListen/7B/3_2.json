@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "id": "3_2",
+    "title": "3_2",
+    "totalSentences": 6,
+    "totalWords": 43,
+    "duration": 74.592,
+    "difficulty": "beginner",
+    "convertedFrom": "3_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 53.28,
+      "endTime": 55.2,
+      "text": "Whose baseball glove is this?",
+      "words": [
+        "Whose",
+        "baseball",
+        "glove",
+        "is",
+        "this"
+      ],
+      "translation": "[需要翻译: Whose baseball glove is this?]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 55.968,
+      "endTime": 58.864,
+      "text": "Oh, that’s mine. Thanks!",
+      "words": [
+        "Oh",
+        "that’s",
+        "mine",
+        "Thanks"
+      ],
+      "translation": "[需要翻译: Oh, that’s mine. Thanks!]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 59.328,
+      "endTime": 62.992,
+      "text": "You’re welcome, Peter. Do you play baseball often?",
+      "words": [
+        "You’re",
+        "welcome",
+        "Peter",
+        "Do",
+        "you",
+        "play",
+        "baseball",
+        "often"
+      ],
+      "translation": "[需要翻译: You’re welcome, Peter. Do you play baseball often?]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 63.184,
+      "endTime": 69.536,
+      "text": "Yes. I usually play once or twice at weekends. How often do you play?",
+      "words": [
+        "Yes",
+        "I",
+        "usually",
+        "play",
+        "once",
+        "or",
+        "twice",
+        "at",
+        "weekends",
+        "How",
+        "often",
+        "do",
+        "you",
+        "play"
+      ],
+      "translation": "[需要翻译: Yes. I usually play once or twice at weekends. How often do you play?]",
+      "wordCount": 14
+    },
+    {
+      "id": 5,
+      "startTime": 69.744,
+      "endTime": 73.184,
+      "text": "Twice a week. Can I join your game this weekend?",
+      "words": [
+        "Twice",
+        "a",
+        "week",
+        "Can",
+        "I",
+        "join",
+        "your",
+        "game",
+        "this",
+        "weekend"
+      ],
+      "translation": "[需要翻译: Twice a week. Can I join your game this weekend?]",
+      "wordCount": 10
+    },
+    {
+      "id": 6,
+      "startTime": 73.376,
+      "endTime": 74.592,
+      "text": "Of course!",
+      "words": [
+        "Of",
+        "course"
+      ],
+      "translation": "[需要翻译: Of course!]",
+      "wordCount": 2
+    }
+  ]
+}

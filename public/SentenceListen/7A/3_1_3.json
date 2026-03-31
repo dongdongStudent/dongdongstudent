@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "3_1_3",
+    "title": "3_1_3",
+    "totalSentences": 5,
+    "totalWords": 33,
+    "duration": 18.304,
+    "difficulty": "beginner",
+    "convertedFrom": "3_1_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.512,
+      "endTime": 5,
+      "text": "Excuse me. Is there a student centre in this school?",
+      "words": ["Excuse", "me", "Is", "there", "a", "student", "centre", "in", "this", "school"],
+      "translation": "打扰一下。这所学校有学生中心吗？",
+      "wordCount": 10
+    },
+    {
+      "id": 2,
+      "startTime": 5.296,
+      "endTime": 6.992,
+      "text": "Yes, there is.",
+      "words": ["Yes", "there", "is"],
+      "translation": "有的。",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 7.6,
+      "endTime": 10.448,
+      "text": "Oh, good. Where is it?",
+      "words": ["Oh", "good", "Where", "is", "it"],
+      "translation": "哦，太好了。在哪里？",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 11.088,
+      "endTime": 14.016,
+      "text": "It’s between the library and the gym.",
+      "words": ["It’s", "between", "the", "library", "and", "the", "gym"],
+      "translation": "在图书馆和体育馆之间。",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 14.928,
+      "endTime": 18.304,
+      "text": "Ah, yes. I can see it. Thank you!",
+      "words": ["Ah", "yes", "I", "can", "see", "it", "Thank", "you"],
+      "translation": "啊，是的。我能看到了。谢谢！",
+      "wordCount": 8
+    }
+  ]
+}

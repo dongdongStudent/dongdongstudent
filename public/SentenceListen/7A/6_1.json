@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "id": "6_1",
+    "title": "6_1",
+    "totalSentences": 11,
+    "totalWords": 71,
+    "duration": 34.125,
+    "difficulty": "beginner",
+    "convertedFrom": "6_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 3.55,
+      "text": "Mum: Peter! Get up, You're late",
+      "words": [
+        "Mum:",
+        "Peter",
+        "Get",
+        "up",
+        "You're",
+        "late"
+      ],
+      "translation": "[需要翻译: Mum: Peter! Get up, You're late]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 4.35,
+      "endTime": 6.1,
+      "text": "Peter: What time is it?",
+      "words": [
+        "Peter:",
+        "What",
+        "time",
+        "is",
+        "it"
+      ],
+      "translation": "[需要翻译: Peter: What time is it?]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 6.7,
+      "endTime": 8.47,
+      "text": "Mum: A quarter past six.",
+      "words": [
+        "Mum:",
+        "A",
+        "quarter",
+        "past",
+        "six"
+      ],
+      "translation": "[需要翻译: Mum: A quarter past six.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 8.8,
+      "endTime": 12.3,
+      "text": "Peter: It's too early, School is at eight.",
+      "words": [
+        "Peter:",
+        "It's",
+        "too",
+        "early",
+        "School",
+        "is",
+        "at",
+        "eight"
+      ],
+      "translation": "[需要翻译: Peter: It's too early, School is at eight.]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 12.725,
+      "endTime": 14.675,
+      "text": "Mum: But you're on duty today!",
+      "words": [
+        "Mum:",
+        "But",
+        "you're",
+        "on",
+        "duty",
+        "today"
+      ],
+      "translation": "[需要翻译: Mum: But you're on duty today!]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 14.9,
+      "endTime": 17.2,
+      "text": "Peter: Oh, no I'm late!",
+      "words": [
+        "Peter:",
+        "Oh",
+        "no",
+        "I'm",
+        "late"
+      ],
+      "translation": "[需要翻译: Peter: Oh, no I'm late!]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 17.55,
+      "endTime": 23.2,
+      "text": "Mum: Quickly There's no time for a shower. Get dressed and go.",
+      "words": [
+        "Mum:",
+        "Quickly",
+        "There's",
+        "no",
+        "time",
+        "for",
+        "a",
+        "shower",
+        "Get",
+        "dressed",
+        "and",
+        "go"
+      ],
+      "translation": "[需要翻译: Mum: Quickly There's no time for a shower. Get dressed and go.]",
+      "wordCount": 12
+    },
+    {
+      "id": 8,
+      "startTime": 23.6,
+      "endTime": 25.65,
+      "text": "Peter: I can still brush my teeth.",
+      "words": [
+        "Peter:",
+        "I",
+        "can",
+        "still",
+        "brush",
+        "my",
+        "teeth"
+      ],
+      "translation": "[需要翻译: Peter: I can still brush my teeth.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 26.125,
+      "endTime": 30.2,
+      "text": "Mum: And here's your breakfast. Take it to school.",
+      "words": [
+        "Mum:",
+        "And",
+        "here's",
+        "your",
+        "breakfast",
+        "Take",
+        "it",
+        "to",
+        "school"
+      ],
+      "translation": "[需要翻译: Mum: And here's your breakfast. Take it to school.]",
+      "wordCount": 9
+    },
+    {
+      "id": 10,
+      "startTime": 30.725,
+      "endTime": 32.975,
+      "text": "Peter: Thank you, Mum! Bye",
+      "words": [
+        "Peter:",
+        "Thank",
+        "you",
+        "Mum",
+        "Bye"
+      ],
+      "translation": "[需要翻译: Peter: Thank you, Mum! Bye]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 33.2,
+      "endTime": 34.125,
+      "text": "Mum: Be safe.",
+      "words": [
+        "Mum:",
+        "Be",
+        "safe"
+      ],
+      "translation": "[需要翻译: Mum: Be safe.]",
+      "wordCount": 3
+    }
+  ]
+}

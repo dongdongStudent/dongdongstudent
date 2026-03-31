@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "id": "5_2",
+    "title": "5_2",
+    "totalSentences": 6,
+    "totalWords": 34,
+    "duration": 24.896,
+    "difficulty": "beginner",
+    "convertedFrom": "5_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 9.264,
+      "endTime": 11.136,
+      "text": "What are you doing?",
+      "words": [
+        "What",
+        "are",
+        "you",
+        "doing"
+      ],
+      "translation": "[需要翻译: What are you doing?]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 11.584,
+      "endTime": 13.312,
+      "text": "I’m walking my dog.",
+      "words": [
+        "I’m",
+        "walking",
+        "my",
+        "dog"
+      ],
+      "translation": "[需要翻译: I’m walking my dog.]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 13.568,
+      "endTime": 16.896,
+      "text": "Would you like to play football with me at the sports park?",
+      "words": [
+        "Would",
+        "you",
+        "like",
+        "to",
+        "play",
+        "football",
+        "with",
+        "me",
+        "at",
+        "the",
+        "sports",
+        "park"
+      ],
+      "translation": "[需要翻译: Would you like to play football with me at the sports park?]",
+      "wordCount": 12
+    },
+    {
+      "id": 4,
+      "startTime": 17.152,
+      "endTime": 21.152,
+      "text": "Yes, I’d love to. When shall we meet?",
+      "words": [
+        "Yes",
+        "I’d",
+        "love",
+        "to",
+        "When",
+        "shall",
+        "we",
+        "meet"
+      ],
+      "translation": "[需要翻译: Yes, I’d love to. When shall we meet?]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 21.616,
+      "endTime": 23.696,
+      "text": "Let’s meet at three o’clock.",
+      "words": [
+        "Let’s",
+        "meet",
+        "at",
+        "three",
+        "o’clock"
+      ],
+      "translation": "[需要翻译: Let’s meet at three o’clock.]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 23.808,
+      "endTime": 24.896,
+      "text": "Sure",
+      "words": [
+        "Sure"
+      ],
+      "translation": "[需要翻译: Sure]",
+      "wordCount": 1
+    }
+  ]
+}

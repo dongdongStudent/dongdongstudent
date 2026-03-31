@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "id": "star_2_3",
+    "title": "star_2_3",
+    "totalSentences": 13,
+    "totalWords": 84,
+    "duration": 71.808,
+    "difficulty": "beginner",
+    "convertedFrom": "star_2_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 18.64,
+      "endTime": 22.08,
+      "text": "Mum, I can’t find my new cap.",
+      "words": [
+        "Mum",
+        "I",
+        "can’t",
+        "find",
+        "my",
+        "new",
+        "cap"
+      ],
+      "translation": "[需要翻译: Mum, I can’t find my new cap.]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 22.688,
+      "endTime": 27.792,
+      "text": "Your new cap? What colour is it? It’s red.",
+      "words": [
+        "Your",
+        "new",
+        "cap",
+        "What",
+        "colour",
+        "is",
+        "it",
+        "It’s",
+        "red"
+      ],
+      "translation": "[需要翻译: Your new cap? What colour is it? It’s red.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 28.304,
+      "endTime": 33.024,
+      "text": "Is it in your schoolbag? No, it isn’t.",
+      "words": [
+        "Is",
+        "it",
+        "in",
+        "your",
+        "schoolbag",
+        "No",
+        "it",
+        "isn’t"
+      ],
+      "translation": "[需要翻译: Is it in your schoolbag? No, it isn’t.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 33.456,
+      "endTime": 37.6,
+      "text": "Oh, here it is. It’s under your desk.",
+      "words": [
+        "Oh",
+        "here",
+        "it",
+        "is",
+        "It’s",
+        "under",
+        "your",
+        "desk"
+      ],
+      "translation": "[需要翻译: Oh, here it is. It’s under your desk.]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 37.968,
+      "endTime": 40.384,
+      "text": "You need to keep your room tidy.",
+      "words": [
+        "You",
+        "need",
+        "to",
+        "keep",
+        "your",
+        "room",
+        "tidy"
+      ],
+      "translation": "[需要翻译: You need to keep your room tidy.]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 40.976,
+      "endTime": 44.192,
+      "text": "OK. Sorry, Mum.",
+      "words": [
+        "OK",
+        "Sorry",
+        "Mum"
+      ],
+      "translation": "[需要翻译: OK. Sorry, Mum.]",
+      "wordCount": 3
+    },
+    {
+      "id": 7,
+      "startTime": 48.288,
+      "endTime": 50.848,
+      "text": "I can’t find my new glasses.",
+      "words": [
+        "I",
+        "can’t",
+        "find",
+        "my",
+        "new",
+        "glasses"
+      ],
+      "translation": "[需要翻译: I can’t find my new glasses.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 51.136,
+      "endTime": 52.848,
+      "text": "Do you see them, Emma?",
+      "words": [
+        "Do",
+        "you",
+        "see",
+        "them",
+        "Emma"
+      ],
+      "translation": "[需要翻译: Do you see them, Emma?]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 52.848,
+      "endTime": 56.672,
+      "text": "What colour are they, Dad? They’re brown.",
+      "words": [
+        "What",
+        "colour",
+        "are",
+        "they",
+        "Dad",
+        "They’re",
+        "brown"
+      ],
+      "translation": "[需要翻译: What colour are they, Dad? They’re brown.]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 57.424,
+      "endTime": 60.416,
+      "text": "No, I don’t see them",
+      "words": [
+        "No",
+        "I",
+        "don’t",
+        "see",
+        "them"
+      ],
+      "translation": "[需要翻译: No, I don’t see them]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 60.832,
+      "endTime": 65.28,
+      "text": "Oh, wait a minute. Now I see",
+      "words": [
+        "Oh",
+        "wait",
+        "a",
+        "minute",
+        "Now",
+        "I",
+        "see"
+      ],
+      "translation": "[需要翻译: Oh, wait a minute. Now I see]",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 65.632,
+      "endTime": 68,
+      "text": "them! Dad, they’re on your head!",
+      "words": [
+        "them",
+        "Dad",
+        "they’re",
+        "on",
+        "your",
+        "head"
+      ],
+      "translation": "[需要翻译: them! Dad, they’re on your head!]",
+      "wordCount": 6
+    },
+    {
+      "id": 13,
+      "startTime": 68.32,
+      "endTime": 71.808,
+      "text": "Oh, thank you, Emma! You’re welcome.",
+      "words": [
+        "Oh",
+        "thank",
+        "you",
+        "Emma",
+        "You’re",
+        "welcome"
+      ],
+      "translation": "[需要翻译: Oh, thank you, Emma! You’re welcome.]",
+      "wordCount": 6
+    }
+  ]
+}

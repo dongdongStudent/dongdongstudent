@@ -1,0 +1,357 @@
+{
+  "metadata": {
+    "id": "53_1to2_2",
+    "title": "53_1to2_2",
+    "totalSentences": 17,
+    "totalWords": 174,
+    "duration": 231.552,
+    "difficulty": "beginner",
+    "convertedFrom": "53_1to2_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 140.704,
+      "endTime": 144.128,
+      "text": "Alice, is this your family photo?",
+      "words": [
+        "Alice",
+        "is",
+        "this",
+        "your",
+        "family",
+        "photo"
+      ],
+      "translation": "[需要翻译: Alice, is this your family photo?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 144.56,
+      "endTime": 147.888,
+      "text": "Yes, it is, Bob. Are these your parents?",
+      "words": [
+        "Yes",
+        "it",
+        "is",
+        "Bob",
+        "Are",
+        "these",
+        "your",
+        "parents"
+      ],
+      "translation": "[需要翻译: Yes, it is, Bob. Are these your parents?]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 148.08,
+      "endTime": 153.04,
+      "text": "Yes, they are. Who is he? He is my uncle, John.",
+      "words": [
+        "Yes",
+        "they",
+        "are",
+        "Who",
+        "is",
+        "he",
+        "He",
+        "is",
+        "my",
+        "uncle",
+        "John"
+      ],
+      "translation": "[需要翻译: Yes, they are. Who is he? He is my uncle, John.]",
+      "wordCount": 11
+    },
+    {
+      "id": 4,
+      "startTime": 156.704,
+      "endTime": 159.984,
+      "text": "Good morning, David.Good morning, Mary.",
+      "words": [
+        "Good",
+        "morning",
+        "David",
+        "Good",
+        "morning",
+        "Mary"
+      ],
+      "translation": "[需要翻译: Good morning, David.Good morning, Mary.]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 160.144,
+      "endTime": 162.032,
+      "text": "What are those in the yard?",
+      "words": [
+        "What",
+        "are",
+        "those",
+        "in",
+        "the",
+        "yard"
+      ],
+      "translation": "[需要翻译: What are those in the yard?]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 162.448,
+      "endTime": 165.36,
+      "text": "They're ducks. They're white ducks.",
+      "words": [
+        "They're",
+        "ducks",
+        "They're",
+        "white",
+        "ducks"
+      ],
+      "translation": "[需要翻译: They're ducks. They're white ducks.]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 165.76,
+      "endTime": 170.848,
+      "text": "Are they your ducks? No, they aren't. They're Jack's ducks.",
+      "words": [
+        "Are",
+        "they",
+        "your",
+        "ducks",
+        "No",
+        "they",
+        "aren't",
+        "They're",
+        "Jack's",
+        "ducks"
+      ],
+      "translation": "[需要翻译: Are they your ducks? No, they aren't. They're Jack's ducks.]",
+      "wordCount": 10
+    },
+    {
+      "id": 8,
+      "startTime": 171.104,
+      "endTime": 174.864,
+      "text": "He is my uncle. He has some geese, too.",
+      "words": [
+        "He",
+        "is",
+        "my",
+        "uncle",
+        "He",
+        "has",
+        "some",
+        "geese",
+        "too"
+      ],
+      "translation": "[需要翻译: He is my uncle. He has some geese, too.]",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 174.864,
+      "endTime": 179.936,
+      "text": "Where are the geese? Oh, they are on the lake.",
+      "words": [
+        "Where",
+        "are",
+        "the",
+        "geese",
+        "Oh",
+        "they",
+        "are",
+        "on",
+        "the",
+        "lake"
+      ],
+      "translation": "[需要翻译: Where are the geese? Oh, they are on the lake.]",
+      "wordCount": 10
+    },
+    {
+      "id": 10,
+      "startTime": 184.016,
+      "endTime": 190.816,
+      "text": "My name is Lin Hai. I am a 12-year-old middle school student.",
+      "words": [
+        "My",
+        "name",
+        "is",
+        "Lin",
+        "Hai",
+        "I",
+        "am",
+        "a",
+        "12-year-old",
+        "middle",
+        "school",
+        "student"
+      ],
+      "translation": "[需要翻译: My name is Lin Hai. I am a 12-year-old middle school student.]",
+      "wordCount": 12
+    },
+    {
+      "id": 11,
+      "startTime": 191.056,
+      "endTime": 197.424,
+      "text": "Grace is my new friend. She is 13. She is an American girl.",
+      "words": [
+        "Grace",
+        "is",
+        "my",
+        "new",
+        "friend",
+        "She",
+        "is",
+        "13",
+        "She",
+        "is",
+        "an",
+        "American",
+        "girl"
+      ],
+      "translation": "[需要翻译: Grace is my new friend. She is 13. She is an American girl.]",
+      "wordCount": 13
+    },
+    {
+      "id": 12,
+      "startTime": 197.92,
+      "endTime": 205.008,
+      "text": "Here is a photo of her family. This is her father Mr. Green. He is a PE teacher.",
+      "words": [
+        "Here",
+        "is",
+        "a",
+        "photo",
+        "of",
+        "her",
+        "family",
+        "This",
+        "is",
+        "her",
+        "father",
+        "Mr",
+        "Green",
+        "He",
+        "is",
+        "a",
+        "PE",
+        "teacher"
+      ],
+      "translation": "[需要翻译: Here is a photo of her family. This is her father Mr. Green. He is a PE teacher.]",
+      "wordCount": 18
+    },
+    {
+      "id": 13,
+      "startTime": 205.44,
+      "endTime": 208.8,
+      "text": "He likes playing tennis with Grace after school.",
+      "words": [
+        "He",
+        "likes",
+        "playing",
+        "tennis",
+        "with",
+        "Grace",
+        "after",
+        "school"
+      ],
+      "translation": "[需要翻译: He likes playing tennis with Grace after school.]",
+      "wordCount": 8
+    },
+    {
+      "id": 14,
+      "startTime": 209.104,
+      "endTime": 213.6,
+      "text": "The woman in purple is Mrs. Green. She is an English teacher.",
+      "words": [
+        "The",
+        "woman",
+        "in",
+        "purple",
+        "is",
+        "Mrs",
+        "Green",
+        "She",
+        "is",
+        "an",
+        "English",
+        "teacher"
+      ],
+      "translation": "[需要翻译: The woman in purple is Mrs. Green. She is an English teacher.]",
+      "wordCount": 12
+    },
+    {
+      "id": 15,
+      "startTime": 213.728,
+      "endTime": 218.656,
+      "text": "She has three classes in the morning and one class in the afternoon every day.",
+      "words": [
+        "She",
+        "has",
+        "three",
+        "classes",
+        "in",
+        "the",
+        "morning",
+        "and",
+        "one",
+        "class",
+        "in",
+        "the",
+        "afternoon",
+        "every",
+        "day"
+      ],
+      "translation": "[需要翻译: She has three classes in the morning and one class in the afternoon every day.]",
+      "wordCount": 15
+    },
+    {
+      "id": 16,
+      "startTime": 219.056,
+      "endTime": 223.776,
+      "text": "So she is busy. The little boy is Grace's brother Bob.",
+      "words": [
+        "So",
+        "she",
+        "is",
+        "busy",
+        "The",
+        "little",
+        "boy",
+        "is",
+        "Grace's",
+        "brother",
+        "Bob"
+      ],
+      "translation": "[需要翻译: So she is busy. The little boy is Grace's brother Bob.]",
+      "wordCount": 11
+    },
+    {
+      "id": 17,
+      "startTime": 224.16,
+      "endTime": 231.552,
+      "text": "He likes math very much. He plays basketball every day. He thinks it's interesting.",
+      "words": [
+        "He",
+        "likes",
+        "math",
+        "very",
+        "much",
+        "He",
+        "plays",
+        "basketball",
+        "every",
+        "day",
+        "He",
+        "thinks",
+        "it's",
+        "interesting"
+      ],
+      "translation": "[需要翻译: He likes math very much. He plays basketball every day. He thinks it's interesting.]",
+      "wordCount": 14
+    }
+  ]
+}

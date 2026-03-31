@@ -1,0 +1,310 @@
+{
+  "metadata": {
+    "id": "8_5_2",
+    "title": "8_5_2",
+    "totalSentences": 16,
+    "totalWords": 137,
+    "duration": 124.288,
+    "difficulty": "beginner",
+    "convertedFrom": "8_5_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 63.408,
+      "endTime": 66.528,
+      "text": "so he decided to search for a new home.",
+      "words": [
+        "so",
+        "he",
+        "decided",
+        "to",
+        "search",
+        "for",
+        "a",
+        "new",
+        "home"
+      ],
+      "translation": "[需要翻译: so he decided to search for a new home.]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 67.488,
+      "endTime": 73.056,
+      "text": "He met many other birds, but all of them thought that he was ugly too.",
+      "words": [
+        "He",
+        "met",
+        "many",
+        "other",
+        "birds",
+        "but",
+        "all",
+        "of",
+        "them",
+        "thought",
+        "that",
+        "he",
+        "was",
+        "ugly",
+        "too"
+      ],
+      "translation": "[需要翻译: He met many other birds, but all of them thought that he was ugly too.]",
+      "wordCount": 15
+    },
+    {
+      "id": 3,
+      "startTime": 73.44,
+      "endTime": 76,
+      "text": "They did not want him to live with them.",
+      "words": [
+        "They",
+        "did",
+        "not",
+        "want",
+        "him",
+        "to",
+        "live",
+        "with",
+        "them"
+      ],
+      "translation": "[需要翻译: They did not want him to live with them.]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 76.8,
+      "endTime": 80.448,
+      "text": "One day, the duckling met a cat and a hen.",
+      "words": [
+        "One",
+        "day",
+        "the",
+        "duckling",
+        "met",
+        "a",
+        "cat",
+        "and",
+        "a",
+        "hen"
+      ],
+      "translation": "[需要翻译: One day, the duckling met a cat and a hen.]",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 81.344,
+      "endTime": 85.088,
+      "text": "“May I stay with you?” he asked hopefully.",
+      "words": [
+        "“May",
+        "I",
+        "stay",
+        "with",
+        "you",
+        "”",
+        "he",
+        "asked",
+        "hopefully"
+      ],
+      "translation": "[需要翻译: “May I stay with you?” he asked hopefully.]",
+      "wordCount": 9
+    },
+    {
+      "id": 6,
+      "startTime": 85.6,
+      "endTime": 87.728,
+      "text": "But the two animals said no.",
+      "words": [
+        "But",
+        "the",
+        "two",
+        "animals",
+        "said",
+        "no"
+      ],
+      "translation": "[需要翻译: But the two animals said no.]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 87.984,
+      "endTime": 89.472,
+      "text": "They did not like him",
+      "words": [
+        "They",
+        "did",
+        "not",
+        "like",
+        "him"
+      ],
+      "translation": "[需要翻译: They did not like him]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 89.648,
+      "endTime": 92.528,
+      "text": "because he could not purr or lay eggs!",
+      "words": [
+        "because",
+        "he",
+        "could",
+        "not",
+        "purr",
+        "or",
+        "lay",
+        "eggs"
+      ],
+      "translation": "[需要翻译: because he could not purr or lay eggs!]",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 93.408,
+      "endTime": 97.472,
+      "text": "Some days later, the ugly duckling came to a lake.",
+      "words": [
+        "Some",
+        "days",
+        "later",
+        "the",
+        "ugly",
+        "duckling",
+        "came",
+        "to",
+        "a",
+        "lake"
+      ],
+      "translation": "[需要翻译: Some days later, the ugly duckling came to a lake.]",
+      "wordCount": 10
+    },
+    {
+      "id": 10,
+      "startTime": 97.888,
+      "endTime": 104.224,
+      "text": "There, he saw three beautiful swans with long necks and white feathers.",
+      "words": [
+        "There",
+        "he",
+        "saw",
+        "three",
+        "beautiful",
+        "swans",
+        "with",
+        "long",
+        "necks",
+        "and",
+        "white",
+        "feathers"
+      ],
+      "translation": "[需要翻译: There, he saw three beautiful swans with long necks and white feathers.]",
+      "wordCount": 12
+    },
+    {
+      "id": 11,
+      "startTime": 104.976,
+      "endTime": 108.512,
+      "text": "“I wish I looked like you!” he cried.",
+      "words": [
+        "“I",
+        "wish",
+        "I",
+        "looked",
+        "like",
+        "you",
+        "”",
+        "he",
+        "cried"
+      ],
+      "translation": "[需要翻译: “I wish I looked like you!” he cried.]",
+      "wordCount": 9
+    },
+    {
+      "id": 12,
+      "startTime": 109.072,
+      "endTime": 112.288,
+      "text": "“My friend, you do look like us!",
+      "words": [
+        "“My",
+        "friend",
+        "you",
+        "do",
+        "look",
+        "like",
+        "us"
+      ],
+      "translation": "[需要翻译: “My friend, you do look like us!]",
+      "wordCount": 7
+    },
+    {
+      "id": 13,
+      "startTime": 112.432,
+      "endTime": 116.016,
+      "text": "Look in the water!” one of the swans said.",
+      "words": [
+        "Look",
+        "in",
+        "the",
+        "water",
+        "”",
+        "one",
+        "of",
+        "the",
+        "swans",
+        "said"
+      ],
+      "translation": "[需要翻译: Look in the water!” one of the swans said.]",
+      "wordCount": 10
+    },
+    {
+      "id": 14,
+      "startTime": 116.544,
+      "endTime": 118.24,
+      "text": "The duckling looked down,",
+      "words": [
+        "The",
+        "duckling",
+        "looked",
+        "down"
+      ],
+      "translation": "[需要翻译: The duckling looked down,]",
+      "wordCount": 4
+    },
+    {
+      "id": 15,
+      "startTime": 118.416,
+      "endTime": 119.984,
+      "text": "and to his surprise,",
+      "words": [
+        "and",
+        "to",
+        "his",
+        "surprise"
+      ],
+      "translation": "[需要翻译: and to his surprise,]",
+      "wordCount": 4
+    },
+    {
+      "id": 16,
+      "startTime": 120.24,
+      "endTime": 124.288,
+      "text": "he saw that he was a beautiful white swan too!",
+      "words": [
+        "he",
+        "saw",
+        "that",
+        "he",
+        "was",
+        "a",
+        "beautiful",
+        "white",
+        "swan",
+        "too"
+      ],
+      "translation": "[需要翻译: he saw that he was a beautiful white swan too!]",
+      "wordCount": 10
+    }
+  ]
+}

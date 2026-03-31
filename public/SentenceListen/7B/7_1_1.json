@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "id": "7_1_1",
+    "title": "7_1_1",
+    "totalSentences": 12,
+    "totalWords": 84,
+    "duration": 65.552,
+    "difficulty": "beginner",
+    "convertedFrom": "7_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 24.784,
+      "endTime": 27.264,
+      "text": "Hi, Peter. How was your weekend?",
+      "words": [
+        "Hi",
+        "Peter",
+        "How",
+        "was",
+        "your",
+        "weekend"
+      ],
+      "translation": "[需要翻译: Hi, Peter. How was your weekend?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 27.456,
+      "endTime": 31.824,
+      "text": "It was great! I visited the science museum.",
+      "words": [
+        "It",
+        "was",
+        "great",
+        "I",
+        "visited",
+        "the",
+        "science",
+        "museum"
+      ],
+      "translation": "[需要翻译: It was great! I visited the science museum.]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 32.304,
+      "endTime": 34.16,
+      "text": "Did you see anything interesting?",
+      "words": [
+        "Did",
+        "you",
+        "see",
+        "anything",
+        "interesting"
+      ],
+      "translation": "[需要翻译: Did you see anything interesting?]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 34.592,
+      "endTime": 37.552,
+      "text": "Yes, there was a space exhibition.",
+      "words": [
+        "Yes",
+        "there",
+        "was",
+        "a",
+        "space",
+        "exhibition"
+      ],
+      "translation": "[需要翻译: Yes, there was a space exhibition.]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 38.272,
+      "endTime": 40.08,
+      "text": "There were some special rooms,",
+      "words": [
+        "There",
+        "were",
+        "some",
+        "special",
+        "rooms"
+      ],
+      "translation": "[需要翻译: There were some special rooms,]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 40.32,
+      "endTime": 43.264,
+      "text": "and they looked like parts of a space station.",
+      "words": [
+        "and",
+        "they",
+        "looked",
+        "like",
+        "parts",
+        "of",
+        "a",
+        "space",
+        "station"
+      ],
+      "translation": "[需要翻译: and they looked like parts of a space station.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 43.728,
+      "endTime": 48.688,
+      "text": "You could go inside them and see how astronauts live and work!",
+      "words": [
+        "You",
+        "could",
+        "go",
+        "inside",
+        "them",
+        "and",
+        "see",
+        "how",
+        "astronauts",
+        "live",
+        "and",
+        "work"
+      ],
+      "translation": "[需要翻译: You could go inside them and see how astronauts live and work!]",
+      "wordCount": 12
+    },
+    {
+      "id": 8,
+      "startTime": 49.44,
+      "endTime": 50.96,
+      "text": "It was amazing.",
+      "words": [
+        "It",
+        "was",
+        "amazing"
+      ],
+      "translation": "[需要翻译: It was amazing.]",
+      "wordCount": 3
+    },
+    {
+      "id": 9,
+      "startTime": 51.328,
+      "endTime": 54.528,
+      "text": "Cool! Were there any astronauts there?",
+      "words": [
+        "Cool",
+        "Were",
+        "there",
+        "any",
+        "astronauts",
+        "there"
+      ],
+      "translation": "[需要翻译: Cool! Were there any astronauts there?]",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 54.848,
+      "endTime": 58,
+      "text": "Well, no. But there were robots!",
+      "words": [
+        "Well",
+        "no",
+        "But",
+        "there",
+        "were",
+        "robots"
+      ],
+      "translation": "[需要翻译: Well, no. But there were robots!]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 58.576,
+      "endTime": 62.256,
+      "text": "I asked one of them questions and it answered me!",
+      "words": [
+        "I",
+        "asked",
+        "one",
+        "of",
+        "them",
+        "questions",
+        "and",
+        "it",
+        "answered",
+        "me"
+      ],
+      "translation": "[需要翻译: I asked one of them questions and it answered me!]",
+      "wordCount": 10
+    },
+    {
+      "id": 12,
+      "startTime": 62.608,
+      "endTime": 65.552,
+      "text": "Wow! I’d love to go and see them",
+      "words": [
+        "Wow",
+        "I’d",
+        "love",
+        "to",
+        "go",
+        "and",
+        "see",
+        "them"
+      ],
+      "translation": "[需要翻译: Wow! I’d love to go and see them]",
+      "wordCount": 8
+    }
+  ]
+}

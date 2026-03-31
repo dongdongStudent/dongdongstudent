@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "id": "4_1",
+    "title": "4_1",
+    "totalSentences": 11,
+    "totalWords": 78,
+    "duration": 66.528,
+    "difficulty": "beginner",
+    "convertedFrom": "4_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 23.52,
+      "endTime": 26.736,
+      "text": "Oh, dumplings, my favourite!",
+      "words": [
+        "Oh",
+        "dumplings",
+        "my",
+        "favourite"
+      ],
+      "translation": "[需要翻译: Oh, dumplings, my favourite!]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 27.44,
+      "endTime": 30.496,
+      "text": "Look, Li Meng, there are two kinds.",
+      "words": [
+        "Look",
+        "Li",
+        "Meng",
+        "there",
+        "are",
+        "two",
+        "kinds"
+      ],
+      "translation": "[需要翻译: Look, Li Meng, there are two kinds.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 31.15,
+      "endTime": 37.536,
+      "text": "Lucky you! Well, there’s beef and carrot,and mutton and onion.",
+      "words": [
+        "Lucky",
+        "you",
+        "Well",
+        "there’s",
+        "beef",
+        "and",
+        "carrot",
+        "and",
+        "mutton",
+        "and",
+        "onion"
+      ],
+      "translation": "[需要翻译: Lucky you! Well, there’s beef and carrot,and mutton and onion.]",
+      "wordCount": 11
+    },
+    {
+      "id": 4,
+      "startTime": 38.144,
+      "endTime": 41.28,
+      "text": "Which would you like, beef or mutton?",
+      "words": [
+        "Which",
+        "would",
+        "you",
+        "like",
+        "beef",
+        "or",
+        "mutton"
+      ],
+      "translation": "[需要翻译: Which would you like, beef or mutton?]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 41.728,
+      "endTime": 45.312,
+      "text": "Beef, please. Do you want dumplings too?",
+      "words": [
+        "Beef",
+        "please",
+        "Do",
+        "you",
+        "want",
+        "dumplings",
+        "too"
+      ],
+      "translation": "[需要翻译: Beef, please. Do you want dumplings too?]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 45.632,
+      "endTime": 50.048,
+      "text": "Not really. I’d like noodles with beef and cabbage.",
+      "words": [
+        "Not",
+        "really",
+        "I’d",
+        "like",
+        "noodles",
+        "with",
+        "beef",
+        "and",
+        "cabbage"
+      ],
+      "translation": "[需要翻译: Not really. I’d like noodles with beef and cabbage.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 50.496,
+      "endTime": 55.184,
+      "text": "That sounds delicious. Now, what would you like to drink?",
+      "words": [
+        "That",
+        "sounds",
+        "delicious",
+        "Now",
+        "what",
+        "would",
+        "you",
+        "like",
+        "to",
+        "drink"
+      ],
+      "translation": "[需要翻译: That sounds delicious. Now, what would you like to drink?]",
+      "wordCount": 10
+    },
+    {
+      "id": 8,
+      "startTime": 55.712,
+      "endTime": 58.24,
+      "text": "Is there any tea or juice?",
+      "words": [
+        "Is",
+        "there",
+        "any",
+        "tea",
+        "or",
+        "juice"
+      ],
+      "translation": "[需要翻译: Is there any tea or juice?]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 58.64,
+      "endTime": 61.76,
+      "text": "There isn’t any tea, but there’s watermelon juice!",
+      "words": [
+        "There",
+        "isn’t",
+        "any",
+        "tea",
+        "but",
+        "there’s",
+        "watermelon",
+        "juice"
+      ],
+      "translation": "[需要翻译: There isn’t any tea, but there’s watermelon juice!]",
+      "wordCount": 8
+    },
+    {
+      "id": 10,
+      "startTime": 62.128,
+      "endTime": 65.44,
+      "text": "That’s what I like. Do you want that?",
+      "words": [
+        "That’s",
+        "what",
+        "I",
+        "like",
+        "Do",
+        "you",
+        "want",
+        "that"
+      ],
+      "translation": "[需要翻译: That’s what I like. Do you want that?]",
+      "wordCount": 8
+    },
+    {
+      "id": 11,
+      "startTime": 65.712,
+      "endTime": 66.528,
+      "text": "Sure!",
+      "words": [
+        "Sure"
+      ],
+      "translation": "[需要翻译: Sure!]",
+      "wordCount": 1
+    }
+  ]
+}

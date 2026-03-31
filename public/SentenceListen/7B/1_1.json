@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "id": "1_1",
+    "title": "1_1",
+    "totalSentences": 7,
+    "totalWords": 45,
+    "duration": 50.288,
+    "difficulty": "beginner",
+    "convertedFrom": "1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 22.256,
+      "endTime": 24.304,
+      "text": "listen up, everyone!",
+      "words": [
+        "listen",
+        "up",
+        "everyone"
+      ],
+      "translation": "[需要翻译: listen up, everyone!]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 24.832,
+      "endTime": 29.536,
+      "text": "Now, we’re at the zoo to learn about different animals,",
+      "words": [
+        "Now",
+        "we’re",
+        "at",
+        "the",
+        "zoo",
+        "to",
+        "learn",
+        "about",
+        "different",
+        "animals"
+      ],
+      "translation": "[需要翻译: Now, we’re at the zoo to learn about different animals,]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 29.696,
+      "endTime": 35.952,
+      "text": "from funny pandas and penguins to powerful lions and eagles.",
+      "words": [
+        "from",
+        "funny",
+        "pandas",
+        "and",
+        "penguins",
+        "to",
+        "powerful",
+        "lions",
+        "and",
+        "eagles"
+      ],
+      "translation": "[需要翻译: from funny pandas and penguins to powerful lions and eagles.]",
+      "wordCount": 10
+    },
+    {
+      "id": 4,
+      "startTime": 36.704,
+      "endTime": 38.912,
+      "text": "What’s your favourite animal?",
+      "words": [
+        "What’s",
+        "your",
+        "favourite",
+        "animal"
+      ],
+      "translation": "[需要翻译: What’s your favourite animal?]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 39.584,
+      "endTime": 42.288,
+      "text": "Who likes the same animal?",
+      "words": [
+        "Who",
+        "likes",
+        "the",
+        "same",
+        "animal"
+      ],
+      "translation": "[需要翻译: Who likes the same animal?]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 42.992,
+      "endTime": 47.248,
+      "text": "Make a group. Go and learn about them!",
+      "words": [
+        "Make",
+        "a",
+        "group",
+        "Go",
+        "and",
+        "learn",
+        "about",
+        "them"
+      ],
+      "translation": "[需要翻译: Make a group. Go and learn about them!]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 47.744,
+      "endTime": 50.288,
+      "text": "Come back before 12 o’clock",
+      "words": [
+        "Come",
+        "back",
+        "before",
+        "12",
+        "o’clock"
+      ],
+      "translation": "[需要翻译: Come back before 12 o’clock]",
+      "wordCount": 5
+    }
+  ]
+}

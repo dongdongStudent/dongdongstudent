@@ -1,0 +1,151 @@
+{
+  "metadata": {
+    "id": "5_3_2",
+    "title": "5_3_2",
+    "totalSentences": 9,
+    "totalWords": 48,
+    "duration": 25.392,
+    "difficulty": "beginner",
+    "convertedFrom": "5_3_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.144,
+      "endTime": 1.072,
+      "text": "Book Club",
+      "words": [
+        "Book",
+        "Club"
+      ],
+      "translation": "[需要翻译: Book Club]",
+      "wordCount": 2
+    },
+    {
+      "id": 2,
+      "startTime": 2.656,
+      "endTime": 4.192,
+      "text": "Do you like reading?",
+      "words": [
+        "Do",
+        "you",
+        "like",
+        "reading"
+      ],
+      "translation": "[需要翻译: Do you like reading?]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 4.432,
+      "endTime": 6.192,
+      "text": "Join our book club!",
+      "words": [
+        "Join",
+        "our",
+        "book",
+        "club"
+      ],
+      "translation": "[需要翻译: Join our book club!]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 6.464,
+      "endTime": 8.32,
+      "text": "It’s more than reading.",
+      "words": [
+        "It’s",
+        "more",
+        "than",
+        "reading"
+      ],
+      "translation": "[需要翻译: It’s more than reading.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 8.816,
+      "endTime": 12.544,
+      "text": "We act out stories, talk about books,",
+      "words": [
+        "We",
+        "act",
+        "out",
+        "stories",
+        "talk",
+        "about",
+        "books"
+      ],
+      "translation": "[需要翻译: We act out stories, talk about books,]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 12.768,
+      "endTime": 14.608,
+      "text": "and make new friends.",
+      "words": [
+        "and",
+        "make",
+        "new",
+        "friends"
+      ],
+      "translation": "[需要翻译: and make new friends.]",
+      "wordCount": 4
+    },
+    {
+      "id": 7,
+      "startTime": 15.184,
+      "endTime": 18.864,
+      "text": "Books can open your mind and make you think.",
+      "words": [
+        "Books",
+        "can",
+        "open",
+        "your",
+        "mind",
+        "and",
+        "make",
+        "you",
+        "think"
+      ],
+      "translation": "[需要翻译: Books can open your mind and make you think.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 19.36,
+      "endTime": 22.128,
+      "text": "Come to the library on Tuesdays",
+      "words": [
+        "Come",
+        "to",
+        "the",
+        "library",
+        "on",
+        "Tuesdays"
+      ],
+      "translation": "[需要翻译: Come to the library on Tuesdays]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 22.176,
+      "endTime": 25.392,
+      "text": "after school and fall in love with books!",
+      "words": [
+        "after",
+        "school",
+        "and",
+        "fall",
+        "in",
+        "love",
+        "with",
+        "books"
+      ],
+      "translation": "[需要翻译: after school and fall in love with books!]",
+      "wordCount": 8
+    }
+  ]
+}

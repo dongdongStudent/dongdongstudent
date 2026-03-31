@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "id": "5_1_1",
+    "title": "5_1_1",
+    "totalSentences": 6,
+    "totalWords": 47,
+    "duration": 48.496,
+    "difficulty": "beginner",
+    "convertedFrom": "5_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 25.456,
+      "endTime": 31.008,
+      "text": "Hi, Teng Fei. It’s Peter! What are you doing at the moment?",
+      "words": [
+        "Hi",
+        "Teng",
+        "Fei",
+        "It’s",
+        "Peter",
+        "What",
+        "are",
+        "you",
+        "doing",
+        "at",
+        "the",
+        "moment"
+      ],
+      "translation": "[需要翻译: Hi, Teng Fei. It’s Peter! What are you doing at the moment?]",
+      "wordCount": 12
+    },
+    {
+      "id": 2,
+      "startTime": 31.424,
+      "endTime": 34.016,
+      "text": "Hi, Peter. I’m doing my homework.",
+      "words": [
+        "Hi",
+        "Peter",
+        "I’m",
+        "doing",
+        "my",
+        "homework"
+      ],
+      "translation": "[需要翻译: Hi, Peter. I’m doing my homework.]",
+      "wordCount": 6
+    },
+    {
+      "id": 3,
+      "startTime": 34.576,
+      "endTime": 38.736,
+      "text": "Do you want to play volleyball at the sports park instead?",
+      "words": [
+        "Do",
+        "you",
+        "want",
+        "to",
+        "play",
+        "volleyball",
+        "at",
+        "the",
+        "sports",
+        "park",
+        "instead"
+      ],
+      "translation": "[需要翻译: Do you want to play volleyball at the sports park instead?]",
+      "wordCount": 11
+    },
+    {
+      "id": 4,
+      "startTime": 39.184,
+      "endTime": 43.408,
+      "text": "I’d love to, but I’m working on something important.",
+      "words": [
+        "I’d",
+        "love",
+        "to",
+        "but",
+        "I’m",
+        "working",
+        "on",
+        "something",
+        "important"
+      ],
+      "translation": "[需要翻译: I’d love to, but I’m working on something important.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 43.6,
+      "endTime": 46.688,
+      "text": "Never mind then! Maybe next time?",
+      "words": [
+        "Never",
+        "mind",
+        "then",
+        "Maybe",
+        "next",
+        "time"
+      ],
+      "translation": "[需要翻译: Never mind then! Maybe next time?]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 47.104,
+      "endTime": 48.496,
+      "text": "That sounds good!",
+      "words": [
+        "That",
+        "sounds",
+        "good"
+      ],
+      "translation": "[需要翻译: That sounds good!]",
+      "wordCount": 3
+    }
+  ]
+}

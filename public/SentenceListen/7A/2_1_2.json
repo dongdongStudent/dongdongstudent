@@ -1,0 +1,157 @@
+{
+  "metadata": {
+    "id": "2_1_2",
+    "title": "2_1_2",
+    "totalSentences": 16,
+    "totalWords": 63,
+    "duration": 40.528,
+    "difficulty": "beginner",
+    "convertedFrom": "2_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 2.976,
+      "endTime": 5.088,
+      "text": "Is this your family photo, Peter?",
+      "words": ["Is", "this", "your", "family", "photo", "Peter"],
+      "translation": "Peter，这是你的全家福吗？",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 5.968,
+      "endTime": 7.856,
+      "text": "Yes, it is.",
+      "words": ["Yes", "it", "is"],
+      "translation": "是的。",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 8.304,
+      "endTime": 10,
+      "text": "Are these your parents?",
+      "words": ["Are", "these", "your", "parents"],
+      "translation": "这两位是你的父母吗？",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 10.672,
+      "endTime": 12.224,
+      "text": "Yes, they are.",
+      "words": ["Yes", "they", "are"],
+      "translation": "是的。",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 13.088,
+      "endTime": 13.952,
+      "text": "Who’s he?",
+      "words": ["Who’s", "he"],
+      "translation": "他是谁？",
+      "wordCount": 2
+    },
+    {
+      "id": 6,
+      "startTime": 14.976,
+      "endTime": 18.112,
+      "text": "He’s my father’s brother, my uncle.",
+      "words": ["He’s", "my", "father’s", "brother", "my", "uncle"],
+      "translation": "他是我爸爸的兄弟，我的叔叔。",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 18.752,
+      "endTime": 20.88,
+      "text": "And this is my aunt.",
+      "words": ["And", "this", "is", "my", "aunt"],
+      "translation": "这是我的婶婶。",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 21.44,
+      "endTime": 22.272,
+      "text": "Who’s she?",
+      "words": ["Who’s", "she"],
+      "translation": "她是谁？",
+      "wordCount": 2
+    },
+    {
+      "id": 9,
+      "startTime": 22.672,
+      "endTime": 24.816,
+      "text": "She’s my sister, Helen.",
+      "words": ["She’s", "my", "sister", "Helen"],
+      "translation": "她是我的妹妹 Helen。",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 25.152,
+      "endTime": 26.224,
+      "text": "Is this your brother?",
+      "words": ["Is", "this", "your", "brother"],
+      "translation": "这是你的兄弟吗？",
+      "wordCount": 4
+    },
+    {
+      "id": 11,
+      "startTime": 26.448,
+      "endTime": 29.472,
+      "text": "No, it’s my cousin, David.",
+      "words": ["No", "it’s", "my", "cousin", "David"],
+      "translation": "不，这是我的表兄弟 David。",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 30.096,
+      "endTime": 31.888,
+      "text": "This is my brother, Jim.",
+      "words": ["This", "is", "my", "brother", "Jim"],
+      "translation": "这是我的兄弟 Jim。",
+      "wordCount": 5
+    },
+    {
+      "id": 13,
+      "startTime": 32.4,
+      "endTime": 33.568,
+      "text": "Who are they?",
+      "words": ["Who", "are", "they"],
+      "translation": "他们是谁？",
+      "wordCount": 3
+    },
+    {
+      "id": 14,
+      "startTime": 33.808,
+      "endTime": 35.696,
+      "text": "They’re my grandparents.",
+      "words": ["They’re", "my", "grandparents"],
+      "translation": "他们是我的祖父母。",
+      "wordCount": 3
+    },
+    {
+      "id": 15,
+      "startTime": 36.464,
+      "endTime": 38.544,
+      "text": "They’re my father’s parents.",
+      "words": ["They’re", "my", "father’s", "parents"],
+      "translation": "他们是我爸爸的父母。",
+      "wordCount": 4
+    },
+    {
+      "id": 16,
+      "startTime": 38.976,
+      "endTime": 40.528,
+      "text": "What a happy family!",
+      "words": ["What", "a", "happy", "family"],
+      "translation": "多么幸福的家庭啊！",
+      "wordCount": 4
+    }
+  ]
+}

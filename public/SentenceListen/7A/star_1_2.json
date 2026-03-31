@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "id": "star_1_2",
+    "title": "star_1_2",
+    "totalSentences": 12,
+    "totalWords": 73,
+    "duration": 75.664,
+    "difficulty": "beginner",
+    "convertedFrom": "star_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 20.16,
+      "endTime": 23.2,
+      "text": "Good morning. May I have your name?",
+      "words": [
+        "Good",
+        "morning",
+        "May",
+        "I",
+        "have",
+        "your",
+        "name"
+      ],
+      "translation": "[需要翻译: Good morning. May I have your name?]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 23.344,
+      "endTime": 27.248,
+      "text": "Good morning. My name is Emma Miller.",
+      "words": [
+        "Good",
+        "morning",
+        "My",
+        "name",
+        "is",
+        "Emma",
+        "Miller"
+      ],
+      "translation": "[需要翻译: Good morning. My name is Emma Miller.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 27.728,
+      "endTime": 29.424,
+      "text": "How do you spell your name?",
+      "words": [
+        "How",
+        "do",
+        "you",
+        "spell",
+        "your",
+        "name"
+      ],
+      "translation": "[需要翻译: How do you spell your name?]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 29.632,
+      "endTime": 40.112,
+      "text": "E-M-M-A, Emma. M-I-L-L-E-R, Miller.",
+      "words": [
+        "E-M-M-A",
+        "Emma",
+        "M-I-L-L-E-R",
+        "Miller"
+      ],
+      "translation": "[需要翻译: E-M-M-A, Emma. M-I-L-L-E-R, Miller.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 40.448,
+      "endTime": 42.368,
+      "text": "You can call me Emma.",
+      "words": [
+        "You",
+        "can",
+        "call",
+        "me",
+        "Emma"
+      ],
+      "translation": "[需要翻译: You can call me Emma.]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 42.944,
+      "endTime": 46.56,
+      "text": "Nice to meet you, Emma. My name is Teng Fei.",
+      "words": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "Emma",
+        "My",
+        "name",
+        "is",
+        "Teng",
+        "Fei"
+      ],
+      "translation": "[需要翻译: Nice to meet you, Emma. My name is Teng Fei.]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 46.784,
+      "endTime": 49.664,
+      "text": "Nice to meet you too, Teng Fei.",
+      "words": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "too",
+        "Teng",
+        "Fei"
+      ],
+      "translation": "[需要翻译: Nice to meet you too, Teng Fei.]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 54.656,
+      "endTime": 58.288,
+      "text": "Hello, Wang Yaming! How are you?",
+      "words": [
+        "Hello",
+        "Wang",
+        "Yaming",
+        "How",
+        "are",
+        "you"
+      ],
+      "translation": "[需要翻译: Hello, Wang Yaming! How are you?]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 58.528,
+      "endTime": 63.856,
+      "text": "Hi, Helen. I’m fine, thank you. And you?",
+      "words": [
+        "Hi",
+        "Helen",
+        "I’m",
+        "fine",
+        "thank",
+        "you",
+        "And",
+        "you"
+      ],
+      "translation": "[需要翻译: Hi, Helen. I’m fine, thank you. And you?]",
+      "wordCount": 8
+    },
+    {
+      "id": 10,
+      "startTime": 64.688,
+      "endTime": 67.072,
+      "text": "I’m great, thanks.",
+      "words": [
+        "I’m",
+        "great",
+        "thanks"
+      ],
+      "translation": "[需要翻译: I’m great, thanks.]",
+      "wordCount": 3
+    },
+    {
+      "id": 11,
+      "startTime": 69.248,
+      "endTime": 73.344,
+      "text": "Oh, that’s the bell. Let’s go to class.",
+      "words": [
+        "Oh",
+        "that’s",
+        "the",
+        "bell",
+        "Let’s",
+        "go",
+        "to",
+        "class"
+      ],
+      "translation": "[需要翻译: Oh, that’s the bell. Let’s go to class.]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 73.584,
+      "endTime": 75.664,
+      "text": "Goodbye! Bye!",
+      "words": [
+        "Goodbye",
+        "Bye"
+      ],
+      "translation": "[需要翻译: Goodbye! Bye!]",
+      "wordCount": 2
+    }
+  ]
+}

@@ -75,19 +75,25 @@ const styles = {
     overflow: 'hidden',
     display: 'flex',
     flexDirection: 'column',
-    minHeight: '300px',
+    minHeight: 'auto',
   },
 
   panelHeader: {
     padding: '12px 16px',
     borderBottom: `1px solid ${THEME.border}`,
     backgroundColor: THEME.surface,
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 
   panelContent: {
     flex: 1,
     padding: '16px',
     overflow: 'auto',
+    transition: 'all 0.3s ease',
   },
 };
 
@@ -440,6 +446,10 @@ const Main = () => {
   const [authError, setAuthError] = useState('');
   const [expandedModuleId, setExpandedModuleId] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
+  
+  // 新增：控制面板展开/折叠的状态
+  const [expandedEnglish, setExpandedEnglish] = useState(true);  // 英语模块默认展开
+  const [expandedMath, setExpandedMath] = useState(true);       // 数学模块默认展开
 
   // 服务器地址
   const server_address = "https://www.ddstudent.xyz/server";
@@ -1050,90 +1060,134 @@ const Main = () => {
         gap: '12px',
       }}>
 
-        {/* 英语模块面板 */}
+        {/* 英语模块面板 - 可折叠 */}
         <div style={styles.panel}>
-          <div style={styles.panelHeader}>
-            <h3 style={{
-              margin: 0,
-              fontSize: '15px',
-              fontWeight: '600',
-              color: THEME.textPrimary,
-            }}>
-              📚 英语模块
-            </h3>
+          <div 
+            style={styles.panelHeader}
+            onClick={() => setExpandedEnglish(!expandedEnglish)}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#222222';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = THEME.surface;
+            }}
+          >
+            <div>
+              <h3 style={{
+                margin: 0,
+                fontSize: '15px',
+                fontWeight: '600',
+                color: THEME.textPrimary,
+              }}>
+                📚 英语模块
+              </h3>
+              <div style={{
+                fontSize: '11px',
+                color: THEME.textSecondary,
+                marginTop: '3px',
+                fontWeight: '500',
+              }}>
+                {englishModules.length}个模块
+              </div>
+            </div>
             <div style={{
-              fontSize: '11px',
-              color: THEME.textSecondary,
-              marginTop: '3px',
-              fontWeight: '500',
+              fontSize: '18px',
+              color: THEME.accent,
+              transform: expandedEnglish ? 'rotate(0deg)' : 'rotate(-90deg)',
+              transition: 'transform 0.3s ease',
             }}>
-              {englishModules.length}个模块
+              ▼
             </div>
           </div>
-          <div style={{
-            ...styles.panelContent,
-            padding: '14px 18px',
-          }}>
-            {englishModules.map((module) => (
-              <ModuleCard
-                key={module.id}
-                title={module.title}
-                color={module.color}
-                icon={module.icon}
-                description={module.description}
-                completed={module.completed}
-                onClick={() => handleModuleClick(module)}
-                hasSubmenu={module.hasSubmenu}
-                submodules={module.submodules}
-                isExpanded={expandedModuleId === module.id}
-                onToggleExpand={() => toggleModuleExpand(module.id)}
-                onSubmoduleClick={handleSubmoduleClick}
-              />
-            ))}
-          </div>
+          {expandedEnglish && (
+            <div style={{
+              ...styles.panelContent,
+              padding: '14px 18px',
+              animation: 'slideDown 0.3s ease',
+            }}>
+              {englishModules.map((module) => (
+                <ModuleCard
+                  key={module.id}
+                  title={module.title}
+                  color={module.color}
+                  icon={module.icon}
+                  description={module.description}
+                  completed={module.completed}
+                  onClick={() => handleModuleClick(module)}
+                  hasSubmenu={module.hasSubmenu}
+                  submodules={module.submodules}
+                  isExpanded={expandedModuleId === module.id}
+                  onToggleExpand={() => toggleModuleExpand(module.id)}
+                  onSubmoduleClick={handleSubmoduleClick}
+                />
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* 数学模块面板 */}
+        {/* 数学模块面板 - 可折叠 */}
         <div style={styles.panel}>
-          <div style={styles.panelHeader}>
-            <h3 style={{
-              margin: 0,
-              fontSize: '15px',
-              fontWeight: '600',
-              color: THEME.textPrimary,
-            }}>
-              🧮 数学模块
-            </h3>
+          <div 
+            style={styles.panelHeader}
+            onClick={() => setExpandedMath(!expandedMath)}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#222222';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = THEME.surface;
+            }}
+          >
+            <div>
+              <h3 style={{
+                margin: 0,
+                fontSize: '15px',
+                fontWeight: '600',
+                color: THEME.textPrimary,
+              }}>
+                🧮 数学模块
+              </h3>
+              <div style={{
+                fontSize: '11px',
+                color: THEME.textSecondary,
+                marginTop: '3px',
+                fontWeight: '500',
+              }}>
+                {mathModules.length}个模块
+              </div>
+            </div>
             <div style={{
-              fontSize: '11px',
-              color: THEME.textSecondary,
-              marginTop: '3px',
-              fontWeight: '500',
+              fontSize: '18px',
+              color: THEME.accent,
+              transform: expandedMath ? 'rotate(0deg)' : 'rotate(-90deg)',
+              transition: 'transform 0.3s ease',
             }}>
-              {mathModules.length}个模块
+              ▼
             </div>
           </div>
-          <div style={{
-            ...styles.panelContent,
-            padding: '14px 18px',
-          }}>
-            {mathModules.map((module) => (
-              <ModuleCard
-                key={module.id}
-                title={module.title}
-                color={module.color}
-                icon={module.icon}
-                description={module.description}
-                completed={module.completed}
-                onClick={() => handleModuleClick(module)}
-                hasSubmenu={module.hasSubmenu}
-                submodules={module.submodules}
-                isExpanded={expandedModuleId === module.id}
-                onToggleExpand={() => toggleModuleExpand(module.id)}
-                onSubmoduleClick={handleSubmoduleClick}
-              />
-            ))}
-          </div>
+          {expandedMath && (
+            <div style={{
+              ...styles.panelContent,
+              padding: '14px 18px',
+              animation: 'slideDown 0.3s ease',
+            }}>
+              {mathModules.map((module) => (
+                <ModuleCard
+                  key={module.id}
+                  title={module.title}
+                  color={module.color}
+                  icon={module.icon}
+                  description={module.description}
+                  completed={module.completed}
+                  onClick={() => handleModuleClick(module)}
+                  hasSubmenu={module.hasSubmenu}
+                  submodules={module.submodules}
+                  isExpanded={expandedModuleId === module.id}
+                  onToggleExpand={() => toggleModuleExpand(module.id)}
+                  onSubmoduleClick={handleSubmoduleClick}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -1182,6 +1236,17 @@ const Main = () => {
           @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+          }
+          
+          @keyframes slideDown {
+            from {
+              opacity: 0;
+              transform: translateY(-10px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
           }
           
           /* 全屏模式下的样式优化 */

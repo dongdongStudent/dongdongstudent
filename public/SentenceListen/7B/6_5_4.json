@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "id": "6_5_4",
+    "title": "6_5_4",
+    "totalSentences": 10,
+    "totalWords": 65,
+    "duration": 148.704,
+    "difficulty": "beginner",
+    "convertedFrom": "6_5_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 106.448,
+      "endTime": 108.368,
+      "text": "Climbing is tiring!",
+      "words": [
+        "Climbing",
+        "is",
+        "tiring"
+      ],
+      "translation": "[需要翻译: Climbing is tiring!]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 108.768,
+      "endTime": 112.304,
+      "text": "My shoes are all wet and dirty too.",
+      "words": [
+        "My",
+        "shoes",
+        "are",
+        "all",
+        "wet",
+        "and",
+        "dirty",
+        "too"
+      ],
+      "translation": "[需要翻译: My shoes are all wet and dirty too.]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 113.504,
+      "endTime": 117.2,
+      "text": "There are many other tourists at this rest area,",
+      "words": [
+        "There",
+        "are",
+        "many",
+        "other",
+        "tourists",
+        "at",
+        "this",
+        "rest",
+        "area"
+      ],
+      "translation": "[需要翻译: There are many other tourists at this rest area,]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 117.376,
+      "endTime": 120.048,
+      "text": "but they don’t seem tired at all.",
+      "words": [
+        "but",
+        "they",
+        "don’t",
+        "seem",
+        "tired",
+        "at",
+        "all"
+      ],
+      "translation": "[需要翻译: but they don’t seem tired at all.]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 120.752,
+      "endTime": 123.952,
+      "text": "Instead, they’re talking and laughing!",
+      "words": [
+        "Instead",
+        "they’re",
+        "talking",
+        "and",
+        "laughing"
+      ],
+      "translation": "[需要翻译: Instead, they’re talking and laughing!]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 125.056,
+      "endTime": 128.736,
+      "text": "My sister Helen is also in high spirits",
+      "words": [
+        "My",
+        "sister",
+        "Helen",
+        "is",
+        "also",
+        "in",
+        "high",
+        "spirits"
+      ],
+      "translation": "[需要翻译: My sister Helen is also in high spirits]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 136.176,
+      "endTime": 138.416,
+      "text": "We’re here at Bright Peak.",
+      "words": [
+        "We’re",
+        "here",
+        "at",
+        "Bright",
+        "Peak"
+      ],
+      "translation": "[需要翻译: We’re here at Bright Peak.]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 139.008,
+      "endTime": 142.544,
+      "text": "Mount Huangshan is beautiful in the sunlight.",
+      "words": [
+        "Mount",
+        "Huangshan",
+        "is",
+        "beautiful",
+        "in",
+        "the",
+        "sunlight"
+      ],
+      "translation": "[需要翻译: Mount Huangshan is beautiful in the sunlight.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 143.552,
+      "endTime": 145.328,
+      "text": "I’m tired and hungry,",
+      "words": [
+        "I’m",
+        "tired",
+        "and",
+        "hungry"
+      ],
+      "translation": "[需要翻译: I’m tired and hungry,]",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 145.584,
+      "endTime": 148.704,
+      "text": "but it feels good to be at the top!",
+      "words": [
+        "but",
+        "it",
+        "feels",
+        "good",
+        "to",
+        "be",
+        "at",
+        "the",
+        "top"
+      ],
+      "translation": "[需要翻译: but it feels good to be at the top!]",
+      "wordCount": 9
+    }
+  ]
+}

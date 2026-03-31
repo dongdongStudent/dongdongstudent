@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "5_1_3",
+    "title": "5_1_3",
+    "totalSentences": 5,
+    "totalWords": 46,
+    "duration": 22.112,
+    "difficulty": "beginner",
+    "convertedFrom": "5_1_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.336,
+      "endTime": 2.656,
+      "text": "Morning! My name is Lin Hua,",
+      "words": ["Morning", "My", "name", "is", "Lin", "Hua"],
+      "translation": "早上好！我叫 Lin Hua，",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 2.816,
+      "endTime": 4.816,
+      "text": "and I want to join the drama club.",
+      "words": ["and", "I", "want", "to", "join", "the", "drama", "club"],
+      "translation": "我想加入戏剧社团。",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 5.856,
+      "endTime": 8.336,
+      "text": "Can you read these words with feeling?",
+      "words": ["Can", "you", "read", "these", "words", "with", "feeling"],
+      "translation": "你能有感情地朗读这些词吗？",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 9.376,
+      "endTime": 15.84,
+      "text": "Let me have a try. “To be, or not to be, that is the question.”",
+      "words": ["Let", "me", "have", "a", "try", "“To", "be", "or", "not", "to", "be", "that", "is", "the", "question", "”"],
+      "translation": "让我试试。“生存还是毁灭，这是一个问题。”",
+      "wordCount": 16
+    },
+    {
+      "id": 5,
+      "startTime": 16.704,
+      "endTime": 22.112,
+      "text": "Great! Come to Room 11 at 12:00 every Thursday.",
+      "words": ["Great", "Come", "to", "Room", "11", "at", "12:00", "every", "Thursday"],
+      "translation": "太好了！每周四12点来11号房间。",
+      "wordCount": 9
+    }
+  ]
+}

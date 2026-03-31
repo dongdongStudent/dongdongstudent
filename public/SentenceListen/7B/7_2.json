@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "id": "7_2",
+    "title": "7_2",
+    "totalSentences": 6,
+    "totalWords": 43,
+    "duration": 40.032,
+    "difficulty": "beginner",
+    "convertedFrom": "7_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.328,
+      "endTime": 14.64,
+      "text": "Hey, I thought you didn’t like maths!",
+      "words": [
+        "Hey",
+        "I",
+        "thought",
+        "you",
+        "didn’t",
+        "like",
+        "maths"
+      ],
+      "translation": "[需要翻译: Hey, I thought you didn’t like maths!]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 15.488,
+      "endTime": 19.936,
+      "text": "I do  now. I wasn’t interested in it last year.",
+      "words": [
+        "I",
+        "do",
+        "now",
+        "I",
+        "wasn’t",
+        "interested",
+        "in",
+        "it",
+        "last",
+        "year"
+      ],
+      "translation": "[需要翻译: I do  now. I wasn’t interested in it last year.]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 23.824,
+      "endTime": 26.592,
+      "text": "Hello. Are you Ella’s friend?",
+      "words": [
+        "Hello",
+        "Are",
+        "you",
+        "Ella’s",
+        "friend"
+      ],
+      "translation": "[需要翻译: Hello. Are you Ella’s friend?]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 27.568,
+      "endTime": 29.216,
+      "text": "I don’t know Ella!",
+      "words": [
+        "I",
+        "don’t",
+        "know",
+        "Ella"
+      ],
+      "translation": "[需要翻译: I don’t know Ella!]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 32.8,
+      "endTime": 35.632,
+      "text": "I can’t go on the school trip tomorrow.",
+      "words": [
+        "I",
+        "can’t",
+        "go",
+        "on",
+        "the",
+        "school",
+        "trip",
+        "tomorrow"
+      ],
+      "translation": "[需要翻译: I can’t go on the school trip tomorrow.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 37.248,
+      "endTime": 40.032,
+      "text": "Oh, you should tell our teacher about that now.",
+      "words": [
+        "Oh",
+        "you",
+        "should",
+        "tell",
+        "our",
+        "teacher",
+        "about",
+        "that",
+        "now"
+      ],
+      "translation": "[需要翻译: Oh, you should tell our teacher about that now.]",
+      "wordCount": 9
+    }
+  ]
+}

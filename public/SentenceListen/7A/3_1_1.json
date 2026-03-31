@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "3_1_1",
+    "title": "3_1_1",
+    "totalSentences": 6,
+    "totalWords": 40,
+    "duration": 23.664,
+    "difficulty": "beginner",
+    "convertedFrom": "3_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.88,
+      "endTime": 2.192,
+      "text": "Can I help you?",
+      "words": ["Can", "I", "help", "you"],
+      "translation": "需要帮忙吗？",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 2.608,
+      "endTime": 6.832,
+      "text": "Oh, yes. I’m looking for my classroom.",
+      "words": ["Oh", "yes", "I’m", "looking", "for", "my", "classroom"],
+      "translation": "哦，是的。我在找我的教室。",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 7.376,
+      "endTime": 10.096,
+      "text": "OK. What class are you in?",
+      "words": ["OK", "What", "class", "are", "you", "in"],
+      "translation": "好的。你在哪个班？",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 10.704,
+      "endTime": 13.536,
+      "text": "I’m in Class 2, Grade 7.",
+      "words": ["I’m", "in", "Class", "2", "Grade", "7"],
+      "translation": "我在七年级二班。",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 13.808,
+      "endTime": 17.664,
+      "text": "Oh, it’s in that building, behind the sports field.",
+      "words": ["Oh", "it’s", "in", "that", "building", "behind", "the", "sports", "field"],
+      "translation": "哦，在那栋楼里，运动场后面。",
+      "wordCount": 9
+    },
+    {
+      "id": 6,
+      "startTime": 18.64,
+      "endTime": 23.664,
+      "text": "Behind the sports field. Oh, I see! Thanks",
+      "words": ["Behind", "the", "sports", "field", "Oh", "I", "see", "Thanks"],
+      "translation": "运动场后面。哦，我明白了！谢谢。",
+      "wordCount": 8
+    }
+  ]
+}

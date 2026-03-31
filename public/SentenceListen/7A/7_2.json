@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "id": "7_2",
+    "title": "7_2",
+    "totalSentences": 5,
+    "totalWords": 49,
+    "duration": 21.45,
+    "difficulty": "beginner",
+    "convertedFrom": "7_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.325,
+      "endTime": 5.625,
+      "text": "Teng Fei: Ella, can you help me? I want to give my father a birthday gift.",
+      "words": [
+        "Teng",
+        "Fei:",
+        "Ella",
+        "can",
+        "you",
+        "help",
+        "me",
+        "I",
+        "want",
+        "to",
+        "give",
+        "my",
+        "father",
+        "a",
+        "birthday",
+        "gift"
+      ],
+      "translation": "[需要翻译: Teng Fei: Ella, can you help me? I want to give my father a birthday gift.]",
+      "wordCount": 16
+    },
+    {
+      "id": 2,
+      "startTime": 6.35,
+      "endTime": 11.35,
+      "text": "Ella: Oh, that's sweet, Teng Fei! When is his birthday?",
+      "words": [
+        "Ella:",
+        "Oh",
+        "that's",
+        "sweet",
+        "Teng",
+        "Fei",
+        "When",
+        "is",
+        "his",
+        "birthday"
+      ],
+      "translation": "[需要翻译: Ella: Oh, that's sweet, Teng Fei! When is his birthday?]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 12.45,
+      "endTime": 15.225,
+      "text": "Teng Fei: On 9th January, next month.",
+      "words": [
+        "Teng",
+        "Fei:",
+        "On",
+        "9th",
+        "January",
+        "next",
+        "month"
+      ],
+      "translation": "[需要翻译: Teng Fei: On 9th January, next month.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 16,
+      "endTime": 19.45,
+      "text": "Ella: That's soon! You can make a card for him.",
+      "words": [
+        "Ella:",
+        "That's",
+        "soon",
+        "You",
+        "can",
+        "make",
+        "a",
+        "card",
+        "for",
+        "him"
+      ],
+      "translation": "[需要翻译: Ella: That's soon! You can make a card for him.]",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 20,
+      "endTime": 21.45,
+      "text": "Teng Fei: That's a good idea!",
+      "words": [
+        "Teng",
+        "Fei:",
+        "That's",
+        "a",
+        "good",
+        "idea"
+      ],
+      "translation": "[需要翻译: Teng Fei: That's a good idea!]",
+      "wordCount": 6
+    }
+  ]
+}

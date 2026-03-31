@@ -1,0 +1,176 @@
+{
+  "metadata": {
+    "id": "8_1_1",
+    "title": "8_1_1",
+    "totalSentences": 9,
+    "totalWords": 73,
+    "duration": 59.04,
+    "difficulty": "beginner",
+    "convertedFrom": "8_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 22.8,
+      "endTime": 25.568,
+      "text": "Please share your favourite story with me, Peter.",
+      "words": [
+        "Please",
+        "share",
+        "your",
+        "favourite",
+        "story",
+        "with",
+        "me",
+        "Peter"
+      ],
+      "translation": "[需要翻译: Please share your favourite story with me, Peter.]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 25.984,
+      "endTime": 30.112,
+      "text": "Sure. Once a lion caught a mouse.",
+      "words": [
+        "Sure",
+        "Once",
+        "a",
+        "lion",
+        "caught",
+        "a",
+        "mouse"
+      ],
+      "translation": "[需要翻译: Sure. Once a lion caught a mouse.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 30.912,
+      "endTime": 32.512,
+      "text": "The mouse was afraid.",
+      "words": [
+        "The",
+        "mouse",
+        "was",
+        "afraid"
+      ],
+      "translation": "[需要翻译: The mouse was afraid.]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 33.168,
+      "endTime": 38.8,
+      "text": "He said, “Please let me go! One day I will help you!”",
+      "words": [
+        "He",
+        "said",
+        "“Please",
+        "let",
+        "me",
+        "go",
+        "One",
+        "day",
+        "I",
+        "will",
+        "help",
+        "you",
+        "”"
+      ],
+      "translation": "[需要翻译: He said, “Please let me go! One day I will help you!”]",
+      "wordCount": 13
+    },
+    {
+      "id": 5,
+      "startTime": 39.312,
+      "endTime": 42.432,
+      "text": "The lion laughed and let the mouse go.",
+      "words": [
+        "The",
+        "lion",
+        "laughed",
+        "and",
+        "let",
+        "the",
+        "mouse",
+        "go"
+      ],
+      "translation": "[需要翻译: The lion laughed and let the mouse go.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 43.344,
+      "endTime": 47.328,
+      "text": "Later, a hunter caught the lion in a net.",
+      "words": [
+        "Later",
+        "a",
+        "hunter",
+        "caught",
+        "the",
+        "lion",
+        "in",
+        "a",
+        "net"
+      ],
+      "translation": "[需要翻译: Later, a hunter caught the lion in a net.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 48.096,
+      "endTime": 50.4,
+      "text": "The mouse helped the lion then.",
+      "words": [
+        "The",
+        "mouse",
+        "helped",
+        "the",
+        "lion",
+        "then"
+      ],
+      "translation": "[需要翻译: The mouse helped the lion then.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 51.104,
+      "endTime": 54.512,
+      "text": "He bit through the net and set the lion free!",
+      "words": [
+        "He",
+        "bit",
+        "through",
+        "the",
+        "net",
+        "and",
+        "set",
+        "the",
+        "lion",
+        "free"
+      ],
+      "translation": "[需要翻译: He bit through the net and set the lion free!]",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 55.088,
+      "endTime": 59.04,
+      "text": "I like that story. Kindness is never wasted",
+      "words": [
+        "I",
+        "like",
+        "that",
+        "story",
+        "Kindness",
+        "is",
+        "never",
+        "wasted"
+      ],
+      "translation": "[需要翻译: I like that story. Kindness is never wasted]",
+      "wordCount": 8
+    }
+  ]
+}

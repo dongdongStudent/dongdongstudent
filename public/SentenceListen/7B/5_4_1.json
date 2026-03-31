@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "id": "5_4_1",
+    "title": "5_4_1",
+    "totalSentences": 8,
+    "totalWords": 59,
+    "duration": 49.152,
+    "difficulty": "beginner",
+    "convertedFrom": "5_4_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 24.544,
+      "endTime": 28.016,
+      "text": "It’s 8:00 in the evening in Chongqing, China.",
+      "words": [
+        "It’s",
+        "8:00",
+        "in",
+        "the",
+        "evening",
+        "in",
+        "Chongqing",
+        "China"
+      ],
+      "translation": "[需要翻译: It’s 8:00 in the evening in Chongqing, China.]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 28.592,
+      "endTime": 31.44,
+      "text": "Some people are rushing to get home from work.",
+      "words": [
+        "Some",
+        "people",
+        "are",
+        "rushing",
+        "to",
+        "get",
+        "home",
+        "from",
+        "work"
+      ],
+      "translation": "[需要翻译: Some people are rushing to get home from work.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 31.696,
+      "endTime": 33.376,
+      "text": "But others are not in a hurry!",
+      "words": [
+        "But",
+        "others",
+        "are",
+        "not",
+        "in",
+        "a",
+        "hurry"
+      ],
+      "translation": "[需要翻译: But others are not in a hurry!]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 33.92,
+      "endTime": 36.272,
+      "text": "They are enjoying the city at night.",
+      "words": [
+        "They",
+        "are",
+        "enjoying",
+        "the",
+        "city",
+        "at",
+        "night"
+      ],
+      "translation": "[需要翻译: They are enjoying the city at night.]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 36.912,
+      "endTime": 39.568,
+      "text": "Lights are shining brightly across the city,",
+      "words": [
+        "Lights",
+        "are",
+        "shining",
+        "brightly",
+        "across",
+        "the",
+        "city"
+      ],
+      "translation": "[需要翻译: Lights are shining brightly across the city,]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 39.92,
+      "endTime": 43.232,
+      "text": "and colourful boats are moving slowly down the river.",
+      "words": [
+        "and",
+        "colourful",
+        "boats",
+        "are",
+        "moving",
+        "slowly",
+        "down",
+        "the",
+        "river"
+      ],
+      "translation": "[需要翻译: and colourful boats are moving slowly down the river.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 43.568,
+      "endTime": 45.936,
+      "text": "People are eating delicious food,",
+      "words": [
+        "People",
+        "are",
+        "eating",
+        "delicious",
+        "food"
+      ],
+      "translation": "[需要翻译: People are eating delicious food,]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 46.304,
+      "endTime": 49.152,
+      "text": "such as Chongqing hot pot and noodles.",
+      "words": [
+        "such",
+        "as",
+        "Chongqing",
+        "hot",
+        "pot",
+        "and",
+        "noodles"
+      ],
+      "translation": "[需要翻译: such as Chongqing hot pot and noodles.]",
+      "wordCount": 7
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+{
+  "metadata": {
+    "id": "5_3",
+    "title": "5_3",
+    "totalSentences": 21,
+    "totalWords": 128,
+    "duration": 74.896,
+    "difficulty": "beginner",
+    "convertedFrom": "5_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.504,
+      "endTime": 13.264,
+      "text": "hi, Dad. How are you?",
+      "words": [
+        "hi",
+        "Dad",
+        "How",
+        "are",
+        "you"
+      ],
+      "translation": "[需要翻译: hi, Dad. How are you?]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 13.6,
+      "endTime": 16.208,
+      "text": "Hi, Jane! I’m fine.",
+      "words": [
+        "Hi",
+        "Jane",
+        "I’m",
+        "fine"
+      ],
+      "translation": "[需要翻译: Hi, Jane! I’m fine.]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 16.432,
+      "endTime": 18.656,
+      "text": "How’s life in Guangzhou?",
+      "words": [
+        "How’s",
+        "life",
+        "in",
+        "Guangzhou"
+      ],
+      "translation": "[需要翻译: How’s life in Guangzhou?]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 18.944,
+      "endTime": 20.816,
+      "text": "We’re having a holiday here.",
+      "words": [
+        "We’re",
+        "having",
+        "a",
+        "holiday",
+        "here"
+      ],
+      "translation": "[需要翻译: We’re having a holiday here.]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 21.184,
+      "endTime": 24.048,
+      "text": "Hao Yi and I are making zongzi!",
+      "words": [
+        "Hao",
+        "Yi",
+        "and",
+        "I",
+        "are",
+        "making",
+        "zongzi"
+      ],
+      "translation": "[需要翻译: Hao Yi and I are making zongzi!]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 24.272,
+      "endTime": 25.936,
+      "text": "That sounds great!",
+      "words": [
+        "That",
+        "sounds",
+        "great"
+      ],
+      "translation": "[需要翻译: That sounds great!]",
+      "wordCount": 3
+    },
+    {
+      "id": 7,
+      "startTime": 26.416,
+      "endTime": 29.52,
+      "text": "Are you making them for the Dragon Boat Festival?",
+      "words": [
+        "Are",
+        "you",
+        "making",
+        "them",
+        "for",
+        "the",
+        "Dragon",
+        "Boat",
+        "Festival"
+      ],
+      "translation": "[需要翻译: Are you making them for the Dragon Boat Festival?]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 29.792,
+      "endTime": 31.728,
+      "text": "That’s right! What about you?",
+      "words": [
+        "That’s",
+        "right",
+        "What",
+        "about",
+        "you"
+      ],
+      "translation": "[需要翻译: That’s right! What about you?]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 31.792,
+      "endTime": 33.04,
+      "text": "What are you doing?",
+      "words": [
+        "What",
+        "are",
+        "you",
+        "doing"
+      ],
+      "translation": "[需要翻译: What are you doing?]",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 33.296,
+      "endTime": 35.488,
+      "text": "I’m washing the car right now.",
+      "words": [
+        "I’m",
+        "washing",
+        "the",
+        "car",
+        "right",
+        "now"
+      ],
+      "translation": "[需要翻译: I’m washing the car right now.]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 35.904,
+      "endTime": 39.296,
+      "text": "Is Mum there too? Is she feeling better?",
+      "words": [
+        "Is",
+        "Mum",
+        "there",
+        "too",
+        "Is",
+        "she",
+        "feeling",
+        "better"
+      ],
+      "translation": "[需要翻译: Is Mum there too? Is she feeling better?]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 40.112,
+      "endTime": 42.208,
+      "text": "Yes, her cold is gone.",
+      "words": [
+        "Yes",
+        "her",
+        "cold",
+        "is",
+        "gone"
+      ],
+      "translation": "[需要翻译: Yes, her cold is gone.]",
+      "wordCount": 5
+    },
+    {
+      "id": 13,
+      "startTime": 42.448,
+      "endTime": 46.144,
+      "text": "She’s gardening. Hold on. Here’s Mum.",
+      "words": [
+        "She’s",
+        "gardening",
+        "Hold",
+        "on",
+        "Here’s",
+        "Mum"
+      ],
+      "translation": "[需要翻译: She’s gardening. Hold on. Here’s Mum.]",
+      "wordCount": 6
+    },
+    {
+      "id": 14,
+      "startTime": 46.88,
+      "endTime": 49.12,
+      "text": "Hi, Mum! How are you doing?",
+      "words": [
+        "Hi",
+        "Mum",
+        "How",
+        "are",
+        "you",
+        "doing"
+      ],
+      "translation": "[需要翻译: Hi, Mum! How are you doing?]",
+      "wordCount": 6
+    },
+    {
+      "id": 15,
+      "startTime": 49.408,
+      "endTime": 52.96,
+      "text": "Good, thanks. It’s great to hear your voice!",
+      "words": [
+        "Good",
+        "thanks",
+        "It’s",
+        "great",
+        "to",
+        "hear",
+        "your",
+        "voice"
+      ],
+      "translation": "[需要翻译: Good, thanks. It’s great to hear your voice!]",
+      "wordCount": 8
+    },
+    {
+      "id": 16,
+      "startTime": 53.456,
+      "endTime": 56.528,
+      "text": "Yours too! I’m happy you’re feeling better!",
+      "words": [
+        "Yours",
+        "too",
+        "I’m",
+        "happy",
+        "you’re",
+        "feeling",
+        "better"
+      ],
+      "translation": "[需要翻译: Yours too! I’m happy you’re feeling better!]",
+      "wordCount": 7
+    },
+    {
+      "id": 17,
+      "startTime": 56.816,
+      "endTime": 59.968,
+      "text": "Thanks! Are you having fun in China?",
+      "words": [
+        "Thanks",
+        "Are",
+        "you",
+        "having",
+        "fun",
+        "in",
+        "China"
+      ],
+      "translation": "[需要翻译: Thanks! Are you having fun in China?]",
+      "wordCount": 7
+    },
+    {
+      "id": 18,
+      "startTime": 60.432,
+      "endTime": 61.632,
+      "text": "Yes, I am.",
+      "words": [
+        "Yes",
+        "I",
+        "am"
+      ],
+      "translation": "[需要翻译: Yes, I am.]",
+      "wordCount": 3
+    },
+    {
+      "id": 19,
+      "startTime": 62.24,
+      "endTime": 67.664,
+      "text": "Hao Yi and I are making zongzi and watching dragon boat races on TV.",
+      "words": [
+        "Hao",
+        "Yi",
+        "and",
+        "I",
+        "are",
+        "making",
+        "zongzi",
+        "and",
+        "watching",
+        "dragon",
+        "boat",
+        "races",
+        "on",
+        "TV"
+      ],
+      "translation": "[需要翻译: Hao Yi and I are making zongzi and watching dragon boat races on TV.]",
+      "wordCount": 14
+    },
+    {
+      "id": 20,
+      "startTime": 68.496,
+      "endTime": 72.384,
+      "text": "Oh, I have to go now. Let’s talk later.",
+      "words": [
+        "Oh",
+        "I",
+        "have",
+        "to",
+        "go",
+        "now",
+        "Let’s",
+        "talk",
+        "later"
+      ],
+      "translation": "[需要翻译: Oh, I have to go now. Let’s talk later.]",
+      "wordCount": 9
+    },
+    {
+      "id": 21,
+      "startTime": 72.56,
+      "endTime": 74.896,
+      "text": "OK. Bye, darling",
+      "words": [
+        "OK",
+        "Bye",
+        "darling"
+      ],
+      "translation": "[需要翻译: OK. Bye, darling]",
+      "wordCount": 3
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "id": "3_1",
+    "title": "3_1",
+    "totalSentences": 7,
+    "totalWords": 49,
+    "duration": 48.976,
+    "difficulty": "beginner",
+    "convertedFrom": "3_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 25.344,
+      "endTime": 28.16,
+      "text": "Is this football yours, Han Lin?",
+      "words": [
+        "Is",
+        "this",
+        "football",
+        "yours",
+        "Han",
+        "Lin"
+      ],
+      "translation": "[需要翻译: Is this football yours, Han Lin?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 28.736,
+      "endTime": 31.52,
+      "text": "Yes, thank you. That’s mine.",
+      "words": [
+        "Yes",
+        "thank",
+        "you",
+        "That’s",
+        "mine"
+      ],
+      "translation": "[需要翻译: Yes, thank you. That’s mine.]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 31.792,
+      "endTime": 33.712,
+      "text": "How often do you play football?",
+      "words": [
+        "How",
+        "often",
+        "do",
+        "you",
+        "play",
+        "football"
+      ],
+      "translation": "[需要翻译: How often do you play football?]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 34.192,
+      "endTime": 38.4,
+      "text": "I play football three times a week. How about you?",
+      "words": [
+        "I",
+        "play",
+        "football",
+        "three",
+        "times",
+        "a",
+        "week",
+        "How",
+        "about",
+        "you"
+      ],
+      "translation": "[需要翻译: I play football three times a week. How about you?]",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 38.736,
+      "endTime": 44.608,
+      "text": "Hardly ever. Maybe just once a year? I’m not very good at it!",
+      "words": [
+        "Hardly",
+        "ever",
+        "Maybe",
+        "just",
+        "once",
+        "a",
+        "year",
+        "I’m",
+        "not",
+        "very",
+        "good",
+        "at",
+        "it"
+      ],
+      "translation": "[需要翻译: Hardly ever. Maybe just once a year? I’m not very good at it!]",
+      "wordCount": 13
+    },
+    {
+      "id": 6,
+      "startTime": 44.992,
+      "endTime": 47.376,
+      "text": "You can practise with me if you like.",
+      "words": [
+        "You",
+        "can",
+        "practise",
+        "with",
+        "me",
+        "if",
+        "you",
+        "like"
+      ],
+      "translation": "[需要翻译: You can practise with me if you like.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 47.776,
+      "endTime": 48.976,
+      "text": "Thanks!",
+      "words": [
+        "Thanks"
+      ],
+      "translation": "[需要翻译: Thanks!]",
+      "wordCount": 1
+    }
+  ]
+}

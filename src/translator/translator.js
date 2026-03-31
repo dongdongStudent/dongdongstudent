@@ -1,5 +1,5 @@
 // src/translator/translator.js
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useRef, forwardRef, useImperativeHandle } from 'react';
 import {
   Dialog,
   DialogTitle,
@@ -18,7 +18,8 @@ import {
   Chip,
   Zoom,
   Switch,
-  FormControlLabel
+  FormControlLabel,
+  Snackbar
 } from '@mui/material';
 import {
   VolumeUp,
@@ -27,7 +28,8 @@ import {
   MenuBook,
   School,
   AutoStories,
-  DragHandle
+  DragHandle,
+  ContentCopy
 } from '@mui/icons-material';
 import { F_translator, F_speak } from '../Function/weisimin.js';
 import { message } from 'antd';
@@ -37,6 +39,32 @@ import { getToken } from '../config.js';
 import { F_get_words_study } from '../word/wordReviewUtils.js';
 import SentenceCenter from '../sentence/review_center.js';
 
+// 辅助函数：检查是否为有效的单词或短语（不超过7个单词）
+const isValidText = (text) => {
+  if (!text || typeof text !== 'string') return false;
+  const trimmed = text.trim();
+  if (trimmed.length === 0) return false;
+  
+  // 检查是否包含中文字符（如果是中文就不处理）
+  if (/[\u4e00-\u9fa5]/.test(trimmed)) return false;
+  
+  // 检查单词数量
+  const words = trimmed.split(/\s+/).filter(word => word.length > 0);
+  return words.length > 0 && words.length <= 7;
+};
+
+// 辅助函数：获取单词数量
+const getWordCount = (text) => {
+  if (!text) return 0;
+  return text.trim().split(/\s+/).filter(word => word.length > 0).length;
+};
+
+// 辅助函数：检查是否为单词（不含空格或只有1个单词）
+const isSingleWord = (text) => {
+  const words = text.trim().split(/\s+/);
+  return words.length === 1;
+};
+
 // 可拖拽组件 - 支持自定义宽高
 const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译", customWidth, customHeight }) => {
   const [position, setPosition] = useState(() => {
@@ -45,7 +73,6 @@ const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译",
       return JSON.parse(saved);
     }
     const isMobile = window.innerWidth <= 600;
-    // 如果有自定义宽度，使用自定义宽度计算位置
     const width = customWidth || (isCompact ? 280 : (isMobile ? 'calc(100% - 20px)' : 450));
     const defaultWidth = typeof width === 'number' ? width : 450;
     return { 
@@ -120,7 +147,6 @@ const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译",
     };
   }, [isDragging, handleDragMove, handleDragEnd]);
 
-  // 计算实际宽度和高度
   const getWidth = () => {
     if (customWidth) return customWidth;
     if (isMinimized) return 280;
@@ -132,7 +158,7 @@ const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译",
   const getHeight = () => {
     if (customHeight) return customHeight;
     if (isMinimized) return 50;
-    if (isCompact) return 300;
+    if (isCompact) return 350;
     if (isMobile) return 600;
     return 650;
   };
@@ -231,6 +257,9 @@ const CompactTranslator = ({
   onOpenSentenceCenter
 }) => {
   const [isAdding, setIsAdding] = useState(false);
+  const wordCount = getWordCount(searchInput);
+  const isValidLength = wordCount > 0 && wordCount <= 7;
+  const isWord = isSingleWord(searchInput);
 
   const checkLoginStatus = useCallback(() => {
     if (!getToken) {
@@ -245,15 +274,24 @@ const CompactTranslator = ({
 
     const trimmedWord = searchInput.trim();
     if (!trimmedWord) {
-      message.warning('请输入单词');
+      message.warning('请输入单词或短语');
       return;
     }
 
-    if (existingWords.some(w => 
+    if (wordCount > 7) {
+      message.warning('最多支持7个单词的短语');
+      return;
+    }
+
+    if (isWord && existingWords.some(w => 
       (typeof w === 'string' ? w : w.word).toLowerCase() === trimmedWord.toLowerCase()
     )) {
       message.warning(`"${trimmedWord}" 已存在`);
       return;
+    }
+
+    if (!isWord) {
+      message.info(`添加短语 "${trimmedWord}" 到学习列表`);
     }
 
     setIsAdding(true);
@@ -279,7 +317,8 @@ const CompactTranslator = ({
           onWordAdded({
             word: trimmedWord,
             translation: translation,
-            success: true
+            success: true,
+            isPhrase: !isWord
           });
         }
       } else {
@@ -305,7 +344,7 @@ const CompactTranslator = ({
               handleAddWord();
             }
           }}
-          placeholder="输入英文单词..."
+          placeholder="输入英文单词或短语（最多7个词）..."
           variant="outlined"
           size="small"
           autoFocus
@@ -338,7 +377,7 @@ const CompactTranslator = ({
         <Button
           variant="contained"
           onClick={handleAddWord}
-          disabled={isAdding || !searchInput.trim() || searchInput.includes(' ')}
+          disabled={isAdding || !searchInput.trim() || !isValidLength}
           size="small"
           sx={{
             minWidth: 60,
@@ -356,77 +395,21 @@ const CompactTranslator = ({
         </Button>
       </Box>
 
-      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
-        <Button
+      {searchInput.trim() && !isValidLength && wordCount > 7 && (
+        <Alert 
+          severity="warning" 
           size="small"
-          variant="outlined"
-          startIcon={<School />}
-          onClick={onOpenVocabMaster}
           sx={{ 
-            color: '#4ec9b0',
-            borderColor: '#4ec9b0',
-            fontSize: '0.75rem',
-            textTransform: 'none',
-            '&:hover': { 
-              backgroundColor: 'rgba(78, 201, 176, 0.1)',
-              borderColor: '#4ec9b0'
-            }
-          }}
-        >
-          单词学习
-        </Button>
-        
-        <Button
-          size="small"
-          variant="outlined"
-          startIcon={<AutoStories />}
-          onClick={onOpenWordBook}
-          sx={{ 
+            mb: 2,
+            backgroundColor: 'rgba(255, 171, 64, 0.1)',
             color: '#ffab40',
-            borderColor: '#ffab40',
-            fontSize: '0.75rem',
-            textTransform: 'none',
-            '&:hover': { 
-              backgroundColor: 'rgba(255, 171, 64, 0.1)',
-              borderColor: '#ffab40'
-            }
+            border: '1px solid #ffab40',
+            py: 0.5
           }}
         >
-          复习单词
-        </Button>
-        
-        <Button
-          size="small"
-          variant="outlined"
-          startIcon={<MenuBook />}
-          onClick={onOpenSentenceCenter}
-          sx={{ 
-            color: '#ff9800',
-            borderColor: '#ff9800',
-            fontSize: '0.75rem',
-            textTransform: 'none',
-            '&:hover': { 
-              backgroundColor: 'rgba(255, 152, 0, 0.1)',
-              borderColor: '#ff9800'
-            }
-          }}
-        >
-          句子中心
-        </Button>
-        
-        <Tooltip title="发音">
-          <IconButton 
-            size="small" 
-            onClick={() => onSpeak(searchInput)}
-            sx={{ 
-              color: '#858585',
-              '&:hover': { color: '#4ec9b0' }
-            }}
-          >
-            <VolumeUp fontSize="small" />
-          </IconButton>
-        </Tooltip>
-      </Box>
+          最多支持7个单词，当前有{wordCount}个单词
+        </Alert>
+      )}
 
       {loading && (
         <Box sx={{ textAlign: 'center', py: 2 }}>
@@ -464,6 +447,19 @@ const CompactTranslator = ({
           }}>
             <Typography variant="h6" sx={{ color: '#4ec9b0', fontWeight: 600, fontSize: '1.1rem' }}>
               {word}
+              {!isSingleWord(word) && (
+                <Chip 
+                  label="短语" 
+                  size="small"
+                  sx={{ 
+                    ml: 1,
+                    backgroundColor: '#0e639c',
+                    color: '#fff',
+                    height: 20,
+                    fontSize: '0.7rem'
+                  }}
+                />
+              )}
             </Typography>
             <Tooltip title="发音">
               <IconButton 
@@ -511,17 +507,20 @@ const FullTranslator = ({
 }) => {
   const [isAdding, setIsAdding] = useState(false);
   const [preview, setPreview] = useState('');
+  const wordCount = getWordCount(searchInput);
+  const isValidLength = wordCount > 0 && wordCount <= 7;
+  const isWord = isSingleWord(searchInput);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (searchInput.trim()) {
+      if (searchInput.trim() && isValidLength) {
         F_translator(searchInput).then(setPreview);
       } else {
         setPreview('');
       }
     }, 300);
     return () => clearTimeout(timer);
-  }, [searchInput]);
+  }, [searchInput, isValidLength]);
 
   const checkLoginStatus = useCallback(() => {
     if (!getToken) {
@@ -536,15 +535,24 @@ const FullTranslator = ({
 
     const trimmedWord = searchInput.trim();
     if (!trimmedWord) {
-      message.warning('请输入单词');
+      message.warning('请输入单词或短语');
       return;
     }
 
-    if (existingWords.some(w => 
+    if (wordCount > 7) {
+      message.warning('最多支持7个单词的短语');
+      return;
+    }
+
+    if (isWord && existingWords.some(w => 
       (typeof w === 'string' ? w : w.word).toLowerCase() === trimmedWord.toLowerCase()
     )) {
       message.warning(`"${trimmedWord}" 已存在`);
       return;
+    }
+
+    if (!isWord) {
+      message.info(`添加短语 "${trimmedWord}" 到学习列表`);
     }
 
     setIsAdding(true);
@@ -570,7 +578,8 @@ const FullTranslator = ({
           onWordAdded({
             word: trimmedWord,
             translation: preview,
-            success: true
+            success: true,
+            isPhrase: !isWord
           });
         }
       } else {
@@ -596,7 +605,7 @@ const FullTranslator = ({
               handleAddWord();
             }
           }}
-          placeholder="输入英文单词..."
+          placeholder="输入英文单词或短语（最多7个词）..."
           variant="outlined"
           size="small"
           autoFocus
@@ -606,7 +615,7 @@ const FullTranslator = ({
                 <Translate sx={{ color: '#858585', fontSize: 18 }} />
               </InputAdornment>
             ),
-            endAdornment: preview && searchInput && (
+            endAdornment: preview && searchInput && isValidLength && (
               <InputAdornment position="end">
                 <Chip 
                   label={preview} 
@@ -644,7 +653,7 @@ const FullTranslator = ({
         <Button
           variant="contained"
           onClick={handleAddWord}
-          disabled={isAdding || !searchInput.trim()}
+          disabled={isAdding || !searchInput.trim() || !isValidLength}
           size="small"
           sx={{
             minWidth: 60,
@@ -661,6 +670,21 @@ const FullTranslator = ({
           {isAdding ? '添加中' : '添加'}
         </Button>
       </Box>
+
+      {searchInput.trim() && !isValidLength && wordCount > 7 && (
+        <Alert 
+          severity="warning" 
+          size="small"
+          sx={{ 
+            mb: 2,
+            backgroundColor: 'rgba(255, 171, 64, 0.1)',
+            color: '#ffab40',
+            border: '1px solid #ffab40'
+          }}
+        >
+          最多支持7个单词，当前有{wordCount}个单词
+        </Alert>
+      )}
 
       <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
         <Button
@@ -769,6 +793,19 @@ const FullTranslator = ({
           }}>
             <Typography variant="h6" sx={{ color: '#4ec9b0', fontWeight: 600 }}>
               {word}
+              {!isSingleWord(word) && (
+                <Chip 
+                  label="短语" 
+                  size="small"
+                  sx={{ 
+                    ml: 1,
+                    backgroundColor: '#0e639c',
+                    color: '#fff',
+                    height: 20,
+                    fontSize: '0.7rem'
+                  }}
+                />
+              )}
             </Typography>
           </Box>
 
@@ -784,8 +821,8 @@ const FullTranslator = ({
   );
 };
 
-// 翻译组件
-const WordTranslator = ({
+// 翻译组件 - 使用 forwardRef 包装以支持父组件调用
+const WordTranslator = forwardRef(({
   open,
   onClose,
   word: initialWord = '',
@@ -793,8 +830,10 @@ const WordTranslator = ({
   onWordChange,
   autoSpeak = true,
   getToken: propGetToken,
-  defaultCompact = true
-}) => {
+  defaultCompact = true,
+  enableClipboardDetection = true,
+  onRequestOpen  // 新增：请求打开翻译器的回调
+}, ref) => {
   const [word, setWord] = useState(initialWord);
   const [translation, setTranslation] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -806,11 +845,98 @@ const WordTranslator = ({
   });
   const [existingWords, setExistingWords] = useState([]);
   const [showSentenceCenter, setShowSentenceCenter] = useState(false);
+  const [clipboardSnackbar, setClipboardSnackbar] = useState({ open: false, text: '' });
   
   // 独立窗口状态
   const [showVocabMaster, setShowVocabMaster] = useState(false);
   const [showWordBook, setShowWordBook] = useState(false);
   const [vocabKey, setVocabKey] = useState(0);
+
+  // 暴露给父组件的方法
+  useImperativeHandle(ref, () => ({
+    // 翻译指定文本
+    translateText: (text) => {
+      if (text && text.trim() && isValidText(text)) {
+        console.log('【WordTranslator】接收到翻译请求:', text);
+        const trimmedText = text.trim();
+        setSearchInput(trimmedText);
+        translateWord(trimmedText, autoSpeak);
+        
+        // 显示提示
+        setClipboardSnackbar({ 
+          open: true, 
+          text: `检测到选中: ${trimmedText}` 
+        });
+        
+        return true;
+      }
+      return false;
+    },
+    // 获取当前翻译的单词
+    getCurrentWord: () => searchInput,
+    // 获取当前翻译结果
+    getCurrentTranslation: () => translation,
+    // 清空当前翻译
+    clearTranslation: () => {
+      setSearchInput('');
+      setTranslation(null);
+      setError(null);
+    }
+  }));
+
+  // 剪贴板监听
+  useEffect(() => {
+    if (!enableClipboardDetection || !open) return;
+
+    const handleClipboardChange = async () => {
+      try {
+        if (!navigator.clipboard) return;
+        
+        const clipboardText = await navigator.clipboard.readText();
+        
+        if (clipboardText && isValidText(clipboardText)) {
+          const trimmedText = clipboardText.trim();
+          
+          if (searchInput === trimmedText) return;
+          
+          setClipboardSnackbar({ 
+            open: true, 
+            text: `检测到复制: ${trimmedText}` 
+          });
+          
+          setSearchInput(trimmedText);
+          translateWord(trimmedText, autoSpeak);
+        }
+      } catch (err) {
+        console.debug('无法读取剪贴板:', err);
+      }
+    };
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        handleClipboardChange();
+      }
+    };
+
+    const handleFocus = () => {
+      handleClipboardChange();
+    };
+
+    const intervalId = setInterval(() => {
+      if (document.hasFocus() && open) {
+        handleClipboardChange();
+      }
+    }, 2000);
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', handleFocus);
+    
+    return () => {
+      clearInterval(intervalId);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [enableClipboardDetection, open, searchInput, autoSpeak]);
 
   const fetchExistingWords = useCallback(async () => {
     const token = getTokenValue();
@@ -843,11 +969,17 @@ const WordTranslator = ({
 
   const translateWord = useCallback(async (wordToTranslate, shouldSpeak = true) => {
     if (!wordToTranslate || wordToTranslate.trim() === '') {
-      setError('请输入要翻译的单词');
+      setError('请输入要翻译的单词或短语');
       return;
     }
 
-    const cleanedWord = wordToTranslate.replace(/[.,!?;:'"()\[\]{}]/g, "").trim();
+    const wordCount = getWordCount(wordToTranslate);
+    if (wordCount > 7) {
+      setError('最多支持7个单词的短语');
+      return;
+    }
+
+    const cleanedWord = wordToTranslate.trim();
     
     setLoading(true);
     setError(null);
@@ -867,7 +999,8 @@ const WordTranslator = ({
           onWordChange({
             word: cleanedWord,
             translation: result,
-            source: 'translator'
+            source: 'translator',
+            isPhrase: !isSingleWord(cleanedWord)
           });
         }
       } else {
@@ -914,7 +1047,8 @@ const WordTranslator = ({
       onWordChange({
         word: data.word,
         action: 'added',
-        source: 'translator'
+        source: 'translator',
+        isPhrase: data.isPhrase
       });
     }
   };
@@ -923,38 +1057,31 @@ const WordTranslator = ({
     setIsCompact(!isCompact);
   };
 
-  // 打开单词学习窗口 - 关闭翻译窗口
   const handleOpenVocabMaster = () => {
     setShowVocabMaster(true);
     setVocabKey(prev => prev + 1);
   };
 
-  // 关闭单词学习窗口 - 重新打开翻译窗口
   const handleCloseVocabMaster = () => {
     setShowVocabMaster(false);
     fetchExistingWords();
   };
 
-  // 打开单词复习窗口 - 关闭翻译窗口
   const handleOpenWordBook = () => {
     setShowWordBook(true);
   };
 
-  // 关闭单词复习窗口 - 重新打开翻译窗口
   const handleCloseWordBook = () => {
     setShowWordBook(false);
     fetchExistingWords();
   };
 
-  // 打开句子中心
   const handleOpenSentenceCenter = () => {
     setShowSentenceCenter(true);
   };
 
-  // 翻译窗口是否应该显示 - 只有当没有打开其他窗口时才显示
   const shouldShowTranslator = open && !showVocabMaster && !showWordBook;
 
-  // 渲染翻译界面内容
   const renderTranslatorContent = () => {
     if (isCompact) {
       return (
@@ -1001,18 +1128,28 @@ const WordTranslator = ({
 
   return (
     <>
-      {/* 翻译窗口 - 只有在没有打开其他窗口时显示 */}
+      {/* 翻译窗口 */}
       {shouldShowTranslator && (
         <DraggableDialog open={true} onClose={onClose} isCompact={isCompact} title="翻译">
           <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             {/* 简洁模式开关 */}
             <Box sx={{ 
               display: 'flex', 
-              justifyContent: 'flex-end', 
+              justifyContent: 'space-between', 
+              alignItems: 'center',
               px: 2, 
               pt: 1,
+              pb: 0.5,
               borderBottom: '1px solid #3c3c3c'
             }}>
+              {enableClipboardDetection && (
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                  <ContentCopy sx={{ color: '#4ec9b0', fontSize: 14 }} />
+                  <Typography variant="caption" sx={{ color: '#858585' }}>
+                    自动检测剪贴板
+                  </Typography>
+                </Box>
+              )}
               <FormControlLabel
                 control={
                   <Switch
@@ -1042,7 +1179,23 @@ const WordTranslator = ({
         </DraggableDialog>
       )}
 
-      {/* 单词学习窗口 - 独立窗口，使用更大的尺寸 */}
+      {/* 剪贴板检测提示 */}
+      <Snackbar
+        open={clipboardSnackbar.open}
+        autoHideDuration={2000}
+        onClose={() => setClipboardSnackbar({ ...clipboardSnackbar, open: false })}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        message={clipboardSnackbar.text}
+        sx={{
+          '& .MuiSnackbarContent-root': {
+            backgroundColor: '#4ec9b0',
+            color: '#1e1e1e',
+            fontWeight: 500
+          }
+        }}
+      />
+
+      {/* 单词学习窗口 */}
       {showVocabMaster && (
         <DraggableDialog 
           open={true} 
@@ -1074,7 +1227,7 @@ const WordTranslator = ({
         </DraggableDialog>
       )}
 
-      {/* 单词复习窗口 - 独立窗口 */}
+      {/* 单词复习窗口 */}
       {showWordBook && (
         <DraggableDialog 
           open={true} 
@@ -1135,6 +1288,8 @@ const WordTranslator = ({
       </Dialog>
     </>
   );
-};
+});
+
+WordTranslator.displayName = 'WordTranslator';
 
 export default WordTranslator;

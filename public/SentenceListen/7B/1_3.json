@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "id": "1_3",
+    "title": "1_3",
+    "totalSentences": 5,
+    "totalWords": 38,
+    "duration": 34.544,
+    "difficulty": "beginner",
+    "convertedFrom": "1_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 10.304,
+      "endTime": 15.392,
+      "text": "Let’s go and see the monkeys. They’re my favourite animals.",
+      "words": [
+        "Let’s",
+        "go",
+        "and",
+        "see",
+        "the",
+        "monkeys",
+        "They’re",
+        "my",
+        "favourite",
+        "animals"
+      ],
+      "translation": "[需要翻译: Let’s go and see the monkeys. They’re my favourite animals.]",
+      "wordCount": 10
+    },
+    {
+      "id": 2,
+      "startTime": 16.224,
+      "endTime": 17.68,
+      "text": "Why do you like them?",
+      "words": [
+        "Why",
+        "do",
+        "you",
+        "like",
+        "them"
+      ],
+      "translation": "[需要翻译: Why do you like them?]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 18.048,
+      "endTime": 21.232,
+      "text": "Because they’re clever and funny.",
+      "words": [
+        "Because",
+        "they’re",
+        "clever",
+        "and",
+        "funny"
+      ],
+      "translation": "[需要翻译: Because they’re clever and funny.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 24.704,
+      "endTime": 30.448,
+      "text": "Oh, look! A baby wolf and its mother! Do you like wolves?",
+      "words": [
+        "Oh",
+        "look",
+        "A",
+        "baby",
+        "wolf",
+        "and",
+        "its",
+        "mother",
+        "Do",
+        "you",
+        "like",
+        "wolves"
+      ],
+      "translation": "[需要翻译: Oh, look! A baby wolf and its mother! Do you like wolves?]",
+      "wordCount": 12
+    },
+    {
+      "id": 5,
+      "startTime": 30.944,
+      "endTime": 34.544,
+      "text": "No, I don’t. They’re very dangerous.",
+      "words": [
+        "No",
+        "I",
+        "don’t",
+        "They’re",
+        "very",
+        "dangerous"
+      ],
+      "translation": "[需要翻译: No, I don’t. They’re very dangerous.]",
+      "wordCount": 6
+    }
+  ]
+}

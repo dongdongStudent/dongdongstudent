@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "id": "4_1_1",
+    "title": "4_1_1",
+    "totalSentences": 12,
+    "totalWords": 56,
+    "duration": 37.792,
+    "difficulty": "beginner",
+    "convertedFrom": "4_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 2.944,
+      "endTime": 5.232,
+      "text": "Hi, Ella. Are you OK?",
+      "words": ["Hi", "Ella", "Are", "you", "OK"],
+      "translation": "嗨，Ella。你还好吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 6.03,
+      "endTime": 11.904,
+      "text": "Hi, Fu Xing. Not really. Today is Tuesday.",
+      "words": ["Hi", "Fu", "Xing", "Not", "really", "Today", "is", "Tuesday"],
+      "translation": "嗨，Fu Xing。不太好。今天是星期二。",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 12.512,
+      "endTime": 13.344,
+      "text": "So?",
+      "words": ["So"],
+      "translation": "所以呢？",
+      "wordCount": 1
+    },
+    {
+      "id": 4,
+      "startTime": 13.824,
+      "endTime": 16.512,
+      "text": "I have history on Tuesday mornings.",
+      "words": ["I", "have", "history", "on", "Tuesday", "mornings"],
+      "translation": "我星期二上午有历史课。",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 17.184,
+      "endTime": 18.608,
+      "text": "You don’t like history?",
+      "words": ["You", "don’t", "like", "history"],
+      "translation": "你不喜欢历史吗？",
+      "wordCount": 4
+    },
+    {
+      "id": 6,
+      "startTime": 19.248,
+      "endTime": 22.112,
+      "text": "No, it’s hard for me.",
+      "words": ["No", "it’s", "hard", "for", "me"],
+      "translation": "不喜欢，对我来说太难了。",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 22.736,
+      "endTime": 24.88,
+      "text": "So, what’s your favourite subject?",
+      "words": ["So", "what’s", "your", "favourite", "subject"],
+      "translation": "那你最喜欢的科目是什么？",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 25.552,
+      "endTime": 26.592,
+      "text": "Maths.",
+      "words": ["Maths"],
+      "translation": "数学。",
+      "wordCount": 1
+    },
+    {
+      "id": 9,
+      "startTime": 27.536,
+      "endTime": 28.192,
+      "text": "Why?",
+      "words": ["Why"],
+      "translation": "为什么？",
+      "wordCount": 1
+    },
+    {
+      "id": 10,
+      "startTime": 28.608,
+      "endTime": 29.92,
+      "text": "Because it’s fun.",
+      "words": ["Because", "it’s", "fun"],
+      "translation": "因为它很有趣。",
+      "wordCount": 3
+    },
+    {
+      "id": 11,
+      "startTime": 30.368,
+      "endTime": 32.496,
+      "text": "What other classes do you have today?",
+      "words": ["What", "other", "classes", "do", "you", "have", "today"],
+      "translation": "你今天还有什么其他课？",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 33.088,
+      "endTime": 37.792,
+      "text": "I have art and geography. I like those subjects too.",
+      "words": ["I", "have", "art", "and", "geography", "I", "like", "those", "subjects", "too"],
+      "translation": "我有美术和地理。我也喜欢那些科目。",
+      "wordCount": 10
+    }
+  ]
+}

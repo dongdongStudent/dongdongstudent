@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "id": "8_5_1",
+    "title": "8_5_1",
+    "totalSentences": 14,
+    "totalWords": 105,
+    "duration": 66.528,
+    "difficulty": "beginner",
+    "convertedFrom": "8_5_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 17.888,
+      "endTime": 19.76,
+      "text": "The Ugly Duckling",
+      "words": [
+        "The",
+        "Ugly",
+        "Duckling"
+      ],
+      "translation": "[需要翻译: The Ugly Duckling]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 20.688,
+      "endTime": 24.352,
+      "text": "Once upon a time, there was a mother duck.",
+      "words": [
+        "Once",
+        "upon",
+        "a",
+        "time",
+        "there",
+        "was",
+        "a",
+        "mother",
+        "duck"
+      ],
+      "translation": "[需要翻译: Once upon a time, there was a mother duck.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 24.736,
+      "endTime": 27.472,
+      "text": "She had six little ducklings.",
+      "words": [
+        "She",
+        "had",
+        "six",
+        "little",
+        "ducklings"
+      ],
+      "translation": "[需要翻译: She had six little ducklings.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 28.08,
+      "endTime": 31.424,
+      "text": "Five of the ducklings were small and yellow,",
+      "words": [
+        "Five",
+        "of",
+        "the",
+        "ducklings",
+        "were",
+        "small",
+        "and",
+        "yellow"
+      ],
+      "translation": "[需要翻译: Five of the ducklings were small and yellow,]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 31.824,
+      "endTime": 34.816,
+      "text": "but the last duckling was big and grey.",
+      "words": [
+        "but",
+        "the",
+        "last",
+        "duckling",
+        "was",
+        "big",
+        "and",
+        "grey"
+      ],
+      "translation": "[需要翻译: but the last duckling was big and grey.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 35.712,
+      "endTime": 39.84,
+      "text": "“He doesn’t look like us! What an ugly duckling!”",
+      "words": [
+        "“He",
+        "doesn’t",
+        "look",
+        "like",
+        "us",
+        "What",
+        "an",
+        "ugly",
+        "duckling",
+        "”"
+      ],
+      "translation": "[需要翻译: “He doesn’t look like us! What an ugly duckling!”]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 40.128,
+      "endTime": 41.664,
+      "text": "the other ducklings said.",
+      "words": [
+        "the",
+        "other",
+        "ducklings",
+        "said"
+      ],
+      "translation": "[需要翻译: the other ducklings said.]",
+      "wordCount": 4
+    },
+    {
+      "id": 8,
+      "startTime": 42.08,
+      "endTime": 44.96,
+      "text": "“That’s not nice!” said Mother Duck.",
+      "words": [
+        "“That’s",
+        "not",
+        "nice",
+        "”",
+        "said",
+        "Mother",
+        "Duck"
+      ],
+      "translation": "[需要翻译: “That’s not nice!” said Mother Duck.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 45.536,
+      "endTime": 47.728,
+      "text": "“He’s still a duck like us!”",
+      "words": [
+        "“He’s",
+        "still",
+        "a",
+        "duck",
+        "like",
+        "us",
+        "”"
+      ],
+      "translation": "[需要翻译: “He’s still a duck like us!”]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 48.816,
+      "endTime": 52.352,
+      "text": "At the river, the ugly duckling swam well,",
+      "words": [
+        "At",
+        "the",
+        "river",
+        "the",
+        "ugly",
+        "duckling",
+        "swam",
+        "well"
+      ],
+      "translation": "[需要翻译: At the river, the ugly duckling swam well,]",
+      "wordCount": 8
+    },
+    {
+      "id": 11,
+      "startTime": 52.528,
+      "endTime": 54.816,
+      "text": "just like all the other ducklings.",
+      "words": [
+        "just",
+        "like",
+        "all",
+        "the",
+        "other",
+        "ducklings"
+      ],
+      "translation": "[需要翻译: just like all the other ducklings.]",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 55.168,
+      "endTime": 59.904,
+      "text": "But the other ducklings still laughed at him and told him to go away.",
+      "words": [
+        "But",
+        "the",
+        "other",
+        "ducklings",
+        "still",
+        "laughed",
+        "at",
+        "him",
+        "and",
+        "told",
+        "him",
+        "to",
+        "go",
+        "away"
+      ],
+      "translation": "[需要翻译: But the other ducklings still laughed at him and told him to go away.]",
+      "wordCount": 14
+    },
+    {
+      "id": 13,
+      "startTime": 60.368,
+      "endTime": 63.248,
+      "text": "It made the poor duckling very sad,",
+      "words": [
+        "It",
+        "made",
+        "the",
+        "poor",
+        "duckling",
+        "very",
+        "sad"
+      ],
+      "translation": "[需要翻译: It made the poor duckling very sad,]",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 63.408,
+      "endTime": 66.528,
+      "text": "so he decided to search for a new home.",
+      "words": [
+        "so",
+        "he",
+        "decided",
+        "to",
+        "search",
+        "for",
+        "a",
+        "new",
+        "home"
+      ],
+      "translation": "[需要翻译: so he decided to search for a new home.]",
+      "wordCount": 9
+    }
+  ]
+}

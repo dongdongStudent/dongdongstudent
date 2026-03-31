@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "id": "3_1_2",
+    "title": "3_1_2",
+    "totalSentences": 5,
+    "totalWords": 28,
+    "duration": 14.88,
+    "difficulty": "beginner",
+    "convertedFrom": "3_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.56,
+      "endTime": 4.272,
+      "text": "Excuse me. Where’s Ms Gao’s office?",
+      "words": ["Excuse", "me", "Where’s", "Ms", "Gao’s", "office"],
+      "translation": "打扰一下。高老师的办公室在哪里？",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 4.592,
+      "endTime": 7.12,
+      "text": "Her office is in the teachers’ building.",
+      "words": ["Her", "office", "is", "in", "the", "teachers’", "building"],
+      "translation": "她的办公室在教师楼里。",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 7.424,
+      "endTime": 8.88,
+      "text": "And where’s that?",
+      "words": ["And", "where’s", "that"],
+      "translation": "那在哪里？",
+      "wordCount": 3
+    },
+    {
+      "id": 4,
+      "startTime": 9.392,
+      "endTime": 12.416,
+      "text": "The teachers’ building is across from the school hall.",
+      "words": ["The", "teachers’", "building", "is", "across", "from", "the", "school", "hall"],
+      "translation": "教师楼在学校礼堂的对面。",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 12.912,
+      "endTime": 14.88,
+      "text": "Great. Thank you.",
+      "words": ["Great", "Thank", "you"],
+      "translation": "太好了。谢谢。",
+      "wordCount": 3
+    }
+  ]
+}

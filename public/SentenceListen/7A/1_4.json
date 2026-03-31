@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "id": "1_4",
+    "title": "1_4",
+    "totalSentences": 6,
+    "totalWords": 55,
+    "duration": 58.752,
+    "difficulty": "beginner",
+    "convertedFrom": "1_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 29.312,
+      "endTime": 34.592,
+      "text": "Hi, I’m Pauline Lee, and I’m 14 years old.",
+      "words": ["Hi", "I’m", "Pauline", "Lee", "and", "I’m", "14", "years", "old"],
+      "translation": "嗨，我是 Pauline Lee，我 14 岁。",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 35.024,
+      "endTime": 38.608,
+      "text": "I live in Singapore with my big family.",
+      "words": ["I", "live", "in", "Singapore", "with", "my", "big", "family"],
+      "translation": "我和我的大家庭一起住在新加坡。",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 39.216,
+      "endTime": 42.992,
+      "text": "I have a pet bird. It’s a parrot.",
+      "words": ["I", "have", "a", "pet", "bird", "It’s", "a", "parrot"],
+      "translation": "我有一只宠物鸟。它是一只鹦鹉。",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 43.28,
+      "endTime": 48.592,
+      "text": "Her name is Coco. She even speaks some Chinese!",
+      "words": ["Her", "name", "is", "Coco", "She", "even", "speaks", "some", "Chinese"],
+      "translation": "她的名字叫 Coco。她甚至会说一些中文！",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 48.91,
+      "endTime": 55.776,
+      "text": "My favourite sport is tennis. I often play it with my friends after school.",
+      "words": ["My", "favourite", "sport", "is", "tennis", "I", "often", "play", "it", "with", "my", "friends", "after", "school"],
+      "translation": "我最喜欢的运动是网球。放学后我经常和朋友们一起打。",
+      "wordCount": 14
+    },
+    {
+      "id": 6,
+      "startTime": 56.096,
+      "endTime": 58.752,
+      "text": "Do you want to be my friend",
+      "words": ["Do", "you", "want", "to", "be", "my", "friend"],
+      "translation": "你想成为我的朋友吗？",
+      "wordCount": 7
+    }
+  ]
+}

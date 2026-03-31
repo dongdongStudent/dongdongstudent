@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "id": "3_4",
+    "title": "3_4",
+    "totalSentences": 13,
+    "totalWords": 96,
+    "duration": 60.08,
+    "difficulty": "beginner",
+    "convertedFrom": "3_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 8.08,
+      "endTime": 12.08,
+      "text": "there is a ping-pong bat here. Is it yours?",
+      "words": [
+        "there",
+        "is",
+        "a",
+        "ping-pong",
+        "bat",
+        "here",
+        "Is",
+        "it",
+        "yours"
+      ],
+      "translation": "[需要翻译: there is a ping-pong bat here. Is it yours?]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 12.368,
+      "endTime": 15.712,
+      "text": "No, it isn’t mine. Is it Ella’s?",
+      "words": [
+        "No",
+        "it",
+        "isn’t",
+        "mine",
+        "Is",
+        "it",
+        "Ella’s"
+      ],
+      "translation": "[需要翻译: No, it isn’t mine. Is it Ella’s?]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 16.096,
+      "endTime": 18.416,
+      "text": "No, hers is at home.",
+      "words": [
+        "No",
+        "hers",
+        "is",
+        "at",
+        "home"
+      ],
+      "translation": "[需要翻译: No, hers is at home.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 18.832,
+      "endTime": 20.336,
+      "text": "Maybe it’s Yaming’s.",
+      "words": [
+        "Maybe",
+        "it’s",
+        "Yaming’s"
+      ],
+      "translation": "[需要翻译: Maybe it’s Yaming’s.]",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 21.12,
+      "endTime": 24.016,
+      "text": "Hi, Yaming! Is this your bat?",
+      "words": [
+        "Hi",
+        "Yaming",
+        "Is",
+        "this",
+        "your",
+        "bat"
+      ],
+      "translation": "[需要翻译: Hi, Yaming! Is this your bat?]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 24.528,
+      "endTime": 28.224,
+      "text": "Oh yes, it’s mine. Thanks!",
+      "words": [
+        "Oh",
+        "yes",
+        "it’s",
+        "mine",
+        "Thanks"
+      ],
+      "translation": "[需要翻译: Oh yes, it’s mine. Thanks!]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 28.672,
+      "endTime": 33.984,
+      "text": "Not at all. Your bat looks well-used. Do you play often?",
+      "words": [
+        "Not",
+        "at",
+        "all",
+        "Your",
+        "bat",
+        "looks",
+        "well-used",
+        "Do",
+        "you",
+        "play",
+        "often"
+      ],
+      "translation": "[需要翻译: Not at all. Your bat looks well-used. Do you play often?]",
+      "wordCount": 11
+    },
+    {
+      "id": 8,
+      "startTime": 34.496,
+      "endTime": 39.312,
+      "text": "Yes, twice a week, and sometimes more! And you?",
+      "words": [
+        "Yes",
+        "twice",
+        "a",
+        "week",
+        "and",
+        "sometimes",
+        "more",
+        "And",
+        "you"
+      ],
+      "translation": "[需要翻译: Yes, twice a week, and sometimes more! And you?]",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 39.808,
+      "endTime": 42.72,
+      "text": "Hardly ever. I’m not very good at it!",
+      "words": [
+        "Hardly",
+        "ever",
+        "I’m",
+        "not",
+        "very",
+        "good",
+        "at",
+        "it"
+      ],
+      "translation": "[需要翻译: Hardly ever. I’m not very good at it!]",
+      "wordCount": 8
+    },
+    {
+      "id": 10,
+      "startTime": 43.04,
+      "endTime": 48.064,
+      "text": "Well, practice makes perfect. How often do you play, Jim?",
+      "words": [
+        "Well",
+        "practice",
+        "makes",
+        "perfect",
+        "How",
+        "often",
+        "do",
+        "you",
+        "play",
+        "Jim"
+      ],
+      "translation": "[需要翻译: Well, practice makes perfect. How often do you play, Jim?]",
+      "wordCount": 10
+    },
+    {
+      "id": 11,
+      "startTime": 48.512,
+      "endTime": 52.016,
+      "text": "I seldom do, but I often play badminton.",
+      "words": [
+        "I",
+        "seldom",
+        "do",
+        "but",
+        "I",
+        "often",
+        "play",
+        "badminton"
+      ],
+      "translation": "[需要翻译: I seldom do, but I often play badminton.]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 52.384,
+      "endTime": 54.128,
+      "text": "Oh, me too.",
+      "words": [
+        "Oh",
+        "me",
+        "too"
+      ],
+      "translation": "[需要翻译: Oh, me too.]",
+      "wordCount": 3
+    },
+    {
+      "id": 13,
+      "startTime": 54.688,
+      "endTime": 60.08,
+      "text": "I sometimes play badminton with Ella. We should all play doubles sometime!",
+      "words": [
+        "I",
+        "sometimes",
+        "play",
+        "badminton",
+        "with",
+        "Ella",
+        "We",
+        "should",
+        "all",
+        "play",
+        "doubles",
+        "sometime"
+      ],
+      "translation": "[需要翻译: I sometimes play badminton with Ella. We should all play doubles sometime!]",
+      "wordCount": 12
+    }
+  ]
+}

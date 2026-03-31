@@ -48,7 +48,22 @@ export const readingApi = {
   },
 
   /**
-   * 获取题库信息
+   * 获取所有可用的题库列表
+   * GET /api/8_reading_comprehension/banks
+   */
+  getBanks: () => {
+    console.log('【API】调用 getBanks');
+    return request({
+      url: '/8_reading_comprehension/banks',
+      method: 'get'
+    }).catch(error => {
+      console.error('获取题库列表失败:', error);
+      return { flag: 0, message: '获取题库列表失败', content: { banks: [] } };
+    });
+  },
+
+  /**
+   * 获取题库信息（已废弃，使用 getBanks 代替）
    * GET /api/8_reading_comprehension/info
    */
   getBankInfo: () => {
@@ -63,14 +78,16 @@ export const readingApi = {
   },
 
   /**
-   * 获取所有篇章列表
-   * GET /api/8_reading_comprehension/passages
+   * 获取所有篇章列表（支持指定题库）
+   * GET /api/8_reading_comprehension/passages?bank=xxx
+   * @param {string} bankId - 题库ID
    */
-  getPassages: () => {
-    console.log('【API】调用 getPassages');
+  getPassages: (bankId) => {
+    console.log('【API】调用 getPassages:', { bankId });
     return request({
       url: '/8_reading_comprehension/passages',
-      method: 'get'
+      method: 'get',
+      params: { bank: bankId }
     }).catch(error => {
       console.error('获取篇章列表失败:', error);
       return { flag: 0, message: '获取篇章列表失败', content: { passages: [] } };
@@ -78,16 +95,20 @@ export const readingApi = {
   },
 
   /**
-   * 获取阅读理解篇章
-   * GET /api/8_reading_comprehension/passage
+   * 获取阅读理解篇章（支持指定题库）
+   * GET /api/8_reading_comprehension/passage?passageId=xxx&type=random&bank=xxx
    * @param {object} params - 参数对象
    * @param {string} params.passageId - 指定篇章ID（可选）
    * @param {string} params.type - 抽取类型: random, new, review
+   * @param {string} params.bank - 题库ID
    */
-  getPassage: ({ passageId = null, type = 'random' } = {}) => {
+  getPassage: ({ passageId = null, type = 'random', bank = null } = {}) => {
     const params = { type };
     if (passageId) {
       params.passageId = passageId;
+    }
+    if (bank) {
+      params.bank = bank;
     }
     
     console.log('【API】调用 getPassage:', params);
@@ -107,21 +128,22 @@ export const readingApi = {
   },
 
   /**
-   * 提交阅读理解答案
+   * 提交阅读理解答案（支持指定题库）
    * POST /api/8_reading_comprehension/passage/submit
    * @param {object} data - 提交数据
    * @param {string} data.passageId - 篇章ID
    * @param {string[]} data.questionIds - 题目ID数组
    * @param {string[]} data.answers - 答案数组
    * @param {number} data.timeSpent - 用时（秒）
+   * @param {string} data.bank - 题库ID
    */
-  submitPassage: ({ passageId, questionIds, answers, timeSpent = 0 }) => {
-    console.log('【API】调用 submitPassage:', { passageId, questionIds, answers, timeSpent });
+  submitPassage: ({ passageId, questionIds, answers, timeSpent = 0, bank = null }) => {
+    console.log('【API】调用 submitPassage:', { passageId, questionIds, answers, timeSpent, bank });
     
     return request({
       url: '/8_reading_comprehension/passage/submit',
       method: 'post',
-      data: { passageId, questionIds, answers, timeSpent }
+      data: { passageId, questionIds, answers, timeSpent, bank }
     }).catch(error => {
       console.error('提交阅读理解答案失败:', error);
       return { 
@@ -133,16 +155,18 @@ export const readingApi = {
   },
 
   /**
-   * 获取阅读理解篇章详情（带解析）
-   * GET /api/8_reading_comprehension/passage/:passageId/details
+   * 获取阅读理解篇章详情（带解析，支持指定题库）
+   * GET /api/8_reading_comprehension/passage/:passageId/details?bank=xxx
    * @param {string} passageId - 篇章ID
+   * @param {string} bank - 题库ID
    */
-  getPassageDetails: (passageId) => {
-    console.log('【API】调用 getPassageDetails:', { passageId });
+  getPassageDetails: (passageId, bank = null) => {
+    console.log('【API】调用 getPassageDetails:', { passageId, bank });
     
     return request({
       url: `/8_reading_comprehension/passage/${passageId}/details`,
-      method: 'get'
+      method: 'get',
+      params: { bank }
     }).catch(error => {
       console.error('获取阅读理解篇章详情失败:', error);
       return { 
@@ -154,15 +178,17 @@ export const readingApi = {
   },
 
   /**
-   * 获取学习报告
-   * GET /api/8_reading_comprehension/report
+   * 获取学习报告（支持指定题库）
+   * GET /api/8_reading_comprehension/report?bank=xxx
+   * @param {string} bank - 题库ID
    */
-  getReport: () => {
-    console.log('【API】调用 getReport');
+  getReport: (bank = null) => {
+    console.log('【API】调用 getReport:', { bank });
     
     return request({
       url: '/8_reading_comprehension/report',
-      method: 'get'
+      method: 'get',
+      params: { bank }
     }).catch(error => {
       console.error('获取学习报告失败:', error);
       return { 

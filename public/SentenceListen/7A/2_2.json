@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "id": "2_2",
+    "title": "2_2",
+    "totalSentences": 14,
+    "totalWords": 76,
+    "duration": 41.04,
+    "difficulty": "beginner",
+    "convertedFrom": "2_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.336,
+      "endTime": 2.176,
+      "text": "Hi, Peter! Come in.",
+      "words": ["Hi", "Peter", "Come", "in"],
+      "translation": "嗨，Peter！请进。",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 2.448,
+      "endTime": 8.512,
+      "text": "Thanks. Oh, these ping-pong bats are nice.",
+      "words": ["Thanks", "Oh", "these", "ping-pong", "bats", "are", "nice"],
+      "translation": "谢谢。哦，这些乒乓球拍真不错。",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 9.104,
+      "endTime": 10.128,
+      "text": "Whose are they?",
+      "words": ["Whose", "are", "they"],
+      "translation": "它们是谁的？",
+      "wordCount": 3
+    },
+    {
+      "id": 4,
+      "startTime": 10.656,
+      "endTime": 13.552,
+      "text": "Well, this is my ping-pong bat,",
+      "words": ["Well", "this", "is", "my", "ping-pong", "bat"],
+      "translation": "嗯，这是我的乒乓球拍，",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 14.384,
+      "endTime": 16.384,
+      "text": "and the old one is my grandpa’s.",
+      "words": ["and", "the", "old", "one", "is", "my", "grandpa’s"],
+      "translation": "旧的那个是我爷爷的。",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 16.72,
+      "endTime": 19.552,
+      "text": "Do you often play ping-pong together?",
+      "words": ["Do", "you", "often", "play", "ping-pong", "together"],
+      "translation": "你们经常一起打乒乓球吗？",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 19.824,
+      "endTime": 22.48,
+      "text": "Yes, we play every week.",
+      "words": ["Yes", "we", "play", "every", "week"],
+      "translation": "是的，我们每周都打。",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 22.784,
+      "endTime": 24.72,
+      "text": "My grandpa loves sport.",
+      "words": ["My", "grandpa", "loves", "sport"],
+      "translation": "我爷爷热爱运动。",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 25.488,
+      "endTime": 27.584,
+      "text": "Whose fishing rods are those?",
+      "words": ["Whose", "fishing", "rods", "are", "those"],
+      "translation": "那些鱼竿是谁的？",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 27.872,
+      "endTime": 29.152,
+      "text": "They’re my father’s.",
+      "words": ["They’re", "my", "father’s"],
+      "translation": "是我爸爸的。",
+      "wordCount": 3
+    },
+    {
+      "id": 11,
+      "startTime": 29.552,
+      "endTime": 31.536,
+      "text": "He spends a lot of time fishing.",
+      "words": ["He", "spends", "a", "lot", "of", "time", "fishing"],
+      "translation": "他花很多时间钓鱼。",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 32.128,
+      "endTime": 34.912,
+      "text": "Hey, do you play the piano?",
+      "words": ["Hey", "do", "you", "play", "the", "piano"],
+      "translation": "嘿，你会弹钢琴吗？",
+      "wordCount": 6
+    },
+    {
+      "id": 13,
+      "startTime": 35.136,
+      "endTime": 38.672,
+      "text": "No, I don’t. It’s my mother’s piano.",
+      "words": ["No", "I", "don’t", "It’s", "my", "mother’s", "piano"],
+      "translation": "不，我不会。那是我妈妈的钢琴。",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 38.992,
+      "endTime": 41.04,
+      "text": "She can play it really well",
+      "words": ["She", "can", "play", "it", "really", "well"],
+      "translation": "她弹得非常好。",
+      "wordCount": 6
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "5_1_1",
+    "title": "5_1_1",
+    "totalSentences": 7,
+    "totalWords": 46,
+    "duration": 22.72,
+    "difficulty": "beginner",
+    "convertedFrom": "5_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.48,
+      "endTime": 2.848,
+      "text": "Hello! My name is Teng Fei,",
+      "words": ["Hello", "My", "name", "is", "Teng", "Fei"],
+      "translation": "你好！我叫 Teng Fei，",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 2.976,
+      "endTime": 5.296,
+      "text": "and I want to join the ping-pong club.",
+      "words": ["and", "I", "want", "to", "join", "the", "ping-pong", "club"],
+      "translation": "我想加入乒乓球社团。",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 5.664,
+      "endTime": 8.32,
+      "text": "Great! Can you play ping-pong?",
+      "words": ["Great", "Can", "you", "play", "ping-pong"],
+      "translation": "太好了！你会打乒乓球吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 8.8,
+      "endTime": 10.256,
+      "text": "Yes, I can.",
+      "words": ["Yes", "I", "can"],
+      "translation": "是的，我会。",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 10.96,
+      "endTime": 15.104,
+      "text": "We meet at 5 o’clock every Tuesday. Can you come?",
+      "words": ["We", "meet", "at", "5", "o’clock", "every", "Tuesday", "Can", "you", "come"],
+      "translation": "我们每周二五点见面。你能来吗？",
+      "wordCount": 10
+    },
+    {
+      "id": 6,
+      "startTime": 15.648,
+      "endTime": 19.488,
+      "text": "Oh, I have drum class on Tuesday afternoons.",
+      "words": ["Oh", "I", "have", "drum", "class", "on", "Tuesday", "afternoons"],
+      "translation": "哦，我周二下午有架子鼓课。",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 20.496,
+      "endTime": 22.72,
+      "text": "I’m sorry. You can’t make it.",
+      "words": ["I’m", "sorry", "You", "can’t", "make", "it"],
+      "translation": "很抱歉。你来不了了。",
+      "wordCount": 6
+    }
+  ]
+}

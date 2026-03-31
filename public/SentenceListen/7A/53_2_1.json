@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "id": "53_2_1",
+    "title": "53_2_1",
+    "totalSentences": 12,
+    "totalWords": 82,
+    "duration": 70.256,
+    "difficulty": "beginner",
+    "convertedFrom": "53_2_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 2.112,
+      "endTime": 4.272,
+      "text": "Is this your uncle?",
+      "words": [
+        "Is",
+        "this",
+        "your",
+        "uncle"
+      ],
+      "translation": "[需要翻译: Is this your uncle?]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 7.152,
+      "endTime": 10.272,
+      "text": "Who's the girl with the pink hat?",
+      "words": [
+        "Who's",
+        "the",
+        "girl",
+        "with",
+        "the",
+        "pink",
+        "hat"
+      ],
+      "translation": "[需要翻译: Who's the girl with the pink hat?]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 12.912,
+      "endTime": 15.728,
+      "text": "Are these your grandparents?",
+      "words": [
+        "Are",
+        "these",
+        "your",
+        "grandparents"
+      ],
+      "translation": "[需要翻译: Are these your grandparents?]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 18.56,
+      "endTime": 21.504,
+      "text": "Whose fishing rods are those?",
+      "words": [
+        "Whose",
+        "fishing",
+        "rods",
+        "are",
+        "those"
+      ],
+      "translation": "[需要翻译: Whose fishing rods are those?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 24.592,
+      "endTime": 27.632,
+      "text": "Does your mother play games with you?",
+      "words": [
+        "Does",
+        "your",
+        "mother",
+        "play",
+        "games",
+        "with",
+        "you"
+      ],
+      "translation": "[需要翻译: Does your mother play games with you?]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 30.384,
+      "endTime": 36.832,
+      "text": "Who are they in the photo? They're my grandparents and my sister.",
+      "words": [
+        "Who",
+        "are",
+        "they",
+        "in",
+        "the",
+        "photo",
+        "They're",
+        "my",
+        "grandparents",
+        "and",
+        "my",
+        "sister"
+      ],
+      "translation": "[需要翻译: Who are they in the photo? They're my grandparents and my sister.]",
+      "wordCount": 12
+    },
+    {
+      "id": 7,
+      "startTime": 37.504,
+      "endTime": 42.784,
+      "text": "Question：How many people are there in the photo?",
+      "words": [
+        "Question：How",
+        "many",
+        "people",
+        "are",
+        "there",
+        "in",
+        "the",
+        "photo"
+      ],
+      "translation": "[需要翻译: Question：How many people are there in the photo?]",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 45.488,
+      "endTime": 50.016,
+      "text": "Tom, who's the boy? He's my brother Bob.",
+      "words": [
+        "Tom",
+        "who's",
+        "the",
+        "boy",
+        "He's",
+        "my",
+        "brother",
+        "Bob"
+      ],
+      "translation": "[需要翻译: Tom, who's the boy? He's my brother Bob.]",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 50.752,
+      "endTime": 54.672,
+      "text": "Question：What's Tom's brother's name?",
+      "words": [
+        "Question：What's",
+        "Tom's",
+        "brother's",
+        "name"
+      ],
+      "translation": "[需要翻译: Question：What's Tom's brother's name?]",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 56.128,
+      "endTime": 60.784,
+      "text": "Eric, Who's the girl in the blue hat?",
+      "words": [
+        "Eric",
+        "Who's",
+        "the",
+        "girl",
+        "in",
+        "the",
+        "blue",
+        "hat"
+      ],
+      "translation": "[需要翻译: Eric, Who's the girl in the blue hat?]",
+      "wordCount": 8
+    },
+    {
+      "id": 11,
+      "startTime": 61.584,
+      "endTime": 65.632,
+      "text": "She is my sister and she likes reading a lot.",
+      "words": [
+        "She",
+        "is",
+        "my",
+        "sister",
+        "and",
+        "she",
+        "likes",
+        "reading",
+        "a",
+        "lot"
+      ],
+      "translation": "[需要翻译: She is my sister and she likes reading a lot.]",
+      "wordCount": 10
+    },
+    {
+      "id": 12,
+      "startTime": 66.176,
+      "endTime": 70.256,
+      "text": "Question：What does Eric's sister like?",
+      "words": [
+        "Question：What",
+        "does",
+        "Eric's",
+        "sister",
+        "like"
+      ],
+      "translation": "[需要翻译: Question：What does Eric's sister like?]",
+      "wordCount": 5
+    }
+  ]
+}

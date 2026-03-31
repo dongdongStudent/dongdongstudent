@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "id": "7_1_2",
+    "title": "7_1_2",
+    "totalSentences": 15,
+    "totalWords": 100,
+    "duration": 114.416,
+    "difficulty": "beginner",
+    "convertedFrom": "7_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 70.16,
+      "endTime": 72.16,
+      "text": "How was your weekend, Teng Fei?",
+      "words": [
+        "How",
+        "was",
+        "your",
+        "weekend",
+        "Teng",
+        "Fei"
+      ],
+      "translation": "[需要翻译: How was your weekend, Teng Fei?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 72.368,
+      "endTime": 73.744,
+      "text": "It was terrible!",
+      "words": [
+        "It",
+        "was",
+        "terrible"
+      ],
+      "translation": "[需要翻译: It was terrible!]",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 74.128,
+      "endTime": 76.464,
+      "text": "Why? What happened?",
+      "words": [
+        "Why",
+        "What",
+        "happened"
+      ],
+      "translation": "[需要翻译: Why? What happened?]",
+      "wordCount": 3
+    },
+    {
+      "id": 4,
+      "startTime": 76.944,
+      "endTime": 81.28,
+      "text": "Well, first, I was on my way to meet my friends",
+      "words": [
+        "Well",
+        "first",
+        "I",
+        "was",
+        "on",
+        "my",
+        "way",
+        "to",
+        "meet",
+        "my",
+        "friends"
+      ],
+      "translation": "[需要翻译: Well, first, I was on my way to meet my friends]",
+      "wordCount": 11
+    },
+    {
+      "id": 5,
+      "startTime": 81.552,
+      "endTime": 84.944,
+      "text": "when some tourists asked me the way to the history museum.",
+      "words": [
+        "when",
+        "some",
+        "tourists",
+        "asked",
+        "me",
+        "the",
+        "way",
+        "to",
+        "the",
+        "history",
+        "museum"
+      ],
+      "translation": "[需要翻译: when some tourists asked me the way to the history museum.]",
+      "wordCount": 11
+    },
+    {
+      "id": 6,
+      "startTime": 85.408,
+      "endTime": 86.672,
+      "text": "I didn’t mean to,",
+      "words": [
+        "I",
+        "didn’t",
+        "mean",
+        "to"
+      ],
+      "translation": "[需要翻译: I didn’t mean to,]",
+      "wordCount": 4
+    },
+    {
+      "id": 7,
+      "startTime": 86.944,
+      "endTime": 89.488,
+      "text": "but I gave them the wrong directions.",
+      "words": [
+        "but",
+        "I",
+        "gave",
+        "them",
+        "the",
+        "wrong",
+        "directions"
+      ],
+      "translation": "[需要翻译: but I gave them the wrong directions.]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 90.096,
+      "endTime": 92.624,
+      "text": "I only realized it after they left!",
+      "words": [
+        "I",
+        "only",
+        "realized",
+        "it",
+        "after",
+        "they",
+        "left"
+      ],
+      "translation": "[需要翻译: I only realized it after they left!]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 93.232,
+      "endTime": 95.888,
+      "text": "Oh no! But don’t worry.",
+      "words": [
+        "Oh",
+        "no",
+        "But",
+        "don’t",
+        "worry"
+      ],
+      "translation": "[需要翻译: Oh no! But don’t worry.]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 96.08,
+      "endTime": 98.528,
+      "text": "They probably asked someone else too.",
+      "words": [
+        "They",
+        "probably",
+        "asked",
+        "someone",
+        "else",
+        "too"
+      ],
+      "translation": "[需要翻译: They probably asked someone else too.]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 98.912,
+      "endTime": 102.24,
+      "text": "I hope so! But I was so worried.",
+      "words": [
+        "I",
+        "hope",
+        "so",
+        "But",
+        "I",
+        "was",
+        "so",
+        "worried"
+      ],
+      "translation": "[需要翻译: I hope so! But I was so worried.]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 102.576,
+      "endTime": 104.864,
+      "text": "I even got on the wrong bus.",
+      "words": [
+        "I",
+        "even",
+        "got",
+        "on",
+        "the",
+        "wrong",
+        "bus"
+      ],
+      "translation": "[需要翻译: I even got on the wrong bus.]",
+      "wordCount": 7
+    },
+    {
+      "id": 13,
+      "startTime": 105.184,
+      "endTime": 108.192,
+      "text": "I was late to meet my friends. Oh,",
+      "words": [
+        "I",
+        "was",
+        "late",
+        "to",
+        "meet",
+        "my",
+        "friends",
+        "Oh"
+      ],
+      "translation": "[需要翻译: I was late to meet my friends. Oh,]",
+      "wordCount": 8
+    },
+    {
+      "id": 14,
+      "startTime": 108.576,
+      "endTime": 111.136,
+      "text": "and I left my book on the bus too!",
+      "words": [
+        "and",
+        "I",
+        "left",
+        "my",
+        "book",
+        "on",
+        "the",
+        "bus",
+        "too"
+      ],
+      "translation": "[需要翻译: and I left my book on the bus too!]",
+      "wordCount": 9
+    },
+    {
+      "id": 15,
+      "startTime": 111.424,
+      "endTime": 114.416,
+      "text": "Oh no. What a day!",
+      "words": [
+        "Oh",
+        "no",
+        "What",
+        "a",
+        "day"
+      ],
+      "translation": "[需要翻译: Oh no. What a day!]",
+      "wordCount": 5
+    }
+  ]
+}

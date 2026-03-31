@@ -1,0 +1,201 @@
+{
+  "metadata": {
+    "id": "6_2",
+    "title": "6_2",
+    "totalSentences": 12,
+    "totalWords": 68,
+    "duration": 50.08,
+    "difficulty": "beginner",
+    "convertedFrom": "6_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.696,
+      "endTime": 14.368,
+      "text": "Hey, Grandpa. How are you?",
+      "words": [
+        "Hey",
+        "Grandpa",
+        "How",
+        "are",
+        "you"
+      ],
+      "translation": "[需要翻译: Hey, Grandpa. How are you?]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 14.72,
+      "endTime": 16.848,
+      "text": "How’s the weather in Australia?",
+      "words": [
+        "How’s",
+        "the",
+        "weather",
+        "in",
+        "Australia"
+      ],
+      "translation": "[需要翻译: How’s the weather in Australia?]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 17.136,
+      "endTime": 21.344,
+      "text": "Hi, Lucy. It’s raining cats and dogs.",
+      "words": [
+        "Hi",
+        "Lucy",
+        "It’s",
+        "raining",
+        "cats",
+        "and",
+        "dogs"
+      ],
+      "translation": "[需要翻译: Hi, Lucy. It’s raining cats and dogs.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 22.24,
+      "endTime": 25.296,
+      "text": "Oh! And now there’s lightning!",
+      "words": [
+        "Oh",
+        "And",
+        "now",
+        "there’s",
+        "lightning"
+      ],
+      "translation": "[需要翻译: Oh! And now there’s lightning!]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 25.488,
+      "endTime": 28.096,
+      "text": "Oh no, don’t go outside!",
+      "words": [
+        "Oh",
+        "no",
+        "don’t",
+        "go",
+        "outside"
+      ],
+      "translation": "[需要翻译: Oh no, don’t go outside!]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 28.8,
+      "endTime": 33.76,
+      "text": "Don’t worry. I’m staying in! What’s the weather like back home?",
+      "words": [
+        "Don’t",
+        "worry",
+        "I’m",
+        "staying",
+        "in",
+        "What’s",
+        "the",
+        "weather",
+        "like",
+        "back",
+        "home"
+      ],
+      "translation": "[需要翻译: Don’t worry. I’m staying in! What’s the weather like back home?]",
+      "wordCount": 11
+    },
+    {
+      "id": 7,
+      "startTime": 34.528,
+      "endTime": 36,
+      "text": "What are you doing now?",
+      "words": [
+        "What",
+        "are",
+        "you",
+        "doing",
+        "now"
+      ],
+      "translation": "[需要翻译: What are you doing now?]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 36.672,
+      "endTime": 38.992,
+      "text": "I’m watering flowers in the garden.",
+      "words": [
+        "I’m",
+        "watering",
+        "flowers",
+        "in",
+        "the",
+        "garden"
+      ],
+      "translation": "[需要翻译: I’m watering flowers in the garden.]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 39.28,
+      "endTime": 41.376,
+      "text": "It’s sunny and warm here!",
+      "words": [
+        "It’s",
+        "sunny",
+        "and",
+        "warm",
+        "here"
+      ],
+      "translation": "[需要翻译: It’s sunny and warm here!]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 41.856,
+      "endTime": 45.616,
+      "text": "Lucky you! Well, enjoy your day!",
+      "words": [
+        "Lucky",
+        "you",
+        "Well",
+        "enjoy",
+        "your",
+        "day"
+      ],
+      "translation": "[需要翻译: Lucky you! Well, enjoy your day!]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 45.936,
+      "endTime": 46.896,
+      "text": "You too!",
+      "words": [
+        "You",
+        "too"
+      ],
+      "translation": "[需要翻译: You too!]",
+      "wordCount": 2
+    },
+    {
+      "id": 12,
+      "startTime": 47.168,
+      "endTime": 50.08,
+      "text": "I’m always happy, rain or shine!",
+      "words": [
+        "I’m",
+        "always",
+        "happy",
+        "rain",
+        "or",
+        "shine"
+      ],
+      "translation": "[需要翻译: I’m always happy, rain or shine!]",
+      "wordCount": 6
+    }
+  ]
+}

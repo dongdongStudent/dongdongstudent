@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "id": "4_3",
+    "title": "4_3",
+    "totalSentences": 16,
+    "totalWords": 113,
+    "duration": 55.776,
+    "difficulty": "beginner",
+    "convertedFrom": "4_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 0,
+      "text": "Sure. Now, would you like rice or noodles?",
+      "words": [
+        "Sure",
+        "Now",
+        "would",
+        "you",
+        "like",
+        "rice",
+        "or",
+        "noodles"
+      ],
+      "translation": "[需要翻译: Sure. Now, would you like rice or noodles?]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 0,
+      "endTime": 0,
+      "text": "Rice, please.",
+      "words": [
+        "Rice",
+        "please"
+      ],
+      "translation": "[需要翻译: Rice, please.]",
+      "wordCount": 2
+    },
+    {
+      "id": 3,
+      "startTime": 0,
+      "endTime": 0,
+      "text": "Mum: OK. Let’s get that",
+      "words": [
+        "Mum:",
+        "OK",
+        "Let’s",
+        "get",
+        "that"
+      ],
+      "translation": "[需要翻译: Mum: OK. Let’s get that]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 8.992,
+      "endTime": 12.336,
+      "text": "Hello! What would you like to order",
+      "words": [
+        "Hello",
+        "What",
+        "would",
+        "you",
+        "like",
+        "to",
+        "order"
+      ],
+      "translation": "[需要翻译: Hello! What would you like to order]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 12.943999999999999,
+      "endTime": 17.2,
+      "text": "What about Gongbao chicken? We often have it in America",
+      "words": [
+        "What",
+        "about",
+        "Gongbao",
+        "chicken",
+        "We",
+        "often",
+        "have",
+        "it",
+        "in",
+        "America"
+      ],
+      "translation": "[需要翻译: What about Gongbao chicken? We often have it in America]",
+      "wordCount": 10
+    },
+    {
+      "id": 6,
+      "startTime": 17.376,
+      "endTime": 20.56,
+      "text": "but it may taste different here. I’d like to try it.",
+      "words": [
+        "but",
+        "it",
+        "may",
+        "taste",
+        "different",
+        "here",
+        "I’d",
+        "like",
+        "to",
+        "try",
+        "it"
+      ],
+      "translation": "[需要翻译: but it may taste different here. I’d like to try it.]",
+      "wordCount": 11
+    },
+    {
+      "id": 7,
+      "startTime": 21.072,
+      "endTime": 22.256,
+      "text": "Good idea!",
+      "words": [
+        "Good",
+        "idea"
+      ],
+      "translation": "[需要翻译: Good idea!]",
+      "wordCount": 2
+    },
+    {
+      "id": 8,
+      "startTime": 22.544,
+      "endTime": 25.552,
+      "text": "Do you have anything with tofu?",
+      "words": [
+        "Do",
+        "you",
+        "have",
+        "anything",
+        "with",
+        "tofu"
+      ],
+      "translation": "[需要翻译: Do you have anything with tofu?]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 25.888,
+      "endTime": 30.4,
+      "text": "Yes. Would you like a hot tofu dish or a cold one?",
+      "words": [
+        "Yes",
+        "Would",
+        "you",
+        "like",
+        "a",
+        "hot",
+        "tofu",
+        "dish",
+        "or",
+        "a",
+        "cold",
+        "one"
+      ],
+      "translation": "[需要翻译: Yes. Would you like a hot tofu dish or a cold one?]",
+      "wordCount": 12
+    },
+    {
+      "id": 10,
+      "startTime": 30.816,
+      "endTime": 33.024,
+      "text": "A hot tofu dish, please.",
+      "words": [
+        "A",
+        "hot",
+        "tofu",
+        "dish",
+        "please"
+      ],
+      "translation": "[需要翻译: A hot tofu dish, please.]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 33.392,
+      "endTime": 36.4,
+      "text": "We have Mapo tofu. Would you like that?",
+      "words": [
+        "We",
+        "have",
+        "Mapo",
+        "tofu",
+        "Would",
+        "you",
+        "like",
+        "that"
+      ],
+      "translation": "[需要翻译: We have Mapo tofu. Would you like that?]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 36.752,
+      "endTime": 40.864,
+      "text": "Yes, please. We should also order some a salad.",
+      "words": [
+        "Yes",
+        "please",
+        "We",
+        "should",
+        "also",
+        "order",
+        "some",
+        "a",
+        "salad"
+      ],
+      "translation": "[需要翻译: Yes, please. We should also order some a salad.]",
+      "wordCount": 9
+    },
+    {
+      "id": 13,
+      "startTime": 41.328,
+      "endTime": 44.08,
+      "text": "How about a chicken and cabbage salad?",
+      "words": [
+        "How",
+        "about",
+        "a",
+        "chicken",
+        "and",
+        "cabbage",
+        "salad"
+      ],
+      "translation": "[需要翻译: How about a chicken and cabbage salad?]",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 44.8,
+      "endTime": 48.08,
+      "text": "That sounds good. Can we order soup too?",
+      "words": [
+        "That",
+        "sounds",
+        "good",
+        "Can",
+        "we",
+        "order",
+        "soup",
+        "too"
+      ],
+      "translation": "[需要翻译: That sounds good. Can we order soup too?]",
+      "wordCount": 8
+    },
+    {
+      "id": 15,
+      "startTime": 48.448,
+      "endTime": 54.016,
+      "text": "OK. Let’s see ... Which soup would you like, chicken or fish?",
+      "words": [
+        "OK",
+        "Let’s",
+        "see",
+        "Which",
+        "soup",
+        "would",
+        "you",
+        "like",
+        "chicken",
+        "or",
+        "fish"
+      ],
+      "translation": "[需要翻译: OK. Let’s see ... Which soup would you like, chicken or fish?]",
+      "wordCount": 11
+    },
+    {
+      "id": 16,
+      "startTime": 54.512,
+      "endTime": 55.776,
+      "text": "Fish, please!",
+      "words": [
+        "Fish",
+        "please"
+      ],
+      "translation": "[需要翻译: Fish, please!]",
+      "wordCount": 2
+    }
+  ]
+}

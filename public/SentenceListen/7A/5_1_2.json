@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "5_1_2",
+    "title": "5_1_2",
+    "totalSentences": 7,
+    "totalWords": 37,
+    "duration": 20.304,
+    "difficulty": "beginner",
+    "convertedFrom": "5_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.4,
+      "endTime": 2.848,
+      "text": "Hello! My name is Sam.",
+      "words": ["Hello", "My", "name", "is", "Sam"],
+      "translation": "你好！我叫 Sam。",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 3.552,
+      "endTime": 6,
+      "text": "I want to join the chess club.",
+      "words": ["I", "want", "to", "join", "the", "chess", "club"],
+      "translation": "我想加入棋类社团。",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 6.576,
+      "endTime": 9.136,
+      "text": "Can you play Chinese chess?",
+      "words": ["Can", "you", "play", "Chinese", "chess"],
+      "translation": "你会下中国象棋吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 9.584,
+      "endTime": 11.152,
+      "text": "No, I can’t.",
+      "words": ["No", "I", "can’t"],
+      "translation": "不，我不会。",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 11.904,
+      "endTime": 14.768,
+      "text": "It’s OK. You can learn it here.",
+      "words": ["It’s", "OK", "You", "can", "learn", "it", "here"],
+      "translation": "没关系。你可以在这里学。",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 15.472,
+      "endTime": 18.096,
+      "text": "Can I learn to play weiqi too?",
+      "words": ["Can", "I", "learn", "to", "play", "weiqi", "too"],
+      "translation": "我也可以学下围棋吗？",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 18.928,
+      "endTime": 20.304,
+      "text": "Sure, you can!",
+      "words": ["Sure", "you", "can"],
+      "translation": "当然可以！",
+      "wordCount": 3
+    }
+  ]
+}

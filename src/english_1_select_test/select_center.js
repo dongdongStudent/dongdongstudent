@@ -1,5 +1,5 @@
 // src/pages/LearningCenter.jsx
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import {
   Box,
   AppBar,
@@ -56,12 +56,14 @@ import {
   DragHandle as DragHandleIcon,
   CheckCircle as CheckCircleIcon,
   Cancel as CancelIcon,
-  Casino as CasinoIcon
+  Casino as CasinoIcon,
+  Translate as TranslateIcon
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import SingleChoiceTest from './select_test';
 import QuestionMasterView from './select_master_view';
 import { questionApi } from './api';
+import WordTranslator from '../translator/translator.js';
 
 // 默认题库配置
 const DEFAULT_DATA_SOURCES = [
@@ -106,7 +108,6 @@ const FloatingDrawDialog = ({
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-  // 优化初始位置：居中显示，距离顶部适当
   const [position, setPosition] = useState({
     x: Math.max(20, (window.innerWidth - (isMobile ? 350 : 900)) / 2),
     y: Math.max(20, (window.innerHeight - (isMobile ? 500 : 600)) / 2)
@@ -118,7 +119,6 @@ const FloatingDrawDialog = ({
     count: 10,
     rangeStart: 1,
     rangeEnd: 10,
-    // 范围随机抽取的数量
     randomCount: 10
   });
   const [rangeStart, setRangeStart] = useState(1);
@@ -128,7 +128,6 @@ const FloatingDrawDialog = ({
   const [renderKey, setRenderKey] = useState(0);
   const panelRef = useRef(null);
 
-  // 监听窗口大小变化，调整对话框位置
   useEffect(() => {
     const handleResize = () => {
       setPosition(prev => ({
@@ -140,7 +139,6 @@ const FloatingDrawDialog = ({
     return () => window.removeEventListener('resize', handleResize);
   }, [isMobile]);
 
-  // 监听 questions 变化，强制重新渲染
   useEffect(() => {
     console.log('【悬浮对话框】questions 数据更新:', {
       hasQuestions: questions && questions.length > 0,
@@ -172,7 +170,6 @@ const FloatingDrawDialog = ({
     }
   }, [open]);
 
-  // 拖拽功能
   const handleMouseDown = (e) => {
     if (e.target.closest('.drag-handle')) {
       setIsDragging(true);
@@ -225,7 +222,6 @@ const FloatingDrawDialog = ({
         return qId >= rangeStart && qId <= rangeEnd;
       }).length;
     } else {
-      // 范围随机抽取：返回范围内总题数
       return allQuestions.filter(q => {
         const qId = parseInt(q.id);
         return qId >= rangeStart && qId <= rangeEnd;
@@ -244,7 +240,6 @@ const FloatingDrawDialog = ({
     } else if (drawType === 'range') {
       return rangeEnd - rangeStart + 1;
     } else {
-      // 范围随机抽取：最大可抽取数量 = 范围内总题数
       return getAvailableCount();
     }
   };
@@ -289,7 +284,6 @@ const FloatingDrawDialog = ({
         flexDirection: 'column'
       }}
     >
-      {/* 拖拽标题栏 */}
       <Box
         className="drag-handle"
         onMouseDown={handleMouseDown}
@@ -316,7 +310,6 @@ const FloatingDrawDialog = ({
         </IconButton>
       </Box>
 
-      {/* 左右分栏内容 - 修复布局：确保桌面端左右排列，题目在右侧 */}
       <Box
         sx={{
           flex: 1,
@@ -326,7 +319,6 @@ const FloatingDrawDialog = ({
           flexDirection: isMobile ? 'column' : 'row'
         }}
       >
-        {/* 左侧：抽取设置 - 桌面端固定宽度，手机端全宽 */}
         <Box
           sx={{
             width: isMobile ? '100%' : '40%',
@@ -348,7 +340,6 @@ const FloatingDrawDialog = ({
 
           <Divider sx={{ my: 2 }} />
 
-          {/* 统计卡片 */}
           <Box sx={{ mb: 2 }}>
             <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1 }}>
               题库统计
@@ -358,28 +349,24 @@ const FloatingDrawDialog = ({
                 <Card variant="outlined" sx={{ bgcolor: '#e8f5e9', textAlign: 'center', py: 1 }}>
                   <Typography variant="caption" color="text.secondary">新题</Typography>:&nbsp;
                   <span variant="body2" sx={{ fontWeight: 'bold', color: '#388e3c' }}>{newQuestionStats.newCount}</span>
-
                 </Card>
               </Grid>
               <Grid item xs={3}>
                 <Card variant="outlined" sx={{ bgcolor: '#fff3e0', textAlign: 'center', py: 1 }}>
                   <Typography variant="caption" color="text.secondary">复习</Typography>:&nbsp;
                   <span variant="body2" sx={{ fontWeight: 'bold', color: '#f57c00' }}>{newQuestionStats.reviewCount}</span>
-
                 </Card>
               </Grid>
               <Grid item xs={3}>
                 <Card variant="outlined" sx={{ bgcolor: '#ffebee', textAlign: 'center', py: 1 }}>
                   <Typography variant="caption" color="text.secondary">薄弱</Typography>:&nbsp;
                   <span variant="body2" sx={{ fontWeight: 'bold', color: '#d32f2f' }}>{newQuestionStats.weakCount}</span>
-
                 </Card>
               </Grid>
               <Grid item xs={3}>
                 <Card variant="outlined" sx={{ bgcolor: '#e3f2fd', textAlign: 'center', py: 1 }}>
                   <Typography variant="caption" color="text.secondary">总计</Typography>:&nbsp;
                   <span variant="body2" sx={{ fontWeight: 'bold', color: '#1976d2' }}>{newQuestionStats.total}</span>
-
                 </Card>
               </Grid>
             </Grid>
@@ -387,14 +374,12 @@ const FloatingDrawDialog = ({
 
           <Divider sx={{ my: 2 }} />
 
-          {/* 抽取设置 */}
           <Box>
             <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1.5 }}>
               <FilterListIcon sx={{ fontSize: 18, verticalAlign: 'middle', mr: 0.5 }} />
               抽取设置
             </Typography>
 
-            {/* 抽取模式切换 */}
             <Box sx={{ display: 'flex', gap: 1, mb: 2, flexWrap: 'wrap' }}>
               {DRAW_OPTIONS.map(option => (
                 <Button
@@ -414,7 +399,6 @@ const FloatingDrawDialog = ({
               ))}
             </Box>
 
-            {/* 新题抽取设置 */}
             {drawType === 'new' && (
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>
@@ -507,7 +491,6 @@ const FloatingDrawDialog = ({
               </Box>
             )}
 
-            {/* 范围抽取设置（全量抽取） */}
             {drawType === 'range' && (
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>
@@ -564,7 +547,6 @@ const FloatingDrawDialog = ({
               </Box>
             )}
 
-            {/* 范围随机抽取设置 */}
             {drawType === 'rangeRandom' && (
               <Box sx={{ mb: 2 }}>
                 <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1 }}>
@@ -651,7 +633,6 @@ const FloatingDrawDialog = ({
               </Typography>
             </Alert>
 
-            {/* 开始抽取按钮 */}
             <Button
               fullWidth
               variant="contained"
@@ -668,7 +649,6 @@ const FloatingDrawDialog = ({
           </Box>
         </Box>
 
-        {/* 右侧：题目列表 - 桌面端占剩余宽度，手机端全宽 */}
         <Box
           sx={{
             flex: 1,
@@ -704,7 +684,6 @@ const FloatingDrawDialog = ({
             </Box>
           ) : (
             <>
-              {/* 题目列表 */}
               <List sx={{
                 width: '100%',
                 bgcolor: 'background.paper',
@@ -724,7 +703,6 @@ const FloatingDrawDialog = ({
                     }}
                   >
                     <Box sx={{ display: 'flex', alignItems: 'center', width: '100%', gap: 2 }}>
-                      {/* 题号 */}
                       <Box
                         sx={{
                           width: 36,
@@ -743,7 +721,6 @@ const FloatingDrawDialog = ({
                         {idx + 1}
                       </Box>
 
-                      {/* 题目预览 */}
                       <Box sx={{ flex: 1, minWidth: 0 }}>
                         <Typography variant="body2" sx={{ fontWeight: 500, mb: 0.5, wordBreak: 'break-word' }}>
                           {q.question.length > 60 ? q.question.substring(0, 60) + '...' : q.question}
@@ -764,7 +741,6 @@ const FloatingDrawDialog = ({
 
               <Divider sx={{ my: 1 }} />
 
-              {/* 操作按钮 */}
               <Box sx={{ display: 'flex', gap: 2, flexShrink: 0 }}>
                 <Button
                   fullWidth
@@ -820,6 +796,10 @@ const LearningCenter = () => {
   // 界面状态
   const [showTest, setShowTest] = useState(false);
 
+  // 翻译器状态
+  const [translatorOpen, setTranslatorOpen] = useState(false);
+  const translatorRef = useRef(null);
+
   // 新题统计状态
   const [newQuestionStats, setNewQuestionStats] = useState({
     total: 0,
@@ -831,6 +811,45 @@ const LearningCenter = () => {
 
   const currentSource = dataSources.find(s => s.id === dataSource) || dataSources[0];
   const memoizedAllQuestions = useMemo(() => allQuestions, [allQuestions]);
+
+  // 监听文本选择事件
+  useEffect(() => {
+    const handleSelectionChange = () => {
+      const selection = window.getSelection();
+      const selectedText = selection?.toString().trim();
+      
+      if (selectedText && selectedText.length > 0 && selectedText.length <= 100) {
+        // 检查是否为英文单词或短语（基本检测）
+        const isEnglish = /^[a-zA-Z\s\-']+$/.test(selectedText);
+        if (isEnglish) {
+          const wordCount = selectedText.split(/\s+/).filter(w => w.length > 0).length;
+          if (wordCount <= 7) {
+            console.log('【LearningCenter】检测到选中文本:', selectedText);
+            
+            // 如果翻译器已打开，直接翻译
+            if (translatorRef.current) {
+              translatorRef.current.translateText(selectedText);
+            }
+            
+            // 自动打开翻译器（如果未打开）
+            if (!translatorOpen) {
+              setTranslatorOpen(true);
+            }
+          }
+        }
+      }
+    };
+
+    // 监听鼠标松开事件（选择完成后）
+    document.addEventListener('mouseup', handleSelectionChange);
+    // 也监听触摸屏的 touchend 事件
+    document.addEventListener('touchend', handleSelectionChange);
+    
+    return () => {
+      document.removeEventListener('mouseup', handleSelectionChange);
+      document.removeEventListener('touchend', handleSelectionChange);
+    };
+  }, [translatorOpen]);
 
   useEffect(() => {
     fetchDataSources();
@@ -1031,7 +1050,6 @@ const LearningCenter = () => {
     }
   };
 
-  // 范围全量抽取
   const fetchRangeQuestions = async (start, end) => {
     console.log('【LearningCenter】开始范围全量抽取', { start, end });
     setIsLoadingQuestions(true);
@@ -1076,13 +1094,11 @@ const LearningCenter = () => {
     }
   };
 
-  // 新增：范围随机抽取
   const fetchRangeRandomQuestions = async (start, end, count) => {
     console.log('【LearningCenter】开始范围随机抽取', { start, end, count });
     setIsLoadingQuestions(true);
 
     try {
-      // 筛选范围内的所有题目
       const availableQuestions = allQuestions.filter(q => {
         const qId = parseInt(q.id);
         return qId >= start && qId <= end;
@@ -1101,7 +1117,6 @@ const LearningCenter = () => {
         return;
       }
 
-      // 检查抽取数量是否超过可用数量
       const actualCount = Math.min(count, availableQuestions.length);
       
       if (actualCount < count) {
@@ -1112,8 +1127,6 @@ const LearningCenter = () => {
         });
       }
 
-      // 随机抽取指定数量的题目（不重复）
-      // Fisher-Yates 洗牌算法打乱整个数组，然后取前 actualCount 个
       const shuffled = [...availableQuestions];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -1196,6 +1209,14 @@ const LearningCenter = () => {
     navigate('/');
   };
 
+  const handleOpenTranslator = () => {
+    setTranslatorOpen(true);
+  };
+
+  const handleCloseTranslator = () => {
+    setTranslatorOpen(false);
+  };
+
   useEffect(() => {
     console.log('【LearningCenter】currentQuestions 状态更新:', {
       length: currentQuestions.length
@@ -1273,6 +1294,16 @@ const LearningCenter = () => {
             </FormControl>
           </Box>
 
+          <Tooltip title="打开翻译器">
+            <IconButton 
+              size="small" 
+              onClick={handleOpenTranslator}
+              sx={{ color: '#4ec9b0' }}
+            >
+              <TranslateIcon />
+            </IconButton>
+          </Tooltip>
+
           <Button
             variant="contained"
             startIcon={<AddIcon />}
@@ -1299,7 +1330,6 @@ const LearningCenter = () => {
 
       <Container maxWidth="xl" sx={{ py: 3 }}>
         <TabPanel value={currentTab} index={0}>
-          {/* 测试区域 */}
           {showTest && currentQuestions.length > 0 ? (
             <Fade in={showTest}>
               <Box>
@@ -1392,6 +1422,16 @@ const LearningCenter = () => {
         questions={currentQuestions}
         onStartTest={handleStartTest}
         onRedraw={handleRedraw}
+      />
+
+      {/* 翻译器组件 */}
+      <WordTranslator
+        ref={translatorRef}
+        open={translatorOpen}
+        onClose={handleCloseTranslator}
+        defaultCompact={true}
+        enableClipboardDetection={true}
+        onRequestOpen={() => setTranslatorOpen(true)}
       />
 
       <Snackbar

@@ -1,0 +1,250 @@
+{
+  "metadata": {
+    "id": "7_4_1",
+    "title": "7_4_1",
+    "totalSentences": 14,
+    "totalWords": 97,
+    "duration": 60.16,
+    "difficulty": "beginner",
+    "convertedFrom": "7_4_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 16.72,
+      "endTime": 19.12,
+      "text": "Friday, 30 May",
+      "words": [
+        "Friday",
+        "30",
+        "May"
+      ],
+      "translation": "[需要翻译: Friday, 30 May]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 20.096,
+      "endTime": 23.216,
+      "text": "Today we went on a school trip to a farm !",
+      "words": [
+        "Today",
+        "we",
+        "went",
+        "on",
+        "a",
+        "school",
+        "trip",
+        "to",
+        "a",
+        "farm"
+      ],
+      "translation": "[需要翻译: Today we went on a school trip to a farm !]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 23.76,
+      "endTime": 27.632,
+      "text": "It was tiring but great fun! In the morning,",
+      "words": [
+        "It",
+        "was",
+        "tiring",
+        "but",
+        "great",
+        "fun",
+        "In",
+        "the",
+        "morning"
+      ],
+      "translation": "[需要翻译: It was tiring but great fun! In the morning,]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 27.776,
+      "endTime": 29.248,
+      "text": "we explored the farm.",
+      "words": [
+        "we",
+        "explored",
+        "the",
+        "farm"
+      ],
+      "translation": "[需要翻译: we explored the farm.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 29.52,
+      "endTime": 33.264,
+      "text": "There were large tents with tomatoes, cucumbers,",
+      "words": [
+        "There",
+        "were",
+        "large",
+        "tents",
+        "with",
+        "tomatoes",
+        "cucumbers"
+      ],
+      "translation": "[需要翻译: There were large tents with tomatoes, cucumbers,]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 33.424,
+      "endTime": 35.648,
+      "text": "and many other fruits and vegetables.",
+      "words": [
+        "and",
+        "many",
+        "other",
+        "fruits",
+        "and",
+        "vegetables"
+      ],
+      "translation": "[需要翻译: and many other fruits and vegetables.]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 36.128,
+      "endTime": 41.904,
+      "text": "The farmer told us about how these fruits and vegetables go from the fields to our tables.",
+      "words": [
+        "The",
+        "farmer",
+        "told",
+        "us",
+        "about",
+        "how",
+        "these",
+        "fruits",
+        "and",
+        "vegetables",
+        "go",
+        "from",
+        "the",
+        "fields",
+        "to",
+        "our",
+        "tables"
+      ],
+      "translation": "[需要翻译: The farmer told us about how these fruits and vegetables go from the fields to our tables.]",
+      "wordCount": 17
+    },
+    {
+      "id": 8,
+      "startTime": 42.304,
+      "endTime": 43.712,
+      "text": "I was very interested",
+      "words": [
+        "I",
+        "was",
+        "very",
+        "interested"
+      ],
+      "translation": "[需要翻译: I was very interested]",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 43.808,
+      "endTime": 46.752,
+      "text": "because I usually only see them in the supermarket.",
+      "words": [
+        "because",
+        "I",
+        "usually",
+        "only",
+        "see",
+        "them",
+        "in",
+        "the",
+        "supermarket"
+      ],
+      "translation": "[需要翻译: because I usually only see them in the supermarket.]",
+      "wordCount": 9
+    },
+    {
+      "id": 10,
+      "startTime": 47.536,
+      "endTime": 49.568,
+      "text": "Then we got straight to work!",
+      "words": [
+        "Then",
+        "we",
+        "got",
+        "straight",
+        "to",
+        "work"
+      ],
+      "translation": "[需要翻译: Then we got straight to work!]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 49.824,
+      "endTime": 52.592,
+      "text": "First, we picked some strawberries.",
+      "words": [
+        "First",
+        "we",
+        "picked",
+        "some",
+        "strawberries"
+      ],
+      "translation": "[需要翻译: First, we picked some strawberries.]",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 52.848,
+      "endTime": 54.624,
+      "text": "The work seemed easy,",
+      "words": [
+        "The",
+        "work",
+        "seemed",
+        "easy"
+      ],
+      "translation": "[需要翻译: The work seemed easy,]",
+      "wordCount": 4
+    },
+    {
+      "id": 13,
+      "startTime": 54.8,
+      "endTime": 56.928,
+      "text": "but it took time to get it right.",
+      "words": [
+        "but",
+        "it",
+        "took",
+        "time",
+        "to",
+        "get",
+        "it",
+        "right"
+      ],
+      "translation": "[需要翻译: but it took time to get it right.]",
+      "wordCount": 8
+    },
+    {
+      "id": 14,
+      "startTime": 57.312,
+      "endTime": 60.16,
+      "text": "Slowly, we filled many baskets.",
+      "words": [
+        "Slowly",
+        "we",
+        "filled",
+        "many",
+        "baskets"
+      ],
+      "translation": "[需要翻译: Slowly, we filled many baskets.]",
+      "wordCount": 5
+    }
+  ]
+}

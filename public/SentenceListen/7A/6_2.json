@@ -1,0 +1,181 @@
+{
+  "metadata": {
+    "id": "6_2",
+    "title": "6_2",
+    "totalSentences": 8,
+    "totalWords": 88,
+    "duration": 33.725,
+    "difficulty": "beginner",
+    "convertedFrom": "6_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0,
+      "endTime": 5,
+      "text": "Han Lin: Why are you at school so early, Peter? It's only seven o'clock.",
+      "words": [
+        "Han",
+        "Lin:",
+        "Why",
+        "are",
+        "you",
+        "at",
+        "school",
+        "so",
+        "early",
+        "Peter",
+        "It's",
+        "only",
+        "seven",
+        "o'clock"
+      ],
+      "translation": "[需要翻译: Han Lin: Why are you at school so early, Peter? It's only seven o'clock.]",
+      "wordCount": 14
+    },
+    {
+      "id": 2,
+      "startTime": 5.35,
+      "endTime": 10.275,
+      "text": "Peter: I'm on duty today. You're here early too, Han Lin",
+      "words": [
+        "Peter:",
+        "I'm",
+        "on",
+        "duty",
+        "today",
+        "You're",
+        "here",
+        "early",
+        "too",
+        "Han",
+        "Lin"
+      ],
+      "translation": "[需要翻译: Peter: I'm on duty today. You're here early too, Han Lin]",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 10.275,
+      "endTime": 16.25,
+      "text": "Han Lin: I like to do some reading before class. What time do you usually get up?",
+      "words": [
+        "Han",
+        "Lin:",
+        "I",
+        "like",
+        "to",
+        "do",
+        "some",
+        "reading",
+        "before",
+        "class",
+        "What",
+        "time",
+        "do",
+        "you",
+        "usually",
+        "get",
+        "up"
+      ],
+      "translation": "[需要翻译: Han Lin: I like to do some reading before class. What time do you usually get up?]",
+      "wordCount": 17
+    },
+    {
+      "id": 4,
+      "startTime": 16.4,
+      "endTime": 18.1,
+      "text": "Peter: At half past six.",
+      "words": [
+        "Peter:",
+        "At",
+        "half",
+        "past",
+        "six"
+      ],
+      "translation": "[需要翻译: Peter: At half past six.]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 18.25,
+      "endTime": 20.05,
+      "text": "Han Lin: When do you have breakfast?",
+      "words": [
+        "Han",
+        "Lin:",
+        "When",
+        "do",
+        "you",
+        "have",
+        "breakfast"
+      ],
+      "translation": "[需要翻译: Han Lin: When do you have breakfast?]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 20.4,
+      "endTime": 25.975,
+      "text": "Peter: At ten to seven. Before that, I brush my teeth and take a shower.",
+      "words": [
+        "Peter:",
+        "At",
+        "ten",
+        "to",
+        "seven",
+        "Before",
+        "that",
+        "I",
+        "brush",
+        "my",
+        "teeth",
+        "and",
+        "take",
+        "a",
+        "shower"
+      ],
+      "translation": "[需要翻译: Peter: At ten to seven. Before that, I brush my teeth and take a shower.]",
+      "wordCount": 15
+    },
+    {
+      "id": 7,
+      "startTime": 26.35,
+      "endTime": 29.575,
+      "text": "Han Lin: Oh, I usually take a shower at night.",
+      "words": [
+        "Han",
+        "Lin:",
+        "Oh",
+        "I",
+        "usually",
+        "take",
+        "a",
+        "shower",
+        "at",
+        "night"
+      ],
+      "translation": "[需要翻译: Han Lin: Oh, I usually take a shower at night.]",
+      "wordCount": 10
+    },
+    {
+      "id": 8,
+      "startTime": 30.1,
+      "endTime": 33.725,
+      "text": "Peter: Really? My family take showers in the morning.",
+      "words": [
+        "Peter:",
+        "Really",
+        "My",
+        "family",
+        "take",
+        "showers",
+        "in",
+        "the",
+        "morning"
+      ],
+      "translation": "[需要翻译: Peter: Really? My family take showers in the morning.]",
+      "wordCount": 9
+    }
+  ]
+}

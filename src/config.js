@@ -4,7 +4,8 @@ const isDevelopment = window.location.hostname === 'localhost' || window.locatio
 export const G_config = { // 全局配置
     // 根据环境自动选择服务器地址
     G_server_address: isDevelopment 
-        ? 'http://localhost:3001/server'  // 开发环境
+        // ? 'http://localhost:3001/server'  // 开发环境
+        ? 'https://www.ddstudent.xyz/server'  // 开发环境
         : 'https://www.ddstudent.xyz/server', // 生产环境
     
     G_template: 'template_english_test.js',

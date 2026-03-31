@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "id": "star_2_1",
+    "title": "star_2_1",
+    "totalSentences": 12,
+    "totalWords": 77,
+    "duration": 65.28,
+    "difficulty": "beginner",
+    "convertedFrom": "star_2_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 12.144,
+      "endTime": 15.312,
+      "text": "Hi, Ella! I have a new schoolbag.",
+      "words": [
+        "Hi",
+        "Ella",
+        "I",
+        "have",
+        "a",
+        "new",
+        "schoolbag"
+      ],
+      "translation": "[需要翻译: Hi, Ella! I have a new schoolbag.]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 15.888,
+      "endTime": 18.928,
+      "text": "Cool! What colour is it, Teng Fei?",
+      "words": [
+        "Cool",
+        "What",
+        "colour",
+        "is",
+        "it",
+        "Teng",
+        "Fei"
+      ],
+      "translation": "[需要翻译: Cool! What colour is it, Teng Fei?]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 19.296,
+      "endTime": 22.736,
+      "text": "It’s blue. Blue is my favourite colour.",
+      "words": [
+        "It’s",
+        "blue",
+        "Blue",
+        "is",
+        "my",
+        "favourite",
+        "colour"
+      ],
+      "translation": "[需要翻译: It’s blue. Blue is my favourite colour.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 23.568,
+      "endTime": 25.344,
+      "text": "I like blue too.",
+      "words": [
+        "I",
+        "like",
+        "blue",
+        "too"
+      ],
+      "translation": "[需要翻译: I like blue too.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 30.416,
+      "endTime": 34.432,
+      "text": "Hello, Emma! I have a new bicycle.",
+      "words": [
+        "Hello",
+        "Emma",
+        "I",
+        "have",
+        "a",
+        "new",
+        "bicycle"
+      ],
+      "translation": "[需要翻译: Hello, Emma! I have a new bicycle.]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 34.56,
+      "endTime": 39.888,
+      "text": "Really? What colour is it? It’s black and orange.",
+      "words": [
+        "Really",
+        "What",
+        "colour",
+        "is",
+        "it",
+        "It’s",
+        "black",
+        "and",
+        "orange"
+      ],
+      "translation": "[需要翻译: Really? What colour is it? It’s black and orange.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 40.08,
+      "endTime": 43.104,
+      "text": "Great. Can you show me tomorrow?",
+      "words": [
+        "Great",
+        "Can",
+        "you",
+        "show",
+        "me",
+        "tomorrow"
+      ],
+      "translation": "[需要翻译: Great. Can you show me tomorrow?]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 43.344,
+      "endTime": 46.048,
+      "text": "Sure, I’ll be happy to",
+      "words": [
+        "Sure",
+        "I’ll",
+        "be",
+        "happy",
+        "to"
+      ],
+      "translation": "[需要翻译: Sure, I’ll be happy to]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 51.056,
+      "endTime": 54.16,
+      "text": "Hey, Peter! Look at my new shoes.",
+      "words": [
+        "Hey",
+        "Peter",
+        "Look",
+        "at",
+        "my",
+        "new",
+        "shoes"
+      ],
+      "translation": "[需要翻译: Hey, Peter! Look at my new shoes.]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 54.592,
+      "endTime": 59.728,
+      "text": "Oh, they look great. I have new shoes too.",
+      "words": [
+        "Oh",
+        "they",
+        "look",
+        "great",
+        "I",
+        "have",
+        "new",
+        "shoes",
+        "too"
+      ],
+      "translation": "[需要翻译: Oh, they look great. I have new shoes too.]",
+      "wordCount": 9
+    },
+    {
+      "id": 11,
+      "startTime": 60.176,
+      "endTime": 62.096,
+      "text": "Really? What colour are they?",
+      "words": [
+        "Really",
+        "What",
+        "colour",
+        "are",
+        "they"
+      ],
+      "translation": "[需要翻译: Really? What colour are they?]",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 62.544,
+      "endTime": 65.28,
+      "text": "They’re red. That’s cool!",
+      "words": [
+        "They’re",
+        "red",
+        "That’s",
+        "cool"
+      ],
+      "translation": "[需要翻译: They’re red. That’s cool!]",
+      "wordCount": 4
+    }
+  ]
+}

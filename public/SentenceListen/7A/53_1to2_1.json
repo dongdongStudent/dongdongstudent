@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "id": "53_1to2_1",
+    "title": "53_1to2_1",
+    "totalSentences": 15,
+    "totalWords": 107,
+    "duration": 136.992,
+    "difficulty": "beginner",
+    "convertedFrom": "53_1to2_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 40.784,
+      "endTime": 42.992,
+      "text": "Good morning, Helen.",
+      "words": [
+        "Good",
+        "morning",
+        "Helen"
+      ],
+      "translation": "[需要翻译: Good morning, Helen.]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 45.44,
+      "endTime": 47.92,
+      "text": "Cindy, how are you?",
+      "words": [
+        "Cindy",
+        "how",
+        "are",
+        "you"
+      ],
+      "translation": "[需要翻译: Cindy, how are you?]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 51.264,
+      "endTime": 54.192,
+      "text": "Allen, spell goose please.",
+      "words": [
+        "Allen",
+        "spell",
+        "goose",
+        "please"
+      ],
+      "translation": "[需要翻译: Allen, spell goose please.]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 57.2,
+      "endTime": 60.224,
+      "text": "Andy, what color is your pen?",
+      "words": [
+        "Andy",
+        "what",
+        "color",
+        "is",
+        "your",
+        "pen"
+      ],
+      "translation": "[需要翻译: Andy, what color is your pen?]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 63.44,
+      "endTime": 65.392,
+      "text": "Who is she?",
+      "words": [
+        "Who",
+        "is",
+        "she"
+      ],
+      "translation": "[需要翻译: Who is she?]",
+      "wordCount": 3
+    },
+    {
+      "id": 6,
+      "startTime": 70.4,
+      "endTime": 76.24,
+      "text": "Hi, my name is Jenny Green. Hello, I'm Dale Miller.",
+      "words": [
+        "Hi",
+        "my",
+        "name",
+        "is",
+        "Jenny",
+        "Green",
+        "Hello",
+        "I'm",
+        "Dale",
+        "Miller"
+      ],
+      "translation": "[需要翻译: Hi, my name is Jenny Green. Hello, I'm Dale Miller.]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 76.96,
+      "endTime": 81.36,
+      "text": "Question: What's the boy's first name?",
+      "words": [
+        "Question:",
+        "What's",
+        "the",
+        "boy's",
+        "first",
+        "name"
+      ],
+      "translation": "[需要翻译: Question: What's the boy's first name?]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 84.912,
+      "endTime": 89.744,
+      "text": "Mary, are you from China? Yes, I am.",
+      "words": [
+        "Mary",
+        "are",
+        "you",
+        "from",
+        "China",
+        "Yes",
+        "I",
+        "am"
+      ],
+      "translation": "[需要翻译: Mary, are you from China? Yes, I am.]",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 90.288,
+      "endTime": 94.464,
+      "text": "Question: Where is Mary from?",
+      "words": [
+        "Question:",
+        "Where",
+        "is",
+        "Mary",
+        "from"
+      ],
+      "translation": "[需要翻译: Question: Where is Mary from?]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 97.504,
+      "endTime": 104.128,
+      "text": "Wow, you have a dog in your family? Yeah, its name is Coco.",
+      "words": [
+        "Wow",
+        "you",
+        "have",
+        "a",
+        "dog",
+        "in",
+        "your",
+        "family",
+        "Yeah",
+        "its",
+        "name",
+        "is",
+        "Coco"
+      ],
+      "translation": "[需要翻译: Wow, you have a dog in your family? Yeah, its name is Coco.]",
+      "wordCount": 13
+    },
+    {
+      "id": 11,
+      "startTime": 104.864,
+      "endTime": 108.752,
+      "text": "Question: What's the dog's name?",
+      "words": [
+        "Question:",
+        "What's",
+        "the",
+        "dog's",
+        "name"
+      ],
+      "translation": "[需要翻译: Question: What's the dog's name?]",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 111.312,
+      "endTime": 119.568,
+      "text": "Hi, Eric. Who's the girl in blue? Hi, Mary. She is my sister and she likes blue very much.",
+      "words": [
+        "Hi",
+        "Eric",
+        "Who's",
+        "the",
+        "girl",
+        "in",
+        "blue",
+        "Hi",
+        "Mary",
+        "She",
+        "is",
+        "my",
+        "sister",
+        "and",
+        "she",
+        "likes",
+        "blue",
+        "very",
+        "much"
+      ],
+      "translation": "[需要翻译: Hi, Eric. Who's the girl in blue? Hi, Mary. She is my sister and she likes blue very much.]",
+      "wordCount": 19
+    },
+    {
+      "id": 13,
+      "startTime": 121.984,
+      "endTime": 124.976,
+      "text": "Question: What colour does Eric's sister like?",
+      "words": [
+        "Question:",
+        "What",
+        "colour",
+        "does",
+        "Eric's",
+        "sister",
+        "like"
+      ],
+      "translation": "[需要翻译: Question: What colour does Eric's sister like?]",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 128.336,
+      "endTime": 132.72,
+      "text": "Grace, how old are you? I'm 8 years old.",
+      "words": [
+        "Grace",
+        "how",
+        "old",
+        "are",
+        "you",
+        "I'm",
+        "8",
+        "years",
+        "old"
+      ],
+      "translation": "[需要翻译: Grace, how old are you? I'm 8 years old.]",
+      "wordCount": 9
+    },
+    {
+      "id": 15,
+      "startTime": 133.296,
+      "endTime": 136.992,
+      "text": "Question: How old is Grace?",
+      "words": [
+        "Question:",
+        "How",
+        "old",
+        "is",
+        "Grace"
+      ],
+      "translation": "[需要翻译: Question: How old is Grace?]",
+      "wordCount": 5
+    }
+  ]
+}

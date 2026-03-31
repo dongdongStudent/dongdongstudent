@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "id": "4_2",
+    "title": "4_2",
+    "totalSentences": 15,
+    "totalWords": 82,
+    "duration": 46.704,
+    "difficulty": "beginner",
+    "convertedFrom": "4_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.496,
+      "endTime": 1.936,
+      "text": "What’s your next class?",
+      "words": ["What’s", "your", "next", "class"],
+      "translation": "你的下一节课是什么？",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 2.448,
+      "endTime": 5.664,
+      "text": "History. It’s my favourite subject.",
+      "words": ["History", "It’s", "my", "favourite", "subject"],
+      "translation": "历史。这是我最喜欢的科目。",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 6.464,
+      "endTime": 8.048,
+      "text": "Why do you like it?",
+      "words": ["Why", "do", "you", "like", "it"],
+      "translation": "你为什么喜欢它？",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 8.832,
+      "endTime": 11.952,
+      "text": "It’s interesting to learn about the past.",
+      "words": ["It’s", "interesting", "to", "learn", "about", "the", "past"],
+      "translation": "了解过去很有趣。",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 12.848,
+      "endTime": 15.36,
+      "text": "What’s your favourite subject, Meimei?",
+      "words": ["What’s", "your", "favourite", "subject", "Meimei"],
+      "translation": "Meimei，你最喜欢的科目是什么？",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 16.016,
+      "endTime": 18.608,
+      "text": "My favourite subject is English.",
+      "words": ["My", "favourite", "subject", "is", "English"],
+      "translation": "我最喜欢的科目是英语。",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 18.944,
+      "endTime": 22.768,
+      "text": "It’s useful, and my English teacher is really nice.",
+      "words": ["It’s", "useful", "and", "my", "English", "teacher", "is", "really", "nice"],
+      "translation": "它很有用，而且我的英语老师真的很好。",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 23.504,
+      "endTime": 25.104,
+      "text": "How about you, Binbin?",
+      "words": ["How", "about", "you", "Binbin"],
+      "translation": "Binbin，你呢？",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 25.68,
+      "endTime": 30.112,
+      "text": "I like all the subjects, but my favourite is maths.",
+      "words": ["I", "like", "all", "the", "subjects", "but", "my", "favourite", "is", "maths"],
+      "translation": "我喜欢所有科目，但我最喜欢的是数学。",
+      "wordCount": 10
+    },
+    {
+      "id": 10,
+      "startTime": 31.168,
+      "endTime": 31.84,
+      "text": "Why?",
+      "words": ["Why"],
+      "translation": "为什么？",
+      "wordCount": 1
+    },
+    {
+      "id": 11,
+      "startTime": 32.64,
+      "endTime": 34.672,
+      "text": "Because I’m good with numbers.",
+      "words": ["Because", "I’m", "good", "with", "numbers"],
+      "translation": "因为我擅长数字。",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 35.52,
+      "endTime": 37.968,
+      "text": "Oh, it’s difficult for me.",
+      "words": ["Oh", "it’s", "difficult", "for", "me"],
+      "translation": "哦，对我来说很难。",
+      "wordCount": 5
+    },
+    {
+      "id": 13,
+      "startTime": 38.832,
+      "endTime": 40.96,
+      "text": "Can you help me with this subject?",
+      "words": ["Can", "you", "help", "me", "with", "this", "subject"],
+      "translation": "你能在这门课上帮我吗？",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 41.712,
+      "endTime": 42.336,
+      "text": "Sure!",
+      "words": ["Sure"],
+      "translation": "当然！",
+      "wordCount": 1
+    },
+    {
+      "id": 15,
+      "startTime": 43.136,
+      "endTime": 46.704,
+      "text": "Hey, look at the time. Let’s go to class!",
+      "words": ["Hey", "look", "at", "the", "time", "Let’s", "go", "to", "class"],
+      "translation": "嘿，看看时间。我们去上课吧！",
+      "wordCount": 9
+    }
+  ]
+}

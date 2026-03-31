@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "id": "6_5_3",
+    "title": "6_5_3",
+    "totalSentences": 9,
+    "totalWords": 61,
+    "duration": 99.712,
+    "difficulty": "beginner",
+    "convertedFrom": "6_5_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 56.112,
+      "endTime": 58.144,
+      "text": "so I’m encouraging him",
+      "words": [
+        "so",
+        "I’m",
+        "encouraging",
+        "him"
+      ],
+      "translation": "[需要翻译: so I’m encouraging him]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 64.096,
+      "endTime": 66.944,
+      "text": "The sun is shining through the clouds!",
+      "words": [
+        "The",
+        "sun",
+        "is",
+        "shining",
+        "through",
+        "the",
+        "clouds"
+      ],
+      "translation": "[需要翻译: The sun is shining through the clouds!]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 67.184,
+      "endTime": 69.088,
+      "text": "It’s a lovely sight.",
+      "words": [
+        "It’s",
+        "a",
+        "lovely",
+        "sight"
+      ],
+      "translation": "[需要翻译: It’s a lovely sight.]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 69.632,
+      "endTime": 72.96,
+      "text": "I’m so glad we’re here at Bright Peak",
+      "words": [
+        "I’m",
+        "so",
+        "glad",
+        "we’re",
+        "here",
+        "at",
+        "Bright",
+        "Peak"
+      ],
+      "translation": "[需要翻译: I’m so glad we’re here at Bright Peak]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 79.808,
+      "endTime": 84.128,
+      "text": "Today I’m visiting Mount Huangshan with my family.",
+      "words": [
+        "Today",
+        "I’m",
+        "visiting",
+        "Mount",
+        "Huangshan",
+        "with",
+        "my",
+        "family"
+      ],
+      "translation": "[需要翻译: Today I’m visiting Mount Huangshan with my family.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 85.184,
+      "endTime": 88.384,
+      "text": "I’m not really enjoying the experience.",
+      "words": [
+        "I’m",
+        "not",
+        "really",
+        "enjoying",
+        "the",
+        "experience"
+      ],
+      "translation": "[需要翻译: I’m not really enjoying the experience.]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 88.928,
+      "endTime": 92.432,
+      "text": "Everything looks grey, and you can’t see much",
+      "words": [
+        "Everything",
+        "looks",
+        "grey",
+        "and",
+        "you",
+        "can’t",
+        "see",
+        "much"
+      ],
+      "translation": "[需要翻译: Everything looks grey, and you can’t see much]",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 92.432,
+      "endTime": 96.912,
+      "text": "because of the heavy fog. The ground is very wet,",
+      "words": [
+        "because",
+        "of",
+        "the",
+        "heavy",
+        "fog",
+        "The",
+        "ground",
+        "is",
+        "very",
+        "wet"
+      ],
+      "translation": "[需要翻译: because of the heavy fog. The ground is very wet,]",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 97.264,
+      "endTime": 99.712,
+      "text": "so we have to climb slowly",
+      "words": [
+        "so",
+        "we",
+        "have",
+        "to",
+        "climb",
+        "slowly"
+      ],
+      "translation": "[需要翻译: so we have to climb slowly]",
+      "wordCount": 6
+    }
+  ]
+}

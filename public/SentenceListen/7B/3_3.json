@@ -1,0 +1,165 @@
+{
+  "metadata": {
+    "id": "3_3",
+    "title": "3_3",
+    "totalSentences": 9,
+    "totalWords": 62,
+    "duration": 110.688,
+    "difficulty": "beginner",
+    "convertedFrom": "3_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 79.312,
+      "endTime": 82.544,
+      "text": "Ella, is this tennis racket yours?",
+      "words": [
+        "Ella",
+        "is",
+        "this",
+        "tennis",
+        "racket",
+        "yours"
+      ],
+      "translation": "[需要翻译: Ella, is this tennis racket yours?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 82.864,
+      "endTime": 88.24,
+      "text": "No, it’s not mine. Ask Han Lin. I think it’s his.",
+      "words": [
+        "No",
+        "it’s",
+        "not",
+        "mine",
+        "Ask",
+        "Han",
+        "Lin",
+        "I",
+        "think",
+        "it’s",
+        "his"
+      ],
+      "translation": "[需要翻译: No, it’s not mine. Ask Han Lin. I think it’s his.]",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 88.624,
+      "endTime": 93.232,
+      "text": "Oh, you’re right. It has “HL” on it.",
+      "words": [
+        "Oh",
+        "you’re",
+        "right",
+        "It",
+        "has",
+        "“HL”",
+        "on",
+        "it"
+      ],
+      "translation": "[需要翻译: Oh, you’re right. It has “HL” on it.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 94.08,
+      "endTime": 96.16,
+      "text": "Do you play tennis, Binbin?",
+      "words": [
+        "Do",
+        "you",
+        "play",
+        "tennis",
+        "Binbin"
+      ],
+      "translation": "[需要翻译: Do you play tennis, Binbin?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 96.4,
+      "endTime": 100.96,
+      "text": "I never do. I don’t like it. What about you?",
+      "words": [
+        "I",
+        "never",
+        "do",
+        "I",
+        "don’t",
+        "like",
+        "it",
+        "What",
+        "about",
+        "you"
+      ],
+      "translation": "[需要翻译: I never do. I don’t like it. What about you?]",
+      "wordCount": 10
+    },
+    {
+      "id": 6,
+      "startTime": 101.248,
+      "endTime": 102.624,
+      "text": "I like tennis.",
+      "words": [
+        "I",
+        "like",
+        "tennis"
+      ],
+      "translation": "[需要翻译: I like tennis.]",
+      "wordCount": 3
+    },
+    {
+      "id": 7,
+      "startTime": 102.928,
+      "endTime": 104.752,
+      "text": "How often do you play it?",
+      "words": [
+        "How",
+        "often",
+        "do",
+        "you",
+        "play",
+        "it"
+      ],
+      "translation": "[需要翻译: How often do you play it?]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 105.104,
+      "endTime": 108.752,
+      "text": "I play it three times a week, and sometimes more!",
+      "words": [
+        "I",
+        "play",
+        "it",
+        "three",
+        "times",
+        "a",
+        "week",
+        "and",
+        "sometimes",
+        "more"
+      ],
+      "translation": "[需要翻译: I play it three times a week, and sometimes more!]",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 109.168,
+      "endTime": 110.688,
+      "text": "That’s a lot",
+      "words": [
+        "That’s",
+        "a",
+        "lot"
+      ],
+      "translation": "[需要翻译: That’s a lot]",
+      "wordCount": 3
+    }
+  ]
+}

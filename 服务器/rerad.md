@@ -1,1 +1,0 @@
-    "start": "nodemon  main.js . --ignore resource/* ."

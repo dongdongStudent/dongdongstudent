@@ -1,0 +1,204 @@
+{
+  "metadata": {
+    "id": "4_2",
+    "title": "4_2",
+    "totalSentences": 11,
+    "totalWords": 81,
+    "duration": 54.608,
+    "difficulty": "beginner",
+    "convertedFrom": "4_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 15.168,
+      "endTime": 19.152,
+      "text": "What do you usually eat for breakfast in England, Jane?",
+      "words": [
+        "What",
+        "do",
+        "you",
+        "usually",
+        "eat",
+        "for",
+        "breakfast",
+        "in",
+        "England",
+        "Jane"
+      ],
+      "translation": "[需要翻译: What do you usually eat for breakfast in England, Jane?]",
+      "wordCount": 10
+    },
+    {
+      "id": 2,
+      "startTime": 19.488,
+      "endTime": 22.544,
+      "text": "I usually have some bread and milk.",
+      "words": [
+        "I",
+        "usually",
+        "have",
+        "some",
+        "bread",
+        "and",
+        "milk"
+      ],
+      "translation": "[需要翻译: I usually have some bread and milk.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 22.864,
+      "endTime": 26.032,
+      "text": "Sometimes I have eggs and beans.",
+      "words": [
+        "Sometimes",
+        "I",
+        "have",
+        "eggs",
+        "and",
+        "beans"
+      ],
+      "translation": "[需要翻译: Sometimes I have eggs and beans.]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 26.576,
+      "endTime": 28.096,
+      "text": "And what about lunch?",
+      "words": [
+        "And",
+        "what",
+        "about",
+        "lunch"
+      ],
+      "translation": "[需要翻译: And what about lunch?]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 28.576,
+      "endTime": 31.808,
+      "text": "Oh, I usually have lunch at school.",
+      "words": [
+        "Oh",
+        "I",
+        "usually",
+        "have",
+        "lunch",
+        "at",
+        "school"
+      ],
+      "translation": "[需要翻译: Oh, I usually have lunch at school.]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 32.112,
+      "endTime": 34.704,
+      "text": "Sometimes I have chicken or beef,",
+      "words": [
+        "Sometimes",
+        "I",
+        "have",
+        "chicken",
+        "or",
+        "beef"
+      ],
+      "translation": "[需要翻译: Sometimes I have chicken or beef,]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 35.184,
+      "endTime": 40.848,
+      "text": "sometimes I have sandwiches, and sometimes fish and chips.",
+      "words": [
+        "sometimes",
+        "I",
+        "have",
+        "sandwiches",
+        "and",
+        "sometimes",
+        "fish",
+        "and",
+        "chips"
+      ],
+      "translation": "[需要翻译: sometimes I have sandwiches, and sometimes fish and chips.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 41.12,
+      "endTime": 44.592,
+      "text": "I also drink juice or eat yogurt.",
+      "words": [
+        "I",
+        "also",
+        "drink",
+        "juice",
+        "or",
+        "eat",
+        "yogurt"
+      ],
+      "translation": "[需要翻译: I also drink juice or eat yogurt.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 45.056,
+      "endTime": 46.24,
+      "text": "And what about dinner?",
+      "words": [
+        "And",
+        "what",
+        "about",
+        "dinner"
+      ],
+      "translation": "[需要翻译: And what about dinner?]",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 46.784,
+      "endTime": 50.272,
+      "text": "My family really likes pizza and salad for dinner.",
+      "words": [
+        "My",
+        "family",
+        "really",
+        "likes",
+        "pizza",
+        "and",
+        "salad",
+        "for",
+        "dinner"
+      ],
+      "translation": "[需要翻译: My family really likes pizza and salad for dinner.]",
+      "wordCount": 9
+    },
+    {
+      "id": 11,
+      "startTime": 50.704,
+      "endTime": 54.608,
+      "text": "After that we sometimes have ice cream or cookies for a treat!",
+      "words": [
+        "After",
+        "that",
+        "we",
+        "sometimes",
+        "have",
+        "ice",
+        "cream",
+        "or",
+        "cookies",
+        "for",
+        "a",
+        "treat"
+      ],
+      "translation": "[需要翻译: After that we sometimes have ice cream or cookies for a treat!]",
+      "wordCount": 12
+    }
+  ]
+}

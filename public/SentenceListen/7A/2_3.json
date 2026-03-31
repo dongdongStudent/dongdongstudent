@@ -1,0 +1,166 @@
+{
+  "metadata": {
+    "id": "2_3",
+    "title": "2_3",
+    "totalSentences": 17,
+    "totalWords": 125,
+    "duration": 69.664,
+    "difficulty": "beginner",
+    "convertedFrom": "2_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.864,
+      "endTime": 3.376,
+      "text": "Hi, I’m Lily from Ireland.",
+      "words": ["Hi", "I’m", "Lily", "from", "Ireland"],
+      "translation": "嗨，我是 Lily，来自爱尔兰。",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 3.776,
+      "endTime": 6.56,
+      "text": "I love my big family.",
+      "words": ["I", "love", "my", "big", "family"],
+      "translation": "我爱我的大家庭。",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 6.88,
+      "endTime": 8.896,
+      "text": "Here’s a photo of us.",
+      "words": ["Here’s", "a", "photo", "of", "us"],
+      "translation": "这是我们的一张照片。",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 9.184,
+      "endTime": 11.92,
+      "text": "I’m the one with the pink hat.",
+      "words": ["I’m", "the", "one", "with", "the", "pink", "hat"],
+      "translation": "我就是那个戴粉色帽子的人。",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 12.368,
+      "endTime": 15.664,
+      "text": "This is my dad, Fred, on the left.",
+      "words": ["This", "is", "my", "dad", "Fred", "on", "the", "left"],
+      "translation": "左边的是我爸爸 Fred。",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 16.176,
+      "endTime": 21.056,
+      "text": "He’s very handsome. He often plays tennis with me.",
+      "words": ["He’s", "very", "handsome", "He", "often", "plays", "tennis", "with", "me"],
+      "translation": "他非常帅。他经常和我一起打网球。",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 21.696,
+      "endTime": 25.088,
+      "text": "My little brother, Sam, is on his knee.",
+      "words": ["My", "little", "brother", "Sam", "is", "on", "his", "knee"],
+      "translation": "我的弟弟 Sam 坐在他的膝盖上。",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 25.68,
+      "endTime": 29.808,
+      "text": "Sam is seven, and he really likes chess.",
+      "words": ["Sam", "is", "seven", "and", "he", "really", "likes", "chess"],
+      "translation": "Sam 七岁了，他非常喜欢下棋。",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 30.304,
+      "endTime": 33.808,
+      "text": "My mum, Jane, is on the right.",
+      "words": ["My", "mum", "Jane", "is", "on", "the", "right"],
+      "translation": "右边的是我妈妈 Jane。",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 34.192,
+      "endTime": 36.832,
+      "text": "She’s beautiful and kind.",
+      "words": ["She’s", "beautiful", "and", "kind"],
+      "translation": "她美丽又善良。",
+      "wordCount": 4
+    },
+    {
+      "id": 11,
+      "startTime": 37.2,
+      "endTime": 40.672,
+      "text": "She always reads me a story at night.",
+      "words": ["She", "always", "reads", "me", "a", "story", "at", "night"],
+      "translation": "她总是在晚上给我读故事。",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 41.408,
+      "endTime": 46.16,
+      "text": "My grandparents, Jack and Sarah, are in the middle.",
+      "words": ["My", "grandparents", "Jack", "and", "Sarah", "are", "in", "the", "middle"],
+      "translation": "中间的是我的祖父母 Jack 和 Sarah。",
+      "wordCount": 9
+    },
+    {
+      "id": 13,
+      "startTime": 46.576,
+      "endTime": 48.624,
+      "text": "They’re my dad’s parents.",
+      "words": ["They’re", "my", "dad’s", "parents"],
+      "translation": "他们是我爸爸的父母。",
+      "wordCount": 4
+    },
+    {
+      "id": 14,
+      "startTime": 49.072,
+      "endTime": 52.864,
+      "text": "They have a dog. His name is Oscar.",
+      "words": ["They", "have", "a", "dog", "His", "name", "is", "Oscar"],
+      "translation": "他们养了一只狗。他的名字叫 Oscar。",
+      "wordCount": 8
+    },
+    {
+      "id": 15,
+      "startTime": 53.76,
+      "endTime": 61.552,
+      "text": "My grandparents have three grandchildren: Sam, my cousin Lucy, and me.",
+      "words": ["My", "grandparents", "have", "three", "grandchildren:", "Sam", "my", "cousin", "Lucy", "and", "me"],
+      "translation": "我的祖父母有三个孙辈：Sam、我的表姐妹 Lucy，还有我。",
+      "wordCount": 11
+    },
+    {
+      "id": 16,
+      "startTime": 62.096,
+      "endTime": 66,
+      "text": "They often say I’m their favourite grandchild,",
+      "words": ["They", "often", "say", "I’m", "their", "favourite", "grandchild"],
+      "translation": "他们经常说我是他们最爱的孙辈，",
+      "wordCount": 7
+    },
+    {
+      "id": 17,
+      "startTime": 66.304,
+      "endTime": 69.664,
+      "text": "but I think they say the same thing to all of us!",
+      "words": ["but", "I", "think", "they", "say", "the", "same", "thing", "to", "all", "of", "us"],
+      "translation": "但我觉得他们对咱们所有人都这么说！",
+      "wordCount": 12
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "metadata": {
+    "id": "7_6",
+    "title": "7_6",
+    "totalSentences": 11,
+    "totalWords": 90,
+    "duration": 40,
+    "difficulty": "beginner",
+    "convertedFrom": "7_6.srt"
+  },
+  "sentences": [
+    {
+      "id": 2,
+      "startTime": 0.325,
+      "endTime": 4.8,
+      "text": "It’s a great idea to plant a tree for your birthday!",
+      "words": [
+        "It’s",
+        "a",
+        "great",
+        "idea",
+        "to",
+        "plant",
+        "a",
+        "tree",
+        "for",
+        "your",
+        "birthday"
+      ],
+      "translation": "[需要翻译: It’s a great idea to plant a tree for your birthday!]",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 5.225,
+      "endTime": 8.175,
+      "text": "My birthday is on 28th July.",
+      "words": [
+        "My",
+        "birthday",
+        "is",
+        "on",
+        "28th",
+        "July"
+      ],
+      "translation": "[需要翻译: My birthday is on 28th July.]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 8.45,
+      "endTime": 12.2,
+      "text": "I usually have a party with my friends to celebrate.",
+      "words": [
+        "I",
+        "usually",
+        "have",
+        "a",
+        "party",
+        "with",
+        "my",
+        "friends",
+        "to",
+        "celebrate"
+      ],
+      "translation": "[需要翻译: I usually have a party with my friends to celebrate.]",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 12.625,
+      "endTime": 16.125,
+      "text": "My mother always makes my favourite chocolate cake.",
+      "words": [
+        "My",
+        "mother",
+        "always",
+        "makes",
+        "my",
+        "favourite",
+        "chocolate",
+        "cake"
+      ],
+      "translation": "[需要翻译: My mother always makes my favourite chocolate cake.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 16.75,
+      "endTime": 19.7,
+      "text": "Everyone sings the “Happy Birthday” song,",
+      "words": [
+        "Everyone",
+        "sings",
+        "the",
+        "“Happy",
+        "Birthday”",
+        "song"
+      ],
+      "translation": "[需要翻译: Everyone sings the “Happy Birthday” song,]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 20.075,
+      "endTime": 23.55,
+      "text": "and then I make a wish and blow out the candles.",
+      "words": [
+        "and",
+        "then",
+        "I",
+        "make",
+        "a",
+        "wish",
+        "and",
+        "blow",
+        "out",
+        "the",
+        "candles"
+      ],
+      "translation": "[需要翻译: and then I make a wish and blow out the candles.]",
+      "wordCount": 11
+    },
+    {
+      "id": 8,
+      "startTime": 24.275,
+      "endTime": 26.35,
+      "text": "Next, we enjoy the cake,",
+      "words": [
+        "Next",
+        "we",
+        "enjoy",
+        "the",
+        "cake"
+      ],
+      "translation": "[需要翻译: Next, we enjoy the cake,]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 26.575,
+      "endTime": 28.35,
+      "text": "and I open all my gifts.",
+      "words": [
+        "and",
+        "I",
+        "open",
+        "all",
+        "my",
+        "gifts"
+      ],
+      "translation": "[需要翻译: and I open all my gifts.]",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 29.3,
+      "endTime": 32.7,
+      "text": "My father marks my height on the door every year.",
+      "words": [
+        "My",
+        "father",
+        "marks",
+        "my",
+        "height",
+        "on",
+        "the",
+        "door",
+        "every",
+        "year"
+      ],
+      "translation": "[需要翻译: My father marks my height on the door every year.]",
+      "wordCount": 10
+    },
+    {
+      "id": 11,
+      "startTime": 33.025,
+      "endTime": 35.575,
+      "text": "It’s fun to look at the marks later.",
+      "words": [
+        "It’s",
+        "fun",
+        "to",
+        "look",
+        "at",
+        "the",
+        "marks",
+        "later"
+      ],
+      "translation": "[需要翻译: It’s fun to look at the marks later.]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 36.4,
+      "endTime": 40,
+      "text": "Next time, I also want to do something different.",
+      "words": [
+        "Next",
+        "time",
+        "I",
+        "also",
+        "want",
+        "to",
+        "do",
+        "something",
+        "different"
+      ],
+      "translation": "[需要翻译: Next time, I also want to do something different.]",
+      "wordCount": 9
+    }
+  ]
+}

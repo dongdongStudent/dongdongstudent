@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "id": "2_4",
+    "title": "2_4",
+    "totalSentences": 14,
+    "totalWords": 110,
+    "duration": 60.896,
+    "difficulty": "beginner",
+    "convertedFrom": "2_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 9.184,
+      "endTime": 12.912,
+      "text": "Hi, I’m Anne. What’s your name?",
+      "words": [
+        "Hi",
+        "I’m",
+        "Anne",
+        "What’s",
+        "your",
+        "name"
+      ],
+      "translation": "[需要翻译: Hi, I’m Anne. What’s your name?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 13.296,
+      "endTime": 16.944,
+      "text": "Hello! I’m Tom. It’s my first day here.",
+      "words": [
+        "Hello",
+        "I’m",
+        "Tom",
+        "It’s",
+        "my",
+        "first",
+        "day",
+        "here"
+      ],
+      "translation": "[需要翻译: Hello! I’m Tom. It’s my first day here.]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 17.248,
+      "endTime": 21.408,
+      "text": "It’s nice to meet you, Tom! Is everything OK?",
+      "words": [
+        "It’s",
+        "nice",
+        "to",
+        "meet",
+        "you",
+        "Tom",
+        "Is",
+        "everything",
+        "OK"
+      ],
+      "translation": "[需要翻译: It’s nice to meet you, Tom! Is everything OK?]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 21.696,
+      "endTime": 26.464,
+      "text": "Well, I can’t find my pencil box. I think it’s in my locker.",
+      "words": [
+        "Well",
+        "I",
+        "can’t",
+        "find",
+        "my",
+        "pencil",
+        "box",
+        "I",
+        "think",
+        "it’s",
+        "in",
+        "my",
+        "locker"
+      ],
+      "translation": "[需要翻译: Well, I can’t find my pencil box. I think it’s in my locker.]",
+      "wordCount": 13
+    },
+    {
+      "id": 5,
+      "startTime": 26.768,
+      "endTime": 29.2,
+      "text": "Here, I can lend you my pen.",
+      "words": [
+        "Here",
+        "I",
+        "can",
+        "lend",
+        "you",
+        "my",
+        "pen"
+      ],
+      "translation": "[需要翻译: Here, I can lend you my pen.]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 29.584,
+      "endTime": 32.32,
+      "text": "Thanks! Would you like a sweet?",
+      "words": [
+        "Thanks",
+        "Would",
+        "you",
+        "like",
+        "a",
+        "sweet"
+      ],
+      "translation": "[需要翻译: Thanks! Would you like a sweet?]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 32.448,
+      "endTime": 36.048,
+      "text": "No, thank you. We can’t eat snacks in class.",
+      "words": [
+        "No",
+        "thank",
+        "you",
+        "We",
+        "can’t",
+        "eat",
+        "snacks",
+        "in",
+        "class"
+      ],
+      "translation": "[需要翻译: No, thank you. We can’t eat snacks in class.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 36.496,
+      "endTime": 37.728,
+      "text": "Can we drink water?",
+      "words": [
+        "Can",
+        "we",
+        "drink",
+        "water"
+      ],
+      "translation": "[需要翻译: Can we drink water?]",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 38.112,
+      "endTime": 40.112,
+      "text": "Yes, of course.",
+      "words": [
+        "Yes",
+        "of",
+        "course"
+      ],
+      "translation": "[需要翻译: Yes, of course.]",
+      "wordCount": 3
+    },
+    {
+      "id": 10,
+      "startTime": 40.384,
+      "endTime": 45.856,
+      "text": "OK, thanks ... Oh! I’m sorry, I have to answer my phone.",
+      "words": [
+        "OK",
+        "thanks",
+        "Oh",
+        "I’m",
+        "sorry",
+        "I",
+        "have",
+        "to",
+        "answer",
+        "my",
+        "phone"
+      ],
+      "translation": "[需要翻译: OK, thanks ... Oh! I’m sorry, I have to answer my phone.]",
+      "wordCount": 11
+    },
+    {
+      "id": 11,
+      "startTime": 46.144,
+      "endTime": 50.384,
+      "text": "Oh, but we mustn’t bring our mobile phones to class.",
+      "words": [
+        "Oh",
+        "but",
+        "we",
+        "mustn’t",
+        "bring",
+        "our",
+        "mobile",
+        "phones",
+        "to",
+        "class"
+      ],
+      "translation": "[需要翻译: Oh, but we mustn’t bring our mobile phones to class.]",
+      "wordCount": 10
+    },
+    {
+      "id": 12,
+      "startTime": 50.96,
+      "endTime": 54.352,
+      "text": "We have to turn them off and keep them in our lockers.",
+      "words": [
+        "We",
+        "have",
+        "to",
+        "turn",
+        "them",
+        "off",
+        "and",
+        "keep",
+        "them",
+        "in",
+        "our",
+        "lockers"
+      ],
+      "translation": "[需要翻译: We have to turn them off and keep them in our lockers.]",
+      "wordCount": 12
+    },
+    {
+      "id": 13,
+      "startTime": 54.88,
+      "endTime": 58.752,
+      "text": "That’s another rule. OK! Thanks for telling me, Anne.",
+      "words": [
+        "That’s",
+        "another",
+        "rule",
+        "OK",
+        "Thanks",
+        "for",
+        "telling",
+        "me",
+        "Anne"
+      ],
+      "translation": "[需要翻译: That’s another rule. OK! Thanks for telling me, Anne.]",
+      "wordCount": 9
+    },
+    {
+      "id": 14,
+      "startTime": 59.152,
+      "endTime": 60.896,
+      "text": "You’re welcome, Tom",
+      "words": [
+        "You’re",
+        "welcome",
+        "Tom"
+      ],
+      "translation": "[需要翻译: You’re welcome, Tom]",
+      "wordCount": 3
+    }
+  ]
+}

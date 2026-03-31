@@ -1,0 +1,129 @@
+{
+  "metadata": {
+    "id": "star_2_2",
+    "title": "star_2_2",
+    "totalSentences": 8,
+    "totalWords": 36,
+    "duration": 32.48,
+    "difficulty": "beginner",
+    "convertedFrom": "star_2_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 7.264,
+      "endTime": 9.424,
+      "text": "wake up, little Kate!",
+      "words": [
+        "wake",
+        "up",
+        "little",
+        "Kate"
+      ],
+      "translation": "[需要翻译: wake up, little Kate!]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 10.736,
+      "endTime": 12.912,
+      "text": "Don’t get up too late!",
+      "words": [
+        "Don’t",
+        "get",
+        "up",
+        "too",
+        "late"
+      ],
+      "translation": "[需要翻译: Don’t get up too late!]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 14.72,
+      "endTime": 17.168,
+      "text": "The weather is fine,",
+      "words": [
+        "The",
+        "weather",
+        "is",
+        "fine"
+      ],
+      "translation": "[需要翻译: The weather is fine,]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 17.648,
+      "endTime": 19.696,
+      "text": "So meet me at nine.",
+      "words": [
+        "So",
+        "meet",
+        "me",
+        "at",
+        "nine"
+      ],
+      "translation": "[需要翻译: So meet me at nine.]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 21.168,
+      "endTime": 23.152,
+      "text": "We can fly my kite,",
+      "words": [
+        "We",
+        "can",
+        "fly",
+        "my",
+        "kite"
+      ],
+      "translation": "[需要翻译: We can fly my kite,]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 24.016,
+      "endTime": 25.92,
+      "text": "And ride my cute bike.",
+      "words": [
+        "And",
+        "ride",
+        "my",
+        "cute",
+        "bike"
+      ],
+      "translation": "[需要翻译: And ride my cute bike.]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 27.728,
+      "endTime": 29.504,
+      "text": "So don’t say no.",
+      "words": [
+        "So",
+        "don’t",
+        "say",
+        "no"
+      ],
+      "translation": "[需要翻译: So don’t say no.]",
+      "wordCount": 4
+    },
+    {
+      "id": 8,
+      "startTime": 30.4,
+      "endTime": 32.48,
+      "text": "Come on, let’s go",
+      "words": [
+        "Come",
+        "on",
+        "let’s",
+        "go"
+      ],
+      "translation": "[需要翻译: Come on, let’s go]",
+      "wordCount": 4
+    }
+  ]
+}

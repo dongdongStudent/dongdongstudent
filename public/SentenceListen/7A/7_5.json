@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "id": "7_5",
+    "title": "7_5",
+    "totalSentences": 9,
+    "totalWords": 85,
+    "duration": 37.725,
+    "difficulty": "beginner",
+    "convertedFrom": "7_5.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.575,
+      "endTime": 4.175,
+      "text": "My birthday is on 13th June.",
+      "words": [
+        "My",
+        "birthday",
+        "is",
+        "on",
+        "13th",
+        "June"
+      ],
+      "translation": "[需要翻译: My birthday is on 13th June.]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 4.575,
+      "endTime": 8.875,
+      "text": "On that day, I always eat birthday noodles with eggs.",
+      "words": [
+        "On",
+        "that",
+        "day",
+        "I",
+        "always",
+        "eat",
+        "birthday",
+        "noodles",
+        "with",
+        "eggs"
+      ],
+      "translation": "[需要翻译: On that day, I always eat birthday noodles with eggs.]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 9.45,
+      "endTime": 12.525,
+      "text": "Long noodles are a symbol of long life.",
+      "words": [
+        "Long",
+        "noodles",
+        "are",
+        "a",
+        "symbol",
+        "of",
+        "long",
+        "life"
+      ],
+      "translation": "[需要翻译: Long noodles are a symbol of long life.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 13,
+      "endTime": 19.125,
+      "text": "Every year, my family and I take a photo together under the big tree in our village.",
+      "words": [
+        "Every",
+        "year",
+        "my",
+        "family",
+        "and",
+        "I",
+        "take",
+        "a",
+        "photo",
+        "together",
+        "under",
+        "the",
+        "big",
+        "tree",
+        "in",
+        "our",
+        "village"
+      ],
+      "translation": "[需要翻译: Every year, my family and I take a photo together under the big tree in our village.]",
+      "wordCount": 17
+    },
+    {
+      "id": 5,
+      "startTime": 19.775,
+      "endTime": 24.6,
+      "text": "I like taking photos because they help me remember fun times with my family.",
+      "words": [
+        "I",
+        "like",
+        "taking",
+        "photos",
+        "because",
+        "they",
+        "help",
+        "me",
+        "remember",
+        "fun",
+        "times",
+        "with",
+        "my",
+        "family"
+      ],
+      "translation": "[需要翻译: I like taking photos because they help me remember fun times with my family.]",
+      "wordCount": 14
+    },
+    {
+      "id": 6,
+      "startTime": 24.95,
+      "endTime": 30.45,
+      "text": "This year, I want to plant a small tree for my 14th birthday.",
+      "words": [
+        "This",
+        "year",
+        "I",
+        "want",
+        "to",
+        "plant",
+        "a",
+        "small",
+        "tree",
+        "for",
+        "my",
+        "14th",
+        "birthday"
+      ],
+      "translation": "[需要翻译: This year, I want to plant a small tree for my 14th birthday.]",
+      "wordCount": 13
+    },
+    {
+      "id": 7,
+      "startTime": 30.65,
+      "endTime": 32.925,
+      "text": "I’d like to watch it grow with me.",
+      "words": [
+        "I’d",
+        "like",
+        "to",
+        "watch",
+        "it",
+        "grow",
+        "with",
+        "me"
+      ],
+      "translation": "[需要翻译: I’d like to watch it grow with me.]",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 33.925,
+      "endTime": 35.65,
+      "text": "When is your birthday?",
+      "words": [
+        "When",
+        "is",
+        "your",
+        "birthday"
+      ],
+      "translation": "[需要翻译: When is your birthday?]",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 36.125,
+      "endTime": 37.725,
+      "text": "How do you celebrate it?",
+      "words": [
+        "How",
+        "do",
+        "you",
+        "celebrate",
+        "it"
+      ],
+      "translation": "[需要翻译: How do you celebrate it?]",
+      "wordCount": 5
+    }
+  ]
+}

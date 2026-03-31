@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "id": "star_3_3",
+    "title": "star_3_3",
+    "totalSentences": 10,
+    "totalWords": 76,
+    "duration": 71.12,
+    "difficulty": "beginner",
+    "convertedFrom": "star_3_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 25.664,
+      "endTime": 28.784,
+      "text": "Look! This is my uncle’s farm.",
+      "words": [
+        "Look",
+        "This",
+        "is",
+        "my",
+        "uncle’s",
+        "farm"
+      ],
+      "translation": "[需要翻译: Look! This is my uncle’s farm.]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 29.424,
+      "endTime": 33.568,
+      "text": "It’s a big farm. The grass is so green.",
+      "words": [
+        "It’s",
+        "a",
+        "big",
+        "farm",
+        "The",
+        "grass",
+        "is",
+        "so",
+        "green"
+      ],
+      "translation": "[需要翻译: It’s a big farm. The grass is so green.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 33.984,
+      "endTime": 36.368,
+      "text": "You can see many kinds of animals.",
+      "words": [
+        "You",
+        "can",
+        "see",
+        "many",
+        "kinds",
+        "of",
+        "animals"
+      ],
+      "translation": "[需要翻译: You can see many kinds of animals.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 36.704,
+      "endTime": 43.424,
+      "text": "He has pigs,horses, cows, ducks, sheep, and chickens.",
+      "words": [
+        "He",
+        "has",
+        "pigs",
+        "horses",
+        "cows",
+        "ducks",
+        "sheep",
+        "and",
+        "chickens"
+      ],
+      "translation": "[需要翻译: He has pigs,horses, cows, ducks, sheep, and chickens.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 43.76,
+      "endTime": 45.968,
+      "text": "How many ducks does my uncle have?",
+      "words": [
+        "How",
+        "many",
+        "ducks",
+        "does",
+        "my",
+        "uncle",
+        "have"
+      ],
+      "translation": "[需要翻译: How many ducks does my uncle have?]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 46.528,
+      "endTime": 56.048,
+      "text": "Let me count. One, two, three, four, five,... fourteen ducks!",
+      "words": [
+        "Let",
+        "me",
+        "count",
+        "One",
+        "two",
+        "three",
+        "four",
+        "five",
+        "fourteen",
+        "ducks"
+      ],
+      "translation": "[需要翻译: Let me count. One, two, three, four, five,... fourteen ducks!]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 56.656,
+      "endTime": 58.816,
+      "text": "Oh, no. Look there!",
+      "words": [
+        "Oh",
+        "no",
+        "Look",
+        "there"
+      ],
+      "translation": "[需要翻译: Oh, no. Look there!]",
+      "wordCount": 4
+    },
+    {
+      "id": 8,
+      "startTime": 59.104,
+      "endTime": 61.872,
+      "text": "Another duck is behind the big tree.",
+      "words": [
+        "Another",
+        "duck",
+        "is",
+        "behind",
+        "the",
+        "big",
+        "tree"
+      ],
+      "translation": "[需要翻译: Another duck is behind the big tree.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 62.864,
+      "endTime": 66.976,
+      "text": "Do you see that house? That’s my uncle’s home.",
+      "words": [
+        "Do",
+        "you",
+        "see",
+        "that",
+        "house",
+        "That’s",
+        "my",
+        "uncle’s",
+        "home"
+      ],
+      "translation": "[需要翻译: Do you see that house? That’s my uncle’s home.]",
+      "wordCount": 9
+    },
+    {
+      "id": 10,
+      "startTime": 67.344,
+      "endTime": 71.12,
+      "text": "It’s beautiful. Do you like my uncle’s farm",
+      "words": [
+        "It’s",
+        "beautiful",
+        "Do",
+        "you",
+        "like",
+        "my",
+        "uncle’s",
+        "farm"
+      ],
+      "translation": "[需要翻译: It’s beautiful. Do you like my uncle’s farm]",
+      "wordCount": 8
+    }
+  ]
+}

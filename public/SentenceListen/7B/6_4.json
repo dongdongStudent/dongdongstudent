@@ -1,0 +1,296 @@
+{
+  "metadata": {
+    "id": "6_4",
+    "title": "6_4",
+    "totalSentences": 17,
+    "totalWords": 113,
+    "duration": 74.816,
+    "difficulty": "beginner",
+    "convertedFrom": "6_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 13.168,
+      "endTime": 16.08,
+      "text": "Hey, Anna. How’s your holiday going",
+      "words": [
+        "Hey",
+        "Anna",
+        "How’s",
+        "your",
+        "holiday",
+        "going"
+      ],
+      "translation": "[需要翻译: Hey, Anna. How’s your holiday going]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 16.64,
+      "endTime": 20.72,
+      "text": "It’s wonderful! I’m at a beach in Sanya!",
+      "words": [
+        "It’s",
+        "wonderful",
+        "I’m",
+        "at",
+        "a",
+        "beach",
+        "in",
+        "Sanya"
+      ],
+      "translation": "[需要翻译: It’s wonderful! I’m at a beach in Sanya!]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 21.02,
+      "endTime": 24.352,
+      "text": "Wow, lucky you! That sounds amazing.",
+      "words": [
+        "Wow",
+        "lucky",
+        "you",
+        "That",
+        "sounds",
+        "amazing"
+      ],
+      "translation": "[需要翻译: Wow, lucky you! That sounds amazing.]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 25.392,
+      "endTime": 26.704,
+      "text": "What’s the weather like there?",
+      "words": [
+        "What’s",
+        "the",
+        "weather",
+        "like",
+        "there"
+      ],
+      "translation": "[需要翻译: What’s the weather like there?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 27.424,
+      "endTime": 32.176,
+      "text": "It’s hot and sunny. It’s about 28°C.",
+      "words": [
+        "It’s",
+        "hot",
+        "and",
+        "sunny",
+        "It’s",
+        "about",
+        "28°C"
+      ],
+      "translation": "[需要翻译: It’s hot and sunny. It’s about 28°C.]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 32.72,
+      "endTime": 36.16,
+      "text": "That’s nice! What are you doing at the beach?",
+      "words": [
+        "That’s",
+        "nice",
+        "What",
+        "are",
+        "you",
+        "doing",
+        "at",
+        "the",
+        "beach"
+      ],
+      "translation": "[需要翻译: That’s nice! What are you doing at the beach?]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 36.912,
+      "endTime": 39.008,
+      "text": "I’m sunbathing at the moment!",
+      "words": [
+        "I’m",
+        "sunbathing",
+        "at",
+        "the",
+        "moment"
+      ],
+      "translation": "[需要翻译: I’m sunbathing at the moment!]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 39.488,
+      "endTime": 41.552,
+      "text": "My brother John’s here too.",
+      "words": [
+        "My",
+        "brother",
+        "John’s",
+        "here",
+        "too"
+      ],
+      "translation": "[需要翻译: My brother John’s here too.]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 42.096,
+      "endTime": 43.552,
+      "text": "Oh, what’s he doing?",
+      "words": [
+        "Oh",
+        "what’s",
+        "he",
+        "doing"
+      ],
+      "translation": "[需要翻译: Oh, what’s he doing?]",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 44.048,
+      "endTime": 46.56,
+      "text": "He’s playing beach volleyball right now.",
+      "words": [
+        "He’s",
+        "playing",
+        "beach",
+        "volleyball",
+        "right",
+        "now"
+      ],
+      "translation": "[需要翻译: He’s playing beach volleyball right now.]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 47.056,
+      "endTime": 50.8,
+      "text": "What about you? How’s the weather in Stockholm?",
+      "words": [
+        "What",
+        "about",
+        "you",
+        "How’s",
+        "the",
+        "weather",
+        "in",
+        "Stockholm"
+      ],
+      "translation": "[需要翻译: What about you? How’s the weather in Stockholm?]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 51.264,
+      "endTime": 56.16,
+      "text": "Well, it’s cold and snowy. It’s about -3°C.",
+      "words": [
+        "Well",
+        "it’s",
+        "cold",
+        "and",
+        "snowy",
+        "It’s",
+        "about",
+        "-3°C"
+      ],
+      "translation": "[需要翻译: Well, it’s cold and snowy. It’s about -3°C.]",
+      "wordCount": 8
+    },
+    {
+      "id": 13,
+      "startTime": 56.592,
+      "endTime": 61.232,
+      "text": "Oh, that’s really cold! What’s your family doing?",
+      "words": [
+        "Oh",
+        "that’s",
+        "really",
+        "cold",
+        "What’s",
+        "your",
+        "family",
+        "doing"
+      ],
+      "translation": "[需要翻译: Oh, that’s really cold! What’s your family doing?]",
+      "wordCount": 8
+    },
+    {
+      "id": 14,
+      "startTime": 61.616,
+      "endTime": 64.688,
+      "text": "Well, we usually stay in when it snows,",
+      "words": [
+        "Well",
+        "we",
+        "usually",
+        "stay",
+        "in",
+        "when",
+        "it",
+        "snows"
+      ],
+      "translation": "[需要翻译: Well, we usually stay in when it snows,]",
+      "wordCount": 8
+    },
+    {
+      "id": 15,
+      "startTime": 64.848,
+      "endTime": 68.144,
+      "text": "but now we’re building a snowman outside.",
+      "words": [
+        "but",
+        "now",
+        "we’re",
+        "building",
+        "a",
+        "snowman",
+        "outside"
+      ],
+      "translation": "[需要翻译: but now we’re building a snowman outside.]",
+      "wordCount": 7
+    },
+    {
+      "id": 16,
+      "startTime": 68.608,
+      "endTime": 71.088,
+      "text": "Hey, come and visit us some day!",
+      "words": [
+        "Hey",
+        "come",
+        "and",
+        "visit",
+        "us",
+        "some",
+        "day"
+      ],
+      "translation": "[需要翻译: Hey, come and visit us some day!]",
+      "wordCount": 7
+    },
+    {
+      "id": 17,
+      "startTime": 71.392,
+      "endTime": 74.816,
+      "text": "OK. Once the weather turns warm!",
+      "words": [
+        "OK",
+        "Once",
+        "the",
+        "weather",
+        "turns",
+        "warm"
+      ],
+      "translation": "[需要翻译: OK. Once the weather turns warm!]",
+      "wordCount": 6
+    }
+  ]
+}

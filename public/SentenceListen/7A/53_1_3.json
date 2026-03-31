@@ -1,0 +1,276 @@
+{
+  "metadata": {
+    "id": "53_1_3",
+    "title": "53_1_3",
+    "totalSentences": 15,
+    "totalWords": 113,
+    "duration": 183.104,
+    "difficulty": "beginner",
+    "convertedFrom": "53_1_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 124.032,
+      "endTime": 126.848,
+      "text": "Hello, are you a new student here?",
+      "words": [
+        "Hello",
+        "are",
+        "you",
+        "a",
+        "new",
+        "student",
+        "here"
+      ],
+      "translation": "[需要翻译: Hello, are you a new student here?]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 126.848,
+      "endTime": 129.344,
+      "text": "Yes, I am. My name is Betty.",
+      "words": [
+        "Yes",
+        "I",
+        "am",
+        "My",
+        "name",
+        "is",
+        "Betty"
+      ],
+      "translation": "[需要翻译: Yes, I am. My name is Betty.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 129.568,
+      "endTime": 131.568,
+      "text": "Hello, Betty. I'm Tony.",
+      "words": [
+        "Hello",
+        "Betty",
+        "I'm",
+        "Tony"
+      ],
+      "translation": "[需要翻译: Hello, Betty. I'm Tony.]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 132.016,
+      "endTime": 133.568,
+      "text": "How old are you, Tony?",
+      "words": [
+        "How",
+        "old",
+        "are",
+        "you",
+        "Tony"
+      ],
+      "translation": "[需要翻译: How old are you, Tony?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 133.792,
+      "endTime": 136.848,
+      "text": "I'm twelve. I'm in Class 5.",
+      "words": [
+        "I'm",
+        "twelve",
+        "I'm",
+        "in",
+        "Class",
+        "5"
+      ],
+      "translation": "[需要翻译: I'm twelve. I'm in Class 5.]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 137.168,
+      "endTime": 140.736,
+      "text": "I'm in Class 3. It's time to go now. Goodbye, Tony.",
+      "words": [
+        "I'm",
+        "in",
+        "Class",
+        "3",
+        "It's",
+        "time",
+        "to",
+        "go",
+        "now",
+        "Goodbye",
+        "Tony"
+      ],
+      "translation": "[需要翻译: I'm in Class 3. It's time to go now. Goodbye, Tony.]",
+      "wordCount": 11
+    },
+    {
+      "id": 7,
+      "startTime": 140.944,
+      "endTime": 141.92,
+      "text": "Bye.",
+      "words": [
+        "Bye"
+      ],
+      "translation": "[需要翻译: Bye.]",
+      "wordCount": 1
+    },
+    {
+      "id": 8,
+      "startTime": 148.368,
+      "endTime": 151.248,
+      "text": "Hello, my name is Jim Brown.",
+      "words": [
+        "Hello",
+        "my",
+        "name",
+        "is",
+        "Jim",
+        "Brown"
+      ],
+      "translation": "[需要翻译: Hello, my name is Jim Brown.]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 151.84,
+      "endTime": 154.656,
+      "text": "I'm from London, the UK.",
+      "words": [
+        "I'm",
+        "from",
+        "London",
+        "the",
+        "UK"
+      ],
+      "translation": "[需要翻译: I'm from London, the UK.]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 154.784,
+      "endTime": 159.184,
+      "text": "Jim is my first name and Brown is my last name.",
+      "words": [
+        "Jim",
+        "is",
+        "my",
+        "first",
+        "name",
+        "and",
+        "Brown",
+        "is",
+        "my",
+        "last",
+        "name"
+      ],
+      "translation": "[需要翻译: Jim is my first name and Brown is my last name.]",
+      "wordCount": 11
+    },
+    {
+      "id": 11,
+      "startTime": 159.312,
+      "endTime": 161.328,
+      "text": "I'm thirteen years old.",
+      "words": [
+        "I'm",
+        "thirteen",
+        "years",
+        "old"
+      ],
+      "translation": "[需要翻译: I'm thirteen years old.]",
+      "wordCount": 4
+    },
+    {
+      "id": 12,
+      "startTime": 161.84,
+      "endTime": 165.344,
+      "text": "This is Wu Mei. She is from Shanghai.",
+      "words": [
+        "This",
+        "is",
+        "Wu",
+        "Mei",
+        "She",
+        "is",
+        "from",
+        "Shanghai"
+      ],
+      "translation": "[需要翻译: This is Wu Mei. She is from Shanghai.]",
+      "wordCount": 8
+    },
+    {
+      "id": 13,
+      "startTime": 165.6,
+      "endTime": 168.496,
+      "text": "Shanghai is a big city in China.",
+      "words": [
+        "Shanghai",
+        "is",
+        "a",
+        "big",
+        "city",
+        "in",
+        "China"
+      ],
+      "translation": "[需要翻译: Shanghai is a big city in China.]",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 168.832,
+      "endTime": 174.064,
+      "text": "She is twelve years old and she is in Class 1, Grade 7.",
+      "words": [
+        "She",
+        "is",
+        "twelve",
+        "years",
+        "old",
+        "and",
+        "she",
+        "is",
+        "in",
+        "Class",
+        "1",
+        "Grade",
+        "7"
+      ],
+      "translation": "[需要翻译: She is twelve years old and she is in Class 1, Grade 7.]",
+      "wordCount": 13
+    },
+    {
+      "id": 15,
+      "startTime": 174.624,
+      "endTime": 183.104,
+      "text": "Her English name is Ann. Wu Mei and I are good friends. We are in the same class.",
+      "words": [
+        "Her",
+        "English",
+        "name",
+        "is",
+        "Ann",
+        "Wu",
+        "Mei",
+        "and",
+        "I",
+        "are",
+        "good",
+        "friends",
+        "We",
+        "are",
+        "in",
+        "the",
+        "same",
+        "class"
+      ],
+      "translation": "[需要翻译: Her English name is Ann. Wu Mei and I are good friends. We are in the same class.]",
+      "wordCount": 18
+    }
+  ]
+}

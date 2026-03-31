@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "id": "4_3_2",
+    "title": "4_3_2",
+    "totalSentences": 9,
+    "totalWords": 69,
+    "duration": 45.264,
+    "difficulty": "beginner",
+    "convertedFrom": "4_3_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 8.016,
+      "endTime": 9.536,
+      "text": "I’m from China.",
+      "words": ["I’m", "from", "China"],
+      "translation": "我来自中国。",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 10.4,
+      "endTime": 13.904,
+      "text": "This term, I have subjects like Chinese,",
+      "words": ["This", "term", "I", "have", "subjects", "like", "Chinese"],
+      "translation": "这学期，我有语文这样的科目，",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 14.064,
+      "endTime": 19.232,
+      "text": "history, maths, English, PE, and IT.",
+      "words": ["history", "maths", "English", "PE", "and", "IT"],
+      "translation": "历史、数学、英语、体育和信息技术。",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 20.176,
+      "endTime": 24.944,
+      "text": "I like all the subjects, but my favourite is maths.",
+      "words": ["I", "like", "all", "the", "subjects", "but", "my", "favourite", "is", "maths"],
+      "translation": "我喜欢所有科目，但我最喜欢的是数学。",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 26.256,
+      "endTime": 29.216,
+      "text": "I like it because I’m good with numbers.",
+      "words": ["I", "like", "it", "because", "I’m", "good", "with", "numbers"],
+      "translation": "我喜欢它，因为我擅长数字。",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 30.512,
+      "endTime": 34.368,
+      "text": "We learn how to work out maths problems in class.",
+      "words": ["We", "learn", "how", "to", "work", "out", "maths", "problems", "in", "class"],
+      "translation": "我们在课堂上学习如何解答数学问题。",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 35.664,
+      "endTime": 38.464,
+      "text": "It feels like magic and is really fun.",
+      "words": ["It", "feels", "like", "magic", "and", "is", "really", "fun"],
+      "translation": "感觉就像魔法一样，真的很有趣。",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 39.52,
+      "endTime": 42,
+      "text": "Maths is very useful in our life,",
+      "words": ["Maths", "is", "very", "useful", "in", "our", "life"],
+      "translation": "数学在我们的生活中非常有用，",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 42.416,
+      "endTime": 45.264,
+      "text": "and I want to be a scientist in the future.",
+      "words": ["and", "I", "want", "to", "be", "a", "scientist", "in", "the", "future"],
+      "translation": "我将来想成为一名科学家。",
+      "wordCount": 10
+    }
+  ]
+}

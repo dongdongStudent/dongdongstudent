@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "id": "6_5_2",
+    "title": "6_5_2",
+    "totalSentences": 8,
+    "totalWords": 43,
+    "duration": 58.144,
+    "difficulty": "beginner",
+    "convertedFrom": "6_5_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 36.992,
+      "endTime": 39.42,
+      "text": "We’re at a rest area now",
+      "words": [
+        "We’re",
+        "at",
+        "a",
+        "rest",
+        "area",
+        "now"
+      ],
+      "translation": "[需要翻译: We’re at a rest area now]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 39.744,
+      "endTime": 41.344,
+      "text": "Climbing is hard",
+      "words": [
+        "Climbing",
+        "is",
+        "hard"
+      ],
+      "translation": "[需要翻译: Climbing is hard]",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 41.488,
+      "endTime": 44.096,
+      "text": "but we’re making good progress",
+      "words": [
+        "but",
+        "we’re",
+        "making",
+        "good",
+        "progress"
+      ],
+      "translation": "[需要翻译: but we’re making good progress]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 44.496,
+      "endTime": 46.416,
+      "text": "Although the weather is bad",
+      "words": [
+        "Although",
+        "the",
+        "weather",
+        "is",
+        "bad"
+      ],
+      "translation": "[需要翻译: Although the weather is bad]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 46.72,
+      "endTime": 50.304,
+      "text": "many people here are still in high spirits",
+      "words": [
+        "many",
+        "people",
+        "here",
+        "are",
+        "still",
+        "in",
+        "high",
+        "spirits"
+      ],
+      "translation": "[需要翻译: many people here are still in high spirits]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 50.944,
+      "endTime": 52.56,
+      "text": "I don’t think my brother",
+      "words": [
+        "I",
+        "don’t",
+        "think",
+        "my",
+        "brother"
+      ],
+      "translation": "[需要翻译: I don’t think my brother]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 52.688,
+      "endTime": 55.904,
+      "text": "Peter is enjoying the experience very much",
+      "words": [
+        "Peter",
+        "is",
+        "enjoying",
+        "the",
+        "experience",
+        "very",
+        "much"
+      ],
+      "translation": "[需要翻译: Peter is enjoying the experience very much]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 56.112,
+      "endTime": 58.144,
+      "text": "so I’m encouraging him",
+      "words": [
+        "so",
+        "I’m",
+        "encouraging",
+        "him"
+      ],
+      "translation": "[需要翻译: so I’m encouraging him]",
+      "wordCount": 4
+    }
+  ]
+}

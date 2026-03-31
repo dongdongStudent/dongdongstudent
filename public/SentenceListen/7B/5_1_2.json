@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "id": "5_1_2",
+    "title": "5_1_2",
+    "totalSentences": 8,
+    "totalWords": 56,
+    "duration": 82.992,
+    "difficulty": "beginner",
+    "convertedFrom": "5_1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 53.072,
+      "endTime": 54.096,
+      "text": "Hello?",
+      "words": [
+        "Hello"
+      ],
+      "translation": "[需要翻译: Hello?]",
+      "wordCount": 1
+    },
+    {
+      "id": 2,
+      "startTime": 54.32,
+      "endTime": 58.832,
+      "text": "Hello. May I speak to Adam, please? It’s Peter.",
+      "words": [
+        "Hello",
+        "May",
+        "I",
+        "speak",
+        "to",
+        "Adam",
+        "please",
+        "It’s",
+        "Peter"
+      ],
+      "translation": "[需要翻译: Hello. May I speak to Adam, please? It’s Peter.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 59.344,
+      "endTime": 63.04,
+      "text": "Hi, Peter. I’m afraid he’s not home yet.",
+      "words": [
+        "Hi",
+        "Peter",
+        "I’m",
+        "afraid",
+        "he’s",
+        "not",
+        "home",
+        "yet"
+      ],
+      "translation": "[需要翻译: Hi, Peter. I’m afraid he’s not home yet.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 63.552,
+      "endTime": 67.28,
+      "text": "Oh, is he still exercising at the park?",
+      "words": [
+        "Oh",
+        "is",
+        "he",
+        "still",
+        "exercising",
+        "at",
+        "the",
+        "park"
+      ],
+      "translation": "[需要翻译: Oh, is he still exercising at the park?]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 67.632,
+      "endTime": 73.312,
+      "text": "No, he’s shopping at the supermarket at the moment. Can I take a message?",
+      "words": [
+        "No",
+        "he’s",
+        "shopping",
+        "at",
+        "the",
+        "supermarket",
+        "at",
+        "the",
+        "moment",
+        "Can",
+        "I",
+        "take",
+        "a",
+        "message"
+      ],
+      "translation": "[需要翻译: No, he’s shopping at the supermarket at the moment. Can I take a message?]",
+      "wordCount": 14
+    },
+    {
+      "id": 6,
+      "startTime": 73.824,
+      "endTime": 78.16,
+      "text": "Yes, please. Could you ask him to call me back, please?",
+      "words": [
+        "Yes",
+        "please",
+        "Could",
+        "you",
+        "ask",
+        "him",
+        "to",
+        "call",
+        "me",
+        "back",
+        "please"
+      ],
+      "translation": "[需要翻译: Yes, please. Could you ask him to call me back, please?]",
+      "wordCount": 11
+    },
+    {
+      "id": 7,
+      "startTime": 78.624,
+      "endTime": 79.728,
+      "text": "Sure.",
+      "words": [
+        "Sure"
+      ],
+      "translation": "[需要翻译: Sure.]",
+      "wordCount": 1
+    },
+    {
+      "id": 8,
+      "startTime": 80,
+      "endTime": 82.992,
+      "text": "Thanks, Mrs Clark. Bye.",
+      "words": [
+        "Thanks",
+        "Mrs",
+        "Clark",
+        "Bye"
+      ],
+      "translation": "[需要翻译: Thanks, Mrs Clark. Bye.]",
+      "wordCount": 4
+    }
+  ]
+}

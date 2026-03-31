@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "id": "2_3",
+    "title": "2_3",
+    "totalSentences": 8,
+    "totalWords": 52,
+    "duration": 41.328,
+    "difficulty": "beginner",
+    "convertedFrom": "2_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 15.376,
+      "endTime": 18.064,
+      "text": "cross the country, in many schools,",
+      "words": [
+        "cross",
+        "the",
+        "country",
+        "in",
+        "many",
+        "schools"
+      ],
+      "translation": "[需要翻译: cross the country, in many schools,]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 18.304,
+      "endTime": 20.976,
+      "text": "Students like us follow rules!",
+      "words": [
+        "Students",
+        "like",
+        "us",
+        "follow",
+        "rules"
+      ],
+      "translation": "[需要翻译: Students like us follow rules!]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 21.2,
+      "endTime": 23.904,
+      "text": "Be on time. Don’t be late for class.",
+      "words": [
+        "Be",
+        "on",
+        "time",
+        "Don’t",
+        "be",
+        "late",
+        "for",
+        "class"
+      ],
+      "translation": "[需要翻译: Be on time. Don’t be late for class.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 24.16,
+      "endTime": 26.88,
+      "text": "Keeping the rules is good for us!",
+      "words": [
+        "Keeping",
+        "the",
+        "rules",
+        "is",
+        "good",
+        "for",
+        "us"
+      ],
+      "translation": "[需要翻译: Keeping the rules is good for us!]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 30.032,
+      "endTime": 32.8,
+      "text": "Every day, from Monday to Friday,",
+      "words": [
+        "Every",
+        "day",
+        "from",
+        "Monday",
+        "to",
+        "Friday"
+      ],
+      "translation": "[需要翻译: Every day, from Monday to Friday,]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 32.912,
+      "endTime": 35.536,
+      "text": "Keep our school clean and tidy!",
+      "words": [
+        "Keep",
+        "our",
+        "school",
+        "clean",
+        "and",
+        "tidy"
+      ],
+      "translation": "[需要翻译: Keep our school clean and tidy!]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 35.776,
+      "endTime": 38.416,
+      "text": "Raise your hand. Walk and don’t run.",
+      "words": [
+        "Raise",
+        "your",
+        "hand",
+        "Walk",
+        "and",
+        "don’t",
+        "run"
+      ],
+      "translation": "[需要翻译: Raise your hand. Walk and don’t run.]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 38.624,
+      "endTime": 41.328,
+      "text": "Keep the rules and let’s have fun!",
+      "words": [
+        "Keep",
+        "the",
+        "rules",
+        "and",
+        "let’s",
+        "have",
+        "fun"
+      ],
+      "translation": "[需要翻译: Keep the rules and let’s have fun!]",
+      "wordCount": 7
+    }
+  ]
+}

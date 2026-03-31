@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "id": "3_7",
+    "title": "3_7",
+    "totalSentences": 12,
+    "totalWords": 86,
+    "duration": 116.64,
+    "difficulty": "beginner",
+    "convertedFrom": "3_7.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 82.72,
+      "endTime": 84.688,
+      "text": "I’m in my school’s baseball club,",
+      "words": [
+        "I’m",
+        "in",
+        "my",
+        "school’s",
+        "baseball",
+        "club"
+      ],
+      "translation": "[需要翻译: I’m in my school’s baseball club,]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 85.056,
+      "endTime": 87.136,
+      "text": "so I play baseball.quite often.",
+      "words": [
+        "so",
+        "I",
+        "play",
+        "baseball",
+        "quite",
+        "often"
+      ],
+      "translation": "[需要翻译: so I play baseball.quite often.]",
+      "wordCount": 6
+    },
+    {
+      "id": 3,
+      "startTime": 87.792,
+      "endTime": 89.28,
+      "text": "It’s my favourite sport.",
+      "words": [
+        "It’s",
+        "my",
+        "favourite",
+        "sport"
+      ],
+      "translation": "[需要翻译: It’s my favourite sport.]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 89.28,
+      "endTime": 91.408,
+      "text": "We play many matches.",
+      "words": [
+        "We",
+        "play",
+        "many",
+        "matches"
+      ],
+      "translation": "[需要翻译: We play many matches.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 92.016,
+      "endTime": 93.616,
+      "text": "The other teams are great,",
+      "words": [
+        "The",
+        "other",
+        "teams",
+        "are",
+        "great"
+      ],
+      "translation": "[需要翻译: The other teams are great,]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 93.856,
+      "endTime": 96.128,
+      "text": "but I think ours is the best!",
+      "words": [
+        "but",
+        "I",
+        "think",
+        "ours",
+        "is",
+        "the",
+        "best"
+      ],
+      "translation": "[需要翻译: but I think ours is the best!]",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 96.576,
+      "endTime": 99.728,
+      "text": "We usually practise three times a week after school.",
+      "words": [
+        "We",
+        "usually",
+        "practise",
+        "three",
+        "times",
+        "a",
+        "week",
+        "after",
+        "school"
+      ],
+      "translation": "[需要翻译: We usually practise three times a week after school.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 99.984,
+      "endTime": 104.576,
+      "text": "We also exercise a lot because it keeps us fit and helps us play better.",
+      "words": [
+        "We",
+        "also",
+        "exercise",
+        "a",
+        "lot",
+        "because",
+        "it",
+        "keeps",
+        "us",
+        "fit",
+        "and",
+        "helps",
+        "us",
+        "play",
+        "better"
+      ],
+      "translation": "[需要翻译: We also exercise a lot because it keeps us fit and helps us play better.]",
+      "wordCount": 15
+    },
+    {
+      "id": 9,
+      "startTime": 105.232,
+      "endTime": 107.856,
+      "text": "Baseball also builds team spirit.",
+      "words": [
+        "Baseball",
+        "also",
+        "builds",
+        "team",
+        "spirit"
+      ],
+      "translation": "[需要翻译: Baseball also builds team spirit.]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 108.32,
+      "endTime": 109.984,
+      "text": "All of us are good friends,",
+      "words": [
+        "All",
+        "of",
+        "us",
+        "are",
+        "good",
+        "friends"
+      ],
+      "translation": "[需要翻译: All of us are good friends,]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 110.336,
+      "endTime": 112.544,
+      "text": "both on and off the field.",
+      "words": [
+        "both",
+        "on",
+        "and",
+        "off",
+        "the",
+        "field"
+      ],
+      "translation": "[需要翻译: both on and off the field.]",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 113.104,
+      "endTime": 116.64,
+      "text": "We work as a team, and we win or lose as a team",
+      "words": [
+        "We",
+        "work",
+        "as",
+        "a",
+        "team",
+        "and",
+        "we",
+        "win",
+        "or",
+        "lose",
+        "as",
+        "a",
+        "team"
+      ],
+      "translation": "[需要翻译: We work as a team, and we win or lose as a team]",
+      "wordCount": 13
+    }
+  ]
+}

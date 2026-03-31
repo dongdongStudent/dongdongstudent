@@ -1,0 +1,264 @@
+{
+  "metadata": {
+    "id": "7_4_2",
+    "title": "7_4_2",
+    "totalSentences": 15,
+    "totalWords": 101,
+    "duration": 104.08,
+    "difficulty": "beginner",
+    "convertedFrom": "7_4_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 60.92,
+      "endTime": 62.08,
+      "text": "In the afternoon,",
+      "words": [
+        "In",
+        "the",
+        "afternoon"
+      ],
+      "translation": "[需要翻译: In the afternoon,]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 62.41,
+      "endTime": 67.29,
+      "text": "the farmer taught us how to cut branches and leaves from tomato plants.",
+      "words": [
+        "the",
+        "farmer",
+        "taught",
+        "us",
+        "how",
+        "to",
+        "cut",
+        "branches",
+        "and",
+        "leaves",
+        "from",
+        "tomato",
+        "plants"
+      ],
+      "translation": "[需要翻译: the farmer taught us how to cut branches and leaves from tomato plants.]",
+      "wordCount": 13
+    },
+    {
+      "id": 3,
+      "startTime": 67.8,
+      "endTime": 70.09,
+      "text": "This helps them to grow more fruit.",
+      "words": [
+        "This",
+        "helps",
+        "them",
+        "to",
+        "grow",
+        "more",
+        "fruit"
+      ],
+      "translation": "[需要翻译: This helps them to grow more fruit.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 70.6,
+      "endTime": 73,
+      "text": "Finally, we watered the plants.",
+      "words": [
+        "Finally",
+        "we",
+        "watered",
+        "the",
+        "plants"
+      ],
+      "translation": "[需要翻译: Finally, we watered the plants.]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 74.03,
+      "endTime": 76.06,
+      "text": "Plants need so much work!",
+      "words": [
+        "Plants",
+        "need",
+        "so",
+        "much",
+        "work"
+      ],
+      "translation": "[需要翻译: Plants need so much work!]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 76.44,
+      "endTime": 80.12,
+      "text": "It was tiring, but I enjoyed working with my hands.",
+      "words": [
+        "It",
+        "was",
+        "tiring",
+        "but",
+        "I",
+        "enjoyed",
+        "working",
+        "with",
+        "my",
+        "hands"
+      ],
+      "translation": "[需要翻译: It was tiring, but I enjoyed working with my hands.]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 81.12,
+      "endTime": 84.73,
+      "text": "One thing I learnt today: Farming isn’t easy!",
+      "words": [
+        "One",
+        "thing",
+        "I",
+        "learnt",
+        "today:",
+        "Farming",
+        "isn’t",
+        "easy"
+      ],
+      "translation": "[需要翻译: One thing I learnt today: Farming isn’t easy!]",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 85.18,
+      "endTime": 86.92,
+      "text": "It made me think of the saying,",
+      "words": [
+        "It",
+        "made",
+        "me",
+        "think",
+        "of",
+        "the",
+        "saying"
+      ],
+      "translation": "[需要翻译: It made me think of the saying,]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 87.29,
+      "endTime": 89.71,
+      "text": "“Every grain comes from hard work.”",
+      "words": [
+        "“Every",
+        "grain",
+        "comes",
+        "from",
+        "hard",
+        "work",
+        "”"
+      ],
+      "translation": "[需要翻译: “Every grain comes from hard work.”]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 90.09,
+      "endTime": 92.72,
+      "text": "The farmer let us take some vegetables home.",
+      "words": [
+        "The",
+        "farmer",
+        "let",
+        "us",
+        "take",
+        "some",
+        "vegetables",
+        "home"
+      ],
+      "translation": "[需要翻译: The farmer let us take some vegetables home.]",
+      "wordCount": 8
+    },
+    {
+      "id": 11,
+      "startTime": 93.26,
+      "endTime": 95.2,
+      "text": "My mum cooked some for dinner,",
+      "words": [
+        "My",
+        "mum",
+        "cooked",
+        "some",
+        "for",
+        "dinner"
+      ],
+      "translation": "[需要翻译: My mum cooked some for dinner,]",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 95.55,
+      "endTime": 97.72,
+      "text": "and they were fresh and delicious!",
+      "words": [
+        "and",
+        "they",
+        "were",
+        "fresh",
+        "and",
+        "delicious"
+      ],
+      "translation": "[需要翻译: and they were fresh and delicious!]",
+      "wordCount": 6
+    },
+    {
+      "id": 13,
+      "startTime": 98.25,
+      "endTime": 99.84,
+      "text": "They certainly taste better",
+      "words": [
+        "They",
+        "certainly",
+        "taste",
+        "better"
+      ],
+      "translation": "[需要翻译: They certainly taste better]",
+      "wordCount": 4
+    },
+    {
+      "id": 14,
+      "startTime": 99.84,
+      "endTime": 101.07,
+      "text": "when you work for them!",
+      "words": [
+        "when",
+        "you",
+        "work",
+        "for",
+        "them"
+      ],
+      "translation": "[需要翻译: when you work for them!]",
+      "wordCount": 5
+    },
+    {
+      "id": 15,
+      "startTime": 101.55,
+      "endTime": 104.08,
+      "text": "Today was really a day to remember",
+      "words": [
+        "Today",
+        "was",
+        "really",
+        "a",
+        "day",
+        "to",
+        "remember"
+      ],
+      "translation": "[需要翻译: Today was really a day to remember]",
+      "wordCount": 7
+    }
+  ]
+}

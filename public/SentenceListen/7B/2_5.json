@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "id": "2_5",
+    "title": "2_5",
+    "totalSentences": 13,
+    "totalWords": 103,
+    "duration": 66.896,
+    "difficulty": "beginner",
+    "convertedFrom": "2_5.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 15.072,
+      "endTime": 17.312,
+      "text": "Dear Dr Know,",
+      "words": [
+        "Dear",
+        "Dr",
+        "Know"
+      ],
+      "translation": "[需要翻译: Dear Dr Know,]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 17.536,
+      "endTime": 22.208,
+      "text": "Help! There are too many rules in my life!",
+      "words": [
+        "Help",
+        "There",
+        "are",
+        "too",
+        "many",
+        "rules",
+        "in",
+        "my",
+        "life"
+      ],
+      "translation": "[需要翻译: Help! There are too many rules in my life!]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 22.528,
+      "endTime": 27.312,
+      "text": "Every morning, I have to make my bed before breakfast.",
+      "words": [
+        "Every",
+        "morning",
+        "I",
+        "have",
+        "to",
+        "make",
+        "my",
+        "bed",
+        "before",
+        "breakfast"
+      ],
+      "translation": "[需要翻译: Every morning, I have to make my bed before breakfast.]",
+      "wordCount": 10
+    },
+    {
+      "id": 4,
+      "startTime": 27.84,
+      "endTime": 32.672,
+      "text": "I have to hurry to school because I can’t be late for school.",
+      "words": [
+        "I",
+        "have",
+        "to",
+        "hurry",
+        "to",
+        "school",
+        "because",
+        "I",
+        "can’t",
+        "be",
+        "late",
+        "for",
+        "school"
+      ],
+      "translation": "[需要翻译: I have to hurry to school because I can’t be late for school.]",
+      "wordCount": 13
+    },
+    {
+      "id": 5,
+      "startTime": 33.216,
+      "endTime": 38.048,
+      "text": "When I’m at school, I mustn’t use my phone in class either.",
+      "words": [
+        "When",
+        "I’m",
+        "at",
+        "school",
+        "I",
+        "mustn’t",
+        "use",
+        "my",
+        "phone",
+        "in",
+        "class",
+        "either"
+      ],
+      "translation": "[需要翻译: When I’m at school, I mustn’t use my phone in class either.]",
+      "wordCount": 12
+    },
+    {
+      "id": 6,
+      "startTime": 38.464,
+      "endTime": 40.848,
+      "text": "And I have to wear the uniform.",
+      "words": [
+        "And",
+        "I",
+        "have",
+        "to",
+        "wear",
+        "the",
+        "uniform"
+      ],
+      "translation": "[需要翻译: And I have to wear the uniform.]",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 41.392,
+      "endTime": 44.976,
+      "text": "After school, there are even more rules!",
+      "words": [
+        "After",
+        "school",
+        "there",
+        "are",
+        "even",
+        "more",
+        "rules"
+      ],
+      "translation": "[需要翻译: After school, there are even more rules!]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 45.152,
+      "endTime": 48.272,
+      "text": "I have to finish my homework first.",
+      "words": [
+        "I",
+        "have",
+        "to",
+        "finish",
+        "my",
+        "homework",
+        "first"
+      ],
+      "translation": "[需要翻译: I have to finish my homework first.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 48.656,
+      "endTime": 53.808,
+      "text": "I can only play basketball after I practise the piano.",
+      "words": [
+        "I",
+        "can",
+        "only",
+        "play",
+        "basketball",
+        "after",
+        "I",
+        "practise",
+        "the",
+        "piano"
+      ],
+      "translation": "[需要翻译: I can only play basketball after I practise the piano.]",
+      "wordCount": 10
+    },
+    {
+      "id": 10,
+      "startTime": 54.064,
+      "endTime": 57.088,
+      "text": "I can’t hang out with my friends on weekdays.",
+      "words": [
+        "I",
+        "can’t",
+        "hang",
+        "out",
+        "with",
+        "my",
+        "friends",
+        "on",
+        "weekdays"
+      ],
+      "translation": "[需要翻译: I can’t hang out with my friends on weekdays.]",
+      "wordCount": 9
+    },
+    {
+      "id": 11,
+      "startTime": 57.552,
+      "endTime": 60.368,
+      "text": "I know some rules are important,",
+      "words": [
+        "I",
+        "know",
+        "some",
+        "rules",
+        "are",
+        "important"
+      ],
+      "translation": "[需要翻译: I know some rules are important,]",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 60.624,
+      "endTime": 64.224,
+      "text": "but this is awful! What can I do?",
+      "words": [
+        "but",
+        "this",
+        "is",
+        "awful",
+        "What",
+        "can",
+        "I",
+        "do"
+      ],
+      "translation": "[需要翻译: but this is awful! What can I do?]",
+      "wordCount": 8
+    },
+    {
+      "id": 13,
+      "startTime": 64.608,
+      "endTime": 66.896,
+      "text": "Yours, Alice",
+      "words": [
+        "Yours",
+        "Alice"
+      ],
+      "translation": "[需要翻译: Yours, Alice]",
+      "wordCount": 2
+    }
+  ]
+}

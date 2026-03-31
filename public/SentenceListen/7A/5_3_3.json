@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "id": "5_3_3",
+    "title": "5_3_3",
+    "totalSentences": 7,
+    "totalWords": 39,
+    "duration": 24.416,
+    "difficulty": "beginner",
+    "convertedFrom": "5_3_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.288,
+      "endTime": 1.328,
+      "text": "Nature Club",
+      "words": [
+        "Nature",
+        "Club"
+      ],
+      "translation": "[需要翻译: Nature Club]",
+      "wordCount": 2
+    },
+    {
+      "id": 2,
+      "startTime": 1.808,
+      "endTime": 3.648,
+      "text": "Do you love nature?",
+      "words": [
+        "Do",
+        "you",
+        "love",
+        "nature"
+      ],
+      "translation": "[需要翻译: Do you love nature?]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 4.128,
+      "endTime": 6.576,
+      "text": "Can you take good photos?",
+      "words": [
+        "Can",
+        "you",
+        "take",
+        "good",
+        "photos"
+      ],
+      "translation": "[需要翻译: Can you take good photos?]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 6.944,
+      "endTime": 10.688,
+      "text": "Come hiking with us every Sunday afternoon!",
+      "words": [
+        "Come",
+        "hiking",
+        "with",
+        "us",
+        "every",
+        "Sunday",
+        "afternoon"
+      ],
+      "translation": "[需要翻译: Come hiking with us every Sunday afternoon!]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 11.248,
+      "endTime": 17.392,
+      "text": "We watch birds, take photos,and collect plants and insects.",
+      "words": [
+        "We",
+        "watch",
+        "birds",
+        "take",
+        "photos",
+        "and",
+        "collect",
+        "plants",
+        "and",
+        "insects"
+      ],
+      "translation": "[需要翻译: We watch birds, take photos,and collect plants and insects.]",
+      "wordCount": 10
+    },
+    {
+      "id": 6,
+      "startTime": 17.904,
+      "endTime": 20.576,
+      "text": "We also visit nature parks.",
+      "words": [
+        "We",
+        "also",
+        "visit",
+        "nature",
+        "parks"
+      ],
+      "translation": "[需要翻译: We also visit nature parks.]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 20.928,
+      "endTime": 24.416,
+      "text": "Discover wildlife right under your nose!",
+      "words": [
+        "Discover",
+        "wildlife",
+        "right",
+        "under",
+        "your",
+        "nose"
+      ],
+      "translation": "[需要翻译: Discover wildlife right under your nose!]",
+      "wordCount": 6
+    }
+  ]
+}

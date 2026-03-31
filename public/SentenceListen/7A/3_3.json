@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "id": "3_3",
+    "title": "3_3",
+    "totalSentences": 20,
+    "totalWords": 135,
+    "duration": 75.472,
+    "difficulty": "beginner",
+    "convertedFrom": "3_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.288,
+      "endTime": 1.552,
+      "text": "Hi Flora,",
+      "words": ["Hi", "Flora"],
+      "translation": "嗨，Flora，",
+      "wordCount": 2
+    },
+    {
+      "id": 2,
+      "startTime": 2.144,
+      "endTime": 6.288,
+      "text": "Thanks for your email. To answer your question,",
+      "words": ["Thanks", "for", "your", "email", "To", "answer", "your", "question"],
+      "translation": "谢谢你的邮件。回答你的问题，",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 6.576,
+      "endTime": 8.784,
+      "text": "my new school is great!",
+      "words": ["my", "new", "school", "is", "great"],
+      "translation": "我的新学校很棒！",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 9.456,
+      "endTime": 11.136,
+      "text": "It’s very beautiful.",
+      "words": ["It’s", "very", "beautiful"],
+      "translation": "它非常漂亮。",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 11.776,
+      "endTime": 14.464,
+      "text": "There are many modern buildings.",
+      "words": ["There", "are", "many", "modern", "buildings"],
+      "translation": "有很多现代化的建筑。",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 15.84,
+      "endTime": 19.952,
+      "text": "There’s a large sports field next to the teachers’ building.",
+      "words": ["There’s", "a", "large", "sports", "field", "next", "to", "the", "teachers’", "building"],
+      "translation": "教师楼旁边有一个很大的运动场。",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 20.896,
+      "endTime": 25.472,
+      "text": "All the students go there and do exercises together in the morning.",
+      "words": ["All", "the", "students", "go", "there", "and", "do", "exercises", "together", "in", "the", "morning"],
+      "translation": "早上所有学生都去那里一起做操。",
+      "wordCount": 12
+    },
+    {
+      "id": 8,
+      "startTime": 26.208,
+      "endTime": 31.424,
+      "text": "It’s amazing! Every Monday we raise the flag there.",
+      "words": ["It’s", "amazing", "Every", "Monday", "we", "raise", "the", "flag", "there"],
+      "translation": "太棒了！每周一我们都在那里升旗。",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 32.448,
+      "endTime": 35.184,
+      "text": "It’s a special way to start the week.",
+      "words": ["It’s", "a", "special", "way", "to", "start", "the", "week"],
+      "translation": "这是一种特别的开启新一周的方式。",
+      "wordCount": 8
+    },
+    {
+      "id": 10,
+      "startTime": 36.624,
+      "endTime": 40.032,
+      "text": "The classroom building is behind the sports field.",
+      "words": ["The", "classroom", "building", "is", "behind", "the", "sports", "field"],
+      "translation": "教学楼在运动场的后面。",
+      "wordCount": 8
+    },
+    {
+      "id": 11,
+      "startTime": 40.96,
+      "endTime": 44.048,
+      "text": "We spend most of the time in our classroom.",
+      "words": ["We", "spend", "most", "of", "the", "time", "in", "our", "classroom"],
+      "translation": "我们大部分时间都在教室里。",
+      "wordCount": 9
+    },
+    {
+      "id": 12,
+      "startTime": 44.816,
+      "endTime": 49.904,
+      "text": "It’s big and clean. Every week, we change seats.",
+      "words": ["It’s", "big", "and", "clean", "Every", "week", "we", "change", "seats"],
+      "translation": "它又大又干净。每周我们都换座位。",
+      "wordCount": 9
+    },
+    {
+      "id": 13,
+      "startTime": 50.816,
+      "endTime": 55.104,
+      "text": "This week I sit next to my best friend, Han Lin.",
+      "words": ["This", "week", "I", "sit", "next", "to", "my", "best", "friend", "Han", "Lin"],
+      "translation": "这周我坐在我最好的朋友 Han Lin 旁边。",
+      "wordCount": 11
+    },
+    {
+      "id": 14,
+      "startTime": 56.608,
+      "endTime": 59.568,
+      "text": "The dining hall is across from the sports field.",
+      "words": ["The", "dining", "hall", "is", "across", "from", "the", "sports", "field"],
+      "translation": "食堂在运动场的对面。",
+      "wordCount": 9
+    },
+    {
+      "id": 15,
+      "startTime": 60.192,
+      "endTime": 61.968,
+      "text": "It’s my favourite place",
+      "words": ["It’s", "my", "favourite", "place"],
+      "translation": "那是我最喜欢的地方，",
+      "wordCount": 4
+    },
+    {
+      "id": 16,
+      "startTime": 62.192,
+      "endTime": 64.576,
+      "text": "because there are many kinds of food.",
+      "words": ["because", "there", "are", "many", "kinds", "of", "food"],
+      "translation": "因为那里有很多种食物。",
+      "wordCount": 7
+    },
+    {
+      "id": 17,
+      "startTime": 65.376,
+      "endTime": 67.76,
+      "text": "I love the Chinese food there.",
+      "words": ["I", "love", "the", "Chinese", "food", "there"],
+      "translation": "我喜欢那里的中餐。",
+      "wordCount": 6
+    },
+    {
+      "id": 18,
+      "startTime": 68.448,
+      "endTime": 70.928,
+      "text": "They make delicious jiaozi.",
+      "words": ["They", "make", "delicious", "jiaozi"],
+      "translation": "他们做的饺子很好吃。",
+      "wordCount": 4
+    },
+    {
+      "id": 19,
+      "startTime": 71.536,
+      "endTime": 73.152,
+      "text": "How about your school?",
+      "words": ["How", "about", "your", "school"],
+      "translation": "你的学校怎么样？",
+      "wordCount": 4
+    },
+    {
+      "id": 20,
+      "startTime": 73.664,
+      "endTime": 75.472,
+      "text": "Yours,Peter",
+      "words": ["Yours", "Peter"],
+      "translation": "你的朋友，Peter",
+      "wordCount": 2
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "metadata": {
+    "id": "6_4",
+    "title": "6_4",
+    "totalSentences": 22,
+    "totalWords": 162,
+    "duration": 92.475,
+    "difficulty": "beginner",
+    "convertedFrom": "6_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.625,
+      "endTime": 3.125,
+      "text": "My name is Timo Halla.",
+      "words": [
+        "My",
+        "name",
+        "is",
+        "Timo",
+        "Halla"
+      ],
+      "translation": "[需要翻译: My name is Timo Halla.]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 3.8,
+      "endTime": 5.425,
+      "text": "I'm 13 years old.",
+      "words": [
+        "I'm",
+        "13",
+        "years",
+        "old"
+      ],
+      "translation": "[需要翻译: I'm 13 years old.]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 6.35,
+      "endTime": 10.05,
+      "text": "I live with my parents in Helsinki, Finland.",
+      "words": [
+        "I",
+        "live",
+        "with",
+        "my",
+        "parents",
+        "in",
+        "Helsinki",
+        "Finland"
+      ],
+      "translation": "[需要翻译: I live with my parents in Helsinki, Finland.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 11.5,
+      "endTime": 13.425,
+      "text": "Now it's December.",
+      "words": [
+        "Now",
+        "it's",
+        "December"
+      ],
+      "translation": "[需要翻译: Now it's December.]",
+      "wordCount": 3
+    },
+    {
+      "id": 5,
+      "startTime": 14.575,
+      "endTime": 20.325,
+      "text": "Every Tuesday, I usually get up at 7:40.",
+      "words": [
+        "Every",
+        "Tuesday",
+        "I",
+        "usually",
+        "get",
+        "up",
+        "at",
+        "7:40"
+      ],
+      "translation": "[需要翻译: Every Tuesday, I usually get up at 7:40.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 20.925,
+      "endTime": 24.2,
+      "text": "I often listen to the news or music.",
+      "words": [
+        "I",
+        "often",
+        "listen",
+        "to",
+        "the",
+        "news",
+        "or",
+        "music"
+      ],
+      "translation": "[需要翻译: I often listen to the news or music.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 25.1,
+      "endTime": 28.125,
+      "text": "After breakfast, I walk to school.",
+      "words": [
+        "After",
+        "breakfast",
+        "I",
+        "walk",
+        "to",
+        "school"
+      ],
+      "translation": "[需要翻译: After breakfast, I walk to school.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 28.875,
+      "endTime": 30.9,
+      "text": "It's only a 10-minute walk.",
+      "words": [
+        "It's",
+        "only",
+        "a",
+        "10-minute",
+        "walk"
+      ],
+      "translation": "[需要翻译: It's only a 10-minute walk.]",
+      "wordCount": 5
+    },
+    {
+      "id": 9,
+      "startTime": 31.8,
+      "endTime": 34.175,
+      "text": "My school begins at 9:00.",
+      "words": [
+        "My",
+        "school",
+        "begins",
+        "at",
+        "9:00"
+      ],
+      "translation": "[需要翻译: My school begins at 9:00.]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 34.9,
+      "endTime": 37.55,
+      "text": "There are 18 students in my class.",
+      "words": [
+        "There",
+        "are",
+        "18",
+        "students",
+        "in",
+        "my",
+        "class"
+      ],
+      "translation": "[需要翻译: There are 18 students in my class.]",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 38.425,
+      "endTime": 43.725,
+      "text": "Each lesson is 45 minutes long, and there's a break between lessons.",
+      "words": [
+        "Each",
+        "lesson",
+        "is",
+        "45",
+        "minutes",
+        "long",
+        "and",
+        "there's",
+        "a",
+        "break",
+        "between",
+        "lessons"
+      ],
+      "translation": "[需要翻译: Each lesson is 45 minutes long, and there's a break between lessons.]",
+      "wordCount": 12
+    },
+    {
+      "id": 12,
+      "startTime": 44.625,
+      "endTime": 50.1,
+      "text": "I have one Finnish lesson and two home economics lessons in the morning.",
+      "words": [
+        "I",
+        "have",
+        "one",
+        "Finnish",
+        "lesson",
+        "and",
+        "two",
+        "home",
+        "economics",
+        "lessons",
+        "in",
+        "the",
+        "morning"
+      ],
+      "translation": "[需要翻译: I have one Finnish lesson and two home economics lessons in the morning.]",
+      "wordCount": 13
+    },
+    {
+      "id": 13,
+      "startTime": 50.825,
+      "endTime": 54.2,
+      "text": "After that, I have lunch at 12:00.",
+      "words": [
+        "After",
+        "that",
+        "I",
+        "have",
+        "lunch",
+        "at",
+        "12:00"
+      ],
+      "translation": "[需要翻译: After that, I have lunch at 12:00.]",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 55.475,
+      "endTime": 61.525,
+      "text": "The afternoon lessons begin at 12:30 and finish at 2:15.",
+      "words": [
+        "The",
+        "afternoon",
+        "lessons",
+        "begin",
+        "at",
+        "12:30",
+        "and",
+        "finish",
+        "at",
+        "2:15"
+      ],
+      "translation": "[需要翻译: The afternoon lessons begin at 12:30 and finish at 2:15.]",
+      "wordCount": 10
+    },
+    {
+      "id": 15,
+      "startTime": 62.375,
+      "endTime": 64.95,
+      "text": "Then I go to my ice hockey club.",
+      "words": [
+        "Then",
+        "I",
+        "go",
+        "to",
+        "my",
+        "ice",
+        "hockey",
+        "club"
+      ],
+      "translation": "[需要翻译: Then I go to my ice hockey club.]",
+      "wordCount": 8
+    },
+    {
+      "id": 16,
+      "startTime": 66.15,
+      "endTime": 69.475,
+      "text": "I usually get home around 4:00.",
+      "words": [
+        "I",
+        "usually",
+        "get",
+        "home",
+        "around",
+        "4:00"
+      ],
+      "translation": "[需要翻译: I usually get home around 4:00.]",
+      "wordCount": 6
+    },
+    {
+      "id": 17,
+      "startTime": 70.225,
+      "endTime": 72.45,
+      "text": "It's already dark outside.",
+      "words": [
+        "It's",
+        "already",
+        "dark",
+        "outside"
+      ],
+      "translation": "[需要翻译: It's already dark outside.]",
+      "wordCount": 4
+    },
+    {
+      "id": 18,
+      "startTime": 73.075,
+      "endTime": 75.875,
+      "text": "I often have dinner at 6:00.",
+      "words": [
+        "I",
+        "often",
+        "have",
+        "dinner",
+        "at",
+        "6:00"
+      ],
+      "translation": "[需要翻译: I often have dinner at 6:00.]",
+      "wordCount": 6
+    },
+    {
+      "id": 19,
+      "startTime": 76.225,
+      "endTime": 80.45,
+      "text": "After that, I read with my parents for an hour.",
+      "words": [
+        "After",
+        "that",
+        "I",
+        "read",
+        "with",
+        "my",
+        "parents",
+        "for",
+        "an",
+        "hour"
+      ],
+      "translation": "[需要翻译: After that, I read with my parents for an hour.]",
+      "wordCount": 10
+    },
+    {
+      "id": 20,
+      "startTime": 80.7,
+      "endTime": 83.85,
+      "text": "That's an important part of my everyday life.",
+      "words": [
+        "That's",
+        "an",
+        "important",
+        "part",
+        "of",
+        "my",
+        "everyday",
+        "life"
+      ],
+      "translation": "[需要翻译: That's an important part of my everyday life.]",
+      "wordCount": 8
+    },
+    {
+      "id": 21,
+      "startTime": 85.025,
+      "endTime": 88.575,
+      "text": "Then I prepare my schoolbag for the next day.",
+      "words": [
+        "Then",
+        "I",
+        "prepare",
+        "my",
+        "schoolbag",
+        "for",
+        "the",
+        "next",
+        "day"
+      ],
+      "translation": "[需要翻译: Then I prepare my schoolbag for the next day.]",
+      "wordCount": 9
+    },
+    {
+      "id": 22,
+      "startTime": 89.075,
+      "endTime": 92.475,
+      "text": "At 9:30, it's time for me to go to bed.",
+      "words": [
+        "At",
+        "9:30",
+        "it's",
+        "time",
+        "for",
+        "me",
+        "to",
+        "go",
+        "to",
+        "bed"
+      ],
+      "translation": "[需要翻译: At 9:30, it's time for me to go to bed.]",
+      "wordCount": 10
+    }
+  ]
+}

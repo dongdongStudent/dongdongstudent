@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "id": "8_3",
+    "title": "8_3",
+    "totalSentences": 3,
+    "totalWords": 34,
+    "duration": 27.008,
+    "difficulty": "beginner",
+    "convertedFrom": "8_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 14.08,
+      "endTime": 18.064,
+      "text": "Did you read Little Women for English class? It’s great!",
+      "words": [
+        "Did",
+        "you",
+        "read",
+        "Little",
+        "Women",
+        "for",
+        "English",
+        "class",
+        "It’s",
+        "great"
+      ],
+      "translation": "[需要翻译: Did you read Little Women for English class? It’s great!]",
+      "wordCount": 10
+    },
+    {
+      "id": 2,
+      "startTime": 18.56,
+      "endTime": 22.464,
+      "text": "No, I didn’t. Would you like to tell me about it?",
+      "words": [
+        "No",
+        "I",
+        "didn’t",
+        "Would",
+        "you",
+        "like",
+        "to",
+        "tell",
+        "me",
+        "about",
+        "it"
+      ],
+      "translation": "[需要翻译: No, I didn’t. Would you like to tell me about it?]",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 22.976,
+      "endTime": 27.008,
+      "text": "Well, I’d like to. But don’t you want to read it by yourself?",
+      "words": [
+        "Well",
+        "I’d",
+        "like",
+        "to",
+        "But",
+        "don’t",
+        "you",
+        "want",
+        "to",
+        "read",
+        "it",
+        "by",
+        "yourself"
+      ],
+      "translation": "[需要翻译: Well, I’d like to. But don’t you want to read it by yourself?]",
+      "wordCount": 13
+    }
+  ]
+}

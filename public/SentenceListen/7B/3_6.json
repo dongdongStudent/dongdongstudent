@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "id": "3_6",
+    "title": "3_6",
+    "totalSentences": 7,
+    "totalWords": 59,
+    "duration": 79.056,
+    "difficulty": "beginner",
+    "convertedFrom": "3_6.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 51.472,
+      "endTime": 55.28,
+      "text": "This year, my goal is to be really fit.",
+      "words": [
+        "This",
+        "year",
+        "my",
+        "goal",
+        "is",
+        "to",
+        "be",
+        "really",
+        "fit"
+      ],
+      "translation": "[需要翻译: This year, my goal is to be really fit.]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 55.76,
+      "endTime": 59.12,
+      "text": "I jog, swim, and do sit-ups.",
+      "words": [
+        "I",
+        "jog",
+        "swim",
+        "and",
+        "do",
+        "sit-ups"
+      ],
+      "translation": "[需要翻译: I jog, swim, and do sit-ups.]",
+      "wordCount": 6
+    },
+    {
+      "id": 3,
+      "startTime": 59.824,
+      "endTime": 65.824,
+      "text": "But my favourite way of keeping fit is to use an exercise app to work out.",
+      "words": [
+        "But",
+        "my",
+        "favourite",
+        "way",
+        "of",
+        "keeping",
+        "fit",
+        "is",
+        "to",
+        "use",
+        "an",
+        "exercise",
+        "app",
+        "to",
+        "work",
+        "out"
+      ],
+      "translation": "[需要翻译: But my favourite way of keeping fit is to use an exercise app to work out.]",
+      "wordCount": 16
+    },
+    {
+      "id": 4,
+      "startTime": 66.256,
+      "endTime": 70.128,
+      "text": "The app gives me exercises to do every day.",
+      "words": [
+        "The",
+        "app",
+        "gives",
+        "me",
+        "exercises",
+        "to",
+        "do",
+        "every",
+        "day"
+      ],
+      "translation": "[需要翻译: The app gives me exercises to do every day.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 70.672,
+      "endTime": 72.752,
+      "text": "It can show my progress.",
+      "words": [
+        "It",
+        "can",
+        "show",
+        "my",
+        "progress"
+      ],
+      "translation": "[需要翻译: It can show my progress.]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 73.168,
+      "endTime": 76.016,
+      "text": "My friends use the app too.",
+      "words": [
+        "My",
+        "friends",
+        "use",
+        "the",
+        "app",
+        "too"
+      ],
+      "translation": "[需要翻译: My friends use the app too.]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 76.208,
+      "endTime": 79.056,
+      "text": "We have fun when we keep fit together",
+      "words": [
+        "We",
+        "have",
+        "fun",
+        "when",
+        "we",
+        "keep",
+        "fit",
+        "together"
+      ],
+      "translation": "[需要翻译: We have fun when we keep fit together]",
+      "wordCount": 8
+    }
+  ]
+}

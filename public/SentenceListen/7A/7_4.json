@@ -1,0 +1,301 @@
+{
+  "metadata": {
+    "id": "7_4",
+    "title": "7_4",
+    "totalSentences": 15,
+    "totalWords": 138,
+    "duration": 64.175,
+    "difficulty": "beginner",
+    "convertedFrom": "7_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.575,
+      "endTime": 6.875,
+      "text": "Teng Fei: Hi, Peter! It's Ella and Emma's birthday soon. How about a surprise party for them?",
+      "words": [
+        "Teng",
+        "Fei:",
+        "Hi",
+        "Peter",
+        "It's",
+        "Ella",
+        "and",
+        "Emma's",
+        "birthday",
+        "soon",
+        "How",
+        "about",
+        "a",
+        "surprise",
+        "party",
+        "for",
+        "them"
+      ],
+      "translation": "[需要翻译: Teng Fei: Hi, Peter! It's Ella and Emma's birthday soon. How about a surprise party for them?]",
+      "wordCount": 17
+    },
+    {
+      "id": 2,
+      "startTime": 7.55,
+      "endTime": 13.2,
+      "text": "Peter: Good idea! Let's go and buy something for the party this weekend.",
+      "words": [
+        "Peter:",
+        "Good",
+        "idea",
+        "Let's",
+        "go",
+        "and",
+        "buy",
+        "something",
+        "for",
+        "the",
+        "party",
+        "this",
+        "weekend"
+      ],
+      "translation": "[需要翻译: Peter: Good idea! Let's go and buy something for the party this weekend.]",
+      "wordCount": 13
+    },
+    {
+      "id": 3,
+      "startTime": 17.425,
+      "endTime": 20.05,
+      "text": "Woman: Good morning. Can I help you?",
+      "words": [
+        "Woman:",
+        "Good",
+        "morning",
+        "Can",
+        "I",
+        "help",
+        "you"
+      ],
+      "translation": "[需要翻译: Woman: Good morning. Can I help you?]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 20.5,
+      "endTime": 24.1,
+      "text": "Teng Fei: Yes, please. How much is this birthday cake?",
+      "words": [
+        "Teng",
+        "Fei:",
+        "Yes",
+        "please",
+        "How",
+        "much",
+        "is",
+        "this",
+        "birthday",
+        "cake"
+      ],
+      "translation": "[需要翻译: Teng Fei: Yes, please. How much is this birthday cake?]",
+      "wordCount": 10
+    },
+    {
+      "id": 5,
+      "startTime": 24.825,
+      "endTime": 30.8,
+      "text": "Woman: We have a sale today. It's 85 yuan, and it comes with some candles.",
+      "words": [
+        "Woman:",
+        "We",
+        "have",
+        "a",
+        "sale",
+        "today",
+        "It's",
+        "85",
+        "yuan",
+        "and",
+        "it",
+        "comes",
+        "with",
+        "some",
+        "candles"
+      ],
+      "translation": "[需要翻译: Woman: We have a sale today. It's 85 yuan, and it comes with some candles.]",
+      "wordCount": 15
+    },
+    {
+      "id": 6,
+      "startTime": 31.375,
+      "endTime": 36.025,
+      "text": "Peter: Good, we'll take it. How much are those oranges?",
+      "words": [
+        "Peter:",
+        "Good",
+        "we'll",
+        "take",
+        "it",
+        "How",
+        "much",
+        "are",
+        "those",
+        "oranges"
+      ],
+      "translation": "[需要翻译: Peter: Good, we'll take it. How much are those oranges?]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 36.425,
+      "endTime": 40.9,
+      "text": "Woman: Six yuan a kilo. How many kilos do you want?",
+      "words": [
+        "Woman:",
+        "Six",
+        "yuan",
+        "a",
+        "kilo",
+        "How",
+        "many",
+        "kilos",
+        "do",
+        "you",
+        "want"
+      ],
+      "translation": "[需要翻译: Woman: Six yuan a kilo. How many kilos do you want?]",
+      "wordCount": 11
+    },
+    {
+      "id": 8,
+      "startTime": 41.325,
+      "endTime": 46.375,
+      "text": "Peter: Five kilos, please. Teng Fei, how about some yogurt?",
+      "words": [
+        "Peter:",
+        "Five",
+        "kilos",
+        "please",
+        "Teng",
+        "Fei",
+        "how",
+        "about",
+        "some",
+        "yogurt"
+      ],
+      "translation": "[需要翻译: Peter: Five kilos, please. Teng Fei, how about some yogurt?]",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 46.55,
+      "endTime": 49.025,
+      "text": "Teng Fei: Sure. How much is the yogurt?",
+      "words": [
+        "Teng",
+        "Fei:",
+        "Sure",
+        "How",
+        "much",
+        "is",
+        "the",
+        "yogurt"
+      ],
+      "translation": "[需要翻译: Teng Fei: Sure. How much is the yogurt?]",
+      "wordCount": 8
+    },
+    {
+      "id": 10,
+      "startTime": 49.525,
+      "endTime": 51.375,
+      "text": "Woman: Five yuan a bottle.",
+      "words": [
+        "Woman:",
+        "Five",
+        "yuan",
+        "a",
+        "bottle"
+      ],
+      "translation": "[需要翻译: Woman: Five yuan a bottle.]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 51.9,
+      "endTime": 55.125,
+      "text": "Teng Fei: 10 bottles, please. What's the total?",
+      "words": [
+        "Teng",
+        "Fei:",
+        "10",
+        "bottles",
+        "please",
+        "What's",
+        "the",
+        "total"
+      ],
+      "translation": "[需要翻译: Teng Fei: 10 bottles, please. What's the total?]",
+      "wordCount": 8
+    },
+    {
+      "id": 12,
+      "startTime": 55.625,
+      "endTime": 57.95,
+      "text": "Woman: 165 yuan.",
+      "words": [
+        "Woman:",
+        "165",
+        "yuan"
+      ],
+      "translation": "[需要翻译: Woman: 165 yuan.]",
+      "wordCount": 3
+    },
+    {
+      "id": 13,
+      "startTime": 58.3,
+      "endTime": 59.325,
+      "text": "Teng Fei: Here you are.",
+      "words": [
+        "Teng",
+        "Fei:",
+        "Here",
+        "you",
+        "are"
+      ],
+      "translation": "[需要翻译: Teng Fei: Here you are.]",
+      "wordCount": 5
+    },
+    {
+      "id": 14,
+      "startTime": 59.525,
+      "endTime": 61.925,
+      "text": "Woman: Thank you! Have a nice day",
+      "words": [
+        "Woman:",
+        "Thank",
+        "you",
+        "Have",
+        "a",
+        "nice",
+        "day"
+      ],
+      "translation": "[需要翻译: Woman: Thank you! Have a nice day]",
+      "wordCount": 7
+    },
+    {
+      "id": 15,
+      "startTime": 62.425,
+      "endTime": 64.175,
+      "text": "Teng Fei & Peter: Thanks. You too.Listening Scripts",
+      "words": [
+        "Teng",
+        "Fei",
+        "&",
+        "Peter:",
+        "Thanks",
+        "You",
+        "too",
+        "Listening",
+        "Scripts"
+      ],
+      "translation": "[需要翻译: Teng Fei & Peter: Thanks. You too.Listening Scripts]",
+      "wordCount": 9
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "metadata": {
+    "id": "1_4",
+    "title": "1_4",
+    "totalSentences": 12,
+    "totalWords": 116,
+    "duration": 67.904,
+    "difficulty": "beginner",
+    "convertedFrom": "1_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 12.672,
+      "endTime": 19.072,
+      "text": "The penguin is my favourite animal. What’s your favourite animal, Fu Xing?",
+      "words": [
+        "The",
+        "penguin",
+        "is",
+        "my",
+        "favourite",
+        "animal",
+        "What’s",
+        "your",
+        "favourite",
+        "animal",
+        "Fu",
+        "Xing"
+      ],
+      "translation": "[需要翻译: The penguin is my favourite animal. What’s your favourite animal, Fu Xing?]",
+      "wordCount": 12
+    },
+    {
+      "id": 2,
+      "startTime": 19.296,
+      "endTime": 22.96,
+      "text": "I like penguins too. Why do you like them so much?",
+      "words": [
+        "I",
+        "like",
+        "penguins",
+        "too",
+        "Why",
+        "do",
+        "you",
+        "like",
+        "them",
+        "so",
+        "much"
+      ],
+      "translation": "[需要翻译: I like penguins too. Why do you like them so much?]",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 23.55,
+      "endTime": 25.744,
+      "text": "Because they’re very cute",
+      "words": [
+        "Because",
+        "they’re",
+        "very",
+        "cute"
+      ],
+      "translation": "[需要翻译: Because they’re very cute]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 26.112,
+      "endTime": 29.376,
+      "text": "Yes, they look lovely. Let’s go and see them.",
+      "words": [
+        "Yes",
+        "they",
+        "look",
+        "lovely",
+        "Let’s",
+        "go",
+        "and",
+        "see",
+        "them"
+      ],
+      "translation": "[需要翻译: Yes, they look lovely. Let’s go and see them.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 29.776,
+      "endTime": 36.416,
+      "text": "Oh, there they are! They can’t fly like other birds, but they can swim fast.",
+      "words": [
+        "Oh",
+        "there",
+        "they",
+        "are",
+        "They",
+        "can’t",
+        "fly",
+        "like",
+        "other",
+        "birds",
+        "but",
+        "they",
+        "can",
+        "swim",
+        "fast"
+      ],
+      "translation": "[需要翻译: Oh, there they are! They can’t fly like other birds, but they can swim fast.]",
+      "wordCount": 15
+    },
+    {
+      "id": 6,
+      "startTime": 36.944,
+      "endTime": 40.592,
+      "text": "I like how they walk. It’s funny",
+      "words": [
+        "I",
+        "like",
+        "how",
+        "they",
+        "walk",
+        "It’s",
+        "funny"
+      ],
+      "translation": "[需要翻译: I like how they walk. It’s funny]",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 40.816,
+      "endTime": 43.808,
+      "text": "Yes, it is! Where are they from?",
+      "words": [
+        "Yes",
+        "it",
+        "is",
+        "Where",
+        "are",
+        "they",
+        "from"
+      ],
+      "translation": "[需要翻译: Yes, it is! Where are they from?]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 44.17,
+      "endTime": 49.872,
+      "text": "Look here! It says they’re from Antarctica. It’s very cold there",
+      "words": [
+        "Look",
+        "here",
+        "It",
+        "says",
+        "they’re",
+        "from",
+        "Antarctica",
+        "It’s",
+        "very",
+        "cold",
+        "there"
+      ],
+      "translation": "[需要翻译: Look here! It says they’re from Antarctica. It’s very cold there]",
+      "wordCount": 11
+    },
+    {
+      "id": 9,
+      "startTime": 50.064,
+      "endTime": 54.576,
+      "text": "so they often stand close together. It helps them keep warm.",
+      "words": [
+        "so",
+        "they",
+        "often",
+        "stand",
+        "close",
+        "together",
+        "It",
+        "helps",
+        "them",
+        "keep",
+        "warm"
+      ],
+      "translation": "[需要翻译: so they often stand close together. It helps them keep warm.]",
+      "wordCount": 11
+    },
+    {
+      "id": 10,
+      "startTime": 54.928,
+      "endTime": 58.288,
+      "text": "They’re so smart. What do they eat?",
+      "words": [
+        "They’re",
+        "so",
+        "smart",
+        "What",
+        "do",
+        "they",
+        "eat"
+      ],
+      "translation": "[需要翻译: They’re so smart. What do they eat?]",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 58.672,
+      "endTime": 63.968,
+      "text": "Fish and small sea animals,I think. I have a fish sandwich ...",
+      "words": [
+        "Fish",
+        "and",
+        "small",
+        "sea",
+        "animals",
+        "I",
+        "think",
+        "I",
+        "have",
+        "a",
+        "fish",
+        "sandwich"
+      ],
+      "translation": "[需要翻译: Fish and small sea animals,I think. I have a fish sandwich ...]",
+      "wordCount": 12
+    },
+    {
+      "id": 12,
+      "startTime": 64.192,
+      "endTime": 67.904,
+      "text": "Don’t give them your sandwich! It’s not good for them.",
+      "words": [
+        "Don’t",
+        "give",
+        "them",
+        "your",
+        "sandwich",
+        "It’s",
+        "not",
+        "good",
+        "for",
+        "them"
+      ],
+      "translation": "[需要翻译: Don’t give them your sandwich! It’s not good for them.]",
+      "wordCount": 10
+    }
+  ]
+}

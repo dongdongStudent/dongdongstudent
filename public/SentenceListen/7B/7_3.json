@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "id": "star_1_1",
+    "title": "star_1_1",
+    "totalSentences": 9,
+    "totalWords": 64,
+    "duration": 63.008,
+    "difficulty": "beginner",
+    "convertedFrom": "star_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 15.936,
+      "endTime": 23.376,
+      "text": "Good morning, class.Good morning, Ms Gao.Sit down, please.",
+      "words": [
+        "Good",
+        "morning",
+        "class",
+        "Good",
+        "morning",
+        "Ms",
+        "Gao",
+        "Sit",
+        "down",
+        "please"
+      ],
+      "translation": "同学们早上好。高老师早上好。请坐。",
+      "wordCount": 10
+    },
+    {
+      "id": 2,
+      "startTime": 27.951999999999998,
+      "endTime": 32.416,
+      "text": "Hello, Peter. Can you say hi to the class?",
+      "words": [
+        "Hello",
+        "Peter",
+        "Can",
+        "you",
+        "say",
+        "hi",
+        "to",
+        "the",
+        "class"
+      ],
+      "translation": "你好，彼得。你能和同学们打个招呼吗？",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 32.864,
+      "endTime": 35.744,
+      "text": "Hi, everyone! I’m Peter Brown.",
+      "words": [
+        "Hi",
+        "everyone",
+        "I’m",
+        "Peter",
+        "Brown"
+      ],
+      "translation": "大家好！我是彼得·布朗。",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 36.24,
+      "endTime": 43.2,
+      "text": "Thank you, Peter. Now class, please say hi to each other.",
+      "words": [
+        "Thank",
+        "you",
+        "Peter",
+        "Now",
+        "class",
+        "please",
+        "say",
+        "hi",
+        "to",
+        "each",
+        "other"
+      ],
+      "translation": "谢谢你，彼得。现在同学们，请互相打个招呼。",
+      "wordCount": 11
+    },
+    {
+      "id": 5,
+      "startTime": 47.952,
+      "endTime": 51.744,
+      "text": "Good morning. My name is Emma.",
+      "words": [
+        "Good",
+        "morning",
+        "My",
+        "name",
+        "is",
+        "Emma"
+      ],
+      "translation": "早上好。我叫艾玛。",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 52.128,
+      "endTime": 53.424,
+      "text": "Good morning, Emma.",
+      "words": [
+        "Good",
+        "morning",
+        "Emma"
+      ],
+      "translation": "早上好，艾玛。",
+      "wordCount": 3
+    },
+    {
+      "id": 7,
+      "startTime": 53.888,
+      "endTime": 55.84,
+      "text": "So what’s your name?",
+      "words": [
+        "So",
+        "what’s",
+        "your",
+        "name"
+      ],
+      "translation": "那你叫什么名字？",
+      "wordCount": 4
+    },
+    {
+      "id": 8,
+      "startTime": 56.192,
+      "endTime": 59.552,
+      "text": "Oh, I’m Fu Xing. Nice to meet you, Emma.",
+      "words": [
+        "Oh",
+        "I’m",
+        "Fu",
+        "Xing",
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "Emma"
+      ],
+      "translation": "哦，我叫傅星。很高兴认识你，艾玛。",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 59.856,
+      "endTime": 63.008,
+      "text": "Nice to meet you too, Fu Xing!",
+      "words": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "too",
+        "Fu",
+        "Xing"
+      ],
+      "translation": "我也很高兴认识你，傅星！",
+      "wordCount": 7
+    }
+  ]
+}

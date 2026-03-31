@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "id": "53_1_1",
+    "title": "53_1_1",
+    "totalSentences": 11,
+    "totalWords": 61,
+    "duration": 72.4,
+    "difficulty": "beginner",
+    "convertedFrom": "53_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 1.504,
+      "endTime": 4.432,
+      "text": "Where is Mr Brown from?",
+      "words": [
+        "Where",
+        "is",
+        "Mr",
+        "Brown",
+        "from"
+      ],
+      "translation": "[需要翻译: Where is Mr Brown from?]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 10.352,
+      "endTime": 12.496,
+      "text": "Who's your English teacher?",
+      "words": [
+        "Who's",
+        "your",
+        "English",
+        "teacher"
+      ],
+      "translation": "[需要翻译: Who's your English teacher?]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 15.504,
+      "endTime": 18.912,
+      "text": "Are Emma and Ella in the same class?",
+      "words": [
+        "Are",
+        "Emma",
+        "and",
+        "Ella",
+        "in",
+        "the",
+        "same",
+        "class"
+      ],
+      "translation": "[需要翻译: Are Emma and Ella in the same class?]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 22.368,
+      "endTime": 25.088,
+      "text": "What class is Zhang Peng in?",
+      "words": [
+        "What",
+        "class",
+        "is",
+        "Zhang",
+        "Peng",
+        "in"
+      ],
+      "translation": "[需要翻译: What class is Zhang Peng in?]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 27.584,
+      "endTime": 30.24,
+      "text": "What's your favourite food?",
+      "words": [
+        "What's",
+        "your",
+        "favourite",
+        "food"
+      ],
+      "translation": "[需要翻译: What's your favourite food?]",
+      "wordCount": 4
+    },
+    {
+      "id": 6,
+      "startTime": 33.696,
+      "endTime": 36.304,
+      "text": "Is your favourite food fish?",
+      "words": [
+        "Is",
+        "your",
+        "favourite",
+        "food",
+        "fish"
+      ],
+      "translation": "[需要翻译: Is your favourite food fish?]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 36.688,
+      "endTime": 40.384,
+      "text": "I like fish, but my favourite food is eggs.",
+      "words": [
+        "I",
+        "like",
+        "fish",
+        "but",
+        "my",
+        "favourite",
+        "food",
+        "is",
+        "eggs"
+      ],
+      "translation": "[需要翻译: I like fish, but my favourite food is eggs.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 52.896,
+      "endTime": 55.184,
+      "text": "What's your English name, Li Fang?",
+      "words": [
+        "What's",
+        "your",
+        "English",
+        "name",
+        "Li",
+        "Fang"
+      ],
+      "translation": "[需要翻译: What's your English name, Li Fang?]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 55.648,
+      "endTime": 59.088,
+      "text": "Emma. E-M-M-A, Emma.",
+      "words": [
+        "Emma",
+        "E-M-M-A",
+        "Emma"
+      ],
+      "translation": "[需要翻译: Emma. E-M-M-A, Emma.]",
+      "wordCount": 3
+    },
+    {
+      "id": 10,
+      "startTime": 67.184,
+      "endTime": 69.92,
+      "text": "Are you from the US, Mary?",
+      "words": [
+        "Are",
+        "you",
+        "from",
+        "the",
+        "US",
+        "Mary"
+      ],
+      "translation": "[需要翻译: Are you from the US, Mary?]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 70.416,
+      "endTime": 72.4,
+      "text": "No, I'm from the UK.",
+      "words": [
+        "No",
+        "I'm",
+        "from",
+        "the",
+        "UK"
+      ],
+      "translation": "[需要翻译: No, I'm from the UK.]",
+      "wordCount": 5
+    }
+  ]
+}

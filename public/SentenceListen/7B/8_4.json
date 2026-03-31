@@ -1,0 +1,362 @@
+{
+  "metadata": {
+    "id": "8_4",
+    "title": "8_4",
+    "totalSentences": 21,
+    "totalWords": 139,
+    "duration": 89.872,
+    "difficulty": "beginner",
+    "convertedFrom": "8_4.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.296,
+      "endTime": 16.864,
+      "text": "Here’s The Emperor’s New Clothes by Hans Christian Andersen.",
+      "words": [
+        "Here’s",
+        "The",
+        "Emperor’s",
+        "New",
+        "Clothes",
+        "by",
+        "Hans",
+        "Christian",
+        "Andersen"
+      ],
+      "translation": "[需要翻译: Here’s The Emperor’s New Clothes by Hans Christian Andersen.]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 20.288,
+      "endTime": 25.184,
+      "text": "Once upon a time, an emperor liked clothes very much.",
+      "words": [
+        "Once",
+        "upon",
+        "a",
+        "time",
+        "an",
+        "emperor",
+        "liked",
+        "clothes",
+        "very",
+        "much"
+      ],
+      "translation": "[需要翻译: Once upon a time, an emperor liked clothes very much.]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 25.792,
+      "endTime": 28.528,
+      "text": "He wanted to buy some new clothes.",
+      "words": [
+        "He",
+        "wanted",
+        "to",
+        "buy",
+        "some",
+        "new",
+        "clothes"
+      ],
+      "translation": "[需要翻译: He wanted to buy some new clothes.]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 29.6,
+      "endTime": 32.256,
+      "text": "Two brothers came and lied to him,",
+      "words": [
+        "Two",
+        "brothers",
+        "came",
+        "and",
+        "lied",
+        "to",
+        "him"
+      ],
+      "translation": "[需要翻译: Two brothers came and lied to him,]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 32.656,
+      "endTime": 35.216,
+      "text": "“We can make wonderful clothes!",
+      "words": [
+        "“We",
+        "can",
+        "make",
+        "wonderful",
+        "clothes"
+      ],
+      "translation": "[需要翻译: “We can make wonderful clothes!]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 35.584,
+      "endTime": 38.208,
+      "text": "But only clever people can see them!”",
+      "words": [
+        "But",
+        "only",
+        "clever",
+        "people",
+        "can",
+        "see",
+        "them",
+        "”"
+      ],
+      "translation": "[需要翻译: But only clever people can see them!”]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 39.024,
+      "endTime": 41.008,
+      "text": "They pretended to make the clothes.",
+      "words": [
+        "They",
+        "pretended",
+        "to",
+        "make",
+        "the",
+        "clothes"
+      ],
+      "translation": "[需要翻译: They pretended to make the clothes.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 42.16,
+      "endTime": 45.488,
+      "text": "The emperor’s officials couldn’t see the clothes,",
+      "words": [
+        "The",
+        "emperor’s",
+        "officials",
+        "couldn’t",
+        "see",
+        "the",
+        "clothes"
+      ],
+      "translation": "[需要翻译: The emperor’s officials couldn’t see the clothes,]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 46.144,
+      "endTime": 49.376,
+      "text": "but they said, “What lovely clothes!”",
+      "words": [
+        "but",
+        "they",
+        "said",
+        "“What",
+        "lovely",
+        "clothes",
+        "”"
+      ],
+      "translation": "[需要翻译: but they said, “What lovely clothes!”]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 50.176,
+      "endTime": 53.232,
+      "text": "The emperor couldn’t see anything either,",
+      "words": [
+        "The",
+        "emperor",
+        "couldn’t",
+        "see",
+        "anything",
+        "either"
+      ],
+      "translation": "[需要翻译: The emperor couldn’t see anything either,]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 53.568,
+      "endTime": 56.96,
+      "text": "but he said, “They’re beautiful!”",
+      "words": [
+        "but",
+        "he",
+        "said",
+        "“They’re",
+        "beautiful",
+        "”"
+      ],
+      "translation": "[需要翻译: but he said, “They’re beautiful!”]",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 57.808,
+      "endTime": 60.08,
+      "text": "No one wanted to look silly.",
+      "words": [
+        "No",
+        "one",
+        "wanted",
+        "to",
+        "look",
+        "silly"
+      ],
+      "translation": "[需要翻译: No one wanted to look silly.]",
+      "wordCount": 6
+    },
+    {
+      "id": 13,
+      "startTime": 61.264,
+      "endTime": 65.36,
+      "text": "The emperor decided to show everyone his new clothes.",
+      "words": [
+        "The",
+        "emperor",
+        "decided",
+        "to",
+        "show",
+        "everyone",
+        "his",
+        "new",
+        "clothes"
+      ],
+      "translation": "[需要翻译: The emperor decided to show everyone his new clothes.]",
+      "wordCount": 9
+    },
+    {
+      "id": 14,
+      "startTime": 66.128,
+      "endTime": 68.592,
+      "text": "People in the street praised them.",
+      "words": [
+        "People",
+        "in",
+        "the",
+        "street",
+        "praised",
+        "them"
+      ],
+      "translation": "[需要翻译: People in the street praised them.]",
+      "wordCount": 6
+    },
+    {
+      "id": 15,
+      "startTime": 69.104,
+      "endTime": 71.52,
+      "text": "They were afraid to look silly too!",
+      "words": [
+        "They",
+        "were",
+        "afraid",
+        "to",
+        "look",
+        "silly",
+        "too"
+      ],
+      "translation": "[需要翻译: They were afraid to look silly too!]",
+      "wordCount": 7
+    },
+    {
+      "id": 16,
+      "startTime": 72.496,
+      "endTime": 74.848,
+      "text": "Suddenly, a boy shouted,",
+      "words": [
+        "Suddenly",
+        "a",
+        "boy",
+        "shouted"
+      ],
+      "translation": "[需要翻译: Suddenly, a boy shouted,]",
+      "wordCount": 4
+    },
+    {
+      "id": 17,
+      "startTime": 75.216,
+      "endTime": 78.8,
+      "text": "“Look! The emperor has no clothes on!”",
+      "words": [
+        "“Look",
+        "The",
+        "emperor",
+        "has",
+        "no",
+        "clothes",
+        "on",
+        "”"
+      ],
+      "translation": "[需要翻译: “Look! The emperor has no clothes on!”]",
+      "wordCount": 8
+    },
+    {
+      "id": 18,
+      "startTime": 79.328,
+      "endTime": 81.12,
+      "text": "Everyone looked at one another.",
+      "words": [
+        "Everyone",
+        "looked",
+        "at",
+        "one",
+        "another"
+      ],
+      "translation": "[需要翻译: Everyone looked at one another.]",
+      "wordCount": 5
+    },
+    {
+      "id": 19,
+      "startTime": 81.504,
+      "endTime": 83.008,
+      "text": "They started laughing.",
+      "words": [
+        "They",
+        "started",
+        "laughing"
+      ],
+      "translation": "[需要翻译: They started laughing.]",
+      "wordCount": 3
+    },
+    {
+      "id": 20,
+      "startTime": 83.696,
+      "endTime": 87.648,
+      "text": "The end! Did you like the story?",
+      "words": [
+        "The",
+        "end",
+        "Did",
+        "you",
+        "like",
+        "the",
+        "story"
+      ],
+      "translation": "[需要翻译: The end! Did you like the story?]",
+      "wordCount": 7
+    },
+    {
+      "id": 21,
+      "startTime": 88.112,
+      "endTime": 89.872,
+      "text": "Please tell me what you think!",
+      "words": [
+        "Please",
+        "tell",
+        "me",
+        "what",
+        "you",
+        "think"
+      ],
+      "translation": "[需要翻译: Please tell me what you think!]",
+      "wordCount": 6
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "id": "star_3_2",
+    "title": "star_3_2",
+    "totalSentences": 8,
+    "totalWords": 40,
+    "duration": 38.512,
+    "difficulty": "beginner",
+    "convertedFrom": "star_3_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 7.584,
+      "endTime": 10.416,
+      "text": "hey there, Big Cat.",
+      "words": [
+        "hey",
+        "there",
+        "Big",
+        "Cat"
+      ],
+      "translation": "[需要翻译: hey there, Big Cat.]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 12.384,
+      "endTime": 14.464,
+      "text": "Let’s go to the lake.",
+      "words": [
+        "Let’s",
+        "go",
+        "to",
+        "the",
+        "lake"
+      ],
+      "translation": "[需要翻译: Let’s go to the lake.]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 16.4,
+      "endTime": 18.896,
+      "text": "Come with me and Dog,",
+      "words": [
+        "Come",
+        "with",
+        "me",
+        "and",
+        "Dog"
+      ],
+      "translation": "[需要翻译: Come with me and Dog,]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 20.432,
+      "endTime": 22.48,
+      "text": "And Fox and Frog!",
+      "words": [
+        "And",
+        "Fox",
+        "and",
+        "Frog"
+      ],
+      "translation": "[需要翻译: And Fox and Frog!]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 24.112,
+      "endTime": 26.144,
+      "text": "We will listen to music,",
+      "words": [
+        "We",
+        "will",
+        "listen",
+        "to",
+        "music"
+      ],
+      "translation": "[需要翻译: We will listen to music,]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 27.951999999999998,
+      "endTime": 30.928,
+      "text": "And find flowers red and pink.",
+      "words": [
+        "And",
+        "find",
+        "flowers",
+        "red",
+        "and",
+        "pink"
+      ],
+      "translation": "[需要翻译: And find flowers red and pink.]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 32.64,
+      "endTime": 34.816,
+      "text": "We will sit in the sun,",
+      "words": [
+        "We",
+        "will",
+        "sit",
+        "in",
+        "the",
+        "sun"
+      ],
+      "translation": "[需要翻译: We will sit in the sun,]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 36.448,
+      "endTime": 38.512,
+      "text": "Tell jokes and have fun",
+      "words": [
+        "Tell",
+        "jokes",
+        "and",
+        "have",
+        "fun"
+      ],
+      "translation": "[需要翻译: Tell jokes and have fun]",
+      "wordCount": 5
+    }
+  ]
+}

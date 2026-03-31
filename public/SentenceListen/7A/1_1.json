@@ -1,83 +1,147 @@
 {
   "metadata": {
-    "id": "7A_U1_1",
-    "title": "七年级上第一单元1",
-    "audio": "/SentenceListen/7A/1_1.mp3",
-    "difficulty": "beginner",
+    "id": "1_1",
+    "title": "1_1",
     "totalSentences": 8,
-    "totalWords": 45,
-    "duration": 39.293
+    "totalWords": 56,
+    "duration": 39.293,
+    "difficulty": "beginner",
+    "convertedFrom": "1_1.srt"
   },
   "sentences": [
     {
-      "id": 1,
+      "id": 2,
       "startTime": 0,
       "endTime": 4.546,
       "text": "Hello, I'm Song Meimei. May I have your name?",
-      "words": ["Hello", "I'm", "Song", "Meimei", "May", "I", "have", "your", "name"],
+      "words": [
+        "Hello",
+        "I'm",
+        "Song",
+        "Meimei",
+        "May",
+        "I",
+        "have",
+        "your",
+        "name"
+      ],
       "translation": "你好，我是宋梅梅。请问你叫什么名字？",
       "wordCount": 9
     },
     {
-      "id": 2,
+      "id": 3,
       "startTime": 4.666,
       "endTime": 9.213,
       "text": "Hi, I'm Peter Brown. Nice to meet you.",
-      "words": ["Hi", "I'm", "Peter", "Brown", "Nice", "to", "meet", "you"],
+      "words": [
+        "Hi",
+        "I'm",
+        "Peter",
+        "Brown",
+        "Nice",
+        "to",
+        "meet",
+        "you"
+      ],
       "translation": "嗨，我是彼得·布朗。很高兴认识你。",
       "wordCount": 8
     },
     {
-      "id": 3,
+      "id": 4,
       "startTime": 9.506,
       "endTime": 13.293,
       "text": "Nice to meet you too. How do you spell your name?",
-      "words": ["Nice", "to", "meet", "you", "too", "How", "do", "you", "spell", "your", "name"],
+      "words": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "too",
+        "How",
+        "do",
+        "you",
+        "spell",
+        "your",
+        "name"
+      ],
       "translation": "我也很高兴认识你。你的名字怎么拼写？",
       "wordCount": 11
     },
     {
-      "id": 4,
+      "id": 5,
       "startTime": 13.693,
       "endTime": 26.066,
       "text": "P-E-T-E-R, Peter. B-R-O-W-N, Brown.",
-      "words": ["P-E-T-E-R", "Peter", "B-R-O-W-N", "Brown"],
+      "words": [
+        "P-E-T-E-R",
+        "Peter",
+        "B-R-O-W-N",
+        "Brown"
+      ],
       "translation": "P-E-T-E-R，彼得。B-R-O-W-N，布朗。",
       "wordCount": 4
     },
     {
-      "id": 5,
+      "id": 6,
       "startTime": 26.4,
       "endTime": 27.773,
       "text": "Where are you from?",
-      "words": ["Where", "are", "you", "from"],
+      "words": [
+        "Where",
+        "are",
+        "you",
+        "from"
+      ],
       "translation": "你来自哪里？",
       "wordCount": 4
     },
     {
-      "id": 6,
+      "id": 7,
       "startTime": 28.28,
       "endTime": 31.12,
       "text": "I'm from London, in the UK.",
-      "words": ["I'm", "from", "London", "in", "the", "UK"],
+      "words": [
+        "I'm",
+        "from",
+        "London",
+        "in",
+        "the",
+        "UK"
+      ],
       "translation": "我来自英国伦敦。",
       "wordCount": 6
     },
     {
-      "id": 7,
+      "id": 8,
       "startTime": 31.546,
       "endTime": 35.666,
       "text": "Wow, that's far. What class are you in?",
-      "words": ["Wow", "that's", "far", "What", "class", "are", "you", "in"],
+      "words": [
+        "Wow",
+        "that's",
+        "far",
+        "What",
+        "class",
+        "are",
+        "you",
+        "in"
+      ],
       "translation": "哇，那很远。你在哪个班？",
       "wordCount": 8
     },
     {
-      "id": 8,
+      "id": 9,
       "startTime": 35.92,
       "endTime": 39.293,
       "text": "I'm in Class 1, Grade 7.",
-      "words": ["I'm", "in", "Class", "1", "Grade", "7"],
+      "words": [
+        "I'm",
+        "in",
+        "Class",
+        "1",
+        "Grade",
+        "7"
+      ],
       "translation": "我在七年级一班。",
       "wordCount": 6
     }

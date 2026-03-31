@@ -23,7 +23,12 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  TextField
+  Avatar,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemAvatar,
+  Divider
 } from '@mui/material';
 import {
   Refresh as RefreshIcon,
@@ -31,7 +36,10 @@ import {
   Quiz as QuizIcon,
   List as ListIcon,
   Edit as EditIcon,
-  MenuBook as MenuBookIcon
+  MenuBook as MenuBookIcon,
+  School as SchoolIcon,
+  TrendingUp as TrendingUpIcon,
+  LibraryBooks as LibraryBooksIcon
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { readingApi } from './api';
@@ -52,9 +60,12 @@ const ReadingCenter = () => {
   const [currentView, setCurrentView] = useState(0); // 0: 练习, 1: 题库
   const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
   const [error, setError] = useState(null);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [bankInfo, setBankInfo] = useState(null);
   const [expandedRow, setExpandedRow] = useState(null);
+  
+  // 题库相关状态
+  const [availableBanks, setAvailableBanks] = useState([]);
+  const [currentBank, setCurrentBank] = useState(null);
+  const [bankSelectorOpen, setBankSelectorOpen] = useState(false);
   
   // 题库分页
   const [page, setPage] = useState(0);
@@ -68,7 +79,6 @@ const ReadingCenter = () => {
   
   // 缓存数据
   const [allPassages, setAllPassages] = useState([]);
-  const [categories, setCategories] = useState([]);
   const [stats, setStats] = useState(null);
   
   // 计时器相关
@@ -82,6 +92,14 @@ const ReadingCenter = () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
   }, []);
+
+  // ========== 切换题库时重新加载 ==========
+  useEffect(() => {
+    if (currentBank) {
+      loadAllPassages();
+      loadStats();
+    }
+  }, [currentBank]);
 
   // ========== 计时器管理 ==========
   useEffect(() => {
@@ -111,20 +129,30 @@ const ReadingCenter = () => {
   const initData = async () => {
     setInitialLoading(true);
     try {
-      // 获取题库信息
-      const bankRes = await readingApi.getBankInfo();
-      if (bankRes?.flag === 1) {
-        setBankInfo(bankRes.content.bank || null);
-        if (bankRes.content.categories) {
-          setCategories(bankRes.content.categories);
-        }
+      // 获取所有可用题库
+      const banksRes = await readingApi.getBanks();
+      console.log('获取题库列表响应:', banksRes);
+      
+      if (banksRes?.flag === 1 && banksRes.content?.banks?.length > 0) {
+        setAvailableBanks(banksRes.content.banks);
+        
+        // 默认选择第一个题库
+        const defaultBank = banksRes.content.banks[0];
+        setCurrentBank(defaultBank);
+        
+        setSnackbar({
+          open: true,
+          message: `📚 已加载 ${defaultBank.name} (${defaultBank.totalPassages}篇)`,
+          severity: 'success'
+        });
+      } else {
+        setError('没有找到可用的题库');
+        setSnackbar({
+          open: true,
+          message: '⚠️ 没有找到可用的题库',
+          severity: 'warning'
+        });
       }
-      
-      // 获取所有篇章列表
-      await loadAllPassages();
-      
-      // 获取学习报告
-      await loadStats();
       
     } catch (error) {
       console.error('初始化失败:', error);
@@ -135,8 +163,10 @@ const ReadingCenter = () => {
   };
 
   const loadAllPassages = async () => {
+    if (!currentBank) return;
+    
     try {
-      const res = await readingApi.getPassages();
+      const res = await readingApi.getPassages(currentBank.id);
       console.log('getPassages 响应:', res);
       
       if (res?.flag === 1) {
@@ -154,8 +184,10 @@ const ReadingCenter = () => {
   };
 
   const loadStats = async () => {
+    if (!currentBank) return;
+    
     try {
-      const res = await readingApi.getReport();
+      const res = await readingApi.getReport(currentBank.id);
       if (res?.flag === 1) {
         setStats(res.content);
       }
@@ -167,7 +199,6 @@ const ReadingCenter = () => {
   // ========== 加载第一篇 ==========
   const loadFirstPassage = async (firstPassage) => {
     try {
-      // 设置 passage 数据
       setPassage({
         id: firstPassage.id,
         title: firstPassage.title,
@@ -178,11 +209,9 @@ const ReadingCenter = () => {
         givenWords: firstPassage.givenWords || []
       });
       
-      // 设置题目数据
       if (firstPassage.questions && firstPassage.questions.length > 0) {
         setQuestions(firstPassage.questions);
         
-        // 初始化答案和解析
         const initialAnswers = {};
         const explanationsMap = {};
         
@@ -208,7 +237,6 @@ const ReadingCenter = () => {
   const loadPassageDetail = async (selectedPassage) => {
     setLoading(true);
     try {
-      // 构建完整的 passage 对象
       const fullPassage = {
         id: selectedPassage.id,
         title: selectedPassage.title,
@@ -221,11 +249,9 @@ const ReadingCenter = () => {
       
       setPassage(fullPassage);
       
-      // 处理题目数据
       if (selectedPassage.questions && selectedPassage.questions.length > 0) {
         setQuestions(selectedPassage.questions);
         
-        // 初始化答案和解析
         const initialAnswers = {};
         const explanationsMap = {};
         
@@ -270,6 +296,24 @@ const ReadingCenter = () => {
     }
   };
 
+  // ========== 切换题库 ==========
+  const handleBankChange = async (bank) => {
+    setCurrentBank(bank);
+    setPassage(null);
+    setQuestions([]);
+    setAnswers({});
+    setExplanations({});
+    resetTimer();
+    
+    setSnackbar({
+      open: true,
+      message: `🔄 已切换到: ${bank.name}`,
+      severity: 'info'
+    });
+    
+    setBankSelectorOpen(false);
+  };
+
   // ========== 过滤篇章 ==========
   const filteredPassages = allPassages.filter(p => {
     if (!searchTerm) return true;
@@ -292,16 +336,23 @@ const ReadingCenter = () => {
     setError(null);
     
     try {
-      const params = passageId 
-        ? { passageId } 
-        : { type: extractType };
+      const params = {};
+      
+      if (passageId) {
+        params.passageId = passageId;
+      } else {
+        params.type = extractType;
+      }
+      
+      if (currentBank) {
+        params.bank = currentBank.id;
+      }
       
       const res = await readingApi.getPassage(params);
       
       if (res?.flag === 1 && res.content?.passage) {
         const passageData = res.content.passage;
         
-        // 设置抽取到的数据
         setPassage({
           id: passageData.id,
           title: passageData.title,
@@ -312,7 +363,6 @@ const ReadingCenter = () => {
           givenWords: passageData.givenWords || []
         });
         
-        // 处理题目数据
         if (passageData.questions && passageData.questions.length > 0) {
           setQuestions(passageData.questions);
           
@@ -379,12 +429,18 @@ const ReadingCenter = () => {
       const questionIds = Object.keys(answers);
       const answerValues = Object.values(answers);
       
-      const res = await readingApi.submitPassage({
+      const submitData = {
         passageId: passage?.id,
         questionIds,
         answers: answerValues,
         timeSpent: timeSpent || 0
-      });
+      };
+      
+      if (currentBank) {
+        submitData.bank = currentBank.id;
+      }
+      
+      const res = await readingApi.submitPassage(submitData);
       
       if (res?.flag === 1) {
         const summary = res.content.summary;
@@ -474,6 +530,104 @@ const ReadingCenter = () => {
     navigate('/');
   };
 
+  // ========== 题库选择器对话框 ==========
+  const renderBankSelector = () => (
+    <Dialog open={bankSelectorOpen} onClose={() => setBankSelectorOpen(false)} maxWidth="md" fullWidth>
+      <DialogTitle sx={{ bgcolor: '#1a237e', color: 'white' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <LibraryBooksIcon /> 选择题库
+        </Box>
+      </DialogTitle>
+      <DialogContent dividers>
+        <List>
+          {availableBanks.map((bank, index) => (
+            <React.Fragment key={bank.id}>
+              <ListItem 
+                button 
+                onClick={() => handleBankChange(bank)}
+                selected={currentBank?.id === bank.id}
+                sx={{
+                  borderRadius: 1,
+                  mb: 1,
+                  bgcolor: currentBank?.id === bank.id ? 'rgba(26, 35, 126, 0.08)' : 'transparent',
+                  '&:hover': { bgcolor: 'rgba(26, 35, 126, 0.04)' }
+                }}
+              >
+                <ListItemAvatar>
+                  <Avatar sx={{ bgcolor: currentBank?.id === bank.id ? '#1a237e' : '#757575' }}>
+                    <SchoolIcon />
+                  </Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary={
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+                      <Typography variant="subtitle1" fontWeight="bold">
+                        {bank.name}
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        ({bank.id})
+                      </Typography>
+                      <Chip 
+                        label={`v${bank.version}`} 
+                        size="small" 
+                        variant="outlined"
+                      />
+                    </Box>
+                  }
+                  secondary={
+                    <Box sx={{ mt: 0.5 }}>
+                      <Typography variant="body2" color="text.secondary">
+                        {bank.description}
+                      </Typography>
+                      <Stack direction="row" spacing={1} sx={{ mt: 0.5, flexWrap: 'wrap', gap: 0.5 }}>
+                        <Chip 
+                          size="small" 
+                          label={`📖 ${bank.totalPassages}篇`} 
+                          icon={<MenuBookIcon />}
+                        />
+                        <Chip 
+                          size="small" 
+                          label={`📝 ${bank.totalQuestions}题`} 
+                          icon={<QuizIcon />}
+                        />
+                        {bank.userStats && bank.userStats.totalQuestionsAttempted > 0 && (
+                          <Chip 
+                            size="small" 
+                            label={`📊 正确率: ${Math.round(bank.userStats.accuracy * 100)}%`}
+                            icon={<TrendingUpIcon />}
+                            color="success"
+                            variant="outlined"
+                          />
+                        )}
+                      </Stack>
+                      {bank.categories && bank.categories.length > 0 && (
+                        <Stack direction="row" spacing={0.5} sx={{ mt: 0.5, flexWrap: 'wrap', gap: 0.5 }}>
+                          {bank.categories.slice(0, 3).map(cat => (
+                            <Chip key={cat} size="small" label={cat} variant="outlined" />
+                          ))}
+                          {bank.categories.length > 3 && (
+                            <Chip size="small" label={`+${bank.categories.length - 3}`} variant="outlined" />
+                          )}
+                        </Stack>
+                      )}
+                    </Box>
+                  }
+                />
+                {currentBank?.id === bank.id && (
+                  <Chip label="当前使用" color="primary" size="small" />
+                )}
+              </ListItem>
+              {index < availableBanks.length - 1 && <Divider />}
+            </React.Fragment>
+          ))}
+        </List>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={() => setBankSelectorOpen(false)}>关闭</Button>
+      </DialogActions>
+    </Dialog>
+  );
+
   // ========== 抽取对话框 ==========
   const renderDialog = () => (
     <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)} maxWidth="sm" fullWidth>
@@ -550,8 +704,22 @@ const ReadingCenter = () => {
         </Button>
         
         <Typography variant="h6" sx={{ flex: 1, textAlign: 'center' }}>
-          {bankInfo?.name || '阅读理解练习'}
+          {currentBank?.name || '阅读理解练习'}
         </Typography>
+
+        <Button
+          variant="contained"
+          onClick={() => setBankSelectorOpen(true)}
+          startIcon={<LibraryBooksIcon />}
+          sx={{ 
+            bgcolor: '#ffd700', 
+            color: '#1a237e',
+            '&:hover': { bgcolor: '#ffc107' },
+            mr: 2
+          }}
+        >
+          切换题库
+        </Button>
 
         <Tabs 
           value={currentView} 
@@ -592,6 +760,28 @@ const ReadingCenter = () => {
         <LinearProgress />
         <Container sx={{ py: 3, textAlign: 'center' }}>
           <Paper sx={{ p: 4 }}>加载中...</Paper>
+        </Container>
+      </Box>
+    );
+  }
+
+  if (!currentBank) {
+    return (
+      <Box sx={{ minHeight: '100vh', bgcolor: '#f5f5f5' }}>
+        <Header />
+        <Container sx={{ py: 3, textAlign: 'center' }}>
+          <Paper sx={{ p: 4 }}>
+            <Typography variant="h6" color="error">
+              没有找到可用的题库
+            </Typography>
+            <Button 
+              variant="contained" 
+              onClick={initData} 
+              sx={{ mt: 2 }}
+            >
+              重新加载
+            </Button>
+          </Paper>
         </Container>
       </Box>
     );
@@ -643,6 +833,7 @@ const ReadingCenter = () => {
         )}
       </Container>
 
+      {renderBankSelector()}
       {renderDialog()}
 
       <Snackbar

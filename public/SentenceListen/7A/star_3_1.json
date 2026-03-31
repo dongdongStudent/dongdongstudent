@@ -1,0 +1,259 @@
+{
+  "metadata": {
+    "id": "star_3_1",
+    "title": "star_3_1",
+    "totalSentences": 13,
+    "totalWords": 116,
+    "duration": 96.672,
+    "difficulty": "beginner",
+    "convertedFrom": "star_3_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 16.976,
+      "endTime": 20.624,
+      "text": "Hello, Peter and Helen! This is my grandpa.",
+      "words": [
+        "Hello",
+        "Peter",
+        "and",
+        "Helen",
+        "This",
+        "is",
+        "my",
+        "grandpa"
+      ],
+      "translation": "[需要翻译: Hello, Peter and Helen! This is my grandpa.]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 21.072,
+      "endTime": 24.688,
+      "text": "Hello, Mr Fu. Nice to meet you!",
+      "words": [
+        "Hello",
+        "Mr",
+        "Fu",
+        "Nice",
+        "to",
+        "meet",
+        "you"
+      ],
+      "translation": "[需要翻译: Hello, Mr Fu. Nice to meet you!]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 24.768,
+      "endTime": 31.504,
+      "text": "Nice to meet you too. Welcome to my house. Let me show you around.",
+      "words": [
+        "Nice",
+        "to",
+        "meet",
+        "you",
+        "too",
+        "Welcome",
+        "to",
+        "my",
+        "house",
+        "Let",
+        "me",
+        "show",
+        "you",
+        "around"
+      ],
+      "translation": "[需要翻译: Nice to meet you too. Welcome to my house. Let me show you around.]",
+      "wordCount": 14
+    },
+    {
+      "id": 4,
+      "startTime": 31.664,
+      "endTime": 37.76,
+      "text": "Thank you. Oh, what’s that, Mr Fu? Is that a goose?",
+      "words": [
+        "Thank",
+        "you",
+        "Oh",
+        "what’s",
+        "that",
+        "Mr",
+        "Fu",
+        "Is",
+        "that",
+        "a",
+        "goose"
+      ],
+      "translation": "[需要翻译: Thank you. Oh, what’s that, Mr Fu? Is that a goose?]",
+      "wordCount": 11
+    },
+    {
+      "id": 5,
+      "startTime": 37.936,
+      "endTime": 41.344,
+      "text": "No, it isn’t. It’s a duck.",
+      "words": [
+        "No",
+        "it",
+        "isn’t",
+        "It’s",
+        "a",
+        "duck"
+      ],
+      "translation": "[需要翻译: No, it isn’t. It’s a duck.]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 51.264,
+      "endTime": 56.768,
+      "text": "Mr Fu, what are those plants? Are they potato plants?",
+      "words": [
+        "Mr",
+        "Fu",
+        "what",
+        "are",
+        "those",
+        "plants",
+        "Are",
+        "they",
+        "potato",
+        "plants"
+      ],
+      "translation": "[需要翻译: Mr Fu, what are those plants? Are they potato plants?]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 57.024,
+      "endTime": 61.216,
+      "text": "No, Peter, they aren’t. They’re carrot plants.",
+      "words": [
+        "No",
+        "Peter",
+        "they",
+        "aren’t",
+        "They’re",
+        "carrot",
+        "plants"
+      ],
+      "translation": "[需要翻译: No, Peter, they aren’t. They’re carrot plants.]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 61.408,
+      "endTime": 65.792,
+      "text": "What about these plants? Are they tomato plants?",
+      "words": [
+        "What",
+        "about",
+        "these",
+        "plants",
+        "Are",
+        "they",
+        "tomato",
+        "plants"
+      ],
+      "translation": "[需要翻译: What about these plants? Are they tomato plants?]",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 66.352,
+      "endTime": 68.016,
+      "text": "Yes, they are!",
+      "words": [
+        "Yes",
+        "they",
+        "are"
+      ],
+      "translation": "[需要翻译: Yes, they are!]",
+      "wordCount": 3
+    },
+    {
+      "id": 10,
+      "startTime": 77.6,
+      "endTime": 81.152,
+      "text": "What kind of tree is this? It’s an apple tree.",
+      "words": [
+        "What",
+        "kind",
+        "of",
+        "tree",
+        "is",
+        "this",
+        "It’s",
+        "an",
+        "apple",
+        "tree"
+      ],
+      "translation": "[需要翻译: What kind of tree is this? It’s an apple tree.]",
+      "wordCount": 10
+    },
+    {
+      "id": 11,
+      "startTime": 81.36,
+      "endTime": 85.552,
+      "text": "How many apple trees do you have? Only two.",
+      "words": [
+        "How",
+        "many",
+        "apple",
+        "trees",
+        "do",
+        "you",
+        "have",
+        "Only",
+        "two"
+      ],
+      "translation": "[需要翻译: How many apple trees do you have? Only two.]",
+      "wordCount": 9
+    },
+    {
+      "id": 12,
+      "startTime": 85.808,
+      "endTime": 91.184,
+      "text": "Look at those rabbits. They’re cute! How many rabbits do you have?",
+      "words": [
+        "Look",
+        "at",
+        "those",
+        "rabbits",
+        "They’re",
+        "cute",
+        "How",
+        "many",
+        "rabbits",
+        "do",
+        "you",
+        "have"
+      ],
+      "translation": "[需要翻译: Look at those rabbits. They’re cute! How many rabbits do you have?]",
+      "wordCount": 12
+    },
+    {
+      "id": 13,
+      "startTime": 91.424,
+      "endTime": 96.672,
+      "text": "I have 12 rabbits. Eight are white, and four are black.",
+      "words": [
+        "I",
+        "have",
+        "12",
+        "rabbits",
+        "Eight",
+        "are",
+        "white",
+        "and",
+        "four",
+        "are",
+        "black"
+      ],
+      "translation": "[需要翻译: I have 12 rabbits. Eight are white, and four are black.]",
+      "wordCount": 11
+    }
+  ]
+}

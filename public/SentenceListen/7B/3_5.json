@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "id": "3_5",
+    "title": "3_5",
+    "totalSentences": 6,
+    "totalWords": 52,
+    "duration": 47.36,
+    "difficulty": "beginner",
+    "convertedFrom": "3_5.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 24.576,
+      "endTime": 27.232,
+      "text": "I like skateboarding very much.",
+      "words": [
+        "I",
+        "like",
+        "skateboarding",
+        "very",
+        "much"
+      ],
+      "translation": "[需要翻译: I like skateboarding very much.]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 27.472,
+      "endTime": 31.504,
+      "text": "My friends and I practise at a special park twice a week.",
+      "words": [
+        "My",
+        "friends",
+        "and",
+        "I",
+        "practise",
+        "at",
+        "a",
+        "special",
+        "park",
+        "twice",
+        "a",
+        "week"
+      ],
+      "translation": "[需要翻译: My friends and I practise at a special park twice a week.]",
+      "wordCount": 12
+    },
+    {
+      "id": 3,
+      "startTime": 31.951999999999998,
+      "endTime": 35.616,
+      "text": "My skateboard is really cool, and so are theirs.",
+      "words": [
+        "My",
+        "skateboard",
+        "is",
+        "really",
+        "cool",
+        "and",
+        "so",
+        "are",
+        "theirs"
+      ],
+      "translation": "[需要翻译: My skateboard is really cool, and so are theirs.]",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 36.224,
+      "endTime": 38.736,
+      "text": "We encourage one another to do tricks.",
+      "words": [
+        "We",
+        "encourage",
+        "one",
+        "another",
+        "to",
+        "do",
+        "tricks"
+      ],
+      "translation": "[需要翻译: We encourage one another to do tricks.]",
+      "wordCount": 7
+    },
+    {
+      "id": 5,
+      "startTime": 39.008,
+      "endTime": 43.872,
+      "text": "Some tricks are difficult, but once you succeed, you feel great!",
+      "words": [
+        "Some",
+        "tricks",
+        "are",
+        "difficult",
+        "but",
+        "once",
+        "you",
+        "succeed",
+        "you",
+        "feel",
+        "great"
+      ],
+      "translation": "[需要翻译: Some tricks are difficult, but once you succeed, you feel great!]",
+      "wordCount": 11
+    },
+    {
+      "id": 6,
+      "startTime": 44.128,
+      "endTime": 47.36,
+      "text": "I like skateboarding because it keeps me fit.",
+      "words": [
+        "I",
+        "like",
+        "skateboarding",
+        "because",
+        "it",
+        "keeps",
+        "me",
+        "fit"
+      ],
+      "translation": "[需要翻译: I like skateboarding because it keeps me fit.]",
+      "wordCount": 8
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "id": "2_2",
+    "title": "2_2",
+    "totalSentences": 9,
+    "totalWords": 76,
+    "duration": 55.536,
+    "difficulty": "beginner",
+    "convertedFrom": "2_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 16.016,
+      "endTime": 17.968,
+      "text": "Good morning, students.",
+      "words": [
+        "Good",
+        "morning",
+        "students"
+      ],
+      "translation": "[需要翻译: Good morning, students.]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 18.976,
+      "endTime": 23.632,
+      "text": "This morning I had to tell some students to follow the school rules.",
+      "words": [
+        "This",
+        "morning",
+        "I",
+        "had",
+        "to",
+        "tell",
+        "some",
+        "students",
+        "to",
+        "follow",
+        "the",
+        "school",
+        "rules"
+      ],
+      "translation": "[需要翻译: This morning I had to tell some students to follow the school rules.]",
+      "wordCount": 13
+    },
+    {
+      "id": 3,
+      "startTime": 24.112,
+      "endTime": 26.512,
+      "text": "Please remember them, everyone!",
+      "words": [
+        "Please",
+        "remember",
+        "them",
+        "everyone"
+      ],
+      "translation": "[需要翻译: Please remember them, everyone!]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 26.912,
+      "endTime": 29.808,
+      "text": "Walk in the hallway. Don’t run!",
+      "words": [
+        "Walk",
+        "in",
+        "the",
+        "hallway",
+        "Don’t",
+        "run"
+      ],
+      "translation": "[需要翻译: Walk in the hallway. Don’t run!]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 30.544,
+      "endTime": 32.64,
+      "text": "You have to wear the uniform.",
+      "words": [
+        "You",
+        "have",
+        "to",
+        "wear",
+        "the",
+        "uniform"
+      ],
+      "translation": "[需要翻译: You have to wear the uniform.]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 33.472,
+      "endTime": 36.736,
+      "text": "You mustn’t wear other clothes to school instead.",
+      "words": [
+        "You",
+        "mustn’t",
+        "wear",
+        "other",
+        "clothes",
+        "to",
+        "school",
+        "instead"
+      ],
+      "translation": "[需要翻译: You mustn’t wear other clothes to school instead.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 37.296,
+      "endTime": 41.856,
+      "text": "Don’t litter. Make sure to keep the school tidy.",
+      "words": [
+        "Don’t",
+        "litter",
+        "Make",
+        "sure",
+        "to",
+        "keep",
+        "the",
+        "school",
+        "tidy"
+      ],
+      "translation": "[需要翻译: Don’t litter. Make sure to keep the school tidy.]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 42.656,
+      "endTime": 48.464,
+      "text": "And most importantly, we must be polite and treat everyone with respect.",
+      "words": [
+        "And",
+        "most",
+        "importantly",
+        "we",
+        "must",
+        "be",
+        "polite",
+        "and",
+        "treat",
+        "everyone",
+        "with",
+        "respect"
+      ],
+      "translation": "[需要翻译: And most importantly, we must be polite and treat everyone with respect.]",
+      "wordCount": 12
+    },
+    {
+      "id": 9,
+      "startTime": 49.44,
+      "endTime": 55.536,
+      "text": "If we follow these rules, we can have a happy and safe school! Thank you.",
+      "words": [
+        "If",
+        "we",
+        "follow",
+        "these",
+        "rules",
+        "we",
+        "can",
+        "have",
+        "a",
+        "happy",
+        "and",
+        "safe",
+        "school",
+        "Thank",
+        "you"
+      ],
+      "translation": "[需要翻译: If we follow these rules, we can have a happy and safe school! Thank you.]",
+      "wordCount": 15
+    }
+  ]
+}

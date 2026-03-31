@@ -1,0 +1,270 @@
+{
+  "metadata": {
+    "id": "53_2_3",
+    "title": "53_2_3",
+    "totalSentences": 15,
+    "totalWords": 107,
+    "duration": 192.24,
+    "difficulty": "beginner",
+    "convertedFrom": "53_2_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 132.8,
+      "endTime": 134.352,
+      "text": "Good afternoon, Dale.",
+      "words": [
+        "Good",
+        "afternoon",
+        "Dale"
+      ],
+      "translation": "[需要翻译: Good afternoon, Dale.]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 134.832,
+      "endTime": 136.448,
+      "text": "Good afternoon, Jenny.",
+      "words": [
+        "Good",
+        "afternoon",
+        "Jenny"
+      ],
+      "translation": "[需要翻译: Good afternoon, Jenny.]",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 136.672,
+      "endTime": 140.464,
+      "text": "What's this? It's a photo of my family.",
+      "words": [
+        "What's",
+        "this",
+        "It's",
+        "a",
+        "photo",
+        "of",
+        "my",
+        "family"
+      ],
+      "translation": "[需要翻译: What's this? It's a photo of my family.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 141.088,
+      "endTime": 142.544,
+      "text": "Who is the man?",
+      "words": [
+        "Who",
+        "is",
+        "the",
+        "man"
+      ],
+      "translation": "[需要翻译: Who is the man?]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 142.64,
+      "endTime": 144.544,
+      "text": "He is my grandfather.",
+      "words": [
+        "He",
+        "is",
+        "my",
+        "grandfather"
+      ],
+      "translation": "[需要翻译: He is my grandfather.]",
+      "wordCount": 4
+    },
+    {
+      "id": 6,
+      "startTime": 145.136,
+      "endTime": 147.968,
+      "text": "Who is the girl? Is she your sister?",
+      "words": [
+        "Who",
+        "is",
+        "the",
+        "girl",
+        "Is",
+        "she",
+        "your",
+        "sister"
+      ],
+      "translation": "[需要翻译: Who is the girl? Is she your sister?]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 148.128,
+      "endTime": 153.824,
+      "text": "No, she isn't. She is my cousin, Linda. She's my aunt's daughter.",
+      "words": [
+        "No",
+        "she",
+        "isn't",
+        "She",
+        "is",
+        "my",
+        "cousin",
+        "Linda",
+        "She's",
+        "my",
+        "aunt's",
+        "daughter"
+      ],
+      "translation": "[需要翻译: No, she isn't. She is my cousin, Linda. She's my aunt's daughter.]",
+      "wordCount": 12
+    },
+    {
+      "id": 8,
+      "startTime": 159.2,
+      "endTime": 165.136,
+      "text": "Look at that girl. Her name is Kate Green. She's twelve.",
+      "words": [
+        "Look",
+        "at",
+        "that",
+        "girl",
+        "Her",
+        "name",
+        "is",
+        "Kate",
+        "Green",
+        "She's",
+        "twelve"
+      ],
+      "translation": "[需要翻译: Look at that girl. Her name is Kate Green. She's twelve.]",
+      "wordCount": 11
+    },
+    {
+      "id": 9,
+      "startTime": 165.488,
+      "endTime": 168.272,
+      "text": "That's her mother. She is a teacher.",
+      "words": [
+        "That's",
+        "her",
+        "mother",
+        "She",
+        "is",
+        "a",
+        "teacher"
+      ],
+      "translation": "[需要翻译: That's her mother. She is a teacher.]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 168.592,
+      "endTime": 171.984,
+      "text": "She likes reading. That is her father.",
+      "words": [
+        "She",
+        "likes",
+        "reading",
+        "That",
+        "is",
+        "her",
+        "father"
+      ],
+      "translation": "[需要翻译: She likes reading. That is her father.]",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 172.592,
+      "endTime": 177.264,
+      "text": "His name is Jeff Green. He is a teacher, too.",
+      "words": [
+        "His",
+        "name",
+        "is",
+        "Jeff",
+        "Green",
+        "He",
+        "is",
+        "a",
+        "teacher",
+        "too"
+      ],
+      "translation": "[需要翻译: His name is Jeff Green. He is a teacher, too.]",
+      "wordCount": 10
+    },
+    {
+      "id": 12,
+      "startTime": 177.712,
+      "endTime": 179.744,
+      "text": "He is an English teacher.",
+      "words": [
+        "He",
+        "is",
+        "an",
+        "English",
+        "teacher"
+      ],
+      "translation": "[需要翻译: He is an English teacher.]",
+      "wordCount": 5
+    },
+    {
+      "id": 13,
+      "startTime": 180.048,
+      "endTime": 184.24,
+      "text": "He likes fishing. That is her sister, Cindy.",
+      "words": [
+        "He",
+        "likes",
+        "fishing",
+        "That",
+        "is",
+        "her",
+        "sister",
+        "Cindy"
+      ],
+      "translation": "[需要翻译: He likes fishing. That is her sister, Cindy.]",
+      "wordCount": 8
+    },
+    {
+      "id": 14,
+      "startTime": 184.4,
+      "endTime": 188.336,
+      "text": "She is eight. That's her pet dog, Wangwang.",
+      "words": [
+        "She",
+        "is",
+        "eight",
+        "That's",
+        "her",
+        "pet",
+        "dog",
+        "Wangwang"
+      ],
+      "translation": "[需要翻译: She is eight. That's her pet dog, Wangwang.]",
+      "wordCount": 8
+    },
+    {
+      "id": 15,
+      "startTime": 188.592,
+      "endTime": 192.24,
+      "text": "She loves her family and they help each other.",
+      "words": [
+        "She",
+        "loves",
+        "her",
+        "family",
+        "and",
+        "they",
+        "help",
+        "each",
+        "other"
+      ],
+      "translation": "[需要翻译: She loves her family and they help each other.]",
+      "wordCount": 9
+    }
+  ]
+}

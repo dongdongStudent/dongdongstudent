@@ -1,0 +1,283 @@
+{
+  "metadata": {
+    "id": "8_2",
+    "title": "8_2",
+    "totalSentences": 16,
+    "totalWords": 110,
+    "duration": 63.28,
+    "difficulty": "beginner",
+    "convertedFrom": "8_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.184,
+      "endTime": 13.648,
+      "text": "What’s your favourite story, Teng Fei?",
+      "words": [
+        "What’s",
+        "your",
+        "favourite",
+        "story",
+        "Teng",
+        "Fei"
+      ],
+      "translation": "[需要翻译: What’s your favourite story, Teng Fei?]",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 14.176,
+      "endTime": 16.432,
+      "text": "Oh, I l ike this one.",
+      "words": [
+        "Oh",
+        "I",
+        "l",
+        "ike",
+        "this",
+        "one"
+      ],
+      "translation": "[需要翻译: Oh, I l ike this one.]",
+      "wordCount": 6
+    },
+    {
+      "id": 3,
+      "startTime": 17.056,
+      "endTime": 18.976,
+      "text": "A farmer lost his horse.",
+      "words": [
+        "A",
+        "farmer",
+        "lost",
+        "his",
+        "horse"
+      ],
+      "translation": "[需要翻译: A farmer lost his horse.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 19.184,
+      "endTime": 21.488,
+      "text": "His neighbours said, “How unlucky!”",
+      "words": [
+        "His",
+        "neighbours",
+        "said",
+        "“How",
+        "unlucky",
+        "”"
+      ],
+      "translation": "[需要翻译: His neighbours said, “How unlucky!”]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 21.888,
+      "endTime": 24.48,
+      "text": "But the farmer just said, “Maybe.”",
+      "words": [
+        "But",
+        "the",
+        "farmer",
+        "just",
+        "said",
+        "“Maybe",
+        "”"
+      ],
+      "translation": "[需要翻译: But the farmer just said, “Maybe.”]",
+      "wordCount": 7
+    },
+    {
+      "id": 6,
+      "startTime": 25.296,
+      "endTime": 29.296,
+      "text": "Later, his horse came back with seven other horses.",
+      "words": [
+        "Later",
+        "his",
+        "horse",
+        "came",
+        "back",
+        "with",
+        "seven",
+        "other",
+        "horses"
+      ],
+      "translation": "[需要翻译: Later, his horse came back with seven other horses.]",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 29.712,
+      "endTime": 34.784,
+      "text": "People said, “That’s great!” But the farmer said, “Maybe.”",
+      "words": [
+        "People",
+        "said",
+        "“That’s",
+        "great",
+        "”",
+        "But",
+        "the",
+        "farmer",
+        "said",
+        "“Maybe",
+        "”"
+      ],
+      "translation": "[需要翻译: People said, “That’s great!” But the farmer said, “Maybe.”]",
+      "wordCount": 11
+    },
+    {
+      "id": 8,
+      "startTime": 35.312,
+      "endTime": 37.552,
+      "text": "Later, his son broke his leg",
+      "words": [
+        "Later",
+        "his",
+        "son",
+        "broke",
+        "his",
+        "leg"
+      ],
+      "translation": "[需要翻译: Later, his son broke his leg]",
+      "wordCount": 6
+    },
+    {
+      "id": 9,
+      "startTime": 37.664,
+      "endTime": 39.376,
+      "text": "when he tried to ride a horse.",
+      "words": [
+        "when",
+        "he",
+        "tried",
+        "to",
+        "ride",
+        "a",
+        "horse"
+      ],
+      "translation": "[需要翻译: when he tried to ride a horse.]",
+      "wordCount": 7
+    },
+    {
+      "id": 10,
+      "startTime": 39.776,
+      "endTime": 43.312,
+      "text": "People said, “That’s terrible!” Again,",
+      "words": [
+        "People",
+        "said",
+        "“That’s",
+        "terrible",
+        "”",
+        "Again"
+      ],
+      "translation": "[需要翻译: People said, “That’s terrible!” Again,]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 43.744,
+      "endTime": 46.016,
+      "text": "the farmer said, “Maybe.”",
+      "words": [
+        "the",
+        "farmer",
+        "said",
+        "“Maybe",
+        "”"
+      ],
+      "translation": "[需要翻译: the farmer said, “Maybe.”]",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 46.608,
+      "endTime": 51.248,
+      "text": "Well, because of his leg, the son didn’t have to join a war.",
+      "words": [
+        "Well",
+        "because",
+        "of",
+        "his",
+        "leg",
+        "the",
+        "son",
+        "didn’t",
+        "have",
+        "to",
+        "join",
+        "a",
+        "war"
+      ],
+      "translation": "[需要翻译: Well, because of his leg, the son didn’t have to join a war.]",
+      "wordCount": 13
+    },
+    {
+      "id": 13,
+      "startTime": 51.856,
+      "endTime": 53.136,
+      "text": "That saved his life!",
+      "words": [
+        "That",
+        "saved",
+        "his",
+        "life"
+      ],
+      "translation": "[需要翻译: That saved his life!]",
+      "wordCount": 4
+    },
+    {
+      "id": 14,
+      "startTime": 53.648,
+      "endTime": 57.648,
+      "text": "I see. Unlucky things may turn out well.",
+      "words": [
+        "I",
+        "see",
+        "Unlucky",
+        "things",
+        "may",
+        "turn",
+        "out",
+        "well"
+      ],
+      "translation": "[需要翻译: I see. Unlucky things may turn out well.]",
+      "wordCount": 8
+    },
+    {
+      "id": 15,
+      "startTime": 58.064,
+      "endTime": 60.864,
+      "text": "And good things could go wrong too.",
+      "words": [
+        "And",
+        "good",
+        "things",
+        "could",
+        "go",
+        "wrong",
+        "too"
+      ],
+      "translation": "[需要翻译: And good things could go wrong too.]",
+      "wordCount": 7
+    },
+    {
+      "id": 16,
+      "startTime": 61.184,
+      "endTime": 63.28,
+      "text": "Yes, you never know",
+      "words": [
+        "Yes",
+        "you",
+        "never",
+        "know"
+      ],
+      "translation": "[需要翻译: Yes, you never know]",
+      "wordCount": 4
+    }
+  ]
+}

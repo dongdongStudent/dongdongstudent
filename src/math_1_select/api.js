@@ -41,7 +41,45 @@ export const getMathBanks = async () => {
   }
 };
 
-// 获取所有题目 - 完全从服务器获取
+// 获取完整题库（全部题目，不在后端筛选）
+export const getFullBankQuestions = async (bankId = 'math_master') => {
+  try {
+    const response = await fetch(`${serverAddress}/math/bank/questions?bank=${bankId}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token') || ''}`
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    
+    const serverData = await response.json();
+    
+    if (serverData.flag === 1) {
+      return serverData;
+    } else {
+      throw new Error(serverData.message || '获取题目失败');
+    }
+  } catch (error) {
+    console.error('从服务器获取完整数学题库失败:', error);
+    return {
+      flag: 0,
+      message: '服务器连接失败',
+      content: {
+        questions: [],
+        stats: {
+          totalQuestions: 0,
+          masteredCount: 0,
+          weakCount: 0,
+          newCount: 0
+        }
+      }
+    };
+  }
+};
+
+// 获取所有题目 - 完全从服务器获取（智能抽取）
 export const getMasterQuestions = async (bankId = 'math_master', type = 'smart', count = 10) => {
   try {
     // 从服务器获取题目
@@ -211,5 +249,6 @@ const generateMockMathQuestions = () => {
 export const mathApi = {
   getBanks: getMathBanks,
   getMasterQuestions: getMasterQuestions,
+  getFullBankQuestions: getFullBankQuestions,  // 新增
   submitTestResult: submitTestResult
 };

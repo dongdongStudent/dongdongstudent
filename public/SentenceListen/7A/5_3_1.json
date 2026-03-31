@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "id": "5_3_1",
+    "title": "5_3_1",
+    "totalSentences": 7,
+    "totalWords": 49,
+    "duration": 34.24,
+    "difficulty": "beginner",
+    "convertedFrom": "5_3_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 2.7359999999999998,
+      "endTime": 3.952,
+      "text": "Cooking Club",
+      "words": [
+        "Cooking",
+        "Club"
+      ],
+      "translation": "[需要翻译: Cooking Club]",
+      "wordCount": 2
+    },
+    {
+      "id": 2,
+      "startTime": 4.832,
+      "endTime": 9.2,
+      "text": "Do you love Chinese food? Can you cook?",
+      "words": [
+        "Do",
+        "you",
+        "love",
+        "Chinese",
+        "food",
+        "Can",
+        "you",
+        "cook"
+      ],
+      "translation": "[需要翻译: Do you love Chinese food? Can you cook?]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 10.416,
+      "endTime": 12.336,
+      "text": "Join our cooking club!",
+      "words": [
+        "Join",
+        "our",
+        "cooking",
+        "club"
+      ],
+      "translation": "[需要翻译: Join our cooking club!]",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 13.216,
+      "endTime": 16.896,
+      "text": "Let’s learn to cook your favourite Chinese food.",
+      "words": [
+        "Let’s",
+        "learn",
+        "to",
+        "cook",
+        "your",
+        "favourite",
+        "Chinese",
+        "food"
+      ],
+      "translation": "[需要翻译: Let’s learn to cook your favourite Chinese food.]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 17.951999999999998,
+      "endTime": 24.592,
+      "text": "Mapo tofu, beef noodles, jiaozi, baozi ... You name it!",
+      "words": [
+        "Mapo",
+        "tofu",
+        "beef",
+        "noodles",
+        "jiaozi",
+        "baozi",
+        "You",
+        "name",
+        "it"
+      ],
+      "translation": "[需要翻译: Mapo tofu, beef noodles, jiaozi, baozi ... You name it!]",
+      "wordCount": 9
+    },
+    {
+      "id": 6,
+      "startTime": 25.2,
+      "endTime": 27.808,
+      "text": "You can soon cook for your family.",
+      "words": [
+        "You",
+        "can",
+        "soon",
+        "cook",
+        "for",
+        "your",
+        "family"
+      ],
+      "translation": "[需要翻译: You can soon cook for your family.]",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 28.224,
+      "endTime": 34.24,
+      "text": "Join us in Room 303 at 4:30 p.m. on Wednesdays.",
+      "words": [
+        "Join",
+        "us",
+        "in",
+        "Room",
+        "303",
+        "at",
+        "4:30",
+        "p",
+        "m",
+        "on",
+        "Wednesdays"
+      ],
+      "translation": "[需要翻译: Join us in Room 303 at 4:30 p.m. on Wednesdays.]",
+      "wordCount": 11
+    }
+  ]
+}

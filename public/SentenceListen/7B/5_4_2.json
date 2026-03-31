@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "id": "5_4_2",
+    "title": "5_4_2",
+    "totalSentences": 8,
+    "totalWords": 62,
+    "duration": 78.288,
+    "difficulty": "beginner",
+    "convertedFrom": "5_4_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 46.304,
+      "endTime": 49.152,
+      "text": "such as Chongqing hot pot and noodles.",
+      "words": [
+        "such",
+        "as",
+        "Chongqing",
+        "hot",
+        "pot",
+        "and",
+        "noodles"
+      ],
+      "translation": "[需要翻译: such as Chongqing hot pot and noodles.]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 51.392,
+      "endTime": 56.288,
+      "text": "In Nairobi, Kenya, it’s 3:00 in the afternoon .",
+      "words": [
+        "In",
+        "Nairobi",
+        "Kenya",
+        "it’s",
+        "3:00",
+        "in",
+        "the",
+        "afternoon"
+      ],
+      "translation": "[需要翻译: In Nairobi, Kenya, it’s 3:00 in the afternoon .]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 56.288,
+      "endTime": 60.224,
+      "text": "Many people are working hard in their offices.",
+      "words": [
+        "Many",
+        "people",
+        "are",
+        "working",
+        "hard",
+        "in",
+        "their",
+        "offices"
+      ],
+      "translation": "[需要翻译: Many people are working hard in their offices.]",
+      "wordCount": 8
+    },
+    {
+      "id": 4,
+      "startTime": 60.544,
+      "endTime": 62.912,
+      "text": "Some people are shopping for gifts,",
+      "words": [
+        "Some",
+        "people",
+        "are",
+        "shopping",
+        "for",
+        "gifts"
+      ],
+      "translation": "[需要翻译: Some people are shopping for gifts,]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 63.104,
+      "endTime": 66.256,
+      "text": "such as paintings and bags, in the markets.",
+      "words": [
+        "such",
+        "as",
+        "paintings",
+        "and",
+        "bags",
+        "in",
+        "the",
+        "markets"
+      ],
+      "translation": "[需要翻译: such as paintings and bags, in the markets.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 66.832,
+      "endTime": 72.256,
+      "text": "Many others are walking in the parks and looking at elephants and giraffes.",
+      "words": [
+        "Many",
+        "others",
+        "are",
+        "walking",
+        "in",
+        "the",
+        "parks",
+        "and",
+        "looking",
+        "at",
+        "elephants",
+        "and",
+        "giraffes"
+      ],
+      "translation": "[需要翻译: Many others are walking in the parks and looking at elephants and giraffes.]",
+      "wordCount": 13
+    },
+    {
+      "id": 7,
+      "startTime": 72.912,
+      "endTime": 74.016,
+      "text": "In this city,",
+      "words": [
+        "In",
+        "this",
+        "city"
+      ],
+      "translation": "[需要翻译: In this city,]",
+      "wordCount": 3
+    },
+    {
+      "id": 8,
+      "startTime": 74.176,
+      "endTime": 78.288,
+      "text": "people live side by side with many wonderful animals!",
+      "words": [
+        "people",
+        "live",
+        "side",
+        "by",
+        "side",
+        "with",
+        "many",
+        "wonderful",
+        "animals"
+      ],
+      "translation": "[需要翻译: people live side by side with many wonderful animals!]",
+      "wordCount": 9
+    }
+  ]
+}

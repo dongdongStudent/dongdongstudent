@@ -1,0 +1,189 @@
+{
+  "metadata": {
+    "id": "7_1",
+    "title": "7_1",
+    "totalSentences": 11,
+    "totalWords": 66,
+    "duration": 29.75,
+    "difficulty": "beginner",
+    "convertedFrom": "7_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.7,
+      "endTime": 4.55,
+      "text": "Fu Xing: Today is 3rd December. Happy birthday, Helen!",
+      "words": [
+        "Fu",
+        "Xing:",
+        "Today",
+        "is",
+        "3rd",
+        "December",
+        "Happy",
+        "birthday",
+        "Helen"
+      ],
+      "translation": "[需要翻译: Fu Xing: Today is 3rd December. Happy birthday, Helen!]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 4.95,
+      "endTime": 6.8,
+      "text": "Helen: Thank you, Fu Xing!",
+      "words": [
+        "Helen:",
+        "Thank",
+        "you",
+        "Fu",
+        "Xing"
+      ],
+      "translation": "[需要翻译: Helen: Thank you, Fu Xing!]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 7.1,
+      "endTime": 8.275,
+      "text": "Fu Xing: How old are you?",
+      "words": [
+        "Fu",
+        "Xing:",
+        "How",
+        "old",
+        "are",
+        "you"
+      ],
+      "translation": "[需要翻译: Fu Xing: How old are you?]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 8.925,
+      "endTime": 11.725,
+      "text": "Helen: I'm 15. And you?",
+      "words": [
+        "Helen:",
+        "I'm",
+        "15",
+        "And",
+        "you"
+      ],
+      "translation": "[需要翻译: Helen: I'm 15. And you?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 12.3,
+      "endTime": 14.1,
+      "text": "Fu Xing: I'm 13.",
+      "words": [
+        "Fu",
+        "Xing:",
+        "I'm",
+        "13"
+      ],
+      "translation": "[需要翻译: Fu Xing: I'm 13.]",
+      "wordCount": 4
+    },
+    {
+      "id": 6,
+      "startTime": 14.85,
+      "endTime": 16.5,
+      "text": "Helen: When is your birthday?",
+      "words": [
+        "Helen:",
+        "When",
+        "is",
+        "your",
+        "birthday"
+      ],
+      "translation": "[需要翻译: Helen: When is your birthday?]",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 17.05,
+      "endTime": 19.175,
+      "text": "Fu Xing: On 22nd August.",
+      "words": [
+        "Fu",
+        "Xing:",
+        "On",
+        "22nd",
+        "August"
+      ],
+      "translation": "[需要翻译: Fu Xing: On 22nd August.]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 19.7,
+      "endTime": 22.7,
+      "text": "Helen: So can you come to my birthday party?",
+      "words": [
+        "Helen:",
+        "So",
+        "can",
+        "you",
+        "come",
+        "to",
+        "my",
+        "birthday",
+        "party"
+      ],
+      "translation": "[需要翻译: Helen: So can you come to my birthday party?]",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 23.4,
+      "endTime": 24.975,
+      "text": "Fu Xing: Sure! When is it?",
+      "words": [
+        "Fu",
+        "Xing:",
+        "Sure",
+        "When",
+        "is",
+        "it"
+      ],
+      "translation": "[需要翻译: Fu Xing: Sure! When is it?]",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 26,
+      "endTime": 27.875,
+      "text": "Helen: At 6 o'clock this evening.",
+      "words": [
+        "Helen:",
+        "At",
+        "6",
+        "o'clock",
+        "this",
+        "evening"
+      ],
+      "translation": "[需要翻译: Helen: At 6 o'clock this evening.]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 28.225,
+      "endTime": 29.75,
+      "text": "Fu Xing: I'd love to come!",
+      "words": [
+        "Fu",
+        "Xing:",
+        "I'd",
+        "love",
+        "to",
+        "come"
+      ],
+      "translation": "[需要翻译: Fu Xing: I'd love to come!]",
+      "wordCount": 6
+    }
+  ]
+}

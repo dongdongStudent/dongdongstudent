@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "id": "4_3_1",
+    "title": "4_3_1",
+    "totalSentences": 11,
+    "totalWords": 81,
+    "duration": 40.368,
+    "difficulty": "beginner",
+    "convertedFrom": "4_3_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.528,
+      "endTime": 2.352,
+      "text": "I’m a student in Canada.",
+      "words": ["I’m", "a", "student", "in", "Canada"],
+      "translation": "我是一名在加拿大的学生。",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 2.8,
+      "endTime": 4.72,
+      "text": "I’m very busy this year.",
+      "words": ["I’m", "very", "busy", "this", "year"],
+      "translation": "今年我很忙。",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 5.296,
+      "endTime": 12.992,
+      "text": "I study maths, music, French, history, English, IT, science,",
+      "words": ["I", "study", "maths", "music", "French", "history", "English", "IT", "science"],
+      "translation": "我学习数学、音乐、法语、历史、英语、信息技术、科学，",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 13.12,
+      "endTime": 16.848,
+      "text": "and have gym. My favourite subject is music",
+      "words": ["and", "have", "gym", "My", "favourite", "subject", "is", "music"],
+      "translation": "还有体育。我最喜欢的科目是音乐。",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 16.928,
+      "endTime": 21.04,
+      "text": "because the class is fun and we learn a lot of new songs.",
+      "words": ["because", "the", "class", "is", "fun", "and", "we", "learn", "a", "lot", "of", "new", "songs"],
+      "translation": "因为这节课很有趣，而且我们学很多新歌。",
+      "wordCount": 13
+    },
+    {
+      "id": 6,
+      "startTime": 21.424,
+      "endTime": 23.856,
+      "text": "Music always makes me happy.",
+      "words": ["Music", "always", "makes", "me", "happy"],
+      "translation": "音乐总是让我快乐。",
+      "wordCount": 5
+    },
+    {
+      "id": 7,
+      "startTime": 24.352,
+      "endTime": 27.024,
+      "text": "My music teacher is excellent.",
+      "words": ["My", "music", "teacher", "is", "excellent"],
+      "translation": "我的音乐老师很优秀。",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 27.568,
+      "endTime": 31.232,
+      "text": "He lets us play all kinds of interesting instruments.",
+      "words": ["He", "lets", "us", "play", "all", "kinds", "of", "interesting", "instruments"],
+      "translation": "他让我们演奏各种有趣的乐器。",
+      "wordCount": 9
+    },
+    {
+      "id": 9,
+      "startTime": 31.664,
+      "endTime": 33.904,
+      "text": "I want to be a singer in the future.",
+      "words": ["I", "want", "to", "be", "a", "singer", "in", "the", "future"],
+      "translation": "我将来想成为一名歌手。",
+      "wordCount": 9
+    },
+    {
+      "id": 10,
+      "startTime": 34.48,
+      "endTime": 37.424,
+      "text": "How about you? What do you study?",
+      "words": ["How", "about", "you", "What", "do", "you", "study"],
+      "translation": "你呢？你学习什么？",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 38.256,
+      "endTime": 40.368,
+      "text": "What’s your favourite class and why?",
+      "words": ["What’s", "your", "favourite", "class", "and", "why"],
+      "translation": "你最喜欢的课是什么？为什么？",
+      "wordCount": 6
+    }
+  ]
+}

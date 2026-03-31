@@ -1,0 +1,236 @@
+{
+  "metadata": {
+    "id": "53_2_2",
+    "title": "53_2_2",
+    "totalSentences": 13,
+    "totalWords": 93,
+    "duration": 128.72,
+    "difficulty": "beginner",
+    "convertedFrom": "53_2_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 73.552,
+      "endTime": 76.88,
+      "text": "Mike, do you know the boy in the photo?",
+      "words": [
+        "Mike",
+        "do",
+        "you",
+        "know",
+        "the",
+        "boy",
+        "in",
+        "the",
+        "photo"
+      ],
+      "translation": "[需要翻译: Mike, do you know the boy in the photo?]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 77.04,
+      "endTime": 81.456,
+      "text": "Yes, he's my new friend. He is from Jinan.",
+      "words": [
+        "Yes",
+        "he's",
+        "my",
+        "new",
+        "friend",
+        "He",
+        "is",
+        "from",
+        "Jinan"
+      ],
+      "translation": "[需要翻译: Yes, he's my new friend. He is from Jinan.]",
+      "wordCount": 9
+    },
+    {
+      "id": 3,
+      "startTime": 81.936,
+      "endTime": 85.872,
+      "text": "Question：Where is Mike's friend from?",
+      "words": [
+        "Question：Where",
+        "is",
+        "Mike's",
+        "friend",
+        "from"
+      ],
+      "translation": "[需要翻译: Question：Where is Mike's friend from?]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 89.2,
+      "endTime": 91.36,
+      "text": "Do you know Mr Green?",
+      "words": [
+        "Do",
+        "you",
+        "know",
+        "Mr",
+        "Green"
+      ],
+      "translation": "[需要翻译: Do you know Mr Green?]",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 91.504,
+      "endTime": 95.648,
+      "text": "Yes. He is my uncle. He's very handsome.",
+      "words": [
+        "Yes",
+        "He",
+        "is",
+        "my",
+        "uncle",
+        "He's",
+        "very",
+        "handsome"
+      ],
+      "translation": "[需要翻译: Yes. He is my uncle. He's very handsome.]",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 95.888,
+      "endTime": 99.136,
+      "text": "He likes to go hiking on the weekends.",
+      "words": [
+        "He",
+        "likes",
+        "to",
+        "go",
+        "hiking",
+        "on",
+        "the",
+        "weekends"
+      ],
+      "translation": "[需要翻译: He likes to go hiking on the weekends.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 99.344,
+      "endTime": 104.512,
+      "text": "Question：What does Mr Green often do on the weekends?",
+      "words": [
+        "Question：What",
+        "does",
+        "Mr",
+        "Green",
+        "often",
+        "do",
+        "on",
+        "the",
+        "weekends"
+      ],
+      "translation": "[需要翻译: Question：What does Mr Green often do on the weekends?]",
+      "wordCount": 9
+    },
+    {
+      "id": 8,
+      "startTime": 109.072,
+      "endTime": 113.44,
+      "text": "What is this, Ella? It's a photo of my family.",
+      "words": [
+        "What",
+        "is",
+        "this",
+        "Ella",
+        "It's",
+        "a",
+        "photo",
+        "of",
+        "my",
+        "family"
+      ],
+      "translation": "[需要翻译: What is this, Ella? It's a photo of my family.]",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 113.664,
+      "endTime": 117.888,
+      "text": "Who is the girl? She is my sister, Emma.",
+      "words": [
+        "Who",
+        "is",
+        "the",
+        "girl",
+        "She",
+        "is",
+        "my",
+        "sister",
+        "Emma"
+      ],
+      "translation": "[需要翻译: Who is the girl? She is my sister, Emma.]",
+      "wordCount": 9
+    },
+    {
+      "id": 10,
+      "startTime": 118.336,
+      "endTime": 120.72,
+      "text": "Are these two boys your brothers?",
+      "words": [
+        "Are",
+        "these",
+        "two",
+        "boys",
+        "your",
+        "brothers"
+      ],
+      "translation": "[需要翻译: Are these two boys your brothers?]",
+      "wordCount": 6
+    },
+    {
+      "id": 11,
+      "startTime": 121.136,
+      "endTime": 123.6,
+      "text": "No, they are my cousins.",
+      "words": [
+        "No",
+        "they",
+        "are",
+        "my",
+        "cousins"
+      ],
+      "translation": "[需要翻译: No, they are my cousins.]",
+      "wordCount": 5
+    },
+    {
+      "id": 12,
+      "startTime": 124.064,
+      "endTime": 126.72,
+      "text": "Is your father in the photo, too?",
+      "words": [
+        "Is",
+        "your",
+        "father",
+        "in",
+        "the",
+        "photo",
+        "too"
+      ],
+      "translation": "[需要翻译: Is your father in the photo, too?]",
+      "wordCount": 7
+    },
+    {
+      "id": 13,
+      "startTime": 127.056,
+      "endTime": 128.72,
+      "text": "Yes, he is.",
+      "words": [
+        "Yes",
+        "he",
+        "is"
+      ],
+      "translation": "[需要翻译: Yes, he is.]",
+      "wordCount": 3
+    }
+  ]
+}

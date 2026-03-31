@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "id": "5_2",
+    "title": "5_2",
+    "totalSentences": 15,
+    "totalWords": 91,
+    "duration": 45.984,
+    "difficulty": "beginner",
+    "convertedFrom": "5_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.432,
+      "endTime": 3.168,
+      "text": "Hi there! What club do you want to join?",
+      "words": ["Hi", "there", "What", "club", "do", "you", "want", "to", "join"],
+      "translation": "嗨！你想加入什么社团？",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 3.728,
+      "endTime": 5.712,
+      "text": "I have no idea.",
+      "words": ["I", "have", "no", "idea"],
+      "translation": "我不知道。",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 6.64,
+      "endTime": 8.128,
+      "text": "Here’s some good news!",
+      "words": ["Here’s", "some", "good", "news"],
+      "translation": "有个好消息！",
+      "wordCount": 4
+    },
+    {
+      "id": 4,
+      "startTime": 8.368,
+      "endTime": 10.864,
+      "text": "Our school wants to start a music club.",
+      "words": ["Our", "school", "wants", "to", "start", "a", "music", "club"],
+      "translation": "我们学校想成立一个音乐社团。",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 11.392,
+      "endTime": 12.688,
+      "text": "Do you want to join?",
+      "words": ["Do", "you", "want", "to", "join"],
+      "translation": "你想加入吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 13.664,
+      "endTime": 16.32,
+      "text": "Sure. I can play the guitar.",
+      "words": ["Sure", "I", "can", "play", "the", "guitar"],
+      "translation": "当然。我会弹吉他。",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 17.264,
+      "endTime": 18.96,
+      "text": "What about you, Emma?",
+      "words": ["What", "about", "you", "Emma"],
+      "translation": "你呢，Emma？",
+      "wordCount": 4
+    },
+    {
+      "id": 8,
+      "startTime": 19.84,
+      "endTime": 24.688,
+      "text": "I’d love to, but I can’t play any musical instruments.",
+      "words": ["I’d", "love", "to", "but", "I", "can’t", "play", "any", "musical", "instruments"],
+      "translation": "我很想加入，但我不会演奏任何乐器。",
+      "wordCount": 10
+    },
+    {
+      "id": 9,
+      "startTime": 25.408,
+      "endTime": 27.808,
+      "text": "Oh, but you can sing well.",
+      "words": ["Oh", "but", "you", "can", "sing", "well"],
+      "translation": "哦，但你唱歌唱得好。",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 28.368,
+      "endTime": 30.944,
+      "text": "Exactly! How about Ella?",
+      "words": ["Exactly", "How", "about", "Ella"],
+      "translation": "没错！Ella 呢？",
+      "wordCount": 4
+    },
+    {
+      "id": 11,
+      "startTime": 31.472,
+      "endTime": 33.568,
+      "text": "She can play the violin, right?",
+      "words": ["She", "can", "play", "the", "violin", "right"],
+      "translation": "她会拉小提琴，对吧？",
+      "wordCount": 6
+    },
+    {
+      "id": 12,
+      "startTime": 34.08,
+      "endTime": 35.648,
+      "text": "Yes, she can.",
+      "words": ["Yes", "she", "can"],
+      "translation": "是的，她会。",
+      "wordCount": 3
+    },
+    {
+      "id": 13,
+      "startTime": 36.352,
+      "endTime": 39.296,
+      "text": "What instruments can you play, Teng Fei?",
+      "words": ["What", "instruments", "can", "you", "play", "Teng", "Fei"],
+      "translation": "Teng Fei，你会演奏什么乐器？",
+      "wordCount": 7
+    },
+    {
+      "id": 14,
+      "startTime": 39.648,
+      "endTime": 41.376,
+      "text": "I can play the drums.",
+      "words": ["I", "can", "play", "the", "drums"],
+      "translation": "我会打鼓。",
+      "wordCount": 5
+    },
+    {
+      "id": 15,
+      "startTime": 41.68,
+      "endTime": 45.984,
+      "text": "That’s great! Let’s go to the music room after school!",
+      "words": ["That’s", "great", "Let’s", "go", "to", "the", "music", "room", "after", "school"],
+      "translation": "太好了！放学后我们去音乐教室吧！",
+      "wordCount": 10
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "id": "1_3",
+    "title": "1_3",
+    "totalSentences": 9,
+    "totalWords": 51,
+    "duration": 42.12,
+    "difficulty": "beginner",
+    "convertedFrom": "1_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 2,
+      "startTime": 0.32,
+      "endTime": 2.053,
+      "text": "Hello, Mr Smith!",
+      "words": ["Hello", "Mr", "Smith"],
+      "translation": "你好，史密斯先生！",
+      "wordCount": 3
+    },
+    {
+      "id": 3,
+      "startTime": 2.306,
+      "endTime": 6.053,
+      "text": "Hello, Chen Jie. How are you?",
+      "words": ["Hello", "Chen", "Jie", "How", "are", "you"],
+      "translation": "你好，陈杰。你好吗？",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 19.026,
+      "endTime": 22.44,
+      "text": "Hi, Peter. Nice to meet you.",
+      "words": ["Hi", "Peter", "Nice", "to", "meet", "you"],
+      "translation": "嗨，彼得。很高兴认识你。",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 23.373,
+      "endTime": 26.24,
+      "text": "Nice to meet you too, Mr Smith.",
+      "words": ["Nice", "to", "meet", "you", "too", "Mr", "Smith"],
+      "translation": "我也很高兴认识你，史密斯先生。",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 26.626,
+      "endTime": 28.773,
+      "text": "Which class are you in, Peter?",
+      "words": ["Which", "class", "are", "you", "in", "Peter"],
+      "translation": "彼得，你在哪个班？",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 29.28,
+      "endTime": 30.986,
+      "text": "I’m in Class 1.",
+      "words": ["I’m", "in", "Class", "1"],
+      "translation": "我在一班。",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 31.6,
+      "endTime": 33.28,
+      "text": "Who’s your class teacher?",
+      "words": ["Who’s", "your", "class", "teacher"],
+      "translation": "你们的班主任是谁？",
+      "wordCount": 4
+    },
+    {
+      "id": 10,
+      "startTime": 33.706,
+      "endTime": 34.88,
+      "text": "Ms Hui.",
+      "words": ["Ms", "Hui"],
+      "translation": "慧老师。",
+      "wordCount": 2
+    },
+    {
+      "id": 11,
+      "startTime": 35.093,
+      "endTime": 42.12,
+      "text": "Oh, Peter, it’s Ms Gao, not Ms Hui. Hui is her first name.",
+      "words": ["Oh", "Peter", "it’s", "Ms", "Gao", "not", "Ms", "Hui", "Hui", "is", "her", "first", "name"],
+      "translation": "哦，彼得，是高老师，不是慧老师。慧是她的名。",
+      "wordCount": 13
+    }
+  ]
+}

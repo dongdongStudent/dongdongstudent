@@ -1,0 +1,76 @@
+{
+  "metadata": {
+    "id": "6_3",
+    "title": "6_3",
+    "totalSentences": 4,
+    "totalWords": 23,
+    "duration": 26.56,
+    "difficulty": "beginner",
+    "convertedFrom": "6_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.312,
+      "endTime": 14.176,
+      "text": "What’s the weather like today?",
+      "words": [
+        "What’s",
+        "the",
+        "weather",
+        "like",
+        "today"
+      ],
+      "translation": "[需要翻译: What’s the weather like today?]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 14.256,
+      "endTime": 18.256,
+      "text": "It’s windy and warm. It’s spring again.",
+      "words": [
+        "It’s",
+        "windy",
+        "and",
+        "warm",
+        "It’s",
+        "spring",
+        "again"
+      ],
+      "translation": "[需要翻译: It’s windy and warm. It’s spring again.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 18.48,
+      "endTime": 22.336,
+      "text": "Let’s fly a kite. Isn’t it great?",
+      "words": [
+        "Let’s",
+        "fly",
+        "a",
+        "kite",
+        "Isn’t",
+        "it",
+        "great"
+      ],
+      "translation": "[需要翻译: Let’s fly a kite. Isn’t it great?]",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 22.4,
+      "endTime": 26.56,
+      "text": "Hooray! Hooray! Let’s play",
+      "words": [
+        "Hooray",
+        "Hooray",
+        "Let’s",
+        "play"
+      ],
+      "translation": "[需要翻译: Hooray! Hooray! Let’s play]",
+      "wordCount": 4
+    }
+  ]
+}

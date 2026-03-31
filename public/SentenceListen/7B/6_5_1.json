@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "id": "6_5_1",
+    "title": "6_5_1",
+    "totalSentences": 4,
+    "totalWords": 26,
+    "duration": 30.416,
+    "difficulty": "beginner",
+    "convertedFrom": "6_5_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 17.02,
+      "endTime": 19.84,
+      "text": "We’re here at Mount Huangshan!",
+      "words": [
+        "We’re",
+        "here",
+        "at",
+        "Mount",
+        "Huangshan"
+      ],
+      "translation": "[需要翻译: We’re here at Mount Huangshan!]",
+      "wordCount": 5
+    },
+    {
+      "id": 2,
+      "startTime": 20.304,
+      "endTime": 22.416,
+      "text": "The clouds look amazing.",
+      "words": [
+        "The",
+        "clouds",
+        "look",
+        "amazing"
+      ],
+      "translation": "[需要翻译: The clouds look amazing.]",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 23.312,
+      "endTime": 26.208,
+      "text": "It feels like a magical place.",
+      "words": [
+        "It",
+        "feels",
+        "like",
+        "a",
+        "magical",
+        "place"
+      ],
+      "translation": "[需要翻译: It feels like a magical place.]",
+      "wordCount": 6
+    },
+    {
+      "id": 4,
+      "startTime": 26.72,
+      "endTime": 30.416,
+      "text": "The trees and rocks look like a part of a painting",
+      "words": [
+        "The",
+        "trees",
+        "and",
+        "rocks",
+        "look",
+        "like",
+        "a",
+        "part",
+        "of",
+        "a",
+        "painting"
+      ],
+      "translation": "[需要翻译: The trees and rocks look like a part of a painting]",
+      "wordCount": 11
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "id": "2_1_1",
+    "title": "2_1_1",
+    "totalSentences": 9,
+    "totalWords": 52,
+    "duration": 29.056,
+    "difficulty": "beginner",
+    "convertedFrom": "2_1_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.336,
+      "endTime": 1.744,
+      "text": "Morning, Emma.",
+      "words": ["Morning", "Emma"],
+      "translation": "早上好，Emma。",
+      "wordCount": 2
+    },
+    {
+      "id": 2,
+      "startTime": 2,
+      "endTime": 7.232,
+      "text": "Oh, hi, Yaming! Glad to see you here in the park!",
+      "words": ["Oh", "hi", "Yaming", "Glad", "to", "see", "you", "here", "in", "the", "park"],
+      "translation": "哦，嗨，Yaming！真高兴在公园里见到你！",
+      "wordCount": 11
+    },
+    {
+      "id": 3,
+      "startTime": 7.712,
+      "endTime": 12.128,
+      "text": "Me too. Emma, these are my parents.",
+      "words": ["Me", "too", "Emma", "these", "are", "my", "parents"],
+      "translation": "我也是。Emma，这是我的父母。",
+      "wordCount": 7
+    },
+    {
+      "id": 4,
+      "startTime": 12.752,
+      "endTime": 16.224,
+      "text": "Dad and Mum, this is my classmate, Emma.",
+      "words": ["Dad", "and", "Mum", "this", "is", "my", "classmate", "Emma"],
+      "translation": "爸爸、妈妈，这是我的同学 Emma。",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 16.768,
+      "endTime": 18.848,
+      "text": "Nice to meet you, Emma.",
+      "words": ["Nice", "to", "meet", "you", "Emma"],
+      "translation": "很高兴认识你，Emma。",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 19.152,
+      "endTime": 22.848,
+      "text": "Nice to meet you too, Mr and Mrs Wang.",
+      "words": ["Nice", "to", "meet", "you", "too", "Mr", "and", "Mrs", "Wang"],
+      "translation": "我也很高兴认识你们，王先生、王太太。",
+      "wordCount": 9
+    },
+    {
+      "id": 7,
+      "startTime": 23.28,
+      "endTime": 25.744,
+      "text": "And this is my sister, Yaqi.",
+      "words": ["And", "this", "is", "my", "sister", "Yaqi"],
+      "translation": "这是我的妹妹 Yaqi。",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 26.128,
+      "endTime": 27.584,
+      "text": "Hi, Yaqi!",
+      "words": ["Hi", "Yaqi"],
+      "translation": "嗨，Yaqi！",
+      "wordCount": 2
+    },
+    {
+      "id": 9,
+      "startTime": 27.824,
+      "endTime": 29.056,
+      "text": "Hi, Emma!",
+      "words": ["Hi", "Emma"],
+      "translation": "嗨，Emma！",
+      "wordCount": 2
+    }
+  ]
+}

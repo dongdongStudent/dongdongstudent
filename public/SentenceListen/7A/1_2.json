@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "id": "1_2",
+    "title": "1_2",
+    "totalSentences": 8,
+    "totalWords": 37,
+    "duration": 18.84,
+    "difficulty": "beginner",
+    "convertedFrom": "1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 2,
+      "startTime": 0.333,
+      "endTime": 1.893,
+      "text": "Good morning, Ms Li.",
+      "words": ["Good", "morning", "Ms", "Li"],
+      "translation": "早上好，李老师。",
+      "wordCount": 4
+    },
+    {
+      "id": 3,
+      "startTime": 2.173,
+      "endTime": 4.853,
+      "text": "Good morning! Are you Emma?",
+      "words": ["Good", "morning", "Are", "you", "Emma"],
+      "translation": "早上好！你是艾玛吗？",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 5.026,
+      "endTime": 7.533,
+      "text": "No, Ms Li. I’m Ella.",
+      "words": ["No", "Ms", "Li", "I’m", "Ella"],
+      "translation": "不，李老师。我是艾拉。",
+      "wordCount": 5
+    },
+    {
+      "id": 5,
+      "startTime": 7.853,
+      "endTime": 11.053,
+      "text": "Sorry, Ella. What’s your last name?",
+      "words": ["Sorry", "Ella", "What’s", "your", "last", "name"],
+      "translation": "抱歉，艾拉。你姓什么？",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 11.6,
+      "endTime": 12.666,
+      "text": "It’s Miller.",
+      "words": ["It’s", "Miller"],
+      "translation": "是米勒。",
+      "wordCount": 2
+    },
+    {
+      "id": 7,
+      "startTime": 12.893,
+      "endTime": 14.466,
+      "text": "How old are you, Ella?",
+      "words": ["How", "old", "are", "you", "Ella"],
+      "translation": "艾拉，你多大了？",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 14.56,
+      "endTime": 16.12,
+      "text": "I’m 12 years old.",
+      "words": ["I’m", "12", "years", "old"],
+      "translation": "我12岁了。",
+      "wordCount": 4
+    },
+    {
+      "id": 9,
+      "startTime": 16.413,
+      "endTime": 18.84,
+      "text": "Well, it’s nice to meet you.",
+      "words": ["Well", "it’s", "nice", "to", "meet", "you"],
+      "translation": "嗯，很高兴认识你。",
+      "wordCount": 6
+    }
+  ]
+}

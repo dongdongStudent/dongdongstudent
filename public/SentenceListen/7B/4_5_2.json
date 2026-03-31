@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "id": "4_5_2",
+    "title": "4_5_2",
+    "totalSentences": 14,
+    "totalWords": 109,
+    "duration": 115.152,
+    "difficulty": "beginner",
+    "convertedFrom": "4_5_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 66.032,
+      "endTime": 68.704,
+      "text": "Maybe they don’t feel hungry in the morning,",
+      "words": [
+        "Maybe",
+        "they",
+        "don’t",
+        "feel",
+        "hungry",
+        "in",
+        "the",
+        "morning"
+      ],
+      "translation": "[需要翻译: Maybe they don’t feel hungry in the morning,]",
+      "wordCount": 8
+    },
+    {
+      "id": 2,
+      "startTime": 68.896,
+      "endTime": 71.344,
+      "text": "or they are too busy to eat anything.",
+      "words": [
+        "or",
+        "they",
+        "are",
+        "too",
+        "busy",
+        "to",
+        "eat",
+        "anything"
+      ],
+      "translation": "[需要翻译: or they are too busy to eat anything.]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 72.032,
+      "endTime": 74.336,
+      "text": "But food gives us energy.",
+      "words": [
+        "But",
+        "food",
+        "gives",
+        "us",
+        "energy"
+      ],
+      "translation": "[需要翻译: But food gives us energy.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 74.928,
+      "endTime": 80.224,
+      "text": "It is easy to feel sleepy and find it hard to focus on our work or studies",
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "to",
+        "feel",
+        "sleepy",
+        "and",
+        "find",
+        "it",
+        "hard",
+        "to",
+        "focus",
+        "on",
+        "our",
+        "work",
+        "or",
+        "studies"
+      ],
+      "translation": "[需要翻译: It is easy to feel sleepy and find it hard to focus on our work or studies]",
+      "wordCount": 17
+    },
+    {
+      "id": 5,
+      "startTime": 80.224,
+      "endTime": 81.92,
+      "text": "if we don’t eat breakfast.",
+      "words": [
+        "if",
+        "we",
+        "don’t",
+        "eat",
+        "breakfast"
+      ],
+      "translation": "[需要翻译: if we don’t eat breakfast.]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 83.28,
+      "endTime": 86.8,
+      "text": "Some people also eat too many sweet things.",
+      "words": [
+        "Some",
+        "people",
+        "also",
+        "eat",
+        "too",
+        "many",
+        "sweet",
+        "things"
+      ],
+      "translation": "[需要翻译: Some people also eat too many sweet things.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 87.168,
+      "endTime": 90.656,
+      "text": "Ice cream, sweets, and chocolate are delicious",
+      "words": [
+        "Ice",
+        "cream",
+        "sweets",
+        "and",
+        "chocolate",
+        "are",
+        "delicious"
+      ],
+      "translation": "[需要翻译: Ice cream, sweets, and chocolate are delicious]",
+      "wordCount": 7
+    },
+    {
+      "id": 8,
+      "startTime": 90.96,
+      "endTime": 93.296,
+      "text": "but they usually have lots of sugar.",
+      "words": [
+        "but",
+        "they",
+        "usually",
+        "have",
+        "lots",
+        "of",
+        "sugar"
+      ],
+      "translation": "[需要翻译: but they usually have lots of sugar.]",
+      "wordCount": 7
+    },
+    {
+      "id": 9,
+      "startTime": 94.064,
+      "endTime": 96.352,
+      "text": "This can cause tooth problems.",
+      "words": [
+        "This",
+        "can",
+        "cause",
+        "tooth",
+        "problems"
+      ],
+      "translation": "[需要翻译: This can cause tooth problems.]",
+      "wordCount": 5
+    },
+    {
+      "id": 10,
+      "startTime": 97.12,
+      "endTime": 98.656,
+      "text": "When you want a snack,",
+      "words": [
+        "When",
+        "you",
+        "want",
+        "a",
+        "snack"
+      ],
+      "translation": "[需要翻译: When you want a snack,]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 99.056,
+      "endTime": 101.472,
+      "text": "why don’t you have some fruit instead?",
+      "words": [
+        "why",
+        "don’t",
+        "you",
+        "have",
+        "some",
+        "fruit",
+        "instead"
+      ],
+      "translation": "[需要翻译: why don’t you have some fruit instead?]",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 102.064,
+      "endTime": 106.096,
+      "text": "After all, an apple a day keeps the doctor away.",
+      "words": [
+        "After",
+        "all",
+        "an",
+        "apple",
+        "a",
+        "day",
+        "keeps",
+        "the",
+        "doctor",
+        "away"
+      ],
+      "translation": "[需要翻译: After all, an apple a day keeps the doctor away.]",
+      "wordCount": 10
+    },
+    {
+      "id": 13,
+      "startTime": 106.848,
+      "endTime": 109.392,
+      "text": "Remember: You are what you eat.",
+      "words": [
+        "Remember:",
+        "You",
+        "are",
+        "what",
+        "you",
+        "eat"
+      ],
+      "translation": "[需要翻译: Remember: You are what you eat.]",
+      "wordCount": 6
+    },
+    {
+      "id": 14,
+      "startTime": 109.952,
+      "endTime": 115.152,
+      "text": "Healthy eating means eating healthy food and having good eating habits.",
+      "words": [
+        "Healthy",
+        "eating",
+        "means",
+        "eating",
+        "healthy",
+        "food",
+        "and",
+        "having",
+        "good",
+        "eating",
+        "habits"
+      ],
+      "translation": "[需要翻译: Healthy eating means eating healthy food and having good eating habits.]",
+      "wordCount": 11
+    }
+  ]
+}

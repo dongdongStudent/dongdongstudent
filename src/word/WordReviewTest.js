@@ -702,7 +702,7 @@ const ListeningFinalMaster = ({
         <Paper elevation={1} sx={{ p: isMobile ? 1.5 : 2, borderRadius: 2 }}>
           <Box sx={{ textAlign: 'center', mb: isMobile ? 1 : 1.5 }}>
             <Typography variant={isMobile ? "h6" : "h5"} sx={{ fontWeight: 'bold', mb: 0.5 }}>
-              {isPerfect ? '🏆 完美通关！🏆' : '📊 听力测试报告'}
+              {isPerfect ? '🏆 完美通关！🏆' : '📊 单词复习测试报告'}
             </Typography>
             <Typography variant="caption" color="text.secondary">{dateStr} {timeStr}</Typography>
             {testCount > 0 && (

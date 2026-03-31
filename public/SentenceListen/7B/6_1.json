@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "id": "6_1",
+    "title": "6_1",
+    "totalSentences": 11,
+    "totalWords": 74,
+    "duration": 65.44,
+    "difficulty": "beginner",
+    "convertedFrom": "6_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 27.072,
+      "endTime": 28.832,
+      "text": "Here’s the weather report.",
+      "words": [
+        "Here’s",
+        "the",
+        "weather",
+        "report"
+      ],
+      "translation": "[需要翻译: Here’s the weather report.]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 29.12,
+      "endTime": 31.792,
+      "text": "Let’s look at the weather across Australia.",
+      "words": [
+        "Let’s",
+        "look",
+        "at",
+        "the",
+        "weather",
+        "across",
+        "Australia"
+      ],
+      "translation": "[需要翻译: Let’s look at the weather across Australia.]",
+      "wordCount": 7
+    },
+    {
+      "id": 3,
+      "startTime": 32.144,
+      "endTime": 34.384,
+      "text": "In the north, it’s stormy.",
+      "words": [
+        "In",
+        "the",
+        "north",
+        "it’s",
+        "stormy"
+      ],
+      "translation": "[需要翻译: In the north, it’s stormy.]",
+      "wordCount": 5
+    },
+    {
+      "id": 4,
+      "startTime": 34.96,
+      "endTime": 38.176,
+      "text": "It’s raining and the wind is blowing hard.",
+      "words": [
+        "It’s",
+        "raining",
+        "and",
+        "the",
+        "wind",
+        "is",
+        "blowing",
+        "hard"
+      ],
+      "translation": "[需要翻译: It’s raining and the wind is blowing hard.]",
+      "wordCount": 8
+    },
+    {
+      "id": 5,
+      "startTime": 38.72,
+      "endTime": 41.488,
+      "text": "The temperature is around 20°C.",
+      "words": [
+        "The",
+        "temperature",
+        "is",
+        "around",
+        "20°C"
+      ],
+      "translation": "[需要翻译: The temperature is around 20°C.]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 42.368,
+      "endTime": 46.752,
+      "text": "In the west, it’s cloudy and about 22°C.",
+      "words": [
+        "In",
+        "the",
+        "west",
+        "it’s",
+        "cloudy",
+        "and",
+        "about",
+        "22°C"
+      ],
+      "translation": "[需要翻译: In the west, it’s cloudy and about 22°C.]",
+      "wordCount": 8
+    },
+    {
+      "id": 7,
+      "startTime": 47.536,
+      "endTime": 49.008,
+      "text": "In the south and east,",
+      "words": [
+        "In",
+        "the",
+        "south",
+        "and",
+        "east"
+      ],
+      "translation": "[需要翻译: In the south and east,]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 49.152,
+      "endTime": 51.728,
+      "text": "the sun is shining and it’s very hot.",
+      "words": [
+        "the",
+        "sun",
+        "is",
+        "shining",
+        "and",
+        "it’s",
+        "very",
+        "hot"
+      ],
+      "translation": "[需要翻译: the sun is shining and it’s very hot.]",
+      "wordCount": 8
+    },
+    {
+      "id": 9,
+      "startTime": 52.672,
+      "endTime": 55.504,
+      "text": "It’s around 35°C.",
+      "words": [
+        "It’s",
+        "around",
+        "35°C"
+      ],
+      "translation": "[需要翻译: It’s around 35°C.]",
+      "wordCount": 3
+    },
+    {
+      "id": 10,
+      "startTime": 56.544,
+      "endTime": 59.552,
+      "text": "The centre of the country has the best weather right now.",
+      "words": [
+        "The",
+        "centre",
+        "of",
+        "the",
+        "country",
+        "has",
+        "the",
+        "best",
+        "weather",
+        "right",
+        "now"
+      ],
+      "translation": "[需要翻译: The centre of the country has the best weather right now.]",
+      "wordCount": 11
+    },
+    {
+      "id": 11,
+      "startTime": 60.16,
+      "endTime": 65.44,
+      "text": "It’s warm and dry, and the temperature is about 28°C",
+      "words": [
+        "It’s",
+        "warm",
+        "and",
+        "dry",
+        "and",
+        "the",
+        "temperature",
+        "is",
+        "about",
+        "28°C"
+      ],
+      "translation": "[需要翻译: It’s warm and dry, and the temperature is about 28°C]",
+      "wordCount": 10
+    }
+  ]
+}

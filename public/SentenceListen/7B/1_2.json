@@ -1,0 +1,203 @@
+{
+  "metadata": {
+    "id": "1_2",
+    "title": "1_2",
+    "totalSentences": 11,
+    "totalWords": 80,
+    "duration": 53.408,
+    "difficulty": "beginner",
+    "convertedFrom": "1_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 11.168,
+      "endTime": 12.528,
+      "text": "I like monkeys.",
+      "words": [
+        "I",
+        "like",
+        "monkeys"
+      ],
+      "translation": "[需要翻译: I like monkeys.]",
+      "wordCount": 3
+    },
+    {
+      "id": 2,
+      "startTime": 13.024,
+      "endTime": 16.768,
+      "text": "Me too! Why do you like them, Yaming?",
+      "words": [
+        "Me",
+        "too",
+        "Why",
+        "do",
+        "you",
+        "like",
+        "them",
+        "Yaming"
+      ],
+      "translation": "[需要翻译: Me too! Why do you like them, Yaming?]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 17.28,
+      "endTime": 22.08,
+      "text": "Because they’re really clever and funny. What about you, Chen Jie?",
+      "words": [
+        "Because",
+        "they’re",
+        "really",
+        "clever",
+        "and",
+        "funny",
+        "What",
+        "about",
+        "you",
+        "Chen",
+        "Jie"
+      ],
+      "translation": "[需要翻译: Because they’re really clever and funny. What about you, Chen Jie?]",
+      "wordCount": 11
+    },
+    {
+      "id": 4,
+      "startTime": 22.448,
+      "endTime": 24.128,
+      "text": "They’re my favourite too.",
+      "words": [
+        "They’re",
+        "my",
+        "favourite",
+        "too"
+      ],
+      "translation": "[需要翻译: They’re my favourite too.]",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 24.624,
+      "endTime": 27.248,
+      "text": "Great! Let’s go and see them.",
+      "words": [
+        "Great",
+        "Let’s",
+        "go",
+        "and",
+        "see",
+        "them"
+      ],
+      "translation": "[需要翻译: Great! Let’s go and see them.]",
+      "wordCount": 6
+    },
+    {
+      "id": 6,
+      "startTime": 27.984,
+      "endTime": 33.168,
+      "text": "Oh, look! A baby wolf and its mother! Do you like wolves, Emma?",
+      "words": [
+        "Oh",
+        "look",
+        "A",
+        "baby",
+        "wolf",
+        "and",
+        "its",
+        "mother",
+        "Do",
+        "you",
+        "like",
+        "wolves",
+        "Emma"
+      ],
+      "translation": "[需要翻译: Oh, look! A baby wolf and its mother! Do you like wolves, Emma?]",
+      "wordCount": 13
+    },
+    {
+      "id": 7,
+      "startTime": 33.728,
+      "endTime": 37.568,
+      "text": "No, I don’t. They’re very dangerous.",
+      "words": [
+        "No",
+        "I",
+        "don’t",
+        "They’re",
+        "very",
+        "dangerous"
+      ],
+      "translation": "[需要翻译: No, I don’t. They’re very dangerous.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 38.144,
+      "endTime": 43.12,
+      "text": "But I do. They’re dangerous, but they take good care of their babies.",
+      "words": [
+        "But",
+        "I",
+        "do",
+        "They’re",
+        "dangerous",
+        "but",
+        "they",
+        "take",
+        "good",
+        "care",
+        "of",
+        "their",
+        "babies"
+      ],
+      "translation": "[需要翻译: But I do. They’re dangerous, but they take good care of their babies.]",
+      "wordCount": 13
+    },
+    {
+      "id": 9,
+      "startTime": 43.936,
+      "endTime": 47.056,
+      "text": "Look! The monkeys are over there.",
+      "words": [
+        "Look",
+        "The",
+        "monkeys",
+        "are",
+        "over",
+        "there"
+      ],
+      "translation": "[需要翻译: Look! The monkeys are over there.]",
+      "wordCount": 6
+    },
+    {
+      "id": 10,
+      "startTime": 47.52,
+      "endTime": 50.336,
+      "text": "Wow! Aren’t their faces interesting?",
+      "words": [
+        "Wow",
+        "Aren’t",
+        "their",
+        "faces",
+        "interesting"
+      ],
+      "translation": "[需要翻译: Wow! Aren’t their faces interesting?]",
+      "wordCount": 5
+    },
+    {
+      "id": 11,
+      "startTime": 50.976,
+      "endTime": 53.408,
+      "text": "Yes. They look like us!",
+      "words": [
+        "Yes",
+        "They",
+        "look",
+        "like",
+        "us"
+      ],
+      "translation": "[需要翻译: Yes. They look like us!]",
+      "wordCount": 5
+    }
+  ]
+}

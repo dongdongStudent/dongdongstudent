@@ -1,0 +1,171 @@
+{
+  "metadata": {
+    "id": "2_1",
+    "title": "2_1",
+    "totalSentences": 9,
+    "totalWords": 68,
+    "duration": 63.872,
+    "difficulty": "beginner",
+    "convertedFrom": "2_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 26.928,
+      "endTime": 31.808,
+      "text": "Mary, slow down! Don’t run in the hallway, please.",
+      "words": [
+        "Mary",
+        "slow",
+        "down",
+        "Don’t",
+        "run",
+        "in",
+        "the",
+        "hallway",
+        "please"
+      ],
+      "translation": "[需要翻译: Mary, slow down! Don’t run in the hallway, please.]",
+      "wordCount": 9
+    },
+    {
+      "id": 2,
+      "startTime": 32.512,
+      "endTime": 36.112,
+      "text": "I’m sorry! I don’t want to be late.",
+      "words": [
+        "I’m",
+        "sorry",
+        "I",
+        "don’t",
+        "want",
+        "to",
+        "be",
+        "late"
+      ],
+      "translation": "[需要翻译: I’m sorry! I don’t want to be late.]",
+      "wordCount": 8
+    },
+    {
+      "id": 3,
+      "startTime": 36.912,
+      "endTime": 43.264,
+      "text": "Sally, you know the rules. You can only wear the uniform at school.",
+      "words": [
+        "Sally",
+        "you",
+        "know",
+        "the",
+        "rules",
+        "You",
+        "can",
+        "only",
+        "wear",
+        "the",
+        "uniform",
+        "at",
+        "school"
+      ],
+      "translation": "[需要翻译: Sally, you know the rules. You can only wear the uniform at school.]",
+      "wordCount": 13
+    },
+    {
+      "id": 4,
+      "startTime": 43.488,
+      "endTime": 45.552,
+      "text": "You can’t wear that jacket here.",
+      "words": [
+        "You",
+        "can’t",
+        "wear",
+        "that",
+        "jacket",
+        "here"
+      ],
+      "translation": "[需要翻译: You can’t wear that jacket here.]",
+      "wordCount": 6
+    },
+    {
+      "id": 5,
+      "startTime": 45.856,
+      "endTime": 48.304,
+      "text": "Sorry, Ms Brown.",
+      "words": [
+        "Sorry",
+        "Ms",
+        "Brown"
+      ],
+      "translation": "[需要翻译: Sorry, Ms Brown.]",
+      "wordCount": 3
+    },
+    {
+      "id": 6,
+      "startTime": 48.784,
+      "endTime": 50.848,
+      "text": "Why is there a bottle here?",
+      "words": [
+        "Why",
+        "is",
+        "there",
+        "a",
+        "bottle",
+        "here"
+      ],
+      "translation": "[需要翻译: Why is there a bottle here?]",
+      "wordCount": 6
+    },
+    {
+      "id": 7,
+      "startTime": 51.088,
+      "endTime": 54.88,
+      "text": "Oh! Sorry, Ms Brown. Sorry.",
+      "words": [
+        "Oh",
+        "Sorry",
+        "Ms",
+        "Brown",
+        "Sorry"
+      ],
+      "translation": "[需要翻译: Oh! Sorry, Ms Brown. Sorry.]",
+      "wordCount": 5
+    },
+    {
+      "id": 8,
+      "startTime": 55.376,
+      "endTime": 61.44,
+      "text": "Tony, you know you mustn’t litter. We have to keep the school clean and tidy.",
+      "words": [
+        "Tony",
+        "you",
+        "know",
+        "you",
+        "mustn’t",
+        "litter",
+        "We",
+        "have",
+        "to",
+        "keep",
+        "the",
+        "school",
+        "clean",
+        "and",
+        "tidy"
+      ],
+      "translation": "[需要翻译: Tony, you know you mustn’t litter. We have to keep the school clean and tidy.]",
+      "wordCount": 15
+    },
+    {
+      "id": 9,
+      "startTime": 61.776,
+      "endTime": 63.872,
+      "text": "Yes, Ms Brown.",
+      "words": [
+        "Yes",
+        "Ms",
+        "Brown"
+      ],
+      "translation": "[需要翻译: Yes, Ms Brown.]",
+      "wordCount": 3
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "id": "3_2",
+    "title": "3_2",
+    "totalSentences": 13,
+    "totalWords": 90,
+    "duration": 48.608,
+    "difficulty": "beginner",
+    "convertedFrom": "3_2.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 0.896,
+      "endTime": 3.616,
+      "text": "What’s your new classroom like, Peter?",
+      "words": ["What’s", "your", "new", "classroom", "like", "Peter"],
+      "translation": "Peter，你的新教室怎么样？",
+      "wordCount": 6
+    },
+    {
+      "id": 2,
+      "startTime": 4.4,
+      "endTime": 9.248,
+      "text": "It’s large. There are 40 student desks in the room.",
+      "words": ["It’s", "large", "There", "are", "40", "student", "desks", "in", "the", "room"],
+      "translation": "很大。教室里有 40 张学生课桌。",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 9.744,
+      "endTime": 13.152,
+      "text": "And a teacher’s desk in front of the blackboard.",
+      "words": ["And", "a", "teacher’s", "desk", "in", "front", "of", "the", "blackboard"],
+      "translation": "黑板前面还有一张讲台。",
+      "wordCount": 9
+    },
+    {
+      "id": 4,
+      "startTime": 13.936,
+      "endTime": 15.264,
+      "text": "Where do you sit?",
+      "words": ["Where", "do", "you", "sit"],
+      "translation": "你坐在哪里？",
+      "wordCount": 4
+    },
+    {
+      "id": 5,
+      "startTime": 15.936,
+      "endTime": 18.672,
+      "text": "I sit in the middle of the classroom.",
+      "words": ["I", "sit", "in", "the", "middle", "of", "the", "classroom"],
+      "translation": "我坐在教室中间。",
+      "wordCount": 8
+    },
+    {
+      "id": 6,
+      "startTime": 19.184,
+      "endTime": 23.408,
+      "text": "That’s nice. What’s special in your classroom?",
+      "words": ["That’s", "nice", "What’s", "special", "in", "your", "classroom"],
+      "translation": "真好。你们教室里有什么特别之处？",
+      "wordCount": 7
+    },
+    {
+      "id": 7,
+      "startTime": 24.016,
+      "endTime": 27.296,
+      "text": "There’s a smart whiteboard next to the blackboard.",
+      "words": ["There’s", "a", "smart", "whiteboard", "next", "to", "the", "blackboard"],
+      "translation": "黑板旁边有一块智能白板。",
+      "wordCount": 8
+    },
+    {
+      "id": 8,
+      "startTime": 28,
+      "endTime": 32.768,
+      "text": "Oh, and there’s another blackboard at the back of the classroom.",
+      "words": ["Oh", "and", "there’s", "another", "blackboard", "at", "the", "back", "of", "the", "classroom"],
+      "translation": "哦，教室后面还有一块黑板。",
+      "wordCount": 11
+    },
+    {
+      "id": 9,
+      "startTime": 33.12,
+      "endTime": 34.88,
+      "text": "Another blackboard?",
+      "words": ["Another", "blackboard"],
+      "translation": "还有一块黑板？",
+      "wordCount": 2
+    },
+    {
+      "id": 10,
+      "startTime": 35.712,
+      "endTime": 39.36,
+      "text": "Yes, we put up important notices there.",
+      "words": ["Yes", "we", "put", "up", "important", "notices", "there"],
+      "translation": "是的，我们在那里张贴重要通知。",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 40.08,
+      "endTime": 42.784,
+      "text": "Are there any lockers in the classroom?",
+      "words": ["Are", "there", "any", "lockers", "in", "the", "classroom"],
+      "translation": "教室里有储物柜吗？",
+      "wordCount": 7
+    },
+    {
+      "id": 12,
+      "startTime": 43.888,
+      "endTime": 45.472,
+      "text": "No, there aren’t.",
+      "words": ["No", "there", "aren’t"],
+      "translation": "没有。",
+      "wordCount": 3
+    },
+    {
+      "id": 13,
+      "startTime": 45.856,
+      "endTime": 48.608,
+      "text": "We put our things in the desk drawers.",
+      "words": ["We", "put", "our", "things", "in", "the", "desk", "drawers"],
+      "translation": "我们把东西放在课桌抽屉里。",
+      "wordCount": 8
+    }
+  ]
+}

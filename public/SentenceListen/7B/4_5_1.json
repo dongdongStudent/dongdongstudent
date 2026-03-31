@@ -1,0 +1,217 @@
+{
+  "metadata": {
+    "id": "4_5_1",
+    "title": "4_5_1",
+    "totalSentences": 11,
+    "totalWords": 94,
+    "duration": 65.648,
+    "difficulty": "beginner",
+    "convertedFrom": "4_5_1.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 16.768,
+      "endTime": 19.136,
+      "text": "Improve Your Eating Habits",
+      "words": [
+        "Improve",
+        "Your",
+        "Eating",
+        "Habits"
+      ],
+      "translation": "[需要翻译: Improve Your Eating Habits]",
+      "wordCount": 4
+    },
+    {
+      "id": 2,
+      "startTime": 20.672,
+      "endTime": 25.312,
+      "text": "Healthy eating is important for a healthy body and mind.",
+      "words": [
+        "Healthy",
+        "eating",
+        "is",
+        "important",
+        "for",
+        "a",
+        "healthy",
+        "body",
+        "and",
+        "mind"
+      ],
+      "translation": "[需要翻译: Healthy eating is important for a healthy body and mind.]",
+      "wordCount": 10
+    },
+    {
+      "id": 3,
+      "startTime": 25.552,
+      "endTime": 29.44,
+      "text": "Both what we eat and how we eat are important!",
+      "words": [
+        "Both",
+        "what",
+        "we",
+        "eat",
+        "and",
+        "how",
+        "we",
+        "eat",
+        "are",
+        "important"
+      ],
+      "translation": "[需要翻译: Both what we eat and how we eat are important!]",
+      "wordCount": 10
+    },
+    {
+      "id": 4,
+      "startTime": 30.304,
+      "endTime": 34.64,
+      "text": "For example, some people have fast food every week.",
+      "words": [
+        "For",
+        "example",
+        "some",
+        "people",
+        "have",
+        "fast",
+        "food",
+        "every",
+        "week"
+      ],
+      "translation": "[需要翻译: For example, some people have fast food every week.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 34.864,
+      "endTime": 37.12,
+      "text": "It is easy and delicious!",
+      "words": [
+        "It",
+        "is",
+        "easy",
+        "and",
+        "delicious"
+      ],
+      "translation": "[需要翻译: It is easy and delicious!]",
+      "wordCount": 5
+    },
+    {
+      "id": 6,
+      "startTime": 38.016,
+      "endTime": 41.984,
+      "text": "But it often has lots of salt, fat, and sugar.",
+      "words": [
+        "But",
+        "it",
+        "often",
+        "has",
+        "lots",
+        "of",
+        "salt",
+        "fat",
+        "and",
+        "sugar"
+      ],
+      "translation": "[需要翻译: But it often has lots of salt, fat, and sugar.]",
+      "wordCount": 10
+    },
+    {
+      "id": 7,
+      "startTime": 42.448,
+      "endTime": 44.512,
+      "text": "That makes us put on weight.",
+      "words": [
+        "That",
+        "makes",
+        "us",
+        "put",
+        "on",
+        "weight"
+      ],
+      "translation": "[需要翻译: That makes us put on weight.]",
+      "wordCount": 6
+    },
+    {
+      "id": 8,
+      "startTime": 44.816,
+      "endTime": 51.648,
+      "text": "Eating fast food like pizza and hamburgers too often may cause heart problems later.",
+      "words": [
+        "Eating",
+        "fast",
+        "food",
+        "like",
+        "pizza",
+        "and",
+        "hamburgers",
+        "too",
+        "often",
+        "may",
+        "cause",
+        "heart",
+        "problems",
+        "later"
+      ],
+      "translation": "[需要翻译: Eating fast food like pizza and hamburgers too often may cause heart problems later.]",
+      "wordCount": 14
+    },
+    {
+      "id": 9,
+      "startTime": 52.688,
+      "endTime": 57.904,
+      "text": "If you cook your own meals instead, you can make healthy balanced meals.",
+      "words": [
+        "If",
+        "you",
+        "cook",
+        "your",
+        "own",
+        "meals",
+        "instead",
+        "you",
+        "can",
+        "make",
+        "healthy",
+        "balanced",
+        "meals"
+      ],
+      "translation": "[需要翻译: If you cook your own meals instead, you can make healthy balanced meals.]",
+      "wordCount": 13
+    },
+    {
+      "id": 10,
+      "startTime": 59.28,
+      "endTime": 62.64,
+      "text": "Eating three meals a day is important.",
+      "words": [
+        "Eating",
+        "three",
+        "meals",
+        "a",
+        "day",
+        "is",
+        "important"
+      ],
+      "translation": "[需要翻译: Eating three meals a day is important.]",
+      "wordCount": 7
+    },
+    {
+      "id": 11,
+      "startTime": 63.104,
+      "endTime": 65.648,
+      "text": "But some people don’t have breakfast.",
+      "words": [
+        "But",
+        "some",
+        "people",
+        "don’t",
+        "have",
+        "breakfast"
+      ],
+      "translation": "[需要翻译: But some people don’t have breakfast.]",
+      "wordCount": 6
+    }
+  ]
+}

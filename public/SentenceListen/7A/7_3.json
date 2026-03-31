@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "id": "7_3",
+    "title": "7_3",
+    "totalSentences": 6,
+    "totalWords": 46,
+    "duration": 24.8,
+    "difficulty": "beginner",
+    "convertedFrom": "7_3.srt"
+  },
+  "sentences": [
+    {
+      "id": 1,
+      "startTime": 3.05,
+      "endTime": 6.45,
+      "text": "Peter: Meimei, when is Ms Gao's birthday?",
+      "words": [
+        "Peter:",
+        "Meimei",
+        "when",
+        "is",
+        "Ms",
+        "Gao's",
+        "birthday"
+      ],
+      "translation": "[需要翻译: Peter: Meimei, when is Ms Gao's birthday?]",
+      "wordCount": 7
+    },
+    {
+      "id": 2,
+      "startTime": 6.85,
+      "endTime": 8.4,
+      "text": "Meimei: Why do you ask?",
+      "words": [
+        "Meimei:",
+        "Why",
+        "do",
+        "you",
+        "ask"
+      ],
+      "translation": "[需要翻译: Meimei: Why do you ask?]",
+      "wordCount": 5
+    },
+    {
+      "id": 3,
+      "startTime": 8.9,
+      "endTime": 13.125,
+      "text": "Peter: Because I want us all to give her a surprise.",
+      "words": [
+        "Peter:",
+        "Because",
+        "I",
+        "want",
+        "us",
+        "all",
+        "to",
+        "give",
+        "her",
+        "a",
+        "surprise"
+      ],
+      "translation": "[需要翻译: Peter: Because I want us all to give her a surprise.]",
+      "wordCount": 11
+    },
+    {
+      "id": 4,
+      "startTime": 13.775,
+      "endTime": 18.575,
+      "text": "Meimei: Sounds fun! Her birthday is on 12th June.",
+      "words": [
+        "Meimei:",
+        "Sounds",
+        "fun",
+        "Her",
+        "birthday",
+        "is",
+        "on",
+        "12th",
+        "June"
+      ],
+      "translation": "[需要翻译: Meimei: Sounds fun! Her birthday is on 12th June.]",
+      "wordCount": 9
+    },
+    {
+      "id": 5,
+      "startTime": 18.9,
+      "endTime": 23.1,
+      "text": "Peter: Let's sing a song for her. I'll play the guitar.",
+      "words": [
+        "Peter:",
+        "Let's",
+        "sing",
+        "a",
+        "song",
+        "for",
+        "her",
+        "I'll",
+        "play",
+        "the",
+        "guitar"
+      ],
+      "translation": "[需要翻译: Peter: Let's sing a song for her. I'll play the guitar.]",
+      "wordCount": 11
+    },
+    {
+      "id": 6,
+      "startTime": 23.3,
+      "endTime": 24.8,
+      "text": "Meimei: Great idea!",
+      "words": [
+        "Meimei:",
+        "Great",
+        "idea"
+      ],
+      "translation": "[需要翻译: Meimei: Great idea!]",
+      "wordCount": 3
+    }
+  ]
+}
