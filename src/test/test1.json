@@ -1,3 +1,14 @@
-[
-
-]
+{
+    "bookId": "wy_4_d",
+    "bookName": "四年级下册",
+    "unitId": "wy_4_d_1",
+    "unitName": "Module 1",
+    "pageRange": [
+        1,
+        12
+    ],
+    "totalPages": 12,
+    "version": "wy",
+    "grade": 4,
+    "volume": "lower"
+}

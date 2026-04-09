@@ -30,6 +30,9 @@ apiRequest.interceptors.response.use(
   }
 );
 
+// 用于防止重复添加请求
+let pendingAddRequest = null;
+
 // ==================== 句子相关 API ====================
 export const sentenceApi = {
   // 获取句子列表
@@ -107,14 +110,28 @@ export const sentenceApi = {
     });
   },
   
-  // 添加句子
+  // 添加句子（防止重复调用）
   addSentence: (sentenceData, target = 'sentences') => {
-    return apiRequest.post('/update_sentence_review', {
+
+    // 如果已经有正在进行的添加请求，直接返回该请求
+    if (pendingAddRequest) {
+      console.log('阻止重复的添加请求');
+      return pendingAddRequest;
+    }
+    
+    // 创建新请求
+    const request = apiRequest.post('/update_sentence_review', {
       type: 'add',
-      sentence: sentenceData.text,
       sentenceData,
       target
+    }).finally(() => {
+      // 请求完成后清除标记
+      pendingAddRequest = null;
     });
+    
+    // 保存当前请求
+    pendingAddRequest = request;
+    return request;
   },
   
   // 删除句子

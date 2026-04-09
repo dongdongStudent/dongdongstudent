@@ -28,7 +28,8 @@ import {
   Star,
   CalendarToday,
   Info,
-  Replay
+  Replay,
+  Shuffle  // 使用 Shuffle 替代 CasinoIcon
 } from '@mui/icons-material';
 
 const SingleChoiceResult = ({
@@ -39,6 +40,7 @@ const SingleChoiceResult = ({
   testTitle = "英语单项选择练习",
   onRestart,
   onBack,
+  onNewBatch,
   onRedoWrongQuestions,
   dataSource = 'default',
   drawType = 'smart',
@@ -46,6 +48,8 @@ const SingleChoiceResult = ({
   startTime = null,
   startRange = 1,
   endRange = 10,
+  isRedoMode = false,
+  subType = null,  // 新增：用于新题抽取的子类型
 }) => {
   // 获取当前日期时间
   const getCurrentDateTime = () => {
@@ -116,8 +120,12 @@ const SingleChoiceResult = ({
     return names[dataSource] || dataSource;
   };
 
-  // 获取抽取类型文本
+  // 获取抽取类型文本（增强版，支持子类型）
   const getDrawTypeText = (type) => {
+    // 如果是错题重做模式
+    if (isRedoMode) return '错题重做';
+    
+    // 基础映射
     const map = {
       'smart': '智能推荐',
       'weak': '薄弱题专项',
@@ -126,13 +134,29 @@ const SingleChoiceResult = ({
       'mastered': '已掌握题巩固',
       'custom': '智能抽取',
       'range': '范围抽取',
+      'rangeRandom': '范围随机抽取',
       'redo': '错题重做'
     };
+    
+    // 如果是新题抽取且有子类型，显示更详细的信息
+    if (type === 'new' && subType) {
+      const subTypeMap = {
+        'new': '新题练习',
+        'weak': '薄弱题专项',
+        'review': '复习题',
+        'all': '全部题目'
+      };
+      return subTypeMap[subType] || '新题抽取';
+    }
+    
     return map[type] || type;
   };
 
   // 获取抽取类型图标
   const getDrawTypeIcon = (type) => {
+    // 如果是错题重做模式
+    if (isRedoMode) return <Replay sx={{ fontSize: 20 }} />;
+    
     const map = {
       'smart': <School sx={{ fontSize: 20 }} />,
       'weak': <Warning sx={{ fontSize: 20 }} />,
@@ -141,8 +165,21 @@ const SingleChoiceResult = ({
       'mastered': <EmojiEvents sx={{ fontSize: 20 }} />,
       'custom': <Category sx={{ fontSize: 20 }} />,
       'range': <Info sx={{ fontSize: 20 }} />,
+      'rangeRandom': <Shuffle sx={{ fontSize: 20 }} />,  // 使用 Shuffle 替代 CasinoIcon
       'redo': <Replay sx={{ fontSize: 20 }} />
     };
+    
+    // 如果是新题抽取且有子类型，根据子类型返回不同图标
+    if (type === 'new' && subType) {
+      const subTypeIconMap = {
+        'new': <Star sx={{ fontSize: 20 }} />,
+        'weak': <Warning sx={{ fontSize: 20 }} />,
+        'review': <Refresh sx={{ fontSize: 20 }} />,
+        'all': <Category sx={{ fontSize: 20 }} />
+      };
+      return subTypeIconMap[subType] || <Star sx={{ fontSize: 20 }} />;
+    }
+    
     return map[type] || <Info sx={{ fontSize: 20 }} />;
   };
 
@@ -164,6 +201,13 @@ const SingleChoiceResult = ({
     }
   };
 
+  // 处理换一批按钮点击
+  const handleNewBatchClick = () => {
+    if (onNewBatch) {
+      onNewBatch();
+    }
+  };
+
   // 处理错题重做按钮点击（本地练习，不上传结果）
   const handleRedoWrongQuestions = () => {
     if (wrongQuestions.length === 0) {
@@ -181,6 +225,12 @@ const SingleChoiceResult = ({
 
   // 判断是否有错题
   const hasWrongQuestions = wrongQuestions.length > 0;
+
+  // 获取显示的抽取类型文本
+  const displayDrawTypeText = getDrawTypeText(drawType);
+  
+  // 获取显示的图标
+  const displayIcon = getDrawTypeIcon(drawType);
 
   return (
     <Container maxWidth="md" sx={{ py: 4 }}>
@@ -224,15 +274,31 @@ const SingleChoiceResult = ({
             </Grid>
             <Grid item xs={6} sm={4}>
               <Typography variant="caption" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-                {getDrawTypeIcon(drawType)} 模式
+                {displayIcon} 模式
               </Typography>
               <Typography variant="body2" fontWeight="bold">
-                {getDrawTypeText(drawType)}
+                {displayDrawTypeText}
                 {drawType === 'range' && (
                   <Chip 
                     label={`第 ${startRange}-${endRange} 题`}
                     size="small"
                     color="secondary"
+                    sx={{ ml: 1, fontSize: '0.7rem' }}
+                  />
+                )}
+                {drawType === 'rangeRandom' && (
+                  <Chip 
+                    label={`第 ${startRange}-${endRange} 题`}
+                    size="small"
+                    color="secondary"
+                    sx={{ ml: 1, fontSize: '0.7rem' }}
+                  />
+                )}
+                {isRedoMode && (
+                  <Chip 
+                    label={`错题重做`}
+                    size="small"
+                    color="warning"
                     sx={{ ml: 1, fontSize: '0.7rem' }}
                   />
                 )}
@@ -247,13 +313,42 @@ const SingleChoiceResult = ({
           </Grid>
           
           {/* 自定义范围详细信息 */}
-          {drawType === 'range' && (
+          {(drawType === 'range' || drawType === 'rangeRandom') && (
             <Box sx={{ mt: 2, pt: 2, borderTop: '1px dashed #90caf9' }}>
               <Typography variant="caption" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
                 <Info fontSize="inherit" /> 本次练习题目范围
               </Typography>
               <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#1a237e' }}>
                 第 {startRange} 题 至 第 {endRange} 题
+                {drawType === 'rangeRandom' && (
+                  <Chip 
+                    label={`随机抽取 ${questionCount} 题`}
+                    size="small"
+                    color="info"
+                    sx={{ ml: 1, fontSize: '0.7rem' }}
+                  />
+                )}
+              </Typography>
+            </Box>
+          )}
+          
+          {/* 新题抽取详细信息 */}
+          {drawType === 'new' && subType && (
+            <Box sx={{ mt: 2, pt: 2, borderTop: '1px dashed #90caf9' }}>
+              <Typography variant="caption" color="text.secondary" sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
+                <Category fontSize="inherit" /> 题目类型
+              </Typography>
+              <Typography variant="body2" sx={{ fontWeight: 'bold', color: '#1a237e' }}>
+                {subType === 'new' && '新题练习'}
+                {subType === 'weak' && '薄弱题专项'}
+                {subType === 'review' && '复习题巩固'}
+                {subType === 'all' && '全部题目'}
+                <Chip 
+                  label={`共 ${questionCount} 题`}
+                  size="small"
+                  color="info"
+                  sx={{ ml: 1, fontSize: '0.7rem' }}
+                />
               </Typography>
             </Box>
           )}
@@ -342,7 +437,7 @@ const SingleChoiceResult = ({
         </Box>
 
         {/* 服务器统计信息 */}
-        {serverStats && Object.keys(serverStats).length > 0 && (
+        {serverStats && Object.keys(serverStats).length > 0 && !isRedoMode && (
           <Paper sx={{ p: 2, mb: 3, bgcolor: '#e8eaf6', borderRadius: 2 }}>
             <Typography variant="subtitle2" sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
               <History /> 历史学习统计
@@ -368,6 +463,15 @@ const SingleChoiceResult = ({
               </Grid>
             </Grid>
           </Paper>
+        )}
+
+        {/* 错题重做模式提示 */}
+        {isRedoMode && (
+          <Alert severity="info" sx={{ mb: 3 }}>
+            <Typography variant="body2">
+              💡 当前为错题重做模式，本次练习结果不会上传到服务器，仅用于本地练习巩固。
+            </Typography>
+          </Alert>
         )}
 
         {/* 错题列表 - 显示完整内容 */}
@@ -450,7 +554,7 @@ const SingleChoiceResult = ({
           </Paper>
         )}
 
-        {/* 操作按钮 - 只保留两个按钮 */}
+        {/* 操作按钮 */}
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
           <Button 
             fullWidth 
@@ -461,8 +565,20 @@ const SingleChoiceResult = ({
             重新挑战
           </Button>
           
+          {/* 换一批按钮 - 仅在非错题重做模式下显示 */}
+          {!isRedoMode && onNewBatch && (
+            <Button 
+              fullWidth 
+              variant="outlined" 
+              startIcon={<Shuffle />}  // 使用 Shuffle 替代 CasinoIcon
+              onClick={handleNewBatchClick}
+            >
+              换一批
+            </Button>
+          )}
+          
           {/* 错题重做按钮 - 仅当有错题时显示 */}
-          {hasWrongQuestions && (
+          {hasWrongQuestions && !isRedoMode && (
             <Button 
               fullWidth 
               variant="contained" 
@@ -481,7 +597,7 @@ const SingleChoiceResult = ({
         </Stack>
         
         {/* 错题重做提示 */}
-        {hasWrongQuestions && (
+        {hasWrongQuestions && !isRedoMode && (
           <Box sx={{ mt: 2, textAlign: 'center' }}>
             <Typography variant="caption" color="text.secondary">
               💡 提示：错题重做将只练习本次答错的题目，练习结果不会上传到服务器

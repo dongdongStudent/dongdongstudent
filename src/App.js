@@ -26,6 +26,7 @@ import Test from "./test/test.js";
 import Test_1 from "./test/test_1.js";
 import Test_2 from "./test/test_2.js";
 import Math_test_select_enhanced from "./math_1_select/center_enhanced.js";
+import English_book_pic_read from "./english_book_pic_read/center.js";
 
 const App = () => {
     return (
@@ -55,6 +56,7 @@ const App = () => {
                 <Route path="/english_a_z" element={< English_a_z/>} />
                 <Route path="/sentence_view" element={< Sentence_view/>} />
                 <Route path="/math_test_select" element={< Math_test_select_enhanced/>} />
+                <Route path="/english_book_pic_read/*" element={< English_book_pic_read />} />
             </Routes>
         </Router>
     );

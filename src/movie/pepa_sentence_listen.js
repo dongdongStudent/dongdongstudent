@@ -2,8 +2,10 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { F_speak, stopAllSpeak } from "../Function/weisimin.js";
 import { message } from 'antd';
 
-// 从 review_center.js 同时导入默认导出和命名导出
-import SentenceCenter, { AddSentenceModal } from '../sentence/review_center.js';
+// 从 review_center.js 导入默认导出
+import SentenceCenter from '../sentence/review_center.js';
+// 从 AddSentenceModal.js 导入 AddSentenceModal 组件
+import AddSentenceModal from '../sentence/AddSentenceModal.js';
 
 // ==================== 常量配置 ====================
 const API_BASE = 'https://www.ddstudent.xyz/server/english/sync_peppa_learning';
@@ -305,11 +307,11 @@ const ListeningTestPro = ({
   getToken, 
   onWordChange, 
   F_addSentence,
-  onHideListsChange
+  onHideListsChange,
+  sentencesData = [] // 新增：从外部传入的句子数据
 }) => {
   const [showAddModal, setShowAddModal] = useState(false);
-  const [showTestCenter, setShowTestCenter] = useState(false); // 控制 SentenceCenter 显示
-  const [customSentences, setCustomSentences] = useState({});
+  const [showTestCenter, setShowTestCenter] = useState(false);
 
   const [uiState, setUiState] = useState({
     testState: 'CONFIG',
@@ -321,10 +323,7 @@ const ListeningTestPro = ({
   });
 
   const [dataState, setDataState] = useState({
-    db: null,
     loading: true,
-    selectedEpId: null,
-    range: { start: 1, end: 10 },
     activeQueue: [],
     reviewQueue: [],
     currentIndex: 0,
@@ -359,11 +358,9 @@ const ListeningTestPro = ({
   const saveData = useCallback(() => {
     syncToServer({
       ...learningState,
-      lastEpisodeId: dataState.selectedEpId,
-      lastRange: dataState.range,
       timestamp: Date.now()
     });
-  }, [learningState, dataState.selectedEpId, dataState.range, syncToServer]);
+  }, [learningState, syncToServer]);
 
   const autoSave = useCallback(() => {
     if (autoSaveTimeoutRef.current) {
@@ -385,38 +382,37 @@ const ListeningTestPro = ({
   useEffect(() => {
     const init = async () => {
       try {
-        const res = await fetch('/peppa-pig-data.json');
-        const data = await res.json();
-
+        // 从服务器加载学习进度
         const serverData = await loadFromServer();
         if (serverData) {
           setLearningState({
             understoodSentences: serverData.understoodSentences || [],
             difficultSentences: serverData.difficultSentences || [],
           });
-          setDataState(prev => ({
-            ...prev,
-            selectedEpId: serverData.lastEpisodeId || data.episodes[0]?.episode_id,
-            range: serverData.lastRange || { start: 1, end: data.episodes[0]?.sentences.length }
-          }));
-        } else {
-          setDataState(prev => ({
-            ...prev,
-            selectedEpId: data.episodes[0]?.episode_id,
-            range: { start: 1, end: data.episodes[0]?.sentences.length }
-          }));
         }
 
-        setDataState(prev => ({ ...prev, db: data, loading: false }));
-
-        if (data.episodes[0]?.sentences[0]) {
-          setTimeout(() => {
-            F_speak(data.episodes[0].sentences[0].text);
-          }, 500);
+        // 如果有外部传入的句子数据，设置学习队列
+        if (sentencesData && sentencesData.length > 0) {
+          setDataState(prev => ({
+            ...prev,
+            activeQueue: sentencesData,
+            loading: false
+          }));
+          
+          // 播放第一句
+          if (sentencesData[0]?.text) {
+            setTimeout(() => {
+              F_speak(sentencesData[0].text);
+            }, 500);
+          }
+        } else {
+          setDataState(prev => ({ ...prev, loading: false }));
+          message.warning('没有可学习的句子数据');
         }
       } catch (err) {
         console.error("初始化失败:", err);
         setDataState(prev => ({ ...prev, loading: false }));
+        message.error('加载失败: ' + err.message);
       }
     };
 
@@ -431,9 +427,8 @@ const ListeningTestPro = ({
     } else {
       init();
     }
-  }, []);
+  }, [getToken, sentencesData]);
 
-  const currentEpData = dataState.db?.episodes.find(e => e.episode_id === dataState.selectedEpId);
   const currentQueue = uiState.currentMode === 'REVIEW' ? dataState.reviewQueue : dataState.activeQueue;
   const currentSentence = currentQueue[dataState.currentIndex];
   const totalInQueue = currentQueue.length;
@@ -468,10 +463,6 @@ const ListeningTestPro = ({
     }
 
     try {
-      setCustomSentences(prev => ({
-        ...prev,
-        [sentenceData.episodeId]: [...(prev[sentenceData.episodeId] || []), sentenceData]
-      }));
       message.success(`✅ 句子添加成功: ${sentenceData.text}`);
       return { flag: 1 };
     } catch (error) {
@@ -494,7 +485,7 @@ const ListeningTestPro = ({
 
     setLearningState(prev => {
       if (prev[targetList].some(s => s.id === sentenceId)) return prev;
-      const newItem = { id: sentenceId, text, fullText: text, timestamp: Date.now(), episodeId: dataState.selectedEpId };
+      const newItem = { id: sentenceId, text, fullText: text, timestamp: Date.now() };
       return {
         ...prev,
         [targetList]: [...prev[targetList], newItem],
@@ -502,7 +493,7 @@ const ListeningTestPro = ({
       };
     });
     autoSave();
-  }, [dataState.selectedEpId, autoSave]);
+  }, [autoSave]);
 
   const handleUserResponse = useCallback((response) => {
     if (userResponse !== null || isProcessingRef.current) return;
@@ -596,21 +587,23 @@ const ListeningTestPro = ({
   }, [autoSave]);
 
   const startLearn = useCallback(() => {
-    const slice = currentEpData?.sentences.slice(dataState.range.start - 1, dataState.range.end) || [];
-    if (slice.length === 0) return message.warning("请选择有效的区间");
+    if (dataState.activeQueue.length === 0) {
+      message.warning("没有可学习的句子");
+      return;
+    }
 
-    setDataState(prev => ({ ...prev, activeQueue: slice, currentIndex: 0 }));
+    setDataState(prev => ({ ...prev, currentIndex: 0 }));
     setUiState(prev => ({ ...prev, testState: 'TESTING', currentMode: 'LEARN', isCollapsed: false }));
     setUserResponse(null);
     setDisplaySentence(null);
     stopLoop();
 
-    if (slice[0]?.text) {
-      F_speak(slice[0].text);
-      if (slice[0]?.id !== undefined) handleSentenceClick(slice[0].id);
+    if (dataState.activeQueue[0]?.text) {
+      F_speak(dataState.activeQueue[0].text);
+      if (dataState.activeQueue[0]?.id !== undefined) handleSentenceClick(dataState.activeQueue[0].id);
       else handleSentenceClick(0);
     }
-  }, [currentEpData, dataState.range, handleSentenceClick]);
+  }, [dataState.activeQueue, handleSentenceClick]);
 
   const startReview = useCallback(() => {
     if (learningState.difficultSentences.length === 0) {
@@ -691,19 +684,19 @@ const ListeningTestPro = ({
     .nav-btn { background: #475569; border: none; color: #e2e8f0; padding: 4px 12px; border-radius: 4px; cursor: pointer; }
     .save-btn { background: #6366f1; color: white; border: none; padding: 8px; border-radius: 6px; font-weight: bold; cursor: pointer; }
     .config-section { display: flex; flex-direction: column; gap: 12px; }
-    .config-section select, .config-section input { background: #2d3a4f; border: 1px solid #475569; color: white; padding: 8px; border-radius: 4px; width: 100%; }
-    .start-btn { background: #6366f1; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .start-btn { background: #10b981; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; }
     .add-btn {
-      background: #10b981;
+      background: #6366f1;
       color: white;
       border: none;
-      padding: 8px 12px;
+      padding: 12px;
       border-radius: 6px;
       cursor: pointer;
-      font-size: 12px;
+      font-size: 14px;
+      font-weight: bold;
     }
     .add-btn:hover {
-      background: #059669;
+      background: #4f46e5;
     }
     .status-badge {
       display: inline-block;
@@ -758,50 +751,37 @@ const ListeningTestPro = ({
     .test-center-close-btn:hover {
       background: #dc2626;
     }
+    .info-text {
+      text-align: center;
+      color: #94a3b8;
+      padding: 20px;
+      font-size: 14px;
+    }
   `;
 
   const renderConfig = () => (
     <div className="config-section">
-      <h3 style={{ textAlign: 'center', color: '#818cf8' }}>🎧 Peppa 听力</h3>
+      <h3 style={{ textAlign: 'center', color: '#818cf8' }}>🎧 句子听力练习</h3>
 
-      {/* 添加打开测试中心的按钮 */}
-      <button 
-        className="add-btn" 
-        onClick={() => setShowTestCenter(true)} 
-        style={{ 
-          width: '100%', 
-          background: '#6366f1',
-          marginBottom: '5px'
-        }}
-      >
-        📝 打开句子测试中心
-      </button>
-
-      <button className="add-btn" onClick={() => setShowAddModal(true)} style={{ width: '100%' }}>
-        ➕ 添加句子
-      </button>
-
-      <div>
-        <label>选择剧集</label>
-        <select value={dataState.selectedEpId} onChange={(e) => setDataState(prev => ({ ...prev, selectedEpId: parseInt(e.target.value) }))}>
-          {dataState.db?.episodes.map(ep => (
-            <option key={ep.episode_id} value={ep.episode_id}>
-              {ep.title}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div>
-        <label>句子区间 (1-{currentEpData?.sentences.length})</label>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px' }}>
-          <input type="number" value={dataState.range.start} onChange={e => setDataState(prev => ({ ...prev, range: { ...prev.range, start: parseInt(e.target.value) || 1 } }))} />
-          <input type="number" value={dataState.range.end} onChange={e => setDataState(prev => ({ ...prev, range: { ...prev.range, end: parseInt(e.target.value) || 1 } }))} />
+      <div style={{ 
+        background: '#2d3a4f', 
+        borderRadius: '8px', 
+        padding: '12px',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontSize: '14px', color: '#94a3b8', marginBottom: '8px' }}>
+          当前句子数量
+        </div>
+        <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#818cf8' }}>
+          {dataState.activeQueue.length}
+        </div>
+        <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '8px' }}>
+          点击"开始学习"进行练习
         </div>
       </div>
 
       <button className="start-btn" onClick={startLearn} style={{ background: '#10b981' }}>
-        📖 开始学习 ({dataState.range.end - dataState.range.start + 1}句)
+        📖 开始学习 ({dataState.activeQueue.length}句)
       </button>
 
       {learningState.difficultSentences.length > 0 && (
@@ -1038,7 +1018,6 @@ const ListeningTestPro = ({
           onClose={() => setShowAddModal(false)}
           onAdd={handleAddSentence}
           allSentences={[]}
-          episodes={dataState.db?.episodes || []}
         />
       )}
     </>

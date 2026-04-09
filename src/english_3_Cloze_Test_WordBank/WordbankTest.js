@@ -50,7 +50,7 @@ import {
   Assessment as AssessmentIcon
 } from '@mui/icons-material';
 import { alpha } from '@mui/material/styles';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 import { wordbankApi } from './wordbankApi.js';
 
 const WordbankTestSimple = ({ 

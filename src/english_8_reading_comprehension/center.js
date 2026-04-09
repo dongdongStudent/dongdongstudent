@@ -10,7 +10,6 @@ import {
   LinearProgress,
   Alert,
   Snackbar,
-  IconButton,
   Tabs,
   Tab,
   Chip,
@@ -31,11 +30,9 @@ import {
   Divider
 } from '@mui/material';
 import {
-  Refresh as RefreshIcon,
   Home as HomeIcon,
   Quiz as QuizIcon,
   List as ListIcon,
-  Edit as EditIcon,
   MenuBook as MenuBookIcon,
   School as SchoolIcon,
   TrendingUp as TrendingUpIcon,
@@ -71,11 +68,6 @@ const ReadingCenter = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [searchTerm, setSearchTerm] = useState('');
-  
-  // 抽取对话框
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [extractType, setExtractType] = useState('random');
-  const [passageId, setPassageId] = useState('');
   
   // 缓存数据
   const [allPassages, setAllPassages] = useState([]);
@@ -330,86 +322,6 @@ const ReadingCenter = () => {
     page * rowsPerPage + rowsPerPage
   );
 
-  // ========== 抽取题目 ==========
-  const handleExtract = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const params = {};
-      
-      if (passageId) {
-        params.passageId = passageId;
-      } else {
-        params.type = extractType;
-      }
-      
-      if (currentBank) {
-        params.bank = currentBank.id;
-      }
-      
-      const res = await readingApi.getPassage(params);
-      
-      if (res?.flag === 1 && res.content?.passage) {
-        const passageData = res.content.passage;
-        
-        setPassage({
-          id: passageData.id,
-          title: passageData.title,
-          description: passageData.description,
-          category: passageData.category,
-          difficulty: passageData.difficulty,
-          content: passageData.content || '',
-          givenWords: passageData.givenWords || []
-        });
-        
-        if (passageData.questions && passageData.questions.length > 0) {
-          setQuestions(passageData.questions);
-          
-          const initialAnswers = {};
-          const explanationsMap = {};
-          
-          passageData.questions.forEach(q => {
-            initialAnswers[q.id] = '';
-            explanationsMap[q.id] = {
-              correct: q.correctAnswer,
-              explanation: q.explanation
-            };
-          });
-          
-          setAnswers(initialAnswers);
-          setExplanations(explanationsMap);
-          
-          setSnackbar({
-            open: true,
-            message: `✅ 已加载 ${passageData.questions.length} 道题目`,
-            severity: 'success'
-          });
-        }
-        
-        setCurrentView(0);
-        resetTimer();
-      } else {
-        setSnackbar({
-          open: true,
-          message: res?.message || '❌ 抽取失败',
-          severity: 'error'
-        });
-      }
-      
-      setDialogOpen(false);
-    } catch (error) {
-      console.error('抽取失败:', error);
-      setSnackbar({
-        open: true,
-        message: `❌ 抽取失败：${error.message}`,
-        severity: 'error'
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   // ========== 处理答案变更 ==========
   const handleAnswerChange = (questionId, value, allAnswers) => {
     if (allAnswers) {
@@ -486,22 +398,17 @@ const ReadingCenter = () => {
     }
   };
 
-  // ========== 刷新 ==========
-  const handleRefresh = () => {
-    if (passage) {
-      const updatedPassage = allPassages.find(p => p.id === passage.id);
-      if (updatedPassage) {
-        loadPassageDetail(updatedPassage);
-      }
-    }
-  };
-
   // ========== 处理题库选择 ==========
   const handleSelectPassage = async (selectedPassage) => {
     const success = await loadPassageDetail(selectedPassage);
     if (success) {
       setCurrentView(0);
     }
+  };
+
+  // 空刷新函数（保持兼容性）
+  const handleRefresh = () => {
+    // 刷新功能已移除
   };
 
   // ========== 获取篇章统计 ==========
@@ -628,68 +535,6 @@ const ReadingCenter = () => {
     </Dialog>
   );
 
-  // ========== 抽取对话框 ==========
-  const renderDialog = () => (
-    <Dialog open={dialogOpen} onClose={() => setDialogOpen(false)} maxWidth="sm" fullWidth>
-      <DialogTitle sx={{ bgcolor: '#1a237e', color: 'white' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <MenuBookIcon /> 阅读理解 - 抽取题目
-        </Box>
-      </DialogTitle>
-      <DialogContent dividers>
-        <FormControl fullWidth sx={{ mb: 2 }}>
-          <InputLabel>抽取方式</InputLabel>
-          <Select
-            value={extractType}
-            onChange={(e) => {
-              setExtractType(e.target.value);
-              setPassageId('');
-            }}
-            label="抽取方式"
-          >
-            <MenuItem value="random">随机抽取</MenuItem>
-            <MenuItem value="new">未练习篇章</MenuItem>
-            <MenuItem value="review">复习篇章</MenuItem>
-          </Select>
-        </FormControl>
-
-        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', my: 1 }}>
-          或者
-        </Typography>
-
-        <FormControl fullWidth>
-          <InputLabel>指定篇章ID</InputLabel>
-          <Select
-            value={passageId}
-            onChange={(e) => {
-              setPassageId(e.target.value);
-              setExtractType('');
-            }}
-            label="指定篇章ID"
-          >
-            <MenuItem value="">请选择篇章</MenuItem>
-            {allPassages.map(p => (
-              <MenuItem key={p.id} value={p.id}>
-                {p.title} ({p.questions?.length || 0}题)
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={() => setDialogOpen(false)}>取消</Button>
-        <Button 
-          onClick={handleExtract} 
-          variant="contained" 
-          color="primary"
-          disabled={!extractType && !passageId}
-        >
-          确认抽取
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
-
   // ========== 头部 ==========
   const Header = () => (
     <AppBar position="static" sx={{ bgcolor: '#1a237e' }}>
@@ -725,7 +570,6 @@ const ReadingCenter = () => {
           value={currentView} 
           onChange={(e, v) => setCurrentView(v)} 
           sx={{ 
-            mr: 2,
             '& .MuiTab-root': { color: 'rgba(255,255,255,0.7)' },
             '& .Mui-selected': { color: 'white' }
           }}
@@ -733,22 +577,6 @@ const ReadingCenter = () => {
           <Tab icon={<QuizIcon />} label="练习" />
           <Tab icon={<ListIcon />} label="题库" />
         </Tabs>
-
-        {currentView === 0 && (
-          <Stack direction="row" spacing={1}>
-            <Button
-              variant="contained"
-              onClick={() => setDialogOpen(true)}
-              startIcon={<EditIcon />}
-              sx={{ bgcolor: '#ffd700', color: '#1a237e' }}
-            >
-              抽取题目
-            </Button>
-            <IconButton color="inherit" onClick={handleRefresh} disabled={!passage}>
-              <RefreshIcon />
-            </IconButton>
-          </Stack>
-        )}
       </Toolbar>
     </AppBar>
   );
@@ -834,7 +662,6 @@ const ReadingCenter = () => {
       </Container>
 
       {renderBankSelector()}
-      {renderDialog()}
 
       <Snackbar
         open={snackbar.open}

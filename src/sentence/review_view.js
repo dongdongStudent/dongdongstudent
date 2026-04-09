@@ -1,4 +1,4 @@
-// view.js - 句子查看器组件
+// view.js - 句子查看器组件（已添加刷新按钮）
 import React, { useState } from 'react';
 import { message } from 'antd';
 import { sentenceApi } from './api';
@@ -18,16 +18,52 @@ const SentenceViewer = ({
   const [sortConfig, setSortConfig] = useState({ key: 'time', direction: 'desc' });
   const [expandedId, setExpandedId] = useState(null);
   const [closeButtonHover, setCloseButtonHover] = useState(false);
+  const [refreshButtonHover, setRefreshButtonHover] = useState(false);
   const [deleteConfirmId, setDeleteConfirmId] = useState(null);
   const [selectedIds, setSelectedIds] = useState([]); // 选中的句子ID
   const [showBatchDeleteConfirm, setShowBatchDeleteConfirm] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [localSentences, setLocalSentences] = useState(sentences); // 本地句子状态
 
   // 当外部sentences变化时更新本地状态
   React.useEffect(() => {
     setLocalSentences(sentences);
   }, [sentences]);
+
+  // 刷新数据
+  const handleRefresh = async () => {
+    setRefreshing(true);
+    try {
+      console.log('🔄 刷新句子数据...');
+      
+      // 调用 API 重新获取数据
+      const result = await sentenceApi.getSentences(selectedFile);
+      
+      if (result?.sentences) {
+        const sentencesArray = Object.entries(result.sentences).map(([id, data]) => ({ id, ...data }));
+        setLocalSentences(sentencesArray);
+        
+        // 清空选中状态
+        setSelectedIds([]);
+        setDeleteConfirmId(null);
+        
+        message.success(`刷新成功！共 ${sentencesArray.length} 个句子`);
+        
+        // 如果传入了 onSentencesChange 回调，调用它
+        if (onSentencesChange) {
+          onSentencesChange();
+        }
+      } else {
+        throw new Error('数据格式错误');
+      }
+    } catch (error) {
+      console.error('刷新失败:', error);
+      message.error('刷新失败：' + (error.message || '未知错误'));
+    } finally {
+      setRefreshing(false);
+    }
+  };
 
   // 排序函数
   const getSortedSentences = (sentencesToSort) => {
@@ -289,6 +325,23 @@ const SentenceViewer = ({
         <div style={styles.header}>
           <h2 style={styles.title}>📚 句子库查看器</h2>
           <div style={styles.headerActions}>
+            {/* 刷新按钮 */}
+            <button 
+              onClick={handleRefresh}
+              onMouseEnter={() => setRefreshButtonHover(true)}
+              onMouseLeave={() => setRefreshButtonHover(false)}
+              style={{
+                ...styles.refreshButton,
+                backgroundColor: refreshButtonHover ? '#1976D2' : '#2196F3',
+                opacity: refreshing ? 0.6 : 1,
+                cursor: refreshing ? 'not-allowed' : 'pointer'
+              }}
+              disabled={refreshing}
+              title="刷新数据"
+            >
+              {refreshing ? '🔄 刷新中...' : '🔄 刷新'}
+            </button>
+            
             {/* 批量删除按钮 */}
             {selectedIds.length > 0 && (
               <button 
@@ -686,6 +739,24 @@ const styles = {
     display: 'flex',
     gap: '10px',
     alignItems: 'center'
+  },
+  refreshButton: {
+    padding: '8px 16px',
+    backgroundColor: '#2196F3',
+    color: 'white',
+    border: 'none',
+    borderRadius: '20px',
+    fontSize: '14px',
+    fontWeight: 'bold',
+    cursor: 'pointer',
+    transition: 'all 0.2s',
+    ':hover': {
+      backgroundColor: '#1976D2'
+    },
+    ':disabled': {
+      opacity: 0.6,
+      cursor: 'not-allowed'
+    }
   },
   batchDeleteButton: {
     padding: '8px 16px',

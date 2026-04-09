@@ -16,9 +16,9 @@ const MODE_DISPLAY = {
 };
 
 // ==================== 主组件 ====================
-const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_word_name, embedded = false }) => {
+const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_word_name }) => {
   const navigate = useNavigate();
-
+  
   // ========== 状态合并 ==========
   const [state, setState] = useState({
     words: [],
@@ -29,6 +29,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
     showOverlay: false,
     roundFinished: false,
     isRightPanelCollapsed: false,
+    isMaskEnabled: true,
     newWord: "",
     isAdding: false,
     isLooping: false,
@@ -51,7 +52,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const timerRef = useRef(null);
   const roundWordsRef = useRef([]);
   const lastSyncedRef = useRef(null);
-
+  
   // 拖动相关
   const [position, setPosition] = useState({ x: window.innerWidth / 2 - 250, y: 20 });
   const [isDragging, setIsDragging] = useState(false);
@@ -71,8 +72,8 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   };
 
   const getMasteryLevel = (status = {}) => Object.values(status).filter(v => v).length;
-
-  const getStatusColor = (level) =>
+  
+  const getStatusColor = (level) => 
     ['#ff5252', '#ffab40', '#2196f3', '#4caf50'][level] || '#ff5252';
 
   const playAudio = (text) => {
@@ -99,16 +100,16 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
   const refreshPool = (mode = state.exerciseMode, source = state.words) => {
     if (!source.length) return;
-    roundWordsRef.current = state.isPracticeMode
+    roundWordsRef.current = state.isPracticeMode 
       ? [...source]
       : source.filter(w => !w.status?.[mode]);
-    setState(prev => ({
-      ...prev,
-      currentIdx: 0,
+    setState(prev => ({ 
+      ...prev, 
+      currentIdx: 0, 
       roundFinished: false,
       selectedLetters: [],
       availableLetters: [],
-      isChecking: false
+      isChecking: false 
     }));
   };
 
@@ -132,7 +133,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const handleMouseDown = (e) => {
     if (!e.target.closest('.drag-handle')) return;
     e.preventDefault();
-
+    
     dragRef.current = {
       isDragging: true,
       startX: e.clientX,
@@ -148,13 +149,13 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
     const handleMove = (e) => {
       if (!dragRef.current.isDragging) return;
-
+      
       const deltaX = e.clientX - dragRef.current.startX;
       const deltaY = e.clientY - dragRef.current.startY;
-
+      
       const newX = Math.max(0, Math.min(dragRef.current.startLeft + deltaX, window.innerWidth - 550));
       const newY = Math.max(0, Math.min(dragRef.current.startTop + deltaY, window.innerHeight - 60));
-
+      
       setPosition({ x: newX, y: newY });
     };
 
@@ -167,7 +168,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
     document.addEventListener('mousemove', handleMove);
     document.addEventListener('mouseup', handleUp);
-
+    
     return () => {
       document.removeEventListener('mousemove', handleMove);
       document.removeEventListener('mouseup', handleUp);
@@ -193,7 +194,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const syncData = async (words = state.words) => {
     if (!checkLogin() || !getToken || !words.length) return;
     addWordToReviewList(getToken, G_word_name);
-
+    
     const dataStr = JSON.stringify(words);
     if (lastSyncedRef.current === dataStr) {
       message.info("数据未变动");
@@ -225,7 +226,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
       message.warning('请输入单词');
       return;
     }
-
+    
     const trimmed = state.newWord.trim();
     if (state.words.some(w => w.word.toLowerCase() === trimmed.toLowerCase())) {
       message.warning(`单词 "${trimmed}" 已存在`);
@@ -262,18 +263,18 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
   const handleDeleteWord = async (wordText) => {
     if (!wordText || !checkLogin()) return;
-
+    
     const updated = state.words.filter(w => w.word !== wordText);
     setState(prev => ({ ...prev, words: updated }));
     roundWordsRef.current = roundWordsRef.current.filter(w => w.word !== wordText);
-
+    
     if (!roundWordsRef.current.length) setState(prev => ({ ...prev, currentIdx: 0 }));
     else if (state.currentIdx >= roundWordsRef.current.length) {
       setState(prev => ({ ...prev, currentIdx: roundWordsRef.current.length - 1 }));
     }
-
+    
     triggerChange(updated);
-
+    
     try {
       const res = await fetch(`${API_BASE}/${G_word_name}`, {
         method: 'POST',
@@ -298,30 +299,30 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const initSpelling = () => {
     const word = roundWordsRef.current[state.currentIdx]?.word;
     if (!word) return;
-
+    
     const letters = word.toLowerCase().split('');
     const shuffled = letters
       .sort(() => Math.random() - 0.5)
       .map((letter, id) => ({ id, letter, used: false }));
-
-    setState(prev => ({
-      ...prev,
-      availableLetters: shuffled,
-      selectedLetters: [],
-      isChecking: false
+    
+    setState(prev => ({ 
+      ...prev, 
+      availableLetters: shuffled, 
+      selectedLetters: [], 
+      isChecking: false 
     }));
   };
 
   const handleLetterClick = (letterId) => {
     if (state.showOverlay || state.isChecking) return;
-
+    
     const letter = state.availableLetters.find(l => l.id === letterId);
     if (!letter || letter.used) return;
 
     setState(prev => ({
       ...prev,
       selectedLetters: [...prev.selectedLetters, { ...letter }],
-      availableLetters: prev.availableLetters.map(l =>
+      availableLetters: prev.availableLetters.map(l => 
         l.id === letterId ? { ...l, used: true } : l
       )
     }));
@@ -329,14 +330,14 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
   const handleRemoveLetter = (index) => {
     if (state.showOverlay || state.isChecking) return;
-
+    
     const letter = state.selectedLetters[index];
     if (!letter) return;
 
     setState(prev => ({
       ...prev,
       selectedLetters: prev.selectedLetters.filter((_, i) => i !== index),
-      availableLetters: prev.availableLetters.map(l =>
+      availableLetters: prev.availableLetters.map(l => 
         l.id === letter.id ? { ...l, used: false } : l
       )
     }));
@@ -353,7 +354,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
   const checkSpelling = () => {
     if (!checkLogin()) return;
-
+    
     const target = roundWordsRef.current[state.currentIdx];
     const userWord = state.selectedLetters.map(l => l.letter).join('');
     const isCorrect = userWord === target.word.toLowerCase();
@@ -366,7 +367,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
       );
       setState(prev => ({ ...prev, words: updated }));
       triggerChange(updated);
-
+      
       setState(prev => ({
         ...prev,
         stats: {
@@ -412,7 +413,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
     const candidates = [...others].sort(() => Math.random() - 0.5).slice(0, 6);
     const distractors = candidates.slice(0, 3);
-
+    
     return [target, ...distractors].map(opt => ({
       ...opt,
       displayText: state.exerciseMode === 'translation' ? opt.word : opt.translation,
@@ -424,7 +425,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const handleAnswer = (selectedText) => {
     if (!checkLogin() || ['pronunciation', 'spelling'].includes(state.exerciseMode)) return;
     if (state.showOverlay || !roundWordsRef.current.length || state.roundFinished) return;
-
+    
     const target = roundWordsRef.current[state.currentIdx];
     const selected = state.options.find(o => o.displayText === selectedText);
     const isCorrect = selected?.originalWord === target.word;
@@ -443,7 +444,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
       );
       setState(prev => ({ ...prev, words: updated }));
       triggerChange(updated);
-
+      
       setState(prev => ({
         ...prev,
         stats: {
@@ -469,15 +470,15 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const handleNext = () => {
     if (!state.showOverlay) return;
     setState(prev => ({ ...prev, showOverlay: false }));
-
+    
     const pool = roundWordsRef.current;
     if (state.currentIdx >= pool.length - 1) {
       setState(prev => ({ ...prev, roundFinished: true }));
       if (!state.isPracticeMode) syncData(state.words);
     } else {
       const nextIdx = state.currentIdx + 1;
-      setState(prev => ({
-        ...prev,
+      setState(prev => ({ 
+        ...prev, 
         currentIdx: nextIdx,
         selectedLetters: [],
         availableLetters: [],
@@ -489,9 +490,9 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
 
   const handlePronunciation = (isPass) => {
     if (!checkLogin()) return;
-
+    
     const target = roundWordsRef.current[state.currentIdx];
-
+    
     if (!state.isPracticeMode) {
       const updated = state.words.map(w =>
         w.word === target.word ? { ...w, status: { ...w.status, pronunciation: isPass } } : w
@@ -562,11 +563,11 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
     const pool = roundWordsRef.current;
     if (pool.length && !state.showOverlay && !state.roundFinished) {
       const target = pool[state.currentIdx >= pool.length ? 0 : state.currentIdx];
-
+      
       if (!['spelling', 'pronunciation'].includes(state.exerciseMode)) {
         setState(prev => ({ ...prev, options: generateOptions(target) }));
       }
-
+      
       setState(prev => ({ ...prev, feedback: null }));
 
       if (['reading', 'listening'].includes(state.exerciseMode) && !state.isLooping && state.exerciseMode !== 'translation') {
@@ -627,7 +628,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   const s = {
     appWrapper: { position: 'fixed', right: '20px', top: '50%', transform: 'translateY(-50%)', display: 'flex', height: '80vh', backgroundColor: '#121212', color: '#fff', borderRadius: '20px', overflow: 'hidden', border: '1px solid #333', boxShadow: '0 20px 50px rgba(0,0,0,0.6)', zIndex: 1, transition: 'width 0.3s' },
     leftPanel: { flex: 1, minWidth: 0, padding: '20px', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden' },
-    rightPanel: { backgroundColor: '#181818', display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', transition: 'all 0.3s' },
+    rightPanel: { backgroundColor: '#181818',minHeight: 0, display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', transition: 'all 0.3s' },
     header: { padding: '12px 15px', borderBottom: '1px solid #333', display: 'flex', justifyContent: 'space-between', alignItems: 'center' },
     inputContainer: { display: 'flex', gap: '8px', marginBottom: '15px', alignItems: 'center' },
     wordInput: { flex: 2, position: 'relative', display: 'flex', alignItems: 'center' },
@@ -652,7 +653,32 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
     miniPills: { display: 'flex', gap: '8px', fontSize: '9px', marginTop: '5px' },
     globalCaptureLayer: { position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1, backgroundColor: 'rgba(0,0,0,0.3)', display: 'flex', alignItems: 'flex-end', justifyContent: 'center' },
     floatingPrompt: { marginBottom: '30px', backgroundColor: '#fff', color: '#000', padding: '10px 30px', borderRadius: '30px', fontWeight: 'bold', fontSize: '12px', display: 'flex', alignItems: 'center' },
-    listArea: { flex: 1, overflowY: 'auto', padding: '12px' },
+    listArea: { 
+  flex: 1, 
+  overflowY: 'auto', 
+  padding: '12px',
+  minHeight: 0,
+  // 自定义滚动条样式
+  scrollbarWidth: 'thin',  // Firefox: 细滚动条
+  scrollbarColor: '#4a4a4a #2a2a2a',  // Firefox: 滑块颜色 轨道颜色
+  // WebKit (Chrome, Safari, Edge) 滚动条样式
+  '&::-webkit-scrollbar': {
+    width: '6px',
+    height: '6px',
+  },
+  '&::-webkit-scrollbar-track': {
+    background: '#2a2a2a',
+    borderRadius: '3px',
+  },
+  '&::-webkit-scrollbar-thumb': {
+    background: '#4a4a4a',
+    borderRadius: '3px',
+  },
+  '&::-webkit-scrollbar-thumb:hover': {
+    background: '#636363',
+  },
+},
+    maskOverlay: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: '#181818', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#444' },
     iconBtn: { background: 'none', border: 'none', cursor: 'pointer', fontSize: '14px', color: '#fff' },
     closeBtn: { background: '#333', border: 'none', color: '#fff', cursor: 'pointer', fontSize: '14px', width: '24px', height: '24px', borderRadius: '50%' }
   };
@@ -825,6 +851,8 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   }
 
   const currentWord = roundWordsRef.current[state.currentIdx];
+  const totalWords = state.words.reduce((sum, w) => sum + w.word.split(' ').length, 0);
+  const deductionPerWord = 100 / (totalWords || 1);
 
   // 渲染题目内容的辅助函数
   const renderQuestionContent = () => {
@@ -851,7 +879,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
         return (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <button onClick={() => playAudio(currentWord.word)} style={s.speakerBtn}>🔊 单次播放</button>
-            <button onClick={() => setState(prev => ({ ...prev, isLooping: !prev.isLooping }))}
+            <button onClick={() => setState(prev => ({ ...prev, isLooping: !prev.isLooping }))} 
               style={{ ...s.loopBtn, color: state.isLooping ? '#ffab40' : '#888', marginTop: '10px' }}>
               {state.isLooping ? '🔁 自动循环中' : '➡️ 开启无限循环'}
             </button>
@@ -863,7 +891,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
             <div style={{ fontSize: '24px', marginBottom: '10px' }}>{currentWord.word}</div>
             <div style={{ marginBottom: '15px', color: '#aaa' }}>
-              {currentWord.translation}
+              {currentWord.translation} 
               <span onClick={() => F_speak(currentWord.word)} style={{ cursor: 'pointer', marginLeft: '8px' }}>🔊</span>
             </div>
             <div style={{ display: 'flex', gap: '10px' }}>
@@ -915,7 +943,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
   if (state.isSimpleMode) {
     return (
       <div style={simpleStyles.container}>
-        <div
+        <div 
           className="drag-handle"
           style={simpleStyles.handle}
           onMouseDown={handleMouseDown}
@@ -947,18 +975,18 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
               />
               {state.translate && <div style={simpleStyles.translate}>{state.translate}</div>}
             </div>
-
+            
             <button onClick={handleAddWord} style={simpleStyles.addBtn} disabled={state.isAdding}>
               {state.isAdding ? '...' : '添加'}
             </button>
-
-            <button
+            
+            <button 
               onClick={() => setState(prev => ({ ...prev, isSimpleMode: false }))}
               style={simpleStyles.fullModeBtn}
             >
               <span>完整</span>
             </button>
-
+            
             <button onClick={onClose} style={simpleStyles.closeBtn}>✕</button>
           </div>
         </div>
@@ -966,160 +994,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
     );
   }
 
-  // 如果是嵌入模式，不包裹 appWrapper，直接返回内容（带右侧单词列表）
-  if (embedded) {
-    return (
-      <>
-        {state.showOverlay && (
-          <div style={s.globalCaptureLayer} onClick={handleNext}>
-            <div style={s.floatingPrompt}>
-              {state.feedback?.isPracticeMode && <span style={{ color: '#ffab40', marginRight: '10px' }}>🧪 练习模式</span>}
-              {state.feedback?.message ? `${state.feedback.message} - 点击继续` : '点击任意位置继续'}
-            </div>
-          </div>
-        )}
-
-        <div style={{ display: 'flex', height: '100%', overflow: 'hidden' }}>
-          {/* 左侧内容区域 */}
-          <div style={{ flex: 1, padding: '20px', overflow: 'auto', minWidth: 0 }}>
-            {/* 头部 */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-              <h3 style={{ margin: 0, color: '#818cf8' }}>词汇大师</h3>
-              <button
-                onClick={() => setState(prev => ({ ...prev, isSimpleMode: true }))}
-                style={{ ...s.toolBtn, backgroundColor: '#10b981' }}
-              >
-                ✨ 简洁模式
-              </button>
-            </div>
-
-            {/* 输入区域 */}
-            <div style={s.inputContainer}>
-              <div style={s.wordInput}>
-                <button onClick={() => playAudio(state.newWord)} style={s.hornButton}>📢</button>
-                <input
-                  value={state.newWord}
-                  onChange={e => {
-                    setState(prev => ({ ...prev, newWord: e.target.value }));
-                    if (e.target.value.trim()) {
-                      F_translator(e.target.value).then(t => setState(prev => ({ ...prev, translate: t })));
-                    } else {
-                      setState(prev => ({ ...prev, translate: "" }));
-                    }
-                  }}
-                  onKeyDown={e => e.key === 'Enter' && handleAddWord()}
-                  onPaste={e => F_translator(e.clipboardData.getData('text')).then(t => setState(prev => ({ ...prev, translate: t })))}
-                  placeholder="添加新词"
-                  style={s.input}
-                />
-                {state.translate && <div style={s.translate}>{state.translate}</div>}
-              </div>
-              <button onClick={handleAddWord} style={s.addBtn} disabled={state.isAdding}>
-                {state.isAdding ? '...' : '添加'}
-              </button>
-            </div>
-
-            {/* 工具栏 */}
-            <div style={s.toolbar}>
-              <button onClick={() => {
-                const mode = !state.isPracticeMode;
-                setState(prev => ({ ...prev, isPracticeMode: mode }));
-                resetAll();
-                refreshPool();
-                message.info(mode ? '🧪 练习模式' : '📚 学习模式');
-              }} style={{ ...s.toolBtn, backgroundColor: state.isPracticeMode ? '#ffab40' : '#0e639c', flex: 1 }}>
-                {state.isPracticeMode ? '🧪 练习模式' : '📚 学习模式'}
-              </button>
-            </div>
-
-            {/* 统计栏 */}
-            <div style={s.statsBar}>
-              <span style={s.modeBadge}>{MODE_DISPLAY[state.exerciseMode]}</span>
-              {!state.roundFinished && roundWordsRef.current.length > 0 && (
-                <span>进度: <span style={{ color: '#ffab40' }}>{state.currentIdx + 1}/{roundWordsRef.current.length}</span></span>
-              )}
-              <span>正确率: <span style={{ color: getAccuracy() >= 80 ? '#4caf50' : getAccuracy() >= 60 ? '#ffab40' : '#ff5252' }}>{getAccuracy()}%</span></span>
-            </div>
-
-            {/* 模式切换 */}
-            <div style={s.modeToggle}>
-              {MODES.map(m => (
-                <button key={m} onClick={() => handleModeSwitch(m)} style={{
-                  ...s.modeBtn,
-                  backgroundColor: state.exerciseMode === m ? '#0e639c' : '#333',
-                  border: state.exerciseMode === m ? '2px solid #ffab40' : 'none'
-                }}>{MODE_DISPLAY[m]}</button>
-              ))}
-            </div>
-
-            {/* 题目区域 */}
-            <div style={{ ...s.questionBox, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              {!state.words.length ? <div style={s.statItem}>请先添加单词</div> : (
-                !roundWordsRef.current.length ? (
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '40px' }}>🌟</div>
-                    <div style={{ fontSize: '18px', color: '#4caf50' }}>
-                      {state.isPracticeMode ? '练习模式已遍历所有单词' : '此模式已全会！'}
-                    </div>
-                  </div>
-                ) : state.roundFinished ? (
-                  <div style={{ textAlign: 'center' }}>
-                    <div style={{ fontSize: '24px', color: '#ffab40', marginBottom: '20px' }}>
-                      {state.isPracticeMode ? '🏁 练习完成' : '🏁 本轮已完成'}
-                    </div>
-                    <button onClick={refreshPool} style={s.speakerBtn}>🔄 再测一轮</button>
-                  </div>
-                ) : (
-                  <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {!state.showOverlay ? (
-                      renderQuestionContent()
-                    ) : (
-                      <div style={{ textAlign: 'center', color: state.feedback?.isCorrect ? '#4caf50' : '#f44336' }}>
-                        <div style={{ fontSize: '60px' }}>{state.feedback?.isCorrect ? '✓' : '×'}</div>
-                        <div style={{ fontSize: '18px', margin: '10px 0' }}>{state.feedback?.message || (state.feedback?.isCorrect ? '回答正确！' : '回答错误')}</div>
-                        <div style={{ fontSize: '16px', marginTop: '10px' }}>
-                          单词: {state.feedback?.correctWord?.word}<br />
-                          翻译: {state.feedback?.correctWord?.translation}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                )
-              )}
-            </div>
-
-            {/* 选项区域 */}
-            {!['pronunciation', 'spelling'].includes(state.exerciseMode) && !state.showOverlay && !state.roundFinished && roundWordsRef.current.length > 0 && (
-              <div style={s.optionsGrid}>
-                {state.options.map((opt, i) => (
-                  <button key={i} onClick={() => handleAnswer(opt.displayText)} style={s.optionBtn}
-                    disabled={state.showOverlay || !roundWordsRef.current.length || state.roundFinished}>
-                    {opt.displayText}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* 右侧面板 - 单词列表 */}
-          <div style={{ width: '330px', backgroundColor: '#181818', display: 'flex', flexDirection: 'column', overflow: 'hidden', borderLeft: '1px solid #333' }}>
-            <div style={s.header}>
-              <span>词库管理 ({state.words.length})</span>
-              <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
-                <button onClick={() => setState(prev => ({ ...prev, isRightPanelCollapsed: true }))} style={s.iconBtn}>▶</button>
-                <button onClick={onClose} style={s.closeBtn}>✕</button>
-              </div>
-            </div>
-            <div style={{ flex: 1, overflow: 'auto', padding: '12px' }}>
-              {[...state.words].sort((a, b) => getMasteryLevel(a.status) - getMasteryLevel(b.status)).map(renderWordCard)}
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  // 完整模式渲染（独立窗口）
+  // 完整模式渲染
   return (
     <div style={{ ...s.appWrapper, width: state.isRightPanelCollapsed ? '430px' : '850px' }}>
       {state.showOverlay && (
@@ -1134,15 +1009,12 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
       <div style={s.leftPanel}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
           <h3 style={{ margin: 0, color: '#818cf8' }}>词汇大师</h3>
-          <button
+          <button 
             onClick={() => setState(prev => ({ ...prev, isSimpleMode: true }))}
             style={{ ...s.toolBtn, backgroundColor: '#10b981' }}
           >
             ✨ 简洁模式
           </button>
-          {state.isRightPanelCollapsed && (
-            <button onClick={() => setState(prev => ({ ...prev, isRightPanelCollapsed: false }))} style={{ ...s.toolBtn, width: '30px' }}>◀</button>
-          )}
         </div>
 
         <div style={s.inputContainer}>
@@ -1180,6 +1052,9 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
           }} style={{ ...s.toolBtn, backgroundColor: state.isPracticeMode ? '#ffab40' : '#0e639c', flex: 1 }}>
             {state.isPracticeMode ? '🧪 练习模式' : '📚 学习模式'}
           </button>
+          {state.isRightPanelCollapsed && (
+            <button onClick={() => setState(prev => ({ ...prev, isRightPanelCollapsed: false }))} style={{ ...s.toolBtn, width: '30px' }}>◀</button>
+          )}
         </div>
 
         <div style={s.statsBar}>
@@ -1225,7 +1100,7 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
                     <div style={{ fontSize: '60px' }}>{state.feedback?.isCorrect ? '✓' : '×'}</div>
                     <div style={{ fontSize: '18px', margin: '10px 0' }}>{state.feedback?.message || (state.feedback?.isCorrect ? '回答正确！' : '回答错误')}</div>
                     <div style={{ fontSize: '16px', marginTop: '10px' }}>
-                      单词: {state.feedback?.correctWord?.word}<br />
+                      单词: {state.feedback?.correctWord?.word}<br/>
                       翻译: {state.feedback?.correctWord?.translation}
                     </div>
                   </div>
@@ -1247,20 +1122,39 @@ const VocabularyMaster = ({ onClose, getToken, clickWork, onWordChange, net, G_w
         )}
       </div>
 
-      {/* 右侧面板 */}
+      {/* 右侧面板 - 修复按钮在同一行 */}
       <div style={{ ...s.rightPanel, width: state.isRightPanelCollapsed ? 0 : 330, opacity: state.isRightPanelCollapsed ? 0 : 1 }}>
         <div style={s.header}>
           <span>词库管理 ({state.words.length})</span>
           <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
             <button onClick={() => setState(prev => ({ ...prev, isRightPanelCollapsed: true }))} style={s.iconBtn}>▶</button>
+            <button onClick={() => setState(prev => ({ ...prev, isMaskEnabled: !prev.isMaskEnabled }))} 
+              style={{ ...s.iconBtn, color: state.isMaskEnabled ? '#ffab40' : '#888' }}>
+              {state.isMaskEnabled ? '🔒' : '🔓'}
+            </button>
             <button onClick={onClose} style={s.closeBtn}>✕</button>
           </div>
         </div>
-        <div style={{ position: 'relative', flex: 1 }}>
-          <div style={s.listArea}>
-            {[...state.words].sort((a, b) => getMasteryLevel(a.status) - getMasteryLevel(b.status)).map(renderWordCard)}
-          </div>
-        </div>
+
+ {/* ⬇️ 关键修改在这里：这个容器需要限制高度才能滚动 */}
+  <div style={{ 
+    position: 'relative', 
+    flex: 1,           // 占据剩余空间
+    minHeight: 0,      // ⭐ 关键：允许 flex 子元素缩小
+    overflow: 'hidden' // 隐藏溢出
+  }}>
+    {state.isMaskEnabled && !state.showOverlay && <div style={s.maskOverlay}>🛡️ 练习中已遮盖</div>}
+    
+    {/* ⭐ 这个 div 才是实际滚动的区域 */}
+    <div style={{ 
+      ...s.listArea, 
+      height: '100%',    // 填满父容器
+      overflowY: 'auto', // 垂直滚动
+      filter: state.isMaskEnabled && !state.showOverlay ? 'blur(15px)' : 'none' 
+    }}>
+      {[...state.words].sort((a, b) => getMasteryLevel(a.status) - getMasteryLevel(b.status)).map(renderWordCard)}
+    </div>
+  </div>
       </div>
     </div>
   );

@@ -786,8 +786,6 @@ export const F_speak = (function() {
       return Promise.resolve(0);
     }
 
-    console.log('F_speak 播放单词:', processedWord);
-
     return new Promise(async (resolve, reject) => {
       // 1. 先检查内存缓存
       if (memoryCache.has(processedWord)) {
@@ -801,7 +799,6 @@ export const F_speak = (function() {
       try {
         const cachedBlob = await getAudioFromCache(processedWord);
         if (cachedBlob) {
-          console.log('从 IndexedDB 缓存播放:', processedWord);
           // 同时保存到内存缓存，下次更快
           memoryCache.set(processedWord, cachedBlob);
           playFromBlob(cachedBlob, processedWord, resolve, reject);

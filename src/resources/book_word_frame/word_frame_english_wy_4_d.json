@@ -1,0 +1,856 @@
+{
+  "wy_4_d": {
+    "2": [
+      {
+        "text": "people at work",
+        "x": 22.4,
+        "y": 3.62,
+        "w": 50.91,
+        "h": 5.47,
+        "translator": "工作中的员工"
+      },
+      {
+        "text": "listen and sing.",
+        "x": 16.67,
+        "y": 18.37,
+        "w": 21.74,
+        "h": 2.97,
+        "translator": "听一听，唱一唱"
+      },
+      {
+        "text": "I'm a teacher.",
+        "x": 16.93,
+        "y": 24.86,
+        "w": 20.05,
+        "h": 3.06,
+        "translator": "我是一名教师"
+      },
+      {
+        "text": "I'm a doctor.",
+        "x": 17.19,
+        "y": 28.29,
+        "w": 18.23,
+        "h": 2.78,
+        "translator": "我是一名医生"
+      },
+      {
+        "text": "I'm a fireman.",
+        "x": 17.58,
+        "y": 31.73,
+        "w": 20.31,
+        "h": 2.78,
+        "translator": "我是一名消防员"
+      },
+      {
+        "text": "we all love our jobs!",
+        "x": 17.32,
+        "y": 34.88,
+        "w": 27.99,
+        "h": 3.06,
+        "translator": "我们都热爱我们的工作！"
+      },
+      {
+        "text": "I'm a farmer.",
+        "x": 17.19,
+        "y": 39.61,
+        "w": 18.88,
+        "h": 3.06,
+        "translator": "我是一名农民"
+      },
+      {
+        "text": "I'm a cook.",
+        "x": 17.45,
+        "y": 42.95,
+        "w": 15.49,
+        "h": 3.06,
+        "translator": "我是一名厨师"
+      },
+      {
+        "text": "I'm a police officer.",
+        "x": 17.06,
+        "y": 46.29,
+        "w": 26.56,
+        "h": 2.88,
+        "translator": "我是一名警察"
+      },
+      {
+        "text": "we all love our jobs!",
+        "x": 16.8,
+        "y": 49.44,
+        "w": 28.52,
+        "h": 3.06,
+        "translator": "我们都热爱我们的工作！"
+      },
+      {
+        "text": "who works in these places?",
+        "x": 16.15,
+        "y": 63.36,
+        "w": 36.98,
+        "h": 2.78,
+        "translator": "谁在这些地方工作？"
+      }
+    ],
+    "14": [
+      {
+        "text": "how do you feel today?",
+        "x": 22.27,
+        "y": 3.8,
+        "w": 67.71,
+        "h": 5.19,
+        "translator": "你今天感觉怎么样？"
+      },
+      {
+        "text": "i feel happy.",
+        "x": 16.93,
+        "y": 25.05,
+        "w": 18.36,
+        "h": 3.25,
+        "translator": "我感到快乐"
+      },
+      {
+        "text": "i laugh and dance around.",
+        "x": 16.8,
+        "y": 28.48,
+        "w": 37.24,
+        "h": 2.88,
+        "translator": "我笑着跳着舞"
+      },
+      {
+        "text": "i feel sad.",
+        "x": 17.06,
+        "y": 31.63,
+        "w": 14.58,
+        "h": 2.88,
+        "translator": "我感到悲伤"
+      },
+      {
+        "text": "i cry and talk to a friend.",
+        "x": 17.19,
+        "y": 34.97,
+        "w": 33.59,
+        "h": 2.88,
+        "translator": "我哭泣并和朋友倾诉"
+      },
+      {
+        "text": "i feel scared.",
+        "x": 17.19,
+        "y": 38.13,
+        "w": 18.36,
+        "h": 2.88,
+        "translator": "我感到害怕"
+      },
+      {
+        "text": "i share it with my family.",
+        "x": 16.93,
+        "y": 41.47,
+        "w": 34.77,
+        "h": 3.15,
+        "translator": "我和家人分享"
+      },
+      {
+        "text": "i feel angry.",
+        "x": 17.06,
+        "y": 44.9,
+        "w": 17.19,
+        "h": 2.88,
+        "translator": "我感到生气"
+      },
+      {
+        "text": "i stop and count to three.",
+        "x": 16.93,
+        "y": 47.87,
+        "w": 35.16,
+        "h": 3.34,
+        "translator": "我停下来数到三"
+      },
+      {
+        "text": "i feel excited.",
+        "x": 17.19,
+        "y": 51.3,
+        "w": 19.27,
+        "h": 2.97,
+        "translator": "我感到兴奋"
+      },
+      {
+        "text": "i jump and say, 'Hooray!'",
+        "x": 17.19,
+        "y": 54.45,
+        "w": 36.07,
+        "h": 3.43,
+        "translator": "我跳起来喊道：'万岁！'"
+      },
+      {
+        "text": "happy",
+        "x": 16.28,
+        "y": 66.6,
+        "w": 11.07,
+        "h": 3.62,
+        "translator": "快乐的"
+      },
+      {
+        "text": "angry",
+        "x": 29.69,
+        "y": 67.16,
+        "w": 10.42,
+        "h": 2.88,
+        "translator": "生气的"
+      },
+      {
+        "text": "sad",
+        "x": 44.53,
+        "y": 66.7,
+        "w": 7.94,
+        "h": 3.06,
+        "translator": "悲伤的"
+      },
+      {
+        "text": "excited",
+        "x": 20.96,
+        "y": 71.34,
+        "w": 12.5,
+        "h": 3.15,
+        "translator": "兴奋的"
+      },
+      {
+        "text": "scared",
+        "x": 37.11,
+        "y": 71.15,
+        "w": 11.98,
+        "h": 3.34,
+        "translator": "害怕的"
+      }
+    ],
+    "16": [
+      {
+        "text": "read and answer.",
+        "x": 16.93,
+        "y": 8.63,
+        "w": 24.61,
+        "h": 2.6,
+        "translator": "读一读，回答问题"
+      },
+      {
+        "text": "why can't amy take part in the first show?",
+        "x": 16.67,
+        "y": 11.32,
+        "w": 56.12,
+        "h": 3.15,
+        "translator": "为什么艾米不能参加第一场演出？"
+      },
+      {
+        "text": "It's my first Beijing opera show with Lingling. I'm so excited.",
+        "x": 13.54,
+        "y": 27.74,
+        "w": 29.69,
+        "h": 7.24,
+        "translator": "这是我第一次和玲玲一起表演京剧。我太兴奋了。"
+      },
+      {
+        "text": "the next day",
+        "x": 51.17,
+        "y": 16.98,
+        "w": 15.49,
+        "h": 2.78,
+        "translator": "第二天"
+      },
+      {
+        "text": "Lingling, it's Amy's mum. Amy is ill today.",
+        "x": 67.19,
+        "y": 15.77,
+        "w": 25.91,
+        "h": 5.1,
+        "translator": "玲玲，我是艾米的妈妈。艾米今天生病了。"
+      },
+      {
+        "text": "Is she coughing?",
+        "x": 70.18,
+        "y": 22.17,
+        "w": 18.62,
+        "h": 2.6,
+        "translator": "她在咳嗽吗？"
+      },
+      {
+        "text": "Yes, she is. She can't talk.",
+        "x": 48.96,
+        "y": 28.39,
+        "w": 16.67,
+        "h": 5.19,
+        "translator": "是的，她在咳嗽。她不能说话了。"
+      },
+      {
+        "text": "She can't take part in the show today. She's sad.",
+        "x": 9.9,
+        "y": 44.34,
+        "w": 28.91,
+        "h": 5.01,
+        "translator": "她今天不能参加演出了。她很伤心。"
+      },
+      {
+        "text": "I'm sorry to hear that.",
+        "x": 21.61,
+        "y": 51.11,
+        "w": 25.52,
+        "h": 2.69,
+        "translator": "听到这个消息我很难过。"
+      },
+      {
+        "text": "a month later",
+        "x": 70.96,
+        "y": 54.73,
+        "w": 16.15,
+        "h": 2.5,
+        "translator": "一个月后"
+      },
+      {
+        "text": "Time for the show. I'm happy!",
+        "x": 71.35,
+        "y": 60.48,
+        "w": 19.53,
+        "h": 5.1,
+        "translator": "演出时间到了。我很开心！"
+      },
+      {
+        "text": "read again and match.",
+        "x": 16.93,
+        "y": 73.93,
+        "w": 32.03,
+        "h": 2.88,
+        "translator": "再读一遍并连线"
+      },
+      {
+        "text": "It's my first Beijing opera show with Lingling.",
+        "x": 18.1,
+        "y": 78.11,
+        "w": 50.39,
+        "h": 2.97,
+        "translator": "这是我第一次和玲玲一起表演京剧。"
+      },
+      {
+        "text": "I can't take part in the show today.",
+        "x": 13.54,
+        "y": 83.4,
+        "w": 39.97,
+        "h": 2.88,
+        "translator": "我今天不能参加演出。"
+      },
+      {
+        "text": "time for the show.",
+        "x": 17.84,
+        "y": 88.4,
+        "w": 22.14,
+        "h": 2.5,
+        "translator": "演出时间到了。"
+      },
+      {
+        "text": "sad",
+        "x": 71.09,
+        "y": 79.78,
+        "w": 5.99,
+        "h": 2.32,
+        "translator": "悲伤的"
+      },
+      {
+        "text": "happy",
+        "x": 79.82,
+        "y": 83.49,
+        "w": 8.2,
+        "h": 2.69,
+        "translator": "快乐的"
+      },
+      {
+        "text": "excited",
+        "x": 69.79,
+        "y": 89.98,
+        "w": 9.38,
+        "h": 2.32,
+        "translator": "兴奋的"
+      }
+    ],
+    "17": [
+      {
+        "text": "is she coughing?",
+        "x": 33.59,
+        "y": 13.27,
+        "w": 18.75,
+        "h": 2.88,
+        "translator": "她在咳嗽吗？"
+      },
+      {
+        "text": "Yes, she is.",
+        "x": 18.1,
+        "y": 22.08,
+        "w": 13.15,
+        "h": 2.78,
+        "translator": "是的，她是。"
+      },
+      {
+        "text": "dear Lingling thank you",
+        "x": 67.58,
+        "y": 13.27,
+        "w": 14.58,
+        "h": 5.47,
+        "translator": "亲爱的玲玲，谢谢你"
+      },
+      {
+        "text": "look and write.",
+        "x": 16.41,
+        "y": 31.35,
+        "w": 21.48,
+        "h": 2.78,
+        "translator": "看一看，写一写"
+      },
+      {
+        "text": "work in pairs. Look, ask and answer.",
+        "x": 16.28,
+        "y": 70.5,
+        "w": 48.18,
+        "h": 2.97,
+        "translator": "两人一组。看一看，问一问，答一答"
+      },
+      {
+        "text": "is he jumping?",
+        "x": 20.96,
+        "y": 87.2,
+        "w": 16.28,
+        "h": 2.97,
+        "translator": "他在跳吗？"
+      },
+      {
+        "text": "Yes, he is. He's excited.",
+        "x": 20.7,
+        "y": 90.45,
+        "w": 26.56,
+        "h": 2.69,
+        "translator": "是的，他在跳。他很兴奋。"
+      }
+    ],
+    "18": [
+      {
+        "text": "read and answer.",
+        "x": 17.19,
+        "y": 8.63,
+        "w": 24.87,
+        "h": 2.6,
+        "translator": "读一读，回答问题"
+      },
+      {
+        "text": "what does Jay get for his birthday?",
+        "x": 16.8,
+        "y": 11.5,
+        "w": 47.14,
+        "h": 2.88,
+        "translator": "杰伊生日得到了什么？"
+      },
+      {
+        "text": "happy birthday, Jay!",
+        "x": 23.96,
+        "y": 24.4,
+        "w": 24.09,
+        "h": 2.69,
+        "translator": "生日快乐，杰伊！"
+      },
+      {
+        "text": "this is for you.",
+        "x": 59.24,
+        "y": 25.05,
+        "w": 17.58,
+        "h": 2.69,
+        "translator": "这是给你的。"
+      },
+      {
+        "text": "Thank you! It's the new model ship!",
+        "x": 67.97,
+        "y": 29.22,
+        "w": 21.74,
+        "h": 4.92,
+        "translator": "谢谢你！这是新的模型船！"
+      },
+      {
+        "text": "Jay is very happy.",
+        "x": 11.98,
+        "y": 46.2,
+        "w": 24.48,
+        "h": 2.69,
+        "translator": "杰伊非常开心。"
+      },
+      {
+        "text": "time for bed, Jay.",
+        "x": 21.09,
+        "y": 49.35,
+        "w": 20.96,
+        "h": 2.69,
+        "translator": "该睡觉了，杰伊。"
+      },
+      {
+        "text": "I'm making the ship.",
+        "x": 56.77,
+        "y": 51.21,
+        "w": 23.44,
+        "h": 2.69,
+        "translator": "我正在做船。"
+      },
+      {
+        "text": "you can make it tomorrow.",
+        "x": 12.11,
+        "y": 65.49,
+        "w": 31.64,
+        "h": 2.69,
+        "translator": "你可以明天再做。"
+      },
+      {
+        "text": "Ray! my ship!",
+        "x": 66.41,
+        "y": 71.06,
+        "w": 15.76,
+        "h": 2.88,
+        "translator": "雷！我的船！"
+      },
+      {
+        "text": "Jay, I'm...",
+        "x": 20.31,
+        "y": 86.55,
+        "w": 12.37,
+        "h": 2.6,
+        "translator": "杰伊，我..."
+      },
+      {
+        "text": "Jay is angry. He is shouting at Ray.",
+        "x": 11.72,
+        "y": 90.26,
+        "w": 47.01,
+        "h": 3.06,
+        "translator": "杰伊很生气。他在对雷大喊。"
+      }
+    ],
+    "19": [
+      {
+        "text": "Jay runs back to his room. He is sad.",
+        "x": 11.59,
+        "y": 26.25,
+        "w": 27.73,
+        "h": 5.57,
+        "translator": "杰伊跑回他的房间。他很伤心。"
+      },
+      {
+        "text": "Jay, I'm so sorry about your ship.",
+        "x": 49.61,
+        "y": 5.94,
+        "w": 15.1,
+        "h": 7.7,
+        "translator": "杰伊，我为你的船感到非常抱歉。"
+      },
+      {
+        "text": "Ray, I'm sorry. I shouldn't shout at you.",
+        "x": 73.18,
+        "y": 14.1,
+        "w": 17.58,
+        "h": 7.61,
+        "translator": "雷，对不起。我不应该对你大喊。"
+      },
+      {
+        "text": "Let's make it again together!",
+        "x": 46.74,
+        "y": 32.1,
+        "w": 33.07,
+        "h": 2.78,
+        "translator": "让我们一起重新做一个吧！"
+      },
+      {
+        "text": "the next day",
+        "x": 17.45,
+        "y": 34.04,
+        "w": 15.49,
+        "h": 2.78,
+        "translator": "第二天"
+      },
+      {
+        "text": "Jay and Ray are happy now.",
+        "x": 10.81,
+        "y": 58.72,
+        "w": 38.54,
+        "h": 3.43,
+        "translator": "杰伊和雷现在很开心。"
+      },
+      {
+        "text": "read again and number. Then write the feelings.",
+        "x": 16.41,
+        "y": 64.01,
+        "w": 64.97,
+        "h": 3.34,
+        "translator": "再读一遍并标序号。然后写下感受。"
+      },
+      {
+        "text": "work in groups. Act out the story.",
+        "x": 16.28,
+        "y": 86.92,
+        "w": 45.05,
+        "h": 3.25,
+        "translator": "小组合作。表演这个故事。"
+      }
+    ],
+    "20": [
+      {
+        "text": "listen and chant.",
+        "x": 16.8,
+        "y": 8.72,
+        "w": 23.83,
+        "h": 2.6,
+        "translator": "听一听，唱一唱"
+      },
+      {
+        "text": "these cute little faces,",
+        "x": 34.24,
+        "y": 24.86,
+        "w": 31.64,
+        "h": 3.15,
+        "translator": "这些可爱的小脸蛋，"
+      },
+      {
+        "text": "have feelings to show.",
+        "x": 33.85,
+        "y": 28.48,
+        "w": 32.29,
+        "h": 2.97,
+        "translator": "有情感要表达。"
+      },
+      {
+        "text": "they use colours, not words.",
+        "x": 30.6,
+        "y": 31.63,
+        "w": 39.32,
+        "h": 3.06,
+        "translator": "他们用颜色，而不是言语。"
+      },
+      {
+        "text": "you feel angry,",
+        "x": 39.06,
+        "y": 35.06,
+        "w": 21.74,
+        "h": 2.97,
+        "translator": "你感到生气，"
+      },
+      {
+        "text": "like the colour of a huge fire.",
+        "x": 30.21,
+        "y": 38.13,
+        "w": 39.71,
+        "h": 3.06,
+        "translator": "像熊熊烈火般的颜色。"
+      },
+      {
+        "text": "you feel happy,",
+        "x": 38.93,
+        "y": 41.47,
+        "w": 21.88,
+        "h": 3.15,
+        "translator": "你感到快乐，"
+      },
+      {
+        "text": "like the colour of the sun.",
+        "x": 31.9,
+        "y": 44.81,
+        "w": 35.68,
+        "h": 2.88,
+        "translator": "像太阳般的颜色。"
+      },
+      {
+        "text": "you feel sad,",
+        "x": 40.62,
+        "y": 47.87,
+        "w": 18.49,
+        "h": 3.15,
+        "translator": "你感到悲伤，"
+      },
+      {
+        "text": "like the colour of a cloudy sky.",
+        "x": 29.3,
+        "y": 51.3,
+        "w": 41.41,
+        "h": 3.06,
+        "translator": "像阴天般的颜色。"
+      },
+      {
+        "text": "you feel worried,",
+        "x": 38.02,
+        "y": 54.45,
+        "w": 24.09,
+        "h": 3.06,
+        "translator": "你感到担忧，"
+      },
+      {
+        "text": "like the colour of night.",
+        "x": 33.85,
+        "y": 57.88,
+        "w": 32.29,
+        "h": 3.06,
+        "translator": "像黑夜般的颜色。"
+      },
+      {
+        "text": "read the chant and write.",
+        "x": 17.06,
+        "y": 67.44,
+        "w": 35.42,
+        "h": 2.97,
+        "translator": "读一读歌谣，写一写"
+      },
+      {
+        "text": "which words have the same sound?",
+        "x": 16.67,
+        "y": 70.32,
+        "w": 46.74,
+        "h": 2.78,
+        "translator": "哪些单词发音相同？"
+      }
+    ],
+    "22": [
+      {
+        "text": "Sichuan opera is very famous in China. Look! This man is wearing many masks. He can change his masks to show different feelings. He can do that very fast. It's amazing!",
+        "x": 15.49,
+        "y": 23.1,
+        "w": 67.97,
+        "h": 20.32,
+        "translator": "川剧在中国非常有名。看！这个人戴着很多面具。他可以变换面具来表达不同的情感。他动作非常快。太神奇了！"
+      },
+      {
+        "text": "My mask is pink and white. It's smiling. I'm happy.",
+        "x": 8.33,
+        "y": 68.92,
+        "w": 18.23,
+        "h": 10.11,
+        "translator": "我的面具是粉白相间的。它在微笑。我很开心。"
+      },
+      {
+        "text": "My mask is blue. It's crying. I'm sad.",
+        "x": 27.08,
+        "y": 71.43,
+        "w": 18.36,
+        "h": 7.33,
+        "translator": "我的面具是蓝色的。它在哭泣。我很伤心。"
+      },
+      {
+        "text": "My mask is red and yellow. Look! I'm angry.",
+        "x": 45.57,
+        "y": 66.42,
+        "w": 20.18,
+        "h": 7.79,
+        "translator": "我的面具是红黄相间的。看！我很生气。"
+      },
+      {
+        "text": "My mask is orange and has a big open mouth. I'm very excited.",
+        "x": 66.41,
+        "y": 68.92,
+        "w": 20.44,
+        "h": 9.93,
+        "translator": "我的面具是橙色的，张着大嘴。我非常兴奋。"
+      }
+    ],
+    "23": [
+      {
+        "text": "are you feeling happy today?",
+        "x": 20.96,
+        "y": 83.86,
+        "w": 33.46,
+        "h": 2.97,
+        "translator": "你今天感到快乐吗？"
+      },
+      {
+        "text": "Yes, I am.",
+        "x": 21.09,
+        "y": 87.2,
+        "w": 11.46,
+        "h": 2.69,
+        "translator": "是的，我是。"
+      }
+    ],
+    "24": [
+      {
+        "text": "read the words.",
+        "x": 12.11,
+        "y": 14.19,
+        "w": 16.15,
+        "h": 10.76,
+        "translator": "读单词。"
+      },
+      {
+        "text": "ask a question. Is he...?",
+        "x": 30.99,
+        "y": 14.38,
+        "w": 14.06,
+        "h": 7.61,
+        "translator": "问一个问题。他是...？"
+      },
+      {
+        "text": "how do you feel today? Why?",
+        "x": 50.26,
+        "y": 14.19,
+        "w": 16.8,
+        "h": 7.88,
+        "translator": "你今天感觉怎么样？为什么？"
+      },
+      {
+        "text": "what makes you sad?",
+        "x": 69.4,
+        "y": 14.29,
+        "w": 15.89,
+        "h": 7.24,
+        "translator": "什么让你伤心？"
+      },
+      {
+        "text": "what makes you angry?",
+        "x": 11.59,
+        "y": 30.98,
+        "w": 17.45,
+        "h": 5.38,
+        "translator": "什么让你生气？"
+      },
+      {
+        "text": "why is Amy sad?",
+        "x": 30.86,
+        "y": 30.98,
+        "w": 16.41,
+        "h": 5.19,
+        "translator": "为什么艾米伤心？"
+      },
+      {
+        "text": "is he crying?",
+        "x": 50.0,
+        "y": 30.98,
+        "w": 16.8,
+        "h": 3.06,
+        "translator": "他在哭吗？"
+      },
+      {
+        "text": "write and say.",
+        "x": 69.27,
+        "y": 30.89,
+        "w": 13.8,
+        "h": 5.29,
+        "translator": "写一写，说一说"
+      },
+      {
+        "text": "what makes you happy?",
+        "x": 11.46,
+        "y": 47.59,
+        "w": 15.62,
+        "h": 7.79,
+        "translator": "什么让你开心？"
+      },
+      {
+        "text": "is he laughing?",
+        "x": 30.86,
+        "y": 47.68,
+        "w": 13.54,
+        "h": 5.19,
+        "translator": "他在笑吗？"
+      },
+      {
+        "text": "how does she feel?",
+        "x": 69.27,
+        "y": 47.59,
+        "w": 13.41,
+        "h": 5.1,
+        "translator": "她感觉怎么样？"
+      }
+    ]
+  }
+}

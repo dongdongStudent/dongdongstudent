@@ -13,7 +13,7 @@ import {
   Image as ImageIcon, EmojiEvents as EmojiEventsIcon, ZoomIn as ZoomInIcon,
   ZoomOut as ZoomOutIcon, RotateRight as RotateRightIcon, Refresh as RefreshIcon,
   Fullscreen as FullscreenIcon, FullscreenExit as FullscreenExitIcon,
-  BookmarkAdd as BookmarkAddIcon
+  BookmarkAdd as BookmarkAddIcon, Shuffle as ShuffleIcon, SortByAlpha as SortByAlphaIcon
 } from '@mui/icons-material';
 import { styled } from '@mui/material/styles';
 import { wordMemoryApi } from './api';
@@ -53,6 +53,9 @@ const WordTest = ({ onBack, currentBank }) => {
   const [selectedUnit, setSelectedUnit] = useState(0);
   const [questionCount, setQuestionCount] = useState(5);
   
+  // 显示顺序设置
+  const [displayOrder, setDisplayOrder] = useState('sequential');
+  
   // 自动播放设置
   const [autoPlay, setAutoPlay] = useState(true);
   
@@ -81,6 +84,10 @@ const WordTest = ({ onBack, currentBank }) => {
   const [showConfirmDialog, setShowConfirmDialog] = useState(false);
   const [pendingQuestions, setPendingQuestions] = useState(null);
   const [pendingSaveResult, setPendingSaveResult] = useState(null);
+  
+  // 错题重测状态
+  const [wrongWordsForRetest, setWrongWordsForRetest] = useState([]);
+  const [retestMode, setRetestMode] = useState(false);
   
   const [snackbar, setSnackbar] = useState({ open: false, message: '', severity: 'success' });
   const hasAutoPlayedRef = useRef(false);
@@ -199,25 +206,33 @@ const WordTest = ({ onBack, currentBank }) => {
 
   const getFilteredWords = () => {
     const unitWords = getUnitFilteredWords();
+    const sortedById = [...unitWords].sort((a, b) => a.id - b.id);
     
-    if (rangeType === 'all') return unitWords;
-    if (rangeType === 'mastered') {
+    let filteredWords;
+    
+    if (rangeType === 'all') {
+      filteredWords = sortedById;
+    } else if (rangeType === 'mastered') {
       const masteredIds = getAllMasteredIds();
-      return unitWords.filter(word => masteredIds.includes(word.id));
-    }
-    if (rangeType === 'unmastered') {
+      filteredWords = sortedById.filter(word => masteredIds.includes(word.id));
+    } else if (rangeType === 'unmastered') {
       const masteredIds = getAllMasteredIds();
-      return unitWords.filter(word => !masteredIds.includes(word.id));
-    }
-    if (rangeType === 'custom') {
+      filteredWords = sortedById.filter(word => !masteredIds.includes(word.id));
+    } else if (rangeType === 'custom') {
       const start = rangeValue[0] - 1;
       const end = rangeValue[1];
-      return unitWords.slice(start, end);
+      filteredWords = sortedById.slice(start, end);
+    } else if (rangeType === 'random') {
+      filteredWords = sortedById;
+    } else {
+      filteredWords = sortedById;
     }
-    if (rangeType === 'random') {
-      return unitWords;
+    
+    if (displayOrder === 'random') {
+      filteredWords = [...filteredWords].sort(() => 0.5 - Math.random());
     }
-    return unitWords;
+    
+    return filteredWords;
   };
 
   const getAvailableCount = () => getFilteredWords().length;
@@ -275,7 +290,7 @@ const WordTest = ({ onBack, currentBank }) => {
   };
 
   // ========== 开始答题会话 ==========
-  const startTestSession = (questions) => {
+  const startTestSession = (questions, isRetest = false) => {
     setTestSession({
       questions, current: 0, results: [], showResult: false,
       correctCount: 0, startTime: Date.now(), totalQuestions: questions.length
@@ -291,52 +306,94 @@ const WordTest = ({ onBack, currentBank }) => {
     setFeedback(null);
     setShowSettings(false);
     hasAutoPlayedRef.current = false;
+    setRetestMode(isRetest);
   };
 
-  // ========== 确认开始答题 ==========
-  const confirmStartTest = () => {
-    if (pendingQuestions) {
-      startTestSession(pendingQuestions);
-      setShowConfirmDialog(false);
-      setPendingQuestions(null);
-      setPendingSaveResult(null);
+  // ========== 确认开始答题（修复版本 - 不使用setTimeout）==========
+  const confirmStartTest = (e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    
+    if (!pendingQuestions) return;
+    
+    // 先保存需要的数据（避免闭包问题）
+    const questionsToStart = [...pendingQuestions];
+    const isRetestMode = wrongWordsForRetest.length > 0;
+    
+    // 立即关闭对话框并清空状态
+    setShowConfirmDialog(false);
+    setWrongWordsForRetest([]);
+    setPendingQuestions(null);
+    setPendingSaveResult(null);
+    
+    // 直接开始测试
+    if (isRetestMode) {
+      // 直接开始复习
+      setTestSession({
+        questions: questionsToStart, 
+        current: 0, 
+        results: [], 
+        showResult: false,
+        correctCount: 0, 
+        startTime: Date.now(), 
+        totalQuestions: questionsToStart.length
+      });
+      
+      if (questionsToStart.length > 0) {
+        const idx = wordData.findIndex(w => w.id === questionsToStart[0].id);
+        setCurrentIndex(idx >= 0 ? idx : 0);
+      }
+      
+      setSelected('');
+      setAnswered(false);
+      setFeedback(null);
+      setShowSettings(false);
+      hasAutoPlayedRef.current = false;
+      setRetestMode(true);
+    } else {
+      // 非重测模式，正常开始测试
+      startTestSession(questionsToStart, false);
     }
   };
 
   // ========== 取消开始答题 ==========
-  const cancelStartTest = () => {
+  const cancelStartTest = (e) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    
+    if (wrongWordsForRetest.length > 0) {
+      submitLearningData();
+      setTestSession(prev => ({ ...prev, showResult: true }));
+    }
     setShowConfirmDialog(false);
     setPendingQuestions(null);
     setPendingSaveResult(null);
+    setWrongWordsForRetest([]);
+    setRetestMode(false);
   };
 
-  // ========== 开始测试（带自动保存和确认提示） ==========
+  // ========== 开始测试 ==========
   const startTest = async () => {
     const available = getFilteredWords();
     if (available.length === 0) {
-      alert('当前范围内没有可用的单词');
+      setSnackbar({
+        open: true,
+        message: '当前范围内没有可用的单词',
+        severity: 'warning'
+      });
       return;
     }
 
     const actualCount = Math.min(questionCount, available.length);
     
     let selectedWords;
-    
-    if (rangeType === 'random') {
-      selectedWords = [...available].sort(() => 0.5 - Math.random()).slice(0, actualCount);
-    } else if (rangeType === 'mastered') {
-      selectedWords = [...available].sort(() => 0.5 - Math.random()).slice(0, actualCount);
+    if (displayOrder === 'random') {
+      const shuffled = [...available].sort(() => 0.5 - Math.random());
+      selectedWords = shuffled.slice(0, actualCount);
     } else {
-      const wordsWithMastery = available.map(word => {
-        const stat = word.stats;
-        const correctCount = stat?.correct_count || 0;
-        const totalCount = stat?.extract_count || 0;
-        const mastery = totalCount > 0 ? (correctCount / totalCount) * 100 : 0;
-        return { ...word, mastery };
-      });
-      
-      wordsWithMastery.sort((a, b) => a.mastery - b.mastery);
-      selectedWords = wordsWithMastery.slice(0, actualCount);
+      selectedWords = available.slice(0, actualCount);
     }
 
     const questions = selectedWords.map(word => {
@@ -350,7 +407,6 @@ const WordTest = ({ onBack, currentBank }) => {
       };
     });
 
-    // ========== 自动保存抽取的单词到单词本 ==========
     if (autoSaveEnabled && questions.length > 0) {
       const wordsToSave = questions.map(q => ({
         english: q.word,
@@ -375,27 +431,17 @@ const WordTest = ({ onBack, currentBank }) => {
         
         setSavingWords(false);
         
-        if (result.savedCount > 0) {
-          // 保存成功，显示确认对话框
-          let message = `✅ 已自动保存 ${result.savedCount} 个单词到单词本\n\n`;
-          message += `📥 新增: ${result.newWords} 个\n`;
-          message += `📋 已有: ${result.existingWords} 个`;
-          if (result.failed > 0) {
-            message += `\n⚠️ 失败: ${result.failed} 个`;
-          }
-          message += `\n\n是否开始答题？`;
-          
-          setPendingSaveResult({ message, result });
-          setPendingQuestions(questions);
-          setShowConfirmDialog(true);
-        } else {
-          // 保存失败
-          setSnackbar({
-            open: true,
-            message: '❌ 自动保存失败，请重试',
-            severity: 'error'
-          });
+        let message = `✅ 已自动保存单词到单词本\n\n`;
+        message += `📥 新增: ${result.newWords} 个\n`;
+        message += `📋 已有: ${result.existingWords} 个`;
+        if (result.failed > 0) {
+          message += `\n⚠️ 失败: ${result.failed} 个`;
         }
+        message += `\n\n是否开始答题？`;
+        
+        setPendingSaveResult({ message, result });
+        setPendingQuestions(questions);
+        setShowConfirmDialog(true);
       } catch (error) {
         console.error('保存单词失败:', error);
         setSavingWords(false);
@@ -404,10 +450,11 @@ const WordTest = ({ onBack, currentBank }) => {
           message: '自动保存失败：' + error.message,
           severity: 'error'
         });
+        // 保存失败时直接开始测试
+        startTestSession(questions, false);
       }
     } else {
-      // 没有开启自动保存，直接开始答题
-      startTestSession(questions);
+      startTestSession(questions, false);
     }
   };
 
@@ -509,6 +556,9 @@ const WordTest = ({ onBack, currentBank }) => {
   const handleAnswer = (option) => {
     if (answered || !testSession.questions.length) return;
     
+    const currentWord = wordData[currentIndex];
+    if (!currentWord) return;
+    
     const correctWord = currentWord.word;
     const correctTranslation = getWordTranslation(currentWord);
     const correct = testType === 'en2zh' || testType === 'listen' 
@@ -540,7 +590,7 @@ const WordTest = ({ onBack, currentBank }) => {
       correctCount: newCorrectCount
     }));
 
-    if (isCorrect && newCorrectCount === testSession.totalQuestions) {
+    if (isCorrect && newCorrectCount === testSession.totalQuestions && !retestMode) {
       setShowCelebration(true);
       setTimeout(() => setShowCelebration(false), 2000);
     }
@@ -550,8 +600,38 @@ const WordTest = ({ onBack, currentBank }) => {
   const handleScreenClick = () => {
     if (answered && testSession.questions.length && !testSession.showResult) {
       if (testSession.current + 1 >= testSession.totalQuestions) {
-        submitLearningData();
-        setTestSession(prev => ({ ...prev, showResult: true }));
+        // 收集答错的题目
+        const wrongQuestions = testSession.results
+          .filter(r => !r.isCorrect)
+          .map(r => {
+            const originalQuestion = testSession.questions.find(q => q.id === r.wordId);
+            return originalQuestion;
+          })
+          .filter(q => q);
+        
+        if (wrongQuestions.length > 0 && !retestMode) {
+          // 有错题且不是重测模式，显示确认对话框
+          setWrongWordsForRetest(wrongQuestions);
+          setPendingSaveResult({
+            message: `❌ 您答错了 ${wrongQuestions.length} 个单词\n\n是否重新测试这些错题？`,
+            result: { savedCount: 0 }
+          });
+          setPendingQuestions(wrongQuestions);
+          setShowConfirmDialog(true);
+        } else if (wrongQuestions.length > 0 && retestMode) {
+          // 重测模式下还有错题，继续自动复习
+          setSnackbar({
+            open: true,
+            message: `❌ 还有 ${wrongQuestions.length} 个单词答错，继续复习...`,
+            severity: 'warning'
+          });
+          startTestSession(wrongQuestions, true);
+        } else {
+          // 没有错题，提交并显示结果
+          submitLearningData();
+          setTestSession(prev => ({ ...prev, showResult: true }));
+          setRetestMode(false);
+        }
       } else {
         const next = testSession.current + 1;
         const nextWord = testSession.questions[next];
@@ -565,7 +645,15 @@ const WordTest = ({ onBack, currentBank }) => {
     }
   };
 
-  // ========== 自动播放 ==========
+  // ========== 监听全屏变化 ==========
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
   const currentIndex = getCurrentIndex();
   const currentWord = wordData[currentIndex] || wordData[0];
   const totalWordsCount = getUnitFilteredWords().length;
@@ -590,7 +678,18 @@ const WordTest = ({ onBack, currentBank }) => {
   }, [currentIndex, testType, testSession.questions.length, testSession.showResult, wordData, currentWord, selectedUnit, generateOptions]);
 
   // ========== 初始加载 ==========
-  useEffect(() => { loadWords(); }, [currentBank]);
+  useEffect(() => { 
+    loadWords(); 
+  }, [currentBank]);
+
+  // 清理定时器
+  useEffect(() => {
+    return () => {
+      if (playTimerRef.current) {
+        clearTimeout(playTimerRef.current);
+      }
+    };
+  }, []);
 
   if (loading) return <Box sx={{ p: 3, textAlign: 'center' }}><LinearProgress /><Typography sx={{ mt: 2 }}>加载中...</Typography></Box>;
   if (!wordData.length) return <Box sx={{ p: 3 }}><Alert severity="warning">暂无单词数据</Alert><Button variant="contained" onClick={onBack} sx={{ mt: 2 }}>返回</Button></Box>;
@@ -616,7 +715,7 @@ const WordTest = ({ onBack, currentBank }) => {
             <Tooltip title={isFullscreen ? "退出全屏" : "全屏模式"}>
               <IconButton size="small" onClick={(e) => {
                 e.stopPropagation();
-                if (!document.fullscreenElement) containerRef.current.requestFullscreen();
+                if (!document.fullscreenElement) containerRef.current?.requestFullscreen();
                 else document.exitFullscreen();
               }} sx={{ color: 'white' }}>
                 {isFullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
@@ -635,6 +734,8 @@ const WordTest = ({ onBack, currentBank }) => {
           {testType === 'listen' && '👂 听力'}
           {selectedUnit !== 0 ? ` - 第${selectedUnit}单元` : ''} ｜ 已掌握 {masteredCount}/{totalWordsCount}
           {autoSaveEnabled && ' ｜ 🔄 自动保存'}
+          {displayOrder === 'random' && ' ｜ 🎲 随机顺序'}
+          {retestMode && ' ｜ 🔄 错题复习模式'}
         </Typography>
       </Paper>
 
@@ -645,9 +746,10 @@ const WordTest = ({ onBack, currentBank }) => {
           variant={testType === 'picture' ? 'contained' : 'outlined'} 
           onClick={(e) => { 
             e.stopPropagation(); 
-            setTestSession({ ...testSession, questions: [] }); 
+            setTestSession({ questions: [], current: 0, results: [], showResult: false, correctCount: 0, startTime: null, totalQuestions: 0 }); 
             setTestType('picture'); 
             setShowSettings(true); 
+            setRetestMode(false);
           }} 
           startIcon={<ImageIcon />}
         >
@@ -658,9 +760,10 @@ const WordTest = ({ onBack, currentBank }) => {
           variant={testType === 'en2zh' ? 'contained' : 'outlined'} 
           onClick={(e) => { 
             e.stopPropagation(); 
-            setTestSession({ ...testSession, questions: [] }); 
+            setTestSession({ questions: [], current: 0, results: [], showResult: false, correctCount: 0, startTime: null, totalQuestions: 0 }); 
             setTestType('en2zh'); 
             setShowSettings(true); 
+            setRetestMode(false);
           }} 
           startIcon={<TranslateIcon />}
         >
@@ -671,9 +774,10 @@ const WordTest = ({ onBack, currentBank }) => {
           variant={testType === 'listen' ? 'contained' : 'outlined'} 
           onClick={(e) => { 
             e.stopPropagation(); 
-            setTestSession({ ...testSession, questions: [] }); 
+            setTestSession({ questions: [], current: 0, results: [], showResult: false, correctCount: 0, startTime: null, totalQuestions: 0 }); 
             setTestType('listen'); 
             setShowSettings(true); 
+            setRetestMode(false);
           }} 
           startIcon={<HearingIcon />}
         >
@@ -681,7 +785,7 @@ const WordTest = ({ onBack, currentBank }) => {
         </Button>
         {!testSession.showResult && (
           <Tooltip title="设置">
-            <IconButton size="small" onClick={(e) => { e.stopPropagation(); setShowSettings(true); }}>
+            <IconButton size="small" onClick={(e) => { e.stopPropagation(); setShowSettings(true); setRetestMode(false); }}>
               <SettingsIcon />
             </IconButton>
           </Tooltip>
@@ -758,7 +862,7 @@ const WordTest = ({ onBack, currentBank }) => {
               <MenuItem value="all">📚 全部单词 ({modeStats.total}个)</MenuItem>
               <MenuItem value="unmastered">🎯 未掌握单词 ({modeStats.unmastered}个)</MenuItem>
               <MenuItem value="mastered">⭐ 已掌握单词 ({modeStats.mastered}个)</MenuItem>
-              <MenuItem value="custom">📏 自定义范围</MenuItem>
+              <MenuItem value="custom">📏 自定义范围（索引）</MenuItem>
               <MenuItem value="random">🎲 随机抽取</MenuItem>
             </Select>
           </FormControl>
@@ -780,6 +884,30 @@ const WordTest = ({ onBack, currentBank }) => {
               />
             </Box>
           )}
+
+          {/* 显示顺序设置 */}
+          <FormControl fullWidth size="small" sx={{ mb: 2 }}>
+            <InputLabel>显示顺序</InputLabel>
+            <Select 
+              value={displayOrder} 
+              label="显示顺序" 
+              onChange={(e) => setDisplayOrder(e.target.value)} 
+              onClick={(e) => e.stopPropagation()}
+            >
+              <MenuItem value="sequential">
+                <Stack direction="row" alignItems="center" spacing={1}>
+                  <SortByAlphaIcon fontSize="small" />
+                  <span>顺序显示（按ID）</span>
+                </Stack>
+              </MenuItem>
+              <MenuItem value="random">
+                <Stack direction="row" alignItems="center" spacing={1}>
+                  <ShuffleIcon fontSize="small" />
+                  <span>随机显示</span>
+                </Stack>
+              </MenuItem>
+            </Select>
+          </FormControl>
 
           <Divider sx={{ my: 1.5 }} />
           
@@ -806,6 +934,7 @@ const WordTest = ({ onBack, currentBank }) => {
                 checked={autoSaveEnabled} 
                 onChange={(e) => setAutoSaveEnabled(e.target.checked)} 
                 onClick={(e) => e.stopPropagation()} 
+                style={{ marginRight: 8 }}
               />
             } 
             label={<Typography variant="body2">🔖 开始测试时自动保存单词到单词本</Typography>} 
@@ -819,6 +948,7 @@ const WordTest = ({ onBack, currentBank }) => {
                 checked={autoPlay} 
                 onChange={(e) => setAutoPlay(e.target.checked)} 
                 onClick={(e) => e.stopPropagation()} 
+                style={{ marginRight: 8 }}
               />
             } 
             label={<Typography variant="body2">🔊 自动播放发音</Typography>} 
@@ -834,12 +964,15 @@ const WordTest = ({ onBack, currentBank }) => {
           >
             {rangeType === 'mastered' ? '⭐ 复习已掌握单词' : '开始测试'}
             {autoSaveEnabled && ' (自动保存)'}
+            {displayOrder === 'random' && ' - 随机顺序'}
           </Button>
         </StyledCard>
       ) : testSession.showResult ? (
         // 结果界面
         <StyledCard sx={{ p: 2 }}>
-          <Typography variant="h6" align="center" gutterBottom>测试完成</Typography>
+          <Typography variant="h6" align="center" gutterBottom>
+            {retestMode ? '复习完成' : '测试完成'}
+          </Typography>
           <Grid container spacing={1} sx={{ mb: 2 }}>
             <Grid item xs={6}>
               <Paper sx={{ p: 1.5, textAlign: 'center', bgcolor: '#e8f5e8' }}>
@@ -894,7 +1027,7 @@ const WordTest = ({ onBack, currentBank }) => {
               size="small" 
               variant="contained" 
               startIcon={<ReplayIcon />} 
-              onClick={(e) => { e.stopPropagation(); setTestSession({ ...testSession, questions: [], showResult: false }); setShowSettings(true); }}
+              onClick={(e) => { e.stopPropagation(); setTestSession({ questions: [], current: 0, results: [], showResult: false, correctCount: 0, startTime: null, totalQuestions: 0 }); setShowSettings(true); setRetestMode(false); }}
             >
               再练一次
             </Button>
@@ -917,6 +1050,7 @@ const WordTest = ({ onBack, currentBank }) => {
                 {testType === 'picture' && '📷 看图选英文'}
                 {testType === 'en2zh' && '📖 英文选中文'}
                 {testType === 'listen' && '👂 听力选中文'}
+                {retestMode && ' (错题复习)'}
               </Typography>
               <Stack direction="row" spacing={1} alignItems="center">
                 <Chip 
@@ -939,96 +1073,136 @@ const WordTest = ({ onBack, currentBank }) => {
             </Stack>
           </Paper>
 
-          <Box sx={{ textAlign: 'center', mb: 2, position: 'relative' }}>
-            {testType === 'picture' && (
-              <Box sx={{ position: 'relative', display: 'inline-block' }}>
-                <Box onClick={(e) => { e.stopPropagation(); setModalOpen(true); }} sx={{ cursor: 'pointer' }}>
-<CardMedia 
-  component="img" 
-  image={getWordImage(currentWord)} 
-  sx={{ 
-    borderRadius: 2, 
-    width: "100%",
-    maxWidth: isFullscreen ? 600 : 400,
-    height: "auto",  // 自动高度
-    aspectRatio: "4/3",  // 固定宽高比
-    mx: 'auto',
-    objectFit: "contain"
-  }} 
-/>
-                </Box>
-                <Paper sx={{ 
-                  position: 'absolute', 
-                  bottom: 8, 
-                  left: '50%', 
-                  transform: 'translateX(-50%)',
-                  bgcolor: 'rgba(0,0,0,0.7)', 
-                  color: 'white', 
-                  px: 2, 
-                  py: 0.5,
-                  borderRadius: 4,
-                  fontSize: '0.9rem',
-                  fontWeight: 500
-                }}>
-                  {getWordTranslation(currentWord)}
-                </Paper>
-                <Tooltip title="播放发音">
-                  <IconButton 
-                    onClick={(e) => { e.stopPropagation(); speak(currentWord.word); }} 
+          {/* 图片模式 */}
+          {testType === 'picture' && (
+            <Box sx={{ position: 'relative', display: 'inline-block', width: '100%' }}>
+              <Box 
+                onClick={(e) => { 
+                  e.stopPropagation(); 
+                  if (getWordImage(currentWord)) {
+                    setModalOpen(true);
+                  }
+                }} 
+                sx={{ 
+                  cursor: getWordImage(currentWord) ? 'pointer' : 'default', 
+                  width: '100%' 
+                }}
+              >
+                {getWordImage(currentWord) ? (
+                  <CardMedia 
+                    component="img" 
+                    image={getWordImage(currentWord)} 
                     sx={{ 
-                      position: 'absolute', 
-                      top: 8, 
-                      right: 8, 
-                      bgcolor: 'primary.main', 
-                      color: 'white',
-                      animation: isPlaying ? 'pulse 1s infinite' : 'none'
+                      borderRadius: 2, 
+                      width: "100%",
+                      maxWidth: isFullscreen ? 600 : 400,
+                      height: "auto",
+                      aspectRatio: "4/3",
+                      mx: 'auto',
+                      objectFit: "contain"
+                    }} 
+                  />
+                ) : (
+                  <Box 
+                    sx={{ 
+                      borderRadius: 2, 
+                      width: "100%",
+                      maxWidth: isFullscreen ? 600 : 400,
+                      height: "auto",
+                      aspectRatio: "4/3",
+                      mx: 'auto',
+                      bgcolor: '#f5f5f5',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexDirection: 'column',
+                      gap: 1
                     }}
                   >
-                    <VolumeUpIcon />
-                  </IconButton>
-                </Tooltip>
+                    <ImageIcon sx={{ fontSize: 48, color: '#bdbdbd' }} />
+                    <Typography variant="body2" color="text.secondary">
+                      暂无图片
+                    </Typography>
+                  </Box>
+                )}
               </Box>
-            )}
-            {testType === 'en2zh' && (
-              <Box sx={{ position: 'relative', display: 'inline-block' }}>
-                <Paper sx={{ p: 2, bgcolor: '#f5f5f5', borderRadius: 2 }}>
-                  <Typography variant="h4">{currentWord.word}</Typography>
-                </Paper>
-                <Tooltip title="播放发音">
-                  <IconButton 
-                    onClick={(e) => { e.stopPropagation(); speak(currentWord.word); }} 
-                    sx={{ 
-                      position: 'absolute', 
-                      top: -10, 
-                      right: -10, 
-                      bgcolor: 'primary.main', 
-                      color: 'white' 
-                    }}
-                  >
-                    <VolumeUpIcon />
-                  </IconButton>
-                </Tooltip>
-              </Box>
-            )}
-            {testType === 'listen' && (
-              <Box>
+              
+              {/* 中文翻译标签 */}
+              <Paper sx={{ 
+                position: 'absolute', 
+                bottom: 8, 
+                left: '50%', 
+                transform: 'translateX(-50%)',
+                bgcolor: 'rgba(0,0,0,0.7)', 
+                color: 'white', 
+                px: 2, 
+                py: 0.5,
+                borderRadius: 4,
+                fontSize: '0.9rem',
+                fontWeight: 500
+              }}>
+                {getWordTranslation(currentWord)}
+              </Paper>
+              
+              {/* 播放发音按钮 */}
+              <Tooltip title="播放发音">
                 <IconButton 
                   onClick={(e) => { e.stopPropagation(); speak(currentWord.word); }} 
                   sx={{ 
+                    position: 'absolute', 
+                    top: 8, 
+                    right: 8, 
                     bgcolor: 'primary.main', 
-                    color: 'white', 
-                    width: 56, 
-                    height: 56, 
-                    animation: isPlaying ? 'pulse 1s infinite' : 'none' 
+                    color: 'white',
+                    animation: isPlaying ? 'pulse 1s infinite' : 'none'
                   }}
                 >
                   <VolumeUpIcon />
                 </IconButton>
-              </Box>
-            )}
-          </Box>
+              </Tooltip>
+            </Box>
+          )}
+          
+          {testType === 'en2zh' && (
+            <Box sx={{ position: 'relative', display: 'inline-block', width: '100%', textAlign: 'center' }}>
+              <Paper sx={{ p: 2, bgcolor: '#f5f5f5', borderRadius: 2, display: 'inline-block' }}>
+                <Typography variant="h4">{currentWord.word}</Typography>
+              </Paper>
+              <Tooltip title="播放发音">
+                <IconButton 
+                  onClick={(e) => { e.stopPropagation(); speak(currentWord.word); }} 
+                  sx={{ 
+                    position: 'absolute', 
+                    top: -10, 
+                    right: -10, 
+                    bgcolor: 'primary.main', 
+                    color: 'white' 
+                  }}
+                >
+                  <VolumeUpIcon />
+                </IconButton>
+              </Tooltip>
+            </Box>
+          )}
+          
+          {testType === 'listen' && (
+            <Box sx={{ textAlign: 'center' }}>
+              <IconButton 
+                onClick={(e) => { e.stopPropagation(); speak(currentWord.word); }} 
+                sx={{ 
+                  bgcolor: 'primary.main', 
+                  color: 'white', 
+                  width: 56, 
+                  height: 56, 
+                  animation: isPlaying ? 'pulse 1s infinite' : 'none' 
+                }}
+              >
+                <VolumeUpIcon />
+              </IconButton>
+            </Box>
+          )}
 
-          <FormControl component="fieldset" sx={{ width: '100%' }}>
+          <FormControl component="fieldset" sx={{ width: '100%', mt: 2 }}>
             <RadioGroup value={selected}>
               <Grid container spacing={1}>
                 {options.map((opt, i) => (
@@ -1093,59 +1267,49 @@ const WordTest = ({ onBack, currentBank }) => {
       )}
 
       {/* 确认开始答题对话框 */}
-      <Dialog open={showConfirmDialog} onClose={cancelStartTest} maxWidth="sm" fullWidth>
-        <DialogTitle sx={{ 
-          bgcolor: pendingSaveResult?.result?.savedCount > 0 ? '#4caf50' : '#2196f3',
-          color: 'white'
-        }}>
-          {pendingSaveResult?.result?.savedCount > 0 ? '✅ 保存成功' : '📝 准备就绪'}
+      <Dialog 
+        open={showConfirmDialog} 
+        onClose={(e) => cancelStartTest(e)} 
+        maxWidth="sm" 
+        fullWidth
+        disableEscapeKeyDown={false}
+      >
+        <DialogTitle>
+          {wrongWordsForRetest.length > 0 ? '错题复习' : '开始答题'}
         </DialogTitle>
-        <DialogContent sx={{ mt: 2 }}>
-          <Typography sx={{ whiteSpace: 'pre-line', mb: 2 }}>
-            {pendingSaveResult?.message || '单词已准备就绪，是否开始答题？'}
+        <DialogContent>
+          <Typography>
+            {wrongWordsForRetest.length > 0 
+              ? `您有 ${wrongWordsForRetest.length} 道错题，是否立即复习？` 
+              : pendingSaveResult?.message || '是否开始答题？'}
           </Typography>
-          {pendingQuestions && (
-            <Box sx={{ 
-              p: 2, 
-              bgcolor: '#f5f5f5', 
-              borderRadius: 2,
-              mb: 1
-            }}>
-              <Typography variant="body2" color="text.secondary">
-                📊 本次测试将包含 {pendingQuestions.length} 个单词
-              </Typography>
-            </Box>
-          )}
         </DialogContent>
-        <DialogActions sx={{ p: 2, pt: 0 }}>
-          <Button onClick={cancelStartTest} variant="outlined">
-            取消
+        <DialogActions>
+          <Button onClick={(e) => cancelStartTest(e)} variant="outlined" color="inherit">
+            {wrongWordsForRetest.length > 0 ? '跳过复习' : '取消'}
           </Button>
-          <Button onClick={confirmStartTest} variant="contained" color="primary" autoFocus>
-            开始答题
+          <Button onClick={(e) => confirmStartTest(e)} variant="contained" color={wrongWordsForRetest.length > 0 ? 'error' : 'primary'}>
+            {wrongWordsForRetest.length > 0 ? '开始复习错题' : '开始答题'}
           </Button>
         </DialogActions>
       </Dialog>
 
-      {/* 保存进度对话框 - 仅在保存错题时显示 */}
-      <Dialog open={savingWords && showConfirmDialog === false} maxWidth="xs" fullWidth>
+      {/* 保存进度对话框 */}
+      <Dialog open={savingWords && !showConfirmDialog} maxWidth="xs" fullWidth>
+        <DialogTitle>保存单词中</DialogTitle>
         <DialogContent>
           <Box sx={{ p: 2, textAlign: 'center' }}>
-            {savingWords ? (
-              <>
-                <CircularProgress size={50} sx={{ mb: 2 }} />
-                <Typography>正在保存单词... {saveProgress.saved}/{saveProgress.total}</Typography>
-                <LinearProgress 
-                  variant="determinate" 
-                  value={(saveProgress.saved / saveProgress.total) * 100} 
-                  sx={{ mt: 2, height: 6, borderRadius: 3 }} 
-                />
-                <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
-                  新增: {saveProgress.newWords} | 已有: {saveProgress.existingWords}
-                  {saveProgress.failed > 0 && ` | 失败: ${saveProgress.failed}`}
-                </Typography>
-              </>
-            ) : null}
+            <CircularProgress size={50} sx={{ mb: 2 }} />
+            <Typography>正在保存单词... {saveProgress.saved}/{saveProgress.total}</Typography>
+            <LinearProgress 
+              variant="determinate" 
+              value={(saveProgress.saved / saveProgress.total) * 100} 
+              sx={{ mt: 2, height: 6, borderRadius: 3 }} 
+            />
+            <Typography variant="caption" color="text.secondary" sx={{ mt: 1, display: 'block' }}>
+              新增: {saveProgress.newWords} | 已有: {saveProgress.existingWords}
+              {saveProgress.failed > 0 && ` | 失败: ${saveProgress.failed}`}
+            </Typography>
           </Box>
         </DialogContent>
       </Dialog>
@@ -1157,20 +1321,26 @@ const WordTest = ({ onBack, currentBank }) => {
           top: '50%', 
           left: '50%', 
           transform: 'translate(-50%, -50%)', 
-          p: 2, 
+          p: 3, 
           bgcolor: 'success.main', 
           color: 'white', 
-          zIndex: 9999 
+          zIndex: 9999,
+          borderRadius: 3,
+          textAlign: 'center'
         }}>
-          <EmojiEventsIcon sx={{ fontSize: 36, mb: 0.5 }} />
-          <Typography>全对！</Typography>
+          <EmojiEventsIcon sx={{ fontSize: 48, mb: 1 }} />
+          <Typography variant="h6">全对！太棒了！</Typography>
         </Paper>
       )}
 
-      {/* 图片放大 */}
+      {/* 图片放大模态框 */}
       <Modal 
         open={modalOpen} 
-        onClose={() => setModalOpen(false)} 
+        onClose={() => {
+          setModalOpen(false);
+          setImageScale(1);
+          setImageRotation(0);
+        }} 
         closeAfterTransition 
         BackdropComponent={Backdrop} 
         BackdropProps={{ timeout: 500, sx: { backgroundColor: 'rgba(0,0,0,0.95)' } }}
@@ -1212,16 +1382,37 @@ const WordTest = ({ onBack, currentBank }) => {
                   </IconButton>
                 </Tooltip>
               </Paper>
-              <IconButton onClick={() => setModalOpen(false)} sx={{ bgcolor: 'rgba(0,0,0,0.6)', color: 'white' }}>
+              <IconButton onClick={() => {
+                setModalOpen(false);
+                setImageScale(1);
+                setImageRotation(0);
+              }} sx={{ bgcolor: 'rgba(0,0,0,0.6)', color: 'white' }}>
                 <CloseIcon />
               </IconButton>
             </Box>
             <Box sx={{ transform: `scale(${imageScale}) rotate(${imageRotation}deg)`, transition: 'transform 0.2s ease' }}>
-              <img 
-                src={getWordImage(currentWord)} 
-                alt={currentWord?.word || ''} 
-                style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain', borderRadius: 8 }} 
-              />
+              {getWordImage(currentWord) ? (
+                <img 
+                  src={getWordImage(currentWord)} 
+                  alt={currentWord?.word || ''} 
+                  style={{ maxWidth: '90vw', maxHeight: '90vh', objectFit: 'contain', borderRadius: 8 }} 
+                />
+              ) : (
+                <Box sx={{ 
+                  width: '80vw', 
+                  height: '60vh', 
+                  bgcolor: '#f5f5f5', 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'center',
+                  flexDirection: 'column',
+                  gap: 2,
+                  borderRadius: 2
+                }}>
+                  <ImageIcon sx={{ fontSize: 64, color: '#bdbdbd' }} />
+                  <Typography variant="h6" color="text.secondary">暂无图片</Typography>
+                </Box>
+              )}
             </Box>
           </Box>
         </Fade>
@@ -1234,7 +1425,11 @@ const WordTest = ({ onBack, currentBank }) => {
         onClose={() => setSnackbar({ ...snackbar, open: false })} 
         anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
       >
-        <Alert severity={snackbar.severity} sx={{ borderRadius: 2, whiteSpace: 'pre-line' }}>
+        <Alert 
+          severity={snackbar.severity} 
+          sx={{ borderRadius: 2, whiteSpace: 'pre-line' }}
+          onClose={() => setSnackbar({ ...snackbar, open: false })}
+        >
           {snackbar.message}
         </Alert>
       </Snackbar>

@@ -36,7 +36,7 @@ import {
 } from '@mui/icons-material';
 import { alpha } from '@mui/material/styles';
 import passageClozeApi from './api';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 
 const PassageClozeTest = ({ 
   passageData = null,

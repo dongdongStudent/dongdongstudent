@@ -1,3 +1,4 @@
+// SentenceCenter.js - 修复 handleAddSentence 函数
 import React, { useState, useEffect } from 'react';
 import { sentenceApi } from './api';
 import { addGlobalStyles } from './utils';
@@ -541,8 +542,6 @@ const SentenceCenter = ({ externalSentences = null }) => {
   const [score, setScore] = useState(100);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
-  const [selectedFile, setSelectedFile] = useState('sentences');
-  const [availableFiles, setAvailableFiles] = useState([]);
   const [showViewer, setShowViewer] = useState(false);
   const [showExtractModal, setShowExtractModal] = useState(false);
   const [showAddModal, setShowAddModal] = useState(false);
@@ -550,6 +549,9 @@ const SentenceCenter = ({ externalSentences = null }) => {
   const [testResults, setTestResults] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [isProcessingExternal, setIsProcessingExternal] = useState(false);
+
+  // 固定文件名
+  const selectedFile = 'sentences';
 
   // 处理外部传入的句子
   useEffect(() => {
@@ -622,7 +624,7 @@ const SentenceCenter = ({ externalSentences = null }) => {
         result = await sentenceApi.updateSentence(selectedFile, existing.id, updatedData);
       } else {
         console.log('➕ 添加新句子');
-        result = await sentenceApi.addSentence(selectedFile, sentenceData);
+        result = await sentenceApi.addSentence(sentenceData, selectedFile);
       }
 
       if (result?.flag === 1) {
@@ -639,17 +641,8 @@ const SentenceCenter = ({ externalSentences = null }) => {
 
   useEffect(() => {
     addGlobalStyles();
-    loadFileList();
+    loadSentences();
   }, []);
-
-  const loadFileList = async () => {
-    try {
-      const result = await sentenceApi.getSentenceFiles();
-      if (result.flag === 1) setAvailableFiles(result.content.files);
-    } catch (error) {
-      console.error('加载文件列表失败:', error);
-    }
-  };
 
   const loadSentences = async () => {
     setLoading(true);
@@ -682,23 +675,45 @@ const SentenceCenter = ({ externalSentences = null }) => {
     }
   };
 
+  // ==================== 修复 handleAddSentence 函数 ====================
   const handleAddSentence = async (sentenceData) => {
+    console.log('📝 SentenceCenter 收到添加请求:', sentenceData);
+    
     try {
-      const result = await sentenceApi.addSentence(selectedFile, sentenceData);
+      // 准备发送到 API 的数据（不包含 id，让服务器生成）
+      const dataToSend = {
+        text: sentenceData.text,
+        chinese: sentenceData.chinese,
+        pass: sentenceData.pass || false,
+        correct_count: sentenceData.correct_count || 0,
+        wrong_count: sentenceData.wrong_count || 0,
+        extraction_count: sentenceData.extraction_count || 0,
+        last_answer_time: sentenceData.last_answer_time || new Date().toISOString(),
+        time: sentenceData.time || new Date().toISOString()
+      };
       
-      if (result.flag === 1) {
-        setAllSentences(prev => [...prev, sentenceData]);
+      console.log('发送到服务器的数据:', dataToSend);
+      
+      // 修复：正确的参数顺序 (sentenceData, target)
+      const result = await sentenceApi.addSentence(dataToSend, selectedFile);
+      
+      console.log('服务器返回结果:', result);
+      
+      if (result && result.flag === 1) {
+        // 添加成功，重新加载句子列表
+        await loadSentences();
         setMessage(`✅ 句子添加成功：${sentenceData.text}`);
-        loadFileList();
         return result;
       } else {
-        throw new Error(result.message || '添加失败');
+        throw new Error(result?.message || '添加失败');
       }
     } catch (error) {
       console.error('添加句子失败:', error);
+      setMessage(`❌ 添加失败：${error.message}`);
       throw error;
     }
   };
+  // ==================== handleAddSentence 修复结束 ====================
 
   const handleExtract = (extracted, extractMessage) => {
     setTestSentences(extracted);
@@ -765,21 +780,11 @@ const SentenceCenter = ({ externalSentences = null }) => {
     <div style={styles.container}>
       <h1 style={styles.title}>📝 句子听力测试</h1>
       
-      {/* 控制栏 */}
+      {/* 控制栏 - 移除文件选择器 */}
       <div style={styles.controlBar}>
-        <div style={styles.fileSelector}>
-          <select value={selectedFile} onChange={(e) => setSelectedFile(e.target.value)} style={styles.select}>
-            {availableFiles.length > 0 ? (
-              availableFiles.map(file => (
-                <option key={file} value={file.replace('.json', '')}>{file}</option>
-              ))
-            ) : (
-              <option value="sentences">sentences.json</option>
-            )}
-          </select>
-          
+        <div style={styles.buttonGroup}>
           <button onClick={loadSentences} style={styles.button} disabled={loading}>
-            {loading ? '加载中' : '📂 加载'}
+            {loading ? '加载中' : '📂 刷新'}
           </button>
           
           {loaded && (
@@ -1514,11 +1519,7 @@ const styles = {
     backgroundColor: 'white', padding: '15px', borderRadius: '10px',
     marginBottom: '15px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
   },
-  fileSelector: { display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' },
-  select: {
-    padding: '8px 12px', borderRadius: '5px', border: '1px solid #ddd',
-    minWidth: '150px', fontSize: '14px'
-  },
+  buttonGroup: { display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' },
   button: {
     padding: '8px 16px', backgroundColor: '#2196F3', color: 'white',
     border: 'none', borderRadius: '5px', cursor: 'pointer', fontSize: '14px',
@@ -1568,22 +1569,12 @@ const styles = {
   extractPrompt: {
     textAlign: 'center', padding: '80px 20px', backgroundColor: 'white',
     borderRadius: '16px', color: '#999', boxShadow: '0 2px 8px rgba(0,0,0,0.05)'
-  },
-  progress: { marginTop: '20px' },
-  progressBar: {
-    width: '100%', height: '8px', backgroundColor: '#e0e0e0',
-    borderRadius: '4px', overflow: 'hidden', marginBottom: '10px'
-  },
-  progressFill: { height: '100%', backgroundColor: '#4CAF50', transition: 'width 0.3s ease' },
-  testStats: {
-    display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-    fontSize: '14px', color: '#666'
   }
 };
 
 // 添加全局动画
-const style = document.createElement('style');
-style.textContent = `
+const styleElement = document.createElement('style');
+styleElement.textContent = `
   @keyframes fall {
     0% { top: -10%; transform: translateX(0) rotate(0deg); }
     100% { top: 110%; transform: translateX(20px) rotate(360deg); }
@@ -1612,7 +1603,6 @@ style.textContent = `
     }
   }
 `;
-document.head.appendChild(style);
+document.head.appendChild(styleElement);
 
-export { AddSentenceModal };
 export default SentenceCenter;

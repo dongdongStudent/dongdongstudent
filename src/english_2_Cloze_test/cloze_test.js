@@ -31,7 +31,7 @@ import {
 } from '@mui/icons-material';
 import { alpha } from '@mui/material/styles';
 import { clozeApi } from './api.js';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 import "./cloze_test.css"
 
 const ClozeTestSimple = ({ 

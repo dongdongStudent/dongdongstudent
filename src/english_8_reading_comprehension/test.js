@@ -8,12 +8,7 @@ import {
   Alert,
   Card,
   CardContent,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
   LinearProgress,
-  Collapse,
   IconButton,
   Tooltip,
   Zoom,
@@ -23,7 +18,8 @@ import {
   useMediaQuery,
   Grid,
   Modal,
-  Backdrop
+  Backdrop,
+  Collapse
 } from '@mui/material';
 import {
   CheckCircle as CheckCircleIcon,
@@ -31,7 +27,6 @@ import {
   Lightbulb as LightbulbIcon,
   NavigateBefore as NavigateBeforeIcon,
   NavigateNext as NavigateNextIcon,
-  Psychology as PsychologyIcon,
   Send as SendIcon,
   MenuBook as MenuBookIcon,
   Refresh as RefreshIcon,
@@ -40,9 +35,11 @@ import {
   Close as CloseIcon,
   ZoomIn as ZoomInIcon,
   ZoomOut as ZoomOutIcon,
-  RotateRight as RotateRightIcon
+  RotateRight as RotateRightIcon,
+  ExpandMore as ExpandMoreIcon,
+  ExpandLess as ExpandLessIcon
 } from '@mui/icons-material';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 
 const ReadingTest = ({
   passage,
@@ -117,48 +114,35 @@ const ReadingTest = ({
     };
   }, [isDragging]);
 
-  // ========== 图片路径处理函数（修正为正确路径） ==========
+  // ========== 图片路径处理函数 ==========
   const getImageUrl = (imagePath) => {
     if (!imagePath) return '';
     
-    // 如果是相对路径（以 ./ 开头），转换为完整 URL
     if (imagePath.startsWith('./')) {
-      // 移除开头的 ./
       const relativePath = imagePath.substring(2);
-      // 构建正确的完整 URL
       return `https://www.ddstudent.xyz/server/src/1_english/resource/english_test_8_test_reading/${relativePath}`;
     }
     
-    // 如果是绝对路径（以 http 开头），直接返回
     if (imagePath.startsWith('http')) {
       return imagePath;
     }
     
-    // 其他情况，原样返回
     return imagePath;
   };
 
   // ========== 图片点击放大功能 ==========
   const handleImageClick = (src, alt) => {
-    if (!src) {
-      console.warn('图片源为空');
-      return;
-    }
-    setSelectedImage({ 
-      src, 
-      alt: alt || '图片预览' 
-    });
-    setImageScale(1); // 重置缩放
-    setImageRotation(0); // 重置旋转
+    if (!src) return;
+    setSelectedImage({ src, alt: alt || '图片预览' });
+    setImageScale(1);
+    setImageRotation(0);
     setModalOpen(true);
   };
 
-  // ========== 关闭图片放大模态框 ==========
   const handleCloseModal = () => {
     setModalOpen(false);
   };
 
-  // ========== 图片缩放控制 ==========
   const handleZoomIn = () => {
     setImageScale(prev => Math.min(prev + 0.25, 3));
   };
@@ -178,227 +162,651 @@ const ReadingTest = ({
 
   // ========== 单词点击翻译功能 ==========
   const handleWordClick = (word, e) => {
-    if (e) {
-      e.stopPropagation();
-    }
+    if (e) e.stopPropagation();
     
-    // 清理单词（去掉标点符号）
     const cleanedWord = word.replace(/[.,!?;:"()\[\]{}]$/g, "").trim();
     
-    // 验证是否为有效英文单词
     if (cleanedWord && /^[a-zA-Z'\-]+$/.test(cleanedWord) && cleanedWord.length >= 2) {
       setTranslateWord(cleanedWord);
       setShowTranslator(true);
     }
   };
 
-  // ========== 渲染可点击的文本（无下划线版） ==========
-  const renderClickableText = (text, stopPropagation = true) => {
-    if (!text) return text;
-    
-    const elements = [];
-    let lastIndex = 0;
-    
-    // 匹配英文单词的正则（至少2个字符）
-    const wordRegex = /\b[a-zA-Z'\-]{2,}\b/g;
-    let match;
-    
-    while ((match = wordRegex.exec(text)) !== null) {
-      // 添加单词前的普通文本
-      if (match.index > lastIndex) {
-        elements.push(text.substring(lastIndex, match.index));
-      }
-      
-      // 添加可点击的单词
-      const word = match[0];
-      elements.push(
-        <span
-          key={`word-${match.index}`}
-          style={{
-            cursor: 'pointer',
-            color: 'inherit',
-            fontWeight: 'inherit',
-            borderRadius: '2px',
-            backgroundColor: 'transparent',
-            display: 'inline',
-            lineHeight: 'inherit',
-            whiteSpace: 'normal',
-            wordBreak: 'break-word',
-            transition: 'background-color 0.2s ease'
-          }}
-          onClick={(e) => {
-            if (stopPropagation) {
-              e.stopPropagation();
-            }
-            handleWordClick(word, e);
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(26, 35, 126, 0.05)';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent';
-          }}
-          title="点击翻译"
-        >
-          {word}
-        </span>
-      );
-      
-      lastIndex = match.index + word.length;
-    }
-    
-    // 添加剩余的文本
-    if (lastIndex < text.length) {
-      elements.push(text.substring(lastIndex));
-    }
-    
-    return elements;
-  };
-
-  // ========== 渲染选项（支持图片）- 完全修复空值错误 ==========
-  const renderOption = (option, optionLetter, isSelected, isCorrect, isWrong, currentResult) => {
-    // 如果 option 为空，返回空
-    if (!option) return null;
-    
-    // 处理普通文本选项
-    if (typeof option === 'string') {
-      return (
-        <Box component="span" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Typography
-            component="span"
-            sx={{
-              fontWeight: isSelected ? 600 : 400,
-              color: isCorrect ? '#4caf50' : isWrong ? '#f44336' : 'inherit',
-              textDecoration: isWrong ? 'line-through' : 'none'
+// ========== 渲染可点击的文本（整个区域箭头样式） ==========
+const renderClickableText = (text, stopPropagation = true) => {
+  if (!text) return text;
+  
+  const elements = [];
+  let lastIndex = 0;
+  const wordRegex = /\b[a-zA-Z'\-]{2,}\b/g;
+  let match;
+  
+  while ((match = wordRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      // 普通文本部分（包括空格）
+      const plainText = text.substring(lastIndex, match.index);
+      if (plainText) {
+        elements.push(
+          <span
+            key={`plain-${match.index}`}
+            style={{
+              cursor: 'default',
+              display: 'inline',
+              whiteSpace: 'normal',
+              wordBreak: 'break-word'
             }}
           >
-            {optionLetter}. {renderClickableText(option)}
-          </Typography>
-          {isCorrect && (
-            <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 18 }} />
+            {plainText}
+          </span>
+        );
+      }
+    }
+    
+    const word = match[0];
+    elements.push(
+      <span
+        key={`word-${match.index}`}
+        style={{
+          cursor: 'default',
+          color: 'inherit',
+          fontWeight: 'inherit',
+          borderRadius: '2px',
+          backgroundColor: 'transparent',
+          display: 'inline',
+          lineHeight: 'inherit',
+          whiteSpace: 'normal',
+          wordBreak: 'break-word',
+          transition: 'background-color 0.2s ease'
+        }}
+        onClick={(e) => {
+          if (stopPropagation) e.stopPropagation();
+          handleWordClick(word, e);
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = 'rgba(26, 35, 126, 0.05)';
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = 'transparent';
+        }}
+        title="点击翻译"
+      >
+        {word}
+      </span>
+    );
+    
+    lastIndex = match.index + word.length;
+  }
+  
+  if (lastIndex < text.length) {
+    const remainingText = text.substring(lastIndex);
+    if (remainingText) {
+      elements.push(
+        <span
+          key={`plain-end`}
+          style={{
+            cursor: 'default',
+            display: 'inline',
+            whiteSpace: 'normal',
+            wordBreak: 'break-word'
+          }}
+        >
+          {remainingText}
+        </span>
+      );
+    }
+  }
+  
+  return elements;
+};
+
+  // ========== 渲染选项（悬浮解析版本） ==========
+  const renderOption = (option, optionLetter, isSelected, isCorrect, isWrong, onSelect) => {
+    if (!option) return null;
+    
+    const handleLetterClick = (e) => {
+      e.stopPropagation();
+      if (onSelect && !isCorrect && !isWrong) {
+        onSelect(optionLetter);
+      }
+    };
+    
+    // 获取当前题目的解析内容
+    const currentQ = questions[currentQuestionIndex];
+    const currentResult = currentQ ? results[currentQ.id] : null;
+    const explanationContent = currentQ ? (explanations[currentQ.id]?.explanation || currentQ.explanation || '') : '';
+    
+    if (typeof option === 'string') {
+      return (
+        <Box sx={{ position: 'relative' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+            {/* 可点击的字母区域 */}
+            <Box
+              onClick={handleLetterClick}
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 36,
+                height: 36,
+                borderRadius: '50%',
+                backgroundColor: isSelected ? '#1a237e' : '#e0e0e0',
+                color: isSelected ? 'white' : '#1a237e',
+                // cursor: isCorrect || isWrong ? 'default' : 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+                transition: 'all 0.2s ease',
+                flexShrink: 0,
+                '&:hover': {
+                  backgroundColor: isSelected ? '#283593' : (isCorrect || isWrong ? '#e0e0e0' : '#bdbdbd'),
+                  transform: (isCorrect || isWrong) ? 'none' : 'scale(1.05)'
+                }
+              }}
+            >
+              {optionLetter}
+            </Box>
+            {/* 不可点击的选项内容 */}
+<Typography
+  component="span"
+  sx={{
+    fontWeight: isSelected ? 600 : 400,
+    color: isCorrect ? '#4caf50' : isWrong ? '#f44336' : 'inherit',
+    textDecoration: isWrong ? 'line-through' : 'none',
+    fontSize: '0.95rem',
+    cursor: 'default',  // ✅ 箭头样式
+    flex: 1
+  }}
+>
+  {renderClickableText(option, false)}  {/* 里面的单词也会有自己的 cursor 样式 */}
+</Typography>
+            {isCorrect && (
+              <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
+            )}
+            {isWrong && (
+              <CancelIcon sx={{ color: '#f44336', fontSize: 20 }} />
+            )}
+          </Box>
+          
+          {/* 悬浮解析 - 只在选中且错误时显示 */}
+          {isWrong && explanationContent && (
+            <Paper
+              elevation={8}
+              sx={{
+                position: 'absolute',
+                top: 'calc(100% + 8px)',
+                left: 0,
+                right: 0,
+                p: 1.5,
+                zIndex: 1400,
+                bgcolor: '#fff8e1',
+                border: '1px solid #ffb300',
+                borderRadius: 2,
+                boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                maxWidth: '100%',
+                wordBreak: 'break-word',
+                minWidth: '200px'
+              }}
+            >
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
+                <LightbulbIcon sx={{ color: '#ffb300', fontSize: 18, mt: 0.2, flexShrink: 0 }} />
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="caption" sx={{ color: '#ff8f00', fontWeight: 600, display: 'block', mb: 0.5 }}>
+                    题目解析
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#5d4e2e', lineHeight: 1.5 }}>
+                    {renderClickableText(explanationContent, false)}
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#f44336', fontWeight: 500, display: 'block', mt: 1 }}>
+                    正确答案: {currentResult?.correctAnswer}
+                  </Typography>
+                </Box>
+              </Box>
+              {/* 小三角箭头 */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: -8,
+                  left: 18,
+                  width: 0,
+                  height: 0,
+                  borderLeft: '8px solid transparent',
+                  borderRight: '8px solid transparent',
+                  borderBottom: '8px solid #ffb300',
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 1,
+                    left: -7,
+                    width: 0,
+                    height: 0,
+                    borderLeft: '7px solid transparent',
+                    borderRight: '7px solid transparent',
+                    borderBottom: '7px solid #fff8e1'
+                  }
+                }}
+              />
+            </Paper>
           )}
         </Box>
       );
     }
     
-    // 处理对象类型的选项
     const hasImage = option?.image || option?.imageUrl;
     
-    // 如果选项包含图片
     if (hasImage) {
       const imageSrc = getImageUrl(option.image || option.imageUrl);
       const imageAlt = option?.text || `选项${optionLetter}`;
       
       return (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          <Typography
-            sx={{
-              fontWeight: isSelected ? 600 : 400,
-              color: isCorrect ? '#4caf50' : isWrong ? '#f44336' : 'inherit',
-              minWidth: '24px'
-            }}
-          >
-            {optionLetter}.
-          </Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {imageSrc && (
-              <Box 
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleImageClick(imageSrc, imageAlt);
-                }}
-                sx={{ cursor: 'pointer', position: 'relative' }}
-              >
-                <img 
-                  src={imageSrc} 
-                  alt={imageAlt}
-                  style={{
-                    maxWidth: '100px',
-                    maxHeight: '100px',
-                    objectFit: 'contain',
-                    borderRadius: '8px',
-                    border: isSelected ? '2px solid #1a237e' : '1px solid #e0e0e0',
-                    marginBottom: '4px',
-                    transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                    cursor: 'pointer'
+        <Box sx={{ position: 'relative' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
+            {/* 可点击的字母区域 */}
+            <Box
+              onClick={handleLetterClick}
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 36,
+                height: 36,
+                borderRadius: '50%',
+                backgroundColor: isSelected ? '#1a237e' : '#e0e0e0',
+                color: isSelected ? 'white' : '#1a237e',
+                // cursor: isCorrect || isWrong ? 'default' : 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+                transition: 'all 0.2s ease',
+                flexShrink: 0,
+                '&:hover': {
+                  backgroundColor: isSelected ? '#283593' : (isCorrect || isWrong ? '#e0e0e0' : '#bdbdbd'),
+                  transform: (isCorrect || isWrong) ? 'none' : 'scale(1.05)'
+                }
+              }}
+            >
+              {optionLetter}
+            </Box>
+            {/* 不可点击的选项内容 */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flex: 1 }}>
+              {imageSrc && (
+                <Box 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleImageClick(imageSrc, imageAlt);
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'scale(1.05)';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                />
-                <ZoomInIcon 
-                  sx={{ 
-                    position: 'absolute', 
-                    bottom: 8, 
-                    right: 8, 
-                    fontSize: 18, 
-                    color: '#1a237e',
-                    backgroundColor: 'rgba(255,255,255,0.8)',
-                    borderRadius: '50%',
-                    padding: '2px',
-                    opacity: 0.7
-                  }} 
-                />
-              </Box>
-            )}
-            {option?.text && (
-              <Typography variant="caption">
-                {renderClickableText(option.text)}
-              </Typography>
-            )}
+                  // sx={{ cursor: 'pointer', position: 'relative' }}
+                >
+                  <img 
+                    src={imageSrc} 
+                    alt={imageAlt}
+                    style={{
+                      maxWidth: '120px',
+                      maxHeight: '120px',
+                      objectFit: 'contain',
+                      borderRadius: '8px',
+                      border: isSelected ? '2px solid #1a237e' : '1px solid #e0e0e0',
+                      marginBottom: '4px',
+                      transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                      // cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'scale(1.05)';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'scale(1)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  />
+                  <ZoomInIcon 
+                    sx={{ 
+                      position: 'absolute', 
+                      bottom: 8, 
+                      right: 8, 
+                      fontSize: 18, 
+                      color: '#1a237e',
+                      backgroundColor: 'rgba(255,255,255,0.8)',
+                      borderRadius: '50%',
+                      padding: '2px',
+                      opacity: 0.7
+                    }} 
+                  />
+                </Box>
+              )}
+              {option?.text && (
+                <Typography variant="caption" sx={{ mt: 0.5, textAlign: 'center' }}>
+                  {renderClickableText(option.text, false)}
+                </Typography>
+              )}
+            </Box>
+            {isCorrect && <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />}
+            {isWrong && <CancelIcon sx={{ color: '#f44336', fontSize: 20 }} />}
           </Box>
-          {isCorrect && <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 18, ml: 1 }} />}
+          
+          {/* 悬浮解析 - 只在选中且错误时显示 */}
+          {isWrong && explanationContent && (
+            <Paper
+              elevation={8}
+              sx={{
+                position: 'absolute',
+                top: 'calc(100% + 8px)',
+                left: 0,
+                right: 0,
+                p: 1.5,
+                zIndex: 1400,
+                bgcolor: '#fff8e1',
+                border: '1px solid #ffb300',
+                borderRadius: 2,
+                boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                maxWidth: '100%',
+                wordBreak: 'break-word',
+                minWidth: '200px'
+              }}
+            >
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
+                <LightbulbIcon sx={{ color: '#ffb300', fontSize: 18, mt: 0.2, flexShrink: 0 }} />
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="caption" sx={{ color: '#ff8f00', fontWeight: 600, display: 'block', mb: 0.5 }}>
+                    题目解析
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#5d4e2e', lineHeight: 1.5 }}>
+                    {renderClickableText(explanationContent, false)}
+                  </Typography>
+                  <Typography variant="caption" sx={{ color: '#f44336', fontWeight: 500, display: 'block', mt: 1 }}>
+                    正确答案: {currentResult?.correctAnswer}
+                  </Typography>
+                </Box>
+              </Box>
+              {/* 小三角箭头 */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: -8,
+                  left: 18,
+                  width: 0,
+                  height: 0,
+                  borderLeft: '8px solid transparent',
+                  borderRight: '8px solid transparent',
+                  borderBottom: '8px solid #ffb300',
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 1,
+                    left: -7,
+                    width: 0,
+                    height: 0,
+                    borderLeft: '7px solid transparent',
+                    borderRight: '7px solid transparent',
+                    borderBottom: '7px solid #fff8e1'
+                  }
+                }}
+              />
+            </Paper>
+          )}
         </Box>
       );
     }
     
-    // 默认处理（对象但没有图片）
     return (
-      <Box component="span" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <Typography
-          component="span"
-          sx={{
-            fontWeight: isSelected ? 600 : 400,
-            color: isCorrect ? '#4caf50' : isWrong ? '#f44336' : 'inherit',
-            textDecoration: isWrong ? 'line-through' : 'none'
-          }}
-        >
-          {optionLetter}. {renderClickableText(option?.text || '')}
-        </Typography>
-        {isCorrect && (
-          <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 18 }} />
+      <Box sx={{ position: 'relative' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
+          {/* 可点击的字母区域 */}
+          <Box
+            onClick={handleLetterClick}
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: 36,
+              height: 36,
+              borderRadius: '50%',
+              backgroundColor: isSelected ? '#1a237e' : '#e0e0e0',
+              color: isSelected ? 'white' : '#1a237e',
+              // cursor: isCorrect || isWrong ? 'default' : 'pointer',
+              fontWeight: 'bold',
+              fontSize: '1rem',
+              transition: 'all 0.2s ease',
+              flexShrink: 0,
+              '&:hover': {
+                backgroundColor: isSelected ? '#283593' : (isCorrect || isWrong ? '#e0e0e0' : '#bdbdbd'),
+                transform: (isCorrect || isWrong) ? 'none' : 'scale(1.05)'
+              }
+            }}
+          >
+            {optionLetter}
+          </Box>
+          {/* 不可点击的选项内容 */}
+          <Typography
+            component="span"
+            sx={{
+              fontWeight: isSelected ? 600 : 400,
+              color: isCorrect ? '#4caf50' : isWrong ? '#f44336' : 'inherit',
+              textDecoration: isWrong ? 'line-through' : 'none',
+              fontSize: '0.95rem',
+              flex: 1
+            }}
+          >
+            {renderClickableText(option?.text || '', false)}
+          </Typography>
+          {isCorrect && (
+            <CheckCircleIcon sx={{ color: '#4caf50', fontSize: 20 }} />
+          )}
+          {isWrong && (
+            <CancelIcon sx={{ color: '#f44336', fontSize: 20 }} />
+          )}
+        </Box>
+        
+        {/* 悬浮解析 - 只在选中且错误时显示 */}
+        {isWrong && explanationContent && (
+          <Paper
+            elevation={8}
+            sx={{
+              position: 'absolute',
+              top: 'calc(100% + 8px)',
+              left: 0,
+              right: 0,
+              p: 1.5,
+              zIndex: 1400,
+              bgcolor: '#fff8e1',
+              border: '1px solid #ffb300',
+              borderRadius: 2,
+              boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+              maxWidth: '100%',
+              wordBreak: 'break-word',
+              minWidth: '200px'
+            }}
+          >
+            <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
+              <LightbulbIcon sx={{ color: '#ffb300', fontSize: 18, mt: 0.2, flexShrink: 0 }} />
+              <Box sx={{ flex: 1 }}>
+                <Typography variant="caption" sx={{ color: '#ff8f00', fontWeight: 600, display: 'block', mb: 0.5 }}>
+                  题目解析
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#5d4e2e', lineHeight: 1.5 }}>
+                  {renderClickableText(explanationContent, false)}
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#f44336', fontWeight: 500, display: 'block', mt: 1 }}>
+                  正确答案: {currentResult?.correctAnswer}
+                </Typography>
+              </Box>
+            </Box>
+            {/* 小三角箭头 */}
+            <Box
+              sx={{
+                position: 'absolute',
+                top: -8,
+                left: 18,
+                width: 0,
+                height: 0,
+                borderLeft: '8px solid transparent',
+                borderRight: '8px solid transparent',
+                borderBottom: '8px solid #ffb300',
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  top: 1,
+                  left: -7,
+                  width: 0,
+                  height: 0,
+                  borderLeft: '7px solid transparent',
+                  borderRight: '7px solid transparent',
+                  borderBottom: '7px solid #fff8e1'
+                }
+              }}
+            />
+          </Paper>
         )}
       </Box>
     );
   };
 
-  // ========== 核对当前题目 ==========
-  const handleCheckCurrent = () => {
-    const currentQ = questions[currentQuestionIndex];
-    if (!currentQ) return;
-    
-    const answer = answers[currentQ.id];
-    if (!answer) {
-      alert('请先选择答案');
-      return;
+  // ========== 渲染文章内容 ==========
+  const renderContent = (content) => {
+    if (!content) {
+      return (
+        <Alert severity="warning" sx={{ mb: 2 }}>
+          ⚠️ 文章内容为空
+        </Alert>
+      );
     }
-
-    const correctAnswer = currentQ.correctAnswer;
-    const isCorrect = answer === correctAnswer;
     
-    setResults(prev => ({
-      ...prev,
-      [currentQ.id]: {
-        isCorrect,
-        correctAnswer,
-        userAnswer: answer
+    const imageRegex = /!\[(.*?)\]\((.*?)\)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+    
+    imageRegex.lastIndex = 0;
+    
+    while ((match = imageRegex.exec(content)) !== null) {
+      if (match.index > lastIndex) {
+        const textBefore = content.substring(lastIndex, match.index);
+        const lines = textBefore.split('\n');
+        lines.forEach((line, idx) => {
+          if (line.trim() === '') {
+            parts.push(<Box key={`text-empty-${idx}`} sx={{ height: 12 }} />);
+          } else if (line.startsWith('### ')) {
+            parts.push(
+              <Typography key={`text-h-${idx}`} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
+                {renderClickableText(line.substring(4))}
+              </Typography>
+            );
+          } else {
+            parts.push(
+              <Typography key={`text-p-${idx}`} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
+                {renderClickableText(line)}
+              </Typography>
+            );
+          }
+        });
       }
-    }));
+      
+      const imageAlt = match && match[1] ? match[1] : '文章图片';
+      const imagePath = match && match[2] ? match[2] : '';
+      
+      if (imagePath) {
+        const imageUrl = getImageUrl(imagePath);
+        if (imageUrl) {
+          parts.push(
+            <Box 
+              key={`img-${match.index}`} 
+              sx={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                my: 2,
+                // cursor: 'pointer',
+                position: 'relative'
+              }}
+              onClick={(e) => {
+                e.stopPropagation();
+                if (imageUrl) handleImageClick(imageUrl, imageAlt);
+              }}
+            >
+              <img 
+                src={imageUrl} 
+                alt={imageAlt}
+                style={{ 
+                  maxWidth: '100%', 
+                  maxHeight: '300px', 
+                  objectFit: 'contain',
+                  borderRadius: '8px',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                  // cursor: 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+                }}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = 'https://via.placeholder.com/400x300?text=图片加载失败';
+                }}
+              />
+              <ZoomInIcon 
+                sx={{ 
+                  position: 'absolute', 
+                  bottom: 16, 
+                  right: 16, 
+                  fontSize: 24, 
+                  color: '#1a237e',
+                  backgroundColor: 'rgba(255,255,255,0.9)',
+                  borderRadius: '50%',
+                  padding: '4px',
+                  opacity: 0.8,
+                  '&:hover': { opacity: 1 }
+                }} 
+              />
+            </Box>
+          );
+        }
+      }
+      
+      lastIndex = match.index + match[0].length;
+    }
+    
+    if (lastIndex < content.length) {
+      const remainingText = content.substring(lastIndex);
+      const lines = remainingText.split('\n');
+      lines.forEach((line, idx) => {
+        if (line.trim() === '') {
+          parts.push(<Box key={`remain-empty-${idx}`} sx={{ height: 12 }} />);
+        } else if (line.startsWith('### ')) {
+          parts.push(
+            <Typography key={`remain-h-${idx}`} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
+              {renderClickableText(line.substring(4))}
+            </Typography>
+          );
+        } else {
+          parts.push(
+            <Typography key={`remain-p-${idx}`} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
+              {renderClickableText(line)}
+            </Typography>
+          );
+        }
+      });
+    }
+    
+    return parts.length > 0 ? parts : (
+      content.split('\n').map((line, index) => {
+        if (line.trim() === '') {
+          return <Box key={index} sx={{ height: 12 }} />;
+        }
+        if (line.startsWith('### ')) {
+          return (
+            <Typography key={index} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
+              {renderClickableText(line.substring(4))}
+            </Typography>
+          );
+        }
+        return (
+          <Typography key={index} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
+            {renderClickableText(line)}
+          </Typography>
+        );
+      })
+    );
   };
 
   // ========== 上一题/下一题 ==========
@@ -434,168 +842,6 @@ const ReadingTest = ({
     }
   };
 
-  // ========== 渲染文章内容（支持图片）- 修复图片放大错误 ==========
-  const renderContent = (content) => {
-    if (!content) {
-      return (
-        <Alert severity="warning" sx={{ mb: 2 }}>
-          ⚠️ 文章内容为空
-        </Alert>
-      );
-    }
-    
-    // 如果内容包含图片标记 ![alt](url)
-    const imageRegex = /!\[(.*?)\]\((.*?)\)/g;
-    const parts = [];
-    let lastIndex = 0;
-    let match;
-    
-    // 重置正则表达式的 lastIndex
-    imageRegex.lastIndex = 0;
-    
-    while ((match = imageRegex.exec(content)) !== null) {
-      // 添加图片前的文本
-      if (match.index > lastIndex) {
-        const textBefore = content.substring(lastIndex, match.index);
-        const lines = textBefore.split('\n');
-        lines.forEach((line, idx) => {
-          if (line.trim() === '') {
-            parts.push(<Box key={`text-empty-${idx}`} sx={{ height: 12 }} />);
-          } else if (line.startsWith('### ')) {
-            parts.push(
-              <Typography key={`text-h-${idx}`} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
-                {renderClickableText(line.substring(4))}
-              </Typography>
-            );
-          } else {
-            parts.push(
-              <Typography key={`text-p-${idx}`} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
-                {renderClickableText(line)}
-              </Typography>
-            );
-          }
-        });
-      }
-      
-      // 安全地获取图片信息
-      const imageAlt = match && match[1] ? match[1] : '文章图片';
-      const imagePath = match && match[2] ? match[2] : '';
-      
-      // 添加图片 - 使用 getImageUrl 转换路径，并添加点击放大功能
-      if (imagePath) {
-        const imageUrl = getImageUrl(imagePath);
-        if (imageUrl) {
-          parts.push(
-            <Box 
-              key={`img-${match.index}`} 
-              sx={{ 
-                display: 'flex', 
-                justifyContent: 'center', 
-                my: 2,
-                cursor: 'pointer',
-                position: 'relative'
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                if (imageUrl) {
-                  handleImageClick(imageUrl, imageAlt);
-                }
-              }}
-            >
-              <img 
-                src={imageUrl} 
-                alt={imageAlt}
-                style={{ 
-                  maxWidth: '100%', 
-                  maxHeight: '300px', 
-                  objectFit: 'contain',
-                  borderRadius: '8px',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                  transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'scale(1.02)';
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'scale(1)';
-                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-                }}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = 'https://via.placeholder.com/400x300?text=图片加载失败';
-                }}
-              />
-              <ZoomInIcon 
-                sx={{ 
-                  position: 'absolute', 
-                  bottom: 16, 
-                  right: 16, 
-                  fontSize: 24, 
-                  color: '#1a237e',
-                  backgroundColor: 'rgba(255,255,255,0.9)',
-                  borderRadius: '50%',
-                  padding: '4px',
-                  opacity: 0.8,
-                  '&:hover': {
-                    opacity: 1
-                  }
-                }} 
-              />
-            </Box>
-          );
-        }
-      }
-      
-      lastIndex = match.index + match[0].length;
-    }
-    
-    // 添加剩余的文本
-    if (lastIndex < content.length) {
-      const remainingText = content.substring(lastIndex);
-      const lines = remainingText.split('\n');
-      lines.forEach((line, idx) => {
-        if (line.trim() === '') {
-          parts.push(<Box key={`remain-empty-${idx}`} sx={{ height: 12 }} />);
-        } else if (line.startsWith('### ')) {
-          parts.push(
-            <Typography key={`remain-h-${idx}`} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
-              {renderClickableText(line.substring(4))}
-            </Typography>
-          );
-        } else {
-          parts.push(
-            <Typography key={`remain-p-${idx}`} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
-              {renderClickableText(line)}
-            </Typography>
-          );
-        }
-      });
-    }
-    
-    return parts.length > 0 ? parts : (
-      // 如果没有图片标记，按原方式处理
-      content.split('\n').map((line, index) => {
-        if (line.trim() === '') {
-          return <Box key={index} sx={{ height: 12 }} />;
-        }
-        if (line.startsWith('### ')) {
-          return (
-            <Typography key={index} variant="h6" sx={{ mt: 3, mb: 1, color: '#1a237e', fontWeight: 600, borderLeft: '4px solid #ffd700', pl: 2 }}>
-              {renderClickableText(line.substring(4))}
-            </Typography>
-          );
-        }
-        return (
-          <Typography key={index} variant="body1" paragraph sx={{ lineHeight: 1.8, textIndent: '2em', mb: 1.5, color: '#2c3e50' }}>
-            {renderClickableText(line)}
-          </Typography>
-        );
-      })
-    );
-  };
-
   // 计算统计
   const stats = {
     total: questions.length,
@@ -605,7 +851,6 @@ const ReadingTest = ({
 
   const currentQ = questions[currentQuestionIndex];
   const currentResult = currentQ ? results[currentQ.id] : null;
-  const currentExplanation = currentQ ? (explanations[currentQ.id]?.explanation || currentQ.explanation) : '';
 
   if (loading && !passage) {
     return (
@@ -643,7 +888,7 @@ const ReadingTest = ({
 
   return (
     <Box sx={{ height: 'calc(100vh - 120px)', display: 'flex', flexDirection: 'column', p: 2 }}>
-      {/* 头部添加翻译按钮和进度条 */}
+      {/* 头部 */}
       <Paper sx={{ p: 2, mb: 2 }}>
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
@@ -674,7 +919,7 @@ const ReadingTest = ({
         />
       </Paper>
 
-      {/* 左右分栏内容 */}
+      {/* 左右分栏 */}
       <Box 
         id="split-container"
         sx={{ 
@@ -686,7 +931,7 @@ const ReadingTest = ({
           borderRadius: 1
         }}
       >
-        {/* 左侧 - 文章区 */}
+        {/* 左侧文章区 */}
         <Box
           sx={{
             width: isMobile ? '100%' : `${leftWidth}%`,
@@ -699,19 +944,17 @@ const ReadingTest = ({
           <Typography variant="h5" gutterBottom sx={{ color: '#1a237e', fontWeight: 600, mb: 3 }}>
             {renderClickableText(passage.title)}
           </Typography>
-          
-          {/* 文章内容 - 可点击翻译，支持图片 */}
           <Box>
             {renderContent(passage.content)}
           </Box>
         </Box>
 
-        {/* 可拖动分割线 */}
+        {/* 分割线 */}
         {!isMobile && (
           <Box
             sx={{
               width: '4px',
-              cursor: 'col-resize',
+              // cursor: 'col-resize',
               bgcolor: isDragging ? '#ffb300' : '#e0e0e0',
               transition: 'background-color 0.2s',
               '&:hover': { bgcolor: '#ffb300' },
@@ -732,7 +975,7 @@ const ReadingTest = ({
           />
         )}
 
-        {/* 右侧 - 答题区 */}
+        {/* 右侧答题区 */}
         <Box
           sx={{
             width: isMobile ? '100%' : `${100 - leftWidth}%`,
@@ -744,8 +987,8 @@ const ReadingTest = ({
           {/* 当前题目 */}
           {currentQ && (
             <Zoom in={true} key={currentQ.id}>
-              <Card sx={{ mb: 3 }}>
-                <CardContent>
+              <Card sx={{ mb: 3, overflow: 'visible' }}>
+                <CardContent sx={{ overflow: 'visible' }}>
                   {/* 题目标题 */}
                   <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
@@ -766,129 +1009,47 @@ const ReadingTest = ({
                     )}
                   </Box>
 
-                  {/* 题目内容 - 可点击翻译 */}
+                  {/* 题目内容 */}
                   <Typography variant="body1" sx={{ mb: 3, fontWeight: 500, fontSize: '1.1rem' }}>
                     {renderClickableText(currentQ.question)}
                   </Typography>
 
-                  {/* 选项 - 支持图片 */}
-                  <FormControl component="fieldset" sx={{ width: '100%', mb: 2 }}>
-                    <RadioGroup
-                      value={answers[currentQ.id] || ''}
-                      onChange={(e) => onAnswerChange(currentQ.id, e.target.value)}
-                    >
-                      <Grid container spacing={2}>
-                        {currentQ.options.map((option, optIndex) => {
-                          const optionLetter = String.fromCharCode(65 + optIndex);
-                          const isSelected = answers[currentQ.id] === optionLetter;
-                          const isCorrect = currentResult && currentResult.correctAnswer === optionLetter;
-                          const isWrong = currentResult && isSelected && !currentResult.isCorrect;
+                  {/* 选项 - 只有点击字母区域才触发 */}
+                  <Box sx={{ width: '100%', mb: 2, overflow: 'visible' }}>
+                    <Grid container spacing={2} sx={{ overflow: 'visible' }}>
+                      {currentQ.options.map((option, optIndex) => {
+                        const optionLetter = String.fromCharCode(65 + optIndex);
+                        const isSelected = answers[currentQ.id] === optionLetter;
+                        const isCorrect = currentResult && currentResult.correctAnswer === optionLetter;
+                        const isWrong = currentResult && isSelected && !currentResult.isCorrect;
+                        
+                        const handleOptionSelect = (value) => {
+                          if (currentResult) return; // 已经答过，不能修改
+                          // 保存答案
+                          onAnswerChange(currentQ.id, value);
                           
-                          return (
-                            <Grid item xs={12} sm={6} key={optIndex}>
-                              <FormControlLabel
-                                value={optionLetter}
-                                control={<Radio />}
-                                disabled={!!currentResult}
-                                label={renderOption(option, optionLetter, isSelected, isCorrect, isWrong, currentResult)}
-                                sx={{
-                                  width: '100%',
-                                  m: 0,
-                                  p: 1,
-                                  borderRadius: 1,
-                                  bgcolor: isSelected && !currentResult ? 'rgba(26, 35, 126, 0.05)' : 'transparent',
-                                  border: isCorrect ? '1px solid #4caf50' : 'none',
-                                  '& .MuiFormControlLabel-label': {
-                                    width: '100%'
-                                  }
-                                }}
-                              />
-                            </Grid>
-                          );
-                        })}
-                      </Grid>
-                    </RadioGroup>
-                  </FormControl>
-
-                  {/* 操作按钮区域 */}
-                  <Box sx={{ display: 'flex', gap: 1 }}>
-                    {/* 核对按钮 */}
-                    {!currentResult ? (
-                      <Button
-                        fullWidth
-                        variant="contained"
-                        onClick={handleCheckCurrent}
-                        disabled={!answers[currentQ.id]}
-                        sx={{ 
-                          bgcolor: '#1a237e',
-                          py: 1.2,
-                          '&:hover': { bgcolor: '#283593' }
-                        }}
-                      >
-                        核对答案
-                      </Button>
-                    ) : (
-                      <>
-                        {/* 解析悬浮按钮 - 解析内容也可点击翻译 */}
-                        <Tooltip
-                          title={
-                            <Box sx={{ p: 1, maxWidth: 300 }}>
-                              <Typography variant="subtitle2" sx={{ color: '#ffb300', mb: 1 }}>
-                                📖 题目解析
-                              </Typography>
-                              <Typography variant="body2" component="div">
-                                {renderClickableText(currentExplanation, false)}
-                              </Typography>
-                              {!currentResult.isCorrect && (
-                                <Typography variant="body2" sx={{ mt: 1, color: '#ffb300' }}>
-                                  正确答案: {currentResult.correctAnswer}
-                                </Typography>
-                              )}
-                            </Box>
-                          }
-                          arrow
-                          placement="top"
-                          enterDelay={300}
-                          leaveDelay={200}
-                        >
-                          <Button
-                            fullWidth
-                            variant="outlined"
-                            startIcon={<LightbulbIcon />}
-                            sx={{ 
-                              borderColor: '#ffb300',
-                              color: '#ff8f00',
-                              '&:hover': { borderColor: '#ffa000', bgcolor: '#fff8e1' }
-                            }}
-                          >
-                            查看解析
-                          </Button>
-                        </Tooltip>
-                      </>
-                    )}
+                          // 自动核对答案
+                          const correctAnswer = currentQ.correctAnswer;
+                          const isAnswerCorrect = value === correctAnswer;
+                          
+                          setResults(prev => ({
+                            ...prev,
+                            [currentQ.id]: {
+                              isCorrect: isAnswerCorrect,
+                              correctAnswer,
+                              userAnswer: value
+                            }
+                          }));
+                        };
+                        
+                        return (
+                          <Grid item xs={12} sm={6} key={optIndex} sx={{ overflow: 'visible' }}>
+                            {renderOption(option, optionLetter, isSelected, isCorrect, isWrong, handleOptionSelect)}
+                          </Grid>
+                        );
+                      })}
+                    </Grid>
                   </Box>
-
-                  {/* 错误时显示正确答案 */}
-                  {currentResult && !currentResult.isCorrect && (
-                    <Paper 
-                      variant="outlined" 
-                      sx={{ 
-                        mt: 2, 
-                        p: 1, 
-                        bgcolor: '#ffebee',
-                        borderColor: '#f44336',
-                        borderRadius: 2,
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: 1
-                      }}
-                    >
-                      <InfoIcon sx={{ color: '#c62828', fontSize: 20 }} />
-                      <Typography variant="body2" sx={{ color: '#c62828' }}>
-                        正确答案: {currentResult.correctAnswer}
-                      </Typography>
-                    </Paper>
-                  )}
                 </CardContent>
               </Card>
             </Zoom>
@@ -1005,7 +1166,7 @@ const ReadingTest = ({
         getToken={getToken}
       />
 
-      {/* 图片放大模态框 - 增强版 */}
+      {/* 图片放大模态框 */}
       <Modal
         open={modalOpen}
         onClose={handleCloseModal}
@@ -1032,7 +1193,7 @@ const ReadingTest = ({
               justifyContent: 'center'
             }}
           >
-            {/* 顶部控制栏 */}
+            {/* 控制栏 */}
             <Box
               sx={{
                 position: 'absolute',
@@ -1070,9 +1231,7 @@ const ReadingTest = ({
                 sx={{
                   bgcolor: 'rgba(0,0,0,0.6)',
                   color: 'white',
-                  '&:hover': {
-                    bgcolor: 'rgba(0,0,0,0.8)'
-                  }
+                  '&:hover': { bgcolor: 'rgba(0,0,0,0.8)' }
                 }}
               >
                 <CloseIcon />
@@ -1118,7 +1277,7 @@ const ReadingTest = ({
               </Box>
             </Box>
 
-            {/* 底部图片说明 */}
+            {/* 图片说明 */}
             {selectedImage.alt && (
               <Paper
                 sx={{

@@ -43,7 +43,6 @@ import {
 } from '@mui/icons-material';
 import { questionApi } from './api.js';
 import SingleChoiceResult from './select_test_result.js';
-import WordTranslator from '../translator/translator.js';
 
 const SingleChoiceTest = ({
   dataSource = 'default',
@@ -60,7 +59,10 @@ const SingleChoiceTest = ({
   externalCurrentIndex = null,
   onAnswerChange,
   onIndexChange,
-  onSubmitComplete
+  onSubmitComplete,
+  // 翻译相关 props
+  onTranslateWord,
+  onOpenTranslator
 }) => {
   // 状态管理
   const [questions, setQuestions] = useState([]);
@@ -77,10 +79,17 @@ const SingleChoiceTest = ({
   const [showExplanation, setShowExplanation] = useState(true);
   const [questionMastery, setQuestionMastery] = useState({});
   const [loadingMastery, setLoadingMastery] = useState(false);
-  const [showTranslator, setShowTranslator] = useState(false);
+  // 翻译功能通过父组件传递
   const [translateWord, setTranslateWord] = useState('');
   const [initialLoading, setInitialLoading] = useState(true);
   const [isRedoMode, setIsRedoMode] = useState(false);
+  
+  // 新增：保存实际抽取模式的状态（用于结果展示）
+  const [actualDrawType, setActualDrawType] = useState(drawType);
+  const [actualRangeStart, setActualRangeStart] = useState(rangeStart);
+  const [actualRangeEnd, setActualRangeEnd] = useState(rangeEnd);
+  const [actualQuestionCount, setActualQuestionCount] = useState(questionCount);
+  const [actualSubType, setActualSubType] = useState(null);
   
   // 保存原始模式信息，用于错题重做后恢复
   const [originalDrawType, setOriginalDrawType] = useState(drawType);
@@ -112,6 +121,30 @@ const SingleChoiceTest = ({
       // 检查是否是错题重做模式（通过额外属性判断）
       const isRedo = externalQuestions.some(q => q._redoMode === true);
       setIsRedoMode(isRedo);
+      
+      // 从题目中提取实际抽取模式信息
+      const firstQuestion = externalQuestions[0];
+      if (firstQuestion && firstQuestion._actualDrawType) {
+        console.log('【测试组件】提取实际抽取模式:', {
+          drawType: firstQuestion._actualDrawType,
+          subType: firstQuestion._actualSubType,
+          rangeStart: firstQuestion._actualRangeStart,
+          rangeEnd: firstQuestion._actualRangeEnd,
+          count: firstQuestion._actualQuestionCount
+        });
+        setActualDrawType(firstQuestion._actualDrawType);
+        setActualSubType(firstQuestion._actualSubType || null);
+        setActualRangeStart(firstQuestion._actualRangeStart);
+        setActualRangeEnd(firstQuestion._actualRangeEnd);
+        setActualQuestionCount(firstQuestion._actualQuestionCount || externalQuestions.length);
+      } else {
+        // 如果没有附加信息，使用传入的 props
+        setActualDrawType(drawType);
+        setActualSubType(null);
+        setActualRangeStart(rangeStart);
+        setActualRangeEnd(rangeEnd);
+        setActualQuestionCount(questionCount);
+      }
       
       if (isRedo) {
         console.log('【测试组件】进入错题重做模式，不上传结果到服务器');
@@ -187,7 +220,7 @@ const SingleChoiceTest = ({
   // 键盘事件处理
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (loading || showResult || openDialog || showTranslator || questions.length === 0) return;
+      if (loading || showResult || openDialog || questions.length === 0) return;
       const currentQ = questions[currentIndex];
       if (!currentQ) return;
 
@@ -242,7 +275,7 @@ const SingleChoiceTest = ({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [currentIndex, questions, answers, loading, showResult, openDialog, showTranslator, fullscreen]);
+  }, [currentIndex, questions, answers, loading, showResult, openDialog, fullscreen, onExitFullscreen]);
 
   const getDataSourceName = () => {
     const names = { 'default': '默认题库', 'master': '默认题库', '中考': '中考真题库', '高考': '高考真题库', '专项': '语法专项库' };
@@ -250,7 +283,13 @@ const SingleChoiceTest = ({
   };
 
   const getDrawTypeText = (type) => {
-    const map = { 'new': '抽取新题', 'custom': '智能抽取', 'range': '范围抽取', 'redo': '错题重做' };
+    const map = { 
+      'new': '抽取新题', 
+      'custom': '智能抽取', 
+      'range': '范围抽取', 
+      'rangeRandom': '范围随机抽取',
+      'redo': '错题重做' 
+    };
     return map[type] || '智能抽取';
   };
 
@@ -276,7 +315,10 @@ const SingleChoiceTest = ({
     const cleanedWord = word.replace(/[.,!?;:"()\[\]{}\s]$/g, "").trim();
     if (cleanedWord && /^[a-zA-Z'\-]+$/.test(cleanedWord) && cleanedWord.length >= 2) {
       setTranslateWord(cleanedWord);
-      setShowTranslator(true);
+      // 通知父组件打开翻译器
+      if (onTranslateWord) {
+        onTranslateWord(cleanedWord);
+      }
     }
   };
 
@@ -515,7 +557,24 @@ const SingleChoiceTest = ({
     return option ? `${option.label}. ${formatAnswerText(option.text)}` : answers[currentQuestion.id];
   };
 
-  const hasValidRange = drawType === 'range' && rangeStart && rangeEnd && rangeEnd >= rangeStart;
+  const hasValidRange = actualDrawType === 'range' && actualRangeStart && actualRangeEnd && actualRangeEnd >= actualRangeStart;
+  
+  // 获取显示用的抽取类型文本
+  const getDisplayDrawTypeText = () => {
+    if (isRedoMode) return '错题重做';
+    if (actualDrawType === 'new') {
+      const subTypeText = {
+        'new': '新题',
+        'weak': '薄弱题',
+        'review': '复习题',
+        'all': '全部题目'
+      };
+      return `${subTypeText[actualSubType] || '新题'}抽取`;
+    }
+    if (actualDrawType === 'range') return '范围抽取';
+    if (actualDrawType === 'rangeRandom') return '范围随机抽取';
+    return getDrawTypeText(actualDrawType);
+  };
 
   // 初始加载中
   if (initialLoading) {
@@ -540,24 +599,25 @@ const SingleChoiceTest = ({
 
   // 结果显示
   if (showResult) {
-    console.log('显示结果页面，题目数量:', questions.length);
+    console.log('显示结果页面，题目数量:', questions.length, '实际模式:', actualDrawType);
     return (
       <SingleChoiceResult
         questions={questions}
         answers={answers}
         timeSpent={timeSpent}
         serverStats={serverStats}
-        testTitle={`${getDataSourceName()} - ${hasValidRange ? `第 ${rangeStart}-${rangeEnd} 题` : getDrawTypeText(drawType)}${isRedoMode ? ' (错题重做)' : ''}`}
+        testTitle={`${getDataSourceName()} - ${hasValidRange ? `第 ${actualRangeStart}-${actualRangeEnd} 题` : getDisplayDrawTypeText()}${isRedoMode ? ' (错题重做)' : ''}`}
         onRestart={handleRestart}
         onBack={handleBack}
         onNewBatch={handleNewBatch}
         onRedoWrongQuestions={handleRedoWrongQuestions}
         dataSource={dataSource}
-        drawType={isRedoMode ? 'redo' : drawType}
-        questionCount={originalQuestionCount}
-        startRange={originalRangeStart}
-        endRange={originalRangeEnd}
+        drawType={isRedoMode ? 'redo' : actualDrawType}
+        questionCount={actualQuestionCount}
+        startRange={actualRangeStart}
+        endRange={actualRangeEnd}
         isRedoMode={isRedoMode}
+        subType={actualSubType}
       />
     );
   }
@@ -569,7 +629,7 @@ const SingleChoiceTest = ({
       <Box sx={{ px: 2, py: 1, bgcolor: '#f5f5f5', borderBottom: '1px solid #eaeaea', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap' }}>
           <Typography variant="caption" sx={{ color: '#666666' }}>
-            {isRedoMode ? '📌 错题重做模式' : (hasValidRange ? `📌 第 ${rangeStart}-${rangeEnd} 题 (${questions.length}题)` : `📌 模式: ${getDrawTypeText(drawType)} · ${questionCount}题`)}
+            {isRedoMode ? '📌 错题重做模式' : (hasValidRange ? `📌 第 ${actualRangeStart}-${actualRangeEnd} 题 (${questions.length}题)` : `📌 模式: ${getDisplayDrawTypeText()} · ${actualQuestionCount}题`)}
           </Typography>
           
           {/* 键盘使用说明 */}
@@ -646,7 +706,12 @@ const SingleChoiceTest = ({
                     )}
                   </Box>
                   <Box sx={{ display: 'flex', gap: 1 }}>
-                    <IconButton size="small" onClick={() => { setTranslateWord(''); setShowTranslator(true); }} sx={{ color: '#000000' }}>
+                    <IconButton size="small" onClick={() => { 
+                      setTranslateWord(''); 
+                      if (onOpenTranslator) {
+                        onOpenTranslator('');
+                      }
+                    }} sx={{ color: '#000000' }}>
                       <Translate />
                     </IconButton>
                     <Button size="small" onClick={toggleExplanation} startIcon={<Lightbulb />} variant={showExplanation ? "contained" : "text"}
@@ -666,14 +731,15 @@ const SingleChoiceTest = ({
 
                 {/* 选项区域 */}
                 <FormControl component="fieldset" sx={{ width: '100%', mt: 2 }}>
-                  <RadioGroup value={answers[currentQuestion.id] || ''} onChange={(e) => handleAnswerChange(currentQuestion.id, e.target.value)}>
-                    <Grid container spacing={1.5}>
-                      {currentQuestion.options.map((option) => {
-                        const isSelected = answers[currentQuestion.id] === option.label;
-                        const isDisabled = !!answers[currentQuestion.id];
-                        return (
-                          <Grid item xs={12} key={option.label}>
-                            <Paper variant="outlined" sx={{
+                  <Grid container spacing={1.5}>
+                    {currentQuestion.options.map((option) => {
+                      const isSelected = answers[currentQuestion.id] === option.label;
+                      const isDisabled = !!answers[currentQuestion.id];
+                      return (
+                        <Grid item xs={12} key={option.label}>
+                          <Paper 
+                            variant="outlined" 
+                            sx={{
                               p: 2, 
                               bgcolor: isDisabled ? '#f9f9f9' : '#ffffff', 
                               borderColor: isSelected ? '#000000' : '#dddddd', 
@@ -684,10 +750,20 @@ const SingleChoiceTest = ({
                                 borderColor: isDisabled ? '#dddddd' : '#000000', 
                                 bgcolor: isDisabled ? '#f9f9f9' : '#f5f5f5' 
                               }
-                            }} 
-                            onClick={() => !isDisabled && handleAnswerChange(currentQuestion.id, option.label)}>
-                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                <Box sx={{ 
+                            }}
+                            onClick={(e) => {
+                              // 如果点击的是文本区域，不触发选项选择
+                              if (e.target.closest('.option-text-area')) {
+                                return;
+                              }
+                              if (!isDisabled) {
+                                handleAnswerChange(currentQuestion.id, option.label);
+                              }
+                            }}
+                          >
+                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                              <Box 
+                                sx={{ 
                                   width: 24, 
                                   height: 24, 
                                   borderRadius: '50%', 
@@ -695,28 +771,29 @@ const SingleChoiceTest = ({
                                   display: 'flex', 
                                   alignItems: 'center', 
                                   justifyContent: 'center', 
-                                  bgcolor: isSelected ? '#000000' : 'transparent' 
-                                }}>
-                                  {isSelected && <CheckCircleOutline sx={{ color: '#ffffff', fontSize: 16 }} />}
-                                </Box>
-                                <Box sx={{ flex: 1 }}>
-                                  <Typography variant="body1" sx={{ color: '#333333' }}>
-                                    <Box component="span" sx={{ fontWeight: 500, mr: 1 }}>{option.label}.</Box>
-                                    {!option.image?.url && renderClickableText(option.text)}
-                                  </Typography>
-                                  {option.image?.url && (
-                                    <Box sx={{ mt: 1 }}>
-                                      <img src={getImageUrl(option.image.url)} alt={option.image.alt || option.text} style={{ maxWidth: '150px', maxHeight: '100px', borderRadius: '4px' }} />
-                                    </Box>
-                                  )}
-                                </Box>
+                                  bgcolor: isSelected ? '#000000' : 'transparent',
+                                  cursor: isDisabled ? 'not-allowed' : 'pointer'
+                                }}
+                              >
+                                {isSelected && <CheckCircleOutline sx={{ color: '#ffffff', fontSize: 16 }} />}
                               </Box>
-                            </Paper>
-                          </Grid>
-                        );
-                      })}
-                    </Grid>
-                  </RadioGroup>
+                              <Box sx={{ flex: 1 }} className="option-text-area">
+                                <Typography variant="body1" sx={{ color: '#333333', cursor: 'text', userSelect: 'text' }}>
+                                  <Box component="span" sx={{ fontWeight: 500, mr: 1 }}>{option.label}.</Box>
+                                  {!option.image?.url && renderClickableText(option.text)}
+                                </Typography>
+                                {option.image?.url && (
+                                  <Box sx={{ mt: 1 }}>
+                                    <img src={getImageUrl(option.image.url)} alt={option.image.alt || option.text} style={{ maxWidth: '150px', maxHeight: '100px', borderRadius: '4px' }} />
+                                  </Box>
+                                )}
+                              </Box>
+                            </Box>
+                          </Paper>
+                        </Grid>
+                      );
+                    })}
+                  </Grid>
                 </FormControl>
                 <Box sx={{ height: 120 }} />
               </CardContent>
@@ -828,7 +905,7 @@ const SingleChoiceTest = ({
         <DialogActions><Button onClick={() => setOpenDialog(false)}>关闭</Button></DialogActions>
       </Dialog>
 
-      <WordTranslator open={showTranslator} onClose={() => setShowTranslator(false)} word={translateWord} />
+      {/* WordTranslator 已移至父组件 */}
 
       <Snackbar open={snackbar.open} autoHideDuration={3000} onClose={() => setSnackbar({ ...snackbar, open: false })} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
         <Alert severity={snackbar.severity}>{snackbar.message}</Alert>

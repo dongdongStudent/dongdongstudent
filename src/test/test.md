@@ -1,5 +1,1 @@
-[
-
-]
-
-![alt text](image-7.png)
+https://www.ddstudent.xyz/server/resource/book_picture/rjb/7_u/2.png

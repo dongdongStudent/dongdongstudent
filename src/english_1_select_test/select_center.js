@@ -63,7 +63,7 @@ import { useNavigate } from 'react-router-dom';
 import SingleChoiceTest from './select_test';
 import QuestionMasterView from './select_master_view';
 import { questionApi } from './api';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 
 // 默认题库配置
 const DEFAULT_DATA_SOURCES = [
@@ -792,6 +792,16 @@ const LearningCenter = () => {
   const [currentQuestions, setCurrentQuestions] = useState([]);
   const [isLoadingQuestions, setIsLoadingQuestions] = useState(false);
   const [testKey, setTestKey] = useState(0);
+  
+  // 保存当前抽取模式信息
+  const [currentDrawInfo, setCurrentDrawInfo] = useState({
+    type: 'new',
+    subType: null,
+    rangeStart: null,
+    rangeEnd: null,
+    count: 0,
+    sortType: null
+  });
 
   // 界面状态
   const [showTest, setShowTest] = useState(false);
@@ -819,19 +829,16 @@ const LearningCenter = () => {
       const selectedText = selection?.toString().trim();
       
       if (selectedText && selectedText.length > 0 && selectedText.length <= 100) {
-        // 检查是否为英文单词或短语（基本检测）
         const isEnglish = /^[a-zA-Z\s\-']+$/.test(selectedText);
         if (isEnglish) {
           const wordCount = selectedText.split(/\s+/).filter(w => w.length > 0).length;
           if (wordCount <= 7) {
             console.log('【LearningCenter】检测到选中文本:', selectedText);
             
-            // 如果翻译器已打开，直接翻译
             if (translatorRef.current) {
               translatorRef.current.translateText(selectedText);
             }
             
-            // 自动打开翻译器（如果未打开）
             if (!translatorOpen) {
               setTranslatorOpen(true);
             }
@@ -840,9 +847,7 @@ const LearningCenter = () => {
       }
     };
 
-    // 监听鼠标松开事件（选择完成后）
     document.addEventListener('mouseup', handleSelectionChange);
-    // 也监听触摸屏的 touchend 事件
     document.addEventListener('touchend', handleSelectionChange);
     
     return () => {
@@ -1023,9 +1028,28 @@ const LearningCenter = () => {
       }
 
       const actualCount = Math.min(settings.count, selectedQuestions.length);
-      const finalQuestions = selectedQuestions.slice(0, actualCount);
+      // 添加实际模式信息到题目中
+      const finalQuestions = selectedQuestions.slice(0, actualCount).map(q => ({
+        ...q,
+        _actualDrawType: 'new',
+        _actualSubType: drawSubType,
+        _actualRangeStart: null,
+        _actualRangeEnd: null,
+        _actualQuestionCount: actualCount,
+        _actualSortType: settings.sortType
+      }));
 
       console.log('【LearningCenter】抽取完成，设置题目数量:', finalQuestions.length);
+      
+      // 保存当前抽取模式信息
+      setCurrentDrawInfo({
+        type: 'new',
+        subType: drawSubType,
+        rangeStart: null,
+        rangeEnd: null,
+        count: actualCount,
+        sortType: settings.sortType
+      });
 
       setCurrentQuestions([...finalQuestions]);
       setTestKey(prev => prev + 1);
@@ -1064,9 +1088,27 @@ const LearningCenter = () => {
         const aId = parseInt(a.id);
         const bId = parseInt(b.id);
         return aId - bId;
-      });
+      }).map(q => ({
+        ...q,
+        _actualDrawType: 'range',
+        _actualSubType: null,
+        _actualRangeStart: start,
+        _actualRangeEnd: end,
+        _actualQuestionCount: filteredQuestions.length,
+        _actualSortType: 'sequential'
+      }));
 
       console.log('【LearningCenter】范围筛选后题目数量:', sortedQuestions.length);
+      
+      // 保存当前抽取模式信息
+      setCurrentDrawInfo({
+        type: 'range',
+        subType: null,
+        rangeStart: start,
+        rangeEnd: end,
+        count: sortedQuestions.length,
+        sortType: 'sequential'
+      });
 
       if (sortedQuestions.length === 0) {
         setSnackbar({
@@ -1133,9 +1175,27 @@ const LearningCenter = () => {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       
-      const finalQuestions = shuffled.slice(0, actualCount);
+      const finalQuestions = shuffled.slice(0, actualCount).map(q => ({
+        ...q,
+        _actualDrawType: 'rangeRandom',
+        _actualSubType: null,
+        _actualRangeStart: start,
+        _actualRangeEnd: end,
+        _actualQuestionCount: actualCount,
+        _actualSortType: 'random'
+      }));
 
       console.log('【LearningCenter】范围随机抽取完成，设置题目数量:', finalQuestions.length);
+      
+      // 保存当前抽取模式信息
+      setCurrentDrawInfo({
+        type: 'rangeRandom',
+        subType: null,
+        rangeStart: start,
+        rangeEnd: end,
+        count: actualCount,
+        sortType: 'random'
+      });
 
       setCurrentQuestions([...finalQuestions]);
       setTestKey(prev => prev + 1);
@@ -1215,6 +1275,24 @@ const LearningCenter = () => {
 
   const handleCloseTranslator = () => {
     setTranslatorOpen(false);
+  };
+
+  // 处理单词翻译请求
+  const handleTranslateWord = (word) => {
+    if (translatorRef.current) {
+      translatorRef.current.translateText(word);
+    }
+    setTranslatorOpen(true);
+  };
+
+  // 处理打开翻译器请求
+  const handleOpenTranslatorWithWord = (word) => {
+    if (translatorRef.current) {
+      if (word) {
+        translatorRef.current.translateText(word);
+      }
+    }
+    setTranslatorOpen(true);
   };
 
   useEffect(() => {
@@ -1347,8 +1425,14 @@ const LearningCenter = () => {
                   key={`test-${testKey}`}
                   dataSource={dataSource}
                   questions={currentQuestions}
-                  drawType="custom"
+                  drawType={currentDrawInfo.type}
+                  questionCount={currentDrawInfo.count}
+                  rangeStart={currentDrawInfo.rangeStart}
+                  rangeEnd={currentDrawInfo.rangeEnd}
                   onComplete={handleTestComplete}
+                  // 传递翻译相关函数
+                  onTranslateWord={handleTranslateWord}
+                  onOpenTranslator={handleOpenTranslatorWithWord}
                 />
               </Box>
             </Fade>

@@ -26,7 +26,7 @@ import {
   TextFields as TextFieldsIcon,
   Translate as TranslateOutlinedIcon
 } from '@mui/icons-material';
-import WordTranslator from '../translator/translator.js';
+import WordTranslator from '../translator/index.js';
 import { sentenceApi } from '../sentence/api.js';
 import { F_speak } from '../Function/weisimin.js';
 
@@ -56,87 +56,275 @@ const ReadingTest = ({
   const [snackbarSeverity, setSnackbarSeverity] = useState('success');
   const [isAddingSentence, setIsAddingSentence] = useState(false);
 
-  // ========== 将文本分割成句子 ==========
-  const splitIntoSentences = (text) => {
+  // ========== 检测是否为 Markdown 标题 ==========
+  const isMarkdownHeading = (text) => {
+    return /^#{1,3}\s+.+$/.test(text.trim());
+  };
+
+  // ========== 渲染可点击的文本内容（无虚线） ==========
+  const renderClickableContent = (content) => {
+    if (!content) return null;
+    
+    const elements = [];
+    let lastIndex = 0;
+    
+    // 匹配单词（包括带撇号的缩写词如 it's, don't, can't）
+    const wordRegex = /\b[a-zA-Z]+(?:'[a-zA-Z]+)?\b/g;
+    let match;
+    
+    while ((match = wordRegex.exec(content)) !== null) {
+      if (match.index > lastIndex) {
+        elements.push(content.substring(lastIndex, match.index));
+      }
+      
+      const word = match[0];
+      elements.push(
+        <span
+          key={`word-${match.index}`}
+          style={{
+            cursor: 'pointer',
+            color: '#1976d2',
+            fontWeight: '500',
+            borderRadius: '4px',
+            backgroundColor: 'transparent',
+            display: 'inline',
+            lineHeight: 'inherit',
+            whiteSpace: 'normal',
+            wordBreak: 'break-word',
+            transition: 'all 0.2s ease'
+          }}
+          onClick={(e) => {
+            e.stopPropagation();
+            handleWordClick(word, e);
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#e3f2fd';
+            e.currentTarget.style.textDecoration = 'underline';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.textDecoration = 'none';
+          }}
+          title="点击翻译并发音"
+        >
+          {word}
+          {speakingWord === word && (
+            <CircularProgress 
+              size={12} 
+              sx={{ 
+                ml: 0.5, 
+                verticalAlign: 'middle',
+                color: '#4caf50'
+              }} 
+            />
+          )}
+        </span>
+      );
+      
+      lastIndex = match.index + word.length;
+    }
+    
+    if (lastIndex < content.length) {
+      elements.push(content.substring(lastIndex));
+    }
+    
+    return elements;
+  };
+
+  // ========== 将文本分割成句子（支持换行符和逗号作为分割标志） ==========
+  const splitTextIntoSentences = (text) => {
     if (!text) return [];
     
-    // 按句号、问号、感叹号分割，但保留缩写词
+    // 先按行分割
+    const lines = text.split('\n');
+    const result = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+      
+      // 如果是 Markdown 标题，单独作为一个单元
+      if (isMarkdownHeading(line)) {
+        const cleanHeading = line.replace(/^#{1,3}\s+/, '');
+        result.push({ type: 'heading', content: cleanHeading, original: line });
+        continue;
+      }
+      
+      // 处理普通句子
+      let sentence = line;
+      // 如果句子以标点结尾，直接添加
+      if (/[.!?,]$/.test(sentence)) {
+        result.push({ type: 'sentence', content: sentence });
+      } else {
+        // 如果没有标点结尾，尝试合并下一行
+        let j = i + 1;
+        while (j < lines.length) {
+          const nextLine = lines[j].trim();
+          if (!nextLine) break;
+          if (isMarkdownHeading(nextLine)) break;
+          sentence += ' ' + nextLine;
+          if (/[.!?,]$/.test(nextLine)) {
+            j++;
+            break;
+          }
+          j++;
+        }
+        i = j - 1;
+        result.push({ type: 'sentence', content: sentence });
+      }
+    }
+    
+    // 最后再按标点符号细分
+    const finalResult = [];
+    for (const item of result) {
+      if (item.type === 'heading') {
+        finalResult.push(item);
+        continue;
+      }
+      
+      // 按标点符号分割长句子（包括逗号）
+      const sentences = splitByPunctuation(item.content);
+      for (const sentence of sentences) {
+        if (sentence.trim()) {
+          finalResult.push({ type: 'sentence', content: sentence.trim() });
+        }
+      }
+    }
+    
+    return finalResult;
+  };
+
+  // ========== 按标点符号分割句子（支持逗号，正确处理缩写词） ==========
+  const splitByPunctuation = (text) => {
     const sentences = [];
-    let currentSentence = '';
+    let current = '';
     let i = 0;
     
-    const commonAbbrs = ['mr', 'mrs', 'ms', 'dr', 'prof', 'rev', 'st', 'etc', 'vs', 'inc', 'ltd', 'co', 'jr', 'sr', 'no'];
+    // 常见缩写词（这些词后面的句号不表示句子结束）
+    const commonAbbrs = [
+      'mr', 'mrs', 'ms', 'dr', 'prof', 'rev', 'st', 'etc', 'vs', 
+      'inc', 'ltd', 'co', 'jr', 'sr', 'no', 'vol', 'ed', 'al',
+      'a.m', 'p.m', 'e.g', 'i.e', 'fig', 'sec', 'chap', 'pp'
+    ];
     
     while (i < text.length) {
-      currentSentence += text[i];
+      current += text[i];
       
-      if (text[i] === '.' || text[i] === '!' || text[i] === '?') {
-        if (text[i] === '.') {
-          // 检查是否是缩写词
-          const words = currentSentence.split(/\s+/);
-          const lastWord = words[words.length - 1] || '';
-          const wordWithoutDot = lastWord.slice(0, -1).toLowerCase();
+      // 检查是否是句子结束标点（句号、感叹号、问号、逗号）
+      if (text[i] === '.' || text[i] === '!' || text[i] === '?' || text[i] === ',') {
+        // 对于逗号，直接作为句子分隔符
+        if (text[i] === ',') {
+          // 检查是否是数字中的逗号（如 1,000）
+          const prevChar = text[i - 1] || '';
+          const nextChar = text[i + 1] || '';
+          const isNumberComma = /[0-9]/.test(prevChar) && /[0-9]/.test(nextChar);
           
+          // 如果不是数字中的逗号，则作为句子分隔符
+          if (!isNumberComma) {
+            // 确保当前句子有内容
+            const trimmedCurrent = current.trim();
+            if (trimmedCurrent && trimmedCurrent !== ',') {
+              // 移除末尾的逗号
+              const sentenceWithoutComma = trimmedCurrent.replace(/,$/, '');
+              if (sentenceWithoutComma) {
+                sentences.push(sentenceWithoutComma);
+              }
+            }
+            current = '';
+          }
+        }
+        // 对于句号，需要特殊处理缩写词
+        else if (text[i] === '.') {
+          // 获取当前句子中的单词
+          const words = current.split(/\s+/);
+          // 检查最后一个词是否是缩写词
+          let isAbbreviation = false;
+          
+          for (let k = words.length - 1; k >= 0; k--) {
+            let word = words[k];
+            // 移除可能的标点
+            word = word.replace(/[.,!?;:"()\[\]{}]$/, '');
+            if (word && commonAbbrs.includes(word.toLowerCase())) {
+              isAbbreviation = true;
+              break;
+            }
+            // 检查是否是带点的缩写如 "a.m."
+            if (word && word.endsWith('.') && commonAbbrs.includes(word.slice(0, -1).toLowerCase())) {
+              isAbbreviation = true;
+              break;
+            }
+            // 只检查最后几个词
+            if (k < words.length - 2) break;
+          }
+          
+          // 检查下一个字符
           const nextChar = text[i + 1] || '';
           const nextNextChar = text[i + 2] || '';
           
-          const isEndOfSentence = !commonAbbrs.includes(wordWithoutDot) && 
-                                 ((nextChar === ' ' && /[A-Z]/.test(nextNextChar)) || 
+          // 判断是否是真正的句子结束
+          const isEndOfSentence = !isAbbreviation && 
+                                 ((nextChar === ' ' && /[A-Z0-9]/.test(nextNextChar)) || 
                                   i === text.length - 1 ||
-                                  nextChar === '\n');
+                                  nextChar === '\n' ||
+                                  nextChar === '');
           
           if (isEndOfSentence) {
-            sentences.push(currentSentence.trim());
-            currentSentence = '';
+            sentences.push(current.trim());
+            current = '';
           }
         } else {
-          sentences.push(currentSentence.trim());
-          currentSentence = '';
+          // 感叹号和问号总是句子结束
+          sentences.push(current.trim());
+          current = '';
         }
       }
       
       i++;
     }
     
-    // 添加最后一个句子（如果没有结束标点）
-    if (currentSentence.trim()) {
-      sentences.push(currentSentence.trim());
+    // 添加剩余内容
+    if (current.trim()) {
+      sentences.push(current.trim());
     }
     
-    // 如果按标点分割后没有句子，返回原文本
-    if (sentences.length === 0 && text.trim()) {
-      return [text.trim()];
-    }
-    
-    return sentences.filter(s => s);
+    return sentences;
   };
 
   // ========== 将中文文本分割成句子 ==========
   const splitChineseIntoSentences = (text) => {
     if (!text) return [];
     
-    // 中文按句号、问号、感叹号、省略号分割
-    const sentences = [];
-    let currentSentence = '';
+    const lines = text.split('\n');
+    const result = [];
     
-    for (let i = 0; i < text.length; i++) {
-      currentSentence += text[i];
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
       
-      if (text[i] === '。' || text[i] === '？' || text[i] === '！' || text[i] === '…') {
-        sentences.push(currentSentence.trim());
-        currentSentence = '';
+      // 中文标题检测
+      if (line.startsWith('#') && !line.startsWith('##')) {
+        const cleanHeading = line.replace(/^#+\s*/, '');
+        result.push({ type: 'heading', content: cleanHeading });
+        continue;
+      }
+      
+      // 按中文标点分割（句号、问号、感叹号、逗号）
+      let sentence = '';
+      for (let j = 0; j < line.length; j++) {
+        sentence += line[j];
+        if (line[j] === '。' || line[j] === '？' || line[j] === '！' || line[j] === '，' || line[j] === '…') {
+          if (sentence.trim()) {
+            result.push({ type: 'sentence', content: sentence.trim() });
+            sentence = '';
+          }
+        }
+      }
+      if (sentence.trim()) {
+        result.push({ type: 'sentence', content: sentence.trim() });
       }
     }
     
-    if (currentSentence.trim()) {
-      sentences.push(currentSentence.trim());
-    }
-    
-    if (sentences.length === 0 && text.trim()) {
-      return [text.trim()];
-    }
-    
-    return sentences.filter(s => s);
+    return result;
   };
 
   // ========== 图片路径处理函数 ==========
@@ -160,22 +348,23 @@ const ReadingTest = ({
     return imagePath;
   };
 
-  // ========== 单词点击翻译+发音功能 ==========
+  // ========== 单词/标题点击翻译+发音功能 ==========
   const handleWordClick = async (word, e) => {
     if (e) e.stopPropagation();
     
-    const cleanedWord = word.replace(/[.,!?;:"()\[\]{}]$/g, "").trim();
+    // 清理单词，移除标点符号（但保留缩写词的撇号）
+    const cleanedWord = word.replace(/[.,!?;:"()\[\]{}\u201c\u201d\u2018\u2019]$/g, "").trim();
     
-    if (cleanedWord && /^[a-zA-Z'\-]+$/.test(cleanedWord) && cleanedWord.length >= 2) {
+    if (cleanedWord && cleanedWord.length >= 1) {
       setTranslateWord(cleanedWord);
       setShowTranslator(true);
       
       setSpeakingWord(cleanedWord);
       try {
         await F_speak(cleanedWord);
-        console.log('单词发音完成:', cleanedWord);
+        console.log('发音完成:', cleanedWord);
       } catch (error) {
-        console.error('单词发音失败:', error);
+        console.error('发音失败:', error);
       } finally {
         setSpeakingWord(null);
       }
@@ -196,11 +385,10 @@ const ReadingTest = ({
     setTranslateWord(englishSentence);
     setShowTranslator(true);
     
-    // 添加句子时同时传入英文和中文
     await addSentenceToServer(englishSentence, chineseTranslation);
   };
 
-  // ========== 添加句子到服务器（同时保存英文和中文） ==========
+  // ========== 添加句子到服务器 ==========
   const addSentenceToServer = async (englishSentence, chineseTranslation) => {
     if (!englishSentence || !englishSentence.trim()) {
       showSnackbar('句子不能为空', 'error');
@@ -209,7 +397,6 @@ const ReadingTest = ({
 
     setIsAddingSentence(true);
     try {
-      // 检查句子是否已存在
       try {
         const existingSentences = await sentenceApi.getSentences('sentences', { limit: 1000 });
         if (existingSentences && existingSentences.sentences) {
@@ -219,7 +406,7 @@ const ReadingTest = ({
           );
           
           if (exists) {
-            showSnackbar(`⚠️ 句子 "${englishSentence.substring(0, 30)}..." 已存在于句子库中`, 'warning');
+            showSnackbar(`⚠️ 句子已存在于句子库中`, 'warning');
             setIsAddingSentence(false);
             return;
           }
@@ -231,7 +418,7 @@ const ReadingTest = ({
       const sentenceData = {
         id: Date.now().toString(),
         text: englishSentence.trim(),
-        chinese: chineseTranslation || '', // 保存中文翻译
+        chinese: chineseTranslation || '',
         pass: false,
         correct_count: 0,
         wrong_count: 0,
@@ -243,10 +430,7 @@ const ReadingTest = ({
       const result = await sentenceApi.addSentence(sentenceData, 'sentences');
       
       if (result?.flag === 1) {
-        const successMessage = chineseTranslation 
-          ? `✅ 句子添加成功: ${englishSentence.substring(0, 30)}... (已包含中文翻译)`
-          : `✅ 句子添加成功: ${englishSentence.substring(0, 30)}...`;
-        showSnackbar(successMessage, 'success');
+        showSnackbar(`✅ 句子添加成功`, 'success');
       } else {
         showSnackbar(result?.message || "添加句子失败", 'error');
       }
@@ -265,81 +449,66 @@ const ReadingTest = ({
     setSnackbarOpen(true);
   };
 
-  // ========== 关闭消息提示 ==========
   const handleCloseSnackbar = () => {
     setSnackbarOpen(false);
   };
 
-  // ========== 渲染可点击的文本（点击单词触发翻译+发音） ==========
-  const renderClickableText = (text, stopPropagation = true) => {
-    if (!text) return text;
-    
-    const elements = [];
-    let lastIndex = 0;
-    
-    const wordRegex = /\b[a-zA-Z'\-]{2,}\b/g;
-    let match;
-    
-    while ((match = wordRegex.exec(text)) !== null) {
-      if (match.index > lastIndex) {
-        elements.push(text.substring(lastIndex, match.index));
+  // ========== 渲染单个句子或标题（带按钮） ==========
+  const renderSentenceWithButtons = (item, chineseTranslation, index) => {
+    // 如果是标题，只显示标题（可点击翻译），不显示添加按钮
+    if (item.type === 'heading') {
+      const headingText = item.content;
+      // 根据标题级别设置样式
+      let fontSize = '1.5rem';
+      if (item.original) {
+        if (item.original.startsWith('# ')) fontSize = '1.8rem';
+        else if (item.original.startsWith('## ')) fontSize = '1.5rem';
+        else if (item.original.startsWith('### ')) fontSize = '1.3rem';
       }
       
-      const word = match[0];
-      elements.push(
-        <span
-          key={`word-${match.index}`}
-          style={{
-            cursor: 'pointer',
-            color: 'inherit',
-            fontWeight: 'inherit',
-            borderRadius: '2px',
-            backgroundColor: 'transparent',
-            display: 'inline',
-            lineHeight: 'inherit',
-            whiteSpace: 'normal',
-            wordBreak: 'break-word',
-            transition: 'background-color 0.2s ease'
-          }}
-          onClick={(e) => {
-            if (stopPropagation) e.stopPropagation();
-            handleWordClick(word, e);
-          }}
+      const headingStyle = {
+        fontSize: fontSize,
+        fontWeight: 'bold',
+        margin: '0.75rem 0 0.5rem 0',
+        color: '#1a237e',
+        fontFamily: '"Georgia", "Times New Roman", serif',
+        cursor: 'pointer',
+        display: 'inline-block',
+        transition: 'all 0.2s ease'
+      };
+      
+      return (
+        <Typography 
+          key={`heading-${index}`} 
+          style={headingStyle}
+          onClick={(e) => handleWordClick(headingText, e)}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(26, 35, 126, 0.05)';
+            e.currentTarget.style.opacity = '0.8';
+            e.currentTarget.style.textDecoration = 'underline';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.opacity = '1';
+            e.currentTarget.style.textDecoration = 'none';
           }}
-          title="点击翻译并发音"
+          title="点击翻译整个标题"
         >
-          {word}
-          {speakingWord === word && (
+          {headingText}
+          {speakingWord === headingText && (
             <CircularProgress 
-              size={12} 
+              size={14} 
               sx={{ 
-                ml: 0.5, 
+                ml: 1, 
                 verticalAlign: 'middle',
                 color: '#4caf50'
               }} 
             />
           )}
-        </span>
+        </Typography>
       );
-      
-      lastIndex = match.index + word.length;
     }
     
-    if (lastIndex < text.length) {
-      elements.push(text.substring(lastIndex));
-    }
-    
-    return elements;
-  };
-
-  // ========== 渲染单个句子（带按钮） ==========
-  const renderSentence = (englishSentence, chineseTranslation, index) => {
-    // 确定要显示的文本
+    // 普通句子
+    const englishSentence = item.content;
     let displayText = '';
     let displayTranslation = '';
     
@@ -352,7 +521,6 @@ const ReadingTest = ({
       displayTranslation = chineseTranslation;
     }
     
-    // 如果没有要显示的内容，返回null
     if (!displayText && !displayTranslation) return null;
     
     return (
@@ -381,7 +549,6 @@ const ReadingTest = ({
           }
         }}
       >
-        {/* 英文句子或中文翻译 */}
         {displayText && (
           <Typography 
             variant="body1" 
@@ -403,11 +570,10 @@ const ReadingTest = ({
           >
             {displayMode === 'chinese' 
               ? displayText 
-              : renderClickableText(displayText, true)}
+              : renderClickableContent(displayText)}
           </Typography>
         )}
         
-        {/* 双语模式下的中文翻译 */}
         {displayMode === 'bilingual' && displayTranslation && (
           <Typography 
             variant="body2" 
@@ -427,7 +593,6 @@ const ReadingTest = ({
           </Typography>
         )}
         
-        {/* 句子翻译按钮（仅在非中文模式下显示） */}
         {displayMode !== 'chinese' && englishSentence && (
           <Tooltip title="翻译">
             <IconButton
@@ -465,7 +630,6 @@ const ReadingTest = ({
           </Tooltip>
         )}
         
-        {/* 句子发音按钮（仅在非中文模式下显示） */}
         {displayMode !== 'chinese' && englishSentence && (
           <Tooltip title="发音">
             <IconButton
@@ -507,7 +671,6 @@ const ReadingTest = ({
           </Tooltip>
         )}
         
-        {/* 句子添加按钮 - 同时添加英文和中文 */}
         <Tooltip title="添加这个句子（中英文）">
           <IconButton
             className="sentence-add-button"
@@ -542,36 +705,6 @@ const ReadingTest = ({
     );
   };
 
-  // ========== 渲染带分割句子的文本 ==========
-  const renderTextWithSplitSentences = (text, translation) => {
-    if (!text && displayMode === 'english') return null;
-    if (!translation && displayMode === 'chinese') return null;
-    
-    // 分割英文句子
-    const englishSentences = text ? splitIntoSentences(text) : [];
-    // 分割中文句子
-    const chineseSentences = translation ? splitChineseIntoSentences(translation) : [];
-    
-    // 如果句子数量不匹配，按最多的显示
-    const maxLength = Math.max(englishSentences.length, chineseSentences.length);
-    
-    return (
-      <Box sx={{ position: 'relative' }}>
-        {Array.from({ length: maxLength }).map((_, index) => {
-          const englishSentence = englishSentences[index] || '';
-          const chineseSentence = chineseSentences[index] || '';
-          
-          // 根据显示模式决定显示什么
-          if (displayMode === 'english' && !englishSentence) return null;
-          if (displayMode === 'chinese' && !chineseSentence) return null;
-          
-          // 渲染句子，同时传入英文和中文
-          return renderSentence(englishSentence, chineseSentence, index);
-        })}
-      </Box>
-    );
-  };
-
   // ========== 格式化时间 ==========
   const formatTime = (seconds) => {
     const mins = Math.floor(seconds / 60);
@@ -589,6 +722,49 @@ const ReadingTest = ({
         'bilingual': '中英文对照'
       };
       showSnackbar(`已切换到：${modeNames[newMode]}`, 'info');
+    }
+  };
+
+  // ========== 根据模式渲染内容 ==========
+  const renderContentByMode = (text, translation) => {
+    if (displayMode === 'english') {
+      const items = splitTextIntoSentences(text);
+      const chineseItems = translation ? splitChineseIntoSentences(translation) : [];
+      
+      return (
+        <Box>
+          {items.map((item, idx) => {
+            const chineseItem = chineseItems[idx] || { type: 'sentence', content: '' };
+            const chineseContent = chineseItem.type === 'sentence' ? chineseItem.content : '';
+            return renderSentenceWithButtons(item, chineseContent, idx);
+          })}
+        </Box>
+      );
+    } else if (displayMode === 'chinese') {
+      const items = splitChineseIntoSentences(translation);
+      
+      return (
+        <Box>
+          {items.map((item, idx) => {
+            return renderSentenceWithButtons({ type: 'sentence', content: '' }, item.content, idx);
+          })}
+        </Box>
+      );
+    } else {
+      const englishItems = splitTextIntoSentences(text);
+      const chineseItems = translation ? splitChineseIntoSentences(translation) : [];
+      const maxLength = Math.max(englishItems.length, chineseItems.length);
+      
+      return (
+        <Box>
+          {Array.from({ length: maxLength }).map((_, idx) => {
+            const englishItem = englishItems[idx] || { type: 'sentence', content: '' };
+            const chineseItem = chineseItems[idx] || { type: 'sentence', content: '' };
+            const chineseContent = chineseItem.type === 'sentence' ? chineseItem.content : '';
+            return renderSentenceWithButtons(englishItem, chineseContent, idx);
+          })}
+        </Box>
+      );
     }
   };
 
@@ -639,7 +815,6 @@ const ReadingTest = ({
       overflow: 'hidden'
     }}>
 
-      {/* 顶部工具栏 */}
       <Paper 
         elevation={0} 
         sx={{ 
@@ -673,7 +848,6 @@ const ReadingTest = ({
         </Box>
         
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-          {/* 三种模式切换按钮组 */}
           <ToggleButtonGroup
             value={displayMode}
             exclusive
@@ -712,7 +886,6 @@ const ReadingTest = ({
         </Box>
       </Paper>
 
-      {/* 主要内容区域 */}
       <Box sx={{ 
         flex: 1,
         display: 'flex',
@@ -723,7 +896,6 @@ const ReadingTest = ({
         bgcolor: '#f8f9fa'
       }}>
 
-        {/* 内容区域 */}
         <Box sx={{ 
           flex: 1,
           overflow: 'auto',
@@ -752,7 +924,6 @@ const ReadingTest = ({
                 }
               }}
             >
-              {/* 图片区域 */}
               <Box sx={{ 
                 width: { xs: '100%', lg: '45%' },
                 minHeight: 320,
@@ -815,7 +986,6 @@ const ReadingTest = ({
                 </Typography>
               </Box>
 
-              {/* 文字区域 */}
               <Box sx={{ 
                 width: { xs: '100%', lg: '55%' },
                 display: 'flex',
@@ -839,17 +1009,13 @@ const ReadingTest = ({
                     textAlign: 'justify',
                     letterSpacing: '0.01em',
                     '& span[style*="cursor: pointer"]': {
-                      borderBottom: '2px dotted #64b5f6',
-                      paddingBottom: '1px',
                       transition: 'all 0.2s ease',
                       '&:hover': {
-                        backgroundColor: '#e3f2fd',
-                        borderBottom: '2px solid #2196f3',
-                        borderRadius: '3px'
+                        backgroundColor: '#e3f2fd'
                       }
                     }
                   }}>
-                    {renderTextWithSplitSentences(content?.text, content?.translation)}
+                    {renderContentByMode(content?.text, content?.translation)}
                   </Box>
                 </Box>
               </Box>
@@ -858,17 +1024,15 @@ const ReadingTest = ({
         </Box>
       </Box>
 
-      {/* 翻译组件 */}
       <WordTranslator
         open={showTranslator}
         onClose={() => setShowTranslator(false)}
         word={translateWord}
         G_word_name={G_word_name}
         getToken={getToken}
-        defaultCompact = {true}
+        defaultCompact={true}
       />
 
-      {/* 消息提示 */}
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={3000}

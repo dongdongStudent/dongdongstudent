@@ -446,7 +446,7 @@ const Main = () => {
   const [authError, setAuthError] = useState('');
   const [expandedModuleId, setExpandedModuleId] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  
+
   // 新增：控制面板展开/折叠的状态
   const [expandedEnglish, setExpandedEnglish] = useState(true);  // 英语模块默认展开
   const [expandedMath, setExpandedMath] = useState(true);       // 数学模块默认展开
@@ -464,6 +464,15 @@ const Main = () => {
   // 英语学习模块
   const englishModules = [
     {
+      id: 'english_book_pic_read',
+      title: '英语课本',
+      color: THEME.reading,
+      path: '/english_book_pic_read',
+      icon: '📚',
+      description: '通过图片阅读英语书籍，学习单词和听力',
+      completed: false,
+    },
+    {
       id: 'reading1',
       title: '小猪佩奇',
       color: THEME.reading,
@@ -471,6 +480,99 @@ const Main = () => {
       icon: '📖',
       description: '观看动画学习英语',
       completed: false,
+    },
+    {
+      id: 'english_a_z',
+      title: 'English A-Z',
+      color: THEME.reading,
+      path: '/english_a_z',
+      icon: '🔤',
+      description: 'English A-Z阅读学习',
+      completed: false,
+    },
+        {
+      id: 'english_test_select',
+      title: '英语习题库',
+      color: THEME.vocabulary, // 使用词汇模块的颜色 #33CC99
+      path: null,
+      icon: '📝',
+      description: '智能选择练习，追踪掌握程度',
+      completed: false,
+      hasSubmenu: true,
+      submodules: [
+        {
+          id: 'english_test_smart',
+          title: '选择题',
+          color: THEME.accent,
+          path: '/english_test_select',
+          icon: '🤖',
+          description: '根据掌握程度智能推荐题目',
+        },
+        {
+          id: 'english_test_cloze',
+          title: '完形填空题',
+          color: THEME.accent,
+          path: '/english_test_cloze',
+          icon: '📝',
+          description: '完形填空练习',
+        },
+        {
+          id: 'english_test_wordbank',
+          title: '词汇变形',
+          color: THEME.accent,
+          path: '/english_test_wordbank',
+          icon: '🔤',
+          description: '词汇变形练习',
+        },
+        {
+          id: 'english_test_CtoE',
+          title: '中译英句子完成',
+          color: THEME.accent,
+          path: '/english_test_CtoE',
+          icon: '🔄',
+          description: '中文到英文句子完成练习',
+        },
+        {
+          id: 'english_test_cloze_sentence',
+          title: '句子完形填空',
+          color: THEME.accent,
+          path: '/english_test_cloze_sentence',
+          icon: '📝',
+          description: '句子完形填空练习',
+        },
+        {
+          id: 'english_test_cloze_bank_select',
+          title: '完形填空词汇选择',
+          color: THEME.accent,
+          path: '/english_test_cloze_bank_select',
+          icon: '📚',
+          description: '完形填空词汇选择练习',
+        },
+        {
+          id: 'english_test_cloze_passage',
+          title: '篇章完形填空',
+          color: THEME.accent,
+          path: '/english_test_cloze_passage',
+          icon: '📖',
+          description: '篇章完形填空练习',
+        },
+        {
+          id: 'english_test_8_reading_comprehension',
+          title: '阅读理解',
+          color: THEME.accent,
+          path: '/english_test_8_reading_comprehension',
+          icon: '📚',
+          description: '阅读理解练习',
+        },
+        {
+          id: 'sentence_view',
+          title: '句子复习',
+          color: THEME.accent,
+          path: '/sentence_view',
+          icon: '📖',
+          description: '句子复习中心',
+        }
+      ]
     },
     {
       id: 'reading2',
@@ -546,106 +648,7 @@ const Main = () => {
       ]
     },
     // 英语选择题库测试
-    {
-      id: 'english_test_select',
-      title: '英语选择题库',
-      color: THEME.vocabulary, // 使用词汇模块的颜色 #33CC99
-      path: null,
-      icon: '📝',
-      description: '智能选择练习，追踪掌握程度',
-      completed: false,
-      hasSubmenu: true,
-      submodules: [
-        {
-          id: 'english_test_smart',
-          title: '选择题',
-          color: THEME.accent,
-          path: '/english_test_select',
-          icon: '🤖',
-          description: '根据掌握程度智能推荐题目',
-        },
-        {
-          id: 'english_test_cloze',
-          title: '完形填空题',
-          color: THEME.accent,
-          path: '/english_test_cloze',
-          icon: '📝',
-          description: '完形填空练习',
-        },
-        {
-          id: 'english_test_wordbank',
-          title: '词汇变形',
-          color: THEME.accent,
-          path: '/english_test_wordbank',
-          icon: '🔤',
-          description: '词汇变形练习',
-        },
-        {
-          id: 'english_test_CtoE',
-          title: '中译英句子完成',
-          color: THEME.accent,
-          path: '/english_test_CtoE',
-          icon: '🔄',
-          description: '中文到英文句子完成练习',
-        },
-        {
-          id: 'english_test_cloze_sentence',
-          title: '句子完形填空',
-          color: THEME.accent,
-          path: '/english_test_cloze_sentence',
-          icon: '📝',
-          description: '句子完形填空练习',
-        },
-        {
-          id: 'english_test_cloze_bank_select',
-          title: '完形填空词汇选择',
-          color: THEME.accent,
-          path: '/english_test_cloze_bank_select',
-          icon: '📚',
-          description: '完形填空词汇选择练习',
-        },
-        {
-          id: 'english_test_cloze_passage',
-          title: '篇章完形填空',
-          color: THEME.accent,
-          path: '/english_test_cloze_passage',
-          icon: '📖',
-          description: '篇章完形填空练习',
-        },
-        {
-          id: 'english_test_8_reading_comprehension',
-          title: '阅读理解',
-          color: THEME.accent,
-          path: '/english_test_8_reading_comprehension',
-          icon: '📚',
-          description: '阅读理解练习',
-        },
-        {
-          id: 'english_book_1_work',
-          title: '英语书1作业',
-          color: THEME.accent,
-          path: '/english_book_1_work',
-          icon: '📓',
-          description: '英语书1作业练习',
-        },
-        {
-          id: 'english_a_z',
-          title: 'English A-Z',
-          color: THEME.accent,
-          path: '/english_a_z',
-          icon: '🔤',
-          description: 'English A-Z阅读学习',
-        },
-        {
-          id: 'sentence_view',
-          title: '句子复习',
-          color: THEME.accent,
-          path: '/sentence_view',
-          icon: '📖',
-          description: '句子复习中心',
-        }
-      ]
-    },
+
     {
       id: 'teacher',
       title: '教师测试',
@@ -655,6 +658,7 @@ const Main = () => {
       description: '检测学生专用',
       completed: false,
     },
+
   ];
 
   // 数学学习模块
@@ -1062,7 +1066,7 @@ const Main = () => {
 
         {/* 英语模块面板 - 可折叠 */}
         <div style={styles.panel}>
-          <div 
+          <div
             style={styles.panelHeader}
             onClick={() => setExpandedEnglish(!expandedEnglish)}
             onMouseEnter={(e) => {
@@ -1127,7 +1131,7 @@ const Main = () => {
 
         {/* 数学模块面板 - 可折叠 */}
         <div style={styles.panel}>
-          <div 
+          <div
             style={styles.panelHeader}
             onClick={() => setExpandedMath(!expandedMath)}
             onMouseEnter={(e) => {
