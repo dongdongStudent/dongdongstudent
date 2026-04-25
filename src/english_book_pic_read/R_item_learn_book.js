@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './scss/R_item_learn_book.scss';
 import { G_config } from '../config.js';
-import { F_speak, F_translator } from '../Function/weisimin.js';
+import { F_translator } from '../Function/weisimin.js';
 import WordTranslator from '../translator/index.js';
 
 // 动态导入所有 word_frame 数据
@@ -11,11 +11,6 @@ const wordFrameModules = {
   wy_4_d: () => import('../resources/book_word_frame/word_frame_english_wy_4_d.json'),
   // 人教版
   rjb_7_u: () => import('../resources/book_word_frame/word_frame_english_rjb_7_u.json'),
-};
-
-const fetchSRT = async (path) => {
-
-  return [];
 };
 
 // VS Code 风格开关组件
@@ -294,6 +289,7 @@ const R_item_learn_book = () => {
   const [book_word_frame, setBook_word_frame] = useState([]);
   const [clickedWords, setClickedWords] = useState(new Set());
   const [imgWidth, setImgWidth] = useState(0);
+  const [imgHeight, setImgHeight] = useState(0);
   const [isOn, setIsOn] = useState(true);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [wordStates, setWordStates] = useState({});
@@ -304,6 +300,7 @@ const R_item_learn_book = () => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showHelp, setShowHelp] = useState(true);
   const [imageScale, setImageScale] = useState(1);
+  const [imagePosition, setImagePosition] = useState({ x: 0, y: 0 });
   const [wordFrameData, setWordFrameData] = useState({});
   const [loadingWordFrame, setLoadingWordFrame] = useState(true);
 
@@ -323,14 +320,11 @@ const R_item_learn_book = () => {
         const loadModule = wordFrameModules[bookId];
         
         if (loadModule) {
-
           const module = await loadModule();
           // 处理不同的导出格式（.json 和 .js）
           const data = module.default || module;
           setWordFrameData(data);
-
         } else {
-
           setWordFrameData({});
         }
       } catch (error) {
@@ -388,7 +382,6 @@ const R_item_learn_book = () => {
   }, [book_Current_page, getWordFrameData, clickedWords.size, loadingWordFrame]);
 
   const closeTranslator = useCallback(() => {
-    console.log('关闭翻译弹窗');
     setShowTranslator(false);
     setCurrentWord('');
     setCurrentTranslation('');
@@ -403,11 +396,79 @@ const R_item_learn_book = () => {
   }, [navigate, returnPath, returnState]);
 
   const handleSpeak = useCallback((text) => {
-    console.log('发音:', text);
     if (text && isOn) {
-      F_speak(text);
+      // F_speak(text);
     }
   }, [isOn]);
+
+  // 计算图片最佳缩放和位置（兼容开发者工具打开时）
+  const calculateImageLayout = useCallback((imgNaturalWidth, imgNaturalHeight) => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    // 可用区域（减去左右按钮空间和上下边距）
+    const availableWidth = viewportWidth - 140; // 左右各留70px给按钮
+    const availableHeight = viewportHeight - 100; // 上下各留50px
+    
+    // 计算缩放比例，使图片完全适应可用区域
+    const scaleX = availableWidth / imgNaturalWidth;
+    const scaleY = availableHeight / imgNaturalHeight;
+    const scale = Math.min(scaleX, scaleY, 1);
+    
+    // 计算图片实际显示尺寸
+    const displayWidth = imgNaturalWidth * scale;
+    const displayHeight = imgNaturalHeight * scale;
+    
+    // 计算居中位置
+    const posX = (viewportWidth - displayWidth) / 2;
+    const posY = (viewportHeight - displayHeight) / 2;
+    
+    return { scale, x: posX, y: posY };
+  }, []);
+
+  // 更新图片布局
+  const updateImageLayout = useCallback(() => {
+    if (imgWidth > 0 && imgHeight > 0) {
+      const { scale, x, y } = calculateImageLayout(imgWidth, imgHeight);
+      setImageScale(scale);
+      setImagePosition({ x, y });
+    }
+  }, [imgWidth, imgHeight, calculateImageLayout]);
+
+  // 图片加载完成，计算最佳缩放比例
+  const handleImageLoad = useCallback((e) => {
+    const img = e.target;
+    const naturalWidth = img.naturalWidth;
+    const naturalHeight = img.naturalHeight;
+    
+    setImgWidth(naturalWidth);
+    setImgHeight(naturalHeight);
+    
+    const { scale, x, y } = calculateImageLayout(naturalWidth, naturalHeight);
+    setImageScale(scale);
+    setImagePosition({ x, y });
+  }, [calculateImageLayout]);
+
+  // 监听窗口大小变化（包括开发者工具打开/关闭）
+  useEffect(() => {
+    const handleResize = () => {
+      updateImageLayout();
+    };
+
+    // 使用 ResizeObserver 监听视口变化
+    const resizeObserver = new ResizeObserver(() => {
+      updateImageLayout();
+    });
+    
+    resizeObserver.observe(document.body);
+    
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
+    };
+  }, [updateImageLayout]);
 
   // 键盘事件处理
   useEffect(() => {
@@ -463,7 +524,6 @@ const R_item_learn_book = () => {
 
   // 处理单词框点击
   const handleFrameClick = useCallback(async (item) => {
-    console.log('点击单词框:', item);
     if (!item.text) return;
 
     setClickedWords(prev => new Set(prev).add(item.text));
@@ -474,13 +534,8 @@ const R_item_learn_book = () => {
       return { ...prev, [item.text]: newState };
     });
 
-    if (isOn) {
-      F_speak(item.text);
-    }
-
     setCurrentWord(item.text);
     setShowTranslator(true);
-    console.log('设置显示翻译弹窗, 单词:', item.text);
     
     if (item.translator) {
       setCurrentTranslation(item.translator);
@@ -513,56 +568,31 @@ const R_item_learn_book = () => {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().then(() => {
         setIsFullscreen(true);
+        // 全屏后重新计算布局
+        setTimeout(updateImageLayout, 100);
       }).catch(err => {
         console.error('全屏失败:', err);
       });
     } else {
       document.exitFullscreen().then(() => {
         setIsFullscreen(false);
+        // 退出全屏后重新计算布局
+        setTimeout(updateImageLayout, 100);
       }).catch(err => {
         console.error('退出全屏失败:', err);
       });
     }
-  }, []);
+  }, [updateImageLayout]);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
       setIsFullscreen(!!document.fullscreenElement);
+      // 全屏状态改变后重新计算布局
+      setTimeout(updateImageLayout, 100);
     };
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
-
-  // 图片加载完成，计算最佳缩放比例
-  const handleImageLoad = useCallback((e) => {
-    const img = e.target;
-    const containerHeight = window.innerHeight;
-    const containerWidth = window.innerWidth - 120;
-
-    const scaleX = containerWidth / img.naturalWidth;
-    const scaleY = containerHeight / img.naturalHeight;
-    const scale = Math.min(scaleX, scaleY, 1);
-
-    setImageScale(scale);
-    setImgWidth(img.naturalWidth);
-  }, []);
-
-  // 监听窗口大小变化
-  useEffect(() => {
-    const handleResize = () => {
-      if (imgWidth > 0) {
-        const containerHeight = window.innerHeight - 80;
-        const containerWidth = window.innerWidth - 120;
-        const scaleX = containerWidth / imgWidth;
-        const scaleY = containerHeight / imgWidth;
-        const scale = Math.min(scaleX, scaleY, 1);
-        setImageScale(scale);
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [imgWidth]);
+  }, [updateImageLayout]);
 
   // 渲染单词框
   const renderWordFrame = useCallback((word, index) => {
@@ -668,8 +698,6 @@ const R_item_learn_book = () => {
       </div>
     );
   }
-
-  console.log('渲染状态 - showTranslator:', showTranslator, 'currentWord:', currentWord);
 
   return (
     <div
@@ -852,7 +880,7 @@ const R_item_learn_book = () => {
         </div>
       )}
 
-      {/* 图片和单词框容器 */}
+      {/* 图片和单词框容器 - 使用绝对定位居中 */}
       <div
         className='img_and_frame'
         ref={imgContainerRef}
@@ -860,18 +888,16 @@ const R_item_learn_book = () => {
           position: 'relative',
           width: '100vw',
           height: '100vh',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
           overflow: 'hidden'
         }}
       >
         <div style={{
-          position: 'relative',
-          display: 'inline-block',
+          position: 'absolute',
+          left: `${imagePosition.x}px`,
+          top: `${imagePosition.y}px`,
           transform: `scale(${imageScale})`,
-          transformOrigin: 'center center',
-          transition: 'transform 0.2s ease'
+          transformOrigin: 'top left',
+          transition: 'transform 0.2s ease, left 0.2s ease, top 0.2s ease'
         }}>
           <img
             src={path_img}
@@ -879,9 +905,7 @@ const R_item_learn_book = () => {
             onLoad={handleImageLoad}
             style={{
               display: 'block',
-              maxWidth: 'none',
-              maxHeight: 'none',
-              width: 'auto',
+              width: imgWidth > 0 ? `${imgWidth}px` : 'auto',
               height: 'auto',
               borderRadius: '4px',
               boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
@@ -891,26 +915,35 @@ const R_item_learn_book = () => {
             }}
           />
 
-          {book_word_frame && book_word_frame.map((word, index) => {
-            return renderWordFrame(word, index);
-          })}
+          {/* 单词框覆盖层 */}
+          {book_word_frame && book_word_frame.length > 0 && (
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              pointerEvents: 'auto'
+            }}>
+              {book_word_frame.map((word, index) => renderWordFrame(word, index))}
+            </div>
+          )}
         </div>
       </div>
 
-      {/* 翻译悬浮框 - 使用 WordTranslator */}
-      {/* 根据 WordTranslator 的可能接口，尝试不同的属性传递方式 */}
-      {showTranslator && (
-        <WordTranslator
-          visible={showTranslator}
-          word={currentWord}
-          translation={currentTranslation}
-          onClose={closeTranslator}
-          onSpeak={handleSpeak}
-          isOpen={showTranslator}
-          open={showTranslator}
-          onRequestClose={closeTranslator}
-        />
-      )}
+      {/* 翻译悬浮框 */}
+      <WordTranslator
+        open={showTranslator}
+        onClose={closeTranslator}
+        word={currentWord}
+        onWordChange={(data) => {
+          if (data?.translation) {
+            setCurrentTranslation(data.translation);
+          }
+        }}
+        autoSpeak={isOn}
+        defaultCompact={true}
+      />
 
       {/* 悬浮翻页控件 */}
       <FloatingPageControls

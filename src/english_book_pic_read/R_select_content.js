@@ -534,10 +534,10 @@ const R_select_content = () => {
         // 获取当前年级下所有学期的教材数据
         const getVolumeBooks = () => {
             if (!bookManager.isLoaded || !selectedVersionCode || !selectedGrade) return {};
-            
+
             const currentData = bookManager.getCurrentRawData();
             if (!currentData || !currentData.books) return {};
-            
+
             const result = {};
             currentData.books.forEach(book => {
                 if (book.grade === selectedGrade.id) {
@@ -546,9 +546,9 @@ const R_select_content = () => {
             });
             return result;
         };
-        
+
         const volumeBooks = getVolumeBooks();
-        
+
         return (
             <div className="selector-container">
                 <div className="selector-header">
@@ -565,7 +565,7 @@ const R_select_content = () => {
                         const coverImage = bookData?.cover || bookData?.units?.[0]?.cover;
                         const imageUrl = coverImage ? getImageUrl(coverImage) : null;
                         const isImageFailed = volumeCoverFailed[volume.id];
-                        
+
                         return (
                             <div
                                 key={volume.id}
@@ -574,7 +574,7 @@ const R_select_content = () => {
                             >
                                 <div className="selector-cover">
                                     {imageUrl && !isImageFailed ? (
-                                        <img 
+                                        <img
                                             src={imageUrl}
                                             alt={volume.name}
                                             className="volume-cover-img"
@@ -713,6 +713,38 @@ const R_select_content = () => {
                 display: 'flex',
                 gap: '12px'
             }}>
+               <button
+    onClick={() => navigate('/sentence_listen')}
+    className='memorize-btn'
+    style={{
+        backgroundColor: '#2d2d2d',
+        color: '#cccccc',
+        border: '1px solid #3e3e42',
+        borderRadius: '6px',
+        padding: '10px 20px',
+        fontSize: '14px',
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '8px',
+        transition: 'all 0.3s ease'
+    }}
+    onMouseEnter={(e) => {
+        e.target.style.backgroundColor = '#3e3e42';
+        e.target.style.borderColor = '#0e639c';
+        e.target.style.color = '#ffffff';
+        e.target.style.transform = 'scale(1.05)';
+    }}
+    onMouseLeave={(e) => {
+        e.target.style.backgroundColor = '#2d2d2d';
+        e.target.style.borderColor = '#3e3e42';
+        e.target.style.color = '#cccccc';
+        e.target.style.transform = 'scale(1)';
+    }}
+    title="听力听写中心"
+>
+    📚 听力听写
+</button>
                 <button
                     onClick={() => navigate('/english_book_1_work')}
                     className='memorize-btn'
@@ -822,15 +854,15 @@ const R_select_content = () => {
             {selectedVersionCode && selectedGrade && selectedVolume && showUnits && renderUnitList()}
 
             {/* 翻译器组件 */}
-            <WordTranslator
+            {/* <WordTranslator
                 ref={translatorRef}
                 open={translatorOpen}
                 onClose={() => setTranslatorOpen(false)}
                 defaultCompact={true}
                 enableClipboardDetection={true}
                 onRequestOpen={() => setTranslatorOpen(true)}
-                word="Hello world. How are you? I am fine."  
-            />
+                word="Hello world. How are you? I am fine."
+            /> */}
         </div>
     );
 };

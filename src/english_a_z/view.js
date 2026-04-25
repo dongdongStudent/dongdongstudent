@@ -3,7 +3,6 @@ import {
   Box,
   Paper,
   Typography,
-  Grid,
   List,
   ListItem,
   ListItemIcon,
@@ -151,8 +150,8 @@ const FileBrowserView = ({
     );
   };
   
-  // 渲染文章列表
-  const renderArticleList = () => {
+  // 渲染右侧内容（选中材料的详细信息）
+  const renderRightContent = () => {
     if (contentLoading) {
       return (
         <Box sx={{ display: 'flex', justifyContent: 'center', p: 4 }}>
@@ -272,14 +271,15 @@ const FileBrowserView = ({
   };
   
   return (
-    <Box sx={{ p: 3, bgcolor: '#f5f5f5', minHeight: '100%' }}>
+    <Box sx={{ minWidth: '800px', overflow: 'auto', p: 3, bgcolor: '#f5f5f5', minHeight: '100%' }}>
       <Typography variant="h5" fontWeight="bold" sx={{ mb: 3, color: '#1a237e' }}>
         📚 English A-Z 阅读学习
       </Typography>
 
-      <Grid container spacing={3}>
-        {/* 左侧：文件列表 */}
-        <Grid item xs={12} md={5}>
+      {/* 使用 Flexbox 强制左右布局，不使用 Grid */}
+      <Box sx={{ display: 'flex', gap: 3, flexDirection: { xs: 'column', md: 'row' } }}>
+        {/* 左侧：学习材料列表 - 宽度 40% */}
+        <Box sx={{ flex: { xs: '1 1 auto', md: '0 0 40%' }, minWidth: 0 }}>
           <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ p: 2, bgcolor: '#f5f5f5', borderBottom: '1px solid #e0e0e0' }}>
               <Typography variant="h6">
@@ -288,7 +288,7 @@ const FileBrowserView = ({
               <TextField
                 fullWidth
                 size="small"
-                placeholder="🔍 搜索材料..."
+                placeholder="搜索材料..."
                 value={searchTerm}
                 onChange={onSearchChange}
                 sx={{ mt: 1 }}
@@ -306,26 +306,26 @@ const FileBrowserView = ({
               {renderFileList()}
             </Box>
           </Paper>
-        </Grid>
+        </Box>
         
-        {/* 右侧：文章列表 */}
-        <Grid item xs={12} md={7}>
+        {/* 右侧：选中材料的详细内容（文章列表）- 宽度 60% */}
+        <Box sx={{ flex: { xs: '1 1 auto', md: '0 0 58%' }, minWidth: 0 }}>
           <Paper sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <Box sx={{ p: 2, bgcolor: '#f5f5f5', borderBottom: '1px solid #e0e0e0' }}>
               <Typography variant="h6">
-                {selectedFile ? (fileContent?.name || selectedFile.name || '文章列表') : '📖 文章列表'}
+                📖 学习内容
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {selectedFile ? '选择文章开始学习' : '请从左侧选择学习材料'}
+                {selectedFile ? `当前选择：${selectedFile.name}` : '请从左侧选择学习材料'}
               </Typography>
             </Box>
             
             <Box sx={{ p: 2, flexGrow: 1, overflow: 'auto', maxHeight: 'calc(100vh - 300px)' }}>
-              {renderArticleList()}
+              {renderRightContent()}
             </Box>
           </Paper>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };

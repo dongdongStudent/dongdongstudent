@@ -1,492 +1,272 @@
 {
-  "name": "53人教版上册英语阅读理解",
-  "description": "53人教版上册英语阅读理解练习，包含生活、文化、校园生活等主题",
-  "version": "1.0.0",
-  "categories": ["生活", "文化", "校园生活", "科普", "日常生活"],
-  "passages": [
-   {
-      "id": "bob_conversation_passage_002",
-      "title": "1. Bob and His Classmates (月考改编)",
-      "description": "阅读对话，选择正确答案",
-      "category": "校园生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![鸟类迁徙](./pic/test/1_1.png)Hello! I'm Bob. I'm an English boy. Now I'm in No. 5 Middle School in Beijing.\n\nIt's 7:30 in the morning. On the way to school, I see Li Ming and Li Fang. They are my classmates.\n\n\"Hi, Li Ming, Li Fang!\" I say.\n\n\"Hi, Bob!\" they say.\n\n\"Oh, Li Fang, do you have a new pencil box?\" I ask.\n\n\"Yes, Bob,\" Li Fang says.\n\n\"What color is ___it___?\" I ask.\n\n\"It's purple,\" Li Fang says. \"I like purple. Look at my schoolbag. It's purple, too.\"\n\n\"Look, Bob! I have a new CD,\" Li Ming says.\n\n\"Do you like listening to music?\" I ask.\n\n\"Yes,\" he says.\n\n\"Can I listen to your CD this afternoon?\" I ask.\n\n\"Yes, you can, Bob,\" he says.",
-      "questions": [
+  "bookId": "bilingual_world_001",
+  "title": "We Speak Two Languages / 我们说两种语言",
+  "category": "语言文化",
+  "difficulty": 1,
+  "totalParts": 13,
+  "content": [
+    {
+      "part": 1,
+      "image": "./J/2_1.png",
+      "alt": "Children speaking different languages around the world",
+      "sentences": [
         {
-          "id": "bob_002_q1",
-          "number": 1,
-          "question": "Bob is in ______.",
-          "options": ["Nanjing", "Beijing", "Shanghai"],
-          "correctAnswer": "B",
-          "explanation": "根据短文第一段最后一句 'Now I'm in No. 5 Middle School in Beijing.' 可知，Bob现在在北京。"
+          "english": "What language do you speak?",
+          "chinese": "你说什么语言？"
         },
         {
-          "id": "bob_002_q2",
-          "number": 2,
-          "question": "Bob sees ______ classmates on the way to school.",
-          "options": ["2", "3", "4"],
-          "correctAnswer": "A",
-          "explanation": "根据短文第二段 'On the way to school, I see Li Ming and Li Fang.' 可知，Bob在上学路上看到了李明和李芳，共2个同学。"
+          "english": "Do you speak one language or more than one?",
+          "chinese": "你说一种语言还是多种语言？"
         },
         {
-          "id": "bob_002_q3",
-          "number": 3,
-          "question": "文中画线单词\"🔍 it 🔍\"指的是______。",
-          "options": ["the pen", "the CD", "the pencil box"],
-          "correctAnswer": "C",
-          "explanation": "划线词'it'出现在对话'What color is it?'中，根据上文'Oh, Li Fang, do you have a new pencil box?'可知，这里的'it'指的是上文提到的'pencil box'（铅笔盒）。"
-        },
-        {
-          "id": "bob_002_q4",
-          "number": 4,
-          "question": "What color is Li Fang's schoolbag?",
-          "options": ["Blue.", "Green.", "Purple."],
-          "correctAnswer": "C",
-          "explanation": "根据李芳说的话'Look at my schoolbag. It's purple, too.'可知，她的书包是紫色的。"
-        },
-        {
-          "id": "bob_002_q5",
-          "number": 5,
-          "question": "下列哪项陈述是错误的?",
-          "options": [
-            "Bob is an English boy.",
-            "Li Ming is in No. 6 Middle School.",
-            "Bob will listen to music this afternoon."
-          ],
-          "correctAnswer": "B",
-          "explanation": "A选项正确，根据第一段'I'm an English boy.'可知。C选项正确，根据最后李明回答'Yes, you can, Bob.'可知Bob下午可以听音乐。B选项错误，文中只提到Bob在第五中学，并未说明李明在哪个中学，但根据他们是同学可知，李明也应该在第五中学，而不是第六中学。"
+          "english": "People who speak two languages are bilingual.",
+          "chinese": "说两种语言的人称为双语者。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "schoolbag_items_passage_002",
-      "title": "2. What's in Their Schoolbags?",
-      "description": "阅读表格，选择正确答案",
-      "category": "日常生活",
-      "difficulty": 1,
-      "totalQuestions": 4,
-      "content": "![鸟类迁徙](./pic/test/2_1.png)This is Alice.\nWhat's in Alice's schoolbag?\n★A yellow pen.\n★A blue ruler.\n★A green cup.\n★An orange.\n\nThis is Cindy.\nWhat's in Cindy's schoolbag?\n★A purple pen.\n★A red cup.\n★A key.\n★A CD.\n\nThis is Frank.\nWhat's in Frank's schoolbag?\n★A green T-shirt.\n★A black pen.\n★An English book.\n★A map.",
-      "questions": [
+      "part": 2,
+      "image": "./J/2_2.png",
+      "alt": "Andre from Quebec, Canada",
+      "sentences": [
         {
-          "id": "schoolbag_002_q31",
-          "number": 31,
-          "question": "You can see a ______ in Cindy's schoolbag.",
-          "options": ["green cup", "purple cup", "red cup"],
-          "correctAnswer": "C",
-          "explanation": "根据Cindy的物品列表：'★A red cup.'可知，Cindy的书包里有一个红色的杯子。"
+          "english": "My name is Andre.",
+          "chinese": "我的名字是安德烈。"
         },
         {
-          "id": "schoolbag_002_q32",
-          "number": 32,
-          "question": "______ has a map.",
-          "options": ["Frank", "Cindy", "Alice"],
-          "correctAnswer": "A",
-          "explanation": "根据Frank的物品列表：'★A map.'可知，Frank有一张地图。"
+          "english": "I live in Quebec, Canada.",
+          "chinese": "我住在加拿大魁北克。"
         },
         {
-          "id": "schoolbag_002_q33",
-          "number": 33,
-          "question": "Everyone (每个人) has a ______.",
-          "options": ["CD", "pen", "cup"],
-          "correctAnswer": "B",
-          "explanation": "Alice有a yellow pen，Cindy有a purple pen，Frank有a black pen。三个人都有钢笔，而CD只有Cindy有，杯子Alice和Cindy有但Frank没有。"
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
         },
         {
-          "id": "schoolbag_002_q34",
-          "number": 34,
-          "question": "______ are green.",
-          "options": [
-            "Alice's cup and Frank's map",
-            "Cindy's pen and Frank's T-shirt",
-            "Alice's cup and Frank's T-shirt"
-          ],
-          "correctAnswer": "C",
-          "explanation": "Alice's cup是绿色的（a green cup），Frank's T-shirt是绿色的（a green T-shirt）。Frank's map没有说明颜色，Cindy's pen是紫色的。"
+          "english": "I speak French and English.",
+          "chinese": "我说法语和英语。"
+        },
+        {
+          "english": "My teachers use French and English in many classes, such as reading and social studies.",
+          "chinese": "我的老师在许多课上使用法语和英语，比如阅读和社会研究。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "farm_animals_passage_003",
-      "title": "3. Where Do Farm Animals Live?",
-      "description": "阅读短文，选择正确答案",
-      "category": "动物与自然",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![鸟类迁徙](./pic/test/3_1.png)Where do farm animals live? Some farms have lots of different animals. Hens, pigs, sheep, and goats live on this farm. Who else lives here? Cows and horses live here, too. Look at the map of the farm. The red hens have nests in the barn (谷仓). Some pigs have pens in the barnyard. Sheep and goats stay out where grass grows. Cows and horses stay out in the field, too. They have room to run.\n\n___ A hen uses her feet to scratch (抓) in the dirt. She looks for seeds and bugs to eat. She uses her beak (鸟嘴) to peck. The hen shows her babies how to peck seeds, too. They love to eat! Who feeds the pigs? The farmer feeds them. He brings them corn and other grains. The farmer gives the animals in the field grass and other plants. The animals need lots of food.\n\nHow do farm animals help? The farmers get food from some of the animals. Hens lay eggs. We eat eggs. The farmers get milk from some of the cows and goats. We drink milk. The farmers ride the horses, too. Lots of animals live on a farm. They help the farmers, and the farmers help them.",
-      "questions": [
+      "part": 3,
+      "image": "./J/2_3.png",
+      "alt": "Manuel from New York",
+      "sentences": [
         {
-          "id": "farm_003_q31",
-          "number": 31,
-          "question": "Which of the following sentences can be put in the blank?",
-          "options": [
-            "Why do farm animals eat?",
-            "When do farm animals eat?",
-            "What do farm animals eat?",
-            "Where do farm animals eat?"
-          ],
-          "correctAnswer": "C",
-          "explanation": "空白处后面讲述了母鸡寻找种子和虫子吃，农民给猪带来玉米和其他谷物，给田里的动物草和其他植物。这些都在说明农场动物吃什么，所以应选“What do farm animals eat?”。"
+          "english": "My name is Manuel.",
+          "chinese": "我的名字是曼努埃尔。"
         },
         {
-          "id": "farm_003_q32",
-          "number": 32,
-          "question": "According to the passage, farm animals don't eat ______.",
-          "options": [
-            "seeds and bugs",
-            "corn and other grains",
-            "grass and other plants",
-            "milk and eggs"
-          ],
-          "correctAnswer": "D",
-          "description": "文中提到母鸡吃种子和虫子，猪吃玉米和其他谷物，田里的动物吃草和其他植物。而牛奶和鸡蛋是农场动物为人类提供的食物，不是它们吃的。"
+          "english": "I live in New York.",
+          "chinese": "我住在纽约。"
         },
         {
-          "id": "farm_003_q33",
-          "number": 33,
-          "question": "How many kinds of animals are mentioned in the passage?",
-          "options": ["3.", "4.", "5.", "6."],
-          "correctAnswer": "D",
-          "explanation": "文中提到的动物有：hens（母鸡）、pigs（猪）、sheep（绵羊）、goats（山羊）、cows（奶牛）、horses（马），共6种。"
+          "english": "I am Hispanic, and I speak two languages.",
+          "chinese": "我是西班牙裔，我说两种语言。"
         },
         {
-          "id": "farm_003_q34",
-          "number": 34,
-          "question": "Which one is true according to the passage?",
-          "options": [
-            "Some pigs have nests in the barnyard.",
-            "The hens teach their babies how to find the food.",
-            "The animals in the field only eat grass.",
-            "The farmers don't need the animals' help."
-          ],
-          "correctAnswer": "B",
-          "explanation": "文中明确提到“The hen shows her babies how to peck seeds”，即母鸡教宝宝如何啄食，也就是教它们如何寻找食物。A项错误：猪有猪圈（pens），不是nest（巢）；C项错误：田里的动物还吃其他植物；D项错误：农民需要动物的帮助。"
-        },
-        {
-          "id": "farm_003_q35",
-          "number": 35,
-          "question": "What is the best title of this passage?",
-          "options": [
-            "Animals on a Farm",
-            "An Interesting Farm",
-            "Different Animals",
-            "Animals and Farmers"
-          ],
-          "correctAnswer": "A",
-          "explanation": "文章主要介绍了农场上有哪些动物、它们住在哪里、吃什么以及如何帮助农民。核心主题是“农场上的动物”，因此“Animals on a Farm”最合适。"
+          "english": "I speak Spanish and English.",
+          "chinese": "我说西班牙语和英语。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "esha_introduction_001",
-      "title": "4. Esha的自我介绍",
-      "description": "阅读Esha的自我介绍，选择正确答案",
-      "category": "个人介绍",
-      "difficulty": 1,
-      "totalQuestions": 4,
-      "content": "![](./pic/test/4_1.png)Hey, everyone!\n\nThis page is all about me! So, read on!\n\nMy name is Esha and I live in Sydney, Australia! I only moved here two years ago and I love it! I am 12 years old, and I am in Grade 7 at Park School. I love the colour GREEN! I have no idea why, but I just do! My star sign is Aquarius (水瓶座) and I love playing sports such as tennis and baseball. I also love to read, write and...BLOG! I like animals such as dogs and pandas and dolphins are my favourite! I love them very much and once I went to a place in New South Wales and I was able to swim with a dolphin! Another thing you should know about me is that I am a CRAZY fan of Harry Potter! My favourite cartoon movie is The Lorax.\n\nWell, I think that’s all you need to know about me!\n\nPlease feel free to tell me about YOU and if we have anything in common (共同的). See you later!",
-      "questions": [
+      "part": 4,
+      "image": "./J/2_4.png",
+      "alt": "Grandparents teaching grandson Spanish songs and guitar",
+      "sentences": [
         {
-          "id": "esha_001_q1",
-          "number": 41,
-          "question": "How old is Esha?",
-          "options": ["7 years old.", "9 years old.", "12 years old.", "15 years old."],
-          "correctAnswer": "C",
-          "explanation": "根据文中'I am 12 years old'可知，Esha 12岁了。"
+          "english": "My grandparents moved to New York City from Spain.",
+          "chinese": "我的祖父母从西班牙搬到了纽约市。"
         },
         {
-          "id": "esha_001_q2",
-          "number": 42,
-          "question": "Why does Esha love the colour green?",
-          "options": ["Because she lives in Sydney.", "Because her star sign is Aquarius.", "She doesn't know why.", "She doesn't tell us why."],
-          "correctAnswer": "C",
-          "explanation": "根据文中'I have no idea why, but I just do!'可知，她自己也不知道为什么喜欢绿色。"
-        },
-        {
-          "id": "esha_001_q3",
-          "number": 43,
-          "question": "Which animals does Esha love most?",
-          "options": ["Dogs.", "Pandas.", "Kangaroos.", "Dolphins."],
-          "correctAnswer": "D",
-          "explanation": "根据文中'dolphins are my favourite'可知，她最喜欢的动物是海豚。"
-        },
-        {
-          "id": "esha_001_q4",
-          "number": 44,
-          "question": "Where is the text probably from?",
-          "options": ["A blog.", "A book.", "A newspaper.", "A diary."],
-          "correctAnswer": "A",
-          "explanation": "文中提到'I also love to read, write and...BLOG!'，且开头的口吻像是在博客上介绍自己，因此最可能来自博客。"
+          "english": "My grandfather taught me to sing Spanish songs and play guitar.",
+          "chinese": "我的祖父教我唱西班牙歌曲和弹吉他。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "two_pictures_001",
-      "title": "5. 两张照片",
-      "description": "阅读短文，选择正确答案",
-      "category": "家庭生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![](./pic/test/5_1.png)Here are two pictures. Who are they in the pictures? Mr. White and his son Bill are in the first picture. Now they are in Bill's room. We can see some English books on the desk. And on the bed there is a watch. It's Bill's. His notebooks are on the bed, too.\n\nWhat about the next picture? You can see a woman and a girl in it. The woman is Bill's mother and she's in her daughter Ann's room. You can see a map on the white wall (墙). Next to the bed is a desk. A clock is on the desk. What is that under the bed? Is it a yellow hat? No, it's Ann's pet dog.",
-      "questions": [
+      "part": 5,
+      "image": "./J/2_5.png",
+      "alt": "Waya, a Cherokee child",
+      "sentences": [
         {
-          "id": "two_pictures_001_q1",
-          "number": 36,
-          "question": "In the two pictures, we can see ______ people.",
-          "options": ["2", "3", "4"],
-          "correctAnswer": "C",
-          "explanation": "第一张照片中有Mr. White和Bill（2人），第二张照片中有Bill's mother和Ann（2人），总共4个人。"
+          "english": "My name is Waya, and I am Cherokee.",
+          "chinese": "我的名字是瓦亚，我是切罗基人。"
         },
         {
-          "id": "two_pictures_001_q2",
-          "number": 37,
-          "question": "Whose (谁的) notebooks are on the bed?",
-          "options": ["Bill's.", "Mr. White's.", "Ann's."],
-          "correctAnswer": "A",
-          "explanation": "根据第一张照片的描述'His notebooks are on the bed, too.'，这里的His指代Bill，所以是Bill的笔记本。"
+          "english": "Waya means 'wolf' in the Cherokee language.",
+          "chinese": "瓦亚在切罗基语中的意思是'狼'。"
         },
         {
-          "id": "two_pictures_001_q3",
-          "number": 38,
-          "question": "Who is Mr. White?",
-          "options": ["He is Ann's brother.", "He is Bill's father.", "He is Ann's teacher."],
-          "correctAnswer": "B",
-          "explanation": "根据文中'Mr. White and his son Bill'可知，Mr. White是Bill的父亲。"
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
         },
         {
-          "id": "two_pictures_001_q4",
-          "number": 39,
-          "question": "What can we see in Ann's room?",
-          "options": ["A hat.", "A ball.", "A clock."],
-          "correctAnswer": "C",
-          "explanation": "根据第二张照片的描述'A clock is on the desk.'可知，在Ann的房间里可以看到一个钟。"
-        },
-        {
-          "id": "two_pictures_001_q5",
-          "number": 40,
-          "question": "What color is Ann's dog?",
-          "options": ["Black.", "White.", "Yellow."],
-          "correctAnswer": "C",
-          "explanation": "根据文中'Is it a yellow hat? No, it's Ann's pet dog.'可知，那只狗是黄色的。"
+          "english": "I speak Cherokee and English.",
+          "chinese": "我说切罗基语和英语。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "alex_family_001",
-      "title": "6. Alex的家庭介绍",
-      "description": "阅读短文，选择正确答案",
-      "category": "家庭生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![](./pic/test/6_1.png)Hello, my name's Alex and I am 19 years old. I was born in Chiapas but I live in Puebla now because I am studying here to be a teacher. My parents live in Chiapas.\n\nMy mum, Elizabeth, is 50 years old and she has her own business. My dad is Jorge, he is 52 and he runs his own company. I have two elder brothers and a younger sister. My eldest brother, Javier, is 23. He's studying to be an architect (建筑师) in the UNACH. He's also working for a cinema to pay for his studies. My other brother, Luis, is 21. He's not studying now. He's a YouTuber and has lots of fans. My sister, Ellie, is 10 years old. She's studying in an elementary school.\n\nMy mum's parents live with my family. My grandpa, Alan, is 72 years old. He's retired (已退休的). My grandma, Yazmin, is 70 years old. She's a housewife.",
-      "questions": [
+      "part": 6,
+      "image": "./J/2_6.png",
+      "alt": "Cherokee family using special keyboard with Cherokee syllabary",
+      "sentences": [
         {
-          "id": "alex_family_001_q1",
-          "number": 41,
-          "question": "Where does Alex study?",
-          "options": ["In Chiapas.", "In Puebla.", "In the UNACH."],
-          "correctAnswer": "B",
-          "explanation": "根据文中'I live in Puebla now because I am studying here'可知，Alex在Puebla学习。"
-        },
-        {
-          "id": "alex_family_001_q2",
-          "number": 42,
-          "question": "What does Alex want to be?",
-          "options": ["A teacher.", "An architect.", "A manager."],
-          "correctAnswer": "A",
-          "explanation": "根据文中'I am studying here to be a teacher'可知，Alex想成为一名老师。"
-        },
-        {
-          "id": "alex_family_001_q3",
-          "number": 43,
-          "question": "Javier is ______ years older than Alex.",
-          "options": ["3", "4", "5"],
-          "correctAnswer": "B",
-          "explanation": "Alex 19岁，Javier 23岁，23 - 19 = 4，所以Javier比Alex大4岁。"
-        },
-        {
-          "id": "alex_family_001_q4",
-          "number": 44,
-          "question": "How many people are there in Alex's family?",
-          "options": ["6.", "7.", "8."],
-          "correctAnswer": "C",
-          "explanation": "Alex家庭成员包括：Alex自己、父母（2人）、两个哥哥（Javier和Luis）、一个妹妹（Ellie）、外公外婆（2人），共1+2+2+1+2=8人。"
-        },
-        {
-          "id": "alex_family_001_q5",
-          "number": 45,
-          "question": "What does Luis do?",
-          "options": ["He runs his own company.", "He is an architect.", "He's a YouTuber."],
-          "correctAnswer": "C",
-          "explanation": "根据文中'He's a YouTuber and has lots of fans'可知，Luis是一名YouTuber。"
+          "english": "The Cherokees are a Native American tribe. At home, my family uses special keyboards. We can write in English and in Cherokee.",
+          "chinese": "切罗基人是美洲原住民部落。在家里，我的家人使用特殊的键盘。我们可以用英语和切罗基语书写。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "jim_school_001",
-      "title": "7. Jim的学校介绍",
-      "description": "阅读短文，选择正确答案",
-      "category": "学校生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![](./pic/test/7_1.png)Hi, my name is Jim. I’m 13 years old. And I’m a middle school student. My school is very big. There are two classroom buildings. Each classroom building has 18 classrooms. We have lessons there. And there is also a music room, five science labs and a library in the buildings. There are many books in the library. Students often do homework or read books there after class. The office building is next to the classroom buildings. Teachers plan their lessons there.\n\nBehind the classroom buildings is a big sports hall. We play sports in the sports hall every day. In the sports hall, we can play football, basketball and table tennis. Every Friday afternoon, there is a basketball game or a football game. The games are always exciting.\n\nMy school is also very beautiful. There is a big garden near the school gate. There are many beautiful flowers in it. In the centre of the garden, there is a pool. The fish are swimming happily in the pool.\n\nI like my school very much.",
-      "questions": [
+      "part": 7,
+      "image": "./J/2_7.png",
+      "alt": "Doli, a Navajo child",
+      "sentences": [
         {
-          "id": "jim_school_001_q1",
-          "number": 41,
-          "question": "How is Jim’s school?",
-          "options": ["Small but beautiful.", "Small and not beautiful.", "Big and beautiful.", "Big but not beautiful."],
-          "correctAnswer": "C",
-          "explanation": "文中提到“My school is very big.”和“My school is also very beautiful.”，因此学校又大又漂亮。"
+          "english": "My name is Doli, and I am Navajo.",
+          "chinese": "我的名字是多莉，我是纳瓦霍人。"
         },
         {
-          "id": "jim_school_001_q2",
-          "number": 42,
-          "question": "There are ______ classrooms in Jim’s school.",
-          "options": ["13", "18", "31", "36"],
-          "correctAnswer": "D",
-          "explanation": "文中说有两栋教学楼，每栋有18间教室，所以总共有18 × 2 = 36间教室。"
+          "english": "Doli means 'bluebird' in Navajo.",
+          "chinese": "多莉在纳瓦霍语中的意思是'蓝鸟'。"
         },
         {
-          "id": "jim_school_001_q3",
-          "number": 43,
-          "question": "The classroom buildings are ______.",
-          "options": ["in the garden", "in front of the sports hall", "behind the sports hall", "near the library"],
-          "correctAnswer": "B",
-          "explanation": "文中提到“Behind the classroom buildings is a big sports hall”，说明教学楼在体育馆的前面。"
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
         },
         {
-          "id": "jim_school_001_q4",
-          "number": 44,
-          "question": "The underlined word “pool” means “______” in Chinese.",
-          "options": ["水池", "河流", "湖", "大海"],
-          "correctAnswer": "A",
-          "explanation": "文中描述花园中央有一个pool，里面有鱼在游泳，因此pool意思是“水池”。"
+          "english": "I speak English and Navajo.",
+          "chinese": "我说英语和纳瓦霍语。"
         },
         {
-          "id": "jim_school_001_q5",
-          "number": 45,
-          "question": "What can we know from the passage?",
-          "options": [
-            "There are eighteen classrooms in Jim’s school.",
-            "There is no lab in the classroom buildings.",
-            "Jim can’t play table tennis in the sports hall.",
-            "There are some fish in the pool."
-          ],
-          "correctAnswer": "D",
-          "explanation": "文中明确提到“The fish are swimming happily in the pool.”，因此D项正确。A项错误，因为有36间教室；B项错误，因为有5个科学实验室；C项错误，因为体育馆里可以打乒乓球。"
+          "english": "My grandfather used the Navajo language to keep U.S. secrets safe during World War II.",
+          "chinese": "我的祖父在二战期间使用纳瓦霍语保护美国的机密安全。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "betty_school_002",
-      "title": "8. Betty的学校介绍",
-      "description": "阅读短文，按要求完成下列各小题",
-      "category": "学校生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![](./pic/test/8_1.png)Hello, everyone! My name is Betty. I am thirteen years old. I am in Class Two, Grade Seven. Today I want to tell you something about my school.\n\nThere are 2,000 students in my school. We have 32 classrooms. In our school we have a library. It is across from our teaching building(教学楼). There are many books in it. We can read books and learn a lot from them. The science labs(实验室) are next to the library. We like having classes in the science labs because it is very interesting. There is also a dining hall in our school. At noon we have lunch there. After school we can play table tennis, basketball or football in the playground. Some of us love running. We can run there.\n\nWe love our school.",
-      "questions": [
+      "part": 8,
+      "image": "./J/2_8.png",
+      "alt": "Nelli with Aztec-inspired background",
+      "sentences": [
         {
-          "id": "betty_school_002_q11",
-          "number": 11,
-          "question": "How many students are there in Betty’s school? (no more than 7 words)",
-          "answer": "2,000 students.",
-          "explanation": "文中第一段明确提到“There are 2,000 students in my school。”"
+          "english": "My name is Nelli.",
+          "chinese": "我的名字是内莉。"
         },
         {
-          "id": "betty_school_002_q12",
-          "number": 12,
-          "question": "Where is the library? (no more than 7 words)",
-          "answer": "Across from the teaching building.",
-          "explanation": "文中提到“The library is across from our teaching building。”"
+          "english": "Nelli means 'truth' in Nahuatl, the language of the Aztecs.",
+          "chinese": "内莉在纳瓦特尔语（阿兹特克人的语言）中的意思是'真理'。"
         },
         {
-          "id": "betty_school_002_q13",
-          "number": 13,
-          "question": "Why do they like having classes in the science labs? (no more than 5 words)",
-          "answer": "Because it is interesting.",
-          "explanation": "文中提到“We like having classes in the science labs because it is very interesting。”"
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
         },
         {
-          "id": "betty_school_002_q14",
-          "number": 14,
-          "question": "Where do the students have lunch? (no more than 7 words)",
-          "answer": "In the dining hall.",
-          "explanation": "文中提到“There is also a dining hall... At noon we have lunch there。”"
+          "english": "I speak Nahuatl and Spanish.",
+          "chinese": "我说纳瓦特尔语和西班牙语。"
         },
         {
-          "id": "betty_school_002_q15",
-          "number": 15,
-          "question": "What can they do in the playground after school? (no more than 9 words)",
-          "answer": "Play table tennis, basketball or football.",
-          "explanation": "文中提到“After school we can play table tennis, basketball or football in the playground。”"
+          "english": "Chocolate was first made by the Aztecs in Mexico. Chocolate is a Nahuatl word.",
+          "chinese": "巧克力最初由墨西哥的阿兹特克人制作。巧克力是一个纳瓦特尔语词汇。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
     },
     {
-      "id": "irwan_family_003",
-      "title": "9. Irwan的家庭介绍",
-      "description": "阅读短文，回答问题",
-      "category": "家庭生活",
-      "difficulty": 1,
-      "totalQuestions": 5,
-      "content": "![](./pic/test/9_1.png)Hi! My name is Irwan. I am ten years old. I am in Grade Four.\n\nI have a sister and a brother. They are Sinta and Budi. Sinta is fourteen years old. She is in a junior school. Budi is eight years old. He is in Grade Two. Budi and I are in the same school. Our school is near our house so we walk to school every day. Sinta goes to school by bus. My father is a doctor. He works at a hospital. He is very busy. He goes to work by car at 8 in the morning and he goes home at 5 in the afternoon. He sometimes is asked to go back again to the hospital at night. My father is Mr. Joko. My mother is a teacher. Her name is Rina. She works at my school. She starts working at seven. At 1:00 in the afternoon, she goes home.\n\nI love my family.",
-      "questions": [
+      "part": 9,
+      "image": "./J/2_9.png",
+      "alt": "Itati from Paraguay",
+      "sentences": [
         {
-          "id": "irwan_family_003_q16",
-          "number": 16,
-          "question": "How many people are there in Irwan’s family?",
-          "answer": "Five people.",
-          "explanation": "家庭成员包括：Irwan自己、姐姐Sinta、弟弟Budi、父亲Mr. Joko、母亲Rina，共5人。"
+          "english": "My name is Itati. I live in Paraguay.",
+          "chinese": "我的名字是伊塔蒂。我住在巴拉圭。"
         },
         {
-          "id": "irwan_family_003_q17",
-          "number": 17,
-          "question": "How old is Irwan’s sister?",
-          "answer": "Fourteen years old.",
-          "explanation": "文中提到“Sinta is fourteen years old。”"
+          "english": "Itati means 'white stone' in Guaraní.",
+          "chinese": "伊塔蒂在瓜拉尼语中的意思是'白色的石头'。"
         },
         {
-          "id": "irwan_family_003_q18",
-          "number": 18,
-          "question": "How do Irwan and his brother go to school?",
-          "answer": "They walk to school.",
-          "explanation": "文中提到“Budi and I are in the same school... we walk to school every day。”"
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
         },
         {
-          "id": "irwan_family_003_q19",
-          "number": 19,
-          "question": "What does Irwan’s father do?",
-          "answer": "He is a doctor.",
-          "explanation": "文中提到“My father is a doctor。”"
-        },
-        {
-          "id": "irwan_family_003_q20",
-          "number": 20,
-          "question": "How long does Irwan’s mother work at school?",
-          "answer": "Six hours.",
-          "explanation": "母亲早上7点开始工作，下午1点回家，一共工作6个小时。"
+          "english": "I speak Guaraní and Spanish.",
+          "chinese": "我说瓜拉尼语和西班牙语。"
         }
-      ],
-      "createdAt": "2024-12-18T00:00:00.000Z",
-      "updatedAt": "2024-12-18T00:00:00.000Z"
+      ]
+    },
+    {
+      "part": 10,
+      "image": "./J/2_10.png",
+      "alt": "People in Paraguay speaking Guaraní",
+      "sentences": [
+        {
+          "english": "Guarani is a Native American language. It is spoken by most of the people of Paraguay. Over seven million people in the world speak Guarani.",
+          "chinese": "瓜拉尼语是一种美洲原住民语言。巴拉圭大部分人都说这种语言。全世界有超过七百万人说瓜拉尼语。"
+        }
+      ]
+    },
+    {
+      "part": 11,
+      "image": "./J/2_11.png",
+      "alt": "Inti and family weaving",
+      "sentences": [
+        {
+          "english": "My name is Inti, which means 'sun' in Quechua.",
+          "chinese": "我的名字是印提，在克丘亚语中的意思是'太阳'。"
+        },
+        {
+          "english": "I speak two languages.",
+          "chinese": "我说两种语言。"
+        },
+        {
+          "english": "I speak Quechua and Spanish.",
+          "chinese": "我说克丘亚语和西班牙语。"
+        },
+        {
+          "english": "Quechua is the language the Incas spoke.",
+          "chinese": "克丘亚语是印加人所说的语言。"
+        },
+        {
+          "english": "My mother, grandmother, and I speak Quechua as we weave.",
+          "chinese": "我的母亲、祖母和我在编织时说克丘亚语。"
+        }
+      ]
+    },
+    {
+      "part": 12,
+      "image": "./J/2_12.png",
+      "alt": "Children from different cultures together",
+      "sentences": [
+        {
+          "english": "We speak two languages.",
+          "chinese": "我们说两种语言。"
+        },
+        {
+          "english": "We are bilingual!",
+          "chinese": "我们是双语者！"
+        },
+        {
+          "english": "Are you bilingual?",
+          "chinese": "你是双语者吗？"
+        }
+      ]
+    },
+    {
+      "part": 13,
+      "image": "./J/2_13.png",
+      "alt": "Two worlds connected by language",
+      "sentences": [
+        {
+          "english": "Being bilingual makes you close to two worlds.",
+          "chinese": "双语让你贴近两个世界。"
+        }
+      ]
     }
   ]
 }

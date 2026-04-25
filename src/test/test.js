@@ -1,1002 +1,448 @@
 import React, { useState, useEffect } from 'react';
-import { sentenceApi } from './api';
+import {
+  Box, Paper, Typography, Button, IconButton, Chip, TextField, InputAdornment,
+  Card, CardContent, Alert, Snackbar, CircularProgress, Tooltip
+} from '@mui/material';
+import {
+  Search as SearchIcon, 
+  VolumeUp as VolumeUpIcon, 
+  Clear as ClearIcon,
+  History as HistoryIcon, 
+  School as SchoolIcon,
+  ContentCopy as CopyIcon,
+  Delete as DeleteIcon
+} from '@mui/icons-material';
 
-// ==================== 单词拆分工具 ====================
-const splitWords = (text) => {
-  if (!text) return [];
+// 导入原始音标数据
+import rawPhoneticDict from './phoneticDict.json';
+
+// ========== 音标转换函数 ==========
+const convertPhonetic = (ipa) => {
+  if (!ipa) return ipa;
   
-  // 处理常见缩写
-  let processedText = text;
-  const contractions = [
-    "I'm", "i'm", "I'll", "i'll", "I've", "i've", "I'd", "i'd",
-    "you're", "you'll", "you've", "you'd", "he's", "he'll", "he'd",
-    "she's", "she'll", "she'd", "it's", "it'll", "it'd",
-    "we're", "we'll", "we've", "we'd", "they're", "they'll", "they've", "they'd",
-    "that's", "that'll", "that'd", "what's", "what'll", "what'd",
-    "can't", "cannot", "don't", "doesn't", "didn't", "won't", "wouldn't",
-    "shouldn't", "couldn't", "mustn't", "isn't", "aren't", "wasn't", "weren't"
-  ];
-
-  contractions.forEach(contraction => {
-    const regex = new RegExp(`\\b${contraction}\\b`, 'gi');
-    const placeholder = contraction.replace("'", "@@@");
-    processedText = processedText.replace(regex, placeholder);
-  });
-
-  // 移除标点
-  processedText = processedText
-    .replace(/[.,!?;:"()\[\]{}]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-
-  const words = processedText.split(' ').filter(w => w && w.length > 0);
-  return words.map(word => word.replace(/@@@/g, "'"));
+  // 音标符号转换表
+  const conversions = {
+    'ɐ': 'ə',      // 近开央元音 → 中央元音
+    'ɹ': 'r',      // 齿龈近音 → 齿龈颤音
+    'ɫ': 'l',      // 软腭化齿龈边音 → 普通 l
+    'ɡ': 'g',      // 不同字体的 g
+    'ɛ': 'e',      // 半开前不圆唇元音 → 半闭前不圆唇元音
+  };
+  
+  let result = ipa;
+  for (const [oldChar, newChar] of Object.entries(conversions)) {
+    result = result.replace(new RegExp(oldChar, 'g'), newChar);
+  }
+  
+  return result;
 };
 
-// ==================== 音频播放 ====================
-const AudioPlayer = ({ text }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [hasPlayed, setHasPlayed] = useState(false);
+// 转换整个音标词典
+const phoneticDict = Object.keys(rawPhoneticDict).reduce((acc, word) => {
+  acc[word] = convertPhonetic(rawPhoneticDict[word]);
+  return acc;
+}, {});
 
-  const speak = () => {
-    if (!text || !window.speechSynthesis) return;
+const PhoneticQueryApp = () => {
+  const [inputWord, setInputWord] = useState('');
+  const [searchResult, setSearchResult] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  const [history, setHistory] = useState(() => {
+    const saved = localStorage.getItem('phonetic_history');
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [message, setMessage] = useState({ open: false, text: '', severity: 'success' });
+  const [suggestions, setSuggestions] = useState([]);
+
+  // 获取本地音标
+  const getLocalPhonetic = (word) => {
+    const lowerWord = word.toLowerCase();
+    if (phoneticDict[lowerWord]) {
+      return phoneticDict[lowerWord];
+    }
+    return null;
+  };
+
+  // 查询音标
+  const searchPhonetic = () => {
+    const word = inputWord.trim().toLowerCase();
+    if (!word) {
+      showMessage('请输入单词', 'warning');
+      return;
+    }
+
+    setLoading(true);
     
+    setTimeout(() => {
+      try {
+        const localIpa = getLocalPhonetic(word);
+        
+        if (localIpa) {
+          const result = {
+            word: inputWord.trim(),
+            ipa: localIpa,
+            found: true,
+            source: '本地词典'
+          };
+          setSearchResult(result);
+          saveToHistory(word, localIpa);
+          showMessage(`✅ 查询成功：${localIpa}`, 'success');
+        } else {
+          const result = {
+            word: inputWord.trim(),
+            ipa: '📖 未收录此单词',
+            found: false,
+            source: '无数据'
+          };
+          setSearchResult(result);
+          showMessage(`❌ 单词 "${word}" 未收录`, 'error');
+        }
+      } catch (error) {
+        console.error('查询失败:', error);
+        showMessage('❌ 查询失败，请重试', 'error');
+      } finally {
+        setLoading(false);
+        setSuggestions([]);
+      }
+    }, 100);
+  };
+
+  // 保存历史
+  const saveToHistory = (word, ipa) => {
+    const newHistory = [
+      { word, ipa, timestamp: Date.now() },
+      ...history.filter(h => h.word !== word)
+    ].slice(0, 20);
+    setHistory(newHistory);
+    localStorage.setItem('phonetic_history', JSON.stringify(newHistory));
+  };
+
+  // 清除所有历史
+  const clearHistory = () => {
+    setHistory([]);
+    localStorage.removeItem('phonetic_history');
+    showMessage('历史记录已清除', 'info');
+  };
+
+  // 删除单条历史
+  const removeFromHistory = (wordToRemove) => {
+    const newHistory = history.filter(item => item.word !== wordToRemove);
+    setHistory(newHistory);
+    localStorage.setItem('phonetic_history', JSON.stringify(newHistory));
+    showMessage('已删除', 'info');
+  };
+
+  // 英式发音
+  const speakBritish = () => {
+    if (!searchResult?.found) return;
+    setSpeaking(true);
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'en-US';
+    const utterance = new SpeechSynthesisUtterance(searchResult.word);
+    utterance.lang = 'en-GB';
     utterance.rate = 0.9;
-    
-    utterance.onstart = () => { 
-      setIsPlaying(true); 
-      setHasPlayed(true); 
-    };
-    utterance.onend = () => setIsPlaying(false);
-    utterance.onerror = () => setIsPlaying(false);
-    
+    utterance.onend = () => setSpeaking(false);
+    utterance.onerror = () => setSpeaking(false);
     window.speechSynthesis.speak(utterance);
   };
 
+  // 复制音标
+  const copyToClipboard = () => {
+    if (searchResult?.found) {
+      navigator.clipboard.writeText(searchResult.ipa);
+      showMessage('✅ 音标已复制到剪贴板', 'success');
+    }
+  };
+
+  const showMessage = (text, severity) => {
+    setMessage({ open: true, text, severity });
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      searchPhonetic();
+    }
+  };
+
+  const selectSuggestion = (word) => {
+    setInputWord(word);
+    setSuggestions([]);
+  };
+
+  // 获取建议（本地词典）
   useEffect(() => {
-    if (text && !hasPlayed) {
-      const timer = setTimeout(speak, 500);
-      return () => {
-        clearTimeout(timer);
-        window.speechSynthesis?.cancel();
-      };
+    if (inputWord.trim().length > 0) {
+      const matches = Object.keys(phoneticDict)
+        .filter(word => word.startsWith(inputWord.toLowerCase()))
+        .slice(0, 8);
+      setSuggestions(matches);
+    } else {
+      setSuggestions([]);
     }
-  }, [text]);
+  }, [inputWord]);
+
+  const dictSize = Object.keys(phoneticDict).length;
 
   return (
-    <div style={styles.audioPlayer}>
-      <div style={{ fontSize: '48px', marginBottom: '10px' }}>
-        {isPlaying ? '🔊' : hasPlayed ? '🔈' : '⏳'}
-      </div>
-      <div style={styles.audioStatus}>
-        {isPlaying ? '正在播放...' : hasPlayed ? '已播放' : '准备播放...'}
-      </div>
-      <button 
-        onClick={speak} 
-        style={{
-          ...styles.playButton,
-          opacity: isPlaying ? 0.5 : 1,
-          cursor: isPlaying ? 'not-allowed' : 'pointer'
-        }} 
-        disabled={isPlaying}
-      >
-        {isPlaying ? '播放中' : '重新播放'}
-      </button>
-    </div>
-  );
-};
+    <Box sx={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)',
+      display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2
+    }}>
+      <Box sx={{ maxWidth: 700, width: '100%' }}>
+        {/* 标题卡片 */}
+        <Paper elevation={0} sx={{
+          bgcolor: 'rgba(255,255,255,0.95)', borderRadius: 4, p: 3, mb: 3, textAlign: 'center'
+        }}>
+          <SchoolIcon sx={{ fontSize: 48, color: '#1e3c72' }} />
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            🇬🇧 英式音标查询
+          </Typography>
+          <Typography color="text.secondary" gutterBottom>
+            Received Pronunciation (RP) · 标准英式发音 · 纯本地离线
+          </Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mt: 1 }}>
+            <Chip label={`📚 本地词库 ${dictSize.toLocaleString()} 词`} size="small" color="primary" />
+            <Chip label="🔒 完全离线" size="small" color="success" />
+            <Chip label="⚡ 毫秒级查询" size="small" color="info" />
+          </Box>
+        </Paper>
 
-// ==================== 句子查看器组件 ====================
-const SentenceViewer = ({ sentences, onClose, onSelectSentence }) => {
-  const [filter, setFilter] = useState('all');
-  const [searchText, setSearchText] = useState('');
-  const [sortBy, setSortBy] = useState('time');
-
-  // 过滤和排序句子
-  const getFilteredSentences = () => {
-    let filtered = [...sentences];
-    
-    if (filter === 'mastered') {
-      filtered = filtered.filter(s => s.pass === true);
-    } else if (filter === 'unmastered') {
-      filtered = filtered.filter(s => s.pass !== true);
-    }
-    
-    if (searchText) {
-      const search = searchText.toLowerCase();
-      filtered = filtered.filter(s => 
-        s.text?.toLowerCase().includes(search) || 
-        s.chinese?.toLowerCase().includes(search)
-      );
-    }
-    
-    filtered.sort((a, b) => {
-      if (sortBy === 'text') {
-        return (a.text || '').localeCompare(b.text || '');
-      } else if (sortBy === 'correct') {
-        return (b.correct_count || 0) - (a.correct_count || 0);
-      } else {
-        return new Date(b.time || 0) - new Date(a.time || 0);
-      }
-    });
-    
-    return filtered;
-  };
-
-  const formatDate = (dateStr) => {
-    if (!dateStr) return '未知';
-    const date = new Date(dateStr);
-    return date.toLocaleString('zh-CN', { 
-      year: 'numeric', 
-      month: '2-digit', 
-      day: '2-digit',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-
-  const filteredSentences = getFilteredSentences();
-
-  return (
-    <div style={styles.viewerOverlay}>
-      <div style={styles.viewerContainer}>
-        <div style={styles.viewerHeader}>
-          <h2 style={styles.viewerTitle}>📚 句子库查看器</h2>
-          <button onClick={onClose} style={styles.closeButton}>✕</button>
-        </div>
-
-        {/* 过滤栏 */}
-        <div style={styles.viewerFilterBar}>
-          <input
-            type="text"
-            placeholder="搜索句子或中文..."
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-            style={styles.viewerSearch}
-          />
-          
-          <div style={styles.viewerFilterGroup}>
-            <select value={filter} onChange={(e) => setFilter(e.target.value)} style={styles.viewerSelect}>
-              <option value="all">全部句子</option>
-              <option value="mastered">已掌握</option>
-              <option value="unmastered">未掌握</option>
-            </select>
+        {/* 搜索卡片 */}
+        <Paper elevation={3} sx={{ borderRadius: 4, overflow: 'hidden', mb: 3 }}>
+          <Box sx={{ position: 'relative' }}>
+            <TextField
+              fullWidth
+              placeholder="输入单词，例如：parent, library, beautiful"
+              value={inputWord}
+              onChange={(e) => setInputWord(e.target.value)}
+              onKeyDown={handleKeyDown}
+              autoFocus
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon sx={{ color: '#1e3c72' }} />
+                  </InputAdornment>
+                ),
+                endAdornment: inputWord && (
+                  <InputAdornment position="end">
+                    <IconButton size="small" onClick={() => setInputWord('')}>
+                      <ClearIcon />
+                    </IconButton>
+                  </InputAdornment>
+                )
+              }}
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  borderRadius: 0,
+                  bgcolor: 'white',
+                  '&:hover fieldset': {
+                    borderColor: '#1e3c72',
+                  },
+                }
+              }}
+            />
             
-            <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} style={styles.viewerSelect}>
-              <option value="time">按时间</option>
-              <option value="text">按字母</option>
-              <option value="correct">按正确率</option>
-            </select>
-          </div>
-        </div>
-
-        {/* 统计 */}
-        <div style={styles.viewerStats}>
-          <span style={{...styles.viewerStatBadge, backgroundColor: '#2196F3'}}>
-            总数: {sentences.length}
-          </span>
-          <span style={{...styles.viewerStatBadge, backgroundColor: '#4CAF50'}}>
-            已掌握: {sentences.filter(s => s.pass === true).length}
-          </span>
-          <span style={{...styles.viewerStatBadge, backgroundColor: '#FF9800'}}>
-            未掌握: {sentences.filter(s => s.pass !== true).length}
-          </span>
-        </div>
-
-        {/* 句子列表 */}
-        <div style={styles.viewerList}>
-          {filteredSentences.map((sentence, index) => (
-            <div 
-              key={sentence.id} 
-              style={styles.viewerItem}
-              onClick={() => {
-                onSelectSentence(index);
-                onClose();
+            {/* 自动完成建议 */}
+            {suggestions.length > 0 && (
+              <Paper sx={{ 
+                position: 'absolute', 
+                top: '100%', 
+                left: 0, 
+                right: 0, 
+                zIndex: 10,
+                borderTop: 'none',
+                borderRadius: 0,
+                boxShadow: 3,
+                maxHeight: 300,
+                overflow: 'auto'
+              }}>
+                {suggestions.map((suggestion, idx) => (
+                  <Box
+                    key={idx}
+                    sx={{ 
+                      p: 1.5, 
+                      cursor: 'pointer',
+                      '&:hover': { bgcolor: '#f0f0f0' },
+                      borderBottom: idx < suggestions.length - 1 ? '1px solid #e0e0e0' : 'none',
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'center'
+                    }}
+                    onClick={() => selectSuggestion(suggestion)}
+                  >
+                    <Typography variant="body2" fontWeight="bold">
+                      {suggestion}
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary" fontFamily="monospace">
+                      {phoneticDict[suggestion]}
+                    </Typography>
+                  </Box>
+                ))}
+              </Paper>
+            )}
+          </Box>
+          
+          <Box sx={{ p: 2, bgcolor: '#f5f5f5' }}>
+            <Button 
+              fullWidth 
+              variant="contained" 
+              onClick={searchPhonetic}
+              disabled={loading}
+              sx={{ 
+                bgcolor: '#1e3c72', 
+                py: 1.5, 
+                '&:hover': { bgcolor: '#2a5298' },
+                fontSize: '1rem'
               }}
             >
-              <div style={styles.viewerItemHeader}>
-                <span style={styles.viewerItemIndex}>#{index + 1}</span>
-                <span style={{
-                  ...styles.viewerItemBadge,
-                  backgroundColor: sentence.pass ? '#4CAF50' : '#FF9800'
-                }}>
-                  {sentence.pass ? '✅ 已掌握' : '⏳ 学习中'}
-                </span>
-              </div>
+              {loading ? <CircularProgress size={24} sx={{ color: 'white' }} /> : '🔍 查询音标'}
+            </Button>
+          </Box>
+        </Paper>
+
+        {/* 结果卡片 */}
+        {searchResult && (
+          <Card sx={{ borderRadius: 4, mb: 3, animation: 'fadeIn 0.3s' }}>
+            <CardContent sx={{ p: 3, textAlign: 'center' }}>
+              <Typography variant="h3" fontWeight="bold" sx={{ color: '#1e3c72', mb: 1 }}>
+                {searchResult.word}
+              </Typography>
               
-              <div style={styles.viewerItemEnglish}>📖 {sentence.text}</div>
-              <div style={styles.viewerItemChinese}>🌏 {sentence.chinese}</div>
-              
-              <div style={styles.viewerItemStats}>
-                <span>📊 {sentence.extraction_count || 0}</span>
-                <span>✅ {sentence.correct_count || 0}</span>
-                <span>❌ {sentence.wrong_count || 0}</span>
-                <span>⏰ {formatDate(sentence.time)}</span>
-              </div>
-            </div>
-          ))}
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 1, mb: 2 }}>
+                {searchResult.found ? (
+                  <Chip label="📚 本地词典" size="small" color="primary" />
+                ) : (
+                  <Chip label="❌ 未收录" size="small" color="error" />
+                )}
+                <Chip label="🇬🇧 英式 RP" size="small" color="info" />
+              </Box>
 
-          {filteredSentences.length === 0 && (
-            <div style={styles.viewerEmpty}>
-              没有找到匹配的句子
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ==================== 主测试组件 ====================
-const SentenceTest = () => {
-  const [sentences, setSentences] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [shuffledWords, setShuffledWords] = useState([]);
-  const [userWords, setUserWords] = useState([]);
-  const [wordStatus, setWordStatus] = useState({});
-  const [showResult, setShowResult] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [score, setScore] = useState(100);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
-  const [selectedFile, setSelectedFile] = useState('sentences');
-  const [availableFiles, setAvailableFiles] = useState([]);
-  const [showViewer, setShowViewer] = useState(false);
-
-  // 加载文件列表
-  useEffect(() => {
-    loadFileList();
-  }, []);
-
-  const loadFileList = async () => {
-    try {
-      const result = await sentenceApi.getSentenceFiles();
-      if (result.flag === 1) {
-        setAvailableFiles(result.content.files);
-      }
-    } catch (error) {
-      console.error('加载文件列表失败:', error);
-    }
-  };
-
-  // 加载句子
-  const loadSentences = async () => {
-    setLoading(true);
-    setMessage('加载中...');
-    try {
-      const result = await sentenceApi.getSentences(selectedFile);
-      if (result?.sentences) {
-        const sentencesArray = Object.entries(result.sentences).map(([id, data]) => ({ 
-          id, 
-          ...data 
-        }));
-        setSentences(sentencesArray);
-        setCurrentIndex(0);
-        setScore(100);
-        setMessage(`加载成功，共 ${sentencesArray.length} 个句子`);
-      } else {
-        setMessage('加载失败：数据格式错误');
-      }
-    } catch (error) {
-      setMessage('加载失败：' + error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  // 初始化当前句子的单词
-  useEffect(() => {
-    if (sentences.length === 0 || !sentences[currentIndex]) return;
-    
-    const words = splitWords(sentences[currentIndex].text);
-    const shuffled = [...words].sort(() => Math.random() - 0.5);
-    setShuffledWords(shuffled);
-    
-    const status = {};
-    shuffled.forEach((word, i) => { 
-      status[`${word}-${i}`] = true; 
-    });
-    setWordStatus(status);
-    setUserWords([]);
-    setShowResult(false);
-  }, [currentIndex, sentences]);
-
-  // 处理单词点击
-  const handleWordClick = (word, index) => {
-    if (showResult) return;
-    
-    const wordKey = `${word}-${index}`;
-    if (!wordStatus[wordKey]) return;
-    
-    setWordStatus(prev => ({ ...prev, [wordKey]: false }));
-    const newUserWords = [...userWords, word];
-    setUserWords(newUserWords);
-
-    const targetWords = splitWords(sentences[currentIndex].text);
-    
-    if (newUserWords.length === targetWords.length) {
-      const correct = newUserWords.join(' ') === targetWords.join(' ');
-      setIsCorrect(correct);
-      setShowResult(true);
-      
-      if (!correct) setScore(prev => Math.max(0, prev - 10));
-      
-      // 更新统计
-      sentenceApi.updateSentenceStats(sentences[currentIndex].id, {
-        correct, 
-        wrong: !correct, 
-        extraction: true
-      }, selectedFile).catch(console.error);
-    }
-  };
-
-  // 重置当前题目
-  const handleReset = () => {
-    if (!sentences[currentIndex]) return;
-    
-    const words = splitWords(sentences[currentIndex].text);
-    const shuffled = [...words].sort(() => Math.random() - 0.5);
-    setShuffledWords(shuffled);
-    
-    const status = {};
-    shuffled.forEach((word, i) => { 
-      status[`${word}-${i}`] = true; 
-    });
-    setWordStatus(status);
-    setUserWords([]);
-    setShowResult(false);
-  };
-
-  // 下一题
-  const handleNext = () => {
-    if (currentIndex < sentences.length - 1) {
-      setCurrentIndex(prev => prev + 1);
-    } else {
-      setMessage('恭喜！已完成所有句子');
-      setShowResult(false);
-    }
-  };
-
-  // 重新开始
-  const handleRestart = () => {
-    setCurrentIndex(0);
-    setScore(100);
-    setMessage('重新开始');
-  };
-
-  // 跳转到指定句子
-  const handleSelectSentence = (index) => {
-    setCurrentIndex(index);
-    setShowResult(false);
-  };
-
-  const currentSentence = sentences[currentIndex];
-  const targetWords = currentSentence ? splitWords(currentSentence.text) : [];
-
-  return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>📝 句子听力测试</h1>
-      
-      {/* 控制栏 */}
-      <div style={styles.controlBar}>
-        <div style={styles.fileSelector}>
-          <select 
-            value={selectedFile} 
-            onChange={(e) => setSelectedFile(e.target.value)} 
-            style={styles.select}
-          >
-            <option value="sentences">sentences.json (默认)</option>
-            {availableFiles.map(file => (
-              <option key={file} value={file.replace('.json', '')}>
-                {file}
-              </option>
-            ))}
-          </select>
-          <button 
-            onClick={loadSentences} 
-            style={styles.button} 
-            disabled={loading}
-          >
-            {loading ? '加载中...' : '📂 加载句子'}
-          </button>
-          {sentences.length > 0 && (
-            <button 
-              onClick={() => setShowViewer(true)} 
-              style={{...styles.button, backgroundColor: '#8b5cf6'}}
-            >
-              📚 查看所有句子
-            </button>
-          )}
-        </div>
-        
-        <div style={styles.scoreSection}>
-          <span style={styles.score}>得分: {score}</span>
-          {sentences.length > 0 && (
-            <button onClick={handleRestart} style={styles.restartButton}>
-              🔄 重新开始
-            </button>
-          )}
-        </div>
-      </div>
-
-      {message && <div style={styles.message}>{message}</div>}
-
-      {/* 主内容 */}
-      {currentSentence ? (
-        <div style={styles.card}>
-          {/* 音频和中文 */}
-          <AudioPlayer text={currentSentence.text} />
-          
-          <div style={styles.chineseBox}>
-            {currentSentence.chinese}
-          </div>
-
-          {/* 进度信息 */}
-          <div style={styles.progressInfo}>
-            <span>第 {currentIndex + 1} / {sentences.length} 题</span>
-            {currentSentence.pass && <span style={styles.mastered}>✅ 已掌握</span>}
-          </div>
-
-          {/* 单词填空位 */}
-          <div style={styles.wordSlots}>
-            {targetWords.map((word, i) => (
-              <div 
-                key={i} 
-                style={{
-                  ...styles.wordSlot,
-                  color: i < userWords.length ? '#10b981' : 'transparent',
-                  backgroundColor: i < userWords.length ? '#1a2a3a' : 'transparent',
-                  borderColor: i < userWords.length ? '#10b981' : '#cfd8dc'
-                }}
-              >
-                {word}
-              </div>
-            ))}
-          </div>
-
-          {/* 单词选择区 */}
-          <div style={styles.wordGrid}>
-            {shuffledWords.map((word, index) => {
-              const wordKey = `${word}-${index}`;
-              const disabled = !wordStatus[wordKey] || showResult;
-              return (
-                <button
-                  key={index}
-                  onClick={() => handleWordClick(word, index)}
-                  disabled={disabled}
-                  style={{
-                    ...styles.wordButton,
-                    backgroundColor: disabled ? '#4b5563' : '#3b82f6',
-                    opacity: disabled ? 0.5 : 1,
-                    cursor: disabled ? 'not-allowed' : 'pointer'
-                  }}
+              <Paper sx={{ 
+                bgcolor: '#e8f4f8', 
+                p: 3, 
+                borderRadius: 2, 
+                my: 2, 
+                position: 'relative',
+                transition: 'all 0.3s'
+              }}>
+                <Typography 
+                  variant="h4" 
+                  fontFamily="'Lucida Sans', 'Lucida Sans Regular', monospace" 
+                  fontWeight="bold"
+                  color={searchResult.found ? '#1a237e' : '#f44336'}
+                  sx={{ letterSpacing: '1px' }}
                 >
-                  {word}
-                </button>
-              );
-            })}
-          </div>
+                  {searchResult.ipa}
+                </Typography>
+                {searchResult.found && (
+                  <Tooltip title="复制音标">
+                    <IconButton 
+                      size="small" 
+                      sx={{ position: 'absolute', top: 8, right: 8 }} 
+                      onClick={copyToClipboard}
+                    >
+                      <CopyIcon fontSize="small" />
+                    </IconButton>
+                  </Tooltip>
+                )}
+              </Paper>
 
-          {/* 重置按钮 */}
-          {!showResult && (
-            <div style={styles.resetSection}>
-              <button onClick={handleReset} style={styles.resetButton}>
-                🔄 重新排列单词
-              </button>
-            </div>
-          )}
-
-          {/* 结果和下一题 */}
-          {showResult && (
-            <div style={{
-              ...styles.resultBox,
-              backgroundColor: isCorrect ? '#10b98120' : '#ef444420',
-              borderColor: isCorrect ? '#10b981' : '#ef4444'
-            }}>
-              <div style={{ fontSize: '48px', marginBottom: '10px' }}>
-                {isCorrect ? '✅' : '❌'}
-              </div>
-              <div style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '10px' }}>
-                {isCorrect ? '正确！' : '错误！'}
-              </div>
-              {!isCorrect && (
-                <div style={styles.correctAnswer}>
-                  <div style={{ color: '#94a3b8', fontSize: '14px', marginBottom: '5px' }}>
-                    正确答案:
-                  </div>
-                  <div style={{ color: 'white', fontSize: '18px' }}>
-                    {targetWords.join(' ')}
-                  </div>
-                </div>
+              {searchResult.found && (
+                <Box sx={{ display: 'flex', gap: 1, mt: 2 }}>
+                  <Button 
+                    fullWidth 
+                    variant="contained" 
+                    onClick={speakBritish} 
+                    disabled={speaking} 
+                    startIcon={<VolumeUpIcon />}
+                    sx={{ bgcolor: '#1e3c72', '&:hover': { bgcolor: '#2a5298' }, py: 1 }}
+                  >
+                    {speaking ? '🔊 发音中...' : '🇬🇧 英式发音'}
+                  </Button>
+                </Box>
               )}
-              <button onClick={handleNext} style={styles.nextButton}>
-                {currentIndex < sentences.length - 1 ? '下一题 →' : '完成 ✓'}
-              </button>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div style={styles.emptyState}>
-          <div style={{ fontSize: '64px', marginBottom: '20px' }}>📚</div>
-          <div style={{ fontSize: '18px', color: '#666', marginBottom: '10px' }}>
-            点击"加载句子"开始测试
-          </div>
-          {sentences.length === 0 && (
-            <button onClick={loadSentences} style={styles.startButton}>
-              🚀 开始测试
-            </button>
-          )}
-        </div>
-      )}
 
-      {/* 进度条 */}
-      {sentences.length > 0 && (
-        <div style={styles.progress}>
-          <div style={styles.progressBar}>
-            <div style={{
-              ...styles.progressFill, 
-              width: `${((currentIndex + 1) / sentences.length) * 100}%`
-            }} />
-          </div>
-        </div>
-      )}
+              {!searchResult.found && (
+                <Typography variant="body2" color="text.secondary" sx={{ mt: 2 }}>
+                  💡 提示：单词可能不在词库中，或请检查拼写
+                </Typography>
+              )}
+            </CardContent>
+          </Card>
+        )}
 
-      {/* 句子查看器模态框 */}
-      {showViewer && (
-        <SentenceViewer 
-          sentences={sentences}
-          onClose={() => setShowViewer(false)}
-          onSelectSentence={handleSelectSentence}
-        />
-      )}
-    </div>
+        {/* 历史记录 */}
+        {history.length > 0 && (
+          <Paper elevation={2} sx={{ borderRadius: 4, p: 2 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <HistoryIcon fontSize="small" color="primary" />
+                <Typography fontWeight="bold">最近查询 ({history.length})</Typography>
+              </Box>
+              <Button size="small" onClick={clearHistory} startIcon={<DeleteIcon />} color="error">
+                清空全部
+              </Button>
+            </Box>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              {history.map((item, i) => (
+                <Chip 
+                  key={i} 
+                  label={item.word} 
+                  variant="outlined" 
+                  color="primary"
+                  onClick={() => {
+                    setInputWord(item.word);
+                    setSearchResult({ 
+                      word: item.word, 
+                      ipa: item.ipa, 
+                      found: true, 
+                      source: '本地词典' 
+                    });
+                  }}
+                  onDelete={() => removeFromHistory(item.word)}
+                  sx={{ cursor: 'pointer' }}
+                />
+              ))}
+            </Box>
+          </Paper>
+        )}
+
+        {/* 统计信息 */}
+        <Box sx={{ textAlign: 'center', mt: 2, color: 'rgba(255,255,255,0.7)' }}>
+          <Typography variant="caption">
+            📖 共收录 {dictSize.toLocaleString()} 个单词 · 完全离线运行 · 无需网络
+          </Typography>
+        </Box>
+
+        <Snackbar 
+          open={message.open} 
+          autoHideDuration={2000} 
+          onClose={() => setMessage({ ...message, open: false })}
+          anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        >
+          <Alert severity={message.severity} variant="filled">
+            {message.text}
+          </Alert>
+        </Snackbar>
+      </Box>
+
+      <style>
+        {`
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        `}
+      </style>
+    </Box>
   );
 };
 
-// ==================== 样式 ====================
-const styles = {
-  container: {
-    maxWidth: '900px',
-    margin: '0 auto',
-    padding: '20px',
-    fontFamily: 'Arial, sans-serif',
-    backgroundColor: '#f5f5f5',
-    minHeight: '100vh',
-    position: 'relative'
-  },
-  title: {
-    textAlign: 'center',
-    color: '#333',
-    marginBottom: '20px',
-    fontSize: '28px'
-  },
-  controlBar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: '15px',
-    backgroundColor: 'white',
-    padding: '15px',
-    borderRadius: '10px',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-    flexWrap: 'wrap',
-    gap: '10px'
-  },
-  fileSelector: {
-    display: 'flex',
-    gap: '10px',
-    alignItems: 'center',
-    flex: 2,
-    minWidth: '250px',
-    flexWrap: 'wrap'
-  },
-  select: {
-    flex: 1,
-    padding: '8px 12px',
-    borderRadius: '5px',
-    border: '1px solid #ddd',
-    fontSize: '14px',
-    minWidth: '150px'
-  },
-  button: {
-    padding: '8px 16px',
-    backgroundColor: '#2196F3',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    fontSize: '14px',
-    whiteSpace: 'nowrap'
-  },
-  scoreSection: {
-    display: 'flex',
-    gap: '10px',
-    alignItems: 'center'
-  },
-  score: {
-    fontSize: '18px',
-    fontWeight: 'bold',
-    color: '#10b981',
-    backgroundColor: '#e8f5e8',
-    padding: '5px 15px',
-    borderRadius: '20px'
-  },
-  restartButton: {
-    padding: '8px 16px',
-    backgroundColor: '#6b7280',
-    color: 'white',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    fontSize: '14px'
-  },
-  message: {
-    backgroundColor: '#e3f2fd',
-    color: '#1976d2',
-    padding: '10px',
-    borderRadius: '5px',
-    marginBottom: '15px',
-    textAlign: 'center'
-  },
-  card: {
-    backgroundColor: '#2d3a4f',
-    padding: '25px',
-    borderRadius: '16px',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-    color: 'white'
-  },
-  audioPlayer: {
-    backgroundColor: '#312e81',
-    padding: '20px',
-    borderRadius: '12px',
-    marginBottom: '20px',
-    textAlign: 'center'
-  },
-  audioStatus: {
-    color: '#a5b4fc',
-    fontSize: '14px',
-    fontWeight: 'bold',
-    marginBottom: '10px'
-  },
-  playButton: {
-    padding: '8px 20px',
-    backgroundColor: '#3b82f6',
-    color: 'white',
-    border: 'none',
-    borderRadius: '20px',
-    fontSize: '14px',
-    fontWeight: 'bold',
-    transition: 'all 0.2s'
-  },
-  chineseBox: {
-    backgroundColor: '#1e293b',
-    padding: '20px',
-    borderRadius: '12px',
-    marginBottom: '20px',
-    textAlign: 'center',
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#a5b4fc',
-    border: '2px solid #10b981',
-    lineHeight: '1.5'
-  },
-  progressInfo: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: '15px',
-    padding: '10px',
-    backgroundColor: '#1e293b',
-    borderRadius: '8px',
-    fontSize: '14px'
-  },
-  mastered: {
-    color: '#10b981',
-    fontWeight: 'bold'
-  },
-  wordSlots: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-    marginBottom: '20px',
-    minHeight: '60px',
-    padding: '15px',
-    backgroundColor: '#1e293b',
-    borderRadius: '12px',
-    flexWrap: 'wrap'
-  },
-  wordSlot: {
-    minWidth: '80px',
-    height: '50px',
-    borderBottom: '3px solid',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '18px',
-    fontWeight: 'bold',
-    borderRadius: '6px',
-    padding: '0 8px',
-    transition: 'all 0.2s'
-  },
-  wordGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))',
-    gap: '12px',
-    padding: '15px',
-    backgroundColor: '#1a2a3a',
-    borderRadius: '12px',
-    marginBottom: '15px'
-  },
-  wordButton: {
-    padding: '12px 8px',
-    color: 'white',
-    border: 'none',
-    borderRadius: '8px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    transition: 'all 0.2s'
-  },
-  resetSection: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: '10px'
-  },
-  resetButton: {
-    padding: '10px 20px',
-    backgroundColor: '#6b7280',
-    color: 'white',
-    border: 'none',
-    borderRadius: '20px',
-    fontSize: '14px',
-    fontWeight: 'bold',
-    cursor: 'pointer'
-  },
-  resultBox: {
-    marginTop: '20px',
-    padding: '25px',
-    borderRadius: '12px',
-    textAlign: 'center',
-    border: '2px solid',
-    animation: 'fadeIn 0.3s ease'
-  },
-  correctAnswer: {
-    backgroundColor: '#1e293b',
-    padding: '15px',
-    borderRadius: '8px',
-    marginTop: '10px',
-    marginBottom: '15px'
-  },
-  nextButton: {
-    padding: '12px 40px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    border: 'none',
-    borderRadius: '25px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    cursor: 'pointer',
-    transition: 'all 0.2s'
-  },
-  emptyState: {
-    textAlign: 'center',
-    padding: '80px 20px',
-    backgroundColor: 'white',
-    borderRadius: '16px',
-    boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-  },
-  startButton: {
-    marginTop: '20px',
-    padding: '15px 40px',
-    backgroundColor: '#2196F3',
-    color: 'white',
-    border: 'none',
-    borderRadius: '30px',
-    fontSize: '18px',
-    fontWeight: 'bold',
-    cursor: 'pointer'
-  },
-  progress: {
-    marginTop: '20px'
-  },
-  progressBar: {
-    width: '100%',
-    height: '8px',
-    backgroundColor: '#e0e0e0',
-    borderRadius: '4px',
-    overflow: 'hidden'
-  },
-  progressFill: {
-    height: '100%',
-    backgroundColor: '#4CAF50',
-    transition: 'width 0.3s ease'
-  },
-  // 查看器样式
-  viewerOverlay: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    backgroundColor: 'rgba(0,0,0,0.7)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    zIndex: 1000,
-    padding: '20px'
-  },
-  viewerContainer: {
-    backgroundColor: 'white',
-    borderRadius: '16px',
-    width: '90%',
-    maxWidth: '900px',
-    maxHeight: '90vh',
-    display: 'flex',
-    flexDirection: 'column',
-    boxShadow: '0 10px 30px rgba(0,0,0,0.3)'
-  },
-  viewerHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '20px',
-    borderBottom: '1px solid #eee'
-  },
-  viewerTitle: {
-    margin: 0,
-    color: '#333',
-    fontSize: '24px'
-  },
-  closeButton: {
-    width: '36px',
-    height: '36px',
-    borderRadius: '18px',
-    border: 'none',
-    backgroundColor: '#f0f0f0',
-    color: '#666',
-    fontSize: '18px',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'all 0.2s'
-  },
-  viewerFilterBar: {
-    display: 'flex',
-    gap: '15px',
-    padding: '15px 20px',
-    borderBottom: '1px solid #eee',
-    flexWrap: 'wrap'
-  },
-  viewerSearch: {
-    flex: 2,
-    padding: '10px',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
-    fontSize: '14px',
-    minWidth: '200px'
-  },
-  viewerFilterGroup: {
-    display: 'flex',
-    gap: '10px',
-    flex: 1,
-    minWidth: '200px'
-  },
-  viewerSelect: {
-    flex: 1,
-    padding: '10px',
-    border: '1px solid #ddd',
-    borderRadius: '5px',
-    fontSize: '14px'
-  },
-  viewerStats: {
-    display: 'flex',
-    gap: '10px',
-    padding: '0 20px 15px',
-    flexWrap: 'wrap'
-  },
-  viewerStatBadge: {
-    padding: '5px 12px',
-    borderRadius: '20px',
-    color: 'white',
-    fontSize: '13px',
-    fontWeight: 'bold'
-  },
-  viewerList: {
-    flex: 1,
-    overflowY: 'auto',
-    padding: '0 20px 20px',
-    maxHeight: 'calc(90vh - 200px)'
-  },
-  viewerItem: {
-    backgroundColor: '#f8f9fa',
-    borderRadius: '10px',
-    padding: '15px',
-    marginBottom: '15px',
-    cursor: 'pointer',
-    transition: 'all 0.2s',
-    border: '1px solid #e0e0e0'
-  },
-  viewerItemHeader: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: '10px'
-  },
-  viewerItemIndex: {
-    fontSize: '12px',
-    color: '#666',
-    backgroundColor: '#e0e0e0',
-    padding: '2px 8px',
-    borderRadius: '12px'
-  },
-  viewerItemBadge: {
-    padding: '2px 8px',
-    borderRadius: '12px',
-    color: 'white',
-    fontSize: '11px',
-    fontWeight: 'bold'
-  },
-  viewerItemEnglish: {
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: '8px'
-  },
-  viewerItemChinese: {
-    fontSize: '14px',
-    color: '#2e7d32',
-    marginBottom: '10px',
-    padding: '8px',
-    backgroundColor: '#e8f5e8',
-    borderRadius: '5px'
-  },
-  viewerItemStats: {
-    display: 'flex',
-    gap: '15px',
-    fontSize: '12px',
-    color: '#666',
-    flexWrap: 'wrap'
-  },
-  viewerEmpty: {
-    textAlign: 'center',
-    padding: '40px',
-    color: '#999'
-  }
-};
-
-// 添加动画样式
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  button:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  }
-  
-  button:active:not(:disabled) {
-    transform: translateY(0);
-  }
-  
-  ${styles.viewerItem}:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-color: #2196F3;
-  }
-  
-  ${styles.closeButton}:hover {
-    background-color: #f44336;
-    color: white;
-  }
-`;
-document.head.appendChild(style);
-
-export default SentenceTest;
+export default PhoneticQueryApp;

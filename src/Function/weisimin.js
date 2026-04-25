@@ -491,7 +491,6 @@ function initAudioDB() {
 
     request.onsuccess = (event) => {
       dbInstance = event.target.result;
-      console.log('IndexedDB 打开成功');
       resolve(dbInstance);
     };
 
@@ -549,7 +548,6 @@ async function getAudioFromCache(word) {
       request.onsuccess = (event) => {
         const result = event.target.result;
         if (result && result.blob) {
-          console.log(`从 IndexedDB 获取音频: ${word}`);
           resolve(result.blob);
         } else {
           resolve(null);

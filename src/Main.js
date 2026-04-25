@@ -658,6 +658,15 @@ const Main = () => {
       description: '检测学生专用',
       completed: false,
     },
+    {
+      id: 'phonetic_learning',
+      title: '英语音标学习',
+      color: '#9C27B0', // 紫色主题色
+      path: '/phonetic_learning',
+      icon: '🔊',
+      description: '学习英语音标发音，包含所有元音和辅音',
+      completed: false,
+    },
 
   ];
 

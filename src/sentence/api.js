@@ -46,20 +46,22 @@ export const sentenceApi = {
     return apiRequest.get(`/get_sentence/${id}`);
   },
   
-  // 增加正确次数
-  incrementCorrect: (sentenceId, target = 'sentences') => {
+  // 增加正确次数（支持模式参数：spelling 或 listening）
+  incrementCorrect: (sentenceId, mode = 'spelling', target = 'sentences') => {
     return apiRequest.post('/update_sentence_review', {
       type: 'increment_correct',
       sentence: sentenceId,
+      mode: mode,  // 添加模式参数
       target
     });
   },
   
-  // 增加错误次数
-  incrementWrong: (sentenceId, target = 'sentences') => {
+  // 增加错误次数（支持模式参数：spelling 或 listening）
+  incrementWrong: (sentenceId, mode = 'spelling', target = 'sentences') => {
     return apiRequest.post('/update_sentence_review', {
       type: 'increment_wrong',
       sentence: sentenceId,
+      mode: mode,  // 添加模式参数
       target
     });
   },
@@ -112,7 +114,6 @@ export const sentenceApi = {
   
   // 添加句子（防止重复调用）
   addSentence: (sentenceData, target = 'sentences') => {
-
     // 如果已经有正在进行的添加请求，直接返回该请求
     if (pendingAddRequest) {
       console.log('阻止重复的添加请求');

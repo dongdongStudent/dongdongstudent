@@ -1,0 +1,327 @@
+{
+  "phoneticData": {
+    "longVowels": {
+      "name": "长元音",
+      "items": [
+        { "symbol": "ɑː", "chinese": "啊", "videoFile": "ɑː.mp4", "words": [
+          { "word": "car", "phonetic": "/kɑː/", "translation": "汽车" },
+          { "word": "father", "phonetic": "/ˈfɑːðər/", "translation": "父亲" },
+          { "word": "start", "phonetic": "/stɑːt/", "translation": "开始" },
+          { "word": "hard", "phonetic": "/hɑːd/", "translation": "困难的" }
+        ] },
+        { "symbol": "ɔː", "chinese": "奥", "videoFile": "ɔː.mp4", "words": [
+          { "word": "thought", "phonetic": "/θɔːt/", "translation": "思考(过去式)" },
+          { "word": "law", "phonetic": "/lɔː/", "translation": "法律" },
+          { "word": "north", "phonetic": "/nɔːθ/", "translation": "北方" },
+          { "word": "war", "phonetic": "/wɔː/", "translation": "战争" }
+        ] },
+        { "symbol": "ɜː", "chinese": "俄", "videoFile": "ɜː.mp4", "words": [
+          { "word": "nurse", "phonetic": "/nɜːs/", "translation": "护士" },
+          { "word": "stir", "phonetic": "/stɜː/", "translation": "搅拌" },
+          { "word": "learn", "phonetic": "/lɜːn/", "translation": "学习" },
+          { "word": "refer", "phonetic": "/rɪˈfɜː/", "translation": "参考" }
+        ] },
+        { "symbol": "iː", "chinese": "衣", "videoFile": "iː.mp4", "words": [
+          { "word": "fleece", "phonetic": "/fliːs/", "translation": "羊毛" },
+          { "word": "sea", "phonetic": "/siː/", "translation": "海" },
+          { "word": "machine", "phonetic": "/məˈʃiːn/", "translation": "机器" }
+        ] },
+        { "symbol": "uː", "chinese": "乌", "videoFile": "uː.mp4", "words": [
+          { "word": "goose", "phonetic": "/ɡuːs/", "translation": "鹅" },
+          { "word": "two", "phonetic": "/tuː/", "translation": "二" },
+          { "word": "blue", "phonetic": "/bluː/", "translation": "蓝色" },
+          { "word": "group", "phonetic": "/ɡruːp/", "translation": "组" }
+        ] }
+      ]
+    },
+    "shortVowels": {
+      "name": "短元音",
+      "items": [
+        { "symbol": "ʌ", "chinese": "阿", "videoFile": "ʌ.mp4", "words": [
+          { "word": "strut", "phonetic": "/strʌt/", "translation": "支柱" },
+          { "word": "mud", "phonetic": "/mʌd/", "translation": "泥" },
+          { "word": "love", "phonetic": "/lʌv/", "translation": "爱" },
+          { "word": "blood", "phonetic": "/blʌd/", "translation": "血" }
+        ] },
+        { "symbol": "ɒ", "chinese": "奥", "videoFile": "ɒ.mp4", "words": [
+          { "word": "lot", "phonetic": "/lɒt/", "translation": "许多" },
+          { "word": "odd", "phonetic": "/ɒd/", "translation": "奇怪的" },
+          { "word": "wash", "phonetic": "/wɒʃ/", "translation": "洗" }
+        ] },
+        { "symbol": "ə", "chinese": "俄", "videoFile": "ə.mp4", "words": [
+          { "word": "the", "phonetic": "/ðə/", "translation": "这" },
+          { "word": "of", "phonetic": "/əv/", "translation": "的" },
+          { "word": "that", "phonetic": "/ðæt/", "translation": "那个" }
+        ] },
+        { "symbol": "ɪ", "chinese": "衣", "videoFile": "ɪ.mp4", "words": [
+          { "word": "kit", "phonetic": "/kɪt/", "translation": "工具包" },
+          { "word": "bid", "phonetic": "/bɪd/", "translation": "出价" },
+          { "word": "hymn", "phonetic": "/hɪm/", "translation": "赞美诗" },
+          { "word": "minute", "phonetic": "/ˈmɪnɪt/", "translation": "分钟" }
+        ] },
+        { "symbol": "ʊ", "chinese": "乌", "videoFile": "ʊ.mp4", "words": [
+          { "word": "foot", "phonetic": "/fʊt/", "translation": "脚" },
+          { "word": "put", "phonetic": "/pʊt/", "translation": "放" },
+          { "word": "good", "phonetic": "/ɡʊd/", "translation": "好" }
+        ] },
+        { "symbol": "e", "chinese": "诶", "videoFile": "e.mp4", "words": [
+          { "word": "dress", "phonetic": "/dres/", "translation": "裙子" },
+          { "word": "head", "phonetic": "/hed/", "translation": "头" },
+          { "word": "bed", "phonetic": "/bed/", "translation": "床" },
+          { "word": "many", "phonetic": "/ˈmeni/", "translation": "许多" }
+        ] },
+        { "symbol": "æ", "chinese": "爱", "videoFile": "æ.mp4", "words": [
+          { "word": "trap", "phonetic": "/træp/", "translation": "陷阱" },
+          { "word": "stamp", "phonetic": "/stæmp/", "translation": "邮票" },
+          { "word": "back", "phonetic": "/bæk/", "translation": "后面" },
+          { "word": "lap", "phonetic": "/læp/", "translation": "膝盖" }
+        ] }
+      ]
+    },
+"diphthongs": {
+  "name": "双元音",
+  "items": [
+    { "symbol": "aɪ", "chinese": "爱", "videoFile": "aɪ.mp4", "words": [
+{ "word": "price", "phonetic": "/praɪs/", "translation": "价格" },
+{ "word": "hight", "phonetic": "/haɪt/", "translation": "高度" },
+{ "word": "try", "phonetic": "/traɪ/", "translation": "尝试" }
+    ] },
+    { "symbol": "ɔɪ", "chinese": "奥衣", "videoFile": "ɔɪ.mp4", "words": [
+{ "word": "choice", "phonetic": "/tʃɔɪs/", "translation": "选择" },
+{ "word": "noise", "phonetic": "/nɔɪz/", "translation": "噪音" },
+{ "word": "boy", "phonetic": "/bɔɪ/", "translation": "男孩" }
+    ] },
+        { "symbol": "eɪ", "chinese": "诶", "videoFile": "eɪ.mp4", "words": [
+{ "word": "face", "phonetic": "/feɪs/", "translation": "脸" },
+{ "word": "day", "phonetic": "/deɪ/", "translation": "天；日" },
+{ "word": "break", "phonetic": "/breɪk/", "translation": "打破；休息" }
+    ] },
+        { "symbol": "aʊ", "chinese": "啊乌", "videoFile": "aʊ.mp4", "words": [
+{ "word": "mouth", "phonetic": "/maʊθ/", "translation": "嘴巴" },
+{ "word": "now", "phonetic": "/naʊ/", "translation": "现在" },
+{ "word": "fowl", "phonetic": "/faʊl/", "translation": "家禽" }
+    ] },
+    { "symbol": "əʊ", "chinese": "欧", "videoFile": "əʊ.mp4", "words": [
+{ "word": "boat", "phonetic": "/bəʊt/", "translation": "船" },
+{ "word": "show", "phonetic": "/ʃəʊ/", "translation": "展示" },
+{ "word": "know", "phonetic": "/nəʊ/", "translation": "知道" }
+    ] },
+    { "symbol": "ɪə", "chinese": "衣儿", "videoFile": "ɪə.mp4", "words": [
+{ "word": "near", "phonetic": "/nɪər/", "translation": "附近" },
+{ "word": "hear", "phonetic": "/hɪər/", "translation": "听见" },
+{ "word": "weary", "phonetic": "/ˈwɪəri/", "translation": "疲倦的" }
+    ] },
+    { "symbol": "eə", "chinese": "诶儿", "videoFile": "eə.mp4", "words": [
+{ "word": "square", "phonetic": "/skweər/", "translation": "正方形；广场" },
+{ "word": "fair", "phonetic": "/feər/", "translation": "公平的；展览会" },
+{ "word": "pair", "phonetic": "/peər/", "translation": "一对；一双" }
+    ] },
+    { "symbol": "ʊə", "chinese": "乌儿", "videoFile": "ʊə.mp4", "words": [
+{ "word": "tour", "phonetic": "/tʊər/", "translation": "旅游" },
+{ "word": "pure", "phonetic": "/pjʊər/", "translation": "纯净的" },
+{ "word": "cure", "phonetic": "/kjʊər/", "translation": "治愈" }
+    ] }
+  ]
+},
+    "voicedConsonants": {
+      "name": "浊辅音",
+      "items": [
+        { "symbol": "b", "chinese": "波", "videoFile": "b.mp4", "words": [
+          { "word": "back", "phonetic": "/bɔɪ/", "translation": "男孩" },
+          { "word": "bag", "phonetic": "/bɪɡ/", "translation": "大" },
+          { "word": "hobby", "phonetic": "/dʒɒb/", "translation": "工作" },
+          { "word": "habit", "phonetic": "/ˈbeɪbi/", "translation": "婴儿" }
+        ] },
+        { "symbol": "d", "chinese": "的", "videoFile": "d.mp4", "words": [
+          { "word": "dame", "phonetic": "/dɒɡ/", "translation": "狗" },
+          { "word": "doom", "phonetic": "/deɪ/", "translation": "天/日" },
+          { "word": "medal", "phonetic": "/red/", "translation": "红色" },
+          { "word": "heard", "phonetic": "/dɔː/", "translation": "门" }
+        ] },
+        { "symbol": "g", "chinese": "哥", "videoFile": "g.mp4", "words": [
+          { "word": "glue", "phonetic": "/ɡəʊ/", "translation": "去" },
+          { "word": "struggle", "phonetic": "/ɡʊd/", "translation": "好" },
+          { "word": "gig", "phonetic": "/bɪɡ/", "translation": "大" }
+        ] },
+        { "symbol": "v", "chinese": "呜", "videoFile": "v.mp4", "words": [
+          { "word": "very", "phonetic": "/ˈveri/", "translation": "非常" },
+          { "word": "heavy", "phonetic": "/vɔɪs/", "translation": "声音" },
+          { "word": "move", "phonetic": "/lʌv/", "translation": "爱" },
+          { "word": "verve", "phonetic": "/faɪv/", "translation": "五" }
+        ] },
+        { "symbol": "ð", "chinese": "啧", "videoFile": "ð.mp4", "words": [
+          { "word": "this", "phonetic": "/ðɪs/", "translation": "这个" },
+          { "word": "that", "phonetic": "/ðæt/", "translation": "那个" },
+          { "word": "mother", "phonetic": "/ˈmʌðər/", "translation": "母亲" },
+          { "word": "father", "phonetic": "/ˈfɑːðər/", "translation": "父亲" }
+        ] },
+        { "symbol": "z", "chinese": "日", "videoFile": "z.mp4", "words": [
+          { "word": "zoo", "phonetic": "/zuː/", "translation": "动物园" },
+          { "word": "zero", "phonetic": "/ˈzɪərəʊ/", "translation": "零" },
+          { "word": "is", "phonetic": "/ɪz/", "translation": "是" },
+          { "word": "has", "phonetic": "/hæz/", "translation": "有" }
+        ] },
+        { "symbol": "ʒ", "chinese": "日", "videoFile": "ʒ.mp4", "words": [
+          { "word": "vision", "phonetic": "/ˈvɪʒən/", "translation": "视力" },
+          { "word": "measure", "phonetic": "/ˈmeʒər/", "translation": "测量" },
+          { "word": "pleasure", "phonetic": "/ˈpleʒər/", "translation": "快乐" },
+          { "word": "usual", "phonetic": "/ˈjuːʒuəl/", "translation": "通常的" }
+        ] },
+        { "symbol": "r", "chinese": "若", "videoFile": "r.mp4", "words": [
+          { "word": "red", "phonetic": "/red/", "translation": "红色" },
+          { "word": "run", "phonetic": "/rʌn/", "translation": "跑" },
+          { "word": "carry", "phonetic": "/ˈkæri/", "translation": "携带" },
+          { "word": "right", "phonetic": "/raɪt/", "translation": "正确的" }
+        ] }
+      ]
+    },
+    "voicelessConsonants": {
+      "name": "清辅音",
+      "items": [
+        { "symbol": "p", "chinese": "坡", "videoFile": "p.mp4", "words": [
+          { "word": "pen", "phonetic": "/pen/", "translation": "钢笔" },
+          { "word": "put", "phonetic": "/pʊt/", "translation": "放" },
+          { "word": "up", "phonetic": "/ʌp/", "translation": "向上" },
+          { "word": "apple", "phonetic": "/ˈæpəl/", "translation": "苹果" }
+        ] },
+        { "symbol": "t", "chinese": "特", "videoFile": "t.mp4", "words": [
+          { "word": "ten", "phonetic": "/ten/", "translation": "十" },
+          { "word": "top", "phonetic": "/tɒp/", "translation": "顶部" },
+          { "word": "it", "phonetic": "/ɪt/", "translation": "它" },
+          { "word": "water", "phonetic": "/ˈwɔːtər/", "translation": "水" }
+        ] },
+        { "symbol": "k", "chinese": "科", "videoFile": "k.mp4", "words": [
+          { "word": "cat", "phonetic": "/kæt/", "translation": "猫" },
+          { "word": "kite", "phonetic": "/kaɪt/", "translation": "风筝" },
+          { "word": "back", "phonetic": "/bæk/", "translation": "后面" },
+          { "word": "key", "phonetic": "/kiː/", "translation": "钥匙" }
+        ] },
+        { "symbol": "f", "chinese": "夫", "videoFile": "f.mp4", "words": [
+          { "word": "five", "phonetic": "/faɪv/", "translation": "五" },
+          { "word": "food", "phonetic": "/fuːd/", "translation": "食物" },
+          { "word": "off", "phonetic": "/ɒf/", "translation": "离开" },
+          { "word": "leaf", "phonetic": "/liːf/", "translation": "叶子" }
+        ] },
+        { "symbol": "θ", "chinese": "嘶", "videoFile": "θ.mp4", "words": [
+          { "word": "think", "phonetic": "/θɪŋk/", "translation": "思考" },
+          { "word": "thumb", "phonetic": "/θʌm/", "translation": "拇指" },
+          { "word": "teeth", "phonetic": "/tiːθ/", "translation": "牙齿" },
+          { "word": "three", "phonetic": "/θriː/", "translation": "三" }
+        ] },
+        { "symbol": "s", "chinese": "嘶", "videoFile": "s.mp4", "words": [
+          { "word": "see", "phonetic": "/siː/", "translation": "看见" },
+          { "word": "sun", "phonetic": "/sʌn/", "translation": "太阳" },
+          { "word": "bus", "phonetic": "/bʌs/", "translation": "公交车" },
+          { "word": "sister", "phonetic": "/ˈsɪstər/", "translation": "姐妹" }
+        ] },
+        { "symbol": "ʃ", "chinese": "湿", "videoFile": "ʃ.mp4", "words": [
+          { "word": "she", "phonetic": "/ʃiː/", "translation": "她" },
+          { "word": "ship", "phonetic": "/ʃɪp/", "translation": "船" },
+          { "word": "fish", "phonetic": "/fɪʃ/", "translation": "鱼" },
+          { "word": "shoe", "phonetic": "/ʃuː/", "translation": "鞋子" }
+        ] },
+        { "symbol": "h", "chinese": "喝", "videoFile": "h.mp4", "words": [
+          { "word": "he", "phonetic": "/hiː/", "translation": "他" },
+          { "word": "hat", "phonetic": "/hæt/", "translation": "帽子" },
+          { "word": "hello", "phonetic": "/həˈləʊ/", "translation": "你好" },
+          { "word": "house", "phonetic": "/haʊs/", "translation": "房子" }
+        ] }
+      ]
+    },
+    "voicedAffricates": {
+      "name": "浊辅音（破擦音）",
+      "items": [
+        { "symbol": "dʒ", "chinese": "知", "videoFile": "dʒ.mp4", "words": [
+          { "word": "jump", "phonetic": "/dʒʌmp/", "translation": "跳" },
+          { "word": "just", "phonetic": "/dʒʌst/", "translation": "只是" },
+          { "word": "age", "phonetic": "/eɪdʒ/", "translation": "年龄" },
+          { "word": "judge", "phonetic": "/dʒʌdʒ/", "translation": "法官" }
+        ] },
+        { "symbol": "dz", "chinese": "资", "videoFile": "dz.mp4", "words": [
+          { "word": "beds", "phonetic": "/bedz/", "translation": "床(复数)" },
+          { "word": "cards", "phonetic": "/kɑːdz/", "translation": "卡片(复数)" },
+          { "word": "friends", "phonetic": "/frendz/", "translation": "朋友(复数)" },
+          { "word": "words", "phonetic": "/wɜːdz/", "translation": "单词(复数)" }
+        ] },
+        { "symbol": "dr", "chinese": "捉", "videoFile": "dr.mp4", "words": [
+          { "word": "drive", "phonetic": "/draɪv/", "translation": "驾驶" },
+          { "word": "dream", "phonetic": "/driːm/", "translation": "梦想" },
+          { "word": "dress", "phonetic": "/dres/", "translation": "裙子" },
+          { "word": "drink", "phonetic": "/drɪŋk/", "translation": "喝" }
+        ] }
+      ]
+    },
+    "voicelessAffricates": {
+      "name": "清辅音（破擦音）",
+      "items": [
+        { "symbol": "tʃ", "chinese": "吃", "videoFile": "tʃ.mp4", "words": [
+          { "word": "chair", "phonetic": "/tʃeər/", "translation": "椅子" },
+          { "word": "child", "phonetic": "/tʃaɪld/", "translation": "孩子" },
+          { "word": "catch", "phonetic": "/kætʃ/", "translation": "抓住" },
+          { "word": "teacher", "phonetic": "/ˈtiːtʃər/", "translation": "老师" }
+        ] },
+        { "symbol": "ts", "chinese": "次", "videoFile": "ts.mp4", "words": [
+          { "word": "cats", "phonetic": "/kæts/", "translation": "猫(复数)" },
+          { "word": "hats", "phonetic": "/hæts/", "translation": "帽子(复数)" },
+          { "word": "boats", "phonetic": "/bəʊts/", "translation": "船(复数)" },
+          { "word": "students", "phonetic": "/ˈstjuːdənts/", "translation": "学生(复数)" }
+        ] },
+        { "symbol": "tr", "chinese": "戳", "videoFile": "tr.mp4", "words": [
+          { "word": "tree", "phonetic": "/triː/", "translation": "树" },
+          { "word": "train", "phonetic": "/treɪn/", "translation": "火车" },
+          { "word": "true", "phonetic": "/truː/", "translation": "真实的" },
+          { "word": "travel", "phonetic": "/ˈtrævəl/", "translation": "旅行" }
+        ] }
+      ]
+    },
+    "otherConsonants": {
+      "name": "浊辅音（半元音/鼻音/边音）",
+      "items": [
+        { "symbol": "j", "chinese": "衣", "videoFile": "j.mp4", "words": [
+          { "word": "yes", "phonetic": "/jes/", "translation": "是的" },
+          { "word": "you", "phonetic": "/juː/", "translation": "你" },
+          { "word": "yellow", "phonetic": "/ˈjeləʊ/", "translation": "黄色" },
+          { "word": "young", "phonetic": "/jʌŋ/", "translation": "年轻的" }
+        ] },
+        { "symbol": "w", "chinese": "乌", "videoFile": "w.mp4", "words": [
+          { "word": "we", "phonetic": "/wiː/", "translation": "我们" },
+          { "word": "water", "phonetic": "/ˈwɔːtər/", "translation": "水" },
+          { "word": "away", "phonetic": "/əˈweɪ/", "translation": "离开" },
+          { "word": "swim", "phonetic": "/swɪm/", "translation": "游泳" }
+        ] },
+        { "symbol": "m", "chinese": "呣", "videoFile": "m.mp4", "words": [
+          { "word": "man", "phonetic": "/mæn/", "translation": "男人" },
+          { "word": "mother", "phonetic": "/ˈmʌðər/", "translation": "母亲" },
+          { "word": "come", "phonetic": "/kʌm/", "translation": "来" },
+          { "word": "home", "phonetic": "/həʊm/", "translation": "家" }
+        ] },
+        { "symbol": "n", "chinese": "嗯", "videoFile": "n.mp4", "words": [
+          { "word": "no", "phonetic": "/nəʊ/", "translation": "不" },
+          { "word": "name", "phonetic": "/neɪm/", "translation": "名字" },
+          { "word": "in", "phonetic": "/ɪn/", "translation": "在...里面" },
+          { "word": "sun", "phonetic": "/sʌn/", "translation": "太阳" }
+        ] },
+        { "symbol": "ŋ", "chinese": "嗯", "videoFile": "ŋ.mp4", "words": [
+          { "word": "sing", "phonetic": "/sɪŋ/", "translation": "唱歌" },
+          { "word": "long", "phonetic": "/lɒŋ/", "translation": "长的" },
+          { "word": "thing", "phonetic": "/θɪŋ/", "translation": "东西" },
+          { "word": "morning", "phonetic": "/ˈmɔːnɪŋ/", "translation": "早晨" }
+        ] },
+        { "symbol": "l", "chinese": "了", "videoFile": "l.mp4", "words": [
+          { "word": "like", "phonetic": "/laɪk/", "translation": "喜欢" },
+          { "word": "love", "phonetic": "/lʌv/", "translation": "爱" },
+          { "word": "call", "phonetic": "/kɔːl/", "translation": "打电话" },
+          { "word": "hello", "phonetic": "/həˈləʊ/", "translation": "你好" }
+        ] }
+      ]
+    }
+  },
+  "phoneticSymbols": [
+    "ɑː", "ɔː", "ɜː", "iː", "uː",
+    "eɪ", "aɪ", "ɔɪ", "əʊ", "aʊ", "ɪə", "eə", "ʊə",
+    "tʃ", "dʒ", "tr", "dr", "ts", "dz",
+    "ð", "θ", "ʃ", "ʒ", "ŋ",
+    "æ", "ɒ", "ʌ", "ə", "ɪ", "ʊ", "e",
+    "b", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "r", "s", "t", "v", "w", "z"
+  ]
+}

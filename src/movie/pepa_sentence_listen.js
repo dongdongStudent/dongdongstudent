@@ -4,8 +4,6 @@ import { message } from 'antd';
 
 // 从 review_center.js 导入默认导出
 import SentenceCenter from '../sentence/review_center.js';
-// 从 AddSentenceModal.js 导入 AddSentenceModal 组件
-import AddSentenceModal from '../sentence/AddSentenceModal.js';
 
 // ==================== 常量配置 ====================
 const API_BASE = 'https://www.ddstudent.xyz/server/english/sync_peppa_learning';
@@ -127,7 +125,7 @@ const useDraggable = (initialPos, size) => {
       const deltaX = e.clientX - dragRef.current.startX;
       const deltaY = e.clientY - dragRef.current.startY;
       const newX = Math.max(0, Math.min(dragRef.current.startLeft + deltaX, window.innerWidth - size.width));
-      const newY = Math.max(0, Math.min(dragRef.current.startTop + deltaY, window.innerHeight - size.height));
+      const newY = Math.max(0, Math.min(dragRef.current.startLeft + deltaY, window.innerHeight - size.height));
       setPosition({ x: newX, y: newY });
     };
 
@@ -306,11 +304,9 @@ const ListeningTestPro = ({
   onClose, 
   getToken, 
   onWordChange, 
-  F_addSentence,
   onHideListsChange,
   sentencesData = [] // 新增：从外部传入的句子数据
 }) => {
-  const [showAddModal, setShowAddModal] = useState(false);
   const [showTestCenter, setShowTestCenter] = useState(false);
 
   const [uiState, setUiState] = useState({
@@ -455,22 +451,6 @@ const ListeningTestPro = ({
       setUserResponse(null);
     }
   }, [learningState, currentQueue, onWordChange, stopLoop]);
-
-  const handleAddSentence = async (sentenceData) => {
-    if (!getToken) {
-      message.error('请先登录');
-      return;
-    }
-
-    try {
-      message.success(`✅ 句子添加成功: ${sentenceData.text}`);
-      return { flag: 1 };
-    } catch (error) {
-      console.error('添加句子失败:', error);
-      message.error('添加失败：' + error.message);
-      throw error;
-    }
-  };
 
   const handleAudioAreaClick = useCallback(() => {
     const sentenceToPlay = displaySentence || currentSentence;
@@ -685,19 +665,6 @@ const ListeningTestPro = ({
     .save-btn { background: #6366f1; color: white; border: none; padding: 8px; border-radius: 6px; font-weight: bold; cursor: pointer; }
     .config-section { display: flex; flex-direction: column; gap: 12px; }
     .start-btn { background: #10b981; color: white; border: none; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; }
-    .add-btn {
-      background: #6366f1;
-      color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .add-btn:hover {
-      background: #4f46e5;
-    }
     .status-badge {
       display: inline-block;
       padding: 2px 8px;
@@ -937,33 +904,6 @@ const ListeningTestPro = ({
       <div className={`floating-window ${isDragging ? 'dragging' : ''}`} style={{ position: 'fixed', left: position.x, top: position.y, width: uiState.isCollapsed ? 200 : 480, height: uiState.isCollapsed ? 36 : 720, transition: isDragging ? 'none' : 'all 0.2s', zIndex: 1 }}>
         <div className="floating-handle" onMouseDown={handleMouseDown}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px' }}>
-            {F_addSentence?.english && (
-              <span style={{ 
-                background: '#40536d', 
-                padding: '2px 6px', 
-                borderRadius: '4px', 
-                fontSize: '10px', 
-                maxWidth: '30px', 
-                overflow: 'hidden', 
-                textOverflow: 'ellipsis', 
-                whiteSpace: 'nowrap' 
-              }}>
-                {F_addSentence.english.length > 10 
-                  ? F_addSentence.english.substring(0, 10) + '...' 
-                  : F_addSentence.english}
-              </span>
-            )}
-            {F_addSentence?.english && (
-              <button
-                onClick={() => {
-                  handleMark(F_addSentence.id, F_addSentence.english, 'DIFFICULT');
-                  message.success('已添加到不会的句子');
-                }}
-                style={{ background: '#10b981', border: 'none', color: 'white', width: '22px', height: '22px', borderRadius: '4px', cursor: 'pointer', fontSize: '14px' }}
-              >
-                +
-              </button>
-            )}
             <span 
               style={{ 
                 padding: '2px 8px',
@@ -1012,14 +952,6 @@ const ListeningTestPro = ({
         </div>
       )}
 
-      {/* AddSentenceModal 模态框 */}
-      {showAddModal && (
-        <AddSentenceModal
-          onClose={() => setShowAddModal(false)}
-          onAdd={handleAddSentence}
-          allSentences={[]}
-        />
-      )}
     </>
   );
 };

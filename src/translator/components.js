@@ -25,12 +25,14 @@ import {
   RecordVoiceOver,
   Add,
   ContentCopy,
-  Sync
+  Sync,
+  VolumeOff,
+  VolumeUp as VolumeUpIcon
 } from '@mui/icons-material';
 import { F_translator } from '../Function/weisimin.js';
 
 // ========== 可拖拽弹窗组件 ==========
-export const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译", onToggleMode, onAddWord, onAddSentence }) => {
+export const DraggableDialog = ({ children, open, onClose, isCompact, title = "翻译", onToggleMode, onAddWord, onAddSentence, autoSpeak, onAutoSpeakChange }) => {
   const [position, setPosition] = useState(() => {
     const saved = localStorage.getItem('translator_position');
     if (saved) return JSON.parse(saved);
@@ -40,9 +42,9 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
   const [isDragging, setIsDragging] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [isMinimized, setIsMinimized] = useState(() => localStorage.getItem('translator_minimized') === 'true');
+  const [localAutoSpeak, setLocalAutoSpeak] = useState(autoSpeak !== undefined ? autoSpeak : true);
   const dialogRef = useRef(null);
-  const isMobile = window.innerWidth <= 600;
-  const FIXED_WIDTH = isCompact ? 800 : 600;
+  const FIXED_WIDTH = isCompact ? 800 : 400;
   const FIXED_HEIGHT = isCompact ? 50 : 500;
 
   useEffect(() => {
@@ -52,6 +54,13 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
   useEffect(() => {
     localStorage.setItem('translator_minimized', isMinimized);
   }, [isMinimized]);
+
+  // 同步外部 autoSpeak 变化到本地
+  useEffect(() => {
+    if (autoSpeak !== undefined) {
+      setLocalAutoSpeak(autoSpeak);
+    }
+  }, [autoSpeak]);
 
   const handleDragStart = (e) => {
     const target = e.target;
@@ -98,6 +107,20 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
     };
   }, [isDragging, handleDragMove, handleDragEnd]);
 
+  // 处理自动发音切换 - 同时更新本地和通知父组件
+  const handleAutoSpeakToggle = useCallback((checked) => {
+    setLocalAutoSpeak(checked);
+    onAutoSpeakChange?.(checked);
+  }, [onAutoSpeakChange]);
+
+  // 克隆 children 并传递 autoSpeak 和 onAutoSpeakChange
+  const childrenWithProps = React.isValidElement(children)
+    ? React.cloneElement(children, { 
+        autoSpeak: localAutoSpeak, 
+        onAutoSpeakChange: handleAutoSpeakToggle 
+      })
+    : children;
+
   if (!open) return null;
 
   return (
@@ -120,7 +143,7 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
           borderRadius: 2,
           display: 'flex',
           flexDirection: 'column',
-          zIndex: 1300,
+          zIndex: 10000,
           boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
           transition: isDragging ? 'none' : 'all 0.2s ease',
           cursor: isDragging ? 'grabbing' : 'default',
@@ -135,8 +158,8 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
               <Translate sx={{ color: '#4ec9b0', fontSize: 16 }} />
               <Typography variant="caption" sx={{ color: '#858585', fontWeight: 500 }}>翻译</Typography>
             </Box>
-            <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', gap: 0.5, overflow: 'hidden' }}>{children}</Box>
-            <Button size="small" onClick={onToggleMode} sx={{ color: '#858585', p: 0.5, fontSize: '0.7rem', textTransform: 'none', minWidth: 60 }} title="切换模式">切换</Button>
+            <Box sx={{ flex: 1, display: 'flex', alignItems: 'center', gap: 0.5, overflow: 'hidden' }}>{childrenWithProps}</Box>
+            <Button size="small" onClick={onToggleMode} sx={{ color: '#858585', p: 0.5, fontSize: '0.7rem', textTransform: 'none', minWidth: 60 }} title="切换模式">切换模式</Button>
             <IconButton size="small" onClick={onClose} sx={{ color: '#858585', p: 0.5 }}><Close fontSize="small" /></IconButton>
           </Box>
         ) : (
@@ -147,14 +170,32 @@ export const DraggableDialog = ({ children, open, onClose, isCompact, title = "�
                 <Translate sx={{ color: '#4ec9b0', fontSize: 20 }} />
                 <Typography variant="subtitle1" sx={{ fontWeight: 500 }}>{title}</Typography>
               </Box>
-              <Box sx={{ display: 'flex', gap: 0.5 }}>
+              <Box sx={{ display: 'flex', gap: 0.5, alignItems: 'center' }}>
+                <Tooltip title="自动发音">
+                  <FormControlLabel
+                    control={
+                      <Switch
+                        size="small"
+                        checked={localAutoSpeak}
+                        onChange={(e) => handleAutoSpeakToggle(e.target.checked)}
+                        sx={{
+                          '& .MuiSwitch-switchBase.Mui-checked': { color: '#4ec9b0' },
+                          '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': { backgroundColor: '#4ec9b0' }
+                        }}
+                      />
+                    }
+                    label={<Typography variant="caption" sx={{ color: '#858585' }}>自动发音</Typography>}
+                    labelPlacement="start"
+                    sx={{ mr: 1 }}
+                  />
+                </Tooltip>
                 <IconButton size="small" onClick={() => setIsMinimized(!isMinimized)} sx={{ color: '#858585' }} title={isMinimized ? "展开" : "最小化"}>
                   {isMinimized ? <Typography variant="caption">□</Typography> : <Typography variant="caption">─</Typography>}
                 </IconButton>
                 <IconButton size="small" onClick={onClose} sx={{ color: '#858585' }}><Close fontSize="small" /></IconButton>
               </Box>
             </Box>
-            {!isMinimized && <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'auto', minHeight: 0 }}>{children}</Box>}
+            {!isMinimized && <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'auto', minHeight: 0 }}>{childrenWithProps}</Box>}
           </>
         )}
       </Paper>
@@ -203,19 +244,19 @@ const WordInputRow = ({ wordInput, setWordInput, onAddWord, onSpeak, onSearch, l
             }
           }}
         />
-        
+
         <Tooltip title="发音">
-          <IconButton 
-            onClick={() => wordInput.trim() && onSpeak(wordInput)} 
+          <IconButton
+            onClick={() => wordInput.trim() && onSpeak(wordInput)}
             disabled={!wordInput.trim() || loading}
             sx={{ color: '#4ec9b0', backgroundColor: 'rgba(78, 201, 176, 0.1)' }}
           >
             <VolumeUp fontSize="small" />
           </IconButton>
         </Tooltip>
-        
+
         <Tooltip title="翻译">
-          <IconButton 
+          <IconButton
             onClick={() => wordInput.trim() && onSearch(wordInput, true)}
             disabled={!wordInput.trim() || loading}
             sx={{ color: '#ffab40' }}
@@ -223,14 +264,14 @@ const WordInputRow = ({ wordInput, setWordInput, onAddWord, onSpeak, onSearch, l
             {loading ? <CircularProgress size={20} /> : <Translate fontSize="small" />}
           </IconButton>
         </Tooltip>
-        
+
         <Button
           variant="contained"
           startIcon={<School />}
           onClick={onAddWord}
           disabled={!wordInput.trim() || loading}
-          sx={{ 
-            backgroundColor: '#4ec9b0', 
+          sx={{
+            backgroundColor: '#4ec9b0',
             color: '#1e1e1e',
             '&:hover': { backgroundColor: '#3da896' },
             textTransform: 'none'
@@ -239,7 +280,7 @@ const WordInputRow = ({ wordInput, setWordInput, onAddWord, onSpeak, onSearch, l
           添加单词
         </Button>
       </Box>
-      
+
       {/* 显示翻译结果 - 始终显示，loading时显示旧内容 */}
       <Box sx={{ mt: 1, p: 1, backgroundColor: '#1a1a1a', borderRadius: 1, minHeight: 50 }}>
         {loading ? (
@@ -267,37 +308,33 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
   const [lastSyncedValue, setLastSyncedValue] = useState('');
   const syncTimeoutRef = useRef(null);
 
-  // 当 sentence prop 变化时更新 inputValue
   useEffect(() => {
     setInputValue(sentence);
   }, [sentence]);
 
-  // 同步到单词输入框（同步文本并触发翻译）
   const syncToWordInput = useCallback((text) => {
     if (!text || !text.trim()) return;
     const trimmedText = text.trim();
     if (trimmedText === lastSyncedValue) return;
-    
+
     setLastSyncedValue(trimmedText);
     if (onWordInputSync) {
       onWordInputSync(trimmedText);
     }
 
-    // 触发语音
     if (onSpeak) {
       onSpeak(trimmedText);
     }
-  }, [lastSyncedValue, onWordInputSync]);
+  }, [lastSyncedValue, onWordInputSync, onSpeak]);
 
-  // 防抖同步：用户停止输入500ms后同步
   const handleInputChange = (e) => {
     const newValue = e.target.value;
     setInputValue(newValue);
-    
+
     if (syncTimeoutRef.current) {
       clearTimeout(syncTimeoutRef.current);
     }
-    
+
     syncTimeoutRef.current = setTimeout(() => {
       if (newValue.trim()) {
         syncToWordInput(newValue);
@@ -305,7 +342,6 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
     }, 500);
   };
 
-  // 处理文本选择
   const handleSelect = (e) => {
     const selectedText = window.getSelection().toString().trim();
     if (selectedText && selectedText.length > 0 && selectedText.length < 200) {
@@ -313,7 +349,6 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
     }
   };
 
-  // 处理复制事件
   const handleCopy = (e) => {
     const selectedText = window.getSelection().toString().trim();
     if (selectedText && selectedText.length > 0) {
@@ -356,34 +391,16 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
 
   return (
     <Paper sx={{ p: 1.5, mb: 1.5, backgroundColor: '#2d2d2d', border: '1px solid #3c3c3c' }}>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
-        <Chip 
-          label={`${index + 1}/${total}`} 
-          size="small" 
-          sx={{ backgroundColor: '#0e639c', color: '#fff', minWidth: 50 }}
-        />
-        <TextField
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap', mb: 1 }}>
+        <Chip
+          label={`${index + 1}/${total}`}
           size="small"
-          value={inputValue}
-          onChange={handleInputChange}
-          onSelect={handleSelect}
-          onCopy={handleCopy}
-          onCut={handleCopy}
-          placeholder={`句子 ${index + 1}`}
-          sx={{ flex: 2, minWidth: 200 }}
-          InputProps={{
-            sx: {
-              backgroundColor: '#1a1a1a',
-              color: '#d4d4d4',
-              '& .MuiOutlinedInput-notchedOutline': { borderColor: '#3c3c3c' },
-              '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#4ec9b0' },
-            }
-          }}
+          sx={{ backgroundColor: '#0e639c', color: '#fff', minWidth: 50 }}
         />
         
         <Tooltip title="翻译">
-          <IconButton 
-            size="small" 
+          <IconButton
+            size="small"
             onClick={handleTranslate}
             disabled={!inputValue.trim() || localLoading}
             sx={{ color: '#4ec9b0' }}
@@ -391,10 +408,10 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
             {localLoading ? <CircularProgress size={16} /> : <Translate fontSize="small" />}
           </IconButton>
         </Tooltip>
-        
+
         <Tooltip title="发音">
-          <IconButton 
-            size="small" 
+          <IconButton
+            size="small"
             onClick={handleSpeak}
             disabled={!inputValue.trim()}
             sx={{ color: '#ce93d8' }}
@@ -402,15 +419,15 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
             <VolumeUp fontSize="small" />
           </IconButton>
         </Tooltip>
-        
+
         <Button
           size="small"
           variant="outlined"
           startIcon={<MenuBook />}
           onClick={() => onSentenceAdd?.(inputValue, localTranslation)}
           disabled={disabled || !inputValue.trim()}
-          sx={{ 
-            color: '#ce93d8', 
+          sx={{
+            color: '#ce93d8',
             borderColor: '#ce93d8',
             '&:hover': { backgroundColor: 'rgba(206, 147, 216, 0.1)' }
           }}
@@ -418,11 +435,40 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
           添加句子
         </Button>
       </Box>
-      
+
+      <Box sx={{ mb: 1 }}>
+        <TextField
+          fullWidth
+          multiline
+          rows={2}
+          value={inputValue}
+          onChange={handleInputChange}
+          onSelect={handleSelect}
+          onCopy={handleCopy}
+          onCut={handleCopy}
+          placeholder={`句子 ${index + 1}`}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            sx: {
+              backgroundColor: '#1a1a1a',
+              color: '#d4d4d4',
+              fontSize: '0.9rem',
+              lineHeight: 1.5,
+              '& .MuiOutlinedInput-notchedOutline': { borderColor: '#3c3c3c' },
+              '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#4ec9b0' },
+              '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#4ec9b0' }
+            }
+          }}
+        />
+      </Box>
+
       {localTranslation && (
         <Box sx={{ mt: 1, p: 1, backgroundColor: '#1a1a1a', borderRadius: 1 }}>
           <Typography variant="caption" sx={{ color: '#858585' }}>翻译：</Typography>
-          <Typography variant="body2" sx={{ color: '#4ec9b0' }}>{localTranslation}</Typography>
+          <Typography variant="body2" sx={{ color: '#4ec9b0', wordWrap: 'break-word', whiteSpace: 'normal' }}>
+            {localTranslation}
+          </Typography>
         </Box>
       )}
     </Paper>
@@ -430,12 +476,12 @@ const SentenceRow = ({ sentence, index, total, onSentenceAdd, onTranslate, onSpe
 };
 
 // ========== 简洁模式翻译组件 ==========
-export const CompactTranslator = ({ 
-  word, translation, loading, error, onSearch, onSpeak, 
-  wordInput, setWordInput, onAddWord, onAddSentence 
+export const CompactTranslator = ({
+  word, translation, loading, error, onSearch, onSpeak,
+  wordInput, setWordInput, onAddWord, onAddSentence
 }) => {
   const inputRef = useRef(null);
-  
+
   useEffect(() => {
     if (inputRef.current && inputRef.current.value !== wordInput) {
       inputRef.current.value = wordInput;
@@ -472,67 +518,85 @@ export const CompactTranslator = ({
         size="small"
         autoFocus
         InputProps={{
-          sx: { backgroundColor: '#1a1a1a', color: '#d4d4d4', fontSize: '1rem', height: 40,
+          sx: {
+            backgroundColor: '#1a1a1a', color: '#d4d4d4', fontSize: '1rem', height: 40,
             '& .MuiOutlinedInput-notchedOutline': { borderColor: '#3c3c3c', borderWidth: 1 },
             '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: '#4ec9b0' },
             '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: '#4ec9b0', borderWidth: 2 }
           }
         }}
       />
-      
+
       <Tooltip title="发音">
-        <IconButton 
-          onClick={() => wordInput.trim() && onSpeak(wordInput)} 
-          disabled={!wordInput.trim() || loading} 
-          size="small" 
+        <IconButton
+          onClick={() => wordInput.trim() && onSpeak(wordInput)}
+          disabled={!wordInput.trim() || loading}
+          size="small"
           sx={{ color: '#4ec9b0', backgroundColor: 'rgba(78, 201, 176, 0.1)', width: 40, height: 40 }}
         >
           <VolumeUp fontSize="small" />
         </IconButton>
       </Tooltip>
-      
-      <Button 
-        variant="contained" 
-        onClick={() => wordInput.trim() && onSearch(wordInput, true)} 
-        disabled={loading || !wordInput.trim()} 
-        size="small" 
+
+      <Button
+        variant="contained"
+        onClick={() => wordInput.trim() && onSearch(wordInput, true)}
+        disabled={loading || !wordInput.trim()}
+        size="small"
         sx={{ minWidth: 60, height: 40, backgroundColor: '#4ec9b0', color: '#1e1e1e', textTransform: 'none' }}
       >
         {loading ? <CircularProgress size={16} sx={{ color: '#1e1e1e' }} /> : '翻译'}
       </Button>
-      
+
       <Button
         size="small"
         variant="outlined"
-        startIcon={<School />}
         onClick={onAddWord}
         disabled={loading || !wordInput.trim()}
-        sx={{ 
-          color: '#ffab40', 
-          borderColor: '#ffab40',
+        sx={{
           height: 40,
-          '&:hover': { backgroundColor: 'rgba(255, 171, 64, 0.1)' }
+          backgroundColor: '#4ec9b0',
+          color: '#1e1e1e',
+          textTransform: 'none',
+          whiteSpace: 'nowrap',
+        }}
+        title="将单词添加到个人词典"
+      >
+        +单词本
+      </Button>
+
+      <Button
+        size="small"
+        variant="outlined"
+        onClick={() => onAddSentence(wordInput, translation)}
+        disabled={loading || !wordInput.trim()}
+        sx={{
+          height: 40,
+          backgroundColor: '#4ec9b0',
+          color: '#1e1e1e',
+          textTransform: 'none',
+          whiteSpace: 'nowrap',
         }}
       >
-        添加单词
+        +句子本
       </Button>
-      
+
       {translation && !loading && !error && (
-        <Chip 
-          label={typeof translation === 'string' ? (translation.length > 40 ? translation.substring(0, 40) + '...' : translation) : '✓'} 
-          size="small" 
-          onClick={() => onSpeak(word)} 
+        <Chip
+          label={typeof translation === 'string' ? (translation.length > 40 ? translation.substring(0, 40) + '...' : translation) : '✓'}
+          size="small"
+          onClick={() => onSpeak(word)}
           sx={{ backgroundColor: '#4caf50', color: '#fff', height: 24, cursor: 'pointer', maxWidth: 200 }}
         />
       )}
-      
+
       {error && !loading && <Chip label="!" size="small" sx={{ backgroundColor: '#f44336', color: '#fff', height: 24, width: 24 }} />}
     </Box>
   );
 };
 
-// ========== 完整模式翻译组件（同步时自动翻译，但保留旧结果显示loading状态） ==========
-export const FullTranslator = ({ 
+// ========== 完整模式翻译组件 ==========
+export const FullTranslator = ({
   sentenceList = [],
   wordInput,
   setWordInput,
@@ -544,27 +608,33 @@ export const FullTranslator = ({
   addingSentence,
   onOpenVocabMaster,
   onOpenWordBook,
-  onOpenSentenceCenter
+  onOpenSentenceCenter,
+  autoSpeak = true,
+  onAutoSpeakChange
 }) => {
-  // 当前翻译结果（用于单词输入框）
   const [wordTranslation, setWordTranslation] = useState(null);
   const [wordLoading, setWordLoading] = useState(false);
-  const lastSyncedTextRef = useRef(''); // 记录最后同步的文本，避免重复同步
-  const currentTranslatePromiseRef = useRef(null); // 用于取消正在进行的翻译
+  const lastSyncedTextRef = useRef('');
+  const currentTranslatePromiseRef = useRef(null);
+  const lastSentenceListRef = useRef([]);
+  const autoSpeakTimeoutRef = useRef(null);
+  const isAutoSpeakEnabledRef = useRef(autoSpeak);
 
-  // 翻译单词输入框的内容（保留旧结果显示loading）
+  // 同步外部的 autoSpeak 状态
+  useEffect(() => {
+    isAutoSpeakEnabledRef.current = autoSpeak;
+  }, [autoSpeak]);
+
   const handleTranslateWord = useCallback(async (text) => {
     if (!text?.trim()) return;
     const trimmedText = text.trim();
-    
-    // 如果相同文本正在翻译中，不重复请求
+
     if (currentTranslatePromiseRef.current) {
       return;
     }
-    
+
     setWordLoading(true);
-    // 不清空 translation，保留旧结果
-    
+
     try {
       const result = await F_translator(trimmedText);
       if (result) {
@@ -578,32 +648,85 @@ export const FullTranslator = ({
     }
   }, []);
 
-  // 同步句子内容到单词输入框（同步文本并自动翻译，保留旧结果）
   const handleSyncToWordInput = useCallback((text) => {
     if (!text || !text.trim()) return;
     const trimmedText = text.trim();
-    // 如果和上次同步的文本相同，则跳过
     if (lastSyncedTextRef.current === trimmedText) return;
-    
+
     lastSyncedTextRef.current = trimmedText;
     setWordInput(trimmedText);
-    // 自动翻译，但保留旧的翻译结果直到新结果返回
     handleTranslateWord(trimmedText);
   }, [setWordInput, handleTranslateWord]);
 
+  // 自动朗读第一个句子的函数
+  const autoSpeakFirstSentence = useCallback(() => {
+    if (!isAutoSpeakEnabledRef.current) {
+      return;
+    }
+    
+    if (sentenceList && sentenceList.length > 0) {
+      const firstSentence = sentenceList[0];
+      if (firstSentence && firstSentence.trim()) {
+        if (autoSpeakTimeoutRef.current) {
+          clearTimeout(autoSpeakTimeoutRef.current);
+        }
+        autoSpeakTimeoutRef.current = setTimeout(() => {
+          if (isAutoSpeakEnabledRef.current && onSpeak && firstSentence.trim()) {
+            onSpeak(firstSentence.trim());
+          }
+        }, 300);
+      }
+    }
+  }, [sentenceList, onSpeak]);
+
+  // 监听句子列表变化
+  useEffect(() => {
+    if (!isAutoSpeakEnabledRef.current) {
+      return;
+    }
+    
+    if (sentenceList && sentenceList.length > 0) {
+      const prevList = lastSentenceListRef.current;
+      const currentFirstSentence = sentenceList[0];
+      const prevFirstSentence = prevList[0];
+      
+      if (currentFirstSentence !== prevFirstSentence && currentFirstSentence && currentFirstSentence.trim()) {
+        autoSpeakFirstSentence();
+      }
+    }
+    
+    lastSentenceListRef.current = [...sentenceList];
+    
+    return () => {
+      if (autoSpeakTimeoutRef.current) {
+        clearTimeout(autoSpeakTimeoutRef.current);
+      }
+    };
+  }, [sentenceList, autoSpeakFirstSentence]);
+
   return (
     <Box sx={{ p: 2, overflow: 'auto', height: '100%' }}>
-      {/* 功能按钮组 */}
-      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2 }}>
-        <Button size="small" variant="outlined" startIcon={<School />} onClick={onOpenVocabMaster} sx={{ color: '#4ec9b0', borderColor: '#4ec9b0' }}>单词学习</Button>
-        <Button size="small" variant="outlined" startIcon={<AutoStories />} onClick={onOpenWordBook} sx={{ color: '#ffab40', borderColor: '#ffab40' }}>复习单词</Button>
-        <Button size="small" variant="outlined" startIcon={<RecordVoiceOver />} onClick={onOpenSentenceCenter} sx={{ color: '#9c27b0', borderColor: '#9c27b0' }}>复习句子</Button>
+      <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 2, alignItems: 'center', justifyContent: 'space-between' }}>
+        <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+          <Button size="small" variant="outlined" startIcon={<School />} onClick={onOpenVocabMaster} sx={{ color: '#4ec9b0', borderColor: '#4ec9b0' }}>单词学习</Button>
+          <Button size="small" variant="outlined" startIcon={<AutoStories />} onClick={onOpenWordBook} sx={{ color: '#ffab40', borderColor: '#ffab40' }}>复习单词</Button>
+          <Button size="small" variant="outlined" startIcon={<RecordVoiceOver />} onClick={onOpenSentenceCenter} sx={{ color: '#9c27b0', borderColor: '#9c27b0' }}>复习句子</Button>
+        </Box>
+        
+        {/* 自动朗读状态指示器 */}
+        {autoSpeak && sentenceList.length > 0 && (
+          <Chip
+            icon={<VolumeUpIcon sx={{ fontSize: 14 }} />}
+            label="自动朗读中"
+            size="small"
+            sx={{ backgroundColor: '#4ec9b0', color: '#1e1e1e', fontSize: '0.7rem' }}
+          />
+        )}
       </Box>
-      
+
       <Divider sx={{ my: 2, borderColor: '#3c3c3c' }} />
-      
-      {/* 独立的单词输入框区域 */}
-      <WordInputRow 
+
+      <WordInputRow
         wordInput={wordInput}
         setWordInput={setWordInput}
         onAddWord={onAddWord}
@@ -612,19 +735,18 @@ export const FullTranslator = ({
         loading={wordLoading}
         translation={wordTranslation}
       />
-      
+
       <Divider sx={{ my: 2, borderColor: '#3c3c3c' }} />
-      
-      <Typography variant="subtitle2" sx={{ color: '#4ec9b0', mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+
+      <Typography variant="subtitle2" sx={{ color: '#4ec9b0', mb: 2, display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap' }}>
         📝 句子列表 ({sentenceList.length} 个句子)
-        <Chip 
-          label="选择文本自动同步并翻译" 
-          size="small" 
+        <Chip
+          label="光标选中自动同步到单词框并翻译"
+          size="small"
           sx={{ backgroundColor: '#4ec9b0', color: '#1e1e1e', fontSize: '0.7rem' }}
         />
       </Typography>
-      
-      {/* 句子列表 */}
+
       {sentenceList.length > 0 ? (
         sentenceList.map((sentence, idx) => (
           <SentenceRow

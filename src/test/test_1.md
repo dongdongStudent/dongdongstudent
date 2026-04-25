@@ -1,7 +1,0 @@
-1. 选择题![alt text](image.png)
-2. 完形填空![alt text](image-1.png)
-3. 单词正确的形式填写![alt text](image-2.png)
-4. 给定中文,补充英文![alt text](image-3.png)
-5. 短文,给定句子选项,选择句子![alt text](image-5.png)
-6. 给点单词,句子填空![alt text](image-4.png)
-7. 给定单词,文字单词填空![alt text](image-6.png)
